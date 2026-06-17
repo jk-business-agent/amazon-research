@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Top Sellers — {{REPORT_DATE}}</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  /* 1. Header band */
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  /* 2. Executive summary */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  /* 3. Quick stats */
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 150px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  /* 4. Top movers grid */
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
+  .card-meta { font-size: 12.5px; color: var(--muted); }
+  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .card-sources a { color: #2563eb; text-decoration: none; }
+
+  /* 5. Category chart */
+  .chart-wrap { padding: 10px 6px; }
+
+  /* 6. New entrants spotlight */
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+
+  /* 7. Methodology footer */
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  /* 8. Footer nav */
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <div class="date">{{REPORT_DATE}}</div>
+    <span class="badge">Public web research · Cross-verified · {{SOURCE_COUNT}} sources checked</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">{{EXEC_SUMMARY}}</div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">{{STATS_TOTAL}}</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="num">{{STATS_NEW}}</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">{{STATS_RECURRING}}</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">{{STATS_VERIFIED}}</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">{{STATS_LOWCONF}}</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">{{STATS_CATEGORIES}}</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Top movers grid -->
+  <h2 class="section-title">Top Movers</h2>
+  <div class="grid">
+    {{PRODUCT_CARDS}}
+  </div>
+
+  <!-- 5. Category breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    {{CATEGORY_CHART_SVG}}
+  </div>
+
+  <!-- 6. New entrants spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    {{NEW_ENTRANTS_HTML}}
+  </div>
+
+  <!-- 7. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    {{METHODOLOGY_NOTES}}
+  </div>
+
+  <!-- 8. Footer nav -->
+  <div class="footer-nav">
+    <a href="index.html">&larr; Archive</a>
+    <span>{{PREVIOUS_REPORT_LINK}}</span>
+  </div>
+
+</div>
+</body>
+</html>
