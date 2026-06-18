@@ -166,19 +166,19 @@ Load `resources/dashboard-template.html` and replace every `{{TOKEN}}` with gene
   (2-source corroboration for VERIFIED), any degraded-mode fallback used today (e.g. "Amazon Movers &
   Shakers page was inaccessible; relied on secondary press coverage for category X"), and the full list
   of distinct source domains checked today.
-- `{{PREVIOUS_REPORT_LINK}}` — if a previous day's report exists in `output/`, a link/text like
+- `{{PREVIOUS_REPORT_LINK}}` — if a previous day's report exists in `docs/`, a link/text like
   `Previous report: <a href="2026-06-16-amazon-top-sellers.html">June 16</a>`; otherwise leave as
   "First report" text.
 
-Save the filled-in HTML to `output/YYYY-MM-DD-amazon-top-sellers.html` using today's actual date. Check
+Save the filled-in HTML to `docs/YYYY-MM-DD-amazon-top-sellers.html` using today's actual date. Check
 first whether that exact filename already exists (a same-day re-run) — if it does, do not overwrite it;
-save as `output/YYYY-MM-DD-amazon-top-sellers-2.html` instead (increment further if that also exists).
+save as `docs/YYYY-MM-DD-amazon-top-sellers-2.html` instead (increment further if that also exists).
 Do not reference any external CDN, script, or stylesheet — everything must be inline so the file opens
 standalone via double-click with no network needed.
 
 ## Step 7 — Update the archive index
 
-Open (or create, if it doesn't exist yet) `output/index.html`. Prepend a new entry to a reverse-chronological
+Open (or create, if it doesn't exist yet) `docs/index.html`. Prepend a new entry to a reverse-chronological
 list: the date, a one-line headline summary of the day's most notable finding, and a link to the new
 file. Keep `index.html` itself simple and dependency-free (plain HTML list, same inline-style approach,
 no JS needed).
@@ -194,10 +194,10 @@ found), notify with that fact instead so the user isn't surprised by a thin repo
 
 This workspace lives in a git repository so that each day's cloud run (a fresh, isolated sandbox) can
 persist its work. After writing the new dashboard file, updating `resources/seen-products-history.json`,
-and updating `output/index.html`, commit all changed/new files and push to `origin main`:
+and updating `docs/index.html`, commit all changed/new files and push to `origin main`:
 
 ```
-git add resources/seen-products-history.json output/ .claude/CLAUDE.md
+git add resources/seen-products-history.json docs/ .claude/CLAUDE.md
 git commit -m "chore: daily Amazon top-sellers report for YYYY-MM-DD"
 git push origin main
 ```
