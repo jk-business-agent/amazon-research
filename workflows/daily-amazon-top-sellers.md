@@ -8,7 +8,7 @@ WHY each is selling, WHAT market segment it's in, and WHERE growth is projected.
 educator/writer/business owner who writes about economic growth and American business — they need to
 quickly digest what's hot and trust that it's accurate, not skim something fabricated.
 
-This workflow runs fully unattended (scheduled, no human in the loop). Do not ask clarifying questions
+This workflow runs fully unattended (scheduled, no human in the loop). Before every run, the cloud routine should execute `scripts/clear-stale-lock.ps1` to remove any stale `.claude/scheduled_tasks.lock` file left by a previous failed or interrupted run. Do not ask clarifying questions
 mid-run — make the most reasonable, conservative choice (favor under-claiming over fabricating) and
 note any judgment call in the methodology footer instead of stopping.
 
