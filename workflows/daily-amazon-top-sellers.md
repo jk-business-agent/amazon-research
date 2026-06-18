@@ -167,21 +167,31 @@ Load `resources/dashboard-template.html` and replace every `{{TOKEN}}` with gene
   Shakers page was inaccessible; relied on secondary press coverage for category X"), and the full list
   of distinct source domains checked today.
 - `{{PREVIOUS_REPORT_LINK}}` — if a previous day's report exists in `docs/`, a link/text like
-  `Previous report: <a href="2026-06-16-amazon-top-sellers.html">June 16</a>`; otherwise leave as
-  "First report" text.
+  `Previous report: <a href="../June16_2026/">June 16</a>` (relative to today's report folder — see the
+  path convention below); otherwise leave as "First report" text.
 
-Save the filled-in HTML to `docs/YYYY-MM-DD-amazon-top-sellers.html` using today's actual date. Check
-first whether that exact filename already exists (a same-day re-run) — if it does, do not overwrite it;
-save as `docs/YYYY-MM-DD-amazon-top-sellers-2.html` instead (increment further if that also exists).
+### Folder/URL naming convention
+
+Each day's report gets its own folder so that GitHub Pages can serve a clean, human-readable URL
+(`.../June17_2026/`) instead of a `.html` filename. Build the folder name as
+`{FullMonthName}{Day}_{Year}` — full month name, day number with no leading zero, underscore, 4-digit
+year (e.g. June 17, 2026 → `June17_2026`; January 3, 2027 → `January3_2027`).
+
+Save the filled-in HTML to `docs/{FullMonthName}{Day}_{Year}/index.html` using today's actual date.
+Check first whether that exact folder already exists (a same-day re-run) — if it does, do not overwrite
+it; use `docs/{FullMonthName}{Day}_{Year}-2/index.html` instead (increment further if that also exists).
 Do not reference any external CDN, script, or stylesheet — everything must be inline so the file opens
-standalone via double-click with no network needed.
+standalone with no network needed. Because the report now lives one directory level below `docs/`, its
+link back to the archive must be `../index.html` (already set in `resources/dashboard-template.html` —
+don't change it back to a bare `index.html`).
 
 ## Step 7 — Update the archive index
 
 Open (or create, if it doesn't exist yet) `docs/index.html`. Prepend a new entry to a reverse-chronological
 list: the date, a one-line headline summary of the day's most notable finding, and a link to the new
-file. Keep `index.html` itself simple and dependency-free (plain HTML list, same inline-style approach,
-no JS needed).
+report folder (e.g. `<a href="June17_2026/">View report →</a>` — trailing slash, no filename, so GitHub
+Pages resolves it to that folder's `index.html`). Keep `index.html` itself simple and dependency-free
+(plain HTML list, same inline-style approach, no JS needed).
 
 ## Step 8 — Notify
 
