@@ -97,6 +97,12 @@ For each shortlisted item, produce:
   attempts, say so plainly in the methodology footer — do not quietly under-deliver without explanation.
 - If fewer than ~10 credible candidates exist for the day, still publish — with a visible note
   explaining reduced scope — rather than skipping the day or inventing filler entries.
+- Before writing a specific number into a card (a percentage, dollar figure, review count, growth rate),
+  confirm it actually appears in the cited source's fetched content — not just that it's plausible given
+  the source's general topic. A day-1 test run of this workflow cited a "15.7% two-week sales increase"
+  figure that sounded consistent with the surrounding article but was not actually present in either
+  cited source when spot-checked. Re-read the specific sentence/figure in the fetched content before
+  including it, rather than reconstructing a number from memory of the general gist.
 
 ## Step 5 — Update the history file
 
