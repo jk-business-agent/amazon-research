@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Amazon Top Sellers — {{REPORT_DATE}}</title>
+<title>American Business Alternatives — {{REPORT_DATE}}</title>
 <style>
   :root {
     --bg: #0f172a;
@@ -24,7 +24,7 @@
     background: #f1f5f9;
     color: var(--ink);
   }
-  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px 20px 60px; }
 
   /* 1. Header band */
   .header-band {
@@ -60,7 +60,7 @@
   /* 3. Quick stats */
   .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
   .stat-card {
-    flex: 1 1 150px;
+    flex: 1 1 130px;
     background: var(--panel);
     border: 1px solid var(--line);
     border-radius: 12px;
@@ -70,20 +70,18 @@
   .stat-card .num { font-size: 28px; font-weight: 700; }
   .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
 
-  /* 4. Top movers grid */
+  /* 4. Product groups */
   .section-title { font-size: 19px; margin: 30px 0 14px; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
-  .card {
-    background: var(--panel);
+  .product-groups { display: flex; flex-direction: column; gap: 18px; }
+  .product-group {
+    background: #fafbfc;
     border: 1px solid var(--line);
-    border-radius: 12px;
-    padding: 18px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    border-radius: 14px;
+    padding: 20px 22px;
   }
-  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
-  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .product-group-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+  .product-title { font-size: 18px; font-weight: 700; margin: 0 0 4px; }
+  .product-meta { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
   .pill {
     display: inline-block;
     font-size: 11px;
@@ -99,27 +97,50 @@
     font-weight: 600;
     padding: 3px 9px;
     border-radius: 999px;
+    white-space: nowrap;
   }
   .tag-new { background: var(--new-bg); color: var(--new); }
   .tag-recurring { background: #f1f5f9; color: var(--muted); }
   .tag-verified { background: var(--verified-bg); color: var(--verified); }
   .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
-  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
-  .card-meta { font-size: 12.5px; color: var(--muted); }
-  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
-  .card-sources a { color: #2563eb; text-decoration: none; }
+  .tag-count { background: #f1f5f9; color: #1e293b; }
+  .tag-affiliate-yes { background: var(--verified-bg); color: var(--verified); }
+  .tag-affiliate-no { background: #f1f5f9; color: var(--muted); }
+  .tag-affiliate-unconfirmed { background: var(--lowconf-bg); color: var(--lowconf); }
+  .product-rationale { font-size: 13.5px; line-height: 1.5; color: #334155; margin: 12px 0 14px; }
 
-  /* 5. Category chart */
+  /* 5. Alternative cards (nested) */
+  .alt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
+  .alt-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .alt-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .alt-name { font-size: 15.5px; font-weight: 600; margin: 0; }
+  .alt-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f8fafc; border-radius: 8px; padding: 10px 12px; }
+  .compare-label { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+  .compare-col div:last-child { font-size: 12.5px; color: #1e293b; line-height: 1.45; }
+  .alt-section { font-size: 12.5px; line-height: 1.5; color: #334155; }
+  .alt-section a { color: #2563eb; text-decoration: none; font-size: 11.5px; }
+  .alt-sources { font-size: 11px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .alt-sources a { color: #2563eb; text-decoration: none; }
+
+  /* 6. Category chart */
   .chart-wrap { padding: 10px 6px; }
 
-  /* 6. New entrants spotlight */
+  /* 7. New entrants spotlight */
   .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
 
-  /* 7. Methodology footer */
+  /* 8. Methodology footer */
   .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
   .methodology h2 { color: #1e293b; }
 
-  /* 8. Footer nav */
+  /* 9. Footer nav */
   .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
   .footer-nav a { color: #2563eb; text-decoration: none; }
 </style>
@@ -129,7 +150,7 @@
 
   <!-- 1. Header band -->
   <div class="header-band">
-    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <h1>American Business Alternatives to Amazon Top Sellers</h1>
     <div class="date">{{REPORT_DATE}}</div>
     <span class="badge">Public web research · Cross-verified · {{SOURCE_COUNT}} sources checked</span>
   </div>
@@ -142,18 +163,19 @@
 
   <!-- 3. Quick stats -->
   <div class="stats-row">
-    <div class="stat-card"><div class="num">{{STATS_TOTAL}}</div><div class="label">Products Covered</div></div>
-    <div class="stat-card"><div class="num">{{STATS_NEW}}</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">{{STATS_PRODUCTS}}</div><div class="label">Amazon Products</div></div>
+    <div class="stat-card"><div class="num">{{STATS_ALTERNATIVES}}</div><div class="label">Alternatives Found</div></div>
+    <div class="stat-card"><div class="num">{{STATS_NEW}}</div><div class="label">New Products</div></div>
     <div class="stat-card"><div class="num">{{STATS_RECURRING}}</div><div class="label">Recurring</div></div>
-    <div class="stat-card"><div class="num">{{STATS_VERIFIED}}</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">{{STATS_VERIFIED}}</div><div class="label">Verified American-Made</div></div>
     <div class="stat-card"><div class="num">{{STATS_LOWCONF}}</div><div class="label">Low Confidence</div></div>
     <div class="stat-card"><div class="num">{{STATS_CATEGORIES}}</div><div class="label">Categories</div></div>
   </div>
 
-  <!-- 4. Top movers grid -->
-  <h2 class="section-title">Top Movers</h2>
-  <div class="grid">
-    {{PRODUCT_CARDS}}
+  <!-- 4. Product groups -->
+  <h2 class="section-title">Products &amp; American Alternatives</h2>
+  <div class="product-groups">
+    {{PRODUCT_GROUPS}}
   </div>
 
   <!-- 5. Category breakdown -->

@@ -1,6 +1,6 @@
 # Project Context
 
-This is the agent workspace I will use to regularly run research on the top selling products for American consumers through Amazon on any given day. This research will be compiled into a dashboard report that helps me to quickly digest what was found and to understand what's hot, why it's selling well, what area of the market it's in, and where future growth is projected to be.
+This is the agent workspace I will use to regularly find American businesses and products to counter the business done through Amazon. The agent is a research lead who should run comparative research against prior research compiled by another agent on Amazon product sales to identify the most promising opportunities for future sales growth and then seek out American companies at various places in the country offering the same products for sale (at the same or higher quality, regardless of price differences). The businesses identified do not have to be of a specific size, location, or type. This lead agent should seek to be as comprehensive as possible in identifying as many American business alternatives as possible.This research will be compiled into a dashboard report that helps me to quickly digest the who, where, and what of the American businesses identified. In the dashboard itself, I want to see a product highlight (quality, features, price) in comparison with the associated Amazon product, as well as information about their business generally. Use links to further reading for each that details their business operations and ethos, the extent to which it is an American business, information about its founder(s), whether it already has an affiliate program, and contact information that is easily accessible. The dashboard should be clear, concise, and visually appealing. The agent should avoid any comparative bias outside of a pro-American interest. The agent should avoid any comparative analysis that convers prodcuts in the electronics category, and it should prioritize product highlights that are for consumable, recurring, or have otherwise inherent repurchasing interest. The agent should prioritize the most promising American business alternatives based on their potential for growth and alignment with the pro-American interest. The agent should prioritize (in the display order of the report) products that sell for more than $25 and less than $100. The agent should also maintain a rolling 14-day log of previously seen products to flag NEW vs RECURRING items day over day.
 
 # About Me - Your Creator
 
@@ -25,10 +25,10 @@ I am an educator, a writer, and a business owner. I write regularly on the topic
 # Agent Structure Within The Project
 
 - workflows/ - workflow instruction files (plain English instructions for agentic tasks)
-  - workflows/daily-amazon-top-sellers.md - the daily research+verification+dashboard workflow; read this before running the daily research
+  - workflows/american-products-comparative-sellers.md - the research+verification+dashboard workflow; read this before running the research
 - docs/ - finished deliverables requested (reports, drafts, analysis completed by the agent)
-  - docs/index.html - archive index of all daily dashboards; regenerate after writing each new report
+  - docs/index.html - archive index of all dashboards; regenerate after writing each new report
 - resources/ - reference docs and templates (accessible by the agent for task completion)
-  - resources/dashboard-template.html - reusable HTML template for the daily dashboard
+  - resources/dashboard-template.html - reusable HTML template for the dashboard report
   - resources/category-taxonomy.md - fixed Amazon category labels + colors used across reports
   - resources/seen-products-history.json - rolling 14-day log of previously seen products, used to flag NEW vs RECURRING items day over day
