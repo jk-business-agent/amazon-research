@@ -28,6 +28,28 @@ stopping.
 
 ## Step 0 — New-report detection (no-op check)
 
+### Step 0a — Bootstrap sibling repo access (required on every run, including cloud/unattended runs)
+
+`../Competitor Research Agent/` is a local checkout of the sibling agent's content. On a developer's
+own machine it already exists side-by-side with this repo. On a fresh cloud/scheduled run, this
+repo's working tree is the only thing checked out — `../Competitor Research Agent/` will not exist yet.
+Both projects are the same git remote (`origin`, currently
+`https://github.com/jk-business-agent/amazon-research.git`), just different branches: the sibling's
+daily reports live on `main`; this agent's own work lives on `american-business-research`. Use that
+fact to bootstrap read-only access to the sibling's content on every run, before Step 0b:
+
+- If `../Competitor Research Agent/` does not exist: `git clone --branch main --single-branch <origin
+  URL of this repo> "../Competitor Research Agent"`.
+- If it already exists (e.g. a developer's local machine where it's a real separate working copy):
+  leave it alone if it's not a git repository pointed at this same remote/branch (don't clobber a
+  human's real working directory); if it IS the bootstrap-created clone from a prior run, `git pull`
+  it to refresh to the latest `main`.
+- If the clone/pull itself fails (no GitHub auth in this environment, network failure, remote
+  unreachable) — this is a real environment problem, not a routine no-op. Send a notification
+  describing exactly what failed, and stop without fabricating anything. Do not proceed to Step 0b.
+
+### Step 0b — Compare against last-processed cursor
+
 Read `../Competitor Research Agent/docs/index.html` to find the sibling's most recent dated report
 folder link (e.g. `June17_2026/`). If that index looks stale, empty, or unparsable, fall back to
 listing `../Competitor Research Agent/docs/` directly for folders matching `{Month}{Day}_{Year}` and
@@ -40,10 +62,10 @@ Read `resources/seen-products-history.json` and compare that folder name to
   do not commit, do not send a notification. Stop here. This is the expected outcome on most runs if
   the workflow is invoked on a frequent schedule, and is not an error.
 - **They differ (a new sibling report exists that hasn't been processed yet)** — continue to Step 1.
-- **The sibling's `docs/` path itself does not exist or cannot be read** (distinct from "no new
-  report" — this means the sibling project is missing or relocated) — this is a real problem, not a
-  routine no-op. Send a notification naming the exact path checked, and stop without fabricating
-  anything. Do not commit.
+- **The sibling's `docs/` path itself does not exist or cannot be read after Step 0a's bootstrap
+  succeeded** (distinct from "no new report" — this means the sibling project's structure changed
+  unexpectedly) — this is a real problem, not a routine no-op. Send a notification naming the exact
+  path checked, and stop without fabricating anything. Do not commit.
 
 ## Step 1 — Parse the sibling's latest report
 
