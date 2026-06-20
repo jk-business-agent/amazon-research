@@ -1,0 +1,1541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>American Business Alternatives — June 20, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: #f1f5f9; color: var(--ink); }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px 20px 60px; }
+  .header-band { background: linear-gradient(135deg, #0f172a, #1e293b); color: #fff; border-radius: 14px; padding: 28px 32px; margin-bottom: 22px; }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: #e2e8f0; border-radius: 999px; padding: 5px 14px; font-size: 13px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; margin-bottom: 22px; }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card { flex: 1 1 130px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; text-align: center; }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .product-groups { display: flex; flex-direction: column; gap: 18px; }
+  .product-group { background: #fafbfc; border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+  .product-group-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+  .product-title { font-size: 18px; font-weight: 700; margin: 0 0 4px; }
+  .product-meta { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+  .pill { display: inline-block; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 999px; color: #fff; white-space: nowrap; }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag { font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .tag-count { background: #f1f5f9; color: #1e293b; }
+  .tag-affiliate-yes { background: var(--verified-bg); color: var(--verified); }
+  .tag-affiliate-no { background: #f1f5f9; color: var(--muted); }
+  .tag-affiliate-unconfirmed { background: var(--lowconf-bg); color: var(--lowconf); }
+  .product-rationale { font-size: 13.5px; line-height: 1.5; color: #334155; margin: 12px 0 14px; }
+  .alt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
+  .alt-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; }
+  .alt-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .alt-name { font-size: 15.5px; font-weight: 600; margin: 0; }
+  .alt-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f8fafc; border-radius: 8px; padding: 10px 12px; }
+  .compare-label { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+  .compare-col div:last-child { font-size: 12.5px; color: #1e293b; line-height: 1.45; }
+  .alt-section { font-size: 12.5px; line-height: 1.5; color: #334155; }
+  .alt-section a { color: #2563eb; text-decoration: none; font-size: 11.5px; }
+  .alt-sources { font-size: 11px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .alt-sources a { color: #2563eb; text-decoration: none; }
+  .chart-wrap { padding: 10px 6px; }
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header-band">
+    <h1>American Business Alternatives to Amazon Top Sellers</h1>
+    <div class="date">June 20, 2026</div>
+    <span class="badge">Public web research &middot; Cross-verified &middot; 106 sources checked &middot; Based on the sibling agent's June 17, 2026 report</span>
+  </div>
+
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">
+This first comparative run is built on the sibling Competitor Research Agents June 17, 2026 report (17 products, 12 categories). After hard-excluding all 4 Electronics products (AirPods Pro 3, Apple Watch Series 11, Ring Battery Doorbell, Oura Ring 4) per project rules, 13 products carried forward across 11 categories.
+Six parallel research passes found 70 candidate American business alternatives, of which 36 cleared the two-source VERIFIED bar and 34 remain LOW-CONFIDENCE (a single marketing claim with no independent corroboration).
+The research also surfaced a market-structure finding worth flagging on its own: <strong>no insulated, vacuum-sealed stainless-steel water bottle brand could be verified as manufactured in the USA</strong> &mdash; Owala, Hydro Flask, YETI, Klean Kanteen, MiiR and Pelican were all independently confirmed to manufacture overseas (mostly China), and even brands marketing themselves as American (Liberty Bottleworks, Tervis) were found to import the steel vessel itself and only finish or assemble domestically.
+Several other American-marketed brands were checked and excluded for foreign ownership discovered mid-research: Tata Harper (Amorepacific-owned, same parent as Mamonde), Thayers (LOreal-owned), and Mary Meyer (Aurora World / South Korea-owned).
+Dr. Elseys Cat Litter is itself already American-made (Cheyenne, WY) &mdash; its alternatives below are domestic competitors, not reshoring candidates. <strong>Methodology note:</strong> six general-purpose research agents ran in parallel, each applying the same two-source VERIFIED/LOW-CONFIDENCE discipline; a companys own &ldquo;Made in USA&rdquo; page never counts alone.
+    </div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">13</div><div class="label">Amazon Products</div></div>
+    <div class="stat-card"><div class="num">70</div><div class="label">Alternatives Found</div></div>
+    <div class="stat-card"><div class="num">13</div><div class="label">New Products</div></div>
+    <div class="stat-card"><div class="num">0</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">36</div><div class="label">Verified American-Made</div></div>
+    <div class="stat-card"><div class="num">34</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">11</div><div class="label">Categories</div></div>
+  </div>
+
+  <h2 class="section-title">Products &amp; American Alternatives</h2>
+  <div class="product-groups">
+
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Pampers Swaddlers Diapers, Size 5</h3>
+          <div class="product-meta">$59.77 (132 count) &middot; <span class="pill" style="background:#e11d48">Baby</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">5 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: high &mdash; diapers are a fast-consumed, frequently repurchased staple. In the $25&ndash;$100 priority band ($59.77) and the #1-ranked, longest-tenured leader in its category, making it the strongest candidate for sustained American-alternative demand. Search note: genuinely USA-manufactured diaper brands are rare &mdash; Honest Company, Coterie, Bambo Nature, Dyper and Esembly were checked and excluded for overseas manufacturing.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Cuties (First Quality Baby Products)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>~45&cent;/diaper, Pampers Swaddlers Size 5.</div></div>
+            <div class="compare-col"><div class="compare-label">Cuties</div><div>Comparable disposable diaper; retail pricing observed at 26&ndash;40&cent;/diaper depending on size, broadly comparable.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Made by First Quality Baby Products, family-owned since 1988-89 by the Damaghi family (Iranian immigrants); 5,000+ employees; diaper plants in Lewistown, PA and Macon, GA.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Assembled in the US, independently corroborated by a Georgia.org press release on the Macon plant and company-history records on the Lewistown plant; some raw materials may still be imported. <a href="https://georgia.org/newsroom/press-releases/first-quality-baby-products-announces-macon-modernization-project">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> The Damaghi family, founded First Quality in 1988-89; no individual founder name found.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> cuties.com/contact-us &middot; 866-923-1544</div>
+          <div class="alt-sources">Sources: <a href="https://www.consciousdiapers.com/pages/about-cuties">consciousdiapers.com</a> (2026-06-20), <a href="https://georgia.org/newsroom/press-releases/first-quality-baby-products-announces-macon-modernization-project">georgia.org</a> (2026-06-20), <a href="https://en.wikipedia.org/wiki/First_Quality">wikipedia.org</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Hello Bello</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$59.77, 132ct, Pampers Swaddlers Size 5.</div></div>
+            <div class="compare-col"><div class="compare-label">Hello Bello</div><div>Plant-derived diaper technology, positioned as lower-cost; direct price-per-diaper comparison not found in available sources.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Co-founded by Kristen Bell, Dax Shepard and partners, launched 2019 at Walmart. Operates its own 312,000 sq ft plant in Waco, TX (~420M diapers/year capacity). Filed Chapter 11 in Oct. 2023; acquired out of bankruptcy by Hildred Capital Management for $65M in Dec. 2023, now under Hyland's Naturals.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Waco, TX manufacturing independently corroborated by PRNewswire, KCEN-TV local news, Business Facilities trade press and CNBC. <a href="https://www.hellobello.com/made-in-the-usa">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Kristen Bell and Dax Shepard, with co-founders Sean Kane, Jay McGraw, Jennifer Pullen.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; ~8% commission via FlexOffers. <a href="https://www.flexoffers.com/affiliate-programs/hello-bello-affiliate-program/">link</a></div>
+          <div class="alt-section"><strong>Contact:</strong> hellobello.com/contactus</div>
+          <div class="alt-sources">Sources: <a href="https://www.prnewswire.com/news-releases/hello-bello-celebrates-grand-opening-of-first-us-diaper-factory-301410987.html">prnewswire.com</a> (2026-06-20), <a href="https://www.retailtouchpoints.com/topics/consumer-trends/hello-bello-files-for-bankruptcy-will-be-acquired-by-private-equity-firm">retailtouchpoints.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Thirsties (cloth diaper system)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Disposable diaper, Pampers Swaddlers Size 5.</div></div>
+            <div class="compare-col"><div class="compare-label">Thirsties</div><div>Different product type &mdash; reusable cloth diaper/cover system; higher upfront cost, designed for long-term reuse rather than disposal.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2004 by Erin Kimmett in Loveland/Longmont, CO. All products manufactured solely in Colorado, including home-based sewers; now owned by an investment group continuing the original mission.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Colorado manufacturing corroborated by an independent local-business directory (Uncover Colorado). <a href="https://www.uncovercolorado.com/made-in-colorado/thirsties-baby/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Erin Kimmett, founded 2004.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> support@thirstiesbaby.com &middot; 1-888-315-2330</div>
+          <div class="alt-sources">Sources: <a href="https://thirstiesbaby.com/pages/about-thirsties-baby">thirstiesbaby.com</a> (2026-06-20), <a href="https://www.uncovercolorado.com/made-in-colorado/thirsties-baby/">uncovercolorado.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Geffen Baby (cloth diaper)</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Disposable diaper, Pampers Swaddlers Size 5.</div></div>
+            <div class="compare-col"><div class="compare-label">Geffen Baby</div><div>Reusable cloth diaper using a proprietary 60% hemp/40% organic cotton blend.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Los Angeles-based textile manufacturer; states it makes its own fabric in its own LA plant and claims 95% of products are made in the USA.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own claim was found; no independent corroboration located. <a href="https://geffenbaby.com/pages/about-us">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Possibly Sharona Kahen (unconfirmed LinkedIn lead, not independently verified).</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; <a href="https://geffenbaby.goaffpro.com/">portal</a></div>
+          <div class="alt-section"><strong>Contact:</strong> geffenbaby.com/pages/contact</div>
+          <div class="alt-sources">Sources: <a href="https://geffenbaby.com/pages/about-us">geffenbaby.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Blueberry &amp; Me (formerly Swaddlebees)</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Disposable diaper, Pampers Swaddlers Size 5.</div></div>
+            <div class="compare-col"><div class="compare-label">Blueberry &amp; Me</div><div>Reusable cloth diaper/cover system.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Female-owned, family-operated since 2005; primary production in North Carolina; employs refugees at a living wage. Previously manufactured in China, shifted domestic after quality/IP problems.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own about-page narrative was found; no independent corroboration located. <a href="https://blueberrydiapers.com/pages/about-blueberry">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> &ldquo;Christina&rdquo; (surname not found), owner since 2005.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; 10% per sale via Shopify Collabs.</div>
+          <div class="alt-section"><strong>Contact:</strong> blueberrydiapers.com/pages/contact</div>
+          <div class="alt-sources">Sources: <a href="https://blueberrydiapers.com/pages/about-blueberry">blueberrydiapers.com</a> (2026-06-20)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Owala FreeSip Insulated Stainless Steel Water Bottle</h3>
+          <div class="product-meta">$29.99 (24oz) &middot; <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">4 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: medium &mdash; durable drinkware bought in multiples/colors and replaced over time rather than consumed outright. In the $25&ndash;$100 priority band ($29.99) and actively displacing the prior category leader. Notable finding: genuinely USA-made vacuum-insulated stainless steel bottles are essentially nonexistent &mdash; Owala itself is 100% China-manufactured despite its Utah HQ, as are Hydro Flask, YETI, Takeya, Klean Kanteen and MiiR.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Polar Bottle</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$29.99, 24oz vacuum-insulated stainless steel.</div></div>
+            <div class="compare-col"><div class="compare-label">Polar Bottle</div><div>Foam-insulated, BPA-free squeeze plastic bottle (not steel) &mdash; a material/format departure, not a strict 1:1 swap; lower price point (~$13-20 typical).</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 1994 in a Boulder, CO garage by cyclists; remains HQ'd in Longmont, CO; acquired by HydraPak in 2018 but continues operating under its own name.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Colorado manufacturing independently confirmed by allamerican.org's investigation. <a href="https://allamerican.org/investigation/polar-bottle/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Robert Heiberger and Judy Amabile, 1994.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> info@polarbottle.com &middot; 303-440-0358</div>
+          <div class="alt-sources">Sources: <a href="https://allamerican.org/investigation/polar-bottle/">allamerican.org</a> (2026-06-20), <a href="https://www.bicycleretailer.com/industry-news/2018/11/09/hydrapak-acquires-polar-bottle">bicycleretailer.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Liberty Bottleworks (Liberty Works)</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$29.99, 24oz vacuum-insulated stainless steel.</div></div>
+            <div class="compare-col"><div class="compare-label">Liberty Insulated/Venture line</div><div>Double-wall vacuum-insulated stainless steel, closest material match &mdash; but the steel vessel itself is imported; only powder-coating/printing/packing happens domestically.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2010 in Union Gap, WA; acquired by Olympia Tools in 2018; original founders departed at acquisition.</div>
+          <div class="alt-section"><strong>American-ness:</strong> allamerican.org's investigation found only the non-insulated aluminum &ldquo;Liberty Originals&rdquo; line is fully US-made; the insulated steel line uses imported steel, only finished domestically. <a href="https://allamerican.org/investigation/liberty-bottleworks/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Ryan Clark and Tim Andis, 2010; both have since departed.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> libertybottles.com (page not independently confirmed)</div>
+          <div class="alt-sources">Sources: <a href="https://allamerican.org/investigation/liberty-bottleworks/">allamerican.org</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Nalgene (32oz Wide Mouth)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$29.99, 24oz vacuum-insulated stainless steel.</div></div>
+            <div class="compare-col"><div class="compare-label">Nalgene</div><div>BPA-free plastic, non-insulated &mdash; a real category departure, included only as one of the few fully-verified American-made bottle products.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Manufactured in Rochester, NY since the 1940s; ~50% recycled plastic as of 2023.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Rochester, NY site and Tennessee-sourced Tritan pellets named by an independent &ldquo;made in USA&rdquo; review source. <a href="https://allamerican.org/lists/water-bottles/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> Not found in available sources.</div>
+          <div class="alt-sources">Sources: <a href="https://allamerican.org/lists/water-bottles/">allamerican.org</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Tervis (24oz double-wall insulated)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$29.99, 24oz vacuum-insulated stainless steel.</div></div>
+            <div class="compare-col"><div class="compare-label">Tervis</div><div>Double-wall insulated BPA-free plastic, not steel; lifetime guarantee on the plastic line. Tervis's own stainless steel tumbler line is Chinese-made (5-year vs. lifetime guarantee is the company's own origin signal).</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 1946; manufacturing in North Venice/Osprey, FL since 2005; ~700 employees at the plastic-tumbler plant.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Florida manufacturing of the plastic line corroborated by FOX 13 Tampa Bay's factory tour and allamerican.org's investigation (which also confirms the steel line is China-made). <a href="https://allamerican.org/investigation/tervis/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Frank Cotter and G. Howlett Davis, 1946; John C. Winslow purchased the company in 1967.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; ~6% per sale, 30-day cookie. <a href="https://tervis.com/affiliate">link</a></div>
+          <div class="alt-section"><strong>Contact:</strong> digital@tervis.com</div>
+          <div class="alt-sources">Sources: <a href="https://allamerican.org/investigation/tervis/">allamerican.org</a> (2026-06-20), <a href="https://fox13news.com/news/inside-the-tervis-tumbler-factory">fox13news.com</a> (2026-06-20)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Medicube Zero Pore Pad 2.0</h3>
+          <div class="product-meta">$18.90 &middot; <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">6 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: high &mdash; a consumable skincare pad replenished regularly once a routine forms. Below the $25&ndash;$100 band ($18.90) but the clearest viral-demand story in the source report, making it a high-growth target despite the price.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Thayers</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$18.90, 4.5% AHA + 0.45% BHA toner pads.</div></div>
+            <div class="compare-col"><div class="compare-label">Thayers</div><div>Exfoliating 2% AHA witch hazel pads, lower acid concentration; similar drugstore price range.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 1847 in Cambridge, MA; witch hazel harvested on the family farm in CT; GMP-compliant US facility.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Manufacturing-in-USA claim is well documented historically, but Thayers was acquired by L'Oreal (French multinational) in 2020 &mdash; flagging foreign ownership despite domestic manufacturing. <a href="https://www.loreal-finance.com/eng/news-release/loreal-signs-agreement-acquire-thayers-natural-remedies-us-based-natural-skincare">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Henry Thayer, M.D., 1847.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> thayers.com contact form</div>
+          <div class="alt-sources">Sources: <a href="https://www.thayers.com/history/">thayers.com</a> (2026-06-20), <a href="https://www.loreal-finance.com/eng/news-release/loreal-signs-agreement-acquire-thayers-natural-remedies-us-based-natural-skincare">loreal-finance.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Good For You Girls &mdash; Purifying Toner Pads</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$18.90, AHA/BHA acid toner pads.</div></div>
+            <div class="compare-col"><div class="compare-label">Good For You Girls</div><div>Witch hazel + aloe + meadowsweet pads, gentler non-acid formula for teens/sensitive skin.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Small, women-owned skincare company founded 2008, focused on clean skincare for girls/teens.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own site and Amazon listing claim &ldquo;Made in the USA&rdquo;; no independent corroboration found.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> &ldquo;Kim&rdquo; (surname not found), founded 2008.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> info@goodforyougirls.com &middot; 860-489-9912</div>
+          <div class="alt-sources">Sources: <a href="https://www.goodforyougirls.com/products/purifying-toner-pads">goodforyougirls.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Skincare Junkie &mdash; Pore Therapy Daily Toner Pads</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$18.90, AHA/BHA acid toner pads.</div></div>
+            <div class="compare-col"><div class="compare-label">Skincare Junkie</div><div>Salicylic acid + PHA + fruit enzyme pads on biodegradable material; dermatologist-developed, fragrance-free.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> New brand (launched Oct. 2023) by a board-certified NYC dermatologist.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Founder/company confirmed US-based via trade press, but no manufacturing-location evidence found &mdash; not verified as American-made.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Dr. Blair Murphy-Rose, clinical instructor of dermatology at Weill Cornell Medical Center, NYC.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; Ambassador program. <a href="https://skincarejunkie.com/pages/become-an-ambassador">link</a></div>
+          <div class="alt-section"><strong>Contact:</strong> skincarejunkie.com/pages/contact</div>
+          <div class="alt-sources">Sources: <a href="https://www.gcimagazine.com/brands-products/skin-care/news/22874927/dermatologist-blair-rose-launches-skincare-junkie">gcimagazine.com</a> (2026-06-20), <a href="https://www.prnewswire.com/news-releases/board-certified-dermatologist-dr-blair-rose-announces-the-launch-of-skincare-junkie-301945412.html">prnewswire.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Anthony &mdash; Purifying Astringent Pads</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$18.90, AHA/BHA acid toner pads.</div></div>
+            <div class="compare-col"><div class="compare-label">Anthony</div><div>Witch hazel + aloe + citrus mint astringent pads, men's grooming positioning.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Men's skincare brand founded 2000 in NYC; distributed in ~2,000 stores (Sephora, Nordstrom); based in Stony Point, NY.</div>
+          <div class="alt-section"><strong>American-ness:</strong> &ldquo;Made cruelty-free in the USA&rdquo; appears across multiple retail listings, but no independent manufacturing-location source was found.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Anthony Sosnick, 2000.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> anthony.com/pages/about-us</div>
+          <div class="alt-sources">Sources: <a href="https://anthony.com/products/purifying-astringent-pads">anthony.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Studio Gear Cosmetics &mdash; Total Clarification Exfoliating Pads</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$18.90, AHA/BHA acid toner pads.</div></div>
+            <div class="compare-col"><div class="compare-label">Studio Gear</div><div>Exfoliating pads for dead-skin-cell removal; specific acid types/concentrations not disclosed in sources.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Professional cosmetics company founded 1996 by industry veterans, originally a backstage makeup-artist brand; based in Nottingham, NH.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Company's own &ldquo;Made in the USA&rdquo; collection page corroborated by an independent listing on the madeintheusamatters.com directory. <a href="https://madeintheusamatters.com/skincare-made-in-usa/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> John Avolio and Steve Rohr, 1996.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; 15% credit per order (Social &amp; Beauty Influencer programs). <a href="https://www.studiogearcosmetics.com/pages/influencers">link</a></div>
+          <div class="alt-section"><strong>Contact:</strong> support@studiogearcosmetics.com &middot; (732) 868-1000</div>
+          <div class="alt-sources">Sources: <a href="https://www.studiogearcosmetics.com/collections/made-in-the-u-s-a">studiogearcosmetics.com</a> (2026-06-20), <a href="https://madeintheusamatters.com/skincare-made-in-usa/">madeintheusamatters.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Skin Script &mdash; Clarifying Toner Pads</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$18.90, 4.5% AHA + 0.45% BHA toner pads.</div></div>
+            <div class="compare-col"><div class="compare-label">Skin Script</div><div>2% salicylic acid + 2% glycolic acid pads, directly comparable dual-acid exfoliation mechanism; clinical-grade, sold via spas/estheticians and online.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Professional skincare line founded 2007 by an aesthetician; HQ in Chandler, AZ.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Woman-owned, Arizona-based manufacturing confirmed by the City of Chandler's own economic-development news item. <a href="https://www.chandleraz.gov/news-center/woman-owned-skin-script-moving-headquarters-chandler-ariz">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Lisa VanBockern, licensed esthetician, founded 2007.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> (sells B2B to licensed professionals)</div>
+          <div class="alt-section"><strong>Contact:</strong> Sold via artofskincare.com</div>
+          <div class="alt-sources">Sources: <a href="https://www.chandleraz.gov/news-center/woman-owned-skin-script-moving-headquarters-chandler-ariz">chandleraz.gov</a> (2026-06-20), <a href="https://www.skin-beauty.com/skin-script.html">skin-beauty.com</a> (2026-06-20)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Mamonde (Amorepacific) Amazon Launch Line</h3>
+          <div class="product-meta">$20&ndash;$27 per item &middot; <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">7 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: high &mdash; cosmetics/skincare replenished on a routine cadence. Spans the $25 line ($20&ndash;$27) and is a brand-new Amazon entrant, worth tracking as K-beauty's US entry strategy unfolds. Note: Tata Harper, a frequently-cited &ldquo;American farm-to-face&rdquo; brand, was excluded after verification showed Amorepacific (Mamonde's own parent company) acquired it in 2022.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Pacifica Beauty</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$20-$27/item, flower-focused Hyper-Flora skincare.</div></div>
+            <div class="compare-col"><div class="compare-label">Pacifica</div><div>Broad vegan/cruelty-free skincare, haircare, fragrance; comparable or lower price points; less narrowly flower-focused.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 1996 in Portland, OR; independently owned, founder-led; pioneer of vegan beauty positioning.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Independent ownership corroborated by multiple trade-press profiles (Glossy, WWD); the &ldquo;made in USA&rdquo; production claim itself is single-source (company only).</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Brook Harvey-Taylor, with husband Billy Taylor, 1996.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; via FlexOffers/Partnerize. <a href="https://www.flexoffers.com/affiliate-programs/pacifica-beauty-affiliate-program/">link</a></div>
+          <div class="alt-section"><strong>Contact:</strong> support@pacificabeauty.com &middot; (844) 332-8440</div>
+          <div class="alt-sources">Sources: <a href="https://www.pacificabeauty.com/">pacificabeauty.com</a> (2026-06-20), <a href="https://www.beautyindependent.com/pacifica-the-natural-brand-cooler-than-its-ever-been/">beautyindependent.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">FarmHouse Fresh</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$20-$27/item, flower-focused skincare.</div></div>
+            <div class="compare-col"><div class="compare-label">FarmHouse Fresh</div><div>Farm-grown botanical skincare, ingredients processed within hours of harvest; pricing $16-$68+, overlapping and exceeding Mamonde's range.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2005 in McKinney, TX; $50M in 2023 retail sales across storefronts and wholesale.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Texas-based manufacturing corroborated by JPMorganChase newsroom, D Magazine and Community Impact profiles. <a href="https://www.jpmorganchase.com/newsroom/stories/farmhouse-fresh">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Shannon McLinden, 2005.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; via Awin/Shopify Collabs. <a href="https://farmhousefreshgoods.com/pages/corporate-affiliate-program">link</a></div>
+          <div class="alt-section"><strong>Contact:</strong> Live chat at farmhousefreshgoods.com</div>
+          <div class="alt-sources">Sources: <a href="https://www.jpmorganchase.com/newsroom/stories/farmhouse-fresh">jpmorganchase.com</a> (2026-06-20), <a href="https://communityimpact.com/dallas-fort-worth/mckinney/business/2021/03/01/i-worked-my-tail-off-mckinney-resident-builds-farmhouse-fresh-skincare-brand/">communityimpact.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Good Flower Farm</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$20-$27/item, flower-focused skincare.</div></div>
+            <div class="compare-col"><div class="compare-label">Good Flower Farm</div><div>Directly flower-forward, handcrafted small-batch herbal skincare (e.g. Rose Geranium Face Cream); homegrown botanicals.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2014 by Rachel Carpenter; Bayfield, WI on Lake Superior; grows its own organic herbs since 2018.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Wisconsin-based, woman-owned operation corroborated by a U.S. Chamber of Commerce business profile. <a href="https://www.uschamber.com/co/profiles/good-flower-farm">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Rachel Carpenter, 2014.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; 15% commission, 60-day cookie. <a href="https://goodflowerfarm.com/pages/affiliate-program">link</a></div>
+          <div class="alt-section"><strong>Contact:</strong> hello@goodflowerfarm.com</div>
+          <div class="alt-sources">Sources: <a href="https://www.uschamber.com/co/profiles/good-flower-farm">uschamber.com</a> (2026-06-20), <a href="https://goodflowerfarm.com/collections/all">goodflowerfarm.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">8 Days Botanicals</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$20-$27/item, flower-focused skincare.</div></div>
+            <div class="compare-col"><div class="compare-label">8 Days Botanicals</div><div>Farm-to-bottle skin/body care from flowers and herbs grown on the company's own farm; directly comparable flower-centric positioning.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2017 by sisters Rose and Emily Leshner on a 40-acre family flower farm in Sebastopol, CA.</div>
+          <div class="alt-section"><strong>American-ness:</strong> California farm operation corroborated by an independent SHOUTOUT SOCAL feature interview. <a href="https://shoutoutsocal.com/meet-rose-leshner-founder-skincare-formulator-8-days-botanicals/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Rose Leshner (herbalist/formulator) and Emily Leshner (flower farmer), 2017.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> info@8daysbotanicals.com</div>
+          <div class="alt-sources">Sources: <a href="https://shoutoutsocal.com/meet-rose-leshner-founder-skincare-formulator-8-days-botanicals/">shoutoutsocal.com</a> (2026-06-20), <a href="https://8daysbotanicals.com/pages/sustainability">8daysbotanicals.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Cultivate Apothecary</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$20-$27/item, flower-focused skincare.</div></div>
+            <div class="compare-col"><div class="compare-label">Cultivate Apothecary</div><div>Farm-to-face luxury botanical skincare grown/processed on the company's own estate farm; trade press describes it as premium/luxury, likely above Mamonde's range.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Operates from Stonegate Farm, a 19th-century estate in NY's Hudson River Valley; bio-intensive organic farming.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Hudson Valley farm production corroborated by an independent Beauty Independent trade-press feature. <a href="https://www.beautyindependent.com/farm-to-face-skincare-brand-cultivate-apothecary-luxury-clean-beauty/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Jill Rowe and Matthew Benson.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> care@cultivateapothecary.com</div>
+          <div class="alt-sources">Sources: <a href="https://www.beautyindependent.com/farm-to-face-skincare-brand-cultivate-apothecary-luxury-clean-beauty/">beautyindependent.com</a> (2026-06-20), <a href="https://cultivateapothecary.com/pages/our-farm">cultivateapothecary.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Taspen's Organics</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$20-$27/item, flower-focused skincare.</div></div>
+            <div class="compare-col"><div class="compare-label">Taspen's Organics</div><div>Handcrafted organic herbal skincare; broader herbal (not flower-specific) focus; some lines priced notably higher.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Family-owned, founded 2007 by Keith and Heather Baruch in Conifer, CO; Heather is a former RN turned Master Herbalist.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Colorado-based, family-owned operation corroborated by local business-community sources (Visit Golden, Boulder Downtown). <a href="https://www.visitgolden.com/blog/post/golden-business-spotlight-taspens-organics-dragonfly-botanicals/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Keith and Heather Baruch, 2007.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> info@taspens.com &middot; 303-816-0429</div>
+          <div class="alt-sources">Sources: <a href="https://www.visitgolden.com/blog/post/golden-business-spotlight-taspens-organics-dragonfly-botanicals/">visitgolden.com</a> (2026-06-20), <a href="https://boulderdowntown.com/go/taspens-organics-wellness">boulderdowntown.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Sweet Hilltop Farm</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$20-$27/item, flower-focused skincare.</div></div>
+            <div class="compare-col"><div class="compare-label">Sweet Hilltop Farm</div><div>Rose-farm-derived botanical face cream and mineral makeup; explicitly rose/flower-focused, smaller/less-developed line.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Oklahoma-based farm/wellness company; originated as a work-from-home venture (&ldquo;Jenuinebeauty&rdquo;) before pivoting to roses and skincare.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own site describes the Oklahoma farm; no independent corroboration found.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Jennifer (&ldquo;Jenny&rdquo;) Bingham, CEO.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> sweethilltopfarm.com</div>
+          <div class="alt-sources">Sources: <a href="https://www.sweethilltopfarm.com/">sweethilltopfarm.com</a> (2026-06-20)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">CELSIUS Assorted Flavors Official Variety Pack</h3>
+          <div class="product-meta">$20.99 (12-pack) &middot; <span class="pill" style="background:#65a30d">Grocery</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">6 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: high &mdash; a beverage consumed and restocked continually. Just below the $25&ndash;$100 band ($20.99) but the category's clearest growth story; CELSIUS itself is already an American (Florida) company, so this comparison set intentionally favors smaller independent brands over the incumbent. Excluded: Rowdy Energy (defunct), Hiball Energy (Belgian/Brazilian-owned), REIGN/C4 (large-corporate owned).</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">SAMBAZON</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$20.99/12-pack, thermogenic/fitness energy drink.</div></div>
+            <div class="compare-col"><div class="compare-label">SAMBAZON</div><div>Acai-based, antioxidant-forward energy drink; per-can price/caffeine comparison not found.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Privately held, founded 2000 by Ryan Black, Jeremy Black, Edmund Nichols and Travis Baumgardner; HQ in San Clemente, CA; $58.7M revenue (2025).</div>
+          <div class="alt-section"><strong>American-ness:</strong> US manufacturing claim found only via a company-adjacent source; founding story independently corroborated by Wikipedia and PR Newswire, but manufacturing location itself unconfirmed.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Ryan Black (CEO), Jeremy Black, Edmund Nichols, Travis Baumgardner, 2000.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; ~10% via Impact platform.</div>
+          <div class="alt-section"><strong>Contact:</strong> info@sambazon.com &middot; (949) 498-8618</div>
+          <div class="alt-sources">Sources: <a href="https://en.wikipedia.org/wiki/Sambazon">wikipedia.org</a> (2026-06-20), <a href="https://www.prnewswire.com/news-releases/ryan-black-of-sambazon-acai-named-ey-us-entrepreneur-of-the-year-2026-pacific-southwest-award-winner-302795849.html">prnewswire.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Bulkhead Energy</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$20.99/12-pack, zero-sugar fitness energy drink.</div></div>
+            <div class="compare-col"><div class="compare-label">Bulkhead Energy</div><div>Sugar-free, zero-calorie, proprietary nootropic blend; directly comparable positioning.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded San Diego, CA, 2020, by US Navy veteran Adam Roter; self-describes as &ldquo;America's only certified veteran-owned and operated energy drink.&rdquo;</div>
+          <div class="alt-section"><strong>American-ness:</strong> Veteran-ownership and founding story corroborated by FOX 5 San Diego and Voyage Jacksonville Magazine; exact factory location unconfirmed. <a href="https://fox5sandiego.com/thelocalistsd/bulkhead-energy-veteran-fueled-crash-free/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Adam Roter, US Navy veteran (USS Russell DDG 59), 2020.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> (has a Brand Ambassador page)</div>
+          <div class="alt-section"><strong>Contact:</strong> bulkheadenergy.com/pages/contact-us</div>
+          <div class="alt-sources">Sources: <a href="https://www.bulkheadenergy.com/">bulkheadenergy.com</a> (2026-06-20), <a href="https://fox5sandiego.com/thelocalistsd/bulkhead-energy-veteran-fueled-crash-free/">fox5sandiego.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">WAYS Energy</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$20.99/12-pack, zero-sugar energy drink.</div></div>
+            <div class="compare-col"><div class="compare-label">WAYS Energy</div><div>Zero-sugar, naturally flavored, 200mg caffeine, B-vitamins/electrolytes.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Self-described &ldquo;family run small business,&rdquo; veteran-owned, donates to veteran/first-responder causes.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own site claims veteran-ownership; no independent corroboration found.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; waysenergy.com/pages/become-an-affiliate</div>
+          <div class="alt-section"><strong>Contact:</strong> Contact form via waysenergy.com</div>
+          <div class="alt-sources">Sources: <a href="https://waysenergy.com/">waysenergy.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Black Rifle Energy</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$20.99/12-pack, zero-sugar energy drink.</div></div>
+            <div class="compare-col"><div class="compare-label">Black Rifle Energy</div><div>Zero-sugar, 200mg naturally sourced caffeine; brand extension of Black Rifle Coffee Company.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Parent Black Rifle Coffee Company founded 2014 by Evan Hafer; publicly traded (BRCC).</div>
+          <div class="alt-section"><strong>American-ness:</strong> Veteran-ownership and founding story corroborated by Veteran Wiki and the company's own investor-relations site; manufacturing-location specifics for the energy-drink SKU unconfirmed. <a href="https://wiki.veteranwiki.org/businesses/black-rifle-coffee-company">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Evan Hafer, 20-year Army Special Forces (Green Beret) veteran, 2014.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> (main site blocked fetch attempts)</div>
+          <div class="alt-section"><strong>Contact:</strong> Not found in available sources (site fetch blocked).</div>
+          <div class="alt-sources">Sources: <a href="https://wiki.veteranwiki.org/businesses/black-rifle-coffee-company">wiki.veteranwiki.org</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Zenedge Energy Drinks</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$20.99/12-pack, higher-stimulant fitness energy drink.</div></div>
+            <div class="compare-col"><div class="compare-label">Zenedge</div><div>Lower-caffeine &ldquo;healthy alternative&rdquo; positioning, no jitters/crash claim.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Made by Premier Manufacturing LLC, Erie, PA; first African American female-led/owned energy drink brand, retail since 2009.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Pennsylvania HQ and founder identity corroborated by an independent feature on whenwomeninspire.com. <a href="https://whenwomeninspire.com/2022/11/07/marva-morris-zenedge-energy-drinks/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Marva Keys Morris, CEO, since 2009.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; drinkzenedge.com/affiliate-program</div>
+          <div class="alt-section"><strong>Contact:</strong> (814) 357-9985 &middot; 1001 State Street, Suite 907, Erie, PA</div>
+          <div class="alt-sources">Sources: <a href="https://drinkzenedge.com/">drinkzenedge.com</a> (2026-06-20), <a href="https://whenwomeninspire.com/2022/11/07/marva-morris-zenedge-energy-drinks/">whenwomeninspire.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Bloom Sparkling Energy</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$20.99/12-pack ($1.75/can).</div></div>
+            <div class="compare-col"><div class="compare-label">Bloom Sparkling Energy</div><div>Launched at $3/can at Target; directly comparable price point.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Bloom Nutrition founded 2019 by Mari Llewellyn and Gregory LaVecchia; Nutrabolt (C4 Energy's parent) holds a 20% stake and supplies manufacturing infrastructure.</div>
+          <div class="alt-section"><strong>American-ness:</strong> American-founded, but the Nutrabolt stake undercuts the &ldquo;independent American business&rdquo; framing this research set targets.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Mari Llewellyn and Gregory LaVecchia, 2019.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> Not found in available sources.</div>
+          <div class="alt-sources">Sources: <a href="https://www.fooddive.com/news/nutrabolt-bloom-nutrition-investment/759735/">fooddive.com</a> (2026-06-20), <a href="https://en.wikipedia.org/wiki/Bloom_Sparkling_Energy">wikipedia.org</a> (2026-06-20)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Bounty Quick Size Paper Towels</h3>
+          <div class="product-meta">$24.67 (8 family rolls) &middot; <span class="pill" style="background:#0d9488">Health &amp; Household</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">5 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: high &mdash; a textbook recurring household consumable. Just below the $25&ndash;$100 band ($24.67); P&amp;G's own manufacturing footprint is mixed/global, so smaller domestic manufacturers are the more interesting comparison. Excluded: Cascades (Canadian), Reel Paper (China-sourced bamboo pulp), Seventh Generation (Unilever-owned, Canada-manufactured).</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Marcal Paper</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$24.67, 8 family rolls, virgin/blended pulp.</div></div>
+            <div class="compare-col"><div class="compare-label">Marcal</div><div>100% recycled fiber, hypoallergenic, dye/fragrance-free, chlorine-free processing.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 1932; now owned by Atlas Holdings (acquired 2012); facilities across NJ, PA, NC, TN, MS, NV; 1,000+ employees.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Six-state US manufacturing footprint corroborated by Green Seal certification (GS-1) and Atlas Holdings' own acquisition press materials. <a href="https://greenseal.org/marcal-paper-on-providing-quality-paper-products-with-minimized-ecological-footprints/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Nicholas Marcalus, 1932; now institutionally owned (no current founder-operator).</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> 888-288-7907 &middot; 1 Market St, Elmwood Park, NJ</div>
+          <div class="alt-sources">Sources: <a href="https://www.marcalpaper.com/about-us/">marcalpaper.com</a> (2026-06-20), <a href="https://greenseal.org/marcal-paper-on-providing-quality-paper-products-with-minimized-ecological-footprints/">greenseal.org</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Pasque Papers</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$24.67, 8 family rolls.</div></div>
+            <div class="compare-col"><div class="compare-label">Pasque Papers</div><div>Bath tissue/paper towels marketed eco-friendly with sustainably sourced pulp; price not found.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Family-owned, Freeman, SD; manufactures in-house and private-label/wholesale.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own &ldquo;100% Made in America&rdquo; claim found; no independent corroboration.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> 42972 Colony Rd, Freeman, SD 57029</div>
+          <div class="alt-sources">Sources: <a href="https://www.pasquepapers.com/">pasquepapers.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">American Paper Converting (APC)</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$24.67, 8 family rolls, consumer retail.</div></div>
+            <div class="compare-col"><div class="compare-label">APC</div><div>Bath tissue/towels primarily for janitorial/foodservice distributors; consumer-facing comparison not directly available.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 1997; two US plants &mdash; Woodland, WA (since 1997) and Sandston, VA (since 2011).</div>
+          <div class="alt-section"><strong>American-ness:</strong> Verifiable physical addresses for both plants, but only the company's own About page was checked &mdash; no independent second source found.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> (360) 225-0488 (Woodland, WA) &middot; (804) 321-2145 (Sandston, VA)</div>
+          <div class="alt-sources">Sources: <a href="https://americanpaperco.com/about-us/">americanpaperco.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Georgia-Pacific (Sparkle brand)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$24.67, 8 family rolls.</div></div>
+            <div class="compare-col"><div class="compare-label">Sparkle</div><div>Direct retail paper-towel competitor; price/sheet-count comparison not found.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Large US manufacturer, Koch Industries subsidiary, HQ in Atlanta, GA; Sparkle made at plants in AL, FL, GA, OK, OR (included as a mass-market, definitively-American fallback rather than a small/independent pick).</div>
+          <div class="alt-section"><strong>American-ness:</strong> US manufacturing footprint corroborated by JAXUSA regional economic-development profile. <a href="https://www.jaxusa.org/success-stories/georgia-pacific-3/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not applicable &mdash; century-plus-old industrial company under Koch Industries.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> gp.com</div>
+          <div class="alt-sources">Sources: <a href="https://www.jaxusa.org/success-stories/georgia-pacific-3/">jaxusa.org</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Betterway (bamboo paper towels)</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$24.67, wood-pulp paper towels.</div></div>
+            <div class="compare-col"><div class="compare-label">Betterway</div><div>Plastic-free, PFAS-free, compostable bamboo towels &mdash; a materially different fiber type.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Registered at a Sheridan, WY address commonly used as a registered-agent mailbox for small e-commerce LLCs, not confirmed as a physical operating HQ.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Bamboo pulp for this category typically originates overseas; no US manufacturing claim or corroboration found. Included as a flagged, weaker candidate rather than excluded outright.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> gobetterway.com/pages/contact-us</div>
+          <div class="alt-sources">Sources: <a href="https://www.gobetterway.com/products/bamboo-paper-towel">gobetterway.com</a> (2026-06-20)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Dr. Elsey's Ultra Unscented Clumping Clay Cat Litter</h3>
+          <div class="product-meta">$21.49&ndash;$22.99 (40 lb) &middot; <span class="pill" style="background:#92400e">Pet Supplies</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">6 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: high &mdash; litter is consumed and restocked monthly. Below the $25&ndash;$100 band ($21.49&ndash;$22.99). Note: the Amazon product itself is already American-made (Cheyenne, WY, family-owned Precious Cat Inc.), so the alternatives below are direct domestic competitors rather than reshoring candidates.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Cat's Pride (Oil-Dri Corporation of America)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$21.49-$22.99/40lb clumping clay.</div></div>
+            <div class="compare-col"><div class="compare-label">Cat's Pride</div><div>Clumping clay litter, up to 40% lighter than traditional litters, hypoallergenic; comparable $15-22 range for similar bag sizes.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Made by Oil-Dri Corporation (publicly traded, est. 1941); cat litter focus since 1948; plants in GA, MS, CA.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Three-state US manufacturing footprint corroborated by the company's public-company investor-relations status. <a href="https://catspride.com/our-story/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Nick Jaffee, 1941; family-controlled through three generations, current CEO Dan Jaffee.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> (runs a charitable &ldquo;Litter for Good&rdquo; donation program, not an affiliate program)</div>
+          <div class="alt-section"><strong>Contact:</strong> 1-800-645-3741 &middot; catspride@oildri.com</div>
+          <div class="alt-sources">Sources: <a href="https://catspride.com/our-story/">catspride.com</a> (2026-06-20), <a href="https://www.oildri.com/markets/pet-care/">oildri.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Intersand</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$21.49-$22.99/40lb clumping clay.</div></div>
+            <div class="compare-col"><div class="compare-label">Intersand</div><div>Sodium bentonite clumping clay (OdourLock/Classic/Simple lines); 40lb price not confirmed.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Operating 30+ years; exports to 60+ countries; US address in Windsor, CO; offers private-label manufacturing too.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own &ldquo;Proudly made in the USA&rdquo; claim with a Colorado address; no independent corroboration found.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> 1-877-242-7263 &middot; 31880 Great Western Dr, Windsor, CO</div>
+          <div class="alt-sources">Sources: <a href="https://intersand.com/us/">intersand.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Boxiecat</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$21.49-$22.99/40lb clumping clay.</div></div>
+            <div class="compare-col"><div class="compare-label">Boxiecat</div><div>99.9% dust-free clumping clay with probiotic odor control and a UV-reactive &ldquo;Glo Attract&rdquo; feature; from $25.99/16lb, higher per-pound.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Boxiecat LLC, Santa Monica, CA, founded 2009; sold via Amazon, Chewy, PetSmart, Petco, Target.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own FAQ claim found; independent press confirms operations but not manufacturing location specifically.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Josh Wiesenfeld, 2009.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; 5% standard, 10% Vet Affiliate Program (currently paused).</div>
+          <div class="alt-section"><strong>Contact:</strong> 2309 Santa Monica Blvd. #209, Santa Monica, CA</div>
+          <div class="alt-sources">Sources: <a href="https://boxiecat.com/products/glo-clumping-clay-litter">boxiecat.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Wyoming Sunmade</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$21.49-$22.99/40lb clumping clay.</div></div>
+            <div class="compare-col"><div class="compare-label">Wyoming Sunmade</div><div>Sun-dried sodium bentonite, vertically integrated from mining to packaging; price not found.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Family-owned, Hulett, WY; mining/processing bentonite for ~20 years.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Wyoming-mined and processed (a verifiable physical-operations fact, not just a label) and a Wyoming LLC business registry corroborates the entity.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> (307) 878-4487 &middot; info@wysunmade.com</div>
+          <div class="alt-sources">Sources: <a href="https://www.wysunmade.com/">wysunmade.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">World's Best Cat Litter (KENT Pet Group)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$21.49-$22.99/40lb clumping clay.</div></div>
+            <div class="compare-col"><div class="compare-label">World's Best</div><div>Whole-kernel-corn clumping (not clay), 99% dust-free, flushable/septic-safe; ~$39.99-$41.99/28lb, notably higher per-pound.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> KENT Pet Group, operating since 1927, HQ Muscatine, IA; opened a new 174,000 sq ft flagship plant there in June 2026, adding 96 jobs.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Iowa manufacturing investment corroborated by multiple press outlets (PR Newswire, Petage, WQAD) covering the June 2026 plant opening. <a href="https://www.prnewswire.com/news-releases/kent-worldwide-celebrates-the-grand-opening-of-the-worlds-best-cat-litter-manufacturing-facility-with-a-ribbon-cutting-event-302799129.html">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Third-generation CEO Gage A. Kent leads the family-owned company; original founder not found.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> (877) 367-9225 &middot; 2905 N Hwy 61, Muscatine, IA</div>
+          <div class="alt-sources">Sources: <a href="https://www.prnewswire.com/news-releases/kent-worldwide-celebrates-the-grand-opening-of-the-worlds-best-cat-litter-manufacturing-facility-with-a-ribbon-cutting-event-302799129.html">prnewswire.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">sWheat Scoop</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$21.49-$22.99/40lb clumping clay.</div></div>
+            <div class="compare-col"><div class="compare-label">sWheat Scoop</div><div>100% USA-grown wheat clumping litter (not clay), 99.5% dust-free; retailer prices vary widely ($9.99-$38.92).</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Originated &ldquo;over 25 years ago&rdquo; on a family farm in Minnesota; manufactured in Detroit Lakes, MN.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own claim found; no independent corroboration located.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> swheatscoop.com/contact</div>
+          <div class="alt-sources">Sources: <a href="https://www.swheatscoop.com/faqs">swheatscoop.com</a> (2026-06-20)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Amazon Basics Multipurpose Copy Printer Paper</h3>
+          <div class="product-meta">$7.09 (1 ream) &middot; <span class="pill" style="background:#0891b2">Office Products</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">6 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: high &mdash; office paper is a recurring consumable, though at $7.09 it sits well below the $25&ndash;$100 band. Included because it's Amazon's own private label, making a domestic-manufacturer comparison especially pointed.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Hammermill (Sylvamo Corporation)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$7.09/ream, standard 20lb copy paper.</div></div>
+            <div class="compare-col"><div class="compare-label">Hammermill</div><div>Standard 20lb copy paper plus premium presentation-grade and specialty lines; per-ream price varies by reseller.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 1898 in Erie, PA by the Behrend brothers; now owned by Sylvamo Corporation; plants in Eastover, SC and Ticonderoga, NY; $145M committed to SC plant expansion through 2026.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Independently scored 94% American-made by third-party directory Truly American Made, citing 20+ years of documented domestic manufacturing. <a href="https://trulyamericanmade.com/brands/hammermill">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> The Behrend brothers (German immigrants), 1898; now under Sylvamo Corporation.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> resources.hammermill.com/faq</div>
+          <div class="alt-sources">Sources: <a href="https://trulyamericanmade.com/brands/hammermill">trulyamericanmade.com</a> (2026-06-20), <a href="https://hammermill.com/blogs/newsroom/hammermill-paper-is-made-and-remade-and-remade-in-america">hammermill.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">American Eagle Paper Mills (Eagle Office)</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$7.09/ream copy paper.</div></div>
+            <div class="compare-col"><div class="compare-label">Eagle Office</div><div>30%, 50% or 100% recycled-content copy paper, FSC-certified, acid-free; price not found.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Self-described &ldquo;leading US producer of recycled uncoated freesheet papers&rdquo;; mill at Tyrone, PA.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own claim and a verifiable mill address found; no independent press/certification source corroborating ownership.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> +1 814-684-1610 &middot; 1600 Pennsylvania Ave, Tyrone, PA</div>
+          <div class="alt-sources">Sources: <a href="https://www.aepaper.com/products/eagle-office">aepaper.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Boise Paper (Packaging Corporation of America)</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$7.09/ream copy paper.</div></div>
+            <div class="compare-col"><div class="compare-label">Boise Paper</div><div>Multiple tiers (POLARIS premium, ASPEN recycled, X-9 multi-use); price not found.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Division of Packaging Corporation of America (NYSE: PKG), a major publicly traded US paper/packaging company.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own claim found in this pass; public-company status is suggestive but wasn't independently cross-checked against SEC filings for this specific claim.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> boisepaper.com</div>
+          <div class="alt-sources">Sources: <a href="https://www.boisepaper.com/">boisepaper.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">PrintWorks (Paris Corporation)</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$7.09/ream copy paper.</div></div>
+            <div class="compare-col"><div class="compare-label">PrintWorks</div><div>100% recycled content (from recycled food/beverage container material), 20lb, 92 brightness; marketed at a comparable price to lower-recycled competitors.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Made since 1964; raw materials sourced within 300 miles of the mill; sold under parent Paris Corporation.</div>
+          <div class="alt-section"><strong>American-ness:</strong> &ldquo;Made in the USA&rdquo; repeated consistently across multiple independent retailer listings, but no dedicated independent directory/press source was found.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> pariscorp.com</div>
+          <div class="alt-sources">Sources: <a href="https://pariscorp.com/high-quality-reliable-specialty-products/printworks-specialty/printworks-recycled-paper/">pariscorp.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Inland Empire Paper Company</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$7.09/ream copy paper.</div></div>
+            <div class="compare-col"><div class="compare-label">Inland Empire</div><div>Primarily lightweight papers (newsprint, specialty); ARC Natural is 100% post-consumer recycled with no added bleach/dye &mdash; a dedicated copy-paper SKU was not confirmed, so this is a partial match.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 1911, continuously operating in Millwood, WA; manages 120,000+ acres of forestland.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own &ldquo;USA family owned and operated&rdquo; claim found; the 1911 founding/single-location history is a soft corroborating signal but not an independent source.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> iepco.com</div>
+          <div class="alt-sources">Sources: <a href="https://iepco.com/">iepco.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">NORPAC (North Pacific Paper Company)</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$7.09/ream copy paper.</div></div>
+            <div class="compare-col"><div class="compare-label">NORPAC Natural Choice</div><div>Made from waste wood from sustainably grown forests, 100% recyclable; distributed at Costco/Walmart, comparable mass-market scale.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Operates a thermo-mechanical pulping facility in Longview, WA.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Verifiable street address (Longview, WA) and confirmed major-retailer distribution provide partial corroboration, but no independent press/certification source was fetched.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> 3001 Industrial Way, Longview, WA</div>
+          <div class="alt-sources">Sources: <a href="https://www.norpacpaper.com/products/graphic-papers/business-office/natural-choice/">norpacpaper.com</a> (2026-06-20)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Rust-Oleum Painter's Touch 2X Ultra Cover Spray Paint</h3>
+          <div class="product-meta">$5.99 (12 oz) &middot; <span class="pill" style="background:#475569">Tools &amp; Home Improvement</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-lowconf">LOW-CONFIDENCE (source report)</span>
+          <span class="tag tag-count">4 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: medium &mdash; repurchased per-project rather than on a fixed cycle. At $5.99 it's well below the $25&ndash;$100 band, and the source report flagged this product itself LOW-CONFIDENCE (no independent corroboration). Excluded: Krylon (Sherwin-Williams owned), Testors (confirmed owned by RPM International, the same parent as Rust-Oleum).</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Seymour Paint (Seymour of Sycamore, Inc.)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$5.99/12oz general-purpose aerosol enamel.</div></div>
+            <div class="compare-col"><div class="compare-label">Seymour</div><div>General-purpose aerosol spray paints/enamels, comparable use case; per-can price not confirmed.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 1949 in Sycamore, IL; largest family-owned, privately-held aerosol paint manufacturer in the US; founder credited with inventing aerosol spray paint.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Sycamore, IL facility corroborated by the Sycamore Area Chamber of Commerce member listing and ThomasNet supplier directory. <a href="https://members.sycamorechamber.com/list/member/seymour-of-sycamore-inc-380">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Ed Seymour, 1949.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> 800-435-4482 &middot; 917 Crosby Avenue, Sycamore, IL</div>
+          <div class="alt-sources">Sources: <a href="https://members.sycamorechamber.com/list/member/seymour-of-sycamore-inc-380">sycamorechamber.com</a> (2026-06-20), <a href="https://seymourpaint.com/contact-us/">seymourpaint.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Plutonium Paint</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$5.99/12oz general-purpose enamel.</div></div>
+            <div class="compare-col"><div class="compare-label">Plutonium</div><div>Premium modified automotive acrylic lacquer, claims faster/harder drying and better coverage; ~500-retailer distribution (Ace, True Value).</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Manufactured by the Raabe Company (~60 years aerosol experience); distributed by Crusader Industries since 2018; HQ in Menomonee Falls, WI.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own &ldquo;Made in the USA, born and raised in Detroit&rdquo; claim found; no independent corroboration located.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Started early 2000s by a group of artists/businessmen with the Raabe Company; no individual founder named.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> info@plutoniumpaint.com</div>
+          <div class="alt-sources">Sources: <a href="https://plutoniumpaint.com/about-plutonium-paints/">plutoniumpaint.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Majic Paints</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$5.99/12oz general-purpose enamel.</div></div>
+            <div class="compare-col"><div class="compare-label">Majic</div><div>Diamond Hard Acrylic Enamel Spray Paint, 11oz cans, direct DIY-enamel competitor sold at Amazon/Walmart/Tractor Supply.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Established 1920; full consumer finish line (oil, acrylic, latex, wood finish, aerosol, farm/industrial specialty); Columbus, OH.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own &ldquo;manufactured in America&rdquo; claim found; no independent corroboration located.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> majicpaints.com/contact-us/</div>
+          <div class="alt-sources">Sources: <a href="https://majicpaints.com">majicpaints.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">All American Paint Co.</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>$5.99/12oz general home-improvement enamel.</div></div>
+            <div class="compare-col"><div class="compare-label">All American Paint Co.</div><div>Athletic field/traffic/utility marking paint &mdash; an adjacent category, not a direct DIY home-improvement substitute.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Manufacturer/supplier/distributor based in Platte City, MO area.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own &ldquo;100% American-made&rdquo; claim plus basic directory listings found; directories confirm existence, not the manufacturing claim itself.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> (877) 334-2730 &middot; PO Box 1964, Platte City, MO</div>
+          <div class="alt-sources">Sources: <a href="https://allamericanpaintco.com/about/">allamericanpaintco.com</a> (2026-06-20)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Carhartt Force Cooling Collection</h3>
+          <div class="product-meta">price not confirmed &middot; <span class="pill" style="background:#7c3aed">Apparel</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-lowconf">LOW-CONFIDENCE (source report)</span>
+          <span class="tag tag-count">4 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: medium &mdash; technical apparel replaced occasionally, often seasonally. Price wasn't confirmed in the source report; LOW-CONFIDENCE there too (single, unconfirmable source). Excluded: Arctic Cool (China-manufactured), Dovetail Workwear (Pakistan-manufactured), Berne Apparel (mixed domestic/international), American Giant (no cooling/moisture-wicking line found).</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">ORIGIN USA</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Carhartt Force cooling/moisture-wicking workwear.</div></div>
+            <div class="compare-col"><div class="compare-label">ORIGIN USA</div><div>Performance training apparel (RTX tops, VRSA stretch shorts), wicking poly blend; technical/athletic rather than industrial workwear; price not confirmed.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Operates its own factories in Maine and North Carolina; founded 2012/2013.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own PRNewswire press release (company-issued) corroborates the Maine/NC factories; no independent journalism found.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Pete Roberts, 2012/2013, with reported partner Jocko Willink.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> Not found in available sources.</div>
+          <div class="alt-sources">Sources: <a href="https://originusa.com/pages/press">originusa.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Bamtech USA</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Carhartt Force cooling/moisture-wicking workwear.</div></div>
+            <div class="compare-col"><div class="compare-label">Bamtech</div><div>Bamboo-fiber performance apparel ($48-$95), naturally moisture-wicking/breathable/odor-resistant &mdash; natural-fiber alternative to synthetic wicking tech.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Veteran-owned, founded 2019, small DTC brand based in California.</div>
+          <div class="alt-section"><strong>American-ness:</strong> &ldquo;Crafted in the USA&rdquo; corroborated by independent profiles (The Modest Man, Voyage LA) that largely restate the founder's own account rather than audit the supply chain.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Brent Kappus, former US Navy aviation mechanic, 2019.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; Ambassador Program. <a href="https://bamtechusa.com/pages/ambassador-program">link</a></div>
+          <div class="alt-section"><strong>Contact:</strong> bamtechusa.com/pages/contact-us-1</div>
+          <div class="alt-sources">Sources: <a href="https://themisfitnation.com/brent-kappes-us-navy-veteran-revolutionizing-performance-gear-with-bamtech/">themisfitnation.com</a> (2026-06-20), <a href="https://voyagela.com/interview/hidden-gems-meet-brent-kappes-of-bamtech-usa/">voyagela.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">1620 Workwear</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Carhartt Force cooling/moisture-wicking workwear, typically lower price point.</div></div>
+            <div class="compare-col"><div class="compare-label">1620 Workwear</div><div>Tradesperson-focused workwear ($128-$228), lifetime warranty with free exchanges; premium-positioned vs. Carhartt.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2016/2017 in Newbury, MA; factories in El Paso, TX and Los Angeles, CA; founder recently bought an East Boston manufacturing plant.</div>
+          <div class="alt-section"><strong>American-ness:</strong> US manufacturing independently corroborated by The Boston Globe (Oct. 2025) and National Fisherman trade press. <a href="https://www.bostonglobe.com/2025/10/06/business/1620-workwear-clothing-brand/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Josh Walker and Ted De Innocentis.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> 1620usa.com contact form</div>
+          <div class="alt-sources">Sources: <a href="https://www.bostonglobe.com/2025/10/06/business/1620-workwear-clothing-brand/">bostonglobe.com</a> (2026-06-20), <a href="https://www.nationalfisherman.com/1620-workwear-usa-made-usa-tough">nationalfisherman.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Southwind Apparel</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Carhartt Force cooling/moisture-wicking workwear.</div></div>
+            <div class="compare-col"><div class="compare-label">Southwind</div><div>UPF 50+ nylon-spandex performance fabric, women's activewear/casual rather than industrial workwear; $60-$152, higher than Carhartt's typical price.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Women-owned, Stevensville, MD, founded ~2018.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Garments &ldquo;proudly sewn in the Mid-Atlantic&rdquo; per the company's own site, but fabric sourcing is mixed/global; the one semi-independent profile found largely repeats the founder's framing.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Christine Maly, Owner/CEO.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; <a href="https://southwindapparel.com/pages/become-an-affiliate">link</a></div>
+          <div class="alt-section"><strong>Contact:</strong> sales@southwindapparel.com &middot; (443) 249-3006</div>
+          <div class="alt-sources">Sources: <a href="https://southwindapparel.com/">southwindapparel.com</a> (2026-06-20)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Le Creuset Toughened Nonstick PRO Fry Pan</h3>
+          <div class="product-meta">price not confirmed &middot; <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">5 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: low &mdash; premium cookware is a rare, durable purchase. Price not confirmed (Prime-Day-discounted from an unconfirmed baseline); included for completeness despite the low repurchase signal. Excluded: Xtrema/Ceramcor (China-manufactured despite American ownership), Hestan (Italy-made), All-Clad (nonstick lines specifically are China-made, though its stainless lines are US-made).</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Made In (CeramiClad Collection)</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Toughened nonstick PRO fry pan.</div></div>
+            <div class="compare-col"><div class="compare-label">Made In CeramiClad</div><div>5-ply stainless-clad base with ceramic nonstick coating, PFAS/PFOA-free, oven-safe to 550&deg;F; 3-piece set $359.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2017 in Boston, relocated to Austin, TX in 2018; the CeramiClad line specifically is stamped/coated/assembled by Wisconsin manufacturing partners (the company's broader catalog includes France/Italy-made lines).</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own blog page describes the Wisconsin manufacturing; no independent press corroboration found for this specific line.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Jake Kalick and Chip Malt.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; commission rate varies by source (10-20%), 30-day cookie.</div>
+          <div class="alt-section"><strong>Contact:</strong> Not found in available sources.</div>
+          <div class="alt-sources">Sources: <a href="https://madeincookware.com/blogs/best-non-stick-pans-assembled-in-the-usa">madeincookware.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">American Kitchen Cookware (Regal Ware)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Toughened nonstick PRO fry pan, premium price tier.</div></div>
+            <div class="compare-col"><div class="compare-label">American Kitchen</div><div>Tri-ply nonstick fry pans (galvanized steel/aluminum core), PFOA-free coating, &ldquo;factory direct pricing&rdquo; lower than premium European brands.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Part of the Regal Ware family of brands (founded 1945); crafted in small batches in West Bend, WI, a 100+ year cookware manufacturing region.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Wisconsin manufacturing corroborated by the Encyclopedia of Milwaukee's historical entry on Regal Ware. <a href="https://emke.uwm.edu/entry/regal-ware-worldwide/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> James O. Reigle and two associates, 1945.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> americankitchen.com</div>
+          <div class="alt-sources">Sources: <a href="https://emke.uwm.edu/entry/regal-ware-worldwide/">emke.uwm.edu</a> (2026-06-20), <a href="https://regalware.com/our-story">regalware.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Heritage Steel</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Toughened nonstick PRO fry pan.</div></div>
+            <div class="compare-col"><div class="compare-label">Heritage Steel</div><div>Stainless-clad (titanium-reinforced 5-ply) cookware, not nonstick-coated &mdash; a real surface-type departure for frying use, not a literal nonstick match.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Family-owned manufacturer in Clarksville, TN; traces to a 1983 factory purchase by Donald Henn; 40+ years of stainless-clad cookware experience.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Clarksville, TN manufacturing corroborated by an independent OvenSpot investigative article and a J.L. Hufford retailer explainer. <a href="https://ovenspot.com/where-is-heritage-steel-cookware-made/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Donald Henn, purchased the Clarksville, TN factory in 1983.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> info@heritagesteel.us &middot; +1 866-394-3136</div>
+          <div class="alt-sources">Sources: <a href="https://ovenspot.com/where-is-heritage-steel-cookware-made/">ovenspot.com</a> (2026-06-20), <a href="https://heritagesteel.us/pages/our-story">heritagesteel.us</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">GRIZZLY Cookware</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Toughened nonstick PRO fry pan.</div></div>
+            <div class="compare-col"><div class="compare-label">GRIZZLY</div><div>Nickel-coated cast iron skillet (12-inch), not PTFE/ceramic nonstick &mdash; positioned as offering smoother release than raw cast iron.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Veteran-owned, female-led small business in Charlotte, NC; manufacturing spans NC, SC, GA, and WI facilities.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the company's own &ldquo;Our Story&rdquo; page describes the multi-state domestic process; no independent corroboration found.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Kyle Caniglia (US Army veteran) and Tim Newcombe.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> 844-474-9924 &middot; 13663 Providence Rd, Unit 311, Matthews, NC</div>
+          <div class="alt-sources">Sources: <a href="https://grizzlycookware.com/pages/our-story">grizzlycookware.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Borough Furnace</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Toughened nonstick PRO fry pan.</div></div>
+            <div class="compare-col"><div class="compare-label">Borough Furnace</div><div>Hand-poured cast iron skillets, not nonstick-coated; $180-$240, comparable-to-higher than premium nonstick.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Small foundry established 2011, now operating from Owego, NY (Finger Lakes); hand-poured pieces, partly powered by recycled cooking oil.</div>
+          <div class="alt-section"><strong>American-ness:</strong> &ldquo;Cast by hand in New York&rdquo; corroborated by an independent Saveur magazine interview with the founder. <a href="https://www.saveur.com/article/products/the-interview-john-truex-founder-borough-furnace">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> John Truex, with partner Liz Seru.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> Instagram @boroughfurnace</div>
+          <div class="alt-sources">Sources: <a href="https://www.saveur.com/article/products/the-interview-john-truex-founder-borough-furnace">saveur.com</a> (2026-06-20)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Hydro Flask Supernova Purple (Amazon-exclusive colorway)</h3>
+          <div class="product-meta">price not confirmed &middot; <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">6 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: low &mdash; a durable, mostly one-time purchase even with collectible colorways. Price not confirmed; framed by the source report as a brand &ldquo;comeback&rdquo; rather than a sustained leader. As with Owala, genuine USA-made vacuum-insulated steel bottles do not exist at scale; this set broadens to American-made insulated drinkware generally, flagging material differences inline. Excluded: Klean Kanteen, MiiR, Pelican, Hydro Cell (all confirmed China-manufactured).</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Polar Bottle</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Vacuum-insulated stainless steel tumbler/bottle.</div></div>
+            <div class="compare-col"><div class="compare-label">Polar Bottle</div><div>Foam-insulated squeeze plastic, not steel; lighter, BPA-free, lower price (~$13-20).</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 1994, Boulder, CO; blow-molds in Denver, CO; acquired by HydraPak 2018/2019.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Colorado manufacturing independently confirmed by allamerican.org's investigation. <a href="https://allamerican.org/investigation/polar-bottle/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Robert Heiberger (mechanical engineer) and Judy Amabile, 1994.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> (303) 440-0358 &middot; 2605 Trade Centre Ave., Longmont, CO</div>
+          <div class="alt-sources">Sources: <a href="https://allamerican.org/investigation/polar-bottle/">allamerican.org</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Tervis</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Vacuum-insulated stainless steel tumbler/bottle.</div></div>
+            <div class="compare-col"><div class="compare-label">Tervis</div><div>Double-wall insulated plastic, lifetime guarantee; the steel tumbler line is China-made (only 5-year guarantee), a meaningful caveat.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 1946; FL plastic-tumbler plant employs ~700.</div>
+          <div class="alt-section"><strong>American-ness:</strong> FL manufacturing of the plastic line corroborated by FOX 13 Tampa Bay and allamerican.org. <a href="https://allamerican.org/investigation/tervis/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Frank Cotter and G. Howlett Davis, 1946.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; ~6% per sale. <a href="https://tervis.com/affiliate">link</a></div>
+          <div class="alt-section"><strong>Contact:</strong> digital@tervis.com</div>
+          <div class="alt-sources">Sources: <a href="https://allamerican.org/investigation/tervis/">allamerican.org</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">50 Strong (division of PTC)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Vacuum-insulated stainless steel tumbler/bottle.</div></div>
+            <div class="compare-col"><div class="compare-label">50 Strong</div><div>Double-wall insulated BPA-free plastic (not steel), &ldquo;Simply Better Bottles&rdquo; line; lower price point.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Based in Lima, OH; division of PTC, a plastics manufacturer founded 1982; reshored 5 million bottles previously made by a Chinese manufacturer.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Lima, OH reshoring corroborated by PR Newswire and Manufacturing.net coverage of the Walmart-driven story. <a href="https://www.prnewswire.com/news-releases/50-strong-to-manufacture-five-million-water-bottles-in-lima-oh-previously-produced-by-chinese-competitor-300474767.html">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources (division of parent PTC).</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> 50strong.com/pages/contact</div>
+          <div class="alt-sources">Sources: <a href="https://www.prnewswire.com/news-releases/50-strong-to-manufacture-five-million-water-bottles-in-lima-oh-previously-produced-by-chinese-competitor-300474767.html">prnewswire.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Nalgene</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Vacuum-insulated stainless steel tumbler/bottle.</div></div>
+            <div class="compare-col"><div class="compare-label">Nalgene</div><div>BPA-free plastic, not insulated &mdash; a significant category mismatch; ~$11-14, lifetime guarantee.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Rochester, NY; subsidiary of Thermo Fisher Scientific.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Rochester, NY assembly corroborated by an independent &ldquo;Best Water Bottles Made in the USA&rdquo; roundup. <a href="https://allamerican.org/lists/water-bottles/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; nalgene.com/partners/</div>
+          <div class="alt-section"><strong>Contact:</strong> nalgene.com</div>
+          <div class="alt-sources">Sources: <a href="https://allamerican.org/lists/water-bottles/">allamerican.org</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Liberty Bottleworks (Liberty Originals line)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Vacuum-insulated stainless steel tumbler/bottle.</div></div>
+            <div class="compare-col"><div class="compare-label">Liberty Originals</div><div>100% recyclable aluminum, not steel and not vacuum-insulated; ~$19-28. The insulated &ldquo;Venture&rdquo; line is China-made &mdash; only Originals are domestic.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2010, Union Gap, WA; acquired by Olympia Tools 2018; employment grew 18 to 30 workers post-acquisition.</div>
+          <div class="alt-section"><strong>American-ness:</strong> allamerican.org's investigation corroborates the Originals-only domestic claim alongside Seattle Business magazine's profile. <a href="https://allamerican.org/investigation/liberty-bottleworks/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Timothy Andis and Ryan Clark, 2010; both have since left.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> Operating-status conflict found between sources (Yelp lists the Union Gap location as closed as of June 2026 vs. allamerican.org's &ldquo;operating&rdquo; claim) &mdash; recommend confirming directly before relying on this listing.</div>
+          <div class="alt-sources">Sources: <a href="https://allamerican.org/investigation/liberty-bottleworks/">allamerican.org</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Tru Flask</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Vacuum-insulated stainless steel tumbler/bottle.</div></div>
+            <div class="compare-col"><div class="compare-label">Tru Flask</div><div>Double-wall insulated stainless steel drinkware, same material category; price/quality comparison not found.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Self-described &ldquo;USA-based&rdquo; outdoor adventure company; founding date and scale not found.</div>
+          <div class="alt-section"><strong>American-ness:</strong> &ldquo;USA-based&rdquo; is brand/HQ language only &mdash; no manufacturing-location claim or independent source was found at all.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> truflask.com</div>
+          <div class="alt-sources">Sources: <a href="https://truflask.com">truflask.com</a> (2026-06-20)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">furReal Snuggles the Smiling Sloth</h3>
+          <div class="product-meta">price not confirmed &middot; <span class="pill" style="background:#f59e0b">Toys &amp; Games</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-lowconf">LOW-CONFIDENCE (source report)</span>
+          <span class="tag tag-count">6 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: low &mdash; a one-time toy purchase (gift-buying could add repeat interest, but that's not confirmed). Price not confirmed; the source report flagged this product itself LOW-CONFIDENCE (pre-launch buzz only, no confirmed sales). No genuine American-made animatronic/interactive plush competitor was found, so this set broadens to high-quality American-made plush generally, flagging the missing animatronic feature inline. Excluded: Gund, Manhattan Toy, Aurora, Douglas, Squishmallows, Jellycat, Webkinz (all confirmed non-USA-made); North American Bear Co. (defunct since 2016).</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Vermont Teddy Bear</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Battery-powered animatronic plush sloth with motion/sound.</div></div>
+            <div class="compare-col"><div class="compare-label">Vermont Teddy Bear</div><div>Hand-sewn, jointed static teddy bear, not animatronic; higher gift-category price point.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 1981 in Vermont; based in Shelburne, VT.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only the &ldquo;Classic&rdquo; line is assembled domestically per an independent allamerican.org assessment, which also notes some internationally sourced materials. <a href="https://allamerican.org/lists/stuffed-animals/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> John Sortino, 1981.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; ~2% per sale via Impact platform.</div>
+          <div class="alt-section"><strong>Contact:</strong> 1-800-829-2327 &middot; 6655 Shelburne Road, Shelburne, VT</div>
+          <div class="alt-sources">Sources: <a href="https://allamerican.org/lists/stuffed-animals/">allamerican.org</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Big Plush</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Compact (~12-18in) animatronic interactive plush.</div></div>
+            <div class="compare-col"><div class="compare-label">Big Plush</div><div>Giant stuffed animals (1-9 feet), hand-stuffed; oversized decorative/gift use case, not a size/function match.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded by a US Navy veteran; offers tiered sourcing (100% USA materials, partial-import, or overseas-made-but-finished-in-USA).</div>
+          <div class="alt-section"><strong>American-ness:</strong> Corroborated by an independent allamerican.org listing, though sources disagree on HQ location (Little River, SC vs. Newark, NJ) &mdash; unresolved discrepancy worth checking before relying on this listing. <a href="https://allamerican.org/lists/stuffed-animals/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Identified only as &ldquo;a U.S. Navy veteran&rdquo;; full name not found.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> 1 (800) 238-9481</div>
+          <div class="alt-sources">Sources: <a href="https://allamerican.org/lists/stuffed-animals/">allamerican.org</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Trouble the Dog (Larkin Ltd.)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Animatronic entertainment plush.</div></div>
+            <div class="compare-col"><div class="compare-label">Trouble the Dog</div><div>Static comfort-toy plush dog designed for children in crisis (foster care, hospitals) with a companion book series &mdash; a different value proposition than entertainment-focused furReal.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Made by Larkin Ltd., a small company in Marblehead, MA; created 2006; donates plush to child-welfare agencies.</div>
+          <div class="alt-section"><strong>American-ness:</strong> &ldquo;100% made in the USA&rdquo; corroborated by independent local press (Marblehead Patch, Itemlive) and The Story Exchange's founder profile. <a href="https://patch.com/massachusetts/marblehead/trouble-dog-plush-toys-books-given-cape-ann-dept-children-families-foster">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Sheila Duncan, 2006.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> info@troublethedog.com &middot; (781) 631-0887</div>
+          <div class="alt-sources">Sources: <a href="https://patch.com/massachusetts/marblehead/trouble-dog-plush-toys-books-given-cape-ann-dept-children-families-foster">patch.com</a> (2026-06-20), <a href="https://thestoryexchange.org/trouble-dog-loves-camera/">thestoryexchange.org</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Taraluna</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Animatronic entertainment plush.</div></div>
+            <div class="compare-col"><div class="compare-label">Taraluna</div><div>Certified-organic materials (organic cotton, bamboo fleece, lambswool), hand-crafted static plush; premium artisan quality.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> California-based retailer/curator founded 2005 by Penny Schafer; sells both USA-made and Fair-Trade-overseas items under one roof, so origin should be confirmed per-SKU.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Company-level American-made claims corroborated by an independent USA Love List curated-directory listing. <a href="https://usalovelist.com/organic-stuffed-toys-and-animals-made-in-usa/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Penny Schafer, 2005.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> taraluna.com</div>
+          <div class="alt-sources">Sources: <a href="https://usalovelist.com/organic-stuffed-toys-and-animals-made-in-usa/">usalovelist.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Mary Meyer Corporation</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Animatronic entertainment plush.</div></div>
+            <div class="compare-col"><div class="compare-label">Mary Meyer</div><div>Traditional static plush, family-designed since 1933; distributed to 10,000+ stores in 21 countries.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 1933, Townshend, VT, where manufacturing continued as of late 2024 reporting.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Townshend, VT manufacturing well corroborated by trade press, but the company was acquired by Aurora World (South Korea-headquartered) in June 2024 &mdash; flagging foreign ownership despite domestic manufacturing claims. <a href="https://www.toybook.com/aurora-world-mary-meyer-acquisition-news/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Mary and Hans Meyer, 1933.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> Not found in available sources; check marymeyer.com directly.</div>
+          <div class="alt-sources">Sources: <a href="https://www.toybook.com/aurora-world-mary-meyer-acquisition-news/">toybook.com</a> (2026-06-20), <a href="https://www.giftsanddec.com/business-news/aurora-world-acquires-90-year-old-legacy-plush-toy-brand/">giftsanddec.com</a> (2026-06-20)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Magic Cabin</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Animatronic entertainment plush.</div></div>
+            <div class="compare-col"><div class="compare-label">Magic Cabin</div><div>Nature-themed plush/toys for toddlers and young kids, static, machine-washable.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> HQ'd in Madison, VA; its own site now redirects to hearthsong.com, suggesting a possible merger or rebrand that wasn't independently confirmed.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Only an allamerican.org directory entry identifying it as Virginia-based was found, which the directory itself notes lacks detailed verification &mdash; not upgraded to VERIFIED.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> Not found in available sources; check hearthsong.com directly.</div>
+          <div class="alt-sources">Sources: <a href="https://allamerican.org/brands/magic-cabin/">allamerican.org</a> (2026-06-20)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-title">Verified American-Made, by Category</h2>
+  <div class="panel chart-wrap">
+    <div style="font-size:13px;color:#475569;margin-bottom:14px;">Of the 70 alternatives found, 36 cleared the two-source VERIFIED bar. This breaks those 36 down by category &mdash; unlike a simple product count, this shows where credible American-made supply actually exists today.</div>
+    <svg width="100%" height="340" viewBox="0 0 700 340">
+      <path d="M170,170 L170,20 A150,150 0 0 1 318,144 Z" fill="#ea580c"/>
+      <path d="M170,170 L318,144 A150,150 0 0 1 245,300 Z" fill="#db2777"/>
+      <path d="M170,170 L245,300 A150,150 0 0 1 144,318 Z" fill="#f59e0b"/>
+      <path d="M170,170 L144,318 A150,150 0 0 1 74,285 Z" fill="#e11d48"/>
+      <path d="M170,170 L74,285 A150,150 0 0 1 29,221 Z" fill="#65a30d"/>
+      <path d="M170,170 L29,221 A150,150 0 0 1 22,144 Z" fill="#92400e"/>
+      <path d="M170,170 L22,144 A150,150 0 0 1 55,74 Z" fill="#16a34a"/>
+      <path d="M170,170 L55,74 A150,150 0 0 1 95,40 Z" fill="#0d9488"/>
+      <path d="M170,170 L95,40 A150,150 0 0 1 119,29 Z" fill="#0891b2"/>
+      <path d="M170,170 L119,29 A150,150 0 0 1 144,22 Z" fill="#475569"/>
+      <path d="M170,170 L144,22 A150,150 0 0 1 170,20 Z" fill="#7c3aed"/>
+
+      <rect x="370" y="14" width="14" height="14" fill="#ea580c"/>
+      <text x="392" y="25" font-size="13" fill="#1e293b">Sports &amp; Outdoors &mdash; 8 (22%)</text>
+      <rect x="370" y="42" width="14" height="14" fill="#db2777"/>
+      <text x="392" y="53" font-size="13" fill="#1e293b">Beauty &amp; Personal Care &mdash; 7 (19%)</text>
+      <rect x="370" y="70" width="14" height="14" fill="#f59e0b"/>
+      <text x="392" y="81" font-size="13" fill="#1e293b">Toys &amp; Games &mdash; 4 (11%)</text>
+      <rect x="370" y="98" width="14" height="14" fill="#e11d48"/>
+      <text x="392" y="109" font-size="13" fill="#1e293b">Baby &mdash; 3 (8%)</text>
+      <rect x="370" y="126" width="14" height="14" fill="#65a30d"/>
+      <text x="392" y="137" font-size="13" fill="#1e293b">Grocery &mdash; 3 (8%)</text>
+      <rect x="370" y="154" width="14" height="14" fill="#92400e"/>
+      <text x="392" y="165" font-size="13" fill="#1e293b">Pet Supplies &mdash; 3 (8%)</text>
+      <rect x="370" y="182" width="14" height="14" fill="#16a34a"/>
+      <text x="392" y="193" font-size="13" fill="#1e293b">Home &amp; Kitchen &mdash; 3 (8%)</text>
+      <rect x="370" y="210" width="14" height="14" fill="#0d9488"/>
+      <text x="392" y="221" font-size="13" fill="#1e293b">Health &amp; Household &mdash; 2 (6%)</text>
+      <rect x="370" y="238" width="14" height="14" fill="#0891b2"/>
+      <text x="392" y="249" font-size="13" fill="#1e293b">Office Products &mdash; 1 (3%)</text>
+      <rect x="370" y="266" width="14" height="14" fill="#475569"/>
+      <text x="392" y="277" font-size="13" fill="#1e293b">Tools &amp; Home Improvement &mdash; 1 (3%)</text>
+      <rect x="370" y="294" width="14" height="14" fill="#7c3aed"/>
+      <text x="392" y="305" font-size="13" fill="#1e293b">Apparel &mdash; 1 (3%)</text>
+    </svg>
+  </div>
+
+  <h2 class="section-title">Most Promising American-Made Alternatives to Promote</h2>
+  <div class="panel chart-wrap">
+    <div style="font-size:13px;color:#475569;margin-bottom:14px;">Per CLAUDE.md's instruction to prioritize alternatives by growth potential and pro-American alignment, each bar below is a score out of 7: <strong>+3</strong> if VERIFIED American-made (only VERIFIED alternatives are ranked here), <strong>+2</strong> if the Amazon product it replaces sells in the $25&ndash;$100 priority band, and up to <strong>+2</strong> for repurchase/recurring-purchase potential (high=2, medium=1, low=0). One leading alternative is shown per Amazon product; ties were broken toward the cleanest verification story.</div>
+    <svg width="100%" height="282" viewBox="0 0 700 282">
+      <text x="0" y="22" font-size="12" fill="#1e293b">Cuties (vs. Pampers Diapers)</text>
+      <rect x="280" y="8" width="315" height="18" rx="4" fill="#16a34a"/>
+      <text x="603" y="22" font-size="12" fill="#475569">7</text>
+
+      <text x="0" y="56" font-size="12" fill="#1e293b">Polar Bottle (vs. Owala Water Bottle)</text>
+      <rect x="280" y="42" width="270" height="18" rx="4" fill="#16a34a"/>
+      <text x="558" y="56" font-size="12" fill="#475569">6</text>
+
+      <text x="0" y="90" font-size="12" fill="#1e293b">Skin Script (vs. Medicube Toner Pad)</text>
+      <rect x="280" y="76" width="225" height="18" rx="4" fill="#16a34a"/>
+      <text x="513" y="90" font-size="12" fill="#475569">5</text>
+
+      <text x="0" y="124" font-size="12" fill="#1e293b">Good Flower Farm (vs. Mamonde)</text>
+      <rect x="280" y="110" width="225" height="18" rx="4" fill="#16a34a"/>
+      <text x="513" y="124" font-size="12" fill="#475569">5</text>
+
+      <text x="0" y="158" font-size="12" fill="#1e293b">Zenedge (vs. CELSIUS Variety Pack)</text>
+      <rect x="280" y="144" width="225" height="18" rx="4" fill="#16a34a"/>
+      <text x="513" y="158" font-size="12" fill="#475569">5</text>
+
+      <text x="0" y="192" font-size="12" fill="#1e293b">Marcal (vs. Bounty Paper Towels)</text>
+      <rect x="280" y="178" width="225" height="18" rx="4" fill="#16a34a"/>
+      <text x="513" y="192" font-size="12" fill="#475569">5</text>
+
+      <text x="0" y="226" font-size="12" fill="#1e293b">Wyoming Sunmade (vs. Dr. Elsey's Litter)</text>
+      <rect x="280" y="212" width="225" height="18" rx="4" fill="#16a34a"/>
+      <text x="513" y="226" font-size="12" fill="#475569">5</text>
+
+      <text x="0" y="260" font-size="12" fill="#1e293b">Hammermill (vs. Amazon Basics Paper)</text>
+      <rect x="280" y="246" width="225" height="18" rx="4" fill="#16a34a"/>
+      <text x="513" y="260" font-size="12" fill="#475569">5</text>
+    </svg>
+  </div>
+
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <div style="font-size:13px;color:#334155;margin-bottom:10px;">The newest-founded businesses across the full 70-alternative list, regardless of VERIFIED status or priority ranking &mdash; a different lens than "most promising": these are the youngest companies in the dataset.</div>
+    <ul>
+      <li><strong>Skincare Junkie</strong> (founded 2023, alternative to Medicube Zero Pore Pad 2.0) &mdash; the newest company found in this entire run; launched by a board-certified NYC dermatologist. LOW-CONFIDENCE: no US manufacturing-location evidence found yet.</li>
+      <li><strong>Bulkhead Energy</strong> (founded 2020, alternative to CELSIUS Variety Pack) &mdash; veteran-owned (US Navy), San Diego. VERIFIED for veteran-ownership; manufacturing-location specifics unconfirmed.</li>
+      <li><strong>Bamtech USA</strong> (founded 2019, alternative to Carhartt Force Cooling Collection) &mdash; veteran-owned (US Navy) bamboo-fiber performance apparel. LOW-CONFIDENCE.</li>
+      <li><strong>Hello Bello</strong> (founded 2019, alternative to Pampers Swaddlers Diapers) &mdash; VERIFIED domestic manufacturing in Waco, TX, though flagging its 2023 bankruptcy and subsequent private-equity acquisition for transparency.</li>
+      <li><strong>Southwind Apparel</strong> (founded ~2018, alternative to Carhartt Force Cooling Collection) &mdash; women-owned activewear, Maryland. LOW-CONFIDENCE: fabric sourcing is mixed/global, only sewing is confirmed domestic.</li>
+    </ul>
+  </div>
+
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p><strong>Input:</strong> this run is based entirely on the sibling Competitor Research Agent's June 17, 2026 report at <code>../Competitor Research Agent/docs/June17_2026/index.html</code>, read directly from the rendered HTML cards (there is no separate structured data export in that repo). 17 products were parsed; 4 Electronics products were hard-excluded per project rules, leaving 13 products across 11 categories carried forward.</p>
+    <p><strong>Display order:</strong> NEW products before RECURRING (all 13 are NEW on this first run), then the $25&ndash;$100 price band before outside-band, then higher repurchase-interest before lower, per the workflow's documented sort precedence. The price band governs display order only, not inclusion &mdash; all 13 non-Electronics products were researched regardless of price.</p>
+    <p><strong>Alternative research:</strong> six general-purpose research agents ran in parallel (one per 2-3 products), each using WebSearch/WebFetch only, with a soft cap of 5-8 alternatives per product. A business's own "Made in USA" claim was never counted alone &mdash; VERIFIED required a second independent source (a certification/curated directory, independent press naming the manufacturing location, or a public-records signal); a single-source claim is labeled LOW-CONFIDENCE and was never silently upgraded or dropped. Of 70 alternatives found, 36 are VERIFIED and 34 are LOW-CONFIDENCE.</p>
+    <p><strong>Notable exclusions (checked and ruled out for foreign ownership or non-US manufacturing, not listed as alternatives above):</strong> Honest Company, Coterie, Bambo Nature, Dyper, Esembly (diapers, overseas manufacturing); Klean Kanteen, MiiR, Pelican, Hydro Cell, YETI, Takeya (insulated bottles, China-manufactured); Tata Harper (Amorepacific-owned); Thayers (L'Oreal-owned); Mary Meyer (Aurora World-owned); Rowdy Energy (defunct); Hiball Energy, REIGN, C4 (foreign or large-corporate owned); Cascades (Canadian); Reel Paper, Seventh Generation (China/Canada-manufactured); Krylon, Testors (Rust-Oleum's own parent or a sibling brand); Arctic Cool, Dovetail Workwear, Berne Apparel (overseas/mixed manufacturing); Xtrema, Hestan, All-Clad nonstick (overseas manufacturing); Gund, Manhattan Toy, Aurora, Douglas, Squishmallows, Jellycat, Webkinz (non-USA-made); North American Bear Co. (defunct).</p>
+    <p><strong>Open items for a human follow-up before acting on any single listing:</strong> Liberty Bottleworks' Union Gap, WA location shows conflicting operating-status signals (Yelp "closed" vs. an independent investigation's "operating" claim); Big Plush's headquarters location is reported inconsistently (SC vs. NJ) across sources; furReal Snuggles' parent-brand attribution (Hasbro vs. Just Play) was ambiguous in available sources. None of these affect the American-ness verdicts shown, but should be confirmed directly before contacting any of the three businesses.</p>
+    <p><strong>Distinct source URLs cited in the cards above:</strong> 106, spanning company sites, independent press (Boston Globe, CNBC, Bloomberg, PR Newswire, Fox affiliates, trade press), third-party "Made in USA" investigative directories (allamerican.org, Truly American Made, USA Love List, madeintheusamatters.com), government/chamber-of-commerce business profiles, and Wikipedia for corporate-history facts.</p>
+  </div>
+
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>First report</span>
+  </div>
+
+</div>
+</body>
+</html>
