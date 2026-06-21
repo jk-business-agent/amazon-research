@@ -13,8 +13,12 @@ This agent does not run on a fixed "daily" cadence independent of whether new in
 and otherwise no-op cheaply. Whatever schedule eventually calls this workflow can therefore run
 frequently — Step 0 below is what makes that safe.
 
-Before every run, execute `scripts/clear-stale-lock.ps1` to remove any stale
-`.claude/scheduled_tasks.lock` file left by a previous failed or interrupted run.
+Before every run, execute `bash scripts/clear-stale-lock.sh` to remove any stale
+`.claude/scheduled_tasks.lock` file left by a previous failed or interrupted run. This is a bash
+script specifically because it must run unmodified in both this developer's local Windows
+environment (via Git Bash) and the unattended Linux-based cloud sandbox used for scheduled runs,
+neither of which can be assumed to have the other's shell available — do not reintroduce a
+PowerShell-only or cmd-only version of this step.
 
 Reference files this workflow depends on:
 - `../Competitor Research Agent/docs/` — the sibling agent's rendered reports (read-only; never write here)
