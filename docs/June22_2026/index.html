@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Top Sellers — June 22, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  /* 1. Header band */
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  /* 2. Executive summary */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  /* 3. Quick stats */
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 150px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  /* 4. Top movers grid */
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
+  .card-meta { font-size: 12.5px; color: var(--muted); }
+  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .card-sources a { color: #2563eb; text-decoration: none; }
+
+  /* 5. Category chart */
+  .chart-wrap { padding: 10px 6px; }
+
+  /* 6. New entrants spotlight */
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+  .spotlight ul { margin: 0; padding-left: 20px; }
+  .spotlight li { margin-bottom: 8px; font-size: 13.5px; line-height: 1.5; color: #1e293b; }
+
+  /* 7. Methodology footer */
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+  .methodology p { margin: 0 0 10px; }
+
+  /* 8. Footer nav */
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <div class="date">June 22, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 21 sources checked</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">Today's research window lands one day ahead of Amazon Prime Day 2026 (June 23&ndash;26), and that event is the clearest cross-category story: early markdowns are already live on flagship items like the Apple Watch Series 11 ($299, down from $399) and the Fire TV Stick ($15.99), pulling demand forward across Electronics ahead of the official event. Outside the Prime Day effect, the day's most interesting story is a TikTok-driven blind-box toy craze around a roughly $5 dumpling-shaped squishy that independent coverage describes as selling out on restock and reselling well above retail. Health &amp; Household is dominated by a seasonal driver this week: allergists are calling 2026 a &ldquo;burst&rdquo; pollen season, and that's lifting allergy-relief staples like Flonase and Benadryl. Beauty &amp; Personal Care continues to be led by Medicube's Zero Pore Pad 2.0, now confirmed as a sustained bestseller (not a one-off spike) across two independently-dated industry reports several months apart. Two slower-moving but durable growth stories worth flagging for an economic-growth audience: pickleball apparel and smart/AI-connected baby monitors, both independently described by market researchers as structurally growing categories rather than one-week spikes. <strong>Methodology note:</strong> direct page access was blocked across the board today &mdash; every attempted fetch returned an error (see Methodology section below) &mdash; so this report relies entirely on WebSearch-surfaced snippets rather than directly read, sentence-verified page text, and confidence tagging below is correspondingly more conservative than usual.</div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">18</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="num">12</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">6</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">12</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">6</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">11</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Top movers grid -->
+  <h2 class="section-title">Top Movers</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Amazon Fire TV Stick</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Amazon's own Prime Day 2026 event (June 23&ndash;26) has early markdowns live a day ahead of the official start, and named retail-deals coverage lists the Fire TV Stick at $15.99 as one of the headline early doorbusters. As a first-party Amazon device, it's a traditional loss-leader used to drive Prime sign-ups and app installs heading into the event.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau &mdash; doorbuster pricing is tied to the Prime Day window; rank typically falls back once the event-specific price reverts after June 26 (qualitative estimate).</div>
+      <div class="card-meta">$15.99 (early Prime Day deal price)</div>
+      <div class="card-sources">Sources: <a href="https://www.wral.com/consumer/amazon-deals-jn-2026/">wral.com</a> (2026-06-22), <a href="https://www.aboutamazon.com/news/retail/amazon-prime-day-2026-date">aboutamazon.com</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Dumpling Squishy blind-box toys</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">A blind-box, bao-bun-shaped squishy toy retailing around $5 has become one of 2026's defining TikTok-driven collectible crazes. Independent coverage describes restocks selling out quickly and resale prices climbing well above retail, and the originating brand has reportedly extended the hype with limited promotional drops.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth near-term, but viral blind-box toy fads have historically cooled within a few months once novelty fades &mdash; worth watching for a plateau later this summer (qualitative estimate).</div>
+      <div class="card-meta">~$5 retail (resale priced higher per source coverage)</div>
+      <div class="card-sources">Sources: <a href="https://stockx.com/news/the-squishy-bun-dumpling-drop-how-a-5-blind-box-bao-bun-became-the-most-hunted-toy-in-america/">stockx.com</a> (2026-06-22), <a href="https://squeezy.store/blogs/news/dumpling-squishies-the-viral-2026-gift-everyone-is-obsessed-with">squeezy.store</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Flonase Allergy Relief Nasal Spray</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Allergists are describing 2026 as a &ldquo;burst&rdquo; pollen season &mdash; shorter but more intense pollen spikes rather than a gradual ramp &mdash; which is pulling allergy-relief purchases earlier and in higher volume. Flonase appears repeatedly among Amazon's top Allergy, Sinus &amp; Asthma Medicine sellers in this window.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip &mdash; demand is tied to the pollen &ldquo;burst&rdquo; window described in sourced coverage and should taper once that compressed season passes (qualitative estimate).</div>
+      <div class="card-meta">price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.cnbc.com/2026/03/19/the-pollen-is-coming-how-to-prepare-for-early-allergy-season-in-2026.html">cnbc.com</a> (2026-06-22), <a href="https://amazehealth.com/allergy-season-2026-new-rules-for-a-burst-season/">amazehealth.com</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Benadryl Liqui-Gels</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Same 2026 &ldquo;burst&rdquo; allergy-season driver as Flonase above &mdash; sharper, more compressed pollen spikes are pushing earlier and heavier purchasing of fast-acting antihistamines, with Benadryl named alongside Flonase among current Allergy, Sinus &amp; Asthma Medicine bestsellers.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip &mdash; same seasonal reasoning as Flonase (qualitative estimate).</div>
+      <div class="card-meta">price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.cnbc.com/2026/03/19/the-pollen-is-coming-how-to-prepare-for-early-allergy-season-in-2026.html">cnbc.com</a> (2026-06-22), <a href="https://amazehealth.com/allergy-season-2026-new-rules-for-a-burst-season/">amazehealth.com</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Pickleball-branded apparel (shirts/tops)</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Independent market-research coverage describes continued growth in pickleball as a U.S. participation sport, with online retail (including Amazon) cited as the fastest-growing distribution channel for pickleball-specific apparel. Separate 2026 fashion coverage notes a &ldquo;pickleball-core&rdquo; aesthetic crossing into mainstream athleticwear demand.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth &mdash; multiple independent market reports project continued online/Amazon-channel share gains as participation keeps climbing (qualitative estimate).</div>
+      <div class="card-meta">price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.coherentmarketinsights.com/industry-reports/pickleball-apparel-market">coherentmarketinsights.com</a> (2026-06-22), <a href="https://www.intelmarketresearch.com/pickleball-clothing-apparel-market-31558">intelmarketresearch.com</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Smart/AI-connected baby monitors</h3>
+        <span class="pill" style="background:#e11d48">Baby</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Market-research coverage describes new parents increasingly prioritizing app-connected monitors with AI features (cry detection, smart-home integration with Alexa/Google Home) over traditional audio-only monitors, with e-commerce cited as a growing share of total monitor sales.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth &mdash; independent market trackers project continued category growth through the late 2020s as smart-home integration becomes a standard parent expectation (qualitative estimate).</div>
+      <div class="card-meta">price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://vocal.media/01/smart-parenting-meets-smart-technology-why-the-global-baby-monitor-market-is-growing-faster-than-ever">vocal.media</a> (2026-06-22), <a href="https://www.mordorintelligence.com/industry-reports/baby-monitors-market">mordorintelligence.com</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple Watch Series 11</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/2 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Continuing the pre-Prime-Day Electronics demand flagged in the June 17 report, Amazon's own Prime Day 2026 announcement (event runs June 23&ndash;26) is paired with early markdowns; named retail-deals coverage lists the Series 11 at $299, marked down $100 from its $399 list price, as one of the headline early Prime Day deals.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth &mdash; Prime Day demand pull-forward typically spikes wearables sales sharply in the surrounding 1&ndash;2 weeks, likely plateauing right after the event ends June 26 (qualitative estimate).</div>
+      <div class="card-meta">$299 (early Prime Day deal, down from $399)</div>
+      <div class="card-sources">Sources: <a href="https://www.wral.com/consumer/amazon-deals-jn-2026/">wral.com</a> (2026-06-22), <a href="https://www.aboutamazon.com/news/retail/amazon-prime-day-2026-date">aboutamazon.com</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Medicube Zero Pore Pad 2.0</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/2 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">This K-beauty pore-care pad continues the same viral wave flagged in the June 17 report. Two independent industry-tracker reports &mdash; one covering Q1 2026 and one covering April 2026 &mdash; both name Medicube as a leading Beauty &amp; Personal Care performer on Amazon, with the Zero Pore Pad 2.0 specifically cited at or near the top of ranked bestseller lists in both.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; consistency across two independently-dated industry reports points to a sustained run rather than a single spike (qualitative estimate).</div>
+      <div class="card-meta">price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://beautymatter.com/articles/amazon-q1-2026-top-25-beauty-and-personal-care-products">beautymatter.com</a> (2026-06-22), <a href="https://metricscart.com/bestseller-reports/amazon-com/categories/Beauty%20&%20Personal%20Care/">metricscart.com</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">CELSIUS Assorted Flavors Variety Pack</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/2 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Continues the functional-beverage trend flagged June 17; CELSIUS is again named among the highest-share brands on Amazon's Grocery bestseller list as sugar-free energy drinks keep gaining ground over traditional sodas and sports drinks heading into summer.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; named consistently across independent grocery-bestseller trackers with no sign of a new specific catalyst beyond the ongoing functional-beverage trend (qualitative estimate).</div>
+      <div class="card-meta">price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.accio.com/business/best_selling_food_products_on_amazon">accio.com</a> (2026-06-22), <a href="https://www.asinsight.com/report/US/grocery-items">asinsight.com</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Owala FreeSip Insulated Water Bottle</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/2 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Continues the hydration/wellness-trend driver flagged June 17; the FreeSip is again independently named among top Sports &amp; Outdoors sellers as insulated water bottles remain a sustained Amazon category leader heading into summer.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; repeat appearance across independent trackers five days apart suggests sustained rather than spiking demand (qualitative estimate).</div>
+      <div class="card-meta">price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://merchize.com/top-selling-sports-product-on-amazon/">merchize.com</a> (2026-06-22), <a href="https://hip2save.com/deals/amazon-best-sellers-sports-outdoors/">hip2save.com</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Pampers Swaddlers Diapers, Size 5</h3>
+        <span class="pill" style="background:#e11d48">Baby</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/2 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">An evergreen diapering staple that continues to appear among Amazon's top Baby sellers; no new spike driver is identified in today's sources beyond steady, consistent demand &mdash; the same conclusion as the June 17 report.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; no sourced evidence of a new catalyst; consistent staple-category demand (qualitative estimate).</div>
+      <div class="card-meta">price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://metricscart.com/insights/amazon-baby-bestsellers/">metricscart.com</a> (2026-06-22), <a href="https://www.motherandbaby.com/reviews/first-year-products/most-popular-baby-products-on-amazon-best-seller-listing/">motherandbaby.com</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Dr. Elsey's Ultra Unscented Clumping Clay Cat Litter</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/2 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Continues to be independently named among Amazon's top Pet Supplies sellers, consistent with the June 17 report; no new specific driver beyond steady category demand is identified in today's sources.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady (qualitative estimate).</div>
+      <div class="card-meta">price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://wiseppc.com/blog/amazon-best-selling-pet-products/">wiseppc.com</a> (2026-06-22), <a href="https://amzscout.net/blog/best-selling-pet-products/">amzscout.net</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Hero Cosmetics Mighty Patch</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Named among Beauty &amp; Personal Care top sellers in only one aggregator-style source found today. It's a long-running acne-patch category staple, but no second independent source corroborated its current standing, and no specific fresh driver was identified.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; qualitative estimate based on the category's typically stable demand; not independently confirmed today.</div>
+      <div class="card-meta">price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://benable.com/philliplett_/the-2026-prime-glow-up-amazon-s-top-20-beauty-personal-care-icons">benable.com</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Premier Protein Shake</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Named alongside CELSIUS in the high-protein/functional-beverage trend, but only one source surfaced it today. The broader protein-beverage trend is well documented, but this specific product was not independently corroborated.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; qualitative estimate, not independently confirmed today.</div>
+      <div class="card-meta">price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.accio.com/business/best_selling_food_products_on_amazon">accio.com</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Purina Pro Plan Sensitive Skin &amp; Stomach Dry Dog Food</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">One industry sales-tracking site names this as a top revenue performer in its subcategory. The specific revenue figure it cites could not be independently corroborated today, so it's reported here without that number and flagged as single-source.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; qualitative estimate, not independently confirmed today.</div>
+      <div class="card-meta">price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://wiseppc.com/blog/amazon-best-selling-pet-products/">wiseppc.com</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Ring Spotlight Cam Plus</h3>
+        <span class="pill" style="background:#475569">Tools &amp; Home Improvement</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Named in one bestseller-tracker report among Tools &amp; Home Improvement leaders, reflecting ongoing smart-home security-camera demand. No second independent source or specific fresh driver was found today.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; qualitative estimate, not independently confirmed today.</div>
+      <div class="card-meta">price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://metricscart.com/bestseller-reports/amazon-com/categories/Tools%20&%20Home%20Improvement/">metricscart.com</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">ANRABESS Women's Henley/Vacation Tops</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Surfaced in one shopping-roundup source marketed explicitly around &ldquo;2026 vacation&rdquo; seasonal keywords. Reflects the broader summer-apparel cycle but was not independently corroborated by a second source today.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip &mdash; tied to a defined summer warm-weather window per the one available source (qualitative estimate).</div>
+      <div class="card-meta">price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://shopping.yahoo.com/style/clothing/article/best-dresses-on-amazon-184838109.html">shopping.yahoo.com</a> (2026-06-22)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Shark Rocket Vacuum</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Named at $99 as part of the early Prime Day 2026 markdown wave in one named retail-deals source. Could not be corroborated by a second independent source today, so it's flagged as single-source despite the price being explicit in that source's own page title.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau &mdash; event-driven doorbuster pricing tied to Prime Day, likely to taper after the event (qualitative estimate).</div>
+      <div class="card-meta">$99 (early Prime Day deal price, per one source)</div>
+      <div class="card-sources">Sources: <a href="https://www.wral.com/consumer/amazon-deals-jn-2026/">wral.com</a> (2026-06-22)</div>
+    </div>
+
+  </div>
+
+  <!-- 5. Category breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="100%" height="384" viewBox="0 0 700 384">
+      <text x="0" y="22" font-size="13" fill="#1e293b">Electronics</text>
+      <rect x="160" y="8" width="200" height="18" rx="4" fill="#2563eb"/>
+      <text x="368" y="22" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="56" font-size="13" fill="#1e293b">Beauty &amp; Personal Care</text>
+      <rect x="160" y="42" width="200" height="18" rx="4" fill="#db2777"/>
+      <text x="368" y="56" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="90" font-size="13" fill="#1e293b">Grocery</text>
+      <rect x="160" y="76" width="200" height="18" rx="4" fill="#65a30d"/>
+      <text x="368" y="90" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="124" font-size="13" fill="#1e293b">Health &amp; Household</text>
+      <rect x="160" y="110" width="200" height="18" rx="4" fill="#0d9488"/>
+      <text x="368" y="124" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="158" font-size="13" fill="#1e293b">Sports &amp; Outdoors</text>
+      <rect x="160" y="144" width="200" height="18" rx="4" fill="#ea580c"/>
+      <text x="368" y="158" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="192" font-size="13" fill="#1e293b">Baby</text>
+      <rect x="160" y="178" width="200" height="18" rx="4" fill="#e11d48"/>
+      <text x="368" y="192" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="226" font-size="13" fill="#1e293b">Pet Supplies</text>
+      <rect x="160" y="212" width="200" height="18" rx="4" fill="#92400e"/>
+      <text x="368" y="226" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="260" font-size="13" fill="#1e293b">Toys &amp; Games</text>
+      <rect x="160" y="246" width="100" height="18" rx="4" fill="#f59e0b"/>
+      <text x="268" y="260" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="294" font-size="13" fill="#1e293b">Tools &amp; Home Improvement</text>
+      <rect x="160" y="280" width="100" height="18" rx="4" fill="#475569"/>
+      <text x="268" y="294" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="328" font-size="13" fill="#1e293b">Apparel</text>
+      <rect x="160" y="314" width="100" height="18" rx="4" fill="#7c3aed"/>
+      <text x="268" y="328" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="362" font-size="13" fill="#1e293b">Home &amp; Kitchen</text>
+      <rect x="160" y="348" width="100" height="18" rx="4" fill="#16a34a"/>
+      <text x="268" y="362" font-size="12" fill="#475569">1</text>
+    </svg>
+  </div>
+
+  <!-- 6. New entrants spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <ul>
+      <li><strong>Amazon Fire TV Stick</strong> &mdash; $15.99 doorbuster price is one of the named early Prime Day 2026 deals live a day before the event officially starts.</li>
+      <li><strong>Dumpling Squishy blind-box toys</strong> &mdash; a ~$5 TikTok-viral blind-box collectible reportedly selling out on restock and reselling above retail.</li>
+      <li><strong>Flonase Allergy Relief Nasal Spray</strong> &mdash; riding a 2026 &ldquo;burst&rdquo; pollen season that allergists say is compressing demand into sharper spikes.</li>
+      <li><strong>Benadryl Liqui-Gels</strong> &mdash; same burst-season allergy driver as Flonase, named alongside it in current bestseller coverage.</li>
+      <li><strong>Pickleball-branded apparel</strong> &mdash; independent market research ties this to the sport's continued U.S. participation growth and a &ldquo;pickleball-core&rdquo; fashion crossover.</li>
+      <li><strong>Smart/AI-connected baby monitors</strong> &mdash; parents increasingly favoring app-connected, smart-home-integrated monitors over audio-only models.</li>
+      <li><strong>Hero Cosmetics Mighty Patch</strong> &mdash; long-running acne-patch staple surfaced today, single-source.</li>
+      <li><strong>Premier Protein Shake</strong> &mdash; part of the broader high-protein beverage trend, single-source today.</li>
+      <li><strong>Purina Pro Plan Sensitive Skin &amp; Stomach Dry Dog Food</strong> &mdash; named as a top revenue performer by one tracker (the figure itself was not corroborated).</li>
+      <li><strong>Ring Spotlight Cam Plus</strong> &mdash; smart-home security camera demand continues, single-source today.</li>
+      <li><strong>ANRABESS Henley/Vacation Tops</strong> &mdash; summer warm-weather apparel cycle, single-source today.</li>
+      <li><strong>Shark Rocket Vacuum</strong> &mdash; $99 early Prime Day price named in one retail-deals source.</li>
+    </ul>
+  </div>
+
+  <!-- 7. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p><strong>Source types checked:</strong> Amazon's own Movers &amp; Shakers and Best-Sellers/zgbs pages (attempted directly &mdash; see degraded-mode note below); industry bestseller-tracking aggregators (e.g. MetricsCart, AmzScout, WisePPC); retail-deals press covering Prime Day 2026 (WRAL, Yahoo Shopping, NBC, CNN roundups); trade/market-research coverage (CNBC, Amaze Health, Coherent Market Insights, Intel Market Research, Mordor Intelligence, Vocal Media); and brand/category blogs (StockX News, Squeezy.store, BeautyMatter, Benable). <strong>Verification rule:</strong> a product is marked VERIFIED only when named independently across at least two distinct source domains; single-domain mentions are marked LOW-CONFIDENCE and never silently upgraded.</p>
+    <p><strong>Degraded-mode note:</strong> every direct page-fetch attempt today returned an error &mdash; not just on amazon.com (Movers &amp; Shakers, the general Best-Sellers/zgbs page, and a category zgbs page all failed on first attempt and on a retry) but also on unrelated control URLs (Wikipedia, RetailDive, CNBC, Variety, Today.com), indicating a tool-level fetch outage for this session rather than Amazon-specific bot-blocking alone. As a result, no source could be directly opened and sentence-verified today; this report relies entirely on WebSearch-surfaced result titles and snippets per the workflow's fallback instructions. Specific numeric figures were included only where they appeared verbatim in a named outlet's own page title (e.g. WRAL.com's stated $299 / $15.99 / $99 prices) or were consistently corroborated across independent domains; figures that appeared only in synthesized search summaries &mdash; exact resale prices, social-video view counts, year-over-year percentages, and dollar-revenue estimates &mdash; were deliberately omitted rather than risk citing a number that couldn't be checked against actual source text.</p>
+    <p><strong>Distinct source domains cited above (21):</strong> wral.com, aboutamazon.com, stockx.com, squeezy.store, beautymatter.com, metricscart.com, benable.com, accio.com, asinsight.com, cnbc.com, amazehealth.com, merchize.com, hip2save.com, coherentmarketinsights.com, intelmarketresearch.com, vocal.media, mordorintelligence.com, motherandbaby.com, wiseppc.com, amzscout.net, shopping.yahoo.com.</p>
+    <p><strong>Domains attempted via direct fetch, all blocked/failed (7):</strong> amazon.com, en.wikipedia.org, retaildive.com, variety.com, today.com, foodrepublic.com, thedailymeal.com.</p>
+  </div>
+
+  <!-- 8. Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../June17_2026/">June 17</a></span>
+  </div>
+
+</div>
+</body>
+</html>

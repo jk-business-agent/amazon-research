@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-17",
+  "last_updated": "2026-06-22",
   "window_days": 14,
   "products": [
     {
@@ -15,8 +15,8 @@
       "name": "Apple Watch Series 11",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-17", "2026-06-22"]
     },
     {
       "key": "ring-battery-doorbell",
@@ -39,8 +39,8 @@
       "name": "Medicube Zero Pore Pad 2.0",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-17", "2026-06-22"]
     },
     {
       "key": "mamonde-amazon-launch",
@@ -55,8 +55,8 @@
       "name": "CELSIUS Assorted Flavors Official Variety Pack",
       "category": "Grocery",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-17", "2026-06-22"]
     },
     {
       "key": "bounty-quick-size-paper-towels",
@@ -71,8 +71,8 @@
       "name": "Owala FreeSip Insulated Stainless Steel Water Bottle",
       "category": "Sports & Outdoors",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-17", "2026-06-22"]
     },
     {
       "key": "hydro-flask-supernova-purple",
@@ -87,16 +87,16 @@
       "name": "Dr. Elsey's Ultra Unscented Clumping Clay Cat Litter",
       "category": "Pet Supplies",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-17", "2026-06-22"]
     },
     {
       "key": "pampers-swaddlers-size-5",
       "name": "Pampers Swaddlers Diapers, Size 5",
       "category": "Baby",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-17", "2026-06-22"]
     },
     {
       "key": "le-creuset-nonstick-pro-fry-pan",
@@ -137,6 +137,102 @@
       "first_seen": "2026-06-17",
       "last_seen": "2026-06-17",
       "seen_dates": ["2026-06-17"]
+    },
+    {
+      "key": "amazon-fire-tv-stick",
+      "name": "Amazon Fire TV Stick",
+      "category": "Electronics",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-22"]
+    },
+    {
+      "key": "dumpling-squishy-blind-box",
+      "name": "Dumpling Squishy blind-box toys",
+      "category": "Toys & Games",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-22"]
+    },
+    {
+      "key": "hero-cosmetics-mighty-patch",
+      "name": "Hero Cosmetics Mighty Patch",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-22"]
+    },
+    {
+      "key": "premier-protein-shake",
+      "name": "Premier Protein Shake",
+      "category": "Grocery",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-22"]
+    },
+    {
+      "key": "flonase-allergy-relief-nasal-spray",
+      "name": "Flonase Allergy Relief Nasal Spray",
+      "category": "Health & Household",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-22"]
+    },
+    {
+      "key": "benadryl-liqui-gels",
+      "name": "Benadryl Liqui-Gels",
+      "category": "Health & Household",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-22"]
+    },
+    {
+      "key": "pickleball-branded-apparel",
+      "name": "Pickleball-branded apparel (shirts/tops)",
+      "category": "Sports & Outdoors",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-22"]
+    },
+    {
+      "key": "smart-ai-baby-monitors",
+      "name": "Smart/AI-connected baby monitors",
+      "category": "Baby",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-22"]
+    },
+    {
+      "key": "purina-pro-plan-sensitive-skin-dry-dog-food",
+      "name": "Purina Pro Plan Sensitive Skin & Stomach Dry Dog Food",
+      "category": "Pet Supplies",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-22"]
+    },
+    {
+      "key": "ring-spotlight-cam-plus",
+      "name": "Ring Spotlight Cam Plus",
+      "category": "Tools & Home Improvement",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-22"]
+    },
+    {
+      "key": "anrabess-henley-vacation-tops",
+      "name": "ANRABESS Women's Henley/Vacation Tops",
+      "category": "Apparel",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-22"]
+    },
+    {
+      "key": "shark-rocket-vacuum",
+      "name": "Shark Rocket Vacuum",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-22",
+      "seen_dates": ["2026-06-22"]
     }
   ]
 }
