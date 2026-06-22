@@ -193,25 +193,33 @@ report folder (e.g. `<a href="June17_2026/">View report →</a>` — trailing sl
 Pages resolves it to that folder's `index.html`). Keep `index.html` itself simple and dependency-free
 (plain HTML list, same inline-style approach, no JS needed).
 
-## Step 8 — Notify
+## Step 8 — Commit and push
 
-Send a push notification once the file is written successfully, summarizing the day's single most
-notable finding in under 200 characters (e.g. the most interesting NEW entrant or the day's headline
-trend). If the run degraded significantly (e.g. zero verified products, or fewer than 10 credible items
-found), notify with that fact instead so the user isn't surprised by a thin report.
-
-## Step 9 — Commit and push
-
-This workspace lives in a git repository so that each day's cloud run (a fresh, isolated sandbox) can
-persist its work. After writing the new dashboard file, updating `resources/seen-products-history.json`,
-and updating `docs/index.html`, commit all changed/new files and push to `origin main`:
+Commit `resources/seen-products-history.json`, `docs/`, and `.claude/CLAUDE.md`, then push directly to
+`origin main`:
 
 ```
 git add resources/seen-products-history.json docs/ .claude/CLAUDE.md
-git commit -m "chore: daily Amazon top-sellers report for YYYY-MM-DD"
+git commit -m "chore: daily Amazon top-sellers report for $(date +%Y-%m-%d)"
 git push origin main
 ```
 
-If the push fails (e.g. the remote has commits this clone doesn't have), pull/rebase once and retry
-before giving up; if it still fails, note the failure in the push notification so the user knows today's
-report exists locally in the cloud sandbox but didn't make it back to the repo.
+This routine has "Allow unrestricted branch pushes" enabled, so direct pushes to `main` are allowed —
+do not route through a branch/PR for the routine flow. (`scripts/create-pr.sh` still exists for manual,
+one-off corrections outside the routine, where opening a PR for review makes sense.)
+
+If the push fails because the remote has new commits, fetch and rebase once and retry; do not
+force-push. If it still fails, skip to Step 9 and notify with the failure instead of the usual summary
+so the user knows today's report exists locally in the cloud sandbox but didn't make it to `main`.
+
+## Step 9 — Notify
+
+Send a push notification once the push succeeds, summarizing the day's single most notable finding in
+under 200 characters (e.g. the most interesting NEW entrant or the day's headline trend), and include a
+direct link to today's report at the site's published Pages URL plus the
+`<FullMonthName><Day>_<Year>/` folder built in Step 6, so the user can open it immediately to check
+accuracy. (TODO confirmed 2026-06-22: the GitHub Pages URL for this repo has not been verified to
+actually serve `docs/` from `main` — the live site currently shows unrelated content. Confirm the repo's
+Settings → Pages source before relying on this link.) If the run degraded
+significantly (e.g. zero verified products, or fewer than 10 credible items found), notify with that
+fact instead so the user isn't surprised by a thin report.
