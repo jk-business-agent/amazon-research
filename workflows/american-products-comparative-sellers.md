@@ -30,6 +30,37 @@ Do not ask clarifying questions mid-run. Make the most reasonable, conservative 
 under-claiming over fabricating) and note any judgment call in the methodology footer instead of
 stopping.
 
+## Error handling & stopping criteria
+
+Every step below that can fail refers back to this section instead of repeating itself. Three
+possible outcomes for a run:
+
+- **SUCCESS** — dashboard written, history updated, committed and pushed normally.
+- **HARD STOP** — an environment-level problem (the specific cases are called out in Steps 0a, 0b,
+  and 10.1). Send a notification naming exactly what failed, stop without fabricating anything, and
+  do not commit.
+- **DEGRADED SUCCESS** — the run completes and a dashboard is still published, but one or more
+  products or sources were skipped along the way because of repeated errors (see the circuit
+  breaker below). Ship the report anyway; surface what was skipped in `{{METHODOLOGY_NOTES}}`
+  (Step 6) and in the notification (Step 9) rather than silently producing a thinner report.
+
+**Retry ceiling for any web fetch:** one retry on the same URL, no artificial delay — a
+bot-detection page or CAPTCHA will not clear in the few seconds an agent would "wait," so pausing
+buys nothing. If the retry also fails, do not attempt that exact URL a third time. Instead pivot to
+a different source or a reworded search for the same fact. Log the abandoned source in one terse
+line (not a paragraph) and move on.
+
+**Per-product circuit breaker:** if a single product accumulates 3 source failures during Step 3
+with zero alternatives found for it, stop researching that product. Mark it "research incomplete —
+repeated source errors" and move on to the next product in Step 2's order. Never let one product's
+errors consume the run.
+
+**Cost-conscious research:** prefer `WebSearch` snippets for initial discovery and quick
+verification scanning; reserve `WebFetch` (full-page) for the specific page actually needed to
+confirm a Step 4 fact (founder bio, contact page, certification listing). This keeps the baseline
+cost of Step 3 down and makes retry pivots cheaper too, since a search-based pivot costs less than
+another full-page fetch.
+
 ## Step 0 — New-report detection (no-op check)
 
 ### Step 0a — Bootstrap sibling repo access (required on every run, including cloud/unattended runs)
@@ -49,7 +80,9 @@ fact to bootstrap read-only access to the sibling's content on every run, before
   human's real working directory); if it IS the bootstrap-created clone from a prior run, `git pull`
   it to refresh to the latest `main`.
 - If the clone/pull itself fails (no GitHub auth in this environment, network failure, remote
-  unreachable) — this is a real environment problem, not a routine no-op. Send a notification
+  unreachable), retry once immediately (per the retry ceiling in "Error handling & stopping
+  criteria" — no artificial delay) in case it was a transient hiccup. If it fails again, this is a
+  real environment problem, not a routine no-op: this is a **HARD STOP**. Send a notification
   describing exactly what failed, and stop without fabricating anything. Do not proceed to Step 0b.
 
 ### Step 0b — Compare against last-processed cursor
@@ -68,8 +101,8 @@ Read `resources/seen-products-history.json` and compare that folder name to
 - **They differ (a new sibling report exists that hasn't been processed yet)** — continue to Step 1.
 - **The sibling's `docs/` path itself does not exist or cannot be read after Step 0a's bootstrap
   succeeded** (distinct from "no new report" — this means the sibling project's structure changed
-  unexpectedly) — this is a real problem, not a routine no-op. Send a notification naming the exact
-  path checked, and stop without fabricating anything. Do not commit.
+  unexpectedly) — this is a real problem, not a routine no-op: a **HARD STOP**. Send a notification
+  naming the exact path checked, and stop without fabricating anything. Do not commit.
 
 ## Step 1 — Parse the sibling's latest report
 
@@ -117,6 +150,12 @@ actually read.
 ## Step 3 — Research American alternatives per product
 
 Public web research only (WebSearch/WebFetch). No paid API, no hardcoded credentials.
+
+Apply the retry ceiling, per-product circuit breaker, and cost-conscious WebSearch/WebFetch
+preference from "Error handling & stopping criteria" above throughout this step. A product that
+trips the circuit breaker gets marked "research incomplete — repeated source errors" in its
+rationale text and the run continues to the next product — never stall the whole run chasing one
+difficult product or one unresponsive source.
 
 For each prioritized product, in the Step 2 order:
 
@@ -246,7 +285,11 @@ Load `resources/dashboard-template.html` and fill every `{{TOKEN}}`:
   target. If zero NEW products this run, say so in a plain sentence instead of leaving it blank.
 - `{{METHODOLOGY_NOTES}}` — short paragraph: which sibling report this run is based on, the sort
   precedence used (Step 2), the verification rule for American-ness claims (Step 3), the per-product
-  alternative cap and whether it bound any product, and any degraded-mode notes.
+  alternative cap and whether it bound any product, and any degraded-mode notes. If this run ended
+  in **DEGRADED SUCCESS** (see "Error handling & stopping criteria"), name which products were
+  marked "research incomplete" and roughly how many sources were abandoned to repeated errors — one
+  terse sentence is enough. If nothing was skipped, omit this and leave the paragraph as it would
+  otherwise read.
 - `{{PREVIOUS_REPORT_LINK}}` — if a previous report exists in this repo's `docs/`, a link like
   `Previous report: <a href="../June19_2026/">June 19</a>`; otherwise "First report."
 
@@ -272,7 +315,9 @@ report folder (`<a href="June20_2026/">View report →</a>` — trailing slash, 
 ## Step 9 — Notify
 
 Send a push notification once the file is written successfully, summarizing the run's single most
-promising American alternative in under 200 characters.
+promising American alternative in under 200 characters. If the run ended in **DEGRADED SUCCESS**
+(see "Error handling & stopping criteria"), briefly note that too (e.g. "... (2 products skipped:
+source errors)") so a thinner report doesn't show up unexplained.
 
 ## Step 10 — Commit and push to `american-business-research` — never `main`
 
@@ -280,8 +325,9 @@ This repo shares `origin/main` with the sibling agent's **live, independently-sc
 routine. `main` must never receive a commit from this workflow.
 
 1. Before committing anything, run `git branch --show-current`. If it is not
-   `american-business-research`, stop and notify instead of committing — do not commit to any other
-   branch, especially `main`.
+   `american-business-research`, this is a **HARD STOP** (see "Error handling & stopping
+   criteria"): stop and notify instead of committing — do not commit to any other branch, especially
+   `main`.
 2. Stage and commit this run's changes: the new dated report folder, `docs/index.html`, and
    `resources/seen-products-history.json`.
 3. Push to `origin american-business-research`. If the branch doesn't yet have an upstream, use
