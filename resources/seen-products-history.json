@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-23",
-  "last_processed_sibling_report": "June22_2026",
+  "last_updated": "2026-06-25",
+  "last_processed_sibling_report": "June25_2026",
   "window_days": 14,
   "products": [
     {
@@ -39,9 +39,9 @@
       "category": "Apparel",
       "amazon_price_band": "~$31.85 (avg)",
       "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "seen_dates": ["2026-06-23"],
-      "alternatives_count": 7
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-23", "2026-06-25"],
+      "alternatives_count": 2
     },
     {
       "key": "shark-rocket-vacuum",
@@ -49,9 +49,9 @@
       "category": "Home & Kitchen",
       "amazon_price_band": "$99 (Prime Day deal price)",
       "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "seen_dates": ["2026-06-23"],
-      "alternatives_count": 4
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-23", "2026-06-25"],
+      "alternatives_count": 2
     },
     {
       "key": "flonase-allergy-relief-nasal-spray",
@@ -242,6 +242,126 @@
       "last_seen": "2026-06-20",
       "seen_dates": ["2026-06-20"],
       "alternatives_count": 6
+    },
+    {
+      "key": "levoit-core-300p-hepa-air-purifier",
+      "name": "Levoit Core 300-P HEPA Air Purifier",
+      "category": "Home & Kitchen",
+      "amazon_price_band": "$80",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "eltamd-uv-daily-tinted-sunscreen",
+      "name": "EltaMD UV Daily Tinted Sunscreen SPF 50",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "pistachio-chocolate-bars",
+      "name": "Viral Dubai-Style Pistachio Chocolate Bars",
+      "category": "Grocery",
+      "amazon_price_band": "$12.99",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "pupgum-dog-dental-chews",
+      "name": "PupGum Dog Dental Chews",
+      "category": "Pet Supplies",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "prettylitter-cat-litter",
+      "name": "PrettyLitter Health-Monitoring Cat Litter",
+      "category": "Pet Supplies",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"],
+      "alternatives_count": 1
+    },
+    {
+      "key": "beauty-of-joseon-double-cleansing",
+      "name": "Beauty of Joseon Double Cleansing Duo / Revive Eye Serum",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "tree-hut-shea-sugar-scrub",
+      "name": "Tree Hut Shea Sugar Scrub",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "~$9",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "toniebox-2-audio-player-bundles",
+      "name": "Toniebox 2 Audio Player Bundles",
+      "category": "Toys & Games",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"],
+      "alternatives_count": 1
+    },
+    {
+      "key": "ego-power-cordless-walk-behind-mower",
+      "name": "EGO POWER+ Cordless Walk-Behind Lawn Mower",
+      "category": "Tools & Home Improvement",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "owlet-dream-duo-baby-monitor",
+      "name": "Owlet Dream Duo (Gen 3) Smart Baby Monitor",
+      "category": "Baby",
+      "amazon_price_band": "$256.49",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"],
+      "alternatives_count": 1
+    },
+    {
+      "key": "coleman-snap-n-go-collapsible-cooler",
+      "name": "Coleman Snap 'N Go Collapsible Cooler",
+      "category": "Sports & Outdoors",
+      "amazon_price_band": "$199.99",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "vibration-platform-machines",
+      "name": "Vibration Platform Machines (LifePro Waver Mini)",
+      "category": "Sports & Outdoors",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"],
+      "alternatives_count": 2
     }
   ]
 }

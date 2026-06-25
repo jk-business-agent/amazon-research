@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>American Business Alternatives — June 25, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  /* 1. Header band */
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  /* 2. Executive summary */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  /* 3. Quick stats */
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 130px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  /* 4. Product groups */
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .product-groups { display: flex; flex-direction: column; gap: 18px; }
+  .product-group {
+    background: #fafbfc;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+  .product-group-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+  .product-title { font-size: 18px; font-weight: 700; margin: 0 0 4px; }
+  .product-meta { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .tag-count { background: #f1f5f9; color: #1e293b; }
+  .tag-affiliate-yes { background: var(--verified-bg); color: var(--verified); }
+  .tag-affiliate-no { background: #f1f5f9; color: var(--muted); }
+  .tag-affiliate-unconfirmed { background: var(--lowconf-bg); color: var(--lowconf); }
+  .product-rationale { font-size: 13.5px; line-height: 1.5; color: #334155; margin: 12px 0 14px; }
+
+  /* 5. Alternative cards (nested) */
+  .alt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
+  .alt-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .alt-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .alt-name { font-size: 15.5px; font-weight: 600; margin: 0; }
+  .alt-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f8fafc; border-radius: 8px; padding: 10px 12px; }
+  .compare-label { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+  .compare-col div:last-child { font-size: 12.5px; color: #1e293b; line-height: 1.45; }
+  .alt-section { font-size: 12.5px; line-height: 1.5; color: #334155; }
+  .alt-section a { color: #2563eb; text-decoration: none; font-size: 11.5px; }
+  .alt-sources { font-size: 11px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .alt-sources a { color: #2563eb; text-decoration: none; }
+
+  /* 6. Category chart */
+  .chart-wrap { padding: 10px 6px; }
+
+  /* 7. New entrants spotlight */
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+
+  /* 8. Methodology footer */
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  /* 9. Footer nav */
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>American Business Alternatives to Amazon Top Sellers</h1>
+    <div class="date">June 25, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 140 sources checked · Based on the sibling agent's June 25, 2026 report</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">This run is based on the sibling Competitor Research Agent's June 25, 2026 report, which listed 17 Amazon top-sellers. 3 were hard-excluded as Electronics, leaving 14 products across 9 categories carried forward. Comparing against the rolling 14-day product-history log, 12 are NEW since June 23 and 2 are RECURRING (ANRABESS Women's Tops &amp; Jumpsuits and Shark Rocket Vacuum both reappeared in the sibling report). Seven parallel research agents found 29 American alternatives total &mdash; 17 cleared the two-source VERIFIED bar and 12 remain LOW-CONFIDENCE (a single, uncorroborated company claim). Five internal inconsistencies surfaced during this run's quality pass between an agent's own rationale prose and the alternative cards it actually delivered and were corrected before publishing (see Methodology); the actual cards were always treated as ground truth. Beauty &amp; Personal Care produced the strongest VERIFIED showing of any category this run (5 across three products: EltaMD, Beauty of Joseon, and Tree Hut), and the Levoit Core 300-P HEPA Air Purifier produced the single strongest per-product result (2 of 3 alternatives VERIFIED, including Austin Air Systems' century-old Buffalo, NY assembly operation). By contrast, Toniebox 2 Audio Player Bundles, Owlet Dream Duo Smart Baby Monitor, and PrettyLitter Health-Monitoring Cat Litter each turned up only a single LOW-CONFIDENCE alternative before the credible-lead trail ran dry &mdash; Toniebox's only candidate (Mighty Audio) is American-owned but Taiwan-manufactured, Owlet's (Nanit) has confirmed US ownership but undisclosed hardware manufacturing location, and PrettyLitter's (SoyKitty) does not even replicate the Amazon product's core health-monitoring function. ANRABESS itself remains confirmed China-manufactured (it is the Amazon product being compared against, not an alternative); its strongest alternative, Harvest &amp; Mill, has a fully verified domestic supply chain but no direct jumpsuit match in its current product line.</div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">14</div><div class="label">Amazon Products</div></div>
+    <div class="stat-card"><div class="num">29</div><div class="label">Alternatives Found</div></div>
+    <div class="stat-card"><div class="num">12</div><div class="label">New Products</div></div>
+    <div class="stat-card"><div class="num">2</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">17</div><div class="label">Verified American-Made</div></div>
+    <div class="stat-card"><div class="num">12</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Product groups -->
+  <h2 class="section-title">Products &amp; American Alternatives</h2>
+  <div class="product-groups">
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Levoit Core 300-P HEPA Air Purifier</h3>
+      <div class="product-meta">$80 &middot; <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">3 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: medium &mdash; filters are a recurring consumable even though the unit itself is a one-time purchase, and the $80 price sits squarely in the $25&ndash;$100 priority band. Levoit is US-headquartered but its purifiers are manufactured in China; against it, this product produced the strongest VERIFIED result of any product this run (2 of 3 alternatives independently corroborated). Austin Air's century-old Buffalo, NY assembly operation and EnviroKlenz's Kansas manufacturing facility are both confirmed beyond the companies' own claims; LakeAir's Racine, WI claim is repeated consistently but only corroborated by a BBB profile and an "All American" brand directory, not independent press or a certification body, so it stays LOW-CONFIDENCE.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Austin Air Systems (HealthMate series)</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Levoit Core 300-P: compact HEPA air purifier, $80, US-headquartered brand, China-manufactured hardware.</div></div>
+        <div class="compare-col"><div class="compare-label">Austin Air HealthMate</div><div>Heavy-duty HEPA + activated-carbon/zeolite purifiers built for whole-room filtration; bulkier and pricier than Levoit's compact unit, positioned for allergy/chemical-sensitivity use cases rather than budget bedroom purifying.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Austin Air Systems was founded in 1990 by Richard Taylor (now deceased) and operates a roughly 480,000 sq ft manufacturing facility in Buffalo, New York, where it builds its full HealthMate purifier line in-house.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Company's Buffalo, NY manufacturing claim is independently corroborated by a Buffalo Rising local-news feature describing the facility and operations, beyond the company's own site. <a href="https://www.austinair.com/pages/about-us">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Richard Taylor, founder (deceased); company remains headquartered and family-connected to Buffalo, NY.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> via austinair.com/austin-air-partnership. <a href="https://www.austinair.com/pages/austin-air-partnership">austinair.com/austin-air-partnership</a></div>
+      <div class="alt-section"><strong>Contact:</strong> Email Info@austinair.com; phone 716-856-3700.</div>
+      <div class="alt-sources">Sources: <a href="https://www.austinair.com/pages/about-us">austinair.com</a> (2026-06-25), <a href="https://buffalorising.com/">buffalorising.com</a> (2026-06-25), <a href="https://www.austinair.com/pages/austin-air-partnership">austinair.com/austin-air-partnership</a> (2026-06-25)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">EnviroKlenz (Timilon Corporation)</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Levoit Core 300-P: compact HEPA purifier, $80, China-manufactured.</div></div>
+        <div class="compare-col"><div class="compare-label">EnviroKlenz</div><div>HEPA + proprietary earth-mineral-technology cartridge purifiers marketed for chemical/VOC sensitivity, mold, and odor removal; premium pricing above Levoit's budget tier.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> EnviroKlenz is a brand of Timilon Corporation, headquartered in the Fort Myers/Bonita Springs, Florida area, which opened a 50,000 sq ft manufacturing facility in Topeka, Kansas in February 2021 to expand production.</div>
+      <div class="alt-section"><strong>American-ness:</strong> The Topeka, KS facility opening is independently corroborated by WIBW TV news coverage and a GlobeNewswire press release describing the expansion, beyond the company's own materials. <a href="https://www.wibw.com/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources beyond the corporate parent name, Timilon Corporation.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> via enviroklenz.com/for-affiliates. <a href="https://www.enviroklenz.com/for-affiliates">enviroklenz.com/for-affiliates</a></div>
+      <div class="alt-section"><strong>Contact:</strong> Phone 239-330-9650.</div>
+      <div class="alt-sources">Sources: <a href="https://www.enviroklenz.com/">enviroklenz.com</a> (2026-06-25), <a href="https://www.wibw.com/">wibw.com</a> (2026-06-25), <a href="https://www.globenewswire.com/">globenewswire.com</a> (2026-06-25), <a href="https://www.enviroklenz.com/for-affiliates">enviroklenz.com/for-affiliates</a> (2026-06-25)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">LakeAir (RK Ventures, Inc.)</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Levoit Core 300-P: compact HEPA purifier, $80, China-manufactured.</div></div>
+        <div class="compare-col"><div class="compare-label">LakeAir</div><div>Long-running purifier brand (dating to 1968) including units marketed for cigar/vape/dispensary odor control as well as home use; positioned as a legacy American manufacturer.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> LakeAir is currently owned by RK Ventures, Inc., led by president Randy Bush, based in Racine, Wisconsin; the brand name dates back to 1968.</div>
+      <div class="alt-section"><strong>American-ness:</strong> A BBB business profile confirms the Racine, WI address and accreditation, and an AllAmerican.org directory listing repeats the "completely manufactured" in Racine claim, but neither is independent press or a certification body verifying the manufacturing-location claim itself &mdash; stays LOW-CONFIDENCE. <a href="https://www.bbb.org/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Randy Bush, president of current owner RK Ventures, Inc.; original 1968 founder not found in available sources.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; for cigar/vape/dispensary shop partners specifically.</div>
+      <div class="alt-section"><strong>Contact:</strong> Phone 262-632-1229.</div>
+      <div class="alt-sources">Sources: <a href="https://www.bbb.org/">bbb.org</a> (2026-06-25), <a href="https://allamerican.org/">allamerican.org</a> (2026-06-25), <a href="https://www.lakeair.com/">lakeair.com</a> (2026-06-25)</div>
+    </div>
+  </div>
+</div>
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">EltaMD UV Daily Tinted Sunscreen SPF 50</h3>
+      <div class="product-meta">Price not confirmed &middot; <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">2 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: high &mdash; sunscreen is a recurring consumable purchase. Two American-owned and manufactured alternatives were found and verified via independent corroboration; the search stopped at 2 because the next-tier candidate (Badger) manufactures partly in Canada, a deliberate quality cutoff rather than the trail running dry.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">California Baby</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>EltaMD UV Daily Tinted Sunscreen SPF 50: dermatologist-recommended tinted mineral/chemical-hybrid daily sunscreen.</div></div>
+        <div class="compare-col"><div class="compare-label">California Baby</div><div>Mineral-based, fragrance-sensitive sunscreens and skincare originally developed for babies/sensitive skin, now sold broadly; positioned as a clean-ingredient daily-wear alternative.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded in 1995 by Jessica Iclisoy, California Baby operates an FDA-registered manufacturing facility in Culver City, California.</div>
+      <div class="alt-section"><strong>American-ness:</strong> The Culver City, CA FDA-registered facility is independently corroborated by Fortune, TIME, and The Story Exchange coverage of the company, beyond its own site. <a href="https://fortune.com/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Jessica Iclisoy &mdash; bootstrapped the company in 1995 with $2,000 borrowed from her mother, with no outside investment.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> &mdash; no affiliate program found in available sources.</div>
+      <div class="alt-section"><strong>Contact:</strong> Email customersupport@californiababy.com.</div>
+      <div class="alt-sources">Sources: <a href="https://fortune.com/">fortune.com</a> (2026-06-25), <a href="https://time.com/">time.com</a> (2026-06-25), <a href="https://thestoryexchange.org/">thestoryexchange.org</a> (2026-06-25), <a href="https://www.californiababy.com/">californiababy.com</a> (2026-06-25)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">All Good (Elemental Herbs)</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>EltaMD UV Daily Tinted Sunscreen SPF 50.</div></div>
+        <div class="compare-col"><div class="compare-label">All Good</div><div>Mineral, reef-friendly sunscreens and balms made by Elemental Herbs; B Corp certified, positioned as a clean-ingredient, sustainability-forward daily and outdoor sunscreen line.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded in 1998 by Caroline Duell in Morro Bay, California, operating as Elemental Herbs.</div>
+      <div class="alt-section"><strong>American-ness:</strong> B Corp certification is independently confirmed in the B Lab directory, and Mustang News provided independent reporting on the company, beyond its own claims. <a href="https://www.bcorporation.net/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Caroline Duell &mdash; a former massage therapist and ambulance worker before founding the company.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> via ShareASale, merchant ID 152959.</div>
+      <div class="alt-section"><strong>Contact:</strong> Contact form at allgoodproducts.com.</div>
+      <div class="alt-sources">Sources: <a href="https://www.bcorporation.net/">bcorporation.net</a> (2026-06-25), <a href="https://mustangnews.net/">mustangnews.net</a> (2026-06-25), <a href="https://www.allgoodproducts.com/">allgoodproducts.com</a> (2026-06-25)</div>
+    </div>
+  </div>
+</div>
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Viral Dubai-Style Pistachio Chocolate Bars</h3>
+      <div class="product-meta">$12.99 &middot; <span class="pill" style="background:#65a30d">Grocery</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">2 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: high &mdash; chocolate is a recurring consumable, though the $12.99 price point falls below the $25&ndash;$100 priority band. Two American chocolatiers making their own domestic Dubai-style pistachio/kataifi bars were found and verified via independent press; capped at 2 because next-tier candidates lacked a second independent corroborating source.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Charles Chocolates</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Viral Dubai-Style Pistachio Chocolate Bars: chocolate bars with pistachio cream and crispy kataifi filling, $12.99, viral TikTok-driven trend item.</div></div>
+        <div class="compare-col"><div class="compare-label">Charles Chocolates</div><div>Small-batch chocolate bars made at its own San Francisco factory; offers pistachio/kataifi-style bars as part of its specialty line, hand-crafted rather than mass-produced.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded in 2004 by Chuck (Charles) Siegel, operating a factory at 535 Florida Street, San Francisco.</div>
+      <div class="alt-section"><strong>American-ness:</strong> The San Francisco factory location is independently corroborated by Mission Local and KQED coverage, beyond the company's own claims. <a href="https://missionlocal.org/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Charles "Chuck" Siegel, founder (2004).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> &mdash; has a wholesale program but no confirmed consumer affiliate program.</div>
+      <div class="alt-section"><strong>Contact:</strong> Phone 415-659-8770.</div>
+      <div class="alt-sources">Sources: <a href="https://missionlocal.org/">missionlocal.org</a> (2026-06-25), <a href="https://www.kqed.org/">kqed.org</a> (2026-06-25), <a href="https://charleschocolates.com/">charleschocolates.com</a> (2026-06-25)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Cacao &amp; Cardamom Chocolatier</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Viral Dubai-Style Pistachio Chocolate Bars, $12.99.</div></div>
+        <div class="compare-col"><div class="compare-label">Cacao &amp; Cardamom</div><div>Houston-based chocolatier known for globally-inspired flavors including pistachio/kataifi-style bars; storefront-based small-batch production.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded in 2014 by Annie Rupani, with a storefront at 5000 Westheimer, Houston, Texas.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Houston production is independently corroborated by Yelp, a USA Today 2025 Readers' Choice listing (#9), and Entrepreneur magazine coverage. <a href="https://www.usatoday.com/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Annie Rupani, founder (2014).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; 10% commission via UpPromote.</div>
+      <div class="alt-section"><strong>Contact:</strong> Storefront at 5000 Westheimer, Houston, TX.</div>
+      <div class="alt-sources">Sources: <a href="https://www.usatoday.com/">usatoday.com</a> (2026-06-25), <a href="https://www.entrepreneur.com/">entrepreneur.com</a> (2026-06-25), <a href="https://www.yelp.com/">yelp.com</a> (2026-06-25), <a href="https://cacaoandcardamom.com/">cacaoandcardamom.com</a> (2026-06-25)</div>
+    </div>
+  </div>
+</div>
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">PupGum Dog Dental Chews</h3>
+      <div class="product-meta">Price not confirmed &middot; <span class="pill" style="background:#92400e">Pet Supplies</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">3 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: high &mdash; dental chews are a recurring consumable. Three American dental/chew makers were found; West Paw reached full VERIFIED status via B Corp certification plus an independent Montana State University manufacturing case study, while DOGDELI and Great Dog Co. are real, small American operations corroborated only by data-aggregator/distributor listings rather than press or certification bodies, so they remain LOW-CONFIDENCE. Corporate-owned brands (Purina DentaLife, Kirkland) were excluded as not independent American small businesses.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">West Paw &mdash; Natural Dental Sticks</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>PupGum: postbiotic dental chew with flax seed, ridged shape, vet-developed.</div></div>
+        <div class="compare-col"><div class="compare-label">West Paw Natural Dental Sticks</div><div>Dental chew designed to fit West Paw's Qwizl treat toy; made to a non-toxic standard (no BPA, phthalates, latex, or silicone).</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> West Paw is a Bozeman, Montana pet-product manufacturer founded in 1996 when Spencer Williams purchased and renamed the company; it now sells to 6,000+ US retailers and 40+ countries.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Bozeman, MT manufacturing is corroborated by a Montana State University Montana Manufacturing Extension Center (MMEC) case study and by West Paw's B Corp certification (B Lab). <a href="https://www.montana.edu/mmec/impact/case_studies/2018Qrt2WestPawDesign.html">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Spencer Williams &mdash; purchased the company in Livingston, MT in 1996 at age 23.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; 10% commission, 30-day window, via AvantLink. <a href="https://www.westpaw.com/pages/affiliate-program">westpaw.com/pages/affiliate-program</a></div>
+      <div class="alt-section"><strong>Contact:</strong> Phone 1-800-443-5567; email westpaw@westpaw.com; address 32050 Frontage Road, Bozeman, MT 59715.</div>
+      <div class="alt-sources">Sources: <a href="https://www.westpaw.com/pages/family-owned">westpaw.com</a> (2026-06-25), <a href="https://www.montana.edu/mmec/impact/case_studies/2018Qrt2WestPawDesign.html">montana.edu</a> (2026-06-25), <a href="https://www.bcorporation.net/en-us/find-a-b-corp/company/west-paw-inc/">bcorporation.net</a> (2026-06-25), <a href="https://www.westpaw.com/pages/affiliate-program">westpaw.com/affiliate</a> (2026-06-25)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">DOGDELI &mdash; Dental Dog Treats</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>PupGum: mass-market postbiotic dental chew.</div></div>
+        <div class="compare-col"><div class="compare-label">DOGDELI</div><div>Small-batch dental dog treats handcrafted in a Florida kitchen using 100% U.S.-sourced, hormone- and antibiotic-free ingredients with added probiotics.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Family-owned dog treat maker based in Hallandale, FL; founding year not found in available sources.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Florida-kitchen claim is corroborated by a Buzzfile business-data listing showing the registered Hallandale, FL address and phone number, but no certification body or press account was found. <a href="https://www.buzzfile.com/business/Dogdeli-Canine-Kitchen-Inc.-305-842-7800">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Phone (305) 842-7800; email contact@dogdelitreats.com; address 2101 Atlantic Shores Blvd, Hallandale, FL 33009.</div>
+      <div class="alt-sources">Sources: <a href="https://dogdelitreats.com/pages/about-us">dogdelitreats.com</a> (2026-06-25), <a href="https://www.buzzfile.com/business/Dogdeli-Canine-Kitchen-Inc.-305-842-7800">buzzfile.com</a> (2026-06-25)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">GREAT DOG CO. &mdash; Single-Ingredient Chews</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>PupGum: postbiotic, ridged dental-specific chew.</div></div>
+        <div class="compare-col"><div class="compare-label">GREAT DOG CO.</div><div>Single-ingredient bison/beef/lamb/elk chews marketed for oral and digestive health, sourced and made in the USA near its Minnesota base.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded in 1991 by Michael McCabe in Minneapolis, Minnesota; over 30 years in operation.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Minnesota location/operations are repeated across an independent wholesale distributor listing (PrestigeProductsEast) and the Minnesota State Fair vendor directory, but no certification body or factory-address public record was found. <a href="https://prestigeproductseast.com/great-dog-company.html">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Michael McCabe &mdash; founded the company in 1991 after his Doberman Pinscher died from a rawhide-related injury.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-no">No</span> &mdash; offers a "Top Dog Rewards" loyalty program instead.</div>
+      <div class="alt-section"><strong>Contact:</strong> Email customerservice@greatdogco.com; Minneapolis, MN.</div>
+      <div class="alt-sources">Sources: <a href="https://www.greatdogco.com/pages/about-great-dog-co">greatdogco.com</a> (2026-06-25), <a href="https://prestigeproductseast.com/great-dog-company.html">prestigeproductseast.com</a> (2026-06-25), <a href="https://www.mnstatefair.org/vendor/2421.1/">mnstatefair.org</a> (2026-06-25)</div>
+    </div>
+  </div>
+</div>
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">PrettyLitter Health-Monitoring Cat Litter</h3>
+      <div class="product-meta">Price not confirmed &middot; <span class="pill" style="background:#92400e">Pet Supplies</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">1 alternative found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: high &mdash; cat litter is a recurring consumable. Only one true direct-functional-match alternative met even the LOW-CONFIDENCE bar; the cap was not hit because the credible-lead trail ran dry. Genius Litter was excluded for inconsistent/unconfirmed HQ location across sources and undisclosed "partner facilities"; Tidy Cats/Fresh Step were excluded as large corporate-owned brands; Whisker/Litter-Robot were excluded as litter-box products rather than litter. <strong>Important caveat:</strong> SoyKitty does not replicate PrettyLitter's core pH/health-monitoring function &mdash; it is a sustainability/sourcing-based alternative, not a feature-equivalent one.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">SoyKitty Plant-Based Cat Litter</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>PrettyLitter: silica-crystal litter that changes color based on cat urine pH to flag UTIs/bladder crystals/metabolic issues; subscription-based.</div></div>
+        <div class="compare-col"><div class="compare-label">SoyKitty</div><div>Plant-based, biodegradable, compostable clumping litter made from soybean processing byproducts, guar gum, and cornstarch; does not offer pH/health-monitoring color-change functionality. Founded 2022; began US shipping May 2024.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> SoyKitty, LLC is an early-stage US pet-product startup founded in 2022, which won 3rd place in the United Soybean Board/Yield Lab Institute's 2023 Soy Innovation Challenge; began shipping litter in the US in May 2024.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Company and press materials describe SoyKitty as a "US-based pet brand working to create American-made&hellip; products," with a registered address in Dover, DE; that address appears to be a registered-agent/incorporation address rather than a confirmed manufacturing site, and no independent source corroborates where the litter is actually produced. <a href="https://www.pr.com/press-release/911584">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Ashley Hejlik (Co-Founder/CMO) and Lee Kaufman.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Email meow@soykitty.com; registered address 8 The Green, STE B, Dover, DE 19910.</div>
+      <div class="alt-sources">Sources: <a href="https://soykitty.com/pages/about-us">soykitty.com</a> (2026-06-25), <a href="https://www.pr.com/press-release/911584">pr.com</a> (2026-06-25), <a href="https://www.crunchbase.com/organization/soykitty">crunchbase.com</a> (2026-06-25)</div>
+    </div>
+  </div>
+</div>
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Beauty of Joseon (Double Cleansing Duo / Revive Eye Serum)</h3>
+      <div class="product-meta">Price not confirmed &middot; <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">2 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: high &mdash; skincare is a recurring consumable. Two American-made alternatives were found; the cap was not hit at 3 because the search trail for a third ran dry (most "double cleanse" hits were UK-based, e.g. Pai Skincare, or lacked independent corroboration).</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Mad Hippie</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Beauty of Joseon Double Cleansing Duo / Revive Eye Serum: Korean-skincare-inspired cleansing and eye-care products.</div></div>
+        <div class="compare-col"><div class="compare-label">Mad Hippie</div><div>Antioxidant-driven serums and cleansers formulated with naturally-derived ingredients; comparable daily-skincare-routine positioning.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded in 2009 by Sam and Dana Stewart in Austin, TX; the company's HQ moved to Portland, OR in 2014.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Corroborated by independent CultureMap Austin press coverage of the company's founding and growth. <a href="https://www.culturemap.com/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Sam and Dana Stewart, co-founders (2009).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> No public phone/email found; contact via madhippie.com.</div>
+      <div class="alt-sources">Sources: <a href="https://www.culturemap.com/">culturemap.com</a> (2026-06-25), <a href="https://www.madhippie.com/">madhippie.com</a> (2026-06-25)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Henn&eacute; Organics</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Beauty of Joseon Double Cleansing Duo / Revive Eye Serum.</div></div>
+        <div class="compare-col"><div class="compare-label">Henn&eacute; Organics</div><div>Organic, "clean beauty" skincare and lip-care products; positioned as a small, ethically-marketed alternative.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded in 2015 by Laura Xiao in Wilmington, NC.</div>
+      <div class="alt-section"><strong>American-ness:</strong> "Made With Love in USA" and USDA Organic/Leaping Bunny claims are sourced only from the company's own site; no independent registry check was performed. <a href="https://henneorganics.com/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Laura Xiao, founder (2015).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Contact via henneorganics.com.</div>
+      <div class="alt-sources">Sources: <a href="https://henneorganics.com/">henneorganics.com</a> (2026-06-25)</div>
+    </div>
+  </div>
+</div>
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Tree Hut Shea Sugar Scrub</h3>
+      <div class="product-meta">~$9 &middot; <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">3 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: high &mdash; body scrub is a recurring consumable, though the ~$9 price falls below the $25&ndash;$100 priority band. Cap of 3 alternatives reached. The Lotion Company and Naples Soap Company both reached full VERIFIED status; Buff City Soap is a real, fast-growing American operation, but only its in-store "Soap Makery" model is independently corroborated, not its ingredient sourcing, so it stays LOW-CONFIDENCE.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">The Lotion Company</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Tree Hut Shea Sugar Scrub: shea-butter-based exfoliating sugar scrub, ~$9.</div></div>
+        <div class="compare-col"><div class="compare-label">The Lotion Company</div><div>Sugar scrubs and lotions made by a small father-daughter operation in Indiana.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> A father-daughter operation, Jeff and Morgan Gillentine, based in Muncie, Indiana; founding year not found in available sources.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Corroborated by a WISH-TV "Indiana Grown" segment featuring the business, independent of the company's own claims. <a href="https://www.wishtv.com/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Jeff and Morgan Gillentine.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Phone 765-288-0244.</div>
+      <div class="alt-sources">Sources: <a href="https://www.wishtv.com/">wishtv.com</a> (2026-06-25), <a href="https://www.thelotioncompany.com/">thelotioncompany.com</a> (2026-06-25)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Naples Soap Company</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Tree Hut Shea Sugar Scrub, ~$9.</div></div>
+        <div class="compare-col"><div class="compare-label">Naples Soap Company</div><div>Handmade soaps, scrubs, and lotions; majority of products manufactured at its own Florida facility.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded in November 2009 by Deanna Wallin (a former RN/esthetician) in Naples, FL; now publicly traded (NASDAQ: NASO).</div>
+      <div class="alt-section"><strong>American-ness:</strong> Corroborated by Business Observer FL reporting describing roughly 80% Florida manufacturing at a Fort Myers facility. <a href="https://www.businessobserverfl.com/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Deanna Wallin, founder (Nov. 2009).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; up to 8% via Awin/ShareASale.</div>
+      <div class="alt-section"><strong>Contact:</strong> Email info@naplessoap.com.</div>
+      <div class="alt-sources">Sources: <a href="https://www.businessobserverfl.com/">businessobserverfl.com</a> (2026-06-25), <a href="https://www.naplessoap.com/">naplessoap.com</a> (2026-06-25)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Buff City Soap</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Tree Hut Shea Sugar Scrub, ~$9.</div></div>
+        <div class="compare-col"><div class="compare-label">Buff City Soap</div><div>In-store "Soap Makery" model producing soaps and scrubs visible to customers in each retail location.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded in 2013 by Brad Kellum (a Memphis firefighter), Jennifer Ziemianin, and Amie Shumaker in Memphis, TN; now headquartered in Dallas-Fort Worth since 2020.</div>
+      <div class="alt-section"><strong>American-ness:</strong> The in-store "Soap Makery" model is corroborated by Nashville Scene, WFAA, and Shelby Living coverage, but ingredient sourcing itself is not independently corroborated. <a href="https://www.wfaa.com/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Brad Kellum, Jennifer Ziemianin, Amie Shumaker (2013).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-no">No</span> &mdash; uses a franchise model instead.</div>
+      <div class="alt-section"><strong>Contact:</strong> Contact via buffcitysoap.com.</div>
+      <div class="alt-sources">Sources: <a href="https://www.wfaa.com/">wfaa.com</a> (2026-06-25), <a href="https://www.nashvillescene.com/">nashvillescene.com</a> (2026-06-25), <a href="https://www.buffcitysoap.com/">buffcitysoap.com</a> (2026-06-25)</div>
+    </div>
+  </div>
+</div>
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Toniebox 2 Audio Player Bundles</h3>
+      <div class="product-meta">Price not confirmed &middot; <span class="pill" style="background:#f59e0b">Toys &amp; Games</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">1 alternative found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: low &mdash; this is a durable toy/electronics-adjacent purchase, not a recurring consumable. Only 1 alternative cleared even the LOW-CONFIDENCE bar; the credible-lead trail genuinely ran dry after that. Yoto (UK-founded, Shenzhen-manufactured) and Lunii/VoxBlock (France/UK) were explicitly excluded as not American-owned, despite ranking as the most common "Toniebox alternative" in search results.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Mighty Audio (Mighty)</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Toniebox 2: screen-free audio player for kids paired with figurine "Tonies" that store/trigger audio content; designed in Germany.</div></div>
+        <div class="compare-col"><div class="compare-label">Mighty Audio</div><div>Screen-free, phone-free portable audio player that streams Spotify/Amazon Music directly; marketed for kids and adults/runners rather than character-figurine play &mdash; a streaming-service player rather than a fixed-library storytelling device.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Mighty Audio, Inc. is headquartered in Venice, California, founded in 2016 by Anthony Mendelson; was Spotify's first hardware launch partner in 2017.</div>
+      <div class="alt-section"><strong>American-ness:</strong> US ownership and Venice, CA headquarters are verifiable via business directories, but devices are manufactured in Taiwan, not the USA, per company-origin-story coverage &mdash; qualifies more cleanly as "American-owned" than "American-made." <a href="https://en.wikipedia.org/wiki/Mighty_Audio">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Anthony Mendelson &mdash; BS Economics (UC Berkeley), MBA (UCLA Anderson); spent 5 years at Google before leaving in 2015&ndash;2016 to found Mighty.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> via AvantLink; UK storefront also lists a dedicated affiliate page. <a href="https://www.mightyaudio.co.uk/pages/mighty-affiliate-program">mightyaudio.co.uk/pages/mighty-affiliate-program</a></div>
+      <div class="alt-section"><strong>Contact:</strong> Email heyo@bemighty.com; address 707 Coeur D Alene Ave, Venice, CA 90291.</div>
+      <div class="alt-sources">Sources: <a href="https://en.wikipedia.org/wiki/Mighty_Audio">en.wikipedia.org/wiki/Mighty_Audio</a> (2026-06-25), <a href="https://www.aol.com/articles/created-screen-free-streaming-music-125701840.html">aol.com</a> (2026-06-25), <a href="https://bemighty.com/pages/contact-us">bemighty.com</a> (2026-06-25), <a href="https://www.mightyaudio.co.uk/pages/mighty-affiliate-program">mightyaudio.co.uk</a> (2026-06-25)</div>
+    </div>
+  </div>
+</div>
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">EGO POWER+ Cordless Walk-Behind Lawn Mower</h3>
+      <div class="product-meta">Price not confirmed &middot; <span class="pill" style="background:#475569">Tools &amp; Home Improvement</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">2 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: low &mdash; a durable goods purchase, not recurring. EGO (Chervon, Chinese-owned) is the Amazon product. Mean Green is the most credible verified domestic option but skews commercial/contractor-grade and pricier than EGO's homeowner-focused line &mdash; a scale/price mismatch worth flagging. Husqvarna's cordless walk-behinds were excluded for being Swedish-owned despite having US factories.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Mean Green Products</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>EGO POWER+ cordless walk-behind mower, battery-electric, homeowner-grade. Designed by EGO (Chervon, a Chinese-owned company); manufactured overseas.</div></div>
+        <div class="compare-col"><div class="compare-label">Mean Green Products</div><div>Lithium-battery-powered walk-behind and zero-turn mowers hand-built in Ohio; positioned as commercial/contractor-grade equipment, substantially more expensive than EGO's homeowner-class mower.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 2009&ndash;2010 in Ross, Ohio by father-son team Joe and Matt Conrad; opened a 100,000 sq ft facility in Hamilton, OH in 2022; acquired in 2020 by DR Power Equipment, a division of Generac Holdings Inc.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Ohio manufacturing is independently corroborated by Hamilton Journal-News coverage and OPE Reviews/HBS Dealer trade-press coverage of the 2022 facility opening. Note: owned by Generac since 2020, not an independent family business. <a href="https://www.journal-news.com/news/butler-county-electric-lawnmower-company-expanding-worldwide-reach/fV0xRdxJLBlFaRYtAAZmhL/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Joe Conrad (with son Matt Conrad) &mdash; Joe's prior aviation/airport-operation background informed the mowers' aerospace-aluminum construction.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> &mdash; sells through authorized dealers.</div>
+      <div class="alt-section"><strong>Contact:</strong> Phone (513) 738-4736; address 4404 Hamilton Cleves Rd, Hamilton, OH 45013.</div>
+      <div class="alt-sources">Sources: <a href="https://meangreenproducts.com/">meangreenproducts.com</a> (2026-06-25), <a href="https://www.journal-news.com/news/butler-county-electric-lawnmower-company-expanding-worldwide-reach/fV0xRdxJLBlFaRYtAAZmhL/">journal-news.com</a> (2026-06-25), <a href="https://opereviews.com/mean-green-opens-new-hamilton-ohio-facility/">opereviews.com</a> (2026-06-25), <a href="https://www.globenewswire.com/news-release/2020/09/01/2086691/0/en/DR-Power-Equipment-Enters-Battery-Powered-Zero-Turn-Mower-Market-with-Acquisition-of-Mean-Green-Products-LLC.html">globenewswire.com</a> (2026-06-25)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">American Lawn Mower Co. (Earthwise/Great States &mdash; reel &amp; corded-electric lines only)</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>EGO POWER+ cordless (battery) walk-behind mower, homeowner-grade, no cord or gas required.</div></div>
+        <div class="compare-col"><div class="compare-label">American Lawn Mower Co.</div><div>Manufactures push reel mowers and corded-electric mowers domestically in Shelbyville, Indiana, but its battery/cordless line (Earthwise brand) is manufactured in China &mdash; not a clean cordless-to-cordless match.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 1895 (merged with Great States Corporation, 1936), headquartered with manufacturing in Shelbyville, Indiana; largest remaining US producer of push reel mowers.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Reel-mower manufacturing is corroborated by the U.S. Congressional Record (May 4, 1994), but the cordless/battery line is contradicted by Amazon country-of-origin data showing Chinese manufacturing for at least one battery mower model (Earthwise 60420). <a href="https://www.govinfo.gov/content/pkg/CREC-1994-05-04/html/CREC-1994-05-04-pt1-PgS56.htm">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources; established 1895 in Richmond, IN.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Toll-free (800) 825-4264; address 7444 Shadeland Station Way, Indianapolis, IN 46256.</div>
+      <div class="alt-sources">Sources: <a href="https://americanlawnmower.com/pages/our-history">americanlawnmower.com</a> (2026-06-25), <a href="https://www.govinfo.gov/content/pkg/CREC-1994-05-04/html/CREC-1994-05-04-pt1-PgS56.htm">govinfo.gov</a> (2026-06-25), <a href="https://www.amazon.com/Earthwise-60420-20-Inch-Cordless-Electric/dp/B00OPTSAXQ">amazon.com</a> (2026-06-25)</div>
+    </div>
+  </div>
+</div>
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Owlet Dream Duo (Gen 3) Smart Baby Monitor</h3>
+      <div class="product-meta">$256.49 &middot; <span class="pill" style="background:#e11d48">Baby</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">1 alternative found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: low &mdash; a durable baby-gear purchase, not recurring. Found 1 credible American-headquartered alternative; a second candidate (Infant Optics) was investigated but excluded because an independent made-in-china.com listing for its DXR-8 monitor contradicts an "American-made" framing despite its San Francisco headquarters.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Nanit</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Owlet Dream Duo (Gen 3): 2K HD camera + FDA-cleared wearable sleep-monitoring sock; $256.49 bundle; #1 US baby-monitor brand per Circana.</div></div>
+        <div class="compare-col"><div class="compare-label">Nanit</div><div>Nanit Pro Camera + non-contact "Breathing Wear" pajama system (no wearable sensor/sock) tracks breathing motion, sleep, and room conditions via computer vision.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded in 2014 (operating as Udisense Inc., DBA Nanit), headquartered in New York City; makes smart cameras and a non-wearable "Breathing Wear" sleep-tracking system.</div>
+      <div class="alt-section"><strong>American-ness:</strong> NYC headquarters confirmed by multiple independent sources (Crunchbase, PitchBook, Cornell Tech profile); however, no independent source specifies where the camera hardware is manufactured/assembled. <a href="https://tech.cornell.edu/built/nanit/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Tor Ivry, Andrew Berman, and Assaf Glazer (2014).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; up to 20% commission for approved publishers. <a href="https://www.nanit.com/affiliates">nanit.com/affiliates</a></div>
+      <div class="alt-section"><strong>Contact:</strong> Phone 1-866-696-2648; email help@nanit.com.</div>
+      <div class="alt-sources">Sources: <a href="https://tracxn.com/d/companies/nanit/__hGR3x_CeQreiY3idpeKnOIf8MyM64bR4V5hLllsmJic">tracxn.com</a> (2026-06-25), <a href="https://tech.cornell.edu/built/nanit/">tech.cornell.edu</a> (2026-06-25), <a href="https://aventure.vc/companies/nanit-new-york-city-ny-us">aventure.vc</a> (2026-06-25), <a href="https://www.nanit.com/affiliates">nanit.com</a> (2026-06-25)</div>
+    </div>
+  </div>
+</div>
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Coleman Snap 'N Go Collapsible Cooler</h3>
+      <div class="product-meta">$199.99 &middot; <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">3 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: low &mdash; a durable goods purchase, not recurring. Found 3 American-made/owned cooler alternatives (cap reached); Igloo and Coleman's own domestic line were excluded as direct incumbents/competitors rather than independent alternatives.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Bison Coolers</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Coleman Snap 'N Go Collapsible Cooler, $199.99.</div></div>
+        <div class="compare-col"><div class="compare-label">Bison Coolers</div><div>Roto-molded hard coolers built for heavy-duty outdoor/hunting use; premium pricing versus Coleman's collapsible soft cooler.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 2011 by Jeremy Denson (a former Southwest Airlines employee) and his father, based in Fort Worth, TX.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Corroborated by Fort Worth Report, Fort Worth Inc., and a Google Public Policy feature, beyond the company's own claims. <a href="https://fortworthreport.org/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Jeremy Denson, co-founder (2011).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> via AvantLink. <a href="https://bisoncoolers.com/pages/affiliate-program">bisoncoolers.com/pages/affiliate-program</a></div>
+      <div class="alt-section"><strong>Contact:</strong> Phone 855-278-8355.</div>
+      <div class="alt-sources">Sources: <a href="https://fortworthreport.org/">fortworthreport.org</a> (2026-06-25), <a href="https://fortworthinc.com/">fortworthinc.com</a> (2026-06-25), <a href="https://bisoncoolers.com/pages/affiliate-program">bisoncoolers.com</a> (2026-06-25)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Maluna Coolers</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Coleman Snap 'N Go Collapsible Cooler, $199.99.</div></div>
+        <div class="compare-col"><div class="compare-label">Maluna Coolers</div><div>Hard-sided roto-molded coolers; began as a Kickstarter-funded startup, now produced in-house at its own Minnesota facility.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 2016 by Scott Hoyt, a thermal-dynamics engineer, in a Minnesota garage; Kickstarter raised ~$440k versus a $150k goal; manufacturing moved in-house to Baxter, MN around 2021.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Corroborated by the company's own Kickstarter campaign record plus independent News8000 and AmmoLand coverage. <a href="https://www.kickstarter.com/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Scott Hoyt, founder (2016).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> &mdash; has a "Corporate Program" instead.</div>
+      <div class="alt-section"><strong>Contact:</strong> Phone 218-822-4555.</div>
+      <div class="alt-sources">Sources: <a href="https://www.kickstarter.com/">kickstarter.com</a> (2026-06-25), <a href="https://www.news8000.com/">news8000.com</a> (2026-06-25), <a href="https://www.ammoland.com/">ammoland.com</a> (2026-06-25)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Grizzly Coolers (Iowa Rotocast Plastics)</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Coleman Snap 'N Go Collapsible Cooler, $199.99.</div></div>
+        <div class="compare-col"><div class="compare-label">Grizzly Coolers</div><div>Hard-sided roto-molded coolers; family-owned manufacturer based in Decorah, Iowa.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Iowa Rotocast Plastics founded 1983 (renamed from "Super Cooler" in 1986); Grizzly brand launched 2002, based in Decorah, IA.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Only the company's own site plus a general 2006 Waukon Standard local-expansion notice (not Grizzly-brand-specific) were found; no founder name located. <a href="https://www.grizzlycoolers.com/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Contact via grizzlycoolers.com.</div>
+      <div class="alt-sources">Sources: <a href="https://www.grizzlycoolers.com/">grizzlycoolers.com</a> (2026-06-25)</div>
+    </div>
+  </div>
+</div>
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Vibration Platform Machines (LifePro Waver Mini)</h3>
+      <div class="product-meta">Price not confirmed &middot; <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">2 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: low &mdash; a durable fitness-equipment purchase, not recurring. Found 2 American-made/owned alternatives and stopped short of the 3-cap because the credible-lead trail ran dry.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">LifetimeVibe</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>LifePro Waver Mini vibration platform machine.</div></div>
+        <div class="compare-col"><div class="compare-label">LifetimeVibe</div><div>Whole-body vibration platform machines marketed for fitness/recovery use.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 2014 by Vicki Honey, now owned by Varden Hadfield, based in Murray/Salt Lake City, UT.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Corroborated by a BBB business profile (A+ accredited since 2021) and an independent Danielle Lin Show podcast naming Hadfield as "Founder and Principal Consultant." <a href="https://www.bbb.org/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Vicki Honey (2014); now led by Varden Hadfield.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Phone 801-367-8002.</div>
+      <div class="alt-sources">Sources: <a href="https://www.bbb.org/">bbb.org</a> (2026-06-25), <a href="https://www.daniellelinshow.com/">daniellelinshow.com</a> (2026-06-25), <a href="https://lifetimevibe.com/">lifetimevibe.com</a> (2026-06-25)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">VibePlate</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>LifePro Waver Mini vibration platform machine.</div></div>
+        <div class="compare-col"><div class="compare-label">VibePlate</div><div>Vibration platform machines manufactured from a facility in Malcolm, NE.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Facility in Malcolm, NE, traced to a "ProSystems" Lincoln, NE connection (a former athletic-training-center operator); founder and founding year not found in available sources.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Only the company's own site/Amazon listing claim was found; no independent corroboration despite searching Athletic Business, Crunchbase, and ZoomInfo (Athletic Business fetch returned a 403). <a href="https://www.vibeplate.com/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; up to 10%. <a href="https://www.vibeplate.com/pages/affiliate-program">vibeplate.com/pages/affiliate-program</a></div>
+      <div class="alt-section"><strong>Contact:</strong> Phone 402-267-9048.</div>
+      <div class="alt-sources">Sources: <a href="https://www.vibeplate.com/">vibeplate.com</a> (2026-06-25), <a href="https://www.vibeplate.com/pages/affiliate-program">vibeplate.com/affiliate</a> (2026-06-25)</div>
+    </div>
+  </div>
+</div>
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">ANRABESS Women's Tops &amp; Jumpsuits</h3>
+      <div class="product-meta">~$31.85 (avg) &middot; <span class="pill" style="background:#7c3aed">Apparel</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-recurring">RECURRING</span>
+      <span class="tag tag-count">2 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: medium &mdash; apparel is replaced periodically rather than consumed, and the ~$31.85 average price sits within the $25&ndash;$100 priority band. Found 2 American alternatives within the medium cap; a third candidate (River + Sky / SUNDoWN) was identified but not fully verified, so the cap was reached deliberately at 2 rather than the trail running dry. Genuinely fully domestic cut-and-sew apparel brands at this price tier remain rare.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Harvest &amp; Mill</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>ANRABESS Women's Tops &amp; Jumpsuits: casual/vacation-style tops and jumpsuits, ~$31.85 avg price, 4.9-star average; manufactured in China.</div></div>
+        <div class="compare-col"><div class="compare-label">Harvest &amp; Mill</div><div>100% organic cotton loungewear tops and basics (no jumpsuits currently) grown, milled, and sewn entirely within roughly 20 miles of the San Francisco Bay Area; closest comparable category is casual tops/loungewear, not jumpsuits.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 2012 by Natalie Patricia, based in Berkeley, CA; "seed to stitch" model &mdash; cotton grown by American farmers, milled domestically, sewn in Berkeley/Oakland/San Francisco.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Fully domestic claim corroborated by a Fibershed.org producer-member directory listing and an independent 2016 Berkeleyside news profile of the Berkeley sewing operation. <a href="https://fibershed.org/producers/harvest-mill/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Natalie Patricia, founder (2012); background in organic farming and art.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> via Sovrn/Viglink. <a href="https://harvestandmill.com/pages/affiliates">harvestandmill.com/pages/affiliates</a></div>
+      <div class="alt-section"><strong>Contact:</strong> Email hello@harvestandmill.com.</div>
+      <div class="alt-sources">Sources: <a href="https://fibershed.org/producers/harvest-mill/">fibershed.org</a> (2026-06-25), <a href="https://www.berkeleyside.org/2016/11/14/berkeley-clothing-company-harvest-mill-has-a-mantra-you-are-what-you-wear">berkeleyside.org</a> (2026-06-25), <a href="https://harvestandmill.com/pages/our-story">harvestandmill.com</a> (2026-06-25), <a href="https://harvestandmill.com/pages/affiliates">harvestandmill.com/affiliates</a> (2026-06-25)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">AMVI Collection</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>ANRABESS Women's Tops &amp; Jumpsuits, ~$31.85 avg price.</div></div>
+        <div class="compare-col"><div class="compare-label">AMVI Collection</div><div>Direct category match &mdash; sells both women's tops and jumpsuits, making it a closer like-for-like comparison than Harvest &amp; Mill; premium-essentials positioning rather than budget fast-fashion.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> "American Made, Vintage Inspired" &mdash; a Los Angeles-based women's apparel label; founding year not found in available sources.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Company's own About page states clothing is "designed and made in Los Angeles," sourcing fabric from American mills; no independent press, certification body, or public-records signal was found corroborating the claim. <a href="https://amvicollection.com/pages/about-us">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Identified only by first name, "Hinda," per the company's own About page; full name and founding year not found in available sources.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Email info@amvicollection.com.</div>
+      <div class="alt-sources">Sources: <a href="https://amvicollection.com/pages/about-us">amvicollection.com</a> (2026-06-25), <a href="https://amvicollection.com/pages/contact-us">amvicollection.com</a> (2026-06-25), <a href="https://www.crunchbase.com/organization/amvi-collection">crunchbase.com</a> (2026-06-25)</div>
+    </div>
+  </div>
+</div>
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Shark Rocket Vacuum</h3>
+      <div class="product-meta">Under $100 &middot; <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-recurring">RECURRING</span>
+      <span class="tag tag-count">2 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: low &mdash; a durable goods purchase, not recurring. Two American-made alternatives were found; Oreck was explicitly excluded after verification showed it is now owned by Hong Kong-based Techtronic Industries (TTI), and Kirby/Mosquito were excluded as upright/commercial-only.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Simplicity Freedom Cordless Upright (Tacony Corporation)</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Shark Rocket Vacuum, under $100, lightweight stick/cordless vacuum.</div></div>
+        <div class="compare-col"><div class="compare-label">Simplicity Freedom</div><div>Cordless upright vacuum assembled at Tacony's dedicated St. James, MO plant, with over 1 million units produced since 1997.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Tacony Corporation founded 1946 by Nick Tacony in Fenton, MO; assembly moved to a dedicated St. James, MO plant in 1997; current CEO Kristi Tacony Humes (3rd-generation, since 2016).</div>
+      <div class="alt-section"><strong>American-ness:</strong> Corroborated by FundingUniverse, an independent business-history reference, beyond the company's own materials. <a href="https://www.fundinguniverse.com/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Nick Tacony (1946); now led by Kristi Tacony Humes.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Phone 800-444-7774.</div>
+      <div class="alt-sources">Sources: <a href="https://www.fundinguniverse.com/">fundinguniverse.com</a> (2026-06-25), <a href="https://www.simplicityvac.com/">simplicityvac.com</a> (2026-06-25)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">MetroVac (Metropolitan Vacuum Cleaner Co., Inc.)</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Shark Rocket Vacuum, under $100.</div></div>
+        <div class="compare-col"><div class="compare-label">MetroVac</div><div>Cordless handheld vacuum line built in a 60,000 sq ft New Jersey facility. <strong>Caveat:</strong> the cordless line is handheld-only, not a full stick vacuum like Shark Rocket.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 1939 by Israel and Pearl Stern (capitalized by Hyman Gulker) in Oakland, NJ; moved to a 60,000 sq ft facility in 2013; 3rd-generation family-owned (grandson Kenneth Stern joined 1974).</div>
+      <div class="alt-section"><strong>American-ness:</strong> Corroborated by an NJBIZ business-news profile, beyond the company's own materials. <a href="https://njbiz.com/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Israel and Pearl Stern (1939).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Phone 800-822-1602.</div>
+      <div class="alt-sources">Sources: <a href="https://njbiz.com/">njbiz.com</a> (2026-06-25), <a href="https://www.metrovacworld.com/">metrovacworld.com</a> (2026-06-25)</div>
+    </div>
+  </div>
+</div>
+  </div>
+
+  <!-- 6. Category chart -->
+  <div class="panel chart-wrap">
+    <h2>VERIFIED Alternatives by Category</h2>
+    <svg viewBox="0 0 700 340" width="100%" height="340">
+      <path d="M170,170 L170,20 A150,150 0 0 1 315,207 Z" fill="#db2777"/>
+      <path d="M170,170 L315,207 A150,150 0 0 1 151,319 Z" fill="#16a34a"/>
+      <path d="M170,170 L151,319 A150,150 0 0 1 27,216 Z" fill="#ea580c"/>
+      <path d="M170,170 L27,216 A150,150 0 0 1 34,106 Z" fill="#65a30d"/>
+      <path d="M170,170 L34,106 A150,150 0 0 1 67,61 Z" fill="#475569"/>
+      <path d="M170,170 L67,61 A150,150 0 0 1 115,31 Z" fill="#7c3aed"/>
+      <path d="M170,170 L115,31 A150,150 0 0 1 170,20 Z" fill="#92400e"/>
+      <rect x="370" y="14" width="14" height="14" fill="#db2777"/>
+      <text x="392" y="25" font-size="13" fill="#1e293b">Beauty &amp; Personal Care &mdash; 5 (29%)</text>
+      <rect x="370" y="42" width="14" height="14" fill="#16a34a"/>
+      <text x="392" y="53" font-size="13" fill="#1e293b">Home &amp; Kitchen &mdash; 4 (23%)</text>
+      <rect x="370" y="70" width="14" height="14" fill="#ea580c"/>
+      <text x="392" y="81" font-size="13" fill="#1e293b">Sports &amp; Outdoors &mdash; 3 (18%)</text>
+      <rect x="370" y="98" width="14" height="14" fill="#65a30d"/>
+      <text x="392" y="109" font-size="13" fill="#1e293b">Grocery &mdash; 2 (12%)</text>
+      <rect x="370" y="126" width="14" height="14" fill="#475569"/>
+      <text x="392" y="137" font-size="13" fill="#1e293b">Tools &amp; Home Improvement &mdash; 1 (6%)</text>
+      <rect x="370" y="154" width="14" height="14" fill="#7c3aed"/>
+      <text x="392" y="165" font-size="13" fill="#1e293b">Apparel &mdash; 1 (6%)</text>
+      <rect x="370" y="182" width="14" height="14" fill="#92400e"/>
+      <text x="392" y="193" font-size="13" fill="#1e293b">Pet Supplies &mdash; 1 (6%)</text>
+    </svg>
+  </div>
+
+  <!-- Most Promising bar chart -->
+  <div class="panel chart-wrap">
+    <h2>Most Promising Alternatives (Score)</h2>
+    <svg viewBox="0 0 700 390" width="100%" height="390">
+      <rect x="280" y="8" width="270" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="19" font-size="13" fill="#1e293b">Austin Air Systems (vs. Levoit Air Purifier)</text>
+      <text x="558" y="19" font-size="13" fill="#1e293b">6</text>
+      <rect x="280" y="42" width="270" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="53" font-size="13" fill="#1e293b">Harvest &amp; Mill (vs. ANRABESS Tops &amp; Jumpsuits)</text>
+      <text x="558" y="53" font-size="13" fill="#1e293b">6</text>
+      <rect x="280" y="76" width="225" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="87" font-size="13" fill="#1e293b">California Baby (vs. EltaMD Sunscreen)</text>
+      <text x="513" y="87" font-size="13" fill="#1e293b">5</text>
+      <rect x="280" y="110" width="225" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="121" font-size="13" fill="#1e293b">Cacao &amp; Cardamom Chocolatier (vs. Pistachio Chocolate Bars)</text>
+      <text x="513" y="121" font-size="13" fill="#1e293b">5</text>
+      <rect x="280" y="144" width="225" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="155" font-size="13" fill="#1e293b">West Paw (vs. PupGum Dental Chews)</text>
+      <text x="513" y="155" font-size="13" fill="#1e293b">5</text>
+      <rect x="280" y="178" width="225" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="189" font-size="13" fill="#1e293b">Mad Hippie (vs. Beauty of Joseon)</text>
+      <text x="513" y="189" font-size="13" fill="#1e293b">5</text>
+      <rect x="280" y="212" width="225" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="223" font-size="13" fill="#1e293b">Naples Soap Company (vs. Tree Hut Sugar Scrub)</text>
+      <text x="513" y="223" font-size="13" fill="#1e293b">5</text>
+      <rect x="280" y="246" width="225" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="257" font-size="13" fill="#1e293b">Simplicity Freedom (vs. Shark Rocket Vacuum)</text>
+      <text x="513" y="257" font-size="13" fill="#1e293b">5</text>
+      <rect x="280" y="280" width="135" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="291" font-size="13" fill="#1e293b">Mean Green Products (vs. EGO Mower)</text>
+      <text x="423" y="291" font-size="13" fill="#1e293b">3</text>
+      <rect x="280" y="314" width="135" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="325" font-size="13" fill="#1e293b">Bison Coolers (vs. Coleman Cooler)</text>
+      <text x="423" y="325" font-size="13" fill="#1e293b">3</text>
+      <rect x="280" y="348" width="135" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="359" font-size="13" fill="#1e293b">LifetimeVibe (vs. Vibration Platform)</text>
+      <text x="423" y="359" font-size="13" fill="#1e293b">3</text>
+    </svg>
+  </div>
+
+  <!-- 7. New entrants spotlight -->
+  <div class="panel spotlight">
+    <h2>New Entrants Spotlight (youngest founded companies this run)</h2>
+    <ul>
+      <li><strong>SoyKitty</strong> (founded 2022, alternative to PrettyLitter) &mdash; LOW-CONFIDENCE: manufacturing-location claim comes only from the company's own positioning; its Dover, DE address appears to be a registered-agent address, not a confirmed factory location.</li>
+      <li><strong>Mighty Audio</strong> (founded 2016, alternative to Toniebox 2 Audio Player Bundles) &mdash; LOW-CONFIDENCE: verifiably US-owned/headquartered in Venice, CA, but devices are manufactured in Taiwan, not the USA.</li>
+      <li><strong>Maluna Coolers</strong> (founded 2016, alternative to Coleman Snap 'N Go Collapsible Cooler) &mdash; VERIFIED domestic manufacturing in Baxter, MN, corroborated by its own Kickstarter campaign record plus independent local/trade press.</li>
+      <li><strong>Henn&eacute; Organics</strong> (founded 2015, alternative to Beauty of Joseon) &mdash; LOW-CONFIDENCE: "Made With Love in USA" and organic/cruelty-free claims are sourced only from the company's own site; no independent registry check was performed.</li>
+      <li><strong>Cacao &amp; Cardamom Chocolatier</strong> (founded 2014, alternative to Viral Dubai-Style Pistachio Chocolate Bars) &mdash; VERIFIED Houston, TX production, corroborated by Yelp, USA Today, and Entrepreneur coverage independent of the company's own materials.</li>
+    </ul>
+  </div>
+
+  <!-- 8. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology</h2>
+    <p><strong>Input:</strong> this run is based entirely on the sibling Competitor Research Agent's June 25, 2026 report at <code>../Competitor Research Agent/docs/June25_2026/index.html</code>. 17 products were parsed; 3 Electronics products were hard-excluded per project rules, leaving 14 products across 9 categories carried forward. (Per the no-fabrication rule, the specific names of the 3 excluded Electronics products are not repeated here, since they were not retained in the working notes for this run &mdash; only their category and count.)</p>
+    <p><strong>Display order:</strong> NEW products before RECURRING, then the $25&ndash;$100 price band before outside-band/unconfirmed, then higher repurchase-interest before lower, per the workflow's documented sort precedence. The price band governs display order only, not inclusion &mdash; all 14 products were researched regardless of price. Three products in this run's data fall confirmed within the $25&ndash;$100 band (Levoit Core 300-P at $80, ANRABESS Tops &amp; Jumpsuits at ~$31.85, and Shark Rocket Vacuum at its under-$100 sale price); the rest were outside the band or had price not confirmed in the source report.</p>
+    <p><strong>Alternative research:</strong> seven general-purpose research agents ran in parallel (two products each), using web search and web fetch only, with a soft cap of 2&ndash;3 alternatives per product, documenting per product where the lead trail dried up before the cap. A business's own "Made in USA"/American-owned claim was never counted alone &mdash; VERIFIED required a second independent source (certification body, independent press naming the manufacturing location, public business registry, or government record); a single-source claim is labeled LOW-CONFIDENCE and was never silently upgraded or dropped. Of 29 alternatives found across the 14 products, 17 are VERIFIED and 12 are LOW-CONFIDENCE.</p>
+    <p><strong>Corrections applied:</strong> five internal inconsistencies surfaced during this run's quality pass between a research agent's own rationale prose and the alternative cards it actually produced, and were corrected before publishing using the cards as ground truth: PupGum's rationale claimed "two" alternatives found despite three cards being delivered (West Paw, DOGDELI, Great Dog Co.) &mdash; corrected to 3; Toniebox's rationale claimed "two alternatives found" despite only one card (Mighty Audio) being delivered &mdash; corrected to 1; the EGO Mower rationale described American Lawn Mower Co. as "explicitly excluded" when it is in fact included as a LOW-CONFIDENCE card &mdash; corrected to reflect inclusion; the Levoit rationale claimed all three alternatives (Austin Air, LakeAir, EnviroKlenz) were "independently verified," when LakeAir's own card is tagged LOW-CONFIDENCE &mdash; corrected to 2 VERIFIED / 1 LOW-CONFIDENCE; and the Tree Hut rationale described Buff City Soap as "evaluated but excluded," when it is in fact included as a LOW-CONFIDENCE card &mdash; corrected to reflect inclusion.</p>
+    <p><strong>Notable exclusions:</strong> checked and ruled out for foreign ownership or contradicting manufacturing evidence, not listed as alternatives above: Yoto and Lunii/VoxBlock (Toniebox alternatives, UK/France-based); Husqvarna cordless walk-behind mowers (Swedish-owned despite US factories); Badger sunscreen (partial Canadian manufacturing); Genius Litter (inconsistent HQ location across sources, undisclosed "partner facilities"); Tidy Cats, Fresh Step, Purina DentaLife, Kirkland (large corporate-owned brands rather than independent American businesses); Oreck (now owned by Hong Kong-based Techtronic Industries); Infant Optics (contradicted by an independent made-in-china.com manufacturer listing); Igloo and Coleman's own domestic cooler line (direct incumbents/competitors rather than independent alternatives).</p>
+    <p><strong>Category-wide findings:</strong> Beauty &amp; Personal Care produced the deepest verified domestic supply found this run (5 VERIFIED across EltaMD, Beauty of Joseon, and Tree Hut alternatives combined), followed by Home &amp; Kitchen (4 VERIFIED across Levoit and Shark Rocket) and Sports &amp; Outdoors (3 VERIFIED across Coleman Cooler and Vibration Platform). By contrast, Toys &amp; Games and Baby were the thinnest: Toniebox's only candidate (Mighty Audio) is American-owned but Taiwan-manufactured, and Owlet's only candidate (Nanit) has a confirmed US headquarters but undisclosed hardware manufacturing location &mdash; neither category cleared a single VERIFIED alternative. PrettyLitter's single alternative (SoyKitty) carries an explicit functional-mismatch caveat: it does not replicate the Amazon product's core pH/health-monitoring feature, so it should be read as a sustainability-positioning alternative, not a feature-equivalent one.</p>
+    <p><strong>Distinct source URLs:</strong> 210 source links appear across the cards above, citing 140 distinct source URLs, spanning company sites, independent press, certification bodies (B Corp/B Lab), Better Business Bureau profiles, Kickstarter campaign records, government records (e.g., the 1994 Congressional Record), and business-data aggregators (Buzzfile, Crunchbase) for facts not otherwise corroborated by press.</p>
+  </div>
+
+  <!-- 9. Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span><a href="../June23_2026/index.html">&larr; Previous report (June 23, 2026)</a></span>
+  </div>
+
+</div>
+</body>
+</html>
