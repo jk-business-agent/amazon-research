@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Top Sellers — June 25, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  /* 1. Header band */
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  /* 2. Executive summary */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  /* 3. Quick stats */
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 150px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  /* 4. Top movers grid */
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
+  .card-meta { font-size: 12.5px; color: var(--muted); }
+  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .card-sources a { color: #2563eb; text-decoration: none; }
+
+  /* 5. Category chart */
+  .chart-wrap { padding: 10px 6px; }
+
+  /* 6. New entrants spotlight */
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+  .spotlight ul { margin: 0; padding-left: 20px; }
+  .spotlight li { margin-bottom: 8px; font-size: 13.5px; line-height: 1.5; color: #1e293b; }
+
+  /* 7. Methodology footer */
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+  .methodology p { margin: 0 0 10px; }
+
+  /* 8. Footer nav */
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <div class="date">June 25, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 27 sources checked</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">Today is day three of Amazon Prime Day 2026 (June 23&ndash;26), and the macro story is genuinely notable for an economic-growth audience: Adobe Analytics reported $8.3B in first-day U.S. online spend (+5.3% year over year) and is forecasting $26.3B across the full four days (+9% YoY), with Electronics and Appliances seeing the sharpest single-day category growth (+105% and +95% respectively) and Baby gear close behind (stroller sales +220%, car seats +140%) &mdash; both patterns line up with what surfaced independently in today's product research. The most interesting NEW entrant is Coleman's Snap 'N Go, billed as the world's first collapsible hard-sided cooler; it launched in March, has gone viral on social video, and has reportedly already taken Amazon's No. 1 new-release spot among camping coolers. Pet care produced two genuinely novel stories rather than just discount roundups: PupGum, a "first-of-its-kind" postbiotic dog-dental chew, and PrettyLitter, a health-monitoring cat litter that changes color to flag possible UTIs &mdash; both are riding real product-innovation narratives, not just Prime Day markdowns. Beauty &amp; Personal Care continues to be a K-beauty story (Beauty of Joseon, over 40% off and still described as TikTok-viral) alongside an interesting old-economy comeback: a Dubai-style pistachio chocolate trend that's pulled in mainstream players like Godiva. Three products carry over from prior reports &mdash; Apple Watch Series 11, Shark Rocket Vacuum, and ANRABESS women's tops &mdash; all still independently corroborated today rather than just assumed to be repeating. <strong>Methodology note:</strong> every WebFetch attempt today failed with a 403, including on non-Amazon control URLs (Wikipedia, Variety, Retail Dive), indicating a tool-level fetch outage for this session rather than Amazon-specific blocking; this report relies entirely on WebSearch-surfaced snippets rather than directly opened, sentence-verified pages, and specific numbers were included only where they appeared as clear, consistent figures across that search-result text &mdash; see the Methodology section below for what was deliberately left out as a result.</div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">17</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="num">14</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">3</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">17</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">0</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">11</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Top movers grid -->
+  <h2 class="section-title">Top Movers</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Coleman Snap 'N Go Collapsible Cooler</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Marketed as the world's first collapsible hard-sided cooler, this Coleman launch (March 2026) collapses to roughly a third of its size in under 10 seconds while still claiming up to 64 hours of ice retention. It went viral on social video for its origami-like folding mechanism and is independently reported to have taken Amazon's No. 1 new-release spot among camping coolers.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth &mdash; it's a newly-launched product still early in its sales ramp, with summer outdoor/camping season ahead and viral demand still building (qualitative estimate).</div>
+      <div class="card-meta">From $199.99 (35-qt size)</div>
+      <div class="card-sources">Sources: <a href="https://www.thestreet.com/shopping/colemans-snap-n-go-cooler-amazon-prime-day">thestreet.com</a> (2026-06-25), <a href="https://www.tasteofhome.com/article/coleman-collapsible-cooler/">tasteofhome.com</a> (2026-06-25)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Soundcore Wireless Earbuds (Aeroclip / Sleep A30 / P20i)</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Soundcore's earbud lineup is being positioned as a budget AirPods alternative during Prime Day, with the Sleep A30 (a 2026 Innovation Award winner aimed at sleep tracking) and the open-ear Aeroclip both getting steep markdowns. The brand's Liberty 5 Pro also picked up a Guinness World Records certification in April 2026 for speech-quality performance in true wireless earbuds, reinforcing the "credible AirPods alternative" narrative beyond just a discount.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth &mdash; celebrity/influencer-backed buzz plus a real third-party performance certification suggest durable demand beyond the Prime Day window itself (qualitative estimate).</div>
+      <div class="card-meta">Aeroclip ~$99.99 (41% off); other models price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.cnn.com/cnn-underscored/deals/soundcore-sleep-a30-earbuds-amazon-prime-day-deal-2026-06-23">cnn.com</a> (2026-06-25), <a href="https://www.nationalworld.com/recommended/soundcore-earbuds-loved-by-stacey-solomon-now-almost-half-price-on-amazon-prime-day-aff-8754932">nationalworld.com</a> (2026-06-25)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Blink Outdoor 4 Wireless Security Camera</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Blink's camera lineup is getting some of the steepest discounts of Prime Day 2026 &mdash; standalone units and multi-camera/doorbell bundles are both being discounted well past 60% off, with one bundle reported as low as 81% off list price. Coverage repeatedly notes that Blink hardware "usually sells out fast" during major Amazon sales events.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip &mdash; the depth of discounting points to event-driven demand pull-forward that typically tapers once Prime Day pricing reverts after June 26 (qualitative estimate).</div>
+      <div class="card-meta">$37.99 standalone; bundles from ~$56&ndash;104 depending on configuration</div>
+      <div class="card-sources">Sources: <a href="https://www.safehome.org/home-security-cameras/blink/prime-day/">safehome.org</a> (2026-06-25), <a href="https://www.thestreet.com/deals/blink-outdoor-4-camera-and-battery-doorbell-bundle-amazon-prime-day-2026">thestreet.com</a> (2026-06-25)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Owlet Dream Duo (Gen 3) Smart Baby Monitor</h3>
+        <span class="pill" style="background:#e11d48">Baby</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Owlet's flagship bundle &mdash; a 2K HD camera paired with an FDA-cleared wearable sleep-monitoring sock &mdash; is discounted roughly a third off for Prime Day. Owlet is independently cited as the #1 baby-monitor brand in the U.S. per Circana consumer-electronics data from March 2026, and today's Adobe Analytics figures show baby-gear categories (strollers, car seats) posting some of the single biggest year-over-year growth rates of any category on Prime Day's opening day.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; Owlet's category leadership predates this sale, and smart/connected baby monitors have been a consistently growing sub-segment rather than a one-week spike (qualitative estimate).</div>
+      <div class="card-meta">$256.49 Dream Duo bundle (down from $379.99); Dream Sock alone $189.99 (down from $299.99)</div>
+      <div class="card-sources">Sources: <a href="https://www.thebump.com/a/amazon-prime-day-deals">thebump.com</a> (2026-06-25), <a href="https://www.today.com/shop/amazon-prime-day-baby-deals-2026-rcna348674">today.com</a> (2026-06-25)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">PupGum Dog Dental Chews</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">PupGum is described as a "first-of-its-kind" chew using a postbiotic formula plus flax seed and a ridged shape to mechanically and chemically address dog breath and plaque, developed over two years with veterinary input. It's currently featured in Prime Day pet-deal coverage and independently appears on best-seller roundups of dog dental treats &mdash; a genuine product-innovation story rather than a repackaged commodity item.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth &mdash; pet dental care is a growing sub-category and this is a newer entrant with a specific clinical claim, which tends to support continued ramp beyond a single sale window (qualitative estimate).</div>
+      <div class="card-meta">price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://iheartdogs.com/top-dog-treats-that-own-amazons-best-seller-list/">iheartdogs.com</a> (2026-06-25), <a href="https://abcnews.com/GMA/Shop/amazon-prime-day-2026-pet-deals/story?id=133974219">abcnews.com</a> (2026-06-25)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">PrettyLitter Health-Monitoring Cat Litter</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">PrettyLitter is a silica-crystal litter that changes color based on a cat's urine pH, giving early warning signs of issues like UTIs, bladder crystals, or metabolic problems. It's featured in today's Prime Day pet-deals coverage and independently holds strong ratings (4.9/5 on Catster) from reviewers who specifically credit its health-monitoring function rather than just odor control.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; it's a subscription-based product with a functional health-monitoring hook rather than a hype-driven item, which tends to produce durable repeat-purchase demand (qualitative estimate).</div>
+      <div class="card-meta">price not confirmed (subscription-based)</div>
+      <div class="card-sources">Sources: <a href="https://abcnews.com/GMA/Shop/amazon-prime-day-2026-pet-deals/story?id=133974219">abcnews.com</a> (2026-06-25), <a href="https://www.catster.com/lifestyle/pretty-litter-cat-litter-review/">catster.com</a> (2026-06-25)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Beauty of Joseon (Double Cleansing Duo / Revive Eye Serum)</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">This cult-favorite Korean skincare brand is over 40% off for Prime Day and is described by multiple beauty outlets as among the K-beauty products customers have specifically been "eyeing on TikTok." The Double Cleansing Duo and Revive Eye Serum (formulated with retinal, niacinamide, and ginseng) are called out as the standout deals.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth &mdash; K-beauty as a category has shown sustained momentum on Amazon (consistent with Medicube's appearance in prior reports), and viral TikTok attention adds an additional near-term tailwind (qualitative estimate).</div>
+      <div class="card-meta">Over 40% off; price not confirmed for individual SKUs</div>
+      <div class="card-sources">Sources: <a href="https://www.sheknows.com/living/articles/1235028793/best-beauty-of-joseon-june-prime-day-deals-2026/">sheknows.com</a> (2026-06-25), <a href="https://www.marieclaire.com/beauty/skincare/best-amazon-prime-day-korean-beauty-deals/">marieclaire.com</a> (2026-06-25)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Viral Dubai-Style Pistachio Chocolate Bars</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The pistachio-and-kataifi "Dubai chocolate" trend &mdash; which went viral via a 2024 TikTok video that drew over 126 million views &mdash; is still expanding on Amazon, with multiple SKUs explicitly using "Viral" in their product titles and mainstream players like Godiva now entering with their own limited-edition pistachio/kadayif bars. Market-trend coverage cites a 137% surge in "pistachio chocolate filling" search volume in 2025. One smaller player in the space, Chocxo, has temporarily paused its own Dubai-style pistachio cup online due to summer shipping-heat concerns &mdash; a supply-side wrinkle rather than a demand problem.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth &mdash; the trend keeps pulling in new, larger entrants (Godiva) rather than fading, which is typically a sign of a maturing rather than peaking trend (qualitative estimate).</div>
+      <div class="card-meta">Godiva bar $12.99; other branded SKUs vary</div>
+      <div class="card-sources">Sources: <a href="https://parade.com/food/godiva-pistachio-kadayif-chocolate-bars-stores-spring-2026">parade.com</a> (2026-06-25), <a href="https://www.accio.com/business/chocolate_dubai_trend">accio.com</a> (2026-06-25)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Toniebox 2 Audio Player Bundles</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Toniebox 2, a screen-free audio player for kids ages one and up, is up to 41% off in character-themed bundles (Disney Princess, Pixar, Winnie the Pooh) through the end of Prime Day. Multiple Prime Day deal roundups flag these bundles as at their lowest price ever, and the product appears consistently across independent "best Prime Day deals" coverage rather than a single outlet's pick.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau &mdash; demand here looks closely tied to gifting occasions and sale-driven discount timing rather than an independent structural trend (qualitative estimate).</div>
+      <div class="card-meta">Bundles up to 41% off; price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.sheknows.com/parenting/articles/1235029022/amazon-prime-day-toniebox-2-deals-6-2026/">sheknows.com</a> (2026-06-25), <a href="https://www.nbcnews.com/select/shopping/amazon-prime-day-2026-lowest-prices-rcna351201">nbcnews.com</a> (2026-06-25)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Levoit Core 300-P HEPA Air Purifier</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Core 300-P is described as the No. 1 best-selling HEPA air purifier on Amazon, with over 107,000 reviews averaging 4.7 stars. It's down to $80 for Prime Day (from a $99 list price), which coverage describes as its lowest price of the year, and Levoit overall is called the best-selling air purifier brand on Amazon.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; the review volume and "best-selling for a reason" framing point to an established, multi-month bestseller rather than a sale-only spike (qualitative estimate).</div>
+      <div class="card-meta">$80 (down from $99)</div>
+      <div class="card-sources">Sources: <a href="https://gizmodo.com/107000-reviews-and-4-7-stars-this-levoit-hepa-air-purifier-drops-to-its-prime-day-low-2000774927">gizmodo.com</a> (2026-06-25), <a href="https://housefresh.com/air-purifier-amazon-prime-day/">housefresh.com</a> (2026-06-25)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Tree Hut Shea Sugar Body Scrub</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">A June 2026 trend report specifically cites this scrub at roughly $9 with a 4.8-star average across more than 160,000 Amazon ratings, and notes it won a Shop TODAY Beauty Award for best budget body scrub. Deal-tracking sites independently and repeatedly flag Tree Hut's sugar scrubs as a recurring discount target, consistent with sustained high sales volume rather than a one-off promotion (note: those sites cite lower per-unit prices on select SKUs/sales than the $9 figure above, which is specific to the cited trend report).</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; "America's #1 body scrub brand" positioning and consistently high review volume point to an established bestseller (qualitative estimate).</div>
+      <div class="card-meta">~$9 per Today.com's June 2026 trend report; other sources cite lower prices on select sale SKUs</div>
+      <div class="card-sources">Sources: <a href="https://www.today.com/shop/june-trend-report-2026-rcna348525">today.com</a> (2026-06-25), <a href="https://hip2save.com/deals/tree-hut-sugar-scrub/">hip2save.com</a> (2026-06-25)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">EltaMD UV Daily Tinted Sunscreen SPF 50</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Multiple beauty-press outlets independently describe the UV Daily Tinted as the top-selling tinted sunscreen on Amazon, with the broader EltaMD line (UV Clear, UV Stick, AM Restore, UV Sheer) at 20% off through June 26. The brand carries thousands of near-perfect ratings and is repeatedly singled out across separate Prime Day beauty roundups rather than appearing in just one list.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip &mdash; sunscreen demand is structurally tied to the summer season and typically falls off in the fall regardless of this week's discount (qualitative estimate).</div>
+      <div class="card-meta">20% off; price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://wwd.com/shop/shop-beauty/best-amazon-prime-day-eltamd-deals-sunscreen-beauty-2026-1239026260/">wwd.com</a> (2026-06-25), <a href="https://www.sheknows.com/living/articles/1235028526/eltamd-amazon-prime-day-deals/">sheknows.com</a> (2026-06-25)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Vibration Platform Machines (led by LifePro Waver Mini)</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Vibration plates are described as "having a moment," with Google search interest climbing steadily and the devices spreading across social feeds. Amazon's own Vibration Platform Machines bestseller list is populated by multiple competing brands (LifePro, MERACH, AXV, SEDOZIK and others), and both Today.com and Consumer Reports have published 2026 buying guides specifically because of the category's rising popularity.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth &mdash; rising search interest plus multiple competing brands entering the category points to genuine category expansion rather than a single product's spike (qualitative estimate).</div>
+      <div class="card-meta">price not confirmed (varies by brand/model)</div>
+      <div class="card-sources">Sources: <a href="https://www.today.com/shop/best-vibration-plates-rcna209722">today.com</a> (2026-06-25), <a href="https://www.consumerreports.org/health/exercise-fitness/best-vibration-plates-a3619829702/">consumerreports.org</a> (2026-06-25)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">EGO POWER+ Cordless Walk-Behind Lawn Mower</h3>
+        <span class="pill" style="background:#475569">Tools &amp; Home Improvement</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">EGO's cordless electric mower is on sale at a rare ~44% off for Prime Day, and one outlet describes it as Amazon's No. 1 best-selling walk-behind lawn mower. A second outlet independently corroborates EGO outdoor power tools broadly being marked down to clearance-level pricing for the event. Note: sources disagree on the exact model number (one cites "LM2122SP," another implies "LM2142SP") &mdash; reported here generically rather than guessing which is correct.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip &mdash; lawn equipment demand is tightly tied to the summer mowing season and to this specific sale window (qualitative estimate).</div>
+      <div class="card-meta">~44% off; price not confirmed (model number reported inconsistently across sources)</div>
+      <div class="card-sources">Sources: <a href="https://www.mensjournal.com/shopping/ego-power-plus-lawn-mower-lm2122sp-2-amazon-prime-day-2026">mensjournal.com</a> (2026-06-25), <a href="https://www.bobvila.com/reviews/prime-day-ego-deals-june-2026/">bobvila.com</a> (2026-06-25)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple Watch Series 11</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (3/3 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Continuing the pattern flagged in both prior reports, the Series 11 is independently confirmed today at its lowest price ever for the 42mm GPS model ($279, a $120 discount), with larger/cellular configurations priced up from there. Coverage from two separate outlets confirms this is a record-low price specifically tied to the live Prime Day event.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; three consecutive reports (spanning before and during Prime Day) show sustained demand and discounting rather than a single-day spike (qualitative estimate).</div>
+      <div class="card-meta">$279 (42mm GPS, down $120); $309 (46mm GPS); cellular adds $100</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com/select/shopping/apple-watch-series-11-deal-of-the-day-2026-rcna350602">nbcnews.com</a> (2026-06-25), <a href="https://www.macworld.com/article/2386629/best-apple-watch-prime-day-deals-2026-june-25.html">macworld.com</a> (2026-06-25)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Shark Rocket Vacuum</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/3 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The corded Shark Rocket HV301 (11,000+ reviews, Amazon's Choice) is again at roughly 50% off and is independently described as a multi-year consistent bestseller in the stick-vacuum category, with one source citing over 10,000 units sold in the past month alone. Unlike the June 22 report, today's standing is corroborated by a second independent outlet rather than resting on a single source.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; described as a "consistent bestseller for years," which argues against this being a pure event-driven spike despite the current Prime Day discount (qualitative estimate).</div>
+      <div class="card-meta">Under $100 during Prime Day (~50% off)</div>
+      <div class="card-sources">Sources: <a href="https://misec.net/best-amazon-prime-day-shark-vacuum-deals-2026/">misec.net</a> (2026-06-25), <a href="https://www.nbcnews.com/select/shopping/amazon-prime-day-2026-vacuum-deals-rcna349079">nbcnews.com</a> (2026-06-25)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">ANRABESS Women's Tops &amp; Jumpsuits</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/3 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">ANRABESS continues to show up among Amazon's top apparel sellers, with one seller-analytics tracker citing a 4.9-star average and a leading sales share within its jumpsuit listings specifically, corroborated by the brand's own "Best Seller" storefront designation on Amazon. This is the second time in three reports the brand has surfaced independently.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; repeat independent appearance suggests sustained rather than one-off demand for the brand's loungewear/vacation-wear positioning (qualitative estimate).</div>
+      <div class="card-meta">price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.cherrypicksreviews.com/sellers/amazon/anrabess">cherrypicksreviews.com</a> (2026-06-25), <a href="https://www.amazon.com/stores/ANRABESS/BestSeller/page/B43E7DD9-7C92-4640-947D-367F7588BFBD">amazon.com</a> (2026-06-25)</div>
+    </div>
+
+  </div>
+
+  <!-- 5. Category breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="100%" height="384" viewBox="0 0 700 384">
+      <text x="0" y="22" font-size="13" fill="#1e293b">Electronics</text>
+      <rect x="160" y="8" width="300" height="18" rx="4" fill="#2563eb"/>
+      <text x="468" y="22" font-size="12" fill="#475569">3</text>
+
+      <text x="0" y="56" font-size="13" fill="#1e293b">Sports &amp; Outdoors</text>
+      <rect x="160" y="42" width="200" height="18" rx="4" fill="#ea580c"/>
+      <text x="368" y="56" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="90" font-size="13" fill="#1e293b">Home &amp; Kitchen</text>
+      <rect x="160" y="76" width="200" height="18" rx="4" fill="#16a34a"/>
+      <text x="368" y="90" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="124" font-size="13" fill="#1e293b">Beauty &amp; Personal Care</text>
+      <rect x="160" y="110" width="200" height="18" rx="4" fill="#db2777"/>
+      <text x="368" y="124" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="158" font-size="13" fill="#1e293b">Pet Supplies</text>
+      <rect x="160" y="144" width="200" height="18" rx="4" fill="#92400e"/>
+      <text x="368" y="158" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="192" font-size="13" fill="#1e293b">Health &amp; Household</text>
+      <rect x="160" y="178" width="100" height="18" rx="4" fill="#0d9488"/>
+      <text x="268" y="192" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="226" font-size="13" fill="#1e293b">Toys &amp; Games</text>
+      <rect x="160" y="212" width="100" height="18" rx="4" fill="#f59e0b"/>
+      <text x="268" y="226" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="260" font-size="13" fill="#1e293b">Grocery</text>
+      <rect x="160" y="246" width="100" height="18" rx="4" fill="#65a30d"/>
+      <text x="268" y="260" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="294" font-size="13" fill="#1e293b">Apparel</text>
+      <rect x="160" y="280" width="100" height="18" rx="4" fill="#7c3aed"/>
+      <text x="268" y="294" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="328" font-size="13" fill="#1e293b">Tools &amp; Home Improvement</text>
+      <rect x="160" y="314" width="100" height="18" rx="4" fill="#475569"/>
+      <text x="268" y="328" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="362" font-size="13" fill="#1e293b">Baby</text>
+      <rect x="160" y="348" width="100" height="18" rx="4" fill="#e11d48"/>
+      <text x="268" y="362" font-size="12" fill="#475569">1</text>
+    </svg>
+  </div>
+
+  <!-- 6. New entrants spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <ul>
+      <li><strong>Coleman Snap 'N Go Collapsible Cooler</strong> &mdash; the "world's first" collapsible hard-sided cooler, viral on social video and reportedly Amazon's #1 new release among camping coolers.</li>
+      <li><strong>Soundcore Wireless Earbuds</strong> &mdash; a budget AirPods alternative lineup with a genuine Guinness World Records speech-quality certification behind it.</li>
+      <li><strong>Blink Outdoor 4 Camera</strong> &mdash; some of Prime Day's steepest discounts (up to 81% off in bundles), historically a fast-sellout item.</li>
+      <li><strong>Owlet Dream Duo Baby Monitor</strong> &mdash; from the #1 U.S. baby-monitor brand, discounted as Adobe data shows baby-gear categories posting Prime Day's biggest single-day growth rates.</li>
+      <li><strong>PupGum Dog Dental Chews</strong> &mdash; a genuinely novel "first-of-its-kind" postbiotic dental chew, not just a discounted commodity treat.</li>
+      <li><strong>PrettyLitter</strong> &mdash; color-changing litter that flags possible cat health issues like UTIs; a function-driven (not hype-driven) bestseller.</li>
+      <li><strong>Beauty of Joseon</strong> &mdash; cult K-beauty brand, over 40% off, specifically called out as TikTok-viral by beauty press.</li>
+      <li><strong>Viral Dubai-Style Pistachio Chocolate</strong> &mdash; a 2024 TikTok-born trend still expanding, now pulling in mainstream entrants like Godiva.</li>
+      <li><strong>Toniebox 2</strong> &mdash; screen-free kids' audio player, bundles at their lowest price ever this Prime Day.</li>
+      <li><strong>Levoit Core 300-P Air Purifier</strong> &mdash; Amazon's best-selling HEPA purifier (107,000+ reviews), at its lowest price of the year.</li>
+      <li><strong>Tree Hut Shea Sugar Body Scrub</strong> &mdash; a long-running budget bestseller (160,000+ ratings per one trend report) rather than a new launch, but newly surfaced in this report's research.</li>
+      <li><strong>EltaMD UV Daily Tinted Sunscreen</strong> &mdash; described across multiple beauty outlets as Amazon's top-selling tinted sunscreen.</li>
+      <li><strong>Vibration Platform Machines</strong> &mdash; a genuinely growing wellness-equipment category, not tied to a single brand or sale.</li>
+      <li><strong>EGO POWER+ Cordless Mower</strong> &mdash; ~44% off and reported as Amazon's top-selling walk-behind mower by one outlet (model number unconfirmed across sources).</li>
+    </ul>
+  </div>
+
+  <!-- 7. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p><strong>Source types checked:</strong> Amazon's own Movers &amp; Shakers, Best-Sellers/zgbs, and brand storefront pages (attempted directly first &mdash; see degraded-mode note below, then via WebSearch-surfaced snippets); Prime Day 2026 deal coverage from major retail-press outlets (NBC News/Select, CNN Underscored, TechRadar, Macworld, 9to5Mac, GMA/ABC News, TheBump, SheKnows, Marie Claire, WWD); independent product-review and deal-tracking sites (Catster, HouseFresh, Hip2Save, Gizmodo, iHeartDogs, Misec, CherryPicks Reviews, Consumer Reports); and trend/market coverage for cross-category context (Accio, Parade, Chain Store Age, Drug Store News, on Adobe Analytics' Prime Day spending data). <strong>Verification rule:</strong> a product is marked VERIFIED only when named independently across at least two distinct source domains (Amazon's own listings count as one of the two); single-domain mentions are marked LOW-CONFIDENCE and never silently upgraded. All 17 shortlisted products cleared two-source verification today &mdash; none required a LOW-CONFIDENCE downgrade, though specific unconfirmed numbers (e.g. exact purchase counts, one product's exact model number) were noted as such within individual cards rather than omitted from the report entirely.</p>
+    <p><strong>Degraded-mode note:</strong> every WebFetch attempt today returned HTTP 403 &mdash; on Amazon pages (Movers &amp; Shakers, Best-Sellers), on major news domains (CNN, NBC, Variety, Retail Dive), and on an unrelated control URL (Wikipedia) &mdash; indicating a tool-level fetch outage for this session rather than Amazon-specific bot-blocking. As a result, no source could be directly opened and sentence-verified today; this report relies entirely on WebSearch-surfaced result text per the workflow's fallback instructions, consistent with the same outage seen in the June 22 report. Specific numbers were included only where they appeared as clear, repeated figures in that search-result text (e.g. the $279 Apple Watch price independently named by two outlets, or the Adobe Analytics $26.3B/$8.3B figures repeated near-verbatim across five independent outlets); anything that appeared in only a vague or single, unattributed mention &mdash; an unconfirmed "Amazon-brand jumpsuit" story, an EltaMD "80,000 purchases" figure that couldn't be pinned to one specific outlet &mdash; was left out rather than risk citing a number that couldn't be checked against real source text.</p>
+    <p><strong>Distinct source domains cited above (27):</strong> cnn.com, nationalworld.com, safehome.org, thestreet.com, thebump.com, today.com, iheartdogs.com, abcnews.com, catster.com, sheknows.com, marieclaire.com, parade.com, accio.com, nbcnews.com, gizmodo.com, housefresh.com, hip2save.com, wwd.com, consumerreports.org, mensjournal.com, bobvila.com, macworld.com, misec.net, cherrypicksreviews.com, amazon.com, chainstoreage.com, drugstorenews.com.</p>
+  </div>
+
+  <!-- 8. Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../June22_2026/">June 22</a></span>
+  </div>
+
+</div>
+</body>
+</html>
