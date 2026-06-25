@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-20",
-  "last_processed_sibling_report": "June17_2026",
+  "last_updated": "2026-06-23",
+  "last_processed_sibling_report": "June22_2026",
   "window_days": 14,
   "products": [
     {
@@ -9,8 +9,8 @@
       "category": "Baby",
       "amazon_price_band": "$59.77 (132 count)",
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
-      "seen_dates": ["2026-06-20"],
+      "last_seen": "2026-06-23",
+      "seen_dates": ["2026-06-20", "2026-06-23"],
       "alternatives_count": 5
     },
     {
@@ -19,9 +19,9 @@
       "category": "Sports & Outdoors",
       "amazon_price_band": "$29.99 (24oz)",
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
-      "seen_dates": ["2026-06-20"],
-      "alternatives_count": 4
+      "last_seen": "2026-06-23",
+      "seen_dates": ["2026-06-20", "2026-06-23"],
+      "alternatives_count": 3
     },
     {
       "key": "medicube-zero-pore-pad-2",
@@ -29,9 +29,119 @@
       "category": "Beauty & Personal Care",
       "amazon_price_band": "$18.90",
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
-      "seen_dates": ["2026-06-20"],
+      "last_seen": "2026-06-23",
+      "seen_dates": ["2026-06-20", "2026-06-23"],
+      "alternatives_count": 4
+    },
+    {
+      "key": "anrabess-womens-henley-vacation-tops",
+      "name": "ANRABESS Women's Henley/Vacation Tops",
+      "category": "Apparel",
+      "amazon_price_band": "~$31.85 (avg)",
+      "first_seen": "2026-06-23",
+      "last_seen": "2026-06-23",
+      "seen_dates": ["2026-06-23"],
+      "alternatives_count": 7
+    },
+    {
+      "key": "shark-rocket-vacuum",
+      "name": "Shark Rocket Vacuum",
+      "category": "Home & Kitchen",
+      "amazon_price_band": "$99 (Prime Day deal price)",
+      "first_seen": "2026-06-23",
+      "last_seen": "2026-06-23",
+      "seen_dates": ["2026-06-23"],
+      "alternatives_count": 4
+    },
+    {
+      "key": "flonase-allergy-relief-nasal-spray",
+      "name": "Flonase Allergy Relief Nasal Spray",
+      "category": "Health & Household",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-23",
+      "last_seen": "2026-06-23",
+      "seen_dates": ["2026-06-23"],
+      "alternatives_count": 5
+    },
+    {
+      "key": "benadryl-liqui-gels",
+      "name": "Benadryl Liqui-Gels",
+      "category": "Health & Household",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-23",
+      "last_seen": "2026-06-23",
+      "seen_dates": ["2026-06-23"],
+      "alternatives_count": 4
+    },
+    {
+      "key": "hero-cosmetics-mighty-patch",
+      "name": "Hero Cosmetics Mighty Patch",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-23",
+      "last_seen": "2026-06-23",
+      "seen_dates": ["2026-06-23"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "premier-protein-shake",
+      "name": "Premier Protein Shake",
+      "category": "Grocery",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-23",
+      "last_seen": "2026-06-23",
+      "seen_dates": ["2026-06-23"],
+      "alternatives_count": 5
+    },
+    {
+      "key": "purina-pro-plan-sensitive-skin-stomach-dry-dog-food",
+      "name": "Purina Pro Plan Sensitive Skin & Stomach Dry Dog Food",
+      "category": "Pet Supplies",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-23",
+      "last_seen": "2026-06-23",
+      "seen_dates": ["2026-06-23"],
       "alternatives_count": 6
+    },
+    {
+      "key": "pickleball-branded-apparel",
+      "name": "Pickleball-branded apparel (shirts/tops)",
+      "category": "Sports & Outdoors",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-23",
+      "last_seen": "2026-06-23",
+      "seen_dates": ["2026-06-23"],
+      "alternatives_count": 6
+    },
+    {
+      "key": "dumpling-squishy-blind-box-toys",
+      "name": "Dumpling Squishy blind-box toys",
+      "category": "Toys & Games",
+      "amazon_price_band": "~$5 retail",
+      "first_seen": "2026-06-23",
+      "last_seen": "2026-06-23",
+      "seen_dates": ["2026-06-23"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "smart-ai-connected-baby-monitors",
+      "name": "Smart/AI-connected baby monitors",
+      "category": "Baby",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-23",
+      "last_seen": "2026-06-23",
+      "seen_dates": ["2026-06-23"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "ring-spotlight-cam-plus",
+      "name": "Ring Spotlight Cam Plus",
+      "category": "Tools & Home Improvement",
+      "amazon_price_band": "$199.99+ (per research)",
+      "first_seen": "2026-06-23",
+      "last_seen": "2026-06-23",
+      "seen_dates": ["2026-06-23"],
+      "alternatives_count": 3
     },
     {
       "key": "mamonde-amazon-launch-line",
@@ -49,9 +159,9 @@
       "category": "Grocery",
       "amazon_price_band": "$20.99 (12-pack)",
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
-      "seen_dates": ["2026-06-20"],
-      "alternatives_count": 6
+      "last_seen": "2026-06-23",
+      "seen_dates": ["2026-06-20", "2026-06-23"],
+      "alternatives_count": 4
     },
     {
       "key": "bounty-quick-size-paper-towels",
@@ -69,9 +179,9 @@
       "category": "Pet Supplies",
       "amazon_price_band": "$21.49-$22.99 (40 lb)",
       "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
-      "seen_dates": ["2026-06-20"],
-      "alternatives_count": 6
+      "last_seen": "2026-06-23",
+      "seen_dates": ["2026-06-20", "2026-06-23"],
+      "alternatives_count": 4
     },
     {
       "key": "amazon-basics-copy-paper",
