@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-22",
+  "last_updated": "2026-06-25",
   "window_days": 14,
   "products": [
     {
@@ -15,8 +15,8 @@
       "name": "Apple Watch Series 11",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-22",
-      "seen_dates": ["2026-06-17", "2026-06-22"]
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-17", "2026-06-22", "2026-06-25"]
     },
     {
       "key": "ring-battery-doorbell",
@@ -219,20 +219,132 @@
       "seen_dates": ["2026-06-22"]
     },
     {
-      "key": "anrabess-henley-vacation-tops",
-      "name": "ANRABESS Women's Henley/Vacation Tops",
-      "category": "Apparel",
-      "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22",
-      "seen_dates": ["2026-06-22"]
-    },
-    {
       "key": "shark-rocket-vacuum",
       "name": "Shark Rocket Vacuum",
       "category": "Home & Kitchen",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22",
-      "seen_dates": ["2026-06-22"]
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-22", "2026-06-25"]
+    },
+    {
+      "key": "anrabess-henley-vacation-tops",
+      "name": "ANRABESS Women's Henley/Vacation Tops",
+      "category": "Apparel",
+      "first_seen": "2026-06-22",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-22", "2026-06-25"]
+    },
+    {
+      "key": "coleman-snap-n-go-collapsible-cooler",
+      "name": "Coleman Snap 'N Go Collapsible Cooler",
+      "category": "Sports & Outdoors",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"]
+    },
+    {
+      "key": "soundcore-wireless-earbuds",
+      "name": "Soundcore Wireless Earbuds",
+      "category": "Electronics",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"]
+    },
+    {
+      "key": "blink-outdoor-4-camera",
+      "name": "Blink Outdoor 4 Wireless Security Camera",
+      "category": "Electronics",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"]
+    },
+    {
+      "key": "owlet-dream-duo-baby-monitor",
+      "name": "Owlet Dream Duo (Gen 3) Smart Baby Monitor",
+      "category": "Baby",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"]
+    },
+    {
+      "key": "pupgum-dog-dental-chews",
+      "name": "PupGum Dog Dental Chews",
+      "category": "Pet Supplies",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"]
+    },
+    {
+      "key": "prettylitter-cat-litter",
+      "name": "PrettyLitter Health-Monitoring Cat Litter",
+      "category": "Pet Supplies",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"]
+    },
+    {
+      "key": "beauty-of-joseon-skincare",
+      "name": "Beauty of Joseon",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"]
+    },
+    {
+      "key": "viral-dubai-style-pistachio-chocolate",
+      "name": "Viral Dubai-Style Pistachio Chocolate Bars",
+      "category": "Grocery",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"]
+    },
+    {
+      "key": "toniebox-2-audio-player",
+      "name": "Toniebox 2 Audio Player Bundles",
+      "category": "Toys & Games",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"]
+    },
+    {
+      "key": "levoit-core-300p-air-purifier",
+      "name": "Levoit Core 300-P HEPA Air Purifier",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"]
+    },
+    {
+      "key": "tree-hut-shea-sugar-body-scrub",
+      "name": "Tree Hut Shea Sugar Body Scrub",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"]
+    },
+    {
+      "key": "eltamd-uv-daily-tinted-sunscreen",
+      "name": "EltaMD UV Daily Tinted Sunscreen SPF 50",
+      "category": "Health & Household",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"]
+    },
+    {
+      "key": "vibration-platform-machines",
+      "name": "Vibration Platform Machines",
+      "category": "Sports & Outdoors",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"]
+    },
+    {
+      "key": "ego-power-plus-cordless-lawn-mower",
+      "name": "EGO POWER+ Cordless Walk-Behind Lawn Mower",
+      "category": "Tools & Home Improvement",
+      "first_seen": "2026-06-25",
+      "last_seen": "2026-06-25",
+      "seen_dates": ["2026-06-25"]
     }
   ]
 }
