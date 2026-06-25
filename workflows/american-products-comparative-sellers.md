@@ -130,8 +130,7 @@ actually read.
   further processing — never research alternatives for it, never display it.
 - **Carry forward every remaining non-Electronics product.** Do not cap the shortlist the way the
   sibling's daily-discovery workflow does (that 15-25 cap exists because it's bounded by daily trend
-  volume). This agent's mandate is explicit comprehensiveness, so the candidate set is simply
-  "whatever the sibling published in its latest report, minus Electronics."
+  volume). For this agent, the candidate set is simply "whatever the sibling published in its latest report, minus Electronics."
 - **Judge repurchase interest per product, not per category.** Categories mix durables and
   consumables (e.g. Home & Kitchen contains both a one-time-purchase fry pan and a repeatedly-bought
   roll of parchment paper). For each product write one explicit line: "repurchase interest:
@@ -159,7 +158,7 @@ difficult product or one unresponsive source.
 
 For each prioritized product, in the Step 2 order:
 
-- **Soft cap of 5–8 alternatives per product.** Stop once you hit the cap or once the credible-lead
+- **Medium cap of 2-3 alternatives per product.** Stop once you hit the cap or once the credible-lead
   trail genuinely runs dry, whichever comes first. In the product's rationale text, note which one
   applied (e.g. "5 found, search trail exhausted" vs. "capped at 8, more likely exist").
 - **Search strategy** — combine the product's core type with explicit American-business qualifiers:
