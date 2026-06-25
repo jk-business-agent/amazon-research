@@ -1,0 +1,51 @@
+name: Auto-merge cloud routine branches
+
+# The Claude Code cloud routines that run this repo's research workflows always land
+# their commits on a fresh claude/<name> branch, regardless of which branch their prompt
+# tells them to push to. This merges each such branch into whichever long-lived branch it
+# actually descended from (main, or american-business-research) and deletes it, so no
+# manual merge/cleanup is needed after a scheduled run.
+
+on:
+  push:
+    branches:
+      - 'claude/**'
+
+permissions:
+  contents: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Merge into the correct target branch and delete the source branch
+        env:
+          SOURCE_BRANCH: ${{ github.ref_name }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          TARGET=""
+          for CANDIDATE in main american-business-research; do
+            if git merge-base --is-ancestor "origin/$CANDIDATE" "origin/$SOURCE_BRANCH"; then
+              TARGET="$CANDIDATE"
+              break
+            fi
+          done
+
+          if [ -z "$TARGET" ]; then
+            echo "::error::Could not determine a target branch for $SOURCE_BRANCH (not a descendant of main or american-business-research). Leaving it as-is."
+            exit 1
+          fi
+
+          echo "Merging $SOURCE_BRANCH into $TARGET"
+          git checkout -B "$TARGET" "origin/$TARGET"
+          git merge --no-ff "origin/$SOURCE_BRANCH" -m "merge: auto-merge $SOURCE_BRANCH into $TARGET"
+          git push origin "$TARGET"
+          git push origin --delete "$SOURCE_BRANCH"

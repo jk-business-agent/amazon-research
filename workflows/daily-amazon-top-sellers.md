@@ -195,22 +195,25 @@ Pages resolves it to that folder's `index.html`). Keep `index.html` itself simpl
 
 ## Step 8 — Commit and push
 
-Commit `resources/seen-products-history.json`, `docs/`, and `.claude/CLAUDE.md`, then push directly to
-`origin main`:
+Commit `resources/seen-products-history.json`, `docs/`, and `.claude/CLAUDE.md`:
 
 ```
 git add resources/seen-products-history.json docs/ .claude/CLAUDE.md
 git commit -m "chore: daily Amazon top-sellers report for $(date +%Y-%m-%d)"
-git push origin main
+git push origin HEAD
 ```
 
-This routine has "Allow unrestricted branch pushes" enabled, so direct pushes to `main` are allowed —
-do not route through a branch/PR for the routine flow. (`scripts/create-pr.sh` still exists for manual,
-one-off corrections outside the routine, where opening a PR for review makes sense.)
+Note: the cloud routine's commit will land on a harness-assigned `claude/<name>` branch no matter what
+branch you push to here — this is a platform property of cloud routine runs, not something this
+workflow's git commands control. Do not try to force a push to `main` directly or treat landing on a
+`claude/*` branch as a failure. `.github/workflows/auto-merge-claude-branches.yml` watches for pushes to
+`claude/**`, merges the branch into `main` automatically within about a minute, and deletes it — no
+manual merge or branch cleanup is needed. (`scripts/create-pr.sh` still exists for manual, one-off
+corrections outside the routine, where opening a PR for review makes sense.)
 
 If the push fails because the remote has new commits, fetch and rebase once and retry; do not
 force-push. If it still fails, skip to Step 9 and notify with the failure instead of the usual summary
-so the user knows today's report exists locally in the cloud sandbox but didn't make it to `main`.
+so the user knows today's report exists locally in the cloud sandbox but didn't make it to the remote.
 
 ## Step 9 — Notify
 
