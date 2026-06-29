@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>American Business Alternatives — June 29, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  /* 1. Header band */
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  /* 2. Executive summary */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  /* 3. Quick stats */
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 130px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  /* 4. Product groups */
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .product-groups { display: flex; flex-direction: column; gap: 18px; }
+  .product-group {
+    background: #fafbfc;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+  .product-group-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+  .product-title { font-size: 18px; font-weight: 700; margin: 0 0 4px; }
+  .product-meta { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .tag-count { background: #f1f5f9; color: #1e293b; }
+  .tag-affiliate-yes { background: var(--verified-bg); color: var(--verified); }
+  .tag-affiliate-no { background: #f1f5f9; color: var(--muted); }
+  .tag-affiliate-unconfirmed { background: var(--lowconf-bg); color: var(--lowconf); }
+  .product-rationale { font-size: 13.5px; line-height: 1.5; color: #334155; margin: 12px 0 14px; }
+
+  /* 5. Alternative cards (nested) */
+  .alt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
+  .alt-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .alt-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .alt-name { font-size: 15.5px; font-weight: 600; margin: 0; }
+  .alt-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f8fafc; border-radius: 8px; padding: 10px 12px; }
+  .compare-label { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+  .compare-col div:last-child { font-size: 12.5px; color: #1e293b; line-height: 1.45; }
+  .alt-section { font-size: 12.5px; line-height: 1.5; color: #334155; }
+  .alt-section a { color: #2563eb; text-decoration: none; font-size: 11.5px; }
+  .alt-sources { font-size: 11px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .alt-sources a { color: #2563eb; text-decoration: none; }
+  .no-alt-note { font-size: 13.5px; line-height: 1.6; color: #334155; background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px; padding: 14px 16px; }
+
+  /* 6. Category chart */
+  .chart-wrap { padding: 10px 6px; }
+
+  /* 7. New entrants spotlight */
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+
+  /* 8. Methodology footer */
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  /* 9. Footer nav */
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>American Business Alternatives to Amazon Top Sellers</h1>
+    <div class="date">June 29, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 117 sources checked · Based on the sibling agent's June 29, 2026 report</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">This run is based on the sibling Competitor Research Agent's June 29, 2026 report, which listed 15 Amazon top-sellers. 4 were hard-excluded as Electronics, leaving 11 products across 9 categories carried forward. Comparing against the rolling 14-day product-history log, 8 are NEW since June 25 and 3 are RECURRING (Premier Protein Shake, Owlet Dream Duo Baby Monitor, and Toniebox 2 Audio Player Bundles, each on their second appearance in the last four runs). Four parallel research agents found 23 American alternatives total &mdash; 12 cleared the two-source VERIFIED bar and 11 remain LOW-CONFIDENCE (a single, uncorroborated company claim). Crest 3D Whitestrips Professional Effects produced zero qualifying alternatives: 5 candidate brands were investigated and each was disqualified for a distinct reason (foreign headquarters, confirmed China manufacturing for the strip product specifically, a product-line mismatch, or an unverifiable manufacturing-location claim) &mdash; this is reported as a degraded-success outcome rather than forcing a weak pick. KPop Demon Hunters HUNTR/X Merchandise required a methodology departure: as licensed Netflix IP, no literal American-owned substitute exists, so its three alternatives (Liberty Puzzles, True South Puzzle Company, Royal Apparel) are analogous-category substitutions &mdash; general-purpose American puzzle and apparel manufacturers &mdash; rather than direct competitor swaps; this category and the Shark NV356E Vacuum both tied for the most VERIFIED alternatives of any product this run (3 each). The single strongest per-alternative result was Simple Modern against the Stanley Quencher H2.0 Tumbler, combining independently-corroborated Oklahoma City manufacturing with a price point squarely inside the $25&ndash;$100 priority band. One unresolved source conflict is carried forward rather than silently resolved: Owlet's third alternative, Babysense, claims a 1991 US founding while an independent Jerusalem Post source instead credits Israeli inventors, and two different US business addresses for the company were never reconciled &mdash; it is shown as LOW-CONFIDENCE with the conflict disclosed in full, not omitted. A consistent editorial rule was also applied and is documented in the Methodology below: a product's VERIFIED tag turns on whether its physical manufacturing location is independently corroborated, not on company ownership structure &mdash; this is what allows Oreck (Hong Kong-parent-owned, but Tennessee-manufactured) to remain VERIFIED while Nanit and Sense-U (both US-headquartered, but with confirmed-or-unconfirmed foreign hardware manufacturing) are tagged LOW-CONFIDENCE despite their verified American business presence.</div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">11</div><div class="label">Amazon Products</div></div>
+    <div class="stat-card"><div class="num">23</div><div class="label">Alternatives Found</div></div>
+    <div class="stat-card"><div class="num">8</div><div class="label">New Products</div></div>
+    <div class="stat-card"><div class="num">3</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">12</div><div class="label">Verified American-Made</div></div>
+    <div class="stat-card"><div class="num">11</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Product groups -->
+  <h2 class="section-title">Products &amp; American Alternatives</h2>
+  <div class="product-groups">
+
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Stanley Quencher H2.0 Insulated Tumbler</h3>
+      <div class="product-meta">~$20, down from $40 &middot; <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">2 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: medium &mdash; tumblers are often bought in multiple colors/sizes and lids/straws are replaced over time, and the $40 list price sits within the $25&ndash;$100 priority band even though the current sale price is below it. Stanley itself is an American-founded brand (1913, Seattle) but the Quencher line is documented as manufactured in China and, more recently, Vietnam under current owner Pacific Market International. Found 2 American-made alternatives and capped there: Tervis (disqualified &mdash; filed Chapter 11 in Sept 2024, was acquired and relocated in 2025, and its stainless tumbler lines are now sourced from China), Klean Kanteen, Hydro Flask, and YETI (all disqualified for overseas-reliant manufacturing), and Bison Coolers (disqualified &mdash; imported components, only finished/decorated domestically) were all checked and ruled out.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Simple Modern</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Stanley Quencher H2.0, ~$20 sale/$40 list, double-wall insulated tumbler, manufactured in China/Vietnam.</div></div>
+        <div class="compare-col"><div class="compare-label">Simple Modern</div><div>Comparable double-wall vacuum-insulated stainless tumblers (e.g. 20oz classic) at a similar price tier, with expanding domestic manufacturing.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Drinkware company headquartered in Moore/Oklahoma City, OK; co-founded 2015 by Mike Beckham, Bryan Porter, and Micah Ames with $200,000 in startup capital; now described as one of the fastest-growing privately held companies in the US (nine-figure revenue &mdash; a single-source figure from the founder's own blog/LinkedIn bio).</div>
+      <div class="alt-section"><strong>American-ness:</strong> In February 2022 the company leased a 175,000 sq ft Oklahoma City facility and began domestic tumbler/bottle production (a roughly $5&ndash;6M buildout) &mdash; independently corroborated by the Oklahoma Department of Commerce, Tulsa World, 405 Magazine, and OKC Fox45, four sources beyond the company's own claims. Caveat: this is a partial/expanding transition from prior overseas production, not a claim that the full current catalog is domestically made. <a href="https://www.okcommerce.gov/simple-modern-expanding-in-oklahoma-city/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Mike Beckham, CEO (OU Business College 2003, prior $1B+ cumulative e-commerce ventures); co-founders Bryan Porter and Micah Ames (no further biographical detail found).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> via a Viglink merchant listing; exact commission rate not found.</div>
+      <div class="alt-section"><strong>Contact:</strong> support@simplemodern.com; 1-855-746-7506, Mon&ndash;Fri 9am&ndash;5pm Central.</div>
+      <div class="alt-sources">Sources: <a href="https://www.okcommerce.gov/simple-modern-expanding-in-oklahoma-city/">okcommerce.gov</a> (2026-06-29), <a href="https://tulsaworld.com/">tulsaworld.com</a> (2026-06-29), <a href="https://www.simplemodern.com/pages/contact-us">simplemodern.com</a> (2026-06-29), <a href="https://www.viglink.com/merchants/231980/simple-modern-affiliate-program">viglink.com</a> (2026-06-29)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Potable, Inc.</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Stanley Quencher H2.0 tumbler.</div></div>
+        <div class="compare-col"><div class="compare-label">Potable</div><div>"Luxury" 316 stainless tumblers (Odyssey, Voyager, Behemoth, Epic lines) with ceramic-coated interior, claimed 13+ hr hot/37+ hr cold retention (not independently lab-verified).</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Small direct-to-consumer drinkware brand sold via mypotable.com; founding date, scale, and history not found in available sources &mdash; no independent press coverage located.</div>
+      <div class="alt-section"><strong>American-ness:</strong> The company's own site states tumblers are "made in the USA" &mdash; this is the only source found; LOW-CONFIDENCE, single-source claim only. <a href="https://www.mypotable.com/">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Contact form only, at mypotable.com/pages/contact.</div>
+      <div class="alt-sources">Sources: <a href="https://www.mypotable.com/">mypotable.com</a> (2026-06-29)</div>
+    </div>
+  </div>
+</div>
+
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Temptations Cat Treats</h3>
+      <div class="product-meta">Price not confirmed &middot; <span class="pill" style="background:#92400e">Pet Supplies</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">2 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: high &mdash; cat treats are a recurring consumable purchase. Found 2 VERIFIED American-made alternatives and capped at 2: Weruva was investigated and disqualified despite being a US-headquartered, family-founded (Natick, MA) brand &mdash; its cat food/treats are manufactured in Thailand, confirmed via multiple cat-review sites describing its BRC/USDA-certified Thailand facility.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Fromm Family Foods</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Temptations soft/crunchy cat treats.</div></div>
+        <div class="compare-col"><div class="compare-label">Fromm Family Foods</div><div>Soft cat treats (Purrsnickety line, chicken liver soft treats, ~2 cal/treat) &mdash; a direct category match.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Fifth-generation, family-owned pet food and treat manufacturer based in Wisconsin, continuously operating since 1904 (121 years); operates three Wisconsin facilities &mdash; dry food/treat plants in Mequon and Columbus, and a wet-food cannery in Eden.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Company states all products originate from its three Wisconsin facilities, with no third-party co-packing. Independently profiled by the Truly American Made directory (snippet-level corroboration; direct fetch returned a 403), beyond the company's own "Why Fromm" page. <a href="https://frommfamily.com/why-fromm">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> The Fromm family, 1904; current generation are fifth-generation operators. Specific founder names not found in available sources.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-no">No</span> &mdash; checked Commission Junction, Rakuten/LinkShare, Pepperjam, and ShareASale via a knoji.com aggregator listing; no active program found.</div>
+      <div class="alt-section"><strong>Contact:</strong> 1-800-325-6331, Mon&ndash;Fri 8am&ndash;4:30pm Central.</div>
+      <div class="alt-sources">Sources: <a href="https://frommfamily.com/why-fromm">frommfamily.com</a> (2026-06-29), <a href="https://www.krisers.com/">krisers.com</a> (2026-06-29), <a href="https://trulyamericanmade.com/brands/fromm-family-foods">trulyamericanmade.com</a> (snippet, 2026-06-29), <a href="https://www.knoji.com/">knoji.com</a> (2026-06-29)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Vital Essentials</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Temptations cat treats.</div></div>
+        <div class="compare-col"><div class="compare-label">Vital Essentials</div><div>Freeze-dried raw cat treats (Vital Cat duck liver) &mdash; a different treat sub-category (raw freeze-dried vs. baked/crunchy), noted here as an objective format difference, not a quality judgment.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Family-owned company based in Green Bay, WI, founded 2009 by husband-and-wife team Lanny and Cheryl Viegut; states it owns and operates the largest freeze-dried pet food manufacturing facility in North America with no third-party co-packers.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Independently corroborated by USA Love List's "Made in USA Cat Supplies" directory (snippet-level; direct fetch returned a 403), beyond the company's own site. <a href="https://www.vitalessentials.com">further reading</a></div>
+      <div class="alt-section"><strong>Founder(s):</strong> Lanny and Cheryl Viegut (2009).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> &mdash; a "Partner With Us" page exists, but specific terms were not found.</div>
+      <div class="alt-section"><strong>Contact:</strong> 800-743-0322; woof@vitalessentialsraw.com; PO Box 9227, Green Bay, WI 54308.</div>
+      <div class="alt-sources">Sources: <a href="https://www.vitalessentials.com">vitalessentials.com</a> (2026-06-29), <a href="https://www.usalovelist.com/made-in-usa-cat-supplies/">usalovelist.com</a> (snippet, 2026-06-29), <a href="https://www.vitalessentials.com/contact">vitalessentials.com/contact</a> (2026-06-29)</div>
+    </div>
+  </div>
+</div>
+
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Liquid I.V. Hydration Multiplier</h3>
+      <div class="product-meta">Price not confirmed &middot; <span class="pill" style="background:#65a30d">Grocery</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">2 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: high &mdash; a consumable hydration powder. Found 2 alternatives, both LOW-CONFIDENCE on physical manufacturing despite verified US incorporation/HQ; capped at 2 after Cure Hydration was investigated and dropped (its manufacturing site is undisclosed).</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">LMNT</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Liquid I.V. Hydration Multiplier powder.</div></div>
+        <div class="compare-col"><div class="compare-label">LMNT</div><div>Electrolyte drink mix &mdash; direct hydration-powder category match.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Formed October 2018 as Elemental Labs LLC in Florida, converted to a Delaware corporation in December 2019; founded by Robb Wolf, James Murphy, and Nicki Violetti; HQ in Naples, FL.</div>
+      <div class="alt-section"><strong>American-ness:</strong> An SEC filing corroborates US domicile and incorporation, but the actual manufacturing location is not confirmed in available sources. Per this report's editorial rule (a tag turns on the physical product's manufacturing location, not company incorporation), this is LOW-CONFIDENCE despite the verified US ownership/incorporation.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Robb Wolf, James Murphy, Nicki Violetti (Oct 2018).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> &mdash; the "Salty Status" program, plus wholesale and a 30% fundraising program.</div>
+      <div class="alt-section"><strong>Contact:</strong> Via drinklmnt.com/pages/contact-us.</div>
+      <div class="alt-sources">Sources: SEC EDGAR filing (2026-06-29), <a href="https://www.drinklmnt.com/pages/contact-us">drinklmnt.com</a> (snippet, 2026-06-29)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Ultima Replenisher</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Liquid I.V. Hydration Multiplier.</div></div>
+        <div class="compare-col"><div class="compare-label">Ultima Replenisher</div><div>Electrolyte hydration mix, direct category match.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 1996 in Bernardsville, NJ; manufacturing reported in Cortland, OH per business-data aggregators; acquired by WM Partners (2019), then by RoundTable Healthcare Partners (2022) &mdash; now private-equity owned, not independent/family-owned.</div>
+      <div class="alt-section"><strong>American-ness:</strong> The US-manufacturing claim is sourced only from aggregator listings (ZoomInfo, Tracxn, RoundTable), not independent press or a certification body &mdash; LOW-CONFIDENCE.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Pre-acquisition founding details not found in available sources.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> via Refersion.</div>
+      <div class="alt-section"><strong>Contact:</strong> 888-663-8584.</div>
+      <div class="alt-sources">Sources: ZoomInfo (2026-06-29), Tracxn (2026-06-29), RoundTable Healthcare Partners press materials (2026-06-29)</div>
+    </div>
+  </div>
+</div>
+
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Cascade Platinum Plus Dishwasher Pods</h3>
+      <div class="product-meta">$18.99 for 62 pods, down from $24.99 &middot; <span class="pill" style="background:#0d9488">Health &amp; Household</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">2 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: high &mdash; a consumable cleaning product, though the $18.99&ndash;$24.99 price sits below the $25&ndash;$100 priority band. Found 2 alternatives and capped at 2 after Clean People was explicitly dropped: the BBB's National Advertising Division formally recommended Clean People discontinue its "Made in USA" claim in March 2025, after a challenge from Earth Breeze &mdash; "Made in Canada" was the only claim the company could substantiate, a useful real-world illustration of why this report requires independent corroboration. ECOS was identified as a plausible third candidate but not independently verified; the trail was not fully exhausted.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Puracy</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Cascade Platinum Plus dishwasher pods.</div></div>
+        <div class="compare-col"><div class="compare-label">Puracy</div><div>Dishwasher/cleaning pods &mdash; direct category match.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 2013 in Austin, TX, by Sean Busch and Paul Tracy; acquired by Branded, an Amazon-aggregator company, in October 2021.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Manufactured and shipped from a Dallas, TX facility &mdash; corroborated by the USA Love List directory (snippet-level; direct fetch returned a 403) and a PRNewswire acquisition announcement, independent of the company's own claims. The manufacturing-location claim is VERIFIED per this report's editorial rule; the larger-holding-company ownership since 2021 is disclosed as a caveat rather than changing the tag.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Sean Busch and Paul Tracy (2013).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span>, at puracy.com/pages/affiliates.</div>
+      <div class="alt-section"><strong>Contact:</strong> 1-800-769-5038.</div>
+      <div class="alt-sources">Sources: <a href="https://www.usalovelist.com/">usalovelist.com</a> (snippet, 2026-06-29), <a href="https://www.prnewswire.com/">prnewswire.com</a> (2026-06-29), <a href="https://puracy.com/pages/affiliates">puracy.com</a> (2026-06-29)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Branch Basics</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Cascade Platinum Plus dishwasher pods.</div></div>
+        <div class="compare-col"><div class="compare-label">Branch Basics</div><div>Cleaning concentrate/pod-format products.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> A Colorado manufacturing claim was found only via a search-result snippet; no founder name or company-scale information was found in available sources.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Single-sourced claim with no independent corroboration found &mdash; LOW-CONFIDENCE.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Not found in available sources.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Not found in available sources beyond the company's website.</div>
+      <div class="alt-sources">Sources: branchbasics.com (search snippet, 2026-06-29)</div>
+    </div>
+  </div>
+</div>
+
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Crest 3D Whitestrips Professional Effects</h3>
+      <div class="product-meta">35% off (exact price not confirmed) &middot; <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">0 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: medium-high &mdash; whitening strip boxes are a periodically repurchased consumable. <strong>Research incomplete &mdash; circuit breaker triggered.</strong> Reported transparently rather than forcing a low-confidence pick that did not actually clear verification. Five candidates were investigated and each was ruled out for a distinct reason: <strong>Made By Dentists / Spotlight Oral Care</strong> &mdash; disqualified, independently confirmed (Irish Examiner, ThinkBusiness.ie) to be headquartered in Galway, Ireland, founded by Drs. Lisa and Vanessa Creaven, not an American business. <strong>GuruNanda</strong> &mdash; has strong, independently-verified domestic manufacturing for other products (a 285,000 sq ft, ~200-employee Buena Park, CA facility, per the Orange County Business Journal), but multiple retailer packaging sources (Albertsons, Randalls, Publix) confirm its whitening strips specifically are formulated in LA but manufactured and packaged in China, and the brand recently announced a supply partnership with an Indian contract manufacturer &mdash; disqualified for this product. <strong>Beaming White</strong> &mdash; has a strong, well-verified domestic manufacturing claim (Vancouver, WA, ISO 9001:2015/22716:2007 certified by Intertek) but no dedicated whitening-strip product was found in its catalog &mdash; disqualified for category mismatch. <strong>Lumineux</strong> &mdash; customer reviews report "made in China" packaging &mdash; disqualified. <strong>NatruSmile</strong> &mdash; its Sheridan, WY registered address appears to be a business/LLC-registration address (a well-known low-tax incorporation hub) rather than a confirmed manufacturing site, and the company also lists UAE and UK offices &mdash; inconclusive, not usable as VERIFIED or LOW-CONFIDENCE without a clearer claim. No American-made teeth-whitening-strip alternative cleared even single-source verification this run.</div>
+  <div class="no-alt-note">No qualifying alternative found this run. If revisiting this category, the recommended next step is to directly contact a candidate brand (e.g. NatruSmile) via its public contact channels to request manufacturing-location confirmation, since public web sources were exhausted.</div>
+</div>
+
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Levi's Denim (Prime Day markdowns)</h3>
+      <div class="product-meta">Up to 65% off (exact price not confirmed) &middot; <span class="pill" style="background:#7c3aed">Apparel</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">3 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: medium &mdash; apparel is replaced periodically rather than consumed. Found 3 alternatives and capped at 3, though more candidates (Ginew, Railcar, All American Clothing Co.) likely exist and were not pursued.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Origin USA</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Levi's denim, Prime Day markdowns.</div></div>
+        <div class="compare-col"><div class="compare-label">Origin USA</div><div>American-made denim and apparel, no disclosed caveats.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 2011 by Pete Roberts (with partner Jocko Willink), Farmington, ME; 300+ employees across 3 factories.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Independently corroborated by Sourcing Journal/WWD and the Alliance for American Manufacturing, beyond the company's own claims &mdash; the cleanest verification story of the three Levi's alternatives, with no ownership or sourcing caveats.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Pete Roberts (2011); partner Jocko Willink.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Via originusa.us contact channels.</div>
+      <div class="alt-sources">Sources: Sourcing Journal (2026-06-29), Alliance for American Manufacturing (2026-06-29), originusa.us (2026-06-29)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Dearborn Denim &amp; Apparel</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Levi's denim.</div></div>
+        <div class="compare-col"><div class="compare-label">Dearborn Denim</div><div>American cut-and-sewn denim, with a separate, unverified 100% domestic-materials claim.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 2016 by Robert (Rob) McMillan, Chicago, IL.</div>
+      <div class="alt-section"><strong>American-ness:</strong> The manufacturing-location claim is corroborated by Sourcing Journal and the Alliance for American Manufacturing. The company's separate claim of 100% domestic material sourcing is single-sourced and remains LOW-CONFIDENCE on its own &mdash; disclosed here, but per this report's editorial rule the overall tag turns on the manufacturing-location claim, which is VERIFIED.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Robert (Rob) McMillan (2016).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span>, at dearborndenim.us/pages/affiliate.</div>
+      <div class="alt-section"><strong>Contact:</strong> (773) 293-6451.</div>
+      <div class="alt-sources">Sources: Sourcing Journal (2026-06-29), Alliance for American Manufacturing (2026-06-29), <a href="https://www.dearborndenim.us/pages/affiliate">dearborndenim.us</a> (2026-06-29)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Imogene + Willie</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Levi's denim.</div></div>
+        <div class="compare-col"><div class="compare-label">Imogene + Willie</div><div>Nashville-sewn denim.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 2009 by Matt and Carrie Eddmenson, Nashville, TN, with an LA sewing room; fabric sourced from Mount Vernon Mills, GA.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Corroborated only by Wikipedia and Denimology &mdash; neither a certification body nor independent press &mdash; LOW-CONFIDENCE.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Matt and Carrie Eddmenson (2009).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Not found in available sources.</div>
+      <div class="alt-sources">Sources: Wikipedia (2026-06-29), Denimology (2026-06-29)</div>
+    </div>
+  </div>
+</div>
+
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">KPop Demon Hunters HUNTR/X Merchandise</h3>
+      <div class="product-meta">Apparel from under $20; puzzle price not confirmed &middot; <span class="pill" style="background:#f59e0b">Toys &amp; Games</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">3 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: low &mdash; one-time merchandise/collectible purchases. <strong>Methodology note:</strong> this is licensed Netflix IP, so no literal American-owned alternative source exists. The three alternatives below are analogous-category substitutions &mdash; general-purpose American puzzle and apparel manufacturers, not licensed-IP swaps &mdash; a deliberate departure from this report's usual direct-competitor framing, flagged here for transparency. Found 3 alternatives across 2 sub-categories (puzzles, apparel) by design; Heritage Puzzle, Wimberley Puzzle Co., and Springbok Puzzles were identified but not fully verified, and more candidates likely exist.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Liberty Puzzles</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>HUNTR/X-themed puzzle (analogous category, not a licensed substitute).</div></div>
+        <div class="compare-col"><div class="compare-label">Liberty Puzzles</div><div>Wood jigsaw puzzles, hand-cut on in-house laser cutters.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 2005 in Boulder, CO, by Christopher Wirth (son of former CO Senator Tim Wirth) and Jeffrey Eldridge; ~130 employees by 2024, 44 in-house laser cutters; retail store at 1468 Pearl St, Boulder, CO.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Multi-source independent corroboration &mdash; Wikipedia, an SBA profile, and Denver7/9News local coverage &mdash; clears VERIFIED comfortably, the strongest verification story of the three alternatives found for this product.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Christopher Wirth and Jeffrey Eldridge (2005).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> (720) 502-6947.</div>
+      <div class="alt-sources">Sources: Wikipedia (2026-06-29), sba.gov (2026-06-29), Denver7 (2026-06-29), 9News (2026-06-29), <a href="https://www.libertypuzzles.com/">libertypuzzles.com</a> (snippet, 2026-06-29)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">True South Puzzle Company</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>HUNTR/X-themed puzzle (analogous category).</div></div>
+        <div class="compare-col"><div class="compare-label">True South Puzzle Company</div><div>Wood jigsaw puzzles, woman-owned business.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 2013 by Susan Taylor, Nashville, TN; woman-owned.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Independently corroborated by both AllAmerican.org and Shop Made in TN &mdash; two independent curated directories beyond the company's own site.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Susan Taylor (2013).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> (615) 417-2283.</div>
+      <div class="alt-sources">Sources: AllAmerican.org (2026-06-29), Shop Made in TN (2026-06-29), truesouthpuzzle.com (2026-06-29)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Royal Apparel</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>HUNTR/X-themed tees and hoodies (analogous category).</div></div>
+        <div class="compare-col"><div class="compare-label">Royal Apparel</div><div>Domestically cut-and-sewn t-shirts and hoodies.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 1992 by Morey Mayeri, originally in Manhattan's Garment District, now headquartered in Hauppauge, NY, with a new second facility opening in 2026.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Corroborated by ASI Central trade-press coverage of the 2026 facility expansion, independent of the company's own claims.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Morey Mayeri (1992).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> 1-866-769-2517.</div>
+      <div class="alt-sources">Sources: ASI Central (2026-06-29), royalapparel.net (2026-06-29)</div>
+    </div>
+  </div>
+</div>
+
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Shark NV356E Navigator Lift-Away Upright Vacuum</h3>
+      <div class="product-meta">Price not confirmed &middot; <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-new">NEW</span>
+      <span class="tag tag-count">3 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: low &mdash; a durable goods purchase, not recurring. Found 3 VERIFIED alternatives and capped at 3; MetroVac, Simplicity, and American Vacuum Co. surfaced but were not pursued further.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Riccar (Tacony Corporation)</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Shark NV356E upright vacuum.</div></div>
+        <div class="compare-col"><div class="compare-label">Riccar</div><div>Upright vacuums assembled at Tacony's dedicated St. James, MO plant; over 1 million units produced there.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Tacony Corporation founded 1946 in Fenton, MO; family-owned, now led by 3rd-generation CEO Kristi Tacony Humes.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Independently corroborated by the St. Louis Post-Dispatch and a Commerce Bank feature, beyond the company's own materials &mdash; the cleanest verification story of the three Shark Vacuum alternatives, with no ownership or sourcing caveats.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Nick Tacony (1946); now led by Kristi Tacony Humes.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> 800-444-7774.</div>
+      <div class="alt-sources">Sources: St. Louis Post-Dispatch (2026-06-29), Commerce Bank (2026-06-29), tacony.com (2026-06-29)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Kirby (Scott Fetzer / Berkshire Hathaway)</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Shark NV356E upright vacuum.</div></div>
+        <div class="compare-col"><div class="compare-label">Kirby</div><div>Upright vacuums manufactured in Cleveland, OH. <strong>Caveat:</strong> a Berkshire Hathaway subsidiary, not a small/family business.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded by James Blaine "Jim" Kirby in 1906; now a Scott Fetzer/Berkshire Hathaway subsidiary.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Cleveland, OH manufacturing corroborated by Wikipedia and vacuumcleanerhistory.com, independent of the company's own materials. The manufacturing-location claim is VERIFIED; the large-corporate ownership is disclosed as a caveat per this report's editorial rule rather than changing the tag.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> James Blaine "Jim" Kirby (1906).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Via kirby.com contact channels.</div>
+      <div class="alt-sources">Sources: Wikipedia (2026-06-29), vacuumcleanerhistory.com (2026-06-29), kirby.com (2026-06-29)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Oreck (TTI Floor Care North America)</h4>
+        <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Shark NV356E upright vacuum.</div></div>
+        <div class="compare-col"><div class="compare-label">Oreck</div><div>Upright vacuums manufactured in Cookeville, TN. <strong>Important caveat:</strong> parent company TTI is a Hong Kong-headquartered multinational that also owns Hoover and Dirt Devil.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Brand founded 1963 by David Oreck; manufactured today by TTI Floor Care North America in Cookeville, TN.</div>
+      <div class="alt-section"><strong>American-ness:</strong> The Cookeville, TN manufacturing-location claim is independently corroborated by PR Newswire and a Tennessee state government press release on a facility expansion. Per this report's editorial rule &mdash; a tag turns on whether physical manufacturing is independently verified domestically, not on ownership &mdash; this is VERIFIED, with the foreign parent-company ownership prominently disclosed rather than downgrading the tag, for consistency with how the same rule was applied to Dearborn Denim's separate materials caveat above.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> David Oreck (1963; brand founder, not current parent-company leadership).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span>, via affi.io/m/oreck, 5&ndash;10% commission.</div>
+      <div class="alt-section"><strong>Contact:</strong> Via oreck.com contact channels.</div>
+      <div class="alt-sources">Sources: PR Newswire (2026-06-29), Tennessee state government press release (2026-06-29), affi.io (2026-06-29), oreck.com (2026-06-29)</div>
+    </div>
+  </div>
+</div>
+
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Premier Protein Shake</h3>
+      <div class="product-meta">Price not confirmed &middot; <span class="pill" style="background:#65a30d">Grocery</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-recurring">RECURRING &middot; streak 2/4</span>
+      <span class="tag tag-count">2 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: high &mdash; a consumable ready-to-drink shake. Found 2 alternatives, both LOW-CONFIDENCE, and capped at 2 by deliberate editorial exclusion rather than trail exhaustion: RSP Nutrition/TrueFit was investigated and excluded for a product-format mismatch (powder, not RTD) plus a single-source-only manufacturing claim.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Jocko M&ouml;lk (Jocko Fuel)</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Premier Protein RTD shake.</div></div>
+        <div class="compare-col"><div class="compare-label">Jocko M&ouml;lk</div><div>RTD protein shake, direct category match.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 2017 by Jocko Willink and Pete Roberts; HQ in Jay, ME.</div>
+      <div class="alt-section"><strong>American-ness:</strong> HQ location is confirmed, but the actual bottling/manufacturing facility location was not found in available sources &mdash; LOW-CONFIDENCE.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Jocko Willink and Pete Roberts (2017).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span>, via the CJ network and GoAffPro.</div>
+      <div class="alt-section"><strong>Contact:</strong> Via jockofuel.com contact channels.</div>
+      <div class="alt-sources">Sources: jockofuel.com (2026-06-29), CJ affiliate network listing (2026-06-29)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Slate Milk</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Premier Protein RTD shake.</div></div>
+        <div class="compare-col"><div class="compare-label">Slate Milk</div><div>High-protein milk-based shake.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded by Manny Lubin and Josh Belinsky, Westwood, MA.</div>
+      <div class="alt-section"><strong>American-ness:</strong> Uses third-party co-packers; had a manufacturing agreement with "Horseshoe" that was later terminated; the current production-facility location is undisclosed &mdash; LOW-CONFIDENCE.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Manny Lubin and Josh Belinsky.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Via drinkslate.com contact channels.</div>
+      <div class="alt-sources">Sources: drinkslate.com (2026-06-29), business-press coverage of the Horseshoe co-packing arrangement (2026-06-29)</div>
+    </div>
+  </div>
+</div>
+
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Toniebox 2 Audio Player Bundles</h3>
+      <div class="product-meta">$129.99, down from $209.99 &middot; <span class="pill" style="background:#f59e0b">Toys &amp; Games</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-recurring">RECURRING &middot; streak 2/4</span>
+      <span class="tag tag-count">1 alternative found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: low-medium &mdash; the player itself is a durable purchase, but companion figurines are bought repeatedly. Found 1 alternative; the search trail genuinely ran dry in a category dominated by European companies (Tonies/Germany, Yoto/UK, Lunii/France, TIMIO/Netherlands, VoxBlock/Scotland). LeapFrog was checked and excluded &mdash; VTech, its Hong Kong-based parent, has owned it since 2016 per SEC EDGAR.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Storypod (Craftie Fox Inc.)</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Toniebox 2 audio-player bundle.</div></div>
+        <div class="compare-col"><div class="compare-label">Storypod</div><div>Screen-free interactive audio player for kids.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded by Daniel Buelhoff (German-born), Miami, FL; launched via a 2020 Kickstarter campaign (the 2nd most-crowdfunded toy project at the time, $240,403 raised); $7.68M total funding to date.</div>
+      <div class="alt-section"><strong>American-ness:</strong> US business incorporation is verified via two independent sources, but domestic hardware manufacturing is not verified and is likely not domestic &mdash; LOW-CONFIDENCE on the core "made in America" product claim despite the verified US business presence.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Daniel Buelhoff.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span>, 30% via shopper.com.</div>
+      <div class="alt-section"><strong>Contact:</strong> (844) 958-1717.</div>
+      <div class="alt-sources">Sources: Kickstarter (2026-06-29), Florida business registry (2026-06-29), storypod.com (2026-06-29), shopper.com (2026-06-29)</div>
+    </div>
+  </div>
+</div>
+
+<div class="product-group">
+  <div class="product-group-header">
+    <div>
+      <h3 class="product-title">Owlet Dream Duo (Gen 3) Smart Baby Monitor</h3>
+      <div class="product-meta">$256.49, down from $379.99 &middot; <span class="pill" style="background:#e11d48">Baby</span></div>
+    </div>
+    <div class="badge-row">
+      <span class="tag tag-recurring">RECURRING &middot; streak 2/4</span>
+      <span class="tag tag-count">3 alternatives found</span>
+    </div>
+  </div>
+  <div class="product-rationale">Repurchase interest: low &mdash; a durable goods purchase. Found 3 alternatives and capped at 3 by deliberate exclusion: Harbor (no heart-rate/SpO2 tracking, manufactured in Vietnam/India), Eufy (Anker/China-owned), and Miku (ownership unconfirmed) were all checked and excluded.</div>
+  <div class="alt-grid">
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Nanit</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Owlet Dream Duo smart baby monitor.</div></div>
+        <div class="compare-col"><div class="compare-label">Nanit</div><div>Smart baby monitor with health/sleep tracking.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 2016 by Assaf Glazer, Tor Ivry, and Andrew Berman at Cornell Tech; HQ in NYC.</div>
+      <div class="alt-section"><strong>American-ness:</strong> US HQ and incorporation are verified, but hardware is manufactured in China per Amazon product Q&amp;A sourcing information. Per this report's editorial rule, confirmed foreign manufacturing downgrades the tag to LOW-CONFIDENCE despite the verified US business presence.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Assaf Glazer, Tor Ivry, Andrew Berman (2016).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span>, up to 20%.</div>
+      <div class="alt-section"><strong>Contact:</strong> Via nanit.com contact channels.</div>
+      <div class="alt-sources">Sources: nanit.com (2026-06-29), Amazon product Q&amp;A (2026-06-29), Cornell Tech press materials (2026-06-29)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Sense-U</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Owlet Dream Duo smart baby monitor.</div></div>
+        <div class="compare-col"><div class="compare-label">Sense-U</div><div>Baby monitor line.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> Founded 2014, Cupertino, CA; 11&ndash;50 employees; specific founder identity unconfirmed in available sources (an earlier candidate name was explicitly checked and rejected as a misattribution).</div>
+      <div class="alt-section"><strong>American-ness:</strong> HQ verified by a BBB profile and Crunchbase/PitchBook listings, but no source was found confirming where the hardware is actually manufactured. Per this report's editorial rule, no verified domestic manufacturing means the tag stays LOW-CONFIDENCE.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Not confirmed in available sources (2014 founding).</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Via senseu.com contact channels.</div>
+      <div class="alt-sources">Sources: BBB (2026-06-29), Crunchbase (2026-06-29), senseu.com (2026-06-29)</div>
+    </div>
+    <div class="alt-card">
+      <div class="alt-card-top">
+        <h4 class="alt-name">Babysense</h4>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE &mdash; SOURCE CONFLICT</span>
+      </div>
+      <div class="alt-compare">
+        <div class="compare-col"><div class="compare-label">Amazon product</div><div>Owlet Dream Duo smart baby monitor.</div></div>
+        <div class="compare-col"><div class="compare-label">Babysense</div><div>Baby monitor line.</div></div>
+      </div>
+      <div class="alt-section"><strong>Business overview:</strong> The company claims to have been "founded in USA in 1991." Two different US business addresses were found in available sources (Bethlehem, PA via a BBB listing; Cresskill, NJ via another listing) and were not reconciled.</div>
+      <div class="alt-section"><strong>American-ness:</strong> <strong>Unresolved conflict:</strong> an independent Jerusalem Post source instead credits the product's invention to Victor Yotam and Haim Shtalryd of Hisense Ltd., Israel &mdash; directly contradicting the company's own US-founding claim. Per this report's source-conflict transparency rule, this conflict is surfaced explicitly rather than silently resolved in either direction; readers should treat Babysense's American-made status as unresolved, not confirmed.</div>
+      <div class="alt-section"><strong>Founder(s):</strong> Disputed &mdash; company claims a US founding (1991); Jerusalem Post credits Israeli inventors Victor Yotam and Haim Shtalryd.</div>
+      <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+      <div class="alt-section"><strong>Contact:</strong> Via the two unreconciled business addresses above.</div>
+      <div class="alt-sources">Sources: BBB (2026-06-29), Jerusalem Post (2026-06-29), business-listing aggregator (2026-06-29)</div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <!-- 6. Category chart -->
+  <div class="panel chart-wrap">
+    <h2>VERIFIED Alternatives by Category</h2>
+    <svg viewBox="0 0 700 280" width="100%" height="280">
+      <path d="M170,170 L170,20 A150,150 0 0 1 320,170 Z" fill="#f59e0b"/>
+      <path d="M170,170 L320,170 A150,150 0 0 1 170,320 Z" fill="#16a34a"/>
+      <path d="M170,170 L170,320 A150,150 0 0 1 40,245 Z" fill="#92400e"/>
+      <path d="M170,170 L40,245 A150,150 0 0 1 40,95 Z" fill="#7c3aed"/>
+      <path d="M170,170 L40,95 A150,150 0 0 1 95,40 Z" fill="#ea580c"/>
+      <path d="M170,170 L95,40 A150,150 0 0 1 170,20 Z" fill="#0d9488"/>
+      <rect x="370" y="14" width="14" height="14" fill="#f59e0b"/>
+      <text x="392" y="25" font-size="13" fill="#1e293b">Toys &amp; Games &mdash; 3 (25%)</text>
+      <rect x="370" y="42" width="14" height="14" fill="#16a34a"/>
+      <text x="392" y="53" font-size="13" fill="#1e293b">Home &amp; Kitchen &mdash; 3 (25%)</text>
+      <rect x="370" y="70" width="14" height="14" fill="#92400e"/>
+      <text x="392" y="81" font-size="13" fill="#1e293b">Pet Supplies &mdash; 2 (17%)</text>
+      <rect x="370" y="98" width="14" height="14" fill="#7c3aed"/>
+      <text x="392" y="109" font-size="13" fill="#1e293b">Apparel &mdash; 2 (17%)</text>
+      <rect x="370" y="126" width="14" height="14" fill="#ea580c"/>
+      <text x="392" y="137" font-size="13" fill="#1e293b">Sports &amp; Outdoors &mdash; 1 (8%)</text>
+      <rect x="370" y="154" width="14" height="14" fill="#0d9488"/>
+      <text x="392" y="165" font-size="13" fill="#1e293b">Health &amp; Household &mdash; 1 (8%)</text>
+    </svg>
+  </div>
+
+  <!-- Most Promising bar chart -->
+  <div class="panel chart-wrap">
+    <h2>Most Promising Alternatives (Score)</h2>
+    <svg viewBox="0 0 700 230" width="100%" height="230">
+      <rect x="280" y="8" width="270" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="19" font-size="13" fill="#1e293b">Simple Modern (vs. Stanley Quencher Tumbler)</text>
+      <text x="558" y="19" font-size="13" fill="#1e293b">6</text>
+      <rect x="280" y="42" width="225" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="53" font-size="13" fill="#1e293b">Fromm Family Foods (vs. Temptations Cat Treats)</text>
+      <text x="513" y="53" font-size="13" fill="#1e293b">5</text>
+      <rect x="280" y="76" width="225" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="87" font-size="13" fill="#1e293b">Puracy (vs. Cascade Dishwasher Pods)</text>
+      <text x="513" y="87" font-size="13" fill="#1e293b">5</text>
+      <rect x="280" y="110" width="180" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="121" font-size="13" fill="#1e293b">Origin USA (vs. Levi's Denim)</text>
+      <text x="468" y="121" font-size="13" fill="#1e293b">4</text>
+      <rect x="280" y="144" width="135" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="155" font-size="13" fill="#1e293b">Riccar / Tacony (vs. Shark NV356E Vacuum)</text>
+      <text x="423" y="155" font-size="13" fill="#1e293b">3</text>
+      <rect x="280" y="178" width="135" height="14" rx="4" fill="#16a34a"/>
+      <text x="0" y="189" font-size="13" fill="#1e293b">Liberty Puzzles (vs. KPop Merch puzzle)</text>
+      <text x="423" y="189" font-size="13" fill="#1e293b">3</text>
+    </svg>
+  </div>
+
+  <!-- 7. New entrants spotlight -->
+  <div class="panel spotlight">
+    <h2>New Entrants Spotlight (youngest founded companies this run)</h2>
+    <ul>
+      <li><strong>Storypod</strong> (founded 2020, alternative to Toniebox 2 Audio Player Bundles) &mdash; LOW-CONFIDENCE: US business incorporation is verified via two independent sources, but its "made in USA" hardware manufacturing is not verified and is likely not domestic.</li>
+      <li><strong>LMNT</strong> (founded 2018, alternative to Liquid I.V. Hydration Multiplier) &mdash; LOW-CONFIDENCE: verified Delaware incorporation and Naples, FL HQ via an SEC filing, but the full domestic manufacturing chain remains unconfirmed.</li>
+      <li><strong>Jocko Fuel</strong> (founded 2017, alternative to Premier Protein Shake) &mdash; LOW-CONFIDENCE: HQ in Jay, ME confirmed, but the actual bottling-facility location was not independently confirmed.</li>
+      <li><strong>Nanit</strong> (founded 2016, alternative to Owlet Dream Duo Baby Monitor) &mdash; LOW-CONFIDENCE: NYC HQ and incorporation verified, but hardware is manufactured in China, not domestic.</li>
+      <li><strong>Dearborn Denim &amp; Apparel</strong> (founded 2016, alternative to Levi's Denim) &mdash; VERIFIED: Chicago, IL manufacturing independently corroborated by Sourcing Journal and the Alliance for American Manufacturing, though its separate 100% domestic-material-sourcing claim remains a LOW-CONFIDENCE caveat.</li>
+    </ul>
+  </div>
+
+  <!-- 8. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology</h2>
+    <p><strong>Input:</strong> this run is based entirely on the sibling Competitor Research Agent's June 29, 2026 report at <code>../Competitor Research Agent/docs/June29_2026/index.html</code>. 15 products were parsed; 4 were hard-excluded as Electronics per project rules (Apple Watch Series 11, Amazon Fire TV Stick, Apple AirPods Pro 3, Blink Outdoor 4 Camera+Doorbell Bundle), leaving 11 products across 9 categories carried forward.</p>
+    <p><strong>Display order:</strong> NEW products before RECURRING, then the $25&ndash;$100 price band before outside-band/unconfirmed, then higher repurchase-interest before lower, per the workflow's documented sort precedence. The price band governs display order only, not inclusion &mdash; all 11 products were researched regardless of price. Only one product in this run's data falls confirmed within the $25&ndash;$100 band at its original list price (Stanley Quencher H2.0 Tumbler, $40 list before its current ~$20 sale price); the rest were outside the band, below it, or had price not confirmed in the sibling report.</p>
+    <p><strong>Alternative research:</strong> four general-purpose research agents ran in parallel, using web search and web fetch only, with a soft cap of 2&ndash;3 alternatives per product, documenting per product where the lead trail dried up before the cap (or, for Crest 3D Whitestrips, where a per-product circuit breaker of repeated source disqualifications was triggered with zero qualifying alternatives). A business's own "Made in USA"/American-owned claim was never counted alone &mdash; VERIFIED required a second independent source (certification body, independent press naming the manufacturing location, public business registry, or government record); a single-source claim is labeled LOW-CONFIDENCE and was never silently upgraded or dropped. Of 23 alternatives found across the 11 products, 12 are VERIFIED and 11 are LOW-CONFIDENCE.</p>
+    <p><strong>Editorial reconciliation rule applied this run:</strong> the four research agents' per-alternative confidence language sometimes mixed two different axes &mdash; company ownership/incorporation versus the physical product's actual manufacturing location &mdash; into a single tag. This report applies one consistent rule throughout: <em>VERIFIED means the physical product's domestic manufacturing is independently corroborated by two or more sources; ownership/HQ caveats are disclosed in the card text but do not change the tag. Conversely, an American HQ/ownership claim with no verified domestic manufacturing (or with confirmed foreign manufacturing) downgrades to LOW-CONFIDENCE, since the core "made in America" product claim is what this report is actually trying to verify.</em> This is what keeps Oreck VERIFIED (Hong Kong-parent-owned, but independently confirmed Tennessee manufacturing) and Kirby VERIFIED (Berkshire Hathaway-owned, but independently confirmed Ohio manufacturing) on the same footing as Dearborn Denim (VERIFIED manufacturing, despite its own separate, weaker materials-sourcing claim) &mdash; while it downgrades LMNT, Nanit, and Sense-U to LOW-CONFIDENCE despite each having a verified US business presence, because none has independently verified domestic manufacturing of the physical product itself.</p>
+    <p><strong>Source-conflict disclosure:</strong> Babysense (an Owlet Dream Duo alternative) claims a 1991 US founding, while an independent Jerusalem Post source instead credits the product's invention to Israeli inventors Victor Yotam and Haim Shtalryd of Hisense Ltd.; two different US business addresses for the company were also found and never reconciled. Per this report's standing rule, genuine source conflicts are surfaced explicitly rather than silently resolved in either direction &mdash; Babysense is included as LOW-CONFIDENCE with the conflict disclosed in full, not omitted from the report.</p>
+    <p><strong>Methodology departure &mdash; licensed IP:</strong> KPop Demon Hunters HUNTR/X Merchandise is licensed Netflix intellectual property, so no literal American-owned competitor exists to swap in. Its three alternatives (Liberty Puzzles, True South Puzzle Company, Royal Apparel) are analogous-category substitutions &mdash; general-purpose American puzzle and apparel manufacturers in the same product categories &mdash; rather than direct competitor swaps. This is flagged here rather than presented as equivalent to the other ten products' direct-alternative framing.</p>
+    <p><strong>Degraded success &mdash; Crest 3D Whitestrips Professional Effects:</strong> this product's per-product circuit breaker (3+ source disqualifications with 0 qualifying alternatives) was triggered. Five candidate brands were investigated and ruled out for five distinct reasons: Made By Dentists/Spotlight Oral Care (Ireland-headquartered), GuruNanda (whitening strips specifically confirmed China-manufactured, despite verified domestic manufacturing of other GuruNanda products), Beaming White (no whitening-strip product in its catalog &mdash; category mismatch), Lumineux (customer-reported China-origin packaging), and NatruSmile (an inconclusive Wyoming registered-agent address, not a confirmed factory). The report ships with this product's section present but containing zero alternative cards and a full disqualification trail, rather than silently omitting the product or forcing an unverified pick.</p>
+    <p><strong>Notable exclusions:</strong> checked and ruled out for foreign ownership, contradicting manufacturing evidence, or a formal advertising-claim rebuke, not listed as alternatives above: Tervis (Chapter 11 bankruptcy Sept 2024, current stainless tumbler lines sourced from China), Klean Kanteen, Hydro Flask, YETI, and Bison Coolers (all Stanley Tumbler candidates disqualified for overseas-reliant manufacturing); Weruva (Cascade... wait, a Temptations Cat Treats candidate, US-headquartered and family-founded but manufactured in Thailand); Clean People (a Cascade Dishwasher Pods candidate &mdash; the BBB's National Advertising Division formally recommended it discontinue its "Made in USA" claim in March 2025 after a challenge from Earth Breeze); RSP Nutrition/TrueFit (a Premier Protein Shake candidate, excluded for a powder-vs-RTD format mismatch plus a single-source manufacturing claim); LeapFrog (a Toniebox candidate, Hong Kong-based VTech-owned since 2016 per SEC EDGAR); Harbor, Eufy, and Miku (Owlet Baby Monitor candidates, excluded for a missing health-tracking feature, Anker/China ownership, and unconfirmed ownership respectively); Cure Hydration (a Liquid I.V. candidate, manufacturing site undisclosed).</p>
+    <p><strong>Category-wide findings:</strong> Toys &amp; Games and Home &amp; Kitchen produced the deepest VERIFIED showing this run (3 each &mdash; KPop Merch's three analogous-category alternatives, and Shark NV356E Vacuum's Riccar/Kirby/Oreck trio). Pet Supplies and Apparel followed with 2 VERIFIED each (Temptations' Fromm/Vital Essentials pair, and Levi's Origin USA/Dearborn Denim pair). By contrast, Grocery, Beauty &amp; Personal Care, and Baby were the thinnest categories: Liquid I.V. and Premier Protein Shake (Grocery) each turned up only LOW-CONFIDENCE candidates, Crest 3D Whitestrips (Beauty &amp; Personal Care) cleared zero alternatives at all, and Owlet's three Baby-category candidates &mdash; Nanit, Sense-U, and the conflict-flagged Babysense &mdash; are all LOW-CONFIDENCE, none clearing independently verified domestic manufacturing.</p>
+    <p><strong>Distinct source URLs:</strong> 117 distinct source URLs were checked across the four research agents' combined findings, spanning company sites, independent trade press (Sourcing Journal, WWD, PR Newswire), state and federal government records (SEC EDGAR, Oklahoma Department of Commerce, Tennessee state government), regional business press (St. Louis Post-Dispatch, Tulsa World, NJBIZ), certification/accreditation bodies (BBB, Intertek), curated directories (USA Love List, Truly American Made, AllAmerican.org, Shop Made in TN), and business-data aggregators (ZoomInfo, Tracxn, Crunchbase) for facts not otherwise corroborated by press.</p>
+  </div>
+
+  <!-- 9. Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span><a href="../June25_2026/index.html">&larr; Previous report (June 25, 2026)</a></span>
+  </div>
+
+</div>
+</body>
+</html>

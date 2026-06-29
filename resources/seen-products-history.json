@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-06-25",
-  "last_processed_sibling_report": "June25_2026",
+  "last_updated": "2026-06-29",
+  "last_processed_sibling_report": "June29_2026",
   "window_days": 14,
   "products": [
     {
@@ -89,9 +89,9 @@
       "category": "Grocery",
       "amazon_price_band": "price not confirmed",
       "first_seen": "2026-06-23",
-      "last_seen": "2026-06-23",
-      "seen_dates": ["2026-06-23"],
-      "alternatives_count": 5
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-23", "2026-06-29"],
+      "alternatives_count": 2
     },
     {
       "key": "purina-pro-plan-sensitive-skin-stomach-dry-dog-food",
@@ -317,10 +317,10 @@
       "key": "toniebox-2-audio-player-bundles",
       "name": "Toniebox 2 Audio Player Bundles",
       "category": "Toys & Games",
-      "amazon_price_band": "price not confirmed",
+      "amazon_price_band": "$129.99, down from $209.99",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-25"],
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-25", "2026-06-29"],
       "alternatives_count": 1
     },
     {
@@ -337,11 +337,11 @@
       "key": "owlet-dream-duo-baby-monitor",
       "name": "Owlet Dream Duo (Gen 3) Smart Baby Monitor",
       "category": "Baby",
-      "amazon_price_band": "$256.49",
+      "amazon_price_band": "$256.49, down from $379.99",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-25"],
-      "alternatives_count": 1
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-25", "2026-06-29"],
+      "alternatives_count": 3
     },
     {
       "key": "coleman-snap-n-go-collapsible-cooler",
@@ -362,6 +362,86 @@
       "last_seen": "2026-06-25",
       "seen_dates": ["2026-06-25"],
       "alternatives_count": 2
+    },
+    {
+      "key": "temptations-cat-treats",
+      "name": "Temptations Cat Treats",
+      "category": "Pet Supplies",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-29"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "kpop-demon-hunters-huntrx-merchandise",
+      "name": "KPop Demon Hunters HUNTR/X Merchandise",
+      "category": "Toys & Games",
+      "amazon_price_band": "apparel from under $20; puzzle price not confirmed",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-29"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "crest-3d-whitestrips-professional-effects",
+      "name": "Crest 3D Whitestrips Professional Effects",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "35% off (exact dollar price not confirmed)",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-29"],
+      "alternatives_count": 0
+    },
+    {
+      "key": "levis-denim",
+      "name": "Levi's Denim (Prime Day markdowns)",
+      "category": "Apparel",
+      "amazon_price_band": "up to 65% off (exact dollar price not confirmed)",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-29"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "stanley-quencher-h2-tumbler",
+      "name": "Stanley Quencher H2.0 Insulated Tumbler",
+      "category": "Sports & Outdoors",
+      "amazon_price_band": "~$20, down from $40",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-29"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "liquid-iv-hydration-multiplier",
+      "name": "Liquid I.V. Hydration Multiplier",
+      "category": "Grocery",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-29"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "cascade-platinum-plus-dishwasher-pods",
+      "name": "Cascade Platinum Plus Dishwasher Pods",
+      "category": "Health & Household",
+      "amazon_price_band": "$18.99 for 62 pods, down from $24.99",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-29"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "shark-nv356e-upright-vacuum",
+      "name": "Shark NV356E Navigator Lift-Away Upright Vacuum",
+      "category": "Home & Kitchen",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-29"],
+      "alternatives_count": 3
     }
   ]
 }
