@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Top Sellers — June 29, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  /* 1. Header band */
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  /* 2. Executive summary */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  /* 3. Quick stats */
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 150px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  /* 4. Top movers grid */
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
+  .card-meta { font-size: 12.5px; color: var(--muted); }
+  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .card-sources a { color: #2563eb; text-decoration: none; }
+
+  /* 5. Category chart */
+  .chart-wrap { padding: 10px 6px; }
+
+  /* 6. New entrants spotlight */
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+
+  /* 7. Methodology footer */
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  /* 8. Footer nav */
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <div class="date">June 29, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 20 sources checked</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">This report lands three days after Prime Day 2026 (June 23&ndash;26) closed, and leans on retrospective sales-data press rather than live category pages: every WebFetch attempt today returned 403, including a Wikipedia control test, so the entire shortlist below is built from WebSearch-derived discovery. Numerator's official Prime Day tally names Temptations Cat Treats, Premier Protein Shakes, and Liquid I.V. as the event's top-selling items &mdash; though sources disagree on whether Temptations was the single #1 seller or one of three &mdash; reinforcing a "restocking over splurging" narrative flagged by The Food Institute. Electronics held its usual grip on the list (AirPods Pro 3, Apple Watch Series 11, Fire TV Stick, a Blink camera/doorbell bundle), with the Apple Watch Series 11 now the only product to appear in all four reports issued to date. The most interesting non-Electronics story is a licensed-merchandise wave tied to Netflix's KPop Demon Hunters film alongside a viral TikTok-driven run on Crest 3D Whitestrips. Two household items &mdash; Cascade Platinum Plus pods and a Shark NV356E upright vacuum &mdash; could only be corroborated by a single source despite repeated searches, so both are flagged low-confidence rather than upgraded to look cleaner.</div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">15</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="num">8</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">7</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">13</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">2</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">10</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Top movers grid -->
+  <h2 class="section-title">Top Movers</h2>
+  <div class="grid">
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Temptations Cat Treats</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Numerator's official Prime Day 2026 sales tally and RetailWire's coverage name Temptations cat treats as the single top-selling item of the event. The Food Institute and PMG's Day 3 recap instead describe it as one of three top-selling items alongside Premier Protein Shakes and Liquid I.V. &mdash; sources disagree on the exact ranking, so both framings are reported here rather than picking one.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth &mdash; named a top Prime Day seller by Numerator's own data, a qualitative read on post-event momentum, not a precise forecast.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.retailwire.com">retailwire.com</a> (June 29, 2026), <a href="https://www.pmg.com">pmg.com</a> (June 29, 2026), <a href="https://foodinstitute.com">foodinstitute.com</a> (June 29, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">KPop Demon Hunters HUNTR/X Merchandise</h3>
+        <span class="pill" style="background:#f59e0b">Toys & Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Billboard reports strong unit sales on a HUNTR/X-branded puzzle and SheKnows reports a sales surge on tees and hoodies, both tied to Netflix's KPop Demon Hunters, now one of the platform's most-watched animated films with over 325 million views. The licensing wave is spreading from streaming buzz directly into Amazon toy and apparel sales.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth &mdash; tied to a still-climbing streaming phenomenon, a qualitative read on momentum rather than a precise forecast.</div>
+      <div class="card-meta">Apparel pieces from under $20; puzzle price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.billboard.com">billboard.com</a> (June 29, 2026), <a href="https://www.sheknows.com">sheknows.com</a> (June 29, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Crest 3D Whitestrips Professional Effects</h3>
+        <span class="pill" style="background:#db2777">Beauty & Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">WWD reports a 35% discount alongside more than 68,000 reviews and over 60 million TikTok posts referencing the product, describing a viral social-media-driven demand spike. Amazon's own product listing independently shows a "#1 Bestseller" badge with "60,000+ bought in the past month," corroborating sustained high-volume sales.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth &mdash; viral social attention plus a live bestseller badge, a qualitative read rather than a precise forecast.</div>
+      <div class="card-meta">35% off (exact dollar price not confirmed)</div>
+      <div class="card-sources">Sources: <a href="https://wwd.com">wwd.com</a> (June 29, 2026), <a href="https://www.amazon.com">amazon.com</a> (June 29, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Levi's Denim (Prime Day markdowns)</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">DealNews reported markdowns of up to 65% off Levi's denim during Prime Day, with SheKnows and Who What Wear independently corroborating the sale and noting popular sizes sold out before the event ended. The denim discount was one of the more visible Apparel-category Prime Day stories this year.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau &mdash; the headline discount window closed with Prime Day on June 26, a qualitative read rather than a precise forecast.</div>
+      <div class="card-meta">Up to 65% off (exact dollar price not confirmed)</div>
+      <div class="card-sources">Sources: <a href="https://www.dealnews.com">dealnews.com</a> (June 29, 2026), <a href="https://www.sheknows.com">sheknows.com</a> (June 29, 2026), <a href="https://www.whowhatwear.com">whowhatwear.com</a> (June 29, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Stanley Quencher H2.0 Insulated Tumbler</h3>
+        <span class="pill" style="background:#ea580c">Sports & Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">E! Online, 9to5Toys, HuffPost, and DealNews all independently confirm the Stanley Quencher H2.0 dropped to roughly $20 from $40 in Lilac and Violet Blossom colorways during Prime Day, with HuffPost citing discounts up to 56% off across the line. Four independent outlets converging on the same price point is unusually strong corroboration for a single item.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau &mdash; the deep discount was Prime Day-specific, a qualitative read rather than a precise forecast.</div>
+      <div class="card-meta">~$20, down from $40</div>
+      <div class="card-sources">Sources: <a href="https://www.eonline.com">eonline.com</a> (June 29, 2026), <a href="https://www.9to5toys.com">9to5toys.com</a> (June 29, 2026), <a href="https://www.huffpost.com">huffpost.com</a> (June 29, 2026), <a href="https://www.dealnews.com">dealnews.com</a> (June 29, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Liquid I.V. Hydration Multiplier</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">PMG's Day 3 Prime Day recap and The Food Institute both name Liquid I.V. Hydration Multiplier as one of the event's top-three selling items, alongside Temptations cat treats and Premier Protein Shakes, fitting a broader "restocking over splurging" pattern in this year's grocery/household sales.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; consistent with a staple-restocking pattern rather than a one-off spike, a qualitative read rather than a precise forecast.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.pmg.com">pmg.com</a> (June 29, 2026), <a href="https://foodinstitute.com">foodinstitute.com</a> (June 29, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple Watch Series 11</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 4/4)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">NBC reports the Apple Watch Series 11 discounted roughly 30% during Prime Day, while Accio's bestseller-rank analysis independently describes the watch as continuing to "dominate" Amazon's Electronics category. It is the only product to appear in every one of the four daily reports issued so far.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth &mdash; a perfect 4/4 appearance streak across reports, a qualitative read rather than a precise forecast.</div>
+      <div class="card-meta">~30% off (exact dollar price not confirmed)</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com">nbcnews.com</a> (June 29, 2026), <a href="https://www.accio.com">accio.com</a> (June 29, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Amazon Fire TV Stick</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2/4)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">NBC reports discounts of roughly 50% on Fire TV Stick models during Prime Day; GeekSpin independently cites the Fire TV Stick HD specifically falling from $35 to $16 (about 54% off), and Android Central separately reports discounts up to 55% across the line.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau &mdash; driven by an event-specific discount window that has closed, a qualitative read rather than a precise forecast.</div>
+      <div class="card-meta">$16, down from $35 (Fire TV Stick HD)</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com">nbcnews.com</a> (June 29, 2026), <a href="https://geekspin.co">geekspin.co</a> (June 29, 2026), <a href="https://www.androidcentral.com">androidcentral.com</a> (June 29, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirPods Pro 3</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2/4)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Accio's bestseller-rank analysis lists AirPods Pro 3 among the Electronics items continuing to dominate Amazon's charts, and NBC separately lists the product among readers' most-purchased Prime Day items, corroborating sustained demand from two independent angles.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; sustained presence on bestseller rankings beyond the discount window, a qualitative read rather than a precise forecast.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.accio.com">accio.com</a> (June 29, 2026), <a href="https://www.nbcnews.com">nbcnews.com</a> (June 29, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Blink Outdoor 4 Camera + Battery Doorbell Bundle</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2/4)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">TheStreet reports the Blink Outdoor 4 camera and battery doorbell bundle discounted as much as 81% during Prime Day, with Security.org independently corroborating deep markdowns across Blink's smart-home camera lineup during the same period.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau &mdash; an event-specific discount depth that has likely eased post-Prime Day, a qualitative read rather than a precise forecast.</div>
+      <div class="card-meta">Up to 81% off (exact dollar price not confirmed)</div>
+      <div class="card-sources">Sources: <a href="https://www.thestreet.com">thestreet.com</a> (June 29, 2026), <a href="https://www.security.org">security.org</a> (June 29, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Premier Protein Shake</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2/4)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">PMG's Day 3 Prime Day recap and The Food Institute both name Premier Protein Shakes among the event's top-selling items, part of the same staple-restocking pattern as Liquid I.V. and Temptations cat treats this Prime Day season.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; consistent with a recurring staple-restocking pattern, a qualitative read rather than a precise forecast.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.pmg.com">pmg.com</a> (June 29, 2026), <a href="https://foodinstitute.com">foodinstitute.com</a> (June 29, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Owlet Dream Duo (Gen 3) Smart Baby Monitor</h3>
+        <span class="pill" style="background:#e11d48">Baby</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2/4)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Amazon's own About Amazon Prime Day coverage and The Bump both independently confirm the Owlet Dream Duo (Gen 3) dropped from $379.99 to $256.49, a 33% discount, during Prime Day, with The Bump highlighting it as a notable baby-tech deal.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; a recurring deal item with consistent baby-tech press coverage, a qualitative read rather than a precise forecast.</div>
+      <div class="card-meta">$256.49, down from $379.99 (33% off)</div>
+      <div class="card-sources">Sources: <a href="https://www.aboutamazon.com">aboutamazon.com</a> (June 29, 2026), <a href="https://www.thebump.com">thebump.com</a> (June 29, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Toniebox 2 Audio Player Bundles</h3>
+        <span class="pill" style="background:#f59e0b">Toys & Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2/4)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">About Amazon's Prime Day coverage and The Bump both confirm the Toniebox 2 bundles (including Disney Princess, My First Tonies Farm, and Winnie the Pooh sets) dropped from $209.99 to $129.99, a 38% discount, during the event.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; a recurring deal item across multiple licensed bundle variants, a qualitative read rather than a precise forecast.</div>
+      <div class="card-meta">$129.99, down from $209.99 (38% off)</div>
+      <div class="card-sources">Sources: <a href="https://www.aboutamazon.com">aboutamazon.com</a> (June 29, 2026), <a href="https://www.thebump.com">thebump.com</a> (June 29, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Cascade Platinum Plus Dishwasher Pods</h3>
+        <span class="pill" style="background:#0d9488">Health & Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">NBC reports Cascade Platinum Plus dishwasher pods discounted from $24.99 to $18.99 for a 62-pod box (about $0.30 per pod) during Prime Day. Repeated searches did not surface a second independent source corroborating this specific discount, so it remains single-sourced.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; a routine household-staple deal, a qualitative read rather than a precise forecast.</div>
+      <div class="card-meta">$18.99 for 62 pods, down from $24.99</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com">nbcnews.com</a> (June 29, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Shark NV356E Navigator Lift-Away Upright Vacuum</h3>
+        <span class="pill" style="background:#16a34a">Home & Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">NBC reports a notable Prime Day discount on the Shark NV356E Navigator Lift-Away upright vacuum. No second independent source could be located despite multiple targeted searches, so this item is flagged low-confidence rather than upgraded.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady &mdash; a single-sourced deal item, a qualitative read rather than a precise forecast.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com">nbcnews.com</a> (June 29, 2026)</div>
+    </div>
+  </div>
+
+  <!-- 5. Category breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="100%" height="350" viewBox="0 0 700 350">
+      <text x="0" y="22" font-size="13" fill="#1e293b">Electronics</text>
+      <rect x="160" y="8" width="400" height="18" rx="4" fill="#2563eb"/>
+      <text x="568" y="22" font-size="12" fill="#475569">4</text>
+
+      <text x="0" y="56" font-size="13" fill="#1e293b">Grocery</text>
+      <rect x="160" y="42" width="200" height="18" rx="4" fill="#65a30d"/>
+      <text x="368" y="56" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="90" font-size="13" fill="#1e293b">Toys &amp; Games</text>
+      <rect x="160" y="76" width="200" height="18" rx="4" fill="#f59e0b"/>
+      <text x="368" y="90" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="124" font-size="13" fill="#1e293b">Pet Supplies</text>
+      <rect x="160" y="110" width="100" height="18" rx="4" fill="#92400e"/>
+      <text x="268" y="124" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="158" font-size="13" fill="#1e293b">Beauty &amp; Personal Care</text>
+      <rect x="160" y="144" width="100" height="18" rx="4" fill="#db2777"/>
+      <text x="268" y="158" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="192" font-size="13" fill="#1e293b">Apparel</text>
+      <rect x="160" y="178" width="100" height="18" rx="4" fill="#7c3aed"/>
+      <text x="268" y="192" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="226" font-size="13" fill="#1e293b">Sports &amp; Outdoors</text>
+      <rect x="160" y="212" width="100" height="18" rx="4" fill="#ea580c"/>
+      <text x="268" y="226" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="260" font-size="13" fill="#1e293b">Baby</text>
+      <rect x="160" y="246" width="100" height="18" rx="4" fill="#e11d48"/>
+      <text x="268" y="260" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="294" font-size="13" fill="#1e293b">Health &amp; Household</text>
+      <rect x="160" y="280" width="100" height="18" rx="4" fill="#0d9488"/>
+      <text x="268" y="294" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="328" font-size="13" fill="#1e293b">Home &amp; Kitchen</text>
+      <rect x="160" y="314" width="100" height="18" rx="4" fill="#16a34a"/>
+      <text x="268" y="328" font-size="12" fill="#475569">1</text>
+    </svg>
+  </div>
+
+  <!-- 6. New entrants spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <ul>
+      <li><strong>Temptations Cat Treats</strong> &mdash; named by Numerator as a top (possibly #1) Prime Day 2026 seller overall, an unusual breakout for a pet-care staple.</li>
+      <li><strong>KPop Demon Hunters HUNTR/X Merchandise</strong> &mdash; a licensing wave riding Netflix's most-watched animated film, spilling into toy and apparel sales.</li>
+      <li><strong>Crest 3D Whitestrips Professional Effects</strong> &mdash; a TikTok-viral beauty staple with 60+ million posts referencing it and a live "#1 Bestseller" badge.</li>
+      <li><strong>Levi's Denim (Prime Day markdowns)</strong> &mdash; deep apparel discounts (up to 65% off) that reportedly sold out in popular sizes.</li>
+      <li><strong>Stanley Quencher H2.0 Insulated Tumbler</strong> &mdash; four independent outlets converged on the same ~$20 price point, unusually strong corroboration for one item.</li>
+      <li><strong>Liquid I.V. Hydration Multiplier</strong> &mdash; part of a broader "restocking over splurging" grocery/household trend this Prime Day season.</li>
+      <li><strong>Cascade Platinum Plus Dishwasher Pods</strong> (low-confidence) &mdash; a routine household deal that could only be corroborated by one source today.</li>
+      <li><strong>Shark NV356E Navigator Lift-Away Upright Vacuum</strong> (low-confidence) &mdash; flagged for visibility despite only a single source confirming the deal.</li>
+    </ul>
+  </div>
+
+  <!-- 7. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p>Candidates were sourced via WebSearch only. Every WebFetch attempt today returned 403 Forbidden &mdash; including a deliberate Wikipedia control test &mdash; confirming the block was tool-wide rather than Amazon-specific. As a result, Amazon's Movers &amp; Shakers and Best Sellers pages could not be directly fetched today; this report relies entirely on WebSearch-derived discovery of retail press, brand newsroom coverage, and deal-aggregator reporting, per the workflow's documented fallback procedure.</p>
+    <p>A product is marked VERIFIED only when corroborated by at least two independent sources; single-source candidates are marked LOW-CONFIDENCE and never silently upgraded. Where sources disagreed on a specific ranking (Temptations Cat Treats' exact position in Prime Day's sales tally), that disagreement is reported explicitly rather than resolved by guessing.</p>
+    <p><strong>Judgment call:</strong> Prime Day 2026 ended on June 26, three days before this report. With live category pages inaccessible, this report leans on this week's retrospective press analyzing Numerator's confirmed Prime Day sales data as the most current verifiable signal available, rather than treating the event's end as disqualifying.</p>
+    <p>Distinct source domains checked today: accio.com, amazon.com, androidcentral.com, aboutamazon.com, billboard.com, dealnews.com, eonline.com, foodinstitute.com, geekspin.co, huffpost.com, nbcnews.com, 9to5toys.com, pmg.com, retailwire.com, security.org, sheknows.com, thebump.com, thestreet.com, whowhatwear.com, wwd.com.</p>
+  </div>
+
+  <!-- 8. Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../June25_2026/">June 25</a></span>
+  </div>
+
+</div>
+</body>
+</html>

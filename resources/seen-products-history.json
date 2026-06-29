@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-25",
+  "last_updated": "2026-06-29",
   "window_days": 14,
   "products": [
     {
@@ -7,16 +7,16 @@
       "name": "Apple AirPods Pro 3",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-17", "2026-06-29"]
     },
     {
       "key": "apple-watch-series-11",
       "name": "Apple Watch Series 11",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-17", "2026-06-22", "2026-06-25"]
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-17", "2026-06-22", "2026-06-25", "2026-06-29"]
     },
     {
       "key": "ring-battery-doorbell",
@@ -143,8 +143,8 @@
       "name": "Amazon Fire TV Stick",
       "category": "Electronics",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22",
-      "seen_dates": ["2026-06-22"]
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-22", "2026-06-29"]
     },
     {
       "key": "dumpling-squishy-blind-box",
@@ -167,8 +167,8 @@
       "name": "Premier Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22",
-      "seen_dates": ["2026-06-22"]
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-22", "2026-06-29"]
     },
     {
       "key": "flonase-allergy-relief-nasal-spray",
@@ -255,16 +255,16 @@
       "name": "Blink Outdoor 4 Wireless Security Camera",
       "category": "Electronics",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-25"]
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-25", "2026-06-29"]
     },
     {
       "key": "owlet-dream-duo-baby-monitor",
       "name": "Owlet Dream Duo (Gen 3) Smart Baby Monitor",
       "category": "Baby",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-25"]
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-25", "2026-06-29"]
     },
     {
       "key": "pupgum-dog-dental-chews",
@@ -303,8 +303,8 @@
       "name": "Toniebox 2 Audio Player Bundles",
       "category": "Toys & Games",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-25"]
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-25", "2026-06-29"]
     },
     {
       "key": "levoit-core-300p-air-purifier",
@@ -345,6 +345,70 @@
       "first_seen": "2026-06-25",
       "last_seen": "2026-06-25",
       "seen_dates": ["2026-06-25"]
+    },
+    {
+      "key": "liquid-iv-hydration-multiplier",
+      "name": "Liquid I.V. Hydration Multiplier",
+      "category": "Grocery",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-29"]
+    },
+    {
+      "key": "temptations-cat-treats",
+      "name": "Temptations Cat Treats",
+      "category": "Pet Supplies",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-29"]
+    },
+    {
+      "key": "crest-3d-whitestrips-professional-effects",
+      "name": "Crest 3D Whitestrips Professional Effects",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-29"]
+    },
+    {
+      "key": "stanley-quencher-h2-tumbler",
+      "name": "Stanley Quencher H2.0 Insulated Tumbler",
+      "category": "Sports & Outdoors",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-29"]
+    },
+    {
+      "key": "kpop-demon-hunters-huntrix-merch",
+      "name": "KPop Demon Hunters HUNTR/X Merchandise",
+      "category": "Toys & Games",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-29"]
+    },
+    {
+      "key": "levis-prime-day-denim",
+      "name": "Levi's Denim (Prime Day markdowns)",
+      "category": "Apparel",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-29"]
+    },
+    {
+      "key": "cascade-platinum-dishwasher-pods",
+      "name": "Cascade Platinum Plus Dishwasher Pods",
+      "category": "Health & Household",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-29"]
+    },
+    {
+      "key": "shark-nv356e-navigator-vacuum",
+      "name": "Shark NV356E Navigator Lift-Away Upright Vacuum",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-06-29",
+      "seen_dates": ["2026-06-29"]
     }
   ]
 }
