@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-29",
+  "last_updated": "2026-07-02",
   "window_days": 14,
   "products": [
     {
@@ -7,48 +7,24 @@
       "name": "Apple AirPods Pro 3",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-17", "2026-06-29"]
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-06-17", "2026-06-29", "2026-07-02"]
     },
     {
       "key": "apple-watch-series-11",
       "name": "Apple Watch Series 11",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-17", "2026-06-22", "2026-06-25", "2026-06-29"]
-    },
-    {
-      "key": "ring-battery-doorbell",
-      "name": "Ring Battery Doorbell",
-      "category": "Electronics",
-      "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
-    },
-    {
-      "key": "oura-ring-4",
-      "name": "Oura Ring 4",
-      "category": "Electronics",
-      "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-06-17", "2026-06-22", "2026-06-25", "2026-06-29", "2026-07-02"]
     },
     {
       "key": "medicube-zero-pore-pad-2",
       "name": "Medicube Zero Pore Pad 2.0",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-22",
-      "seen_dates": ["2026-06-17", "2026-06-22"]
-    },
-    {
-      "key": "mamonde-amazon-launch",
-      "name": "Mamonde (Amorepacific) Amazon launch line",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-06-17", "2026-06-22", "2026-07-02"]
     },
     {
       "key": "celsius-energy-drink-variety-pack",
@@ -59,28 +35,12 @@
       "seen_dates": ["2026-06-17", "2026-06-22"]
     },
     {
-      "key": "bounty-quick-size-paper-towels",
-      "name": "Bounty Quick Size Paper Towels",
-      "category": "Health & Household",
-      "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
-    },
-    {
       "key": "owala-freesip-water-bottle",
       "name": "Owala FreeSip Insulated Stainless Steel Water Bottle",
       "category": "Sports & Outdoors",
       "first_seen": "2026-06-17",
       "last_seen": "2026-06-22",
       "seen_dates": ["2026-06-17", "2026-06-22"]
-    },
-    {
-      "key": "hydro-flask-supernova-purple",
-      "name": "Hydro Flask Supernova Purple (Amazon-exclusive colorway)",
-      "category": "Sports & Outdoors",
-      "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
     },
     {
       "key": "dr-elseys-clumping-cat-litter",
@@ -95,48 +55,8 @@
       "name": "Pampers Swaddlers Diapers, Size 5",
       "category": "Baby",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-06-22",
-      "seen_dates": ["2026-06-17", "2026-06-22"]
-    },
-    {
-      "key": "le-creuset-nonstick-pro-fry-pan",
-      "name": "Le Creuset Toughened Nonstick PRO Fry Pan",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
-    },
-    {
-      "key": "rust-oleum-painters-touch-2x",
-      "name": "Rust-Oleum Painter's Touch 2X Ultra Cover Spray Paint",
-      "category": "Tools & Home Improvement",
-      "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
-    },
-    {
-      "key": "amazon-basics-copy-paper",
-      "name": "Amazon Basics Multipurpose Copy Printer Paper",
-      "category": "Office Products",
-      "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
-    },
-    {
-      "key": "furreal-snuggles-smiling-sloth",
-      "name": "furReal Snuggles the Smiling Sloth",
-      "category": "Toys & Games",
-      "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
-    },
-    {
-      "key": "carhartt-force-cooling-collection",
-      "name": "Carhartt Force Cooling Collection",
-      "category": "Apparel",
-      "first_seen": "2026-06-17",
-      "last_seen": "2026-06-17",
-      "seen_dates": ["2026-06-17"]
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-06-17", "2026-06-22", "2026-07-02"]
     },
     {
       "key": "amazon-fire-tv-stick",
@@ -159,16 +79,16 @@
       "name": "Hero Cosmetics Mighty Patch",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-22",
-      "seen_dates": ["2026-06-22"]
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-06-22", "2026-07-02"]
     },
     {
       "key": "premier-protein-shake",
       "name": "Premier Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-22", "2026-06-29"]
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-06-22", "2026-06-29", "2026-07-02"]
     },
     {
       "key": "flonase-allergy-relief-nasal-spray",
@@ -303,8 +223,8 @@
       "name": "Toniebox 2 Audio Player Bundles",
       "category": "Toys & Games",
       "first_seen": "2026-06-25",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-25", "2026-06-29"]
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-06-25", "2026-06-29", "2026-07-02"]
     },
     {
       "key": "levoit-core-300p-air-purifier",
@@ -351,24 +271,24 @@
       "name": "Liquid I.V. Hydration Multiplier",
       "category": "Grocery",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-29"]
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-06-29", "2026-07-02"]
     },
     {
       "key": "temptations-cat-treats",
       "name": "Temptations Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-29"]
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-06-29", "2026-07-02"]
     },
     {
       "key": "crest-3d-whitestrips-professional-effects",
       "name": "Crest 3D Whitestrips Professional Effects",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-29"]
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-06-29", "2026-07-02"]
     },
     {
       "key": "stanley-quencher-h2-tumbler",
@@ -399,16 +319,72 @@
       "name": "Cascade Platinum Plus Dishwasher Pods",
       "category": "Health & Household",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-29"]
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-06-29", "2026-07-02"]
     },
     {
       "key": "shark-nv356e-navigator-vacuum",
       "name": "Shark NV356E Navigator Lift-Away Upright Vacuum",
       "category": "Home & Kitchen",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-29"]
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-06-29", "2026-07-02"]
+    },
+    {
+      "key": "hefty-ultra-strong-trash-bags",
+      "name": "Hefty Ultra Strong Trash Bags (13-Gallon)",
+      "category": "Health & Household",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-07-02"]
+    },
+    {
+      "key": "america-250-anniversary-apparel",
+      "name": "America 250 Anniversary Apparel & Merch",
+      "category": "Apparel",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-07-02"]
+    },
+    {
+      "key": "lego-star-wars-smart-play",
+      "name": "LEGO Star Wars SMART Play Sets",
+      "category": "Toys & Games",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-07-02"]
+    },
+    {
+      "key": "apple-airtag-4-pack",
+      "name": "Apple AirTag (4-Pack)",
+      "category": "Electronics",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-07-02"]
+    },
+    {
+      "key": "cornhole-sets-outdoor-games",
+      "name": "Cornhole Sets (Portable Lawn Game Sets)",
+      "category": "Sports & Outdoors",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-07-02"]
+    },
+    {
+      "key": "frogg-toggs-chilly-pad",
+      "name": "FROGG TOGGS Chilly Pad Cooling Towel",
+      "category": "Sports & Outdoors",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-07-02"]
+    },
+    {
+      "key": "the-ordinary-niacinamide-serum",
+      "name": "The Ordinary Niacinamide 10% + Zinc 1% Serum",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-07-02",
+      "last_seen": "2026-07-02",
+      "seen_dates": ["2026-07-02"]
     }
   ]
 }
