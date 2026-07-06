@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02",
+  "last_updated": "2026-07-06",
   "window_days": 14,
   "products": [
     {
@@ -7,16 +7,16 @@
       "name": "Apple AirPods Pro 3",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-06-17", "2026-06-29", "2026-07-02"]
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-06-17", "2026-06-29", "2026-07-02", "2026-07-06"]
     },
     {
       "key": "apple-watch-series-11",
       "name": "Apple Watch Series 11",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-06-17", "2026-06-22", "2026-06-25", "2026-06-29", "2026-07-02"]
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-06-17", "2026-06-22", "2026-06-25", "2026-06-29", "2026-07-02", "2026-07-06"]
     },
     {
       "key": "medicube-zero-pore-pad-2",
@@ -87,8 +87,8 @@
       "name": "Premier Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-06-22", "2026-06-29", "2026-07-02"]
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-06-22", "2026-06-29", "2026-07-02", "2026-07-06"]
     },
     {
       "key": "flonase-allergy-relief-nasal-spray",
@@ -271,16 +271,16 @@
       "name": "Liquid I.V. Hydration Multiplier",
       "category": "Grocery",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-06-29", "2026-07-02"]
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-06-29", "2026-07-02", "2026-07-06"]
     },
     {
       "key": "temptations-cat-treats",
       "name": "Temptations Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-06-29", "2026-07-02"]
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-06-29", "2026-07-02", "2026-07-06"]
     },
     {
       "key": "crest-3d-whitestrips-professional-effects",
@@ -327,8 +327,8 @@
       "name": "Shark NV356E Navigator Lift-Away Upright Vacuum",
       "category": "Home & Kitchen",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-06-29", "2026-07-02"]
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-06-29", "2026-07-02", "2026-07-06"]
     },
     {
       "key": "hefty-ultra-strong-trash-bags",
@@ -343,8 +343,8 @@
       "name": "America 250 Anniversary Apparel & Merch",
       "category": "Apparel",
       "first_seen": "2026-07-02",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-07-02"]
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-07-02", "2026-07-06"]
     },
     {
       "key": "lego-star-wars-smart-play",
@@ -385,6 +385,94 @@
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-02",
       "seen_dates": ["2026-07-02"]
+    },
+    {
+      "key": "apple-airpods-4",
+      "name": "Apple AirPods 4",
+      "category": "Electronics",
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-07-06"]
+    },
+    {
+      "key": "oura-ring-4",
+      "name": "Oura Ring 4",
+      "category": "Electronics",
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-07-06"]
+    },
+    {
+      "key": "jackery-explorer-1000-v2",
+      "name": "Jackery Explorer 1000 V2 Portable Power Station",
+      "category": "Tools & Home Improvement",
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-07-06"]
+    },
+    {
+      "key": "igloo-trailmate-cooler",
+      "name": "Igloo Trailmate Wheeled Cooler",
+      "category": "Sports & Outdoors",
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-07-06"]
+    },
+    {
+      "key": "sleep-mouth-tape",
+      "name": "Sleep Mouth Tape (Hostage Tape / ZzzTape / Intake)",
+      "category": "Health & Household",
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-07-06"]
+    },
+    {
+      "key": "flat-back-earrings",
+      "name": "Flat-Back Sleeper Earrings",
+      "category": "Apparel",
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-07-06"]
+    },
+    {
+      "key": "optimum-nutrition-gold-standard-whey",
+      "name": "Optimum Nutrition Gold Standard 100% Whey Protein",
+      "category": "Health & Household",
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-07-06"]
+    },
+    {
+      "key": "dreo-evaporative-cooler-2026",
+      "name": "DREO Evaporative Air Swamp Cooler (2026 Upgraded)",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-07-06"]
+    },
+    {
+      "key": "soundcore-sleep-a20-anker",
+      "name": "Soundcore Sleep A20 by Anker",
+      "category": "Electronics",
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-07-06"]
+    },
+    {
+      "key": "jansport-classic-backpack",
+      "name": "JanSport Classic Backpack",
+      "category": "Office Products",
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-07-06"]
+    },
+    {
+      "key": "silk-sleep-bonnets",
+      "name": "Silk Sleep Bonnets",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-07-06",
+      "last_seen": "2026-07-06",
+      "seen_dates": ["2026-07-06"]
     }
   ]
 }
