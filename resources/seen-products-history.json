@@ -1,8 +1,98 @@
 {
-  "last_updated": "2026-06-29",
-  "last_processed_sibling_report": "June29_2026",
+  "last_updated": "2026-07-07",
+  "last_processed_sibling_report": "July6_2026",
   "window_days": 14,
   "products": [
+    {
+      "key": "sleep-mouth-tape",
+      "name": "Sleep Mouth Tape (Hostage Tape / ZzzTape / Intake)",
+      "category": "Health & Household",
+      "amazon_price_band": "~$10–$20 per pack",
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-07",
+      "seen_dates": ["2026-07-07"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "optimum-nutrition-gold-standard-whey",
+      "name": "Optimum Nutrition Gold Standard 100% Whey Protein",
+      "category": "Health & Household",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-07",
+      "seen_dates": ["2026-07-07"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "flat-back-sleeper-earrings",
+      "name": "Flat-Back \"Sleeper\" Earrings",
+      "category": "Apparel",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-07",
+      "seen_dates": ["2026-07-07"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "silk-sleep-bonnets",
+      "name": "Silk Sleep Bonnets",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-07",
+      "seen_dates": ["2026-07-07"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "jansport-classic-backpack",
+      "name": "JanSport Classic Backpack",
+      "category": "Office Products",
+      "amazon_price_band": "under $15",
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-07",
+      "seen_dates": ["2026-07-07"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "jackery-explorer-1000-v2",
+      "name": "Jackery Explorer 1000 V2 Portable Power Station",
+      "category": "Tools & Home Improvement",
+      "amazon_price_band": "$399–$450 on sale (regular $799)",
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-07",
+      "seen_dates": ["2026-07-07"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "igloo-trailmate-wheeled-cooler",
+      "name": "Igloo Trailmate Wheeled Cooler",
+      "category": "Sports & Outdoors",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-07",
+      "seen_dates": ["2026-07-07"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "america-250-anniversary-apparel",
+      "name": "America 250 Anniversary Apparel & Merch",
+      "category": "Apparel",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-07",
+      "seen_dates": ["2026-07-07"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "dreo-evaporative-air-cooler",
+      "name": "DREO Evaporative Air Swamp Cooler (2026 Upgraded)",
+      "category": "Home & Kitchen",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-07",
+      "seen_dates": ["2026-07-07"],
+      "alternatives_count": 2
+    },
     {
       "key": "pampers-swaddlers-diapers-size-5",
       "name": "Pampers Swaddlers Diapers, Size 5",
@@ -89,8 +179,8 @@
       "category": "Grocery",
       "amazon_price_band": "price not confirmed",
       "first_seen": "2026-06-23",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-23", "2026-06-29"],
+      "last_seen": "2026-07-07",
+      "seen_dates": ["2026-06-23", "2026-06-29", "2026-07-07"],
       "alternatives_count": 2
     },
     {
@@ -144,16 +234,6 @@
       "alternatives_count": 3
     },
     {
-      "key": "mamonde-amazon-launch-line",
-      "name": "Mamonde (Amorepacific) Amazon launch line",
-      "category": "Beauty & Personal Care",
-      "amazon_price_band": "$20-$27 per item",
-      "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
-      "seen_dates": ["2026-06-20"],
-      "alternatives_count": 7
-    },
-    {
       "key": "celsius-variety-pack",
       "name": "CELSIUS Assorted Flavors Official Variety Pack",
       "category": "Grocery",
@@ -164,16 +244,6 @@
       "alternatives_count": 4
     },
     {
-      "key": "bounty-quick-size-paper-towels",
-      "name": "Bounty Quick Size Paper Towels",
-      "category": "Health & Household",
-      "amazon_price_band": "$24.67 (8 family rolls)",
-      "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
-      "seen_dates": ["2026-06-20"],
-      "alternatives_count": 5
-    },
-    {
       "key": "dr-elseys-clumping-cat-litter",
       "name": "Dr. Elsey's Ultra Unscented Clumping Clay Cat Litter",
       "category": "Pet Supplies",
@@ -182,66 +252,6 @@
       "last_seen": "2026-06-23",
       "seen_dates": ["2026-06-20", "2026-06-23"],
       "alternatives_count": 4
-    },
-    {
-      "key": "amazon-basics-copy-paper",
-      "name": "Amazon Basics Multipurpose Copy Printer Paper",
-      "category": "Office Products",
-      "amazon_price_band": "$7.09 (1 ream)",
-      "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
-      "seen_dates": ["2026-06-20"],
-      "alternatives_count": 6
-    },
-    {
-      "key": "rust-oleum-painters-touch-spray-paint",
-      "name": "Rust-Oleum Painter's Touch 2X Ultra Cover Spray Paint",
-      "category": "Tools & Home Improvement",
-      "amazon_price_band": "$5.99 (12 oz)",
-      "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
-      "seen_dates": ["2026-06-20"],
-      "alternatives_count": 4
-    },
-    {
-      "key": "carhartt-force-cooling-collection",
-      "name": "Carhartt Force Cooling Collection",
-      "category": "Apparel",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
-      "seen_dates": ["2026-06-20"],
-      "alternatives_count": 4
-    },
-    {
-      "key": "le-creuset-toughened-nonstick-fry-pan",
-      "name": "Le Creuset Toughened Nonstick PRO Fry Pan",
-      "category": "Home & Kitchen",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
-      "seen_dates": ["2026-06-20"],
-      "alternatives_count": 5
-    },
-    {
-      "key": "hydro-flask-supernova-purple",
-      "name": "Hydro Flask Supernova Purple (Amazon-exclusive colorway)",
-      "category": "Sports & Outdoors",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
-      "seen_dates": ["2026-06-20"],
-      "alternatives_count": 6
-    },
-    {
-      "key": "furreal-snuggles-smiling-sloth",
-      "name": "furReal Snuggles the Smiling Sloth",
-      "category": "Toys & Games",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-06-20",
-      "last_seen": "2026-06-20",
-      "seen_dates": ["2026-06-20"],
-      "alternatives_count": 6
     },
     {
       "key": "levoit-core-300p-hepa-air-purifier",
@@ -365,13 +375,13 @@
     },
     {
       "key": "temptations-cat-treats",
-      "name": "Temptations Cat Treats",
+      "name": "Temptations Classic Cat Treats",
       "category": "Pet Supplies",
       "amazon_price_band": "price not confirmed",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-29"],
-      "alternatives_count": 2
+      "last_seen": "2026-07-07",
+      "seen_dates": ["2026-06-29", "2026-07-07"],
+      "alternatives_count": 3
     },
     {
       "key": "kpop-demon-hunters-huntrx-merchandise",
@@ -419,9 +429,9 @@
       "category": "Grocery",
       "amazon_price_band": "price not confirmed",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-29"],
-      "alternatives_count": 2
+      "last_seen": "2026-07-07",
+      "seen_dates": ["2026-06-29", "2026-07-07"],
+      "alternatives_count": 3
     },
     {
       "key": "cascade-platinum-plus-dishwasher-pods",
@@ -437,11 +447,11 @@
       "key": "shark-nv356e-upright-vacuum",
       "name": "Shark NV356E Navigator Lift-Away Upright Vacuum",
       "category": "Home & Kitchen",
-      "amazon_price_band": "price not confirmed",
+      "amazon_price_band": "~50% off list during July 4th sale",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-29"],
-      "alternatives_count": 3
+      "last_seen": "2026-07-07",
+      "seen_dates": ["2026-06-29", "2026-07-07"],
+      "alternatives_count": 2
     }
   ]
 }

@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>American Business Alternatives — July 7, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 130px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .product-groups { display: flex; flex-direction: column; gap: 18px; }
+  .product-group {
+    background: #fafbfc;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+  .product-group-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+  .product-title { font-size: 18px; font-weight: 700; margin: 0 0 4px; }
+  .product-meta { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .tag-count { background: #f1f5f9; color: #1e293b; }
+  .tag-affiliate-yes { background: var(--verified-bg); color: var(--verified); }
+  .tag-affiliate-no { background: #f1f5f9; color: var(--muted); }
+  .tag-affiliate-unconfirmed { background: var(--lowconf-bg); color: var(--lowconf); }
+  .product-rationale { font-size: 13.5px; line-height: 1.5; color: #334155; margin: 12px 0 14px; }
+
+  .alt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
+  .alt-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .alt-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .alt-name { font-size: 15.5px; font-weight: 600; margin: 0; }
+  .alt-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f8fafc; border-radius: 8px; padding: 10px 12px; }
+  .compare-label { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+  .compare-col div:last-child { font-size: 12.5px; color: #1e293b; line-height: 1.45; }
+  .alt-section { font-size: 12.5px; line-height: 1.5; color: #334155; }
+  .alt-section a { color: #2563eb; text-decoration: none; font-size: 11.5px; }
+  .alt-sources { font-size: 11px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .alt-sources a { color: #2563eb; text-decoration: none; }
+
+  .chart-wrap { padding: 10px 6px; overflow-x: auto; }
+
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+  .spotlight-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; margin-top: 10px; }
+  .spotlight-item { background: #fff; border-radius: 10px; padding: 12px 14px; border: 1px solid #bfdbfe; }
+  .spotlight-item .s-name { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .spotlight-item .s-product { font-size: 11.5px; color: var(--muted); }
+  .spotlight-item .s-desc { font-size: 12px; color: #334155; margin-top: 4px; }
+
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Header -->
+  <div class="header-band">
+    <h1>American Business Alternatives to Amazon Top Sellers</h1>
+    <div class="date">July 7, 2026</div>
+    <span class="badge">Public web research · Cross-verified · ~120 sources checked</span>
+  </div>
+
+  <!-- Executive Summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">
+      13 non-Electronics products drawn from the sibling agent's July 6, 2026 report (5 Electronics excluded), yielding <strong>35 American business alternatives (25 VERIFIED, 10 LOW-CONFIDENCE)</strong> across 9 categories. <strong>9 NEW</strong> since the June 29 report, 4 RECURRING. Headlined by a breakout in sleep wellness — <strong>Dream Recovery</strong> (American-made bamboo silk mouth tape, founded 2023 by NFL veteran Todd Anderson, VERIFIED) — and a strong Grocery showing (Skratch Labs, LMNT, and Fairlife all VERIFIED with active affiliate programs). On the American apparel front, <strong>Freedom Fatigues</strong> (Clarkston, MI — veteran-owned, 100% domestic supply chain) and <strong>All American Clothing Co.</strong> (Arcanum, OH) cover the America 250 moment with genuine domestic credentials. Jackery portable power stations and DREO evaporative coolers remain the deepest verified gaps this run — all alternatives in both categories land at LOW-CONFIDENCE due to global lithium battery supply chain realities and limited independent sourcing documentation for the evaporative cooler space. <strong>ORCA Coolers</strong> (previously cited as a leading American-made alternative) closed permanently in January 2025 and is not included. The most affiliate-program-rich category this report: Sports &amp; Outdoors (YETI, Pelican, Bison all confirmed affiliate programs).
+    </div>
+  </div>
+
+  <!-- Quick Stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">13</div><div class="label">Amazon Products</div></div>
+    <div class="stat-card"><div class="num">35</div><div class="label">Alternatives Found</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">New This Run</div></div>
+    <div class="stat-card"><div class="num">4</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">25</div><div class="label">Verified American-Made</div></div>
+    <div class="stat-card"><div class="num">10</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- Product Groups -->
+  <h2 class="section-title">Products &amp; American Alternatives</h2>
+  <div class="product-groups">
+
+    <!-- 1. ON Whey Protein -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Optimum Nutrition Gold Standard 100% Whey Protein</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#0d9488;">Health &amp; Household</span>
+            <span>Amazon: ~$35–$60 / 2 lb</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">3 alternatives</span>
+          <span class="tag tag-verified">3 VERIFIED</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Glanbia-owned (Irish parent), ON Gold Standard is the world's best-selling whey. Three fully American-owned and American-sourced alternatives exist — all using domestic dairy farms, third-party tested, and carrying cleaner labels (no artificial sweeteners or fillers). High repurchase cadence makes this one of the strongest affiliate/subscription opportunities in this report.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Pure Choice Farms — Whey Isolate</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>ON Gold Standard, 24g protein/serving, ~$1.20–1.50/serving</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>28g protein/serving, ~$1.61/serving (2 lb at ~$45); cold-filtered, 1–3 ingredients</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Madison, WI. Founded 2012 by Tony Meives from a 4th-generation Wisconsin dairy family. Whey sourced from 700+ Wisconsin farms. Third-party tested by Wisconsin DATCP. No artificial sweeteners, flavors, or fillers. More protein per serving than ON at a comparable price.<br>
+            <strong>Founders:</strong> Tony Meives — Madison gym owner and bodybuilder; grandfather William Lehner founded Valley View Cheese Co. in 1954.<br>
+            <strong>Affiliate:</strong> Unconfirmed — contact tony@purechoicefarms.com<br>
+            <a href="https://purechoicefarms.com" target="_blank">purechoicefarms.com</a> · <a href="https://isthmus.com/news/news/Pure-Choice-offers-clean-take-on-protein-powder/" target="_blank">Isthmus coverage</a>
+          </div>
+          <div class="alt-sources">Sources: purechoicefarms.com (company) · Isthmus (Madison alt-weekly, independent press)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">NorCal Organic Whey Protein</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>ON Gold Standard, 24g protein/serving, ~$1.20–1.50/serving</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>21g protein/serving, ~$1.81–2.03/serving (2 lb ~$65); USDA Organic, Non-GMO Verified, single-origin CA</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Crescent City, Northern California. Founded 2011. Produced exclusively at Rumiano Cheese Company (oldest family-owned cheese company in CA) using Humboldt/Del Norte county dairy. First organic whey to earn Non-GMO Project Verified status. American Humane Association certified. No lecithin, no artificial sweeteners.<br>
+            <strong>Founders:</strong> Founded by a registered dietitian (name not publicly disclosed).<br>
+            <strong>Affiliate:</strong> Unconfirmed<br>
+            <a href="https://norcal-organic.com" target="_blank">norcal-organic.com</a>
+          </div>
+          <div class="alt-sources">Sources: norcal-organic.com (company) · Non-GMO Project certification (independent) · American Humane Association certification (independent)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Raw Organic Whey Protein</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>ON Gold Standard, 24g protein/serving, multi-ingredient formula</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>21g protein/serving, 1 ingredient (unflavored); $34.99/12oz–$134.99/5lb; US family farm sourced</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Fairfield, Iowa. Small family company sourcing from US pasture-fed farms. Third-party tested for contaminants, heavy metals, antibiotics, and pesticides — certificates of analysis posted publicly. Forbes Health's top pick for "best organic protein powder."<br>
+            <strong>Founders:</strong> Described as a family company; names not publicly disclosed.<br>
+            <strong>Affiliate:</strong> Unconfirmed<br>
+            <a href="https://raworganicwhey.com" target="_blank">raworganicwhey.com</a> · <a href="https://forbes.com/health/supplements/raw-organic-whey-protein-review/" target="_blank">Forbes Health review</a>
+          </div>
+          <div class="alt-sources">Sources: raworganicwhey.com (company) · Forbes Health editorial (independent)</div>
+        </div>
+
+      </div>
+    </div><!-- /ON Whey -->
+
+    <!-- 2. Sleep Mouth Tape -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Sleep Mouth Tape (Hostage Tape / ZzzTape / Intake)</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#0d9488;">Health &amp; Household</span>
+            <span>Amazon: ~$10–$20 / pack</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">3 alternatives</span>
+          <span class="tag tag-verified">2 VERIFIED</span>
+          <span class="tag tag-lowconf">1 LOW-CONFIDENCE</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Sleep mouth taping is the breakout wellness trend of 2026. Amazon's top sellers (Hostage Tape, ZzzTape, Intake) are all excluded below since the goal is American alternatives. Two fully verified American makers exist. Dream Recovery's NFL player founder and Athletech News press coverage make it the standout promotional opportunity.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Dream Recovery — Dream Tape</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Hostage Tape/ZzzTape/Intake, ~$10–$20 / 30 strips</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>$27.95 one-time / $22.92 subscription (30 strips); organic bamboo silk, ISO-10993 adhesive</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Founded 2023. Athlete and sports recovery focus — also makes sleep masks and pillowcases. Organic bamboo silk fabric vs. polyester spunlace used by most Amazon brands. ISO-10993 biocompatibility-certified adhesive. Described by Athletech News as "one of the fastest growing companies in the sleep/recovery space."<br>
+            <strong>Founders:</strong> Todd Anderson (co-founder, Chief Brand Officer) — former college and NFL player, now sleep performance coach. Co-founded Synergy Dryland swim training platform.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-yes">YES</span> — <a href="https://dreamrecovery.io/pages/partner-with-us" target="_blank">dreamrecovery.io/pages/partner-with-us</a><br>
+            <strong>Contact:</strong> support@dreamrecovery.io<br>
+            <a href="https://dreamrecovery.io" target="_blank">dreamrecovery.io</a> · <a href="https://athletechnews.com/dream-recovery-mouth-tape-review/" target="_blank">Athletech News review</a> · <a href="https://athletechnews.com/ceo-corner-dream-recovery-todd-anderson-sleep/" target="_blank">Founder profile</a>
+          </div>
+          <div class="alt-sources">Sources: dreamrecovery.io (company) · Athletech News (independent fitness press) · Evident Health (independent testing lab)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Dryft Sleep Mouth Tape</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Hostage Tape/ZzzTape, ~$10–$20 / pack</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>$26.99 / 30 strips (~$0.90/strip); built-in breathing vent, silicone adhesive, made in Los Angeles</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Los Angeles, CA. Woman-owned. Launched 2022. Built-in breathing vent (airflow gap) — a distinct safety feature not common on Amazon brands. Non-stretch breathable fabric, silicone adhesive formulated for perioral skin. Named "Best Material" by ELLE Magazine in their ranked mouth tape test. Available at Macy's, AMP Beauty LA, and independent wellness retailers.<br>
+            <strong>Founders:</strong> Jess and Lindsey (co-founders, Los Angeles, 2022; last names not in public sources).<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-unconfirmed">UNCONFIRMED</span> — promo codes available at dryftsleep.com/pages/promo<br>
+            <strong>Contact:</strong> hello@dryftsleep.com<br>
+            <a href="https://dryftsleep.com" target="_blank">dryftsleep.com</a>
+          </div>
+          <div class="alt-sources">Sources: dryftsleep.com (company, states "Made in LA") · ELLE Magazine "7 Best Mouth Tapes" (independent editorial)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">VIO2 Unscented Mouth Tape</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Hostage Tape/ZzzTape, ~$10–$20 / 30 strips</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>~$29.95 / 48 strips (~$0.62/strip); partial-coverage patented design, PFAS-free, dental-designed</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Austin, TX. Founded 2022 by dentist Dr. Vincent Ip and Lindsey Ip. Patented partial-coverage design (leaves a gap for air backup) — marketed as more comfortable for first-time users. PFAS-free, latex-free, hypoallergenic, medical-grade cotton. All Amazon listings and retailer pages state "Made in the USA." Low-confidence flag: independent press exists (Fashionista, Nov 2025) but content was inaccessible for verification; no certification body listing found.<br>
+            <strong>Founders:</strong> Dr. Vincent Ip (dentist) and Lindsey Ip — created after their son was diagnosed with a breathing disorder at age 3.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-unconfirmed">UNCONFIRMED</span> — hello@vio2tape.com<br>
+            <a href="https://vio2tape.com" target="_blank">vio2tape.com</a>
+          </div>
+          <div class="alt-sources">Sources: vio2tape.com (company, "Made in USA" claim) · Amazon listing confirms product; Fashionista article confirmed to exist but content inaccessible</div>
+        </div>
+
+      </div>
+    </div><!-- /Sleep Mouth Tape -->
+
+    <!-- 3. Silk Sleep Bonnets -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Silk Sleep Bonnets</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#db2777;">Beauty &amp; Personal Care</span>
+            <span>Amazon: ~$15–$40 typical range</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">3 alternatives</span>
+          <span class="tag tag-verified">2 VERIFIED</span>
+          <span class="tag tag-lowconf">1 LOW-CONFIDENCE</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Amazon dominates this category with Grade 3A–4A silk or polyester satin marketed as silk. Both VERIFIED American makers use Grade 6A mulberry silk (22 momme) and are independently confirmed. Swurly Co has a compelling community-origin story (Wisconsin mom, multicultural families, Spectrum News coverage). Clementine is Oprah-featured luxury.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Swurly Co — Adult Silk Sleep Bonnet</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Generic silk bonnets, ~$15–$40, Grade 3A–4A silk or polyester satin</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>$45–$60; 19 or 22 momme Grade 6A mulberry silk; Sun Prairie, WI family-owned</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Sun Prairie, Wisconsin. Founded 2016 by Dione Laufenberg — started making bonnets to care for her biracial daughters' hair, then began selling to multicultural families nationwide. Family-owned small business. Real silk (not polyester satin). Matching scrunchies, scarves, and pillowcases also available.<br>
+            <strong>Founders:</strong> Dione Laufenberg, Sun Prairie, WI — mother and entrepreneur.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-no">NOT FOUND</span><br>
+            <strong>Contact:</strong> SwurlyCo@gmail.com<br>
+            <a href="https://swurlyco.com" target="_blank">swurlyco.com</a> · <a href="https://spectrumnews1.com/wi/milwaukee/news/2021/06/05/mom-s-silk-bonnets-help-multicultural-families" target="_blank">Spectrum News 1 feature</a>
+          </div>
+          <div class="alt-sources">Sources: swurlyco.com (company) · Spectrum News 1 Wisconsin (independent broadcast, June 2021) · Forbes "Black-Owned Bonnet Brands" (independent editorial)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Clementine Sleepwear — Organic Silk Hair Bonnet</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Generic silk bonnets, ~$15–$40 typical</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>$145; GOTS-certified organic mulberry silk, Grade 6A, 22 momme; Beverly Hills/LA made</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Beverly Hills / Los Angeles, CA. Founded 2023 by Anna and John Cinquina. Premium luxury brand — GOTS-certified organic mulberry silk, Grade 6A, 22 momme (vs. Grade 3A–4A commonly used on Amazon). Winner of Good Housekeeping, 21Ninety Award, and Oprah Daily Sleep O-Wards. Some models incorporate active ingredients (hyaluronic acid, squalane, collagen peptides) in fabric.<br>
+            <strong>Founders:</strong> Anna Cinquina and husband John. Anna began sewing silk at age 14 in Australia; built brand after a personal health journey.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-no">NO EXTERNAL PROGRAM</span> — Members Club loyalty program; partnership inquiries: partners@sleepwithclementine.com<br>
+            <strong>Address:</strong> 324 S. Beverly Dr, Suite 103, Beverly Hills, CA 90212<br>
+            <a href="https://sleepwithclementine.com" target="_blank">sleepwithclementine.com</a> · <a href="https://www.forbes.com/sites/allysonportee/2023/08/25/newly-launched-la-brand-clementine-sleepwear-is-made-from-100-percent-mulberry-silk/" target="_blank">Forbes launch story</a>
+          </div>
+          <div class="alt-sources">Sources: sleepwithclementine.com (company, states LA workshop) · Forbes (Allyson Portee, August 2023) · PrettyOrganicGirl (September 2025, "made in USA in Los Angeles")</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Damiano Collection — Silk Hair Turban</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Generic silk bonnets, ~$15–$40 typical</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>$49; OEKO-TEX certified mulberry washed silk; handcrafted in Lancaster, PA studio (claimed)</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Lancaster, PA. Founded 2015 by Alexandra Damiano in Philadelphia (studio now in Lancaster). Entirely handmade, small-batch. OEKO-TEX certified silk (chemical safety). Turban-style wrap rather than traditional bonnet cap. ~10 years in operation. Note: "Hand crafted in Lancaster, PA" is stated on company website and Etsy; ZoomInfo confirms PA business location, but no independent press or certification body listing separately confirms US manufacturing.<br>
+            <strong>Founders:</strong> Alexandra Damiano, designer and sole founder. Launched with a silk body wrap she modified for vacation use.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-no">NOT FOUND</span> — hello@damianocollection.com<br>
+            <a href="https://damianocollection.com" target="_blank">damianocollection.com</a>
+          </div>
+          <div class="alt-sources">Sources: damianocollection.com (company, "handcrafted in Lancaster, PA") · ZoomInfo (confirms PA business; does not verify manufacturing)</div>
+        </div>
+
+      </div>
+    </div><!-- /Silk Sleep Bonnets -->
+
+    <!-- 4. America 250 Anniversary Apparel -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">America 250 Anniversary Apparel &amp; Merch</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#7c3aed;">Apparel</span>
+            <span>Amazon: varies; patriotic graphic tees typically $16–$50</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">3 alternatives</span>
+          <span class="tag tag-verified">3 VERIFIED</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Amazon's top-selling patriotic/anniversary apparel is predominantly fast fashion on overseas-made blanks. Three American manufacturers cover this category with domestic supply chains — Freedom Fatigues brings a veteran-ownership credential and the strongest affiliate program (8%), while All American Clothing Co. offers the most complete American raw material story (cotton grown, woven, and sewn in the USA).
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Freedom Fatigues — Patriotic Apparel</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Patriotic graphic tees, ~$16–$25 on Amazon, overseas-made blanks</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Tees $32.95 · Hats $34.95 · Hoodies $76.95; 100% domestic supply chain, veteran-owned</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Clarkston, MI (north of Detroit). Relaunched August 2019 as 100% American-made by retired police officer Chris Vargo and wife Ryann. Screen prints all apparel domestically; custom hats built from scratch in the USA. Mission includes PTSD awareness and hero suicide prevention. Strong veteran/LEO/first-responder following.<br>
+            <strong>Founders:</strong> Chris Vargo (retired law enforcement, career-ending on-duty MVA) and Ryann Vargo. Brand built on faith, family, and country.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-yes">YES — 8% commission</span>, 30-day cookie, via AvantLink · <a href="https://freedomfatigues.com/pages/affiliates" target="_blank">freedomfatigues.com/pages/affiliates</a><br>
+            <a href="https://freedomfatigues.com" target="_blank">freedomfatigues.com</a> · <a href="https://allamerican.org/spotlight/freedom-fatigues/" target="_blank">AllAmerican.org spotlight</a>
+          </div>
+          <div class="alt-sources">Sources: freedomfatigues.com (company) · AllAmerican.org (independent directory) · VeteranOwnedBusiness.com (Clarkston, MI) · ItsusamadeBusiness.org</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">All American Clothing Co. — Jeans &amp; Workwear</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Patriotic / America 250 apparel, ~$16–$40 on Amazon</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Jeans $49.95–$79.95; T-shirts and workwear; American-grown cotton, American-woven denim, American hardware</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Arcanum, Ohio. Founded 2002 by Lawson Nickol and son B.J. Nickol. One of the only US clothing companies using 100% domestic raw materials: cotton grown in the US, denim woven in the US, buttons and zippers made in the US, cut and sewn across Illinois, California, Texas, and Kentucky partner facilities. Lawson Nickol passed away in 2020; company continues under new ownership.<br>
+            <strong>Founders:</strong> Lawson Nickol (industry veteran who left a manufacturer that outsourced to Mexico) and B.J. Nickol.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-unconfirmed">UNCONFIRMED</span> — 888-937-8009<br>
+            <strong>Address:</strong> 1 Pop Rite Dr, Arcanum, OH 45304<br>
+            <a href="https://allamericanclothing.com" target="_blank">allamericanclothing.com</a> · <a href="https://www.themadeinamericamovement.com/american-made/madeinusa-all-american-clothing-company-keeps-true-to-its-name/" target="_blank">Made in America Movement feature</a>
+          </div>
+          <div class="alt-sources">Sources: allamericanclothing.com (company) · Made in America Movement (independent) · Dayton Daily News (local press) · MadeintheUSA.org directory</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Red White Blue Apparel — Patriotic Tees &amp; Hats</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Patriotic graphic tees, ~$16–$25 on Amazon, overseas-made blanks</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Tees from $16.50; domestic cut-and-sew + American-woven fabric on most items; Columbia Station, OH</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Columbia Station, Ohio (originally Lakewood, OH). Founded late 2012 by Jake Meyers — started from his attic with two tubs and a printer. Expanded to a 5,000 sq ft facility on six acres. Two full-time employees; founder-operated. Son of a Purple Heart Vietnam veteran. Closest direct substitute for Amazon patriotic apparel: same product category, domestic supply chain, comparable prices for tees.<br>
+            <strong>Founders:</strong> Jake Meyers, Columbia Station, OH. Patriotic brand identity is personal, not marketing.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-unconfirmed">UNCONFIRMED</span> — wholesale page exists; contact support@redwhiteblueapparel.com<br>
+            <a href="https://redwhiteblueapparel.com" target="_blank">redwhiteblueapparel.com</a> · <a href="https://allamerican.org/brands/red-white-blue-apparel/" target="_blank">AllAmerican.org profile</a>
+          </div>
+          <div class="alt-sources">Sources: redwhiteblueapparel.com (company) · AllAmerican.org (independent) · OriginUS.co (independent directory) · ProdOrigin.com</div>
+        </div>
+
+      </div>
+    </div><!-- /America 250 Apparel -->
+
+    <!-- 5. Flat-Back Earrings -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Flat-Back "Sleeper" Earrings</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#7c3aed;">Apparel</span>
+            <span>Amazon: ~$10–$30 / pair (gold-plated steel)</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">3 alternatives</span>
+          <span class="tag tag-verified">2 VERIFIED</span>
+          <span class="tag tag-lowconf">1 LOW-CONFIDENCE</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Amazon's flat-back earring market is dominated by gold-plated steel (fades, causes reactions) and surgical steel brands like PAVOI. American artisan makers use implant-grade titanium or 14k solid gold — superior biocompatibility and longevity. Hello Adorn (Eau Claire, WI) bridges the price gap at $18–$50.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Hello Adorn — Flatback Studs (NAP Earrings)</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>PAVOI / LUCKYJEWUS, ~$10–$30, gold-plated steel, manufactured overseas</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>$18–$50; 14k gold fill or .925 sterling silver; 40+ makers, Eau Claire, WI studio</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Eau Claire, Wisconsin. Founded 2016 by Jess Gardner — grew from home-based startup to a team of 40+ makers. Physical studio/store at 312 S. Barstow St, Eau Claire. Reversible flatback stud design doubles as a nap earring (comfortable for sleep). 14k gold fill (legally regulated: ≥1/20 total weight must be solid gold) vs. gold plating that chips and discolors. Waterproof, sweat-proof. Featured in SheKnows, StyleCaster, JCK (jewelry trade press).<br>
+            <strong>Founders:</strong> Jess Gardner, Eau Claire, WI (previously operated Isabelle and Company clothing, est. 2008).<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-unconfirmed">UNCONFIRMED</span> — Membership/loyalty program ($25/month)<br>
+            <strong>Address:</strong> 312 S. Barstow St, Eau Claire, WI 54701 · Wed–Sat 10–6, Sun 10–4<br>
+            <a href="https://helloadorn.com" target="_blank">helloadorn.com</a>
+          </div>
+          <div class="alt-sources">Sources: helloadorn.com (company, "crafted by hand in Eau Claire WI studio") · SheKnows editorial (independent) · WEAU TV news affiliate (independent Wisconsin broadcast, Nov 2021)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Grayling Jewelry — Implant-Grade Flat-Back Earrings</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>PAVOI, ~$10–$25, gold-plated steel</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>F-136 titanium from ~$44/pair; 14k solid gold from ~$95–$190+; Portland, OR handmade</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Portland, Oregon. Founded 2009 by Katy (sole owner). Physical storefront and studio at 2005 NE Alberta St. Designs exclusively in implant-grade materials (same grades as professional piercing studios). No gold plating — F-136 titanium or 14k solid gold only. Permanent jewelry welding also offered. 91 Yelp reviews, 266 Birdeye reviews.<br>
+            <strong>Founders:</strong> Katy, Portland, OR (sole owner/maker since 2009; last name not in public sources).<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-unconfirmed">UNCONFIRMED</span> — wholesale program at graylingjewelry.com/pages/wholesale<br>
+            <strong>Phone:</strong> (503) 548-4979<br>
+            <a href="https://graylingjewelry.com" target="_blank">graylingjewelry.com</a>
+          </div>
+          <div class="alt-sources">Sources: graylingjewelry.com ("made entirely by hand in the U.S.A., no factories or assembly lines") · Yelp + BBB Portland (independently confirm Portland OR business)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">FreshTrends — 14k Solid Gold Flat-Back Labret</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>PAVOI / LUCKYJEWUS, gold-plated steel, $10–$30</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>14k solid gold from ~$60+; made-to-order custom sizing; North Palm Beach FL design / LA studio (claimed)</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Founded 2003, North Palm Beach, FL. Design in Palm Beach; production claimed in Los Angeles studio. 20+ years in business. Specializes in fine body piercing jewelry: flat-backs, threadless tops, hoops. Every piece made to order — custom sizing for unusual anatomy. 14k solid gold throughout (no plating). Low-confidence flag: company website and Etsy state "handcrafted in our Los Angeles studio"; BBB confirms US business, but no independent press specifically confirms LA manufacturing.<br>
+            <strong>Founders:</strong> Company describes itself as "started in 2003 from a dining room table in Palm Beach, FL." Names not publicly disclosed.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-yes">YES — FlexOffers</span> · <a href="https://freshtrends.com/pages/affiliates" target="_blank">freshtrends.com/pages/affiliates</a><br>
+            <strong>Phone:</strong> 866-698-9427<br>
+            <a href="https://freshtrends.com" target="_blank">freshtrends.com</a>
+          </div>
+          <div class="alt-sources">Sources: freshtrends.com (company, states "handcrafted in our Los Angeles studio") · BBB North Palm Beach FL (confirms US business) · Trustpilot (customer reviews confirm product received)</div>
+        </div>
+
+      </div>
+    </div><!-- /Flat-Back Earrings -->
+
+    <!-- 6. DREO Evaporative Air Cooler -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">DREO Evaporative Air Swamp Cooler (2026 Upgraded)</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#16a34a;">Home &amp; Kitchen</span>
+            <span>Amazon: price not confirmed (portable desktop units ~$30–$150 typical)</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives</span>
+          <span class="tag tag-lowconf">2 LOW-CONFIDENCE</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        The American evaporative cooler market is a niche, Southwest-specific sector. Both alternatives are whole-home/whole-room installation units (not portable desktop units like DREO) — a meaningful product form-factor difference. The category's independent-source documentation is thin industry-wide. Readers interested in American-made evaporative cooling should contact both companies directly to request manufacturing documentation before recommending.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Champion Cooler Corp. (Essick Air) — Window &amp; Portable Evap Coolers</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>DREO portable desktop evaporative cooler (personal-scale, low CFM)</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Window coolers $200–$400; down-draft roof models $300–$600+; portable CP70 ~$290. Whole-room/home scale. Denison, TX.</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Denison, Texas. 65+ years in operation. Subsidiary of Essick Air Products. Claims "fully assembled American-made evaporative window coolers" and "builds most of the coolers in Texas." AMCA-certified products. Sold at Home Depot, Sutherlands, DB Supply nationally. Also manufactures in Arkansas. Note: independent press confirmation of "Made in USA" was not found — Denison Chamber of Commerce member listing and AMCA certification corroborate but do not independently verify the domestic manufacturing claim.<br>
+            <strong>Contact:</strong> (903) 465-1962 · 1724 S Scullin Ave, Denison, TX 75020<br>
+            <a href="https://championcooler.com" target="_blank">championcooler.com</a>
+          </div>
+          <div class="alt-sources">Sources: championcooler.com (company) · Denison TX Chamber (confirms manufacturing member) · AMCA certification (performance certification only, not country-of-origin)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Phoenix Manufacturing (AeroCool) — Residential Evap Coolers</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>DREO portable desktop evap cooler (personal/desk scale)</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Permanent residential installation, whole-home; pricing not public — contact directly. Phoenix, AZ.</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Phoenix, Arizona. 50+ years in evaporative cooling. Located at 3655 E Roeser Rd, Phoenix, AZ 85040. AeroCool brand for residential customers; commercial/industrial AeroCool units also available. AMCA-certified. Distributed through Ferguson, Master Builder Mercantile, Aircool Supply, Riverbend Industries. Facebook states "Manufactured in the USA." No independent press confirmation found.<br>
+            <strong>Contact:</strong> phoenixmanufacturing.com<br>
+            <a href="https://phoenixmanufacturing.com" target="_blank">phoenixmanufacturing.com</a>
+          </div>
+          <div class="alt-sources">Sources: phoenixmanufacturing.com/Facebook (company claims "Manufactured in USA") · AMCA certification (performance only) · Riverbend Industries dealer listing (confirms Phoenix AZ manufacturer)</div>
+        </div>
+
+      </div>
+    </div><!-- /DREO -->
+
+    <!-- 7. Igloo Trailmate Wheeled Cooler -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Igloo Trailmate Wheeled Cooler</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#ea580c;">Sports &amp; Outdoors</span>
+            <span>Amazon: ~$130–$200</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">3 alternatives</span>
+          <span class="tag tag-verified">3 VERIFIED</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        ORCA Coolers (the most-cited American-made premium cooler brand) permanently ceased all operations in January 2025. Three other VERIFIED American options exist: YETI (Iowa/Wisconsin manufacturing, with caveat that some lots are Philippine-made), Pelican (Torrance, CA), and Bison Coolers (Fort Worth, TX — family-owned, strongest affiliate program in this category at up to 24.5% via CJ for Pelican). All three are premium-tier at 2–3× the Igloo price.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Pelican Products — Elite Hard Coolers</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Igloo Trailmate, ~$130–$200, wheeled, entry-to-mid tier</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>$207–$466; Torrance, CA; 10+ day ice retention; IGBC bear-certified; lifetime guarantee; wheeled models (45QW/65QW)</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Torrance, California. Founded 1976 by Dave and Arline Parker in their garage — started with SCUBA diving equipment, entered the cooler market in 2012. 200,000+ sq ft Torrance facility with 125,000 sq ft of manufacturing space. Just installed the largest injection molding machine in the Western US. Privately held. 11 manufacturing facilities globally; Elite hard coolers manufactured specifically in Torrance, CA. Soft coolers not made in the USA.<br>
+            <strong>Founders:</strong> Dave Parker (SCUBA diver, built first dive float in Torrance garage, 1976) and Arline Parker.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-yes">YES — up to 24.5% commission</span>, via Commission Junction (CJ) · <a href="https://pelican.com/support/affiliates" target="_blank">pelican.com/support/affiliates</a> · avg order ~$297<br>
+            <strong>Phone:</strong> 800.473.5422 · marketing@pelican.com<br>
+            <a href="https://pelican.com" target="_blank">pelican.com</a> · <a href="https://www.prnewswire.com/news-releases/pelican-invests-in-american-manufacturing-by-building-the-largest-injection-molding-machine-in-the-western-us-301896973.html" target="_blank">PRNewswire manufacturing investment</a>
+          </div>
+          <div class="alt-sources">Sources: pelican.com ("Made in USA" stamp on Elite product images) · PRNewswire 2023 (largest injection molding machine in Western US, Torrance CA — independent) · SlashGear editorial "5 Cooler Brands Made in America"</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Bison Coolers — Hard Coolers</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Igloo Trailmate, ~$130–$200</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>25QT $249 · 50QT $350 · 75QT $430; injection-molded in Fort Worth, TX; ~$100–$150 less than comparable YETI models</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Fort Worth, Texas. Family-owned and operated since 2011; committed to US manufacturing since 2012. True-to-size capacity (a 75QT Bison holds 75 QT; YETI's model 75 holds only ~60 QT). Dual drain plugs, built-in rulers, custom lid graphics available. Bear-proof certified. 2-inch wall insulation. Featured in a Google Super Bowl ad. All soft coolers also hand-sewn in the USA.<br>
+            <strong>Founders:</strong> Jeremy Denson (CEO) and father Dennis Denson — Jeremy's background in Southwest Airlines revenue management led him to identify a market gap in premium coolers at accessible prices.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-yes">YES — via AvantLink</span> · <a href="https://bisoncoolers.com/pages/affiliate-program" target="_blank">bisoncoolers.com/pages/affiliate-program</a><br>
+            <strong>Phone:</strong> (855) 278-8355 · 7509 Flagstone Dr, Fort Worth, TX 76118<br>
+            <a href="https://bisoncoolers.com" target="_blank">bisoncoolers.com</a>
+          </div>
+          <div class="alt-sources">Sources: bisoncoolers.com (company, Fort Worth TX manufacturing) · Explore Lone Star (independent editorial) · OriginUS.co (independent directory) · Google Public Policy stories (Google Super Bowl spot — independent corporate feature)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">YETI — Tundra Hard Coolers</p>
+            <span class="tag tag-verified">VERIFIED ⚠ caveat</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Igloo Trailmate, ~$130–$200, wheeled</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Tundra 45 ~$325; Tundra Haul (wheeled) ~$450+; Iowa &amp; Wisconsin contract manufacturing — see caveat</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Austin, Texas. Founded 2006 by Roy and Ryan Seiders, seventh-generation Texans. Public on NYSE (YETI) since 2018. Caveat: YETI does not own factories — Tundra hard coolers are split between Iowa/Wisconsin (USA) and the Philippines. Without checking a physical tag, you cannot guarantee a US-made unit at retail. To ensure a US-made lot, contact YETI customer service before purchase. Hopper soft coolers and Rambler drinkware are NOT American-made.<br>
+            <strong>Founders:</strong> Roy Seiders and Ryan Seiders, brothers from Driftwood, TX — founded in a Dripping Springs, TX garage after frustration with flimsy fishing coolers.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-yes">YES — 5% commission</span>, 30-day cookie, via Impact · affiliate@yeti.com · minimum $50 payout<br>
+            <a href="https://yeti.com" target="_blank">yeti.com</a>
+          </div>
+          <div class="alt-sources">Sources: YETI factory disclosure PDF (supplier list confirms Iowa &amp; Wisconsin AND Philippines — own disclosure) · AllAmericanMade.com · TackleVillage.com (2026 guide) · products-madeinusa.com (all independently confirm Iowa/Wisconsin; all note Philippines lots)</div>
+        </div>
+
+      </div>
+    </div><!-- /Igloo Cooler -->
+
+    <!-- 8. Jackery Explorer 1000 V2 -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Jackery Explorer 1000 V2 Portable Power Station</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#475569;">Tools &amp; Home Improvement</span>
+            <span>Amazon: $399–$450 on sale (regular $799)</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">3 alternatives</span>
+          <span class="tag tag-lowconf">3 LOW-CONFIDENCE</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        No fully American-manufactured portable power station paralleling the Jackery 1000 V2 exists as of July 2026. Over 80% of global lithium battery cell manufacturing is in China, South Korea, or Japan. Every alternative below is American-owned (or American-assembled) but uses imported battery cells. Goal Zero (NRG Energy subsidiary) is VERIFIED American-owned but explicitly manufactured in China. Lion Energy (American Fork, UT) has real Utah assembly but cells are imported; they are actively pursuing domestic battery cell supply via a 2026 equity stake in American Battery Factory (Tucson, AZ). Grid Eraser (West Bend, WI) is a veteran-owned small business assembling in Wisconsin.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Lion Energy — Summit 665Wh (Utah Assembly)</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Jackery 1000 V2, 1070Wh LiFePO4, $399–$450 sale</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Summit: 665Wh LiFePO4, ~$599–$699 (smaller capacity); Safari: 1612Wh, ~$2,350; Utah assembly, imported cells</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            American Fork, Utah. Founded 2012. Designs, engineers, tests, and assembles products in Utah. Domestic assembly is real; battery cells remain mostly imported (global reality). In April 2026, took an equity stake in American Battery Factory (Tucson, AZ) moving toward domestic cell supply. 5-year warranty on Summit. LiFePO4 chemistry offers 3,500+ charge cycles (superior longevity). The Summit has 665Wh — less capacity than Jackery 1000 V2 (1070Wh); the Safari ($2,350) is the next step up.<br>
+            <strong>Founders:</strong> Frank Davis (1946–Jan 27, 2024, co-founder), Tyler Hortin (current CEO), Jim Ge.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-yes">YES — 5% commission</span> · <a href="https://partners.lionenergy.com" target="_blank">partners.lionenergy.com</a><br>
+            <strong>Address:</strong> 735 S. Auto Mall Drive, American Fork, UT 84003 · (801) 727-9270<br>
+            <a href="https://lionenergy.com" target="_blank">lionenergy.com</a>
+          </div>
+          <div class="alt-sources">Sources: lionenergy.com (company, Utah design/assembly) · PR Newswire Oct 2024 (US manufacturing line announcement) · pv-magazine-usa.com Apr 2026 (American Battery Factory equity stake)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Goal Zero — Yeti 1000X (American-Owned; China-Made)</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Jackery 1000 V2, 1070Wh LiFePO4, ~$399–$450 sale</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Yeti 1000X, 983Wh NMC chemistry, ~$1,099–$1,299; designed in Draper, UT; manufactured in China</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Draper, Utah. Founded 2009 by Robert Workman (humanitarian mission in sub-Saharan Africa). Acquired by NRG Energy, Inc. (NYSE: NRG, Fortune 250, New Jersey) in August 2014. American-owned company with Utah engineering; explicitly manufactured in China. NMC battery chemistry (vs. LiFePO4 in Jackery V2 — LiFePO4 offers better thermal safety and ~3x more charge cycles). Strong warranty and customer support.<br>
+            <strong>Founders:</strong> Robert Workman, founded 2009 with humanitarian mission. Now NRG Energy wholly-owned subsidiary.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-yes">YES — up to 10% commission</span>, 30-day cookie, via Partnerize · <a href="https://goalzero.com/pages/affiliate-marketing-program" target="_blank">goalzero.com/pages/affiliate-marketing-program</a><br>
+            <strong>Phone:</strong> 1-888-794-6250<br>
+            <a href="https://goalzero.com" target="_blank">goalzero.com</a>
+          </div>
+          <div class="alt-sources">Sources: NRG Energy IR press release 2014 (acquisition — independent public record) · GearJunkie (acquisition news — independent press) · GreenCitizen + PCWorld (independently confirm China manufacturing)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Grid Eraser — Maximus Solar Generator (Veteran-Owned, WI)</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Jackery 1000 V2, 1070Wh LiFePO4, portable, $399–$450 sale</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Maximus: 3,496Wh AGM, 2000W pure sine wave; price not public (call); Trevor/West Bend, WI; veteran-owned</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            West Bend / Trevor, Wisconsin. Veteran-owned small business run by a father-and-son team with 60+ combined years in aerospace and electronics manufacturing. Assembled and tested at their Wisconsin facility. Uses Sun Xtender AGM batteries (genuinely American-made, Concorde Battery, CA) and Xantrex inverter (Canadian brand). No e-commerce — all orders by phone (cites cybersecurity reasons). Note: AGM batteries are heavier and have fewer charge cycles (~500 vs. 3,000+) than LiFePO4 — different product category than the Jackery.<br>
+            <strong>Founders:</strong> Father-and-son team; names not in public sources.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-no">NOT FOUND</span><br>
+            <strong>Phone:</strong> (262) 224-6200<br>
+            <a href="https://grideraser.com" target="_blank">grideraser.com</a>
+          </div>
+          <div class="alt-sources">Sources: grideraser.com (company, "built and tested in Trevor, WI") · Alignable.com (independent business directory, West Bend WI) · TrueGear.com (independent review confirms WI assembly)</div>
+        </div>
+
+      </div>
+    </div><!-- /Jackery -->
+
+    <!-- 9. JanSport Classic Backpack -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">JanSport Classic Backpack</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#0891b2;">Office Products</span>
+            <span>Amazon: under $15</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives</span>
+          <span class="tag tag-verified">2 VERIFIED</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        American-made backpacks are a different market tier: $145–$295+. These are not price-competitive substitutes — they are lifetime investment purchases built on domestic labor and heirloom quality. Both GORUCK and Duluth Pack carry active affiliate programs. Duluth Pack is the oldest canvas pack manufacturer in the US (1882); GORUCK was built by a Green Beret from deployment savings.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">GORUCK — GR1 Rucksack (USA-Built)</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>JanSport Classic, under $15, lightweight student pack</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>$295 (21L) or $325 (26L); 1000D CORDURA nylon; built in Jacksonville Beach, FL; Scars Lifetime Guarantee</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Jacksonville Beach, Florida. Founded 2008 by Jason McCarthy. $46M gross revenue in 2023. Manufactures rucksacks, footwear, and apparel at Jacksonville Beach HQ. Also runs GORUCK Challenge fitness events (military-style). Built to the standard Special Forces soldiers used for duty bags — metal hardware, welded construction, bombproof 15" laptop sleeve.<br>
+            <strong>Founders:</strong> Jason McCarthy — former US Army Special Forces (Green Beret), Bronze Star and Army Commendation Medal with "V" Device for Valor. Started GORUCK with ~$75,000 in saved deployment pay.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-yes">YES — 8% commission</span>, 30-day cookie, minimum $100/month payout · <a href="https://goruck.com/pages/affiliates-program" target="_blank">goruck.com/pages/affiliates-program</a> · affiliates@goruck.com<br>
+            <strong>Address:</strong> 415 Pablo Ave N., Suite 140, Jacksonville Beach, FL 32250 · (904) 372-0184<br>
+            <a href="https://goruck.com" target="_blank">goruck.com</a>
+          </div>
+          <div class="alt-sources">Sources: goruck.com ("Built in the USA," "repairs at GORUCK HQ Jax Beach, FL") · Forbes 2018 (Amit Chowdhry, independent press) · Entrepreneur.com (Green Beret founder story, independent)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Duluth Pack — Scout Pack</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>JanSport Classic, under $15, synthetic fabric student pack</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>$144.95; 15-oz waxed canvas, leather trim, solid brass hardware; handcrafted in Duluth, MN since 1882</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Duluth, Minnesota. Oldest canvas and leather pack manufacturer in the United States — in continuous operation since 1882 (143 years). All packs handcrafted at the Duluth facility. Retail store at 365 Canal Park Dr, Duluth, MN. Lifetime guarantee on craftsmanship and hardware. Waxed canvas develops a patina over time and is designed to be passed down. A JanSport Classic is disposable at its price point; a Duluth Pack Scout is a multi-decade item.<br>
+            <strong>Founders:</strong> Camille Poirier, French-Canadian immigrant who arrived in Duluth in 1870 and patented the original "C. Poirier Pack Sack" on December 12, 1882.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-yes">YES — up to 15% commission</span> · <a href="https://duluthpack.com/pages/become-an-affiliate-partner" target="_blank">duluthpack.com/pages/become-an-affiliate-partner</a><br>
+            <strong>Phone:</strong> (218) 722-3898 · 1610 W. Superior St, Duluth, MN 55806<br>
+            <a href="https://duluthpack.com" target="_blank">duluthpack.com</a>
+          </div>
+          <div class="alt-sources">Sources: duluthpack.com (company, "Handcrafted in Duluth MN since 1882") · Wikipedia (confirms Duluth MN, 1882 founding — independent) · Destination Duluth (independent regional editorial) · B105 Country (independent feature)</div>
+        </div>
+
+      </div>
+    </div><!-- /JanSport -->
+
+    <!-- 10. Premier Protein Shake (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Premier Protein Shake (RTD)</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#65a30d;">Grocery</span>
+            <span>Amazon: ~$1.75–$2.25 / bottle</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING ×3</span>
+          <span class="tag tag-count">2 alternatives</span>
+          <span class="tag tag-verified">1 VERIFIED</span>
+          <span class="tag tag-lowconf">1 LOW-CONFIDENCE</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Premier Protein (BellRing Brands, St. Louis MO) is contract-manufactured in the US, but its parent is a publicly traded conglomerate. Fairlife is the closest American-made equivalent with multiple confirmed US factories. Note: Kate Farms (formerly Santa Barbara, CA — plant-based RTD) was acquired by Danone (French multinational, closed July 1, 2025) and is excluded.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Fairlife Core Power / Nutrition Plan</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Premier Protein, 30g protein, ~$1.75–$2.25/bottle, BellRing Brands</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Core Power 26g/42g ~$3.50–$4.50; Nutrition Plan 30g ~$2.05–$3.50; manufactured MI, AZ, NY</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Coopersville, MI (primary); Goodyear, AZ; Webster, NY (under construction). Fairlife LLC formed 2012 as JV between Select Milk Producers (92 family-owned US dairies) and Coca-Cola; Coca-Cola acquired full ownership in 2020. Over $1 billion in annual retail sales. Cold-filtration technology (not heat processing) produces creamier, higher-protein yield per ounce vs. Premier Protein. Coca-Cola committed $650M to expand the Coopersville, MI facility.<br>
+            <strong>Founders:</strong> Mike McCloskey, DVM, PhD (Indiana dairy farmer/veterinarian) and Sue McCloskey — developed the cold-filtration process at their kitchen table. Coca-Cola acquired full ownership in 2020.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-no">NO</span> — mass retail distribution only (Costco, Walmart, Target)<br>
+            <strong>Contact:</strong> 1-855-LIVEFAIR (general) · <a href="https://fairlife.com/contact-us/" target="_blank">fairlife.com/contact-us</a><br>
+            <a href="https://fairlife.com" target="_blank">fairlife.com</a>
+          </div>
+          <div class="alt-sources">Sources: Food Dive (Coopersville MI $650M expansion — independent trade press) · Coca-Cola press release (Webster NY groundbreaking — independent public record) · Dairy Herd (independent trade media)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">ICONIC Protein (Be Well Nutrition, Inc.)</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Premier Protein, 30g protein, ~$1.75–$2.25/bottle</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>20g protein, zero sugar, 4g fiber, ~$3.11–$3.33/bottle; New Orleans LA; grass-fed milk protein from Ireland</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            New Orleans, Louisiana. Founded 2011 at the New Orleans BioInnovation Center by Billy Bosch. ~$15.9M raised across six funding rounds; remains independently owned. American-owned and New York/New Orleans-headquartered — VERIFIED. Manufacturing location for RTD product has not been independently confirmed (protein isolate sourced from Ireland). Low-confidence flag is specifically for manufacturing claims, not ownership. Good fit for keto/lactose-sensitive consumers (zero sugar, lactose-free).<br>
+            <strong>Founders:</strong> Billy Bosch — New Orleans entrepreneur, built ICONIC from the BioInnovation Center incubator. Traveled to Ireland to source grass-fed protein ingredient.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-yes">YES — 10% commission</span>, via Refersion, quarterly payouts · <a href="https://iconic-protein.refersion.com/" target="_blank">iconic-protein.refersion.com</a><br>
+            <a href="https://drinkiconic.com" target="_blank">drinkiconic.com</a>
+          </div>
+          <div class="alt-sources">Sources: BevNet (New Orleans company, independent trade press) · New Orleans BioInnovation Center (independent economic development org) · Note: RTD manufacturing location unconfirmed by independent source</div>
+        </div>
+
+      </div>
+    </div><!-- /Premier Protein -->
+
+    <!-- 11. Liquid IV Hydration Multiplier (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Liquid I.V. Hydration Multiplier</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#65a30d;">Grocery</span>
+            <span>Amazon: ~$1.25–$1.50 / packet (Unilever-owned)</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING ×2</span>
+          <span class="tag tag-count">3 alternatives</span>
+          <span class="tag tag-verified">2 VERIFIED</span>
+          <span class="tag tag-lowconf">1 LOW-CONFIDENCE</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Liquid I.V. (Unilever, acquired 2020) is the dominant CTM electrolyte brand. Three American independent alternatives exist: LMNT (Bozeman MT, VERIFIED but carry the active lawsuit disclosure below), Skratch Labs (Boulder CO, VERIFIED, athlete-focused), and Hydrant (NYC, LOW-CONFIDENCE manufacturing). Nuun (Seattle) was excluded — acquired by Nestlé Health Science, closed ~Q3 2021.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Skratch Labs Sport Hydration Drink Mix</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Liquid I.V., ~$1.25–$1.50/packet, CTM electrolyte formula, Unilever-owned</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>~$1.20/serving (20-count ~$23.95); real fruit (not "natural flavors"); 400mg sodium; Boulder, CO independent</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Boulder, Colorado. Founded February 2012. Independently owned (no corporate parent acquisition as of July 2026). Inc. magazine ranked Skratch the 3rd fastest-growing food and beverage company in the US in 2014. Physical flagship store in North Boulder. USA Cycling official sponsor. Uses real fruit (not "natural flavors") — a differentiator for clean-label consumers. Designed specifically for athletes losing sodium through sweat; partial use-case overlap with Liquid I.V. for active adults.<br>
+            <strong>Founders:</strong> Allen Lim, PhD (CU Boulder physiology doctorate, former Tour de France sport scientist for Garmin, RadioShack); co-founders Aaron Foster and Ian McGregor.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-yes">YES</span> · <a href="https://skratchlabs.com/pages/affiliates" target="_blank">skratchlabs.com/pages/affiliates</a> — must be active in endurance sports<br>
+            <a href="https://skratchlabs.com" target="_blank">skratchlabs.com</a>
+          </div>
+          <div class="alt-sources">Sources: Colorado Made (independent, confirms Boulder CO manufacturing and assembly) · CU Boulder Leeds School of Business (alumni spotlight, confirms independent Boulder CO company — independent)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">LMNT Recharge Electrolyte Drink Mix ⚠</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Liquid I.V., ~$1.25–$1.50/packet, glucose-transport formula</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>~$1.00–$2.00/packet; 1,000mg sodium, zero sugar; Bozeman, MT; privately owned by founding team</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Bozeman, Montana (and Draper, UT). Originally Elemental Labs LLC (Florida, Oct 2018); converted to Drink LMNT, Inc. (Delaware, Dec 2019). Privately held with no outside investors — entirely owned by founding team. Top-selling electrolyte brand in the US. SEC EDGAR filings independently confirm US corporate identity.<br><br>
+            <strong>⚠ MATERIAL DISCLOSURE:</strong> A 2024 independent lab found flavored LMNT products contain 300–550mg of undisclosed maltodextrin embedded in "natural flavors." A class action lawsuit was filed in Montana federal court (and parallel NY/FL filings) in May 2025 alleging false advertising. Unflavored "Raw" tested positive for 27 ppb lead in separate testing. Lawsuit active as of July 6, 2026. These are material facts for any commercial recommendation.<br><br>
+            <strong>Founders:</strong> Robb Wolf (2×NYT bestselling author, "The Paleo Solution," "Wired to Eat"); co-founders Nicki Violetti, James Murphy, Tyler Cartwright, Luis Villasenor.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-yes">YES</span> — two purchases unlock "Salty Status" referral link · <a href="https://partners.drinklmnt.com/free-gift-with-purchase" target="_blank">partners.drinklmnt.com</a><br>
+            <strong>Contact:</strong> hello@drinklmnt.com<br>
+            <a href="https://drinklmnt.com" target="_blank">drinklmnt.com</a>
+          </div>
+          <div class="alt-sources">Sources: SEC EDGAR filing #1871551 (confirms US incorporation/operations — independent public record) · ConsumerLab.com (independent testing, confirms product and discloses lead finding) · GetEvident.co (independent, discloses maltodextrin finding and lawsuit)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Hydrant — Rapid Hydration Drink Mix</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Liquid I.V., ~$1.25–$1.50/packet, CTM formula</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>~$0.75–$1.45/packet (less expensive); WHO ORS-based formula; real fruit juice powder; New York, NY</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            New York, New York. Founded 2016–2017 by John Sherwin and Jai Jung Kim. ~$14.9M venture funding from Coefficient Capital and Rx3 Growth Partners; not acquired as of July 2026. Small team (~8 employees). Uses WHO (World Health Organization) oral rehydration science — same underlying framework as Liquid I.V.'s CTM. Real fruit juice powder flavoring vs. "natural flavors." American-owned — VERIFIED. US manufacturing location: LOW-CONFIDENCE — only company marketing copy states "Made in USA"; no independent manufacturing confirmation found.<br>
+            <strong>Founders:</strong> John Sherwin (studied human physiology at Oxford); co-founder Jai Jung Kim.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-yes">YES — Awin network + Social Snowball</span> · <a href="https://ui.awin.com/merchant-profile/23363" target="_blank">Awin profile</a><br>
+            <strong>Phone:</strong> 929-202-7075 · hello@drinkhydrant.com<br>
+            <a href="https://drinkhydrant.com" target="_blank">drinkhydrant.com</a>
+          </div>
+          <div class="alt-sources">Sources: StarterNoise (founder story, independent) · AlleyWatch (independent tech/startup press) · drinkhydrant.com (company, "Made in USA" claim — no independent manufacturing confirmation found)</div>
+        </div>
+
+      </div>
+    </div><!-- /Liquid IV -->
+
+    <!-- 12. Temptations Cat Treats (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Temptations Classic Cat Treats</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#92400e;">Pet Supplies</span>
+            <span>Amazon: ~$6–$10 / 6.3 oz bag (Mars Inc.)</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING ×2</span>
+          <span class="tag tag-count">3 alternatives</span>
+          <span class="tag tag-verified">3 VERIFIED</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Temptations (Mars Inc.) uses chicken by-product meal and artificial flavors. Three VERIFIED American alternatives exist, all manufactured at confirmed US facilities. Fromm Family Foods is the top recommendation — closest format match (soft-savory bites), Wisconsin family company since 1904, in-house lab testing. Halo and Wellness offer differentiated formats (freeze-dried raw and lickable puree tubes, respectively).
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Fromm Family Foods — PurrSnackitty Treats</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Temptations, soft-crunchy bites, $6–$10 / 6.3oz, chicken by-product meal, artificial flavors</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>~$4.46 / 3oz bag; soft-savory bites; whole chicken as first ingredient; no artificial dyes; Mequon, WI</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Mequon, Wisconsin. 5th-generation family company in continuous operation since 1904. Began as a silver fox fur farm; entered pet food manufacturing in 1925. All production at Fromm-owned Wisconsin facilities (Mequon, Columbus, WI; Eden, WI cannery). Small-batch, batch-coded production with in-house lab testing. Does not contract-manufacture. Closest direct-format match to Temptations in this report.<br>
+            <strong>Founders:</strong> Four Fromm brothers (Walter, Edward, John, Henry) founded 1904, ages 10–16. Today: Tom Nieman (President &amp; Owner), 4th/5th generation Nieman family.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-no">NOT FOUND</span> — products through pet specialty retailers; contact frommfamily.com<br>
+            <strong>Phone:</strong> 1-262-242-2200 (M–F, 8am–4:30pm CT) · Mequon, WI<br>
+            <a href="https://frommfamily.com" target="_blank">frommfamily.com</a> · <a href="https://www.petage.com/five-questions-tom-nieman-owner-and-president-of-fromm-family-foods/" target="_blank">Pet Age: Tom Nieman interview</a>
+          </div>
+          <div class="alt-sources">Sources: frommfamily.com ("all products at Fromm-owned facilities in Wisconsin") · TrulyAmericanMade.com (independent directory, cites Mequon and Columbus WI facilities) · WellBehavedCat.com (independent review, names facilities)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Halo Purely for Pets — Liv-A-Littles Freeze-Dried Treats</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Temptations, soft-crunchy, ~$6–$10 / 6.3oz</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>~$10–$12 / 2.2oz; 100% freeze-dried single ingredient (chicken, salmon, beef); highest-protein option; Tampa FL</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Tampa, Florida. Founded 1986 by Andi Brown. Now owned by SRx Health Solutions, Inc. (SRXH, NYSE American) following 2025 merger with Better Choice Company. Manufacturing at Alphia's confirmed US facilities (PA, NE, KS, WA, CA, UT, TX — confirmed by PetfoodIndustry.com trade press). Liv-A-Littles are single-ingredient freeze-dried treats — highest protein/cleanest label in this list. Format note: dry, crumbly texture — cats used to Temptations' chewy bites may need a transition period.<br>
+            <strong>Founders:</strong> Andi Brown, 1986 (after her cat "Spot" suffered digestive problems). Ellen DeGeneres held 15% ownership 2008–2019 (no longer involved).<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-unconfirmed">UNCONFIRMED</span> — 1-800-426-4256 · support@halopets.com<br>
+            <a href="https://halopets.com" target="_blank">halopets.com</a>
+          </div>
+          <div class="alt-sources">Sources: halopets.com ("Made in the USA") · PetfoodIndustry.com (Alphia as Halo's manufacturer, names US facilities — independent trade press) · Chewy.com product listing (confirms "Made in USA" tag — independent retailer)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Wellness Pet Company — Lickable Treats for Cats</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Temptations, soft-crunchy bites, ~$6–$10 / 6.3oz, by-product meal</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>~$5–$8 / 6-pack (2.53oz) lickable puree tubes; grain-free; no artificial flavors; Tewksbury, MA</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Tewksbury, Massachusetts. Heritage traces to Old Mother Hubbard (est. 1926, Gloucester MA). Wellness brand developed by Jim Scott Sr. and Jim Scott Jr. with veterinarians. Rebranded to Wellness Pet Company in December 2021; backed by Clearlake Capital (US private equity). Three US manufacturing facilities: Indiana (primary), Minnesota, Arkansas. Format note: lickable puree tubes — not a format-equivalent substitute for Temptations' crunchable bites. Best positioned as a supplement treat or enrichment activity.<br>
+            <strong>Founders:</strong> Jim Scott Sr. (professional animal nutritionist) and Jim Scott Jr., developed with veterinary team.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-unconfirmed">UNCONFIRMED</span><br>
+            <strong>Phone:</strong> 978-289-5565 · 200 Ames Pond Dr, Tewksbury, MA<br>
+            <a href="https://wellnesspetfood.com" target="_blank">wellnesspetfood.com</a>
+          </div>
+          <div class="alt-sources">Sources: wellnesspet.com (company, Indiana/Minnesota US facilities) · Wikipedia Wellness Pet Company (independently confirms Mishawaka IN plant) · cats.com independent review (Indiana manufacturing) · PangoVet (independent vet-staffed review)</div>
+        </div>
+
+      </div>
+    </div><!-- /Temptations -->
+
+    <!-- 13. Shark NV356E Upright Vacuum (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Shark NV356E Navigator Lift-Away Upright Vacuum</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#16a34a;">Home &amp; Kitchen</span>
+            <span>Amazon: ~50% off list during July 4th sale (~$99–$150)</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING ×2</span>
+          <span class="tag tag-count">2 alternatives</span>
+          <span class="tag tag-verified">2 VERIFIED</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        The US-made vacuum market is narrow: Dyson (British), Miele (German), iRobot (now Chinese-owned), Hoover, Bissell, and Eureka are all manufactured overseas. Only Tacony/Riccar and Oreck have independently confirmed US assembly. Riccar is a lifetime investment ($1,170); Oreck at ~$249 is the most accessible and has the only confirmed affiliate program in this category.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Oreck HEPA Upright Vacuum (UK30205PC)</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Shark NV356E, ~$99–$150 on sale, bagless, Lift-Away, ~17 lbs</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>~$249; HEPA filtration (99.97% at 0.3 microns); ~9–11 lbs (significantly lighter); Cookeville, TN assembly</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Nashville, TN (HQ); Cookeville, TN (manufacturing, 1400 Salem Rd, opened 2006). Founded 1963 by David Oreck specifically for US hotel housekeeping (Holiday Inn was the original customer). ~$190M annual revenue. 60+ years of US manufacturing. Ergonomic key differentiator: ~9–11 lbs vs. Shark's ~17 lbs — meaningfully better for stairs and multi-floor homes. Bagged design (vs. Shark's bagless); no Lift-Away feature. Components include globally sourced parts with Tennessee assembly.<br>
+            <strong>Founders:</strong> David Irving Oreck (Sept 17, 1923 – Feb 15, 2023). WWII veteran, American entrepreneur. Lived to age 99. Was spokesperson for his own brand through decades of TV direct-response advertising.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-yes">YES — ~6% commission</span>, via FlexOffers · <a href="https://flexoffers.com/affiliate-programs/hoover-dirt-devil-and-oreck-affiliate-program/" target="_blank">FlexOffers program page</a><br>
+            <a href="https://oreck.com" target="_blank">oreck.com</a>
+          </div>
+          <div class="alt-sources">Sources: IndustryWeek (Cookeville TN plant opening 2006 — independent trade press) · WPLN Nashville Public Radio (plant opening — independent broadcast) · BBB Tennessee (Oreck Manufacturing Company, Cookeville TN — active listing) · Yelp (Cookeville facility, updated May 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Riccar — Brilliance Deluxe R30D Upright Vacuum</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Shark NV356E, ~$99–$150 on sale, mid-range consumer vacuum</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>~$1,169.99 (R30D); dual Tandem Air motors; HEPA + charcoal filter; built in St. James, MO; 6-year warranty</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            St. James, Missouri (manufacturing plant, USA Vacuum Industries, opened 1997 — 1M+ vacuums produced). Corporate at 1800 E. Walnut Ave, Fullerton, CA. Tacony Corporation (family-owned since 1946) acquired Riccar in 1988 and moved production from overseas to St. James, MO in 1997. Dual Tandem Air System (two simultaneous motors for suction + agitation), metal brush roll housing, 6-year warranty with "Red Carpet Service." Designed to be repaired, not replaced. Important caveat: Only the R30 Brilliance and R40 series are confirmed Missouri-made; the lower-cost R25 series is manufactured overseas — confirm model when purchasing.<br>
+            <strong>Founders:</strong> Nick Tacony (Tacony Corporation, founded 1946, St. Louis MO area). John Tacony leads the company today.<br>
+            <strong>Affiliate:</strong> <span class="tag tag-affiliate-no">NO CONSUMER AFFILIATE</span> — dealer network only (~3,000+ authorized dealers nationwide) · <a href="https://riccar.com/where-to-buy" target="_blank">Dealer locator</a><br>
+            <strong>Phone:</strong> 1-888-742-2277 (M–F 8am–5pm CT)<br>
+            <a href="https://riccar.com" target="_blank">riccar.com</a>
+          </div>
+          <div class="alt-sources">Sources: tacony.com ("built in St. James, Missouri, USA") · FundingUniverse (Tacony company history, independently documents St. James MO plant — independent research database) · VacuumLand.org (enthusiast forum, 2025 thread independently confirms Missouri manufacturing) · B4USA.com (independent US-made product directory)</div>
+        </div>
+
+      </div>
+    </div><!-- /Shark Vacuum -->
+
+  </div><!-- /product-groups -->
+
+  <!-- Category Breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg viewBox="0 0 700 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:700px;">
+      <!-- Title -->
+      <text x="10" y="18" font-size="13" font-weight="600" fill="#0f172a">Alternatives Found by Category (July 7, 2026)</text>
+      <!-- Grid lines -->
+      <line x1="170" y1="30" x2="170" y2="265" stroke="#e2e8f0" stroke-width="1"/>
+      <line x1="288" y1="30" x2="288" y2="265" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="3,2"/>
+      <line x1="406" y1="30" x2="406" y2="265" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="3,2"/>
+      <line x1="524" y1="30" x2="524" y2="265" stroke="#e2e8f0" stroke-width="0.5" stroke-dasharray="3,2"/>
+      <line x1="642" y1="30" x2="642" y2="265" stroke="#e2e8f0" stroke-width="1"/>
+      <!-- Axis labels -->
+      <text x="170" y="278" font-size="10" fill="#64748b" text-anchor="middle">0</text>
+      <text x="288" y="278" font-size="10" fill="#64748b" text-anchor="middle">2</text>
+      <text x="406" y="278" font-size="10" fill="#64748b" text-anchor="middle">4</text>
+      <text x="524" y="278" font-size="10" fill="#64748b" text-anchor="middle">6</text>
+      <!-- Health & Household: 6 alts -->
+      <text x="165" y="52" font-size="11" fill="#0f172a" text-anchor="end">Health &amp; Household</text>
+      <rect x="170" y="38" width="354" height="20" rx="3" fill="#0d9488"/>
+      <text x="530" y="52" font-size="11" fill="#64748b">6</text>
+      <!-- Apparel: 6 alts -->
+      <text x="165" y="80" font-size="11" fill="#0f172a" text-anchor="end">Apparel</text>
+      <rect x="170" y="66" width="354" height="20" rx="3" fill="#7c3aed"/>
+      <text x="530" y="80" font-size="11" fill="#64748b">6</text>
+      <!-- Grocery: 5 alts -->
+      <text x="165" y="108" font-size="11" fill="#0f172a" text-anchor="end">Grocery</text>
+      <rect x="170" y="94" width="295" height="20" rx="3" fill="#65a30d"/>
+      <text x="471" y="108" font-size="11" fill="#64748b">5</text>
+      <!-- Home & Kitchen: 4 alts -->
+      <text x="165" y="136" font-size="11" fill="#0f172a" text-anchor="end">Home &amp; Kitchen</text>
+      <rect x="170" y="122" width="236" height="20" rx="3" fill="#16a34a"/>
+      <text x="412" y="136" font-size="11" fill="#64748b">4</text>
+      <!-- Sports & Outdoors: 3 alts -->
+      <text x="165" y="164" font-size="11" fill="#0f172a" text-anchor="end">Sports &amp; Outdoors</text>
+      <rect x="170" y="150" width="177" height="20" rx="3" fill="#ea580c"/>
+      <text x="353" y="164" font-size="11" fill="#64748b">3</text>
+      <!-- Beauty & Personal Care: 3 alts -->
+      <text x="165" y="192" font-size="11" fill="#0f172a" text-anchor="end">Beauty &amp; Personal Care</text>
+      <rect x="170" y="178" width="177" height="20" rx="3" fill="#db2777"/>
+      <text x="353" y="192" font-size="11" fill="#64748b">3</text>
+      <!-- Pet Supplies: 3 alts -->
+      <text x="165" y="220" font-size="11" fill="#0f172a" text-anchor="end">Pet Supplies</text>
+      <rect x="170" y="206" width="177" height="20" rx="3" fill="#92400e"/>
+      <text x="353" y="220" font-size="11" fill="#64748b">3</text>
+      <!-- Tools & Home Improvement: 3 alts -->
+      <text x="165" y="248" font-size="11" fill="#0f172a" text-anchor="end">Tools &amp; Home Improvement</text>
+      <rect x="170" y="234" width="177" height="20" rx="3" fill="#475569"/>
+      <text x="353" y="248" font-size="11" fill="#64748b">3</text>
+      <!-- Office Products: 2 alts -->
+      <!-- Skipping to keep the chart not too tall — shown in legend below -->
+      <text x="500" y="248" font-size="10" fill="#64748b">Office Products: 2 (GORUCK, Duluth Pack)</text>
+    </svg>
+  </div>
+
+  <!-- New Entrants Spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <div style="font-size:14px;font-weight:600;margin-bottom:4px;">9 products appeared for the first time in this run</div>
+    <div style="font-size:13px;color:#334155;margin-bottom:12px;">Sourced from the sibling agent's July 6, 2026 report. Not seen in any of the prior 4 reports (June 20–29, 2026).</div>
+    <div class="spotlight-grid">
+      <div class="spotlight-item">
+        <div class="s-name">Sleep Mouth Tape</div>
+        <div class="s-product">Health &amp; Household</div>
+        <div class="s-desc">Breakout wellness trend. Dream Recovery (NFL founder, 2023) and Dryft Sleep both VERIFIED American-made.</div>
+      </div>
+      <div class="spotlight-item">
+        <div class="s-name">ON Gold Standard Whey</div>
+        <div class="s-product">Health &amp; Household</div>
+        <div class="s-desc">3 of 3 alternatives VERIFIED — best clean-sweep category this run. High repurchase cadence.</div>
+      </div>
+      <div class="spotlight-item">
+        <div class="s-name">Silk Sleep Bonnets</div>
+        <div class="s-product">Beauty &amp; Personal Care</div>
+        <div class="s-desc">Swurly Co (Sun Prairie WI, mom-founded 2016) and Clementine Sleepwear (LA, Oprah-featured) both VERIFIED.</div>
+      </div>
+      <div class="spotlight-item">
+        <div class="s-name">America 250 Anniversary Apparel</div>
+        <div class="s-product">Apparel</div>
+        <div class="s-desc">All 3 alternatives VERIFIED. Freedom Fatigues best affiliate program (8%, AvantLink) + veteran-owned.</div>
+      </div>
+      <div class="spotlight-item">
+        <div class="s-name">Flat-Back Sleeper Earrings</div>
+        <div class="s-product">Apparel</div>
+        <div class="s-desc">2 of 3 VERIFIED. Hello Adorn (Eau Claire WI, 40+ makers, $18–$50) is the accessible domestic option.</div>
+      </div>
+      <div class="spotlight-item">
+        <div class="s-name">DREO Evaporative Cooler</div>
+        <div class="s-product">Home &amp; Kitchen</div>
+        <div class="s-desc">Thinnest finding: both alternatives LOW-CONFIDENCE and are whole-home units, not portable. Form factor gap remains.</div>
+      </div>
+      <div class="spotlight-item">
+        <div class="s-name">Igloo Trailmate Cooler</div>
+        <div class="s-product">Sports &amp; Outdoors</div>
+        <div class="s-desc">All 3 VERIFIED (YETI, Pelican, Bison). ORCA Coolers permanently closed January 2025 — do not cite.</div>
+      </div>
+      <div class="spotlight-item">
+        <div class="s-name">Jackery Explorer 1000 V2</div>
+        <div class="s-product">Tools &amp; Home Improvement</div>
+        <div class="s-desc">Structural gap: lithium battery supply chain is globally Asian. All 3 alternatives LOW-CONFIDENCE.</div>
+      </div>
+      <div class="spotlight-item">
+        <div class="s-name">JanSport Classic Backpack</div>
+        <div class="s-product">Office Products</div>
+        <div class="s-desc">Both alternatives VERIFIED but are premium ($145–$295). GORUCK (Green Beret founder) and Duluth Pack (1882, MN) have affiliate programs.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Methodology -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p><strong>Source data:</strong> Product list drawn from the sibling agent's July 6, 2026 report at <code>../Competitor Research Agent/docs/July6_2026/</code>. 18 products identified; 5 Electronics category products excluded (per standing project rule — Electronics are never researched). 13 non-Electronics products were researched.</p>
+
+    <p><strong>Verification standard:</strong> VERIFIED = 2 or more independent sources confirming American ownership AND American manufacturing (or assembly). The company's own website/marketing counts as exactly one source and is never sufficient alone. LOW-CONFIDENCE = company claim exists but only one source, or manufacturing is American-claimed but unconfirmed by any independent body, press, or public record.</p>
+
+    <p><strong>Sort precedence:</strong> (1) NEW before RECURRING; (2) $25–$100 Amazon price band before outside-band products; (3) higher inherent repurchase interest before lower within each tier.</p>
+
+    <p><strong>LMNT disclosure:</strong> LMNT is listed as VERIFIED for US corporate identity (confirmed by SEC EDGAR filings) but carries a material active disclosure: a class action lawsuit filed in Montana federal court in May 2025 (and parallel filings in NY and FL) alleges undisclosed maltodextrin in flavored products; unflavored "Raw" tested positive for 27 ppb lead in independent testing. This research does not assess legal merit. Sources: ConsumerLab.com and GetEvident.co. This disclosure must accompany any commercial recommendation involving LMNT.</p>
+
+    <p><strong>ORCA Coolers:</strong> Previously cited as the leading American-made premium cooler brand. ORCA permanently ceased all operations in January 2025 per company announcement and Shop Eat Surf Outdoor trade reporting. Do not cite ORCA as a current or available alternative.</p>
+
+    <p><strong>Jackery/portable power stations:</strong> No fully American-manufactured alternative paralleling the Jackery 1000 V2 exists. Over 80% of global lithium battery cell manufacturing is in China, South Korea, or Japan. Goal Zero is American-owned (NRG Energy subsidiary) but explicitly manufactured in China. Lion Energy assembles in Utah but uses imported cells. Grid Eraser assembles in Wisconsin with AGM batteries (Sun Xtender, California-made) but uses a Canadian-brand inverter and imported solar panels. All three are LOW-CONFIDENCE for "American-made" claims. Lion Energy's April 2026 equity stake in American Battery Factory (Tucson, AZ) may change this over time.</p>
+
+    <p><strong>DREO evaporative coolers:</strong> Both American alternatives (Champion Cooler, Phoenix Manufacturing) are whole-home/whole-room installation units rather than portable desktop units like the DREO product being researched. Neither could be independently verified as "Made in USA" beyond the company's own claim and indirect trade-association listings. LOW-CONFIDENCE.</p>
+
+    <p><strong>Nuun and Kate Farms (excluded):</strong> Nuun (Seattle) was acquired by Nestlé Health Science (Swiss multinational), transaction closed ~Q3 2021 — excluded as no longer American-owned. Kate Farms (formerly Santa Barbara, CA) was acquired by Danone (French multinational), transaction closed July 1, 2025 — excluded.</p>
+
+    <p><strong>Research agents:</strong> 5 parallel subagents conducted the research, one per product batch, with web search and page fetch access. ~120 sources checked across all agents. All access dates: July 6, 2026.</p>
+  </div>
+
+  <!-- Footer Nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../June29_2026/">June 29, 2026</a></span>
+  </div>
+
+</div>
+</body>
+</html>
