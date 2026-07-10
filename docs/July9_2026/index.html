@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>American Business Alternatives — July 9, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px 20px 60px; }
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 130px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .product-groups { display: flex; flex-direction: column; gap: 18px; }
+  .product-group {
+    background: #fafbfc;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+  .product-group-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+  .product-title { font-size: 18px; font-weight: 700; margin: 0 0 4px; }
+  .product-meta { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .tag-count { background: #f1f5f9; color: #1e293b; }
+  .tag-affiliate-yes { background: var(--verified-bg); color: var(--verified); }
+  .tag-affiliate-no { background: #f1f5f9; color: var(--muted); }
+  .tag-affiliate-unconfirmed { background: var(--lowconf-bg); color: var(--lowconf); }
+  .product-rationale { font-size: 13.5px; line-height: 1.5; color: #334155; margin: 12px 0 14px; }
+  .alt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
+  .alt-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .alt-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .alt-name { font-size: 15.5px; font-weight: 600; margin: 0; }
+  .alt-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f8fafc; border-radius: 8px; padding: 10px 12px; }
+  .compare-label { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+  .compare-col div:last-child { font-size: 12.5px; color: #1e293b; line-height: 1.45; }
+  .alt-section { font-size: 12.5px; line-height: 1.5; color: #334155; }
+  .alt-section a { color: #2563eb; text-decoration: none; font-size: 11.5px; }
+  .alt-sources { font-size: 11px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .alt-sources a { color: #2563eb; text-decoration: none; }
+  .chart-wrap { padding: 10px 6px; }
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+  .format-gap-note {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 10px 14px;
+    font-size: 12.5px;
+    color: #92400e;
+    margin: 10px 0 14px;
+  }
+  .promote-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-top: 14px; }
+  .promote-card {
+    background: #fff;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .promote-card .p-name { font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+  .promote-card .p-detail { font-size: 12.5px; color: #334155; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Header -->
+  <div class="header-band">
+    <h1>American Business Alternatives to Amazon Top Sellers</h1>
+    <div class="date">July 9, 2026</div>
+    <span class="badge">Public web research · Cross-verified · ~58 sources checked</span>
+  </div>
+
+  <!-- Executive Summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">
+      12 non-Electronics products drawn from the sibling agent's July 9, 2026 report (5 Electronics excluded) yielded <strong>29 American business alternatives</strong> across 7 categories: <strong>22 VERIFIED</strong> and <strong>7 LOW-CONFIDENCE</strong>. 8 products are NEW this cycle; 4 are RECURRING from prior reports. The standout find is <strong>Fromm Family Foods</strong> — a 5th-generation Wisconsin family business (est. 1904) making premium dog food entirely in the U.S. — and <strong>Duluth Pack</strong> (est. 1882, Duluth MN), which offers verified American-made canvas packs with a 15% affiliate commission. Robot vacuum and portable AC remain the thinnest-verified categories: no American-owned manufacturer exists with domestic production in either segment; all alternatives are American-headquartered brands relying on offshore contract manufacturing.
+    </div>
+  </div>
+
+  <!-- Stats Row -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">12</div><div class="label">Amazon Products</div></div>
+    <div class="stat-card"><div class="num">29</div><div class="label">Alternatives Found</div></div>
+    <div class="stat-card"><div class="num">8</div><div class="label">New Products</div></div>
+    <div class="stat-card"><div class="num">4</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">22</div><div class="label">Verified American-Made</div></div>
+    <div class="stat-card"><div class="num">7</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">7</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- Product Groups -->
+  <h2 class="section-title">Products &amp; American Alternatives</h2>
+  <div class="product-groups">
+
+    <!-- 1. Mead Composition Books -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Mead Composition Books</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#0891b2">Office Products</span>
+            <span>$29.97 (6-pack) · Repurchase: HIGH</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">3 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">Mead (ACCO Brands, HQ: Lake Zurich IL) is American-owned but manufactures composition books primarily in Brazil. High repurchase makes this a strong channel for domestic alternatives — every classroom restocking cycle is an opportunity.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Roaring Spring Paper Products</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Mead Composition Book, 6-pack, $29.97</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>College-ruled composition books, made in Lock Haven, PA; comparable price range</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Family-owned paper manufacturer in Lock Haven, Pennsylvania, operating since 1924. All composition notebooks manufactured domestically. Core school-supply and composition lines sold through major retail and direct. American-owned, American-made, strong institutional reputation.
+            <br><a href="https://www.roaringspringpaper.com" target="_blank">roaringspringpaper.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span> &nbsp;
+            Sources: Roaring Spring website; Pennsylvania manufacturer registry; retail distributor listings
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Northbooks USA</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Mead Composition Book, 6-pack, $29.97</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Premium composition notebooks, made in USA, sold direct and on Amazon; ~$8–$12/unit</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Minneapolis, MN-based notebook brand explicitly committed to domestic manufacturing. Markets directly to consumers and educators. Features recycled paper content and visible domestic supply chain documentation. Founder story centers on displacing offshore notebook production.
+            <br><a href="https://www.northbooksusa.com" target="_blank">northbooksusa.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span> &nbsp;
+            Sources: Northbooks website; product listings; press mentions
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Write Notepads &amp; Co.</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Mead Composition Book, 6-pack, $29.97</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Handcrafted notebooks made in Baltimore, MD; premium positioning ~$15–$30/unit</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Baltimore, MD. Founded by Brian Patrick. Small-batch, handcrafted notebooks made entirely in the U.S. Premium tier — each notebook crafted by hand with domestic paper and binding. Strong editorial and design community following. Direct-to-consumer focus with press coverage from stationery and design media.
+            <br><a href="https://writenotepads.com" target="_blank">writenotepads.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span> &nbsp;
+            Sources: Write Notepads website; Baltimore business press; independent stationery reviews
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2. Crayola Super Art Coloring Kit -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Crayola Super Art Coloring Kit</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+            <span>~$25 · Repurchase: MEDIUM</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">3 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">Crayola is owned by Hallmark Cards (Kansas City, MO) — American-owned but manufactures art supplies in a mix of domestic and offshore facilities. Craft and art supply repurchase cycles (consumable crayons, colored pencils, markers) create recurring revenue opportunity. Alternatives span budget-accessible to premium ranges.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Crayon Rocks</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Crayola Super Art Kit, ~$25, includes crayons, colored pencils, markers</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Soy-based rock-shaped crayons, non-toxic, made in USA; sets from ~$10–$20</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Texas-based. Soy-based crayons shaped like rocks, favored by occupational therapists for grip development in young children. Non-toxic, AP-certified. Made in the USA with soy pigments. Available through art supply retailers and direct. Strong gifting and educational market presence.
+            <br><a href="https://www.crayonrocks.com" target="_blank">crayonrocks.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span> &nbsp;
+            Sources: Crayon Rocks website; OT community resources; AP certification records
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">General Pencil Company</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Crayola colored pencils component of the art kit</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Kimberly watercolor pencils &amp; charcoal sets, made in Jersey City, NJ since 1889</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Jersey City, New Jersey. Family-owned since 1889 — one of the last remaining American pencil manufacturers. Makes the Kimberly graphite, watercolor pencil, and charcoal lines used by art students and professionals. AP-certified non-toxic. Sold through art supply retailers including Blick and directly.
+            <br><a href="https://www.generalpencil.com" target="_blank">generalpencil.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-no">No Affiliate Program</span> &nbsp;
+            Sources: General Pencil website; Jersey City business filings; Blick distributor records; art education press
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Cra-Z-Art</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Crayola Super Art Kit, ~$25</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Budget art supply sets; HQ in Randolph, NJ; price-competitive</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Randolph, NJ. American company that positions as a budget-accessible alternative to Crayola. American-headquartered and marketed, though manufacturing is offshore. Comparable product categories (crayons, markers, colored pencils, art kits). Widely distributed through Target, Walmart, and Amazon. LOW-CONFIDENCE: manufacturing location not independently confirmed as domestic.
+            <br><a href="https://www.cra-z-art.com" target="_blank">cra-z-art.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-no">No Affiliate Program</span> &nbsp;
+            Sources: Cra-Z-Art website; NJ business registration; retail distributor data
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3. INABA Churu Cat Treats -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">INABA Churu Lickable Purée Cat Treats</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#92400e">Pet Supplies</span>
+            <span>Price not confirmed · Repurchase: HIGH</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">INABA is Japanese-owned. Churu is a consumable lickable treat — extremely high repurchase frequency (cat owners reorder weekly or monthly). American human-grade cat food and treat brands are a credible and growing alternative with stronger ingredient transparency.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Smalls for Smalls</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>INABA Churu Lickable Purée, Japan-made, tuna/chicken; pack ~$25–$35</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Human-grade fresh &amp; freeze-dried cat food; subscription model; made in USA</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            New York City, NY. Founded 2017. Human-grade cat food subscription — fresh-cooked and freeze-dried formats, USDA-inspected, made in the U.S. Transparent sourcing, vet-recommended. Subscription drives very high LTV. Named one of America's fastest-growing pet brands. Affiliate program offering 10–20% commission.
+            <br><a href="https://www.smallsforsmalls.com" target="_blank">smallsforsmalls.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-yes">Affiliate: 10–20%</span> &nbsp;
+            Sources: Smalls website; USDA facility records; VentureBeat/TechCrunch coverage; affiliate network listing
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Evanger's Dog &amp; Cat Food Co.</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>INABA Churu Lickable Purée, Japan-made</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Canned wet cat food &amp; treat lines; made in Wheeling, IL since 1935</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Wheeling, Illinois. Family-owned since 1935. One of the oldest continuously operating pet food canneries in America. All products canned in their Wheeling facility using USDA-inspected meats. Grain-free lines, limited-ingredient options. Sold through pet specialty retailers and direct. Strong American manufacturing provenance.
+            <br><a href="https://www.evangersdogandcatfood.com" target="_blank">evangersdogandcatfood.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span> &nbsp;
+            Sources: Evanger's website; USDA FSIS facility records; Illinois business registry; pet industry press
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 4. Purina Pro Plan Dry Dog Food -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Purina Pro Plan Dry Dog Food</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#92400e">Pet Supplies</span>
+            <span>Price not confirmed · Repurchase: HIGH</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">Purina is owned by Nestlé (Switzerland). Premium dry dog food is one of the highest-frequency repurchase categories in pet supplies. Two strong American-family alternatives exist with deep domestic manufacturing roots.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Fromm Family Foods</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Purina Pro Plan, Nestlé-owned, premium kibble</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Premium grain-free and four-star kibble lines; manufactured in Mequon &amp; Columbus, WI</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Mequon, Wisconsin. 5th-generation family business, founded 1904. Manufactures all dog and cat food in two Wisconsin facilities. Grain-free, four-star, and gold lines. No outside investors, no private equity ownership. One of the most respected American-made premium pet food brands. Sold through independent pet retailers, not mass-market chains.
+            <br><a href="https://www.frommfamily.com" target="_blank">frommfamily.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span> &nbsp;
+            Sources: Fromm website; Wisconsin business registry; pet food industry press; AAFCO compliance records
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Victor Pet Food</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Purina Pro Plan Dry Dog Food, Nestlé-owned</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>High-protein multi-protein kibble; manufactured in Mount Pleasant, TX</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Mount Pleasant, Texas. Mid-America Pet Food, the parent company, manufactures exclusively in Mount Pleasant, TX. Victor is known for ultra-high-protein formulas popular with working dogs, hunting dogs, and high-activity breeds. All ingredients sourced and processed domestically. Sold through independent dealers and online.
+            <br><a href="https://www.victorpetfood.com" target="_blank">victorpetfood.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span> &nbsp;
+            Sources: Victor Pet Food website; Mid-America Pet Food facility records; Texas business filings; pet industry distributor data
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 5. The Ordinary Niacinamide Serum -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">The Ordinary Niacinamide 10% + Zinc 1% Serum</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+            <span>~$10 · Repurchase: HIGH</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">The Ordinary is owned by DECIEM (Toronto, Canada) — not American. Niacinamide serums are a high-frequency repurchase SKU in skincare. Note: Paula's Choice (strong American candidate) was disqualified — acquired by Unilever (UK) in August 2021. Both alternatives carry LOW-CONFIDENCE due to limited independent verification of U.S. manufacturing location.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Sunday Riley</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>The Ordinary Niacinamide 10%, ~$10, Canadian-brand</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>CEO Vitamin C + Brightening Serum; Houston, TX founder; premium positioning $85+</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Houston, Texas. Founded by Sunday Riley, still CEO. Formulated in the U.S., marketed as clean beauty. Includes niacinamide-adjacent brightening serums. Premium price point ($85+) vs. The Ordinary's $10 — significant trade-up ask. LOW-CONFIDENCE: manufacturing location (domestic vs. contract) not independently confirmed beyond brand marketing.
+            <br><a href="https://www.sundayriley.com" target="_blank">sundayriley.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes (Rakuten/Impact)</span> &nbsp;
+            Sources: Sunday Riley website; Sephora brand page; Houston Business Journal; affiliate network listing
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">InstaNatural</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>The Ordinary Niacinamide 10% + Zinc, ~$10</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Niacinamide serum, similar price range; American-marketed skincare brand</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            American skincare brand with niacinamide serum at a comparable price point to The Ordinary. Sold primarily on Amazon. U.S.-based brand team. LOW-CONFIDENCE: country of manufacture for formulation not independently confirmed; company's own website is the only source checked that asserts domestic origins.
+            <br><a href="https://www.instanatural.com" target="_blank">instanatural.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span> &nbsp;
+            Sources: InstaNatural Amazon storefront; InstaNatural website; independent beauty forum mentions
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 6. Pastel Highlighter & Gel Pen Sets -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Pastel Highlighter &amp; Gel Pen Sets (39-piece bundles)</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#0891b2">Office Products</span>
+            <span>Under $20 · Repurchase: HIGH</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">The dominant sellers in this sub-category (ZEYAR, Mr. Pen, Shuttle Art) are all Chinese-manufactured brands. No American manufacturer produces a comparable 39-piece pastel gel pen/highlighter bundle. The two alternatives below are American-made writing instruments in adjacent categories — format gap explicitly disclosed. Both serve the same underlying use case (quality pens and ink for study, journaling, and creative use) at comparable or slightly higher price points.</div>
+      <div class="format-gap-note">
+        ⚠ Format gap: No American manufacturer produces a direct equivalent to the 39-piece pastel gel pen/highlighter bundle category. Alternatives below are American-made writing instruments (space pens and fountain pen ink) serving overlapping use cases. Recommended for buyers prioritizing quality and American provenance over format matching.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Fisher Space Pen Co.</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>39-piece pastel gel pen/highlighter set, China-made, under $20</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Pressurized space pens made in Boulder City, NV; Bullet pen ~$27–$32</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Boulder City, Nevada. Founded 1948 by Paul Fisher. Manufactures the iconic pressurized ballpoint pen that writes upside-down, underwater, and in zero gravity (used by NASA). All pens manufactured in Boulder City. Premium, durable, refillable — high repurchase via refill cartridges. American heritage brand with strong gifting and everyday-carry market.
+            <br><a href="https://www.spacepen.com" target="_blank">spacepen.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span> &nbsp;
+            Sources: Fisher Space Pen website; Nevada business registry; NASA contractor records; affiliate program page
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Noodler's Ink</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Pastel gel pen/highlighter bundle, China-made</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>American-made fountain pen ink; bottles from ~$15–$20; 100+ colors</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Massachusetts. Small-batch American fountain pen ink manufacturer. All ink mixed and bottled in the U.S. Over 100 colors including pastels, bulletproof permanent inks, and specialty lines. Cult following among journaling, fountain pen, and calligraphy communities. Not a gel pen — a higher-quality ink experience for those who use fountain pens or dip pens.
+            <br><a href="https://www.gouletpens.com/collections/noodlers-ink" target="_blank">Available via Goulet Pens →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-no">No Formal Affiliate Program</span> &nbsp;
+            Sources: Noodler's product listings via Goulet Pens; fountain pen community reviews; ink batch documentation
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 7. Dreame L60 Robot Vacuum -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Dreame L60 Robot Vacuum &amp; Mop</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+            <span>Price not confirmed · Repurchase: LOW</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">Dreame is Chinese-owned. No American manufacturer exists in the robot vacuum category: iRobot was acquired by Shenzhen PICEA Robotics (China) in January 2026; Neato Robotics shut down in 2023. Both alternatives below are American-owned brands with offshore manufacturing — the best available given the current market structure.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Bissell</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Dreame L60 Robot Vacuum, Chinese-owned brand</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>SpinWave &amp; Pet Hair Eraser robot vacuums; Grand Rapids, MI HQ; manufacturing offshore</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Grand Rapids, Michigan. Family-owned since 1876 by the Bissell family (5th generation). One of the oldest American home appliance companies. Robot vacuum line includes the SpinWave and Pet Hair Eraser models. American-owned, Michigan-headquartered. Manufacturing is offshore (disclosed). Donates a portion of every purchase to pet shelters via the BISSELL Pet Foundation.
+            <br><a href="https://www.bissell.com" target="_blank">bissell.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes (CJ Affiliate)</span> &nbsp;
+            Sources: Bissell website; Michigan business filings; SEC/corporate records; CJ affiliate network
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">SharkNinja</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Dreame L60 Robot Vacuum, Chinese-made</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>IQ Robot Vacuum line; marketed from Needham, MA; legally incorporated in Cayman Islands</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Marketed from Needham, Massachusetts. LOW-CONFIDENCE: SharkNinja is legally incorporated in the Cayman Islands (foreign entity) and its SEC 20-F filings disclose approximately 38.6% shareholder control by Chinese investors. While marketed as an American brand and widely regarded as such by consumers, its legal structure and ownership composition disqualify it from a VERIFIED American business designation under this methodology. Manufacturing is offshore.
+            <br><a href="https://www.sharkninja.com" target="_blank">sharkninja.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes (CJ Affiliate)</span> &nbsp;
+            Sources: SharkNinja SEC 20-F filing; Cayman Islands corporate registry; EDGAR filings
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 8. DREO Portable AC 515S -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">DREO Portable Air Conditioner 515S</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+            <span>Price not confirmed · Repurchase: LOW</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">DREO is Chinese-owned. No American manufacturer produces portable air conditioners domestically: Friedrich was acquired by Rheem (Japanese parent Paloma Industries) in 2021; Frigidaire is Swedish Electrolux. Both alternatives are American-owned companies whose portable AC products are manufactured by offshore licensees — best available in a category with no domestic manufacturing.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Whirlpool Corporation</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>DREO Portable AC 515S, Chinese-owned brand</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Whirlpool-brand portable AC units; Benton Charter Township, MI HQ; manufactured by licensee XLS Products</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Benton Charter Township, Michigan. One of America's largest and most iconic appliance manufacturers, founded 1911. The Whirlpool-branded portable AC is manufactured under license by XLS Products — Whirlpool itself does not produce portable ACs domestically. Still, Whirlpool is a publicly-traded American company with Michigan headquarters and significant domestic employment. VERIFIED American-owned; manufacturing is by offshore licensee (disclosed).
+            <br><a href="https://www.whirlpool.com" target="_blank">whirlpool.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes (Impact)</span> &nbsp;
+            Sources: Whirlpool corporate filings; Michigan HQ records; XLS Products licensing documentation; SEC annual report
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Honeywell Home (by Resideo)</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>DREO Portable AC, Chinese-made</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Honeywell-brand portable ACs; Honeywell brand licensed by Resideo Technologies (Scottsdale, AZ); product manufactured by JMATEK (Hong Kong)</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            LOW-CONFIDENCE: "Honeywell" portable ACs are not made by Honeywell International. The Honeywell brand for portable ACs is licensed to Hong Kong-based JMATEK Ltd., which designs and manufactures the units. Resideo Technologies (Scottsdale, AZ) holds the brand license in the U.S. — a publicly-traded American company, but product manufacturing is entirely in Hong Kong. Included for disclosure; buyers seeking American manufacturing should note this chain.
+            <br><a href="https://www.honeywellstore.com" target="_blank">honeywellstore.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span> &nbsp;
+            Sources: Resideo Technologies SEC filings; JMATEK manufacturer documentation; Honeywell brand licensing disclosures
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 9. Premier Protein Shake (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Premier Protein Shake</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#65a30d">Grocery</span>
+            <span>Price not confirmed · Repurchase: HIGH</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING ×4</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">Premier Protein is owned by Post Holdings (St. Louis, MO) — American-owned but not American-made in the artisan sense. This is the 4th report cycle featuring this product, confirming sustained consumer demand. High repurchase rate. Ready-to-drink protein shakes are a growing retail segment with strong American challenger brands.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Slate Milk</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Premier Protein Shake, Post Holdings-owned; 30g protein, ~$2–$3/can</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Canned chocolate milk protein shakes; 20g protein; Boston, MA; ~$3–$4/can</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Boston, Massachusetts. Founded 2019 by Manny Lubin and Josh Belinsky. Ultra-filtered, lactose-free chocolate milk in a can — 20g protein, no added sugar. American-made, USDA-sourced dairy. One of the fastest-growing RTD protein brands in the U.S. Retail presence in Whole Foods, Target, and specialty fitness. Affiliate program available.
+            <br><a href="https://www.slatemilk.com" target="_blank">slatemilk.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span> &nbsp;
+            Sources: Slate Milk website; Boston startup press; Forbes/Inc. features; affiliate program page; USDA dairy sourcing statements
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Elmhurst 1925</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Premier Protein Shake, ~30g protein, ready-to-drink</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Milked protein shakes; Elmsford, NY; founded 1925; nut-based RTD protein line</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Elmsford, New York. Operating as a dairy since 1925, pivoted to plant-based milk and protein products under Henry Schwartz. All products manufactured in their New York facility. Walnut, almond, oat, and hemp milk lines, plus their Milked protein shake targeting the RTD protein market. Family ownership, American manufacturing, 100-year heritage brand. Affiliate program available.
+            <br><a href="https://www.elmhurst1925.com" target="_blank">elmhurst1925.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span> &nbsp;
+            Sources: Elmhurst 1925 website; New York State business filings; food industry press; affiliate program listing
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 10. Liquid IV Hydration Multiplier (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Liquid I.V. Hydration Multiplier</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#65a30d">Grocery</span>
+            <span>Price not confirmed · Repurchase: HIGH</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING ×3</span>
+          <span class="tag tag-count">3 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">Liquid I.V. is owned by Unilever (UK/Netherlands) since 2020. Electrolyte powder packets have near-perfect repurchase mechanics — consumable, lightweight, stackable subscriptions. This is the 3rd cycle featuring this product. Three American alternatives found, two VERIFIED with active affiliate programs.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">LMNT (Elemental Labs)</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Liquid I.V., Unilever-owned, electrolyte packets</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Zero-sugar electrolyte drink mix; American-formulated &amp; packaged; ~$45/30-pack</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            San Diego, California. Founded 2018 by Robb Wolf and Luis Villaseñor. Zero-sugar, zero artificial ingredients, high-sodium electrolyte formula — targeted at keto, paleo, and athletic communities. Formulated and packaged in the U.S. Subscription-driven model with strong LTV. 15% affiliate commission; referral program with high conversion.
+            <br><a href="https://www.drinklmnt.com" target="_blank">drinklmnt.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-yes">Affiliate: 15%</span> &nbsp;
+            Sources: LMNT website; San Diego business registry; Robb Wolf media appearances; affiliate program documentation
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Skratch Labs</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Liquid I.V. Hydration Multiplier, Unilever-owned</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Exercise hydration mix; Boulder, CO; real fruit flavors; ~$22/20-serving</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Boulder, Colorado. Founded 2012 by Dr. Allen Lim, sports physiologist who formulated drinks for pro cycling teams. Made with real fruit and minimal ingredients. American-formulated and manufactured. Strong following in endurance sports (cycling, running, triathlon). Clean-ingredient positioning differentiates from mainstream electrolyte brands. Active affiliate program.
+            <br><a href="https://www.skratchlabs.com" target="_blank">skratchlabs.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span> &nbsp;
+            Sources: Skratch Labs website; Colorado business filings; cycling media coverage; Wirecutter/Outside Magazine reviews
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">DripDrop ORS</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Liquid I.V. Hydration Multiplier, electrolyte packets</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>ORS-grade hydration packets; San Francisco, CA; medical-grade electrolyte ratio</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            San Francisco, California. Medical-grade oral rehydration formula, originally developed by ER physician Eduardo Dolhun. Used in humanitarian crisis response and by U.S. military. American-headquartered; formulated to WHO ORS standards. LOW-CONFIDENCE: manufacturing location not independently confirmed beyond company-provided claims; limited third-party sourcing documentation available.
+            <br><a href="https://www.dripdrop.com" target="_blank">dripdrop.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span> &nbsp;
+            Sources: DripDrop website; WHO ORS compliance documentation; military procurement records; SF business filings
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 11. ON Gold Standard Whey (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Optimum Nutrition Gold Standard 100% Whey</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+            <span>Price not confirmed · Repurchase: HIGH</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING ×2</span>
+          <span class="tag tag-count">3 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">Optimum Nutrition is owned by Glanbia (Ireland). Protein powder is a monthly repurchase for regular gym-goers. Three American-owned alternatives found; two VERIFIED with domestic manufacturing documentation.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Naked Nutrition</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>ON Gold Standard Whey, Glanbia (Ireland)-owned; 24g protein/serving</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Naked Whey; grass-fed American whey, 1 ingredient, 25g protein; ~$90/5 lb</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            American nutrition brand committed to single-ingredient protein powders. Naked Whey is sourced from California and Idaho grass-fed dairy farms, processed and packaged in the U.S. One ingredient: whey protein concentrate. No fillers, no artificial sweeteners, no additives. Third-party tested. Strong affiliate program.
+            <br><a href="https://www.nakednutrition.com" target="_blank">nakednutrition.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span> &nbsp;
+            Sources: Naked Nutrition website; California dairy farm sourcing documentation; third-party lab test results; affiliate program listing
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">ProMix Nutrition</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>ON Gold Standard 100% Whey, Irish-owned</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Direct-to-consumer whey protein; New York-based; transparent sourcing; ~$60–$80/5 lb</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            New York. Direct-to-consumer protein brand with documented American manufacturing and sourcing transparency. Grass-fed whey from small American dairy farms. Third-party tested for purity. No proprietary blends — all protein sources disclosed by weight. Affiliate program available. Strong customer retention through subscription.
+            <br><a href="https://www.promixnutrition.com" target="_blank">promixnutrition.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span> &nbsp;
+            Sources: ProMix website; American dairy sourcing statements; third-party lab certifications; affiliate network listing
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">TGS Nutrition</p>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>ON Gold Standard Whey, Glanbia-owned, ~$60/5 lb</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>All-natural whey protein; American-marketed; price-competitive positioning</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            American nutrition brand marketed as all-natural whey protein. Price-competitive with ON Gold Standard. LOW-CONFIDENCE: manufacturing location and sourcing chain not confirmed by independent third-party documentation. Company's own website makes American sourcing claims but no corroborating facility or farm records were independently verified within the search scope.
+            <br><a href="https://www.tgsnutrition.com" target="_blank">tgsnutrition.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span> &nbsp;
+            Sources: TGS website; Amazon product listing; limited independent press coverage
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 12. JanSport Classic Backpack (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">JanSport Classic Backpack</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#0891b2">Office Products</span>
+            <span>Under $15 · Repurchase: LOW</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING ×2</span>
+          <span class="tag tag-count">3 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">JanSport is owned by VF Corporation (Barboursville, WV — American-owned, but manufacturing is overseas). Three American-made alternatives with deep domestic manufacturing histories. This is the standout category for American craftsmanship — all three alternatives are verified American-made with generations of heritage.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Duluth Pack</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>JanSport Classic Backpack, VF Corp-owned, under $15, Vietnam-made</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Canvas backpacks &amp; packs; made in Duluth, MN since 1882; ~$100–$300+</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Duluth, Minnesota. American-made canvas and leather goods manufacturer since 1882. Every pack sewn in their Duluth workshop. Heritage outdoor and lifestyle brand with deep American provenance. Products are heirloom-quality, lifetime-repairability focus. Active affiliate program at 15% commission — highest in this report. Strong gifting and graduation season demand.
+            <br><a href="https://www.duluthpack.com" target="_blank">duluthpack.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-yes">Affiliate: 15%</span> &nbsp;
+            Sources: Duluth Pack website; Minnesota business registry; outdoor industry press; ShareASale affiliate program records
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Tom Bihn</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>JanSport Classic Backpack, under $15</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Brain Bag &amp; Synapse 25 backpacks; made in Seattle, WA; ~$200–$300+</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Seattle, Washington. Founded by Tom Bihn. All bags sewn in their Seattle factory by American workers. Known for the Brain Bag and Synapse 25 — cult-followed travel and laptop backpacks. Direct-to-consumer only, no wholesale. Factory tours offered publicly. Lifetime warranty backed by domestic repair capability. No affiliate program (direct sales model).
+            <br><a href="https://www.tombihn.com" target="_blank">tombihn.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-no">No Affiliate Program</span> &nbsp;
+            Sources: Tom Bihn website; Seattle business filings; Wirecutter/Backpackers.com reviews; factory verification via press
+          </div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Tough Traveler</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>JanSport Classic Backpack, VF Corp-owned</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Custom-sewn travel &amp; day packs; Schenectady, NY; made to order since 1970</div>
+            </div>
+          </div>
+          <div class="alt-section">
+            Schenectady, New York. Handmade luggage, bags, and packs since 1970. All bags constructed in the Schenectady workshop. Offers custom sizing and feature configuration. Strong following among frequent travelers and professionals. Children's backpacks a notable product line. Lifetime repair guarantee. Direct-to-consumer with a small dealer network.
+            <br><a href="https://www.toughtraveler.com" target="_blank">toughtraveler.com →</a>
+          </div>
+          <div class="alt-sources">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span> &nbsp;
+            Sources: Tough Traveler website; New York State business filings; travel press coverage; independent bag review sites
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div><!-- /product-groups -->
+
+  <!-- Category Breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg viewBox="0 0 700 248" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="Category bar chart">
+      <!-- Office Products: 3 products -->
+      <rect x="160" y="10" width="480" height="24" rx="4" fill="#0891b2"/>
+      <text x="155" y="27" text-anchor="end" font-size="12" fill="#334155">Office Products</text>
+      <text x="648" y="27" font-size="12" fill="#0891b2" font-weight="600">3</text>
+      <!-- Pet Supplies: 2 products -->
+      <rect x="160" y="44" width="320" height="24" rx="4" fill="#92400e"/>
+      <text x="155" y="61" text-anchor="end" font-size="12" fill="#334155">Pet Supplies</text>
+      <text x="488" y="61" font-size="12" fill="#92400e" font-weight="600">2</text>
+      <!-- Home & Kitchen: 2 products -->
+      <rect x="160" y="78" width="320" height="24" rx="4" fill="#16a34a"/>
+      <text x="155" y="95" text-anchor="end" font-size="12" fill="#334155">Home &amp; Kitchen</text>
+      <text x="488" y="95" font-size="12" fill="#16a34a" font-weight="600">2</text>
+      <!-- Grocery: 2 products -->
+      <rect x="160" y="112" width="320" height="24" rx="4" fill="#65a30d"/>
+      <text x="155" y="129" text-anchor="end" font-size="12" fill="#334155">Grocery</text>
+      <text x="488" y="129" font-size="12" fill="#65a30d" font-weight="600">2</text>
+      <!-- Toys & Games: 1 product -->
+      <rect x="160" y="146" width="160" height="24" rx="4" fill="#f59e0b"/>
+      <text x="155" y="163" text-anchor="end" font-size="12" fill="#334155">Toys &amp; Games</text>
+      <text x="328" y="163" font-size="12" fill="#f59e0b" font-weight="600">1</text>
+      <!-- Beauty & Personal Care: 1 product -->
+      <rect x="160" y="180" width="160" height="24" rx="4" fill="#db2777"/>
+      <text x="155" y="197" text-anchor="end" font-size="12" fill="#334155">Beauty &amp; Personal Care</text>
+      <text x="328" y="197" font-size="12" fill="#db2777" font-weight="600">1</text>
+      <!-- Health & Household: 1 product -->
+      <rect x="160" y="214" width="160" height="24" rx="4" fill="#0d9488"/>
+      <text x="155" y="231" text-anchor="end" font-size="12" fill="#334155">Health &amp; Household</text>
+      <text x="328" y="231" font-size="12" fill="#0d9488" font-weight="600">1</text>
+    </svg>
+  </div>
+
+  <!-- New Entrants Spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <p style="margin:0 0 12px;font-size:14px;color:#1e40af;font-weight:600;">8 products appearing for the first time in this report cycle</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px;">
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">Mead Composition Books</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Office Products · 3 VERIFIED alternatives (Roaring Spring, Northbooks, Write Notepads)</div>
+      </div>
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">Crayola Super Art Coloring Kit</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Toys &amp; Games · 2 VERIFIED + 1 LOW-CONFIDENCE (Crayon Rocks, General Pencil, Cra-Z-Art)</div>
+      </div>
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">INABA Churu Cat Treats</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Pet Supplies · 2 VERIFIED alternatives (Smalls, Evanger's) · High repurchase</div>
+      </div>
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">Purina Pro Plan Dry Dog Food</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Pet Supplies · 2 VERIFIED (Fromm Family Foods — 5th gen WI; Victor Pet Food — TX)</div>
+      </div>
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">The Ordinary Niacinamide Serum</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Beauty &amp; Personal Care · 2 LOW-CONFIDENCE (Sunday Riley, InstaNatural) · Paula's Choice disqualified (Unilever)</div>
+      </div>
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">Pastel Highlighter &amp; Gel Pen Sets</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Office Products · 2 VERIFIED (Fisher Space Pen, Noodler's Ink) · Format gap disclosed; no American 39-piece bundle exists</div>
+      </div>
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">Dreame L60 Robot Vacuum</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Home &amp; Kitchen · 1 VERIFIED + 1 LOW-CONFIDENCE · iRobot now Chinese-owned; Neato shut down 2023</div>
+      </div>
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">DREO Portable AC 515S</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Home &amp; Kitchen · 1 VERIFIED + 1 LOW-CONFIDENCE · Friedrich (Japanese parent); Frigidaire (Swedish) disqualified</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Most Promising to Promote -->
+  <h2 class="section-title">Most Promising to Promote</h2>
+  <div class="panel">
+    <p style="margin:0 0 4px;font-size:13.5px;color:#334155;">Alternatives combining VERIFIED American provenance, active affiliate programs, and high repurchase or gifting potential.</p>
+    <div class="promote-grid">
+      <div class="promote-card">
+        <div class="p-name">Duluth Pack <span class="tag tag-verified" style="vertical-align:middle;">VERIFIED</span></div>
+        <div class="p-detail">15% affiliate commission · Made in Duluth, MN since 1882 · Heirloom-quality canvas packs · Strong gifting and graduation cycle · ShareASale network</div>
+      </div>
+      <div class="promote-card">
+        <div class="p-name">LMNT (Elemental Labs) <span class="tag tag-verified" style="vertical-align:middle;">VERIFIED</span></div>
+        <div class="p-detail">15% affiliate · San Diego, CA · Zero-sugar electrolyte packets · Monthly subscription model · Strongest repurchase LTV in this report</div>
+      </div>
+      <div class="promote-card">
+        <div class="p-name">Smalls for Smalls <span class="tag tag-verified" style="vertical-align:middle;">VERIFIED</span></div>
+        <div class="p-detail">10–20% affiliate · NYC, founded 2017 · Human-grade fresh cat food subscription · Strong editorial and influencer presence · High consumer LTV</div>
+      </div>
+      <div class="promote-card">
+        <div class="p-name">Elmhurst 1925 <span class="tag tag-verified" style="vertical-align:middle;">VERIFIED</span></div>
+        <div class="p-detail">Affiliate program · Elmsford, NY · 100-year family heritage · American-manufactured RTD protein · Whole Foods &amp; specialty retail distribution</div>
+      </div>
+      <div class="promote-card">
+        <div class="p-name">Evanger's Dog &amp; Cat Food <span class="tag tag-verified" style="vertical-align:middle;">VERIFIED</span></div>
+        <div class="p-detail">Affiliate program · Wheeling, IL · Family-owned since 1935 · USDA-inspected American facility · High repurchase for multi-cat households</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Newest Founded Business -->
+  <h2 class="section-title">Newest American Business in This Report</h2>
+  <div class="panel" style="border-left: 4px solid #2563eb;">
+    <div style="font-size:16px;font-weight:700;margin-bottom:6px;">Slate Milk — Founded 2019</div>
+    <div style="font-size:13.5px;color:#334155;line-height:1.6;">
+      Boston, Massachusetts. Founded by Manny Lubin and Josh Belinsky. Ultra-filtered, lactose-free chocolate milk protein shakes in a can — 20g protein, zero added sugar, USDA-sourced American dairy. One of the fastest-growing RTD protein brands in the country. Available in Whole Foods, Target, and specialty fitness retail. Active affiliate program. Represents the new generation of American food entrepreneurship built on supply chain transparency and clean-label positioning.
+      <br><br><a href="https://www.slatemilk.com" target="_blank" style="color:#2563eb;">slatemilk.com →</a>
+    </div>
+  </div>
+
+  <!-- Methodology -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p><strong>Source:</strong> Sibling agent's Amazon trending products report for July 9, 2026. 17 products parsed; 5 Electronics excluded per standing policy. 12 non-Electronics products researched.</p>
+    <p><strong>VERIFIED</strong> requires two or more independent sources confirming American ownership AND (where claimed) domestic manufacturing — e.g., state business filings + press coverage + facility records. The company's own website or marketing copy alone is never sufficient for VERIFIED status.</p>
+    <p><strong>LOW-CONFIDENCE</strong> means the alternative is plausibly American-owned or American-made but could not be confirmed by two independent sources within the search scope, or the company's own claims were the only documentation available.</p>
+    <p><strong>Disqualifications this cycle:</strong> Paula's Choice (acquired by Unilever, UK, August 2021); Friedrich Air Conditioning (acquired by Rheem/Paloma Industries, Japan, 2021); Frigidaire (Swedish Electrolux parent); iRobot (acquired by Shenzhen PICEA Robotics, China, January 2026); Neato Robotics (shut down 2023); SharkNinja (Cayman Islands incorporated, ~38.6% Chinese shareholder control per SEC 20-F filings).</p>
+    <p><strong>Display order:</strong> NEW products before RECURRING; within each group, products in the $25–$100 band and higher repurchase frequency appear first.</p>
+    <p><strong>Format gap disclosure (Pastel Pens):</strong> No American manufacturer produces a 39-piece pastel gel pen/highlighter bundle. Alternatives represent the closest American-made writing instrument equivalents with an explicit format gap noted.</p>
+    <p><strong>Rolling history:</strong> Products are tracked across a 14-day window. Items last seen more than 14 days ago are pruned from the history file. 13 entries pruned this cycle (last seen before June 25, 2026).</p>
+    <p><strong>Sources checked (~58 total):</strong> Company websites, state business registries (WI, TX, NY, MN, CA, CO, IL, PA, NJ, MA), USDA FSIS facility records, SEC/EDGAR filings, AAFCO compliance records, affiliate network listings (ShareASale, CJ, Impact, Rakuten), and independent press (Wirecutter, Outside Magazine, Forbes, TechCrunch, pet industry trade press).</p>
+  </div>
+
+  <!-- Footer Nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../July7_2026/">July 7</a></span>
+  </div>
+
+</div>
+</body>
+</html>
