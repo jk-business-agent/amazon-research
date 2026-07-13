@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-09",
+  "last_updated": "2026-07-13",
   "window_days": 14,
   "products": [
     {
@@ -7,32 +7,32 @@
       "name": "Apple AirPods Pro 3",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-06",
-      "seen_dates": ["2026-06-17", "2026-06-29", "2026-07-02", "2026-07-06"]
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-06-17", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-13"]
     },
     {
       "key": "apple-watch-series-11",
       "name": "Apple Watch Series 11",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-09",
-      "seen_dates": ["2026-06-17", "2026-06-22", "2026-06-25", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09"]
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-06-17", "2026-06-22", "2026-06-25", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13"]
     },
     {
       "key": "medicube-zero-pore-pad-2",
       "name": "Medicube Zero Pore Pad 2.0",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-06-17", "2026-06-22", "2026-07-02"]
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-06-17", "2026-06-22", "2026-07-02", "2026-07-13"]
     },
     {
       "key": "pampers-swaddlers-size-5",
-      "name": "Pampers Swaddlers Diapers, Size 5",
+      "name": "Pampers Swaddlers Diapers, Size 4/5",
       "category": "Baby",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-06-17", "2026-06-22", "2026-07-02"]
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-06-17", "2026-06-22", "2026-07-02", "2026-07-13"]
     },
     {
       "key": "amazon-fire-tv-stick",
@@ -55,48 +55,16 @@
       "name": "Premier Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-09",
-      "seen_dates": ["2026-06-22", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09"]
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-06-22", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13"]
     },
     {
       "key": "purina-pro-plan-sensitive-skin-dry-dog-food",
       "name": "Purina Pro Plan Sensitive Skin & Stomach Dry Dog Food",
       "category": "Pet Supplies",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-09",
-      "seen_dates": ["2026-06-22", "2026-07-09"]
-    },
-    {
-      "key": "shark-rocket-vacuum",
-      "name": "Shark Rocket Vacuum",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-06-22",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-22", "2026-06-25"]
-    },
-    {
-      "key": "anrabess-henley-vacation-tops",
-      "name": "ANRABESS Women's Henley/Vacation Tops",
-      "category": "Apparel",
-      "first_seen": "2026-06-22",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-22", "2026-06-25"]
-    },
-    {
-      "key": "coleman-snap-n-go-collapsible-cooler",
-      "name": "Coleman Snap 'N Go Collapsible Cooler",
-      "category": "Sports & Outdoors",
-      "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-25"]
-    },
-    {
-      "key": "soundcore-wireless-earbuds",
-      "name": "Soundcore Wireless Earbuds",
-      "category": "Electronics",
-      "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-25"]
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-06-22", "2026-07-09", "2026-07-13"]
     },
     {
       "key": "blink-outdoor-4-camera",
@@ -115,38 +83,6 @@
       "seen_dates": ["2026-06-25", "2026-06-29"]
     },
     {
-      "key": "pupgum-dog-dental-chews",
-      "name": "PupGum Dog Dental Chews",
-      "category": "Pet Supplies",
-      "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-25"]
-    },
-    {
-      "key": "prettylitter-cat-litter",
-      "name": "PrettyLitter Health-Monitoring Cat Litter",
-      "category": "Pet Supplies",
-      "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-25"]
-    },
-    {
-      "key": "beauty-of-joseon-skincare",
-      "name": "Beauty of Joseon",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-25"]
-    },
-    {
-      "key": "viral-dubai-style-pistachio-chocolate",
-      "name": "Viral Dubai-Style Pistachio Chocolate Bars",
-      "category": "Grocery",
-      "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-25"]
-    },
-    {
       "key": "toniebox-2-audio-player",
       "name": "Toniebox 2 Audio Player Bundles",
       "category": "Toys & Games",
@@ -155,52 +91,12 @@
       "seen_dates": ["2026-06-25", "2026-06-29", "2026-07-02"]
     },
     {
-      "key": "levoit-core-300p-air-purifier",
-      "name": "Levoit Core 300-P HEPA Air Purifier",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-25"]
-    },
-    {
-      "key": "tree-hut-shea-sugar-body-scrub",
-      "name": "Tree Hut Shea Sugar Body Scrub",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-25"]
-    },
-    {
-      "key": "eltamd-uv-daily-tinted-sunscreen",
-      "name": "EltaMD UV Daily Tinted Sunscreen SPF 50",
-      "category": "Health & Household",
-      "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-25"]
-    },
-    {
-      "key": "vibration-platform-machines",
-      "name": "Vibration Platform Machines",
-      "category": "Sports & Outdoors",
-      "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-25"]
-    },
-    {
-      "key": "ego-power-plus-cordless-lawn-mower",
-      "name": "EGO POWER+ Cordless Walk-Behind Lawn Mower",
-      "category": "Tools & Home Improvement",
-      "first_seen": "2026-06-25",
-      "last_seen": "2026-06-25",
-      "seen_dates": ["2026-06-25"]
-    },
-    {
       "key": "liquid-iv-hydration-multiplier",
       "name": "Liquid I.V. Hydration Multiplier",
       "category": "Grocery",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-09",
-      "seen_dates": ["2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09"]
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13"]
     },
     {
       "key": "temptations-cat-treats",
@@ -367,8 +263,8 @@
       "name": "Optimum Nutrition Gold Standard 100% Whey Protein",
       "category": "Health & Household",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-09",
-      "seen_dates": ["2026-07-06", "2026-07-09"]
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13"]
     },
     {
       "key": "dreo-evaporative-cooler-2026",
@@ -391,8 +287,8 @@
       "name": "JanSport Classic Backpack",
       "category": "Office Products",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-09",
-      "seen_dates": ["2026-07-06", "2026-07-09"]
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13"]
     },
     {
       "key": "silk-sleep-bonnets",
@@ -423,8 +319,8 @@
       "name": "Dreame L60 Ultra PE Robot Vacuum & Mop",
       "category": "Home & Kitchen",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-09",
-      "seen_dates": ["2026-07-09"]
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-07-09", "2026-07-13"]
     },
     {
       "key": "dreo-portable-air-conditioner-515s",
@@ -447,16 +343,16 @@
       "name": "Mead Composition Books (12-pack)",
       "category": "Office Products",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-09",
-      "seen_dates": ["2026-07-09"]
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-07-09", "2026-07-13"]
     },
     {
       "key": "inaba-churu-cat-treats",
       "name": "INABA Churu Lickable Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-09",
-      "seen_dates": ["2026-07-09"]
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-07-09", "2026-07-13"]
     },
     {
       "key": "crayola-back-to-school-art-set",
@@ -465,6 +361,70 @@
       "first_seen": "2026-07-09",
       "last_seen": "2026-07-09",
       "seen_dates": ["2026-07-09"]
+    },
+    {
+      "key": "medicube-age-r-booster-pro",
+      "name": "Medicube Age-R Booster Pro",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-07-13",
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-07-13"]
+    },
+    {
+      "key": "laneige-lip-sleeping-mask",
+      "name": "LANEIGE Lip Sleeping Mask",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-07-13",
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-07-13"]
+    },
+    {
+      "key": "dreo-tower-fan-2026",
+      "name": "DREO Tower Fan (2026 Upgraded DC Motor)",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-07-13",
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-07-13"]
+    },
+    {
+      "key": "samsung-galaxy-tab-a11",
+      "name": "Samsung Galaxy Tab A11+ (2026)",
+      "category": "Electronics",
+      "first_seen": "2026-07-13",
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-07-13"]
+    },
+    {
+      "key": "spyrafour-water-blaster",
+      "name": "SpyraFour Electric Water Blaster",
+      "category": "Toys & Games",
+      "first_seen": "2026-07-13",
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-07-13"]
+    },
+    {
+      "key": "bunch-o-balloons-zuru",
+      "name": "Bunch O Balloons Tropical Party (ZURU)",
+      "category": "Toys & Games",
+      "first_seen": "2026-07-13",
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-07-13"]
+    },
+    {
+      "key": "orgain-organic-vegan-protein",
+      "name": "Orgain Organic Vegan Protein Powder",
+      "category": "Grocery",
+      "first_seen": "2026-07-13",
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-07-13"]
+    },
+    {
+      "key": "coofandy-mens-linen-shirts",
+      "name": "COOFANDY Men's Linen Shirts",
+      "category": "Apparel",
+      "first_seen": "2026-07-13",
+      "last_seen": "2026-07-13",
+      "seen_dates": ["2026-07-13"]
     }
   ]
 }
