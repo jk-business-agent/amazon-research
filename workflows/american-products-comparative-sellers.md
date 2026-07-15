@@ -146,56 +146,124 @@ actually read.
   sibling's tag), (2) within that, $25–$100 band before outside-band, (3) within that, higher
   repurchase-interest before lower. Record this precedence in the methodology footer.
 
-## Step 3 — Research American alternatives per product
+## Step 3 — Research Delegation (per-product subagents)
 
-Public web research only (WebSearch/WebFetch). No paid API, no hardcoded credentials.
+Do not research any product inline in the main agent context — all web fetches and raw page content
+must stay inside dedicated per-product subagent contexts. The main agent's role in this phase is to
+launch one subagent per product (in the Step 2 sort order), collect each compact result block, and
+then proceed to Step 5.
 
-Apply the retry ceiling, per-product circuit breaker, and cost-conscious WebSearch/WebFetch
-preference from "Error handling & stopping criteria" above throughout this step. A product that
-trips the circuit breaker gets marked "research incomplete — repeated source errors" in its
-rationale text and the run continues to the next product — never stall the whole run chasing one
-difficult product or one unresponsive source.
+**Why subagents:** research for 15–20 products × 2–3 alternatives each means 90+ web sources
+flowing into a single context window. Per-product subagents isolate that content and return only a
+compact structured summary, keeping the main context bounded regardless of product count.
 
-For each prioritized product, in the Step 2 order:
+### Step 3a — Subagent prompt template
 
-- **Medium cap of 2-3 alternatives per product.** Stop once you hit the cap or once the credible-lead
-  trail genuinely runs dry, whichever comes first. In the product's rationale text, note which one
-  applied (e.g. "5 found, search trail exhausted" vs. "capped at 8, more likely exist").
-- **Search strategy** — combine the product's core type with explicit American-business qualifiers:
-  - `"[product type] made in USA"`, `"American made [product type] brand"`,
-    `"[product type] manufacturer USA family owned"`
-  - Made-in-USA certification bodies and curated directories (e.g. USA Love List-style lists,
-    Manufacturing.gov-type listings) relevant to the product's category
-  - Direct alternative discovery: `"[Amazon brand] alternative made in America"`,
-    `"American made alternative to [Amazon product name]"`
-- **Verifying American-ness — apply VERIFIED / LOW-CONFIDENCE discipline, do not trust marketing
-  copy alone.** A business's own "Made in USA" badge or About page claim counts as exactly **one**
-  source — never sufficient alone for VERIFIED (the same rule the sibling applies to Amazon's own
-  rank pages). VERIFIED requires a second, independent corroborating source: a certification-body
-  listing, independent press coverage naming the manufacturing location, or a public-records signal
-  (state of incorporation, a real factory address, USPTO/SEC filings). A claim backed only by the
-  business's own marketing copy is LOW-CONFIDENCE — label it visibly, never silently upgrade it.
-- **Never invent.** Don't fabricate founder names, founding dates, employee counts, sales figures, or
-  affiliate commission rates that weren't directly read from a fetched source. If a fact can't be
-  found, say "not found in available sources" rather than omitting the line silently or guessing.
+For each product in Step 2's sorted list, construct and launch a subagent with the following prompt.
+Fill in the bracketed fields from Step 1's parsed data:
 
-## Step 4 — Per-alternative data capture
+---
+*[Begin subagent prompt]*
 
-For every business alternative kept, capture exactly what CLAUDE.md asks for. Pair each fact with its
-source + access date unless it's already covered by a source cited elsewhere on the same card:
+You are a research assistant finding American business alternatives to a specific Amazon product.
+Work through the tasks below and return your findings in the exact format specified. Do not ask
+questions. If a fact cannot be found, write "not found in available sources" — never fabricate.
 
-1. **Product highlight vs. the Amazon product** — quality, features, price, stated objectively. The
-   only bias permitted anywhere in this workflow is the topical selection criterion itself (seeking
-   American alternatives) — the comparison content must be even-handed and factual, not editorialized.
-2. **Business overview** — what they make/sell, how long they've operated, scale, if sourced.
-3. **Business ethos / extent of American-ness** — ownership, manufacturing location, sourcing of
-   materials, plus how it was verified (Step 3) and a further-reading link.
-4. **Founder(s)** — name(s) and a one-line background, with a further-reading link.
-5. **Affiliate program status** — Yes / No / Unconfirmed (not found in available sources), with a
-   link if Yes.
-6. **Contact information** — easily-accessible public channels only (contact page, public email,
-   phone). Never attempt to find or use non-public information.
-7. **Sources** — every source URL actually fetched for this specific alternative, with access date.
+**Your assigned Amazon product:**
+- Name: [product name from Step 1]
+- Category: [category]
+- Price band: [price band, or "not confirmed"]
+- Why it's selling: [card-why text from Step 1]
+
+**Task 1 — Repurchase judgment**
+Write one line: "Repurchase interest: high | medium | low — [one-sentence reason]."
+
+**Task 2 — Find 2–3 American business alternatives**
+
+Cap: stop once you have 2–3 credible alternatives or the search trail genuinely runs dry.
+
+Search strategy:
+- `"[product type] made in USA"`, `"American made [product type] brand"`,
+  `"[product type] manufacturer USA family owned"`
+- Made-in-USA certification directories relevant to this category
+- `"[Amazon brand] alternative made in America"`,
+  `"American made alternative to [Amazon product name]"`
+
+Prefer `WebSearch` snippets for initial discovery and quick verification; use `WebFetch` only for a
+page you genuinely need to read in full (a certification listing, a contact page, an affiliate terms
+page). One retry on any failed URL; if the retry fails, pivot to a different source.
+
+Circuit breaker: if you accumulate 3 source failures with zero alternatives found, stop and return
+`ALTERNATIVES_FOUND: 0 | CIRCUIT-BREAKER` in your result.
+
+**Verifying American-ness (VERIFIED vs LOW-CONFIDENCE):**
+- VERIFIED requires two independent sources: the business's own claim plus one of — a
+  certification-body listing, independent press naming the manufacturing location, or a
+  public-records signal (state incorporation records, real factory address, USPTO/SEC filing)
+- A claim backed only by the business's own About page or marketing copy is LOW-CONFIDENCE —
+  label it visibly, never silently upgrade it
+
+**Task 3 — Capture per-alternative data**
+
+For each alternative found, collect:
+1. Product comparison — quality, features, price vs. the Amazon product (objective, no editorializing)
+2. Business overview — what they sell, how long operating, scale (if sourced)
+3. American-ness — ownership, manufacturing location, sourcing, how verified + one further-reading URL
+4. Founder(s) — name(s) + one-line background + one further-reading URL
+   (or "not found in available sources")
+5. Affiliate program — Yes / No / Unconfirmed, + URL if Yes
+6. Contact — public channels only: contact page URL, public email, or phone number
+7. Sources — every URL you actually fetched, with today's date
+
+**Required return format — use exactly this structure, no extra prose outside these fields:**
+
+```
+=== PRODUCT: [Amazon product name] ===
+REPURCHASE: high|medium|low — [reason]
+ALTERNATIVES_FOUND: [integer]
+
+--- ALT 1 ---
+ALT_NAME: [business or product name]
+CONFIDENCE: VERIFIED | LOW-CONFIDENCE
+AMAZON_SUMMARY: [quality / features / price — objective]
+ALT_SUMMARY: [quality / features / price — objective]
+OVERVIEW: [2–3 sentences]
+AMERICAN_NESS: [claim + verification method] | SOURCE: [url]
+FOUNDER: [names + background] | SOURCE: [url or "not found in available sources"]
+AFFILIATE: Yes | No | Unconfirmed | LINK: [url or none]
+CONTACT: [contact page url / public email / phone]
+SOURCES: [url] ([date]), [url] ([date]), ...
+
+--- ALT 2 ---
+[same fields]
+```
+
+If zero alternatives were found, return only the product header with `ALTERNATIVES_FOUND: 0` and a
+one-line note explaining why (trail ran dry / circuit breaker / no credible American manufacturers
+found).
+
+*[End subagent prompt]*
+
+---
+
+### Step 3b — Main agent: collect and aggregate
+
+Run subagents sequentially (one product at a time). After each subagent returns, read its result
+block and append it to a running list in the main agent's working context. Do not retain or
+re-process any raw web content the subagent fetched — only the compact result block comes back.
+
+After all products have been processed:
+- Count total source URLs across all result blocks → `{{SOURCE_COUNT}}` for Step 6
+- Note any product whose result block is missing (subagent error or timeout) — log it as
+  "research incomplete — subagent did not return" in `{{METHODOLOGY_NOTES}}`
+- Never fabricate a result block for a missing product
+
+Proceed to Step 5.
+
+## Step 4 — (Merged into Step 3)
+
+Per-alternative data capture now runs inside each product's research subagent (Step 3, Task 3).
+No separate inline data-capture phase runs in the main agent.
 
 ## Step 5 — Update `resources/seen-products-history.json`
 
@@ -222,8 +290,8 @@ lineage, not the sibling's trend-discovery lineage.
 Load `resources/dashboard-template.html` and fill every `{{TOKEN}}`:
 
 - `{{REPORT_DATE}}` — e.g. "June 20, 2026".
-- `{{SOURCE_COUNT}}` — number of distinct source URLs fetched this run (Step 3/4 only — not the
-  sibling's own cited sources).
+- `{{SOURCE_COUNT}}` — number of distinct source URLs fetched this run (Step 3 subagents only —
+  not the sibling's own cited sources).
 - `{{EXEC_SUMMARY}}` — 3-6 sentences: which sibling report this run is based on, the overall
   narrative (standout alternatives, any notable American-made finding), and any judgment calls or
   degraded-mode notes worth surfacing up top.
