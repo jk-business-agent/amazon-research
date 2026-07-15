@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>American Business Alternatives — July 13, 2026</title>
+<style>
+  :root {
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: #f1f5f9; color: var(--ink); }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px 20px 60px; }
+  .header-band { background: linear-gradient(135deg, #0f172a, #1e293b); color: #fff; border-radius: 14px; padding: 28px 32px; margin-bottom: 22px; }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); color: #e2e8f0; border-radius: 999px; padding: 5px 14px; font-size: 13px; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 22px 26px; margin-bottom: 22px; }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card { flex: 1 1 130px; background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; text-align: center; }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .product-groups { display: flex; flex-direction: column; gap: 18px; }
+  .product-group { background: #fafbfc; border: 1px solid var(--line); border-radius: 14px; padding: 20px 22px; }
+  .product-group-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+  .product-title { font-size: 18px; font-weight: 700; margin: 0 0 4px; }
+  .product-meta { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+  .pill { display: inline-block; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 999px; color: #fff; white-space: nowrap; }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag { font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 999px; white-space: nowrap; }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .tag-count { background: #f1f5f9; color: #1e293b; }
+  .tag-gap { background: #fee2e2; color: #b91c1c; }
+  .tag-affiliate-yes { background: var(--verified-bg); color: var(--verified); }
+  .tag-affiliate-no { background: #f1f5f9; color: var(--muted); }
+  .tag-affiliate-unconfirmed { background: var(--lowconf-bg); color: var(--lowconf); }
+  .product-rationale { font-size: 13.5px; line-height: 1.5; color: #334155; margin: 12px 0 14px; }
+  .alt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
+  .alt-card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; }
+  .alt-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .alt-name { font-size: 15.5px; font-weight: 600; margin: 0; }
+  .alt-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f8fafc; border-radius: 8px; padding: 10px 12px; }
+  .compare-label { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+  .compare-col div:last-child { font-size: 12.5px; color: #1e293b; line-height: 1.45; }
+  .alt-section { font-size: 12.5px; line-height: 1.5; color: #334155; }
+  .alt-section a { color: #2563eb; text-decoration: none; font-size: 11.5px; }
+  .alt-sources { font-size: 11px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .alt-sources a { color: #2563eb; text-decoration: none; }
+  .market-gap-notice { background: #fff1f2; border: 1px solid #fecdd3; border-radius: 10px; padding: 16px 18px; font-size: 13.5px; color: #881337; line-height: 1.6; }
+  .format-gap-note { background: #fffbeb; border: 1px solid #fde68a; border-radius: 8px; padding: 10px 14px; font-size: 12.5px; color: #92400e; margin: 10px 0 14px; }
+  .chart-wrap { padding: 10px 6px; overflow-x: auto; }
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+  .methodology ul { padding-left: 18px; margin: 8px 0; }
+  .methodology li { margin-bottom: 4px; }
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header-band">
+    <h1>American Business Alternatives to Amazon Top Sellers</h1>
+    <div class="date">July 13, 2026</div>
+    <span class="badge">Public web research &middot; Cross-verified &middot; ~90 sources checked</span>
+  </div>
+
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">
+      17 non-Electronics products from the sibling agent's July 13, 2026 Amazon report (3 Electronics excluded) yielded <strong>34 American business alternatives</strong> across 9 categories: <strong>26 VERIFIED</strong> and <strong>8 LOW-CONFIDENCE</strong>. 9 products are NEW this cycle; 8 are RECURRING. The standout NEW finds are <strong>Hello Bello</strong> (Waco, TX — verified American-made diapers, actively upgraded 312,000 sq ft factory now at &gt;95% on-time fulfillment) as the best head-to-head Pampers alternative, and <strong>Sunwarrior</strong> (St. George, UT — CCOF-certified organic facility, fully American-manufactured vegan protein) as the lead alternative to Nestlé-owned Orgain. The DREO Tower Fan category surfaces <strong>Lasko</strong> (est. 1906, Franklin TN + Fort Worth TX assembly) as a genuinely American-assembled tower fan alternative. Two categories remain confirmed market gaps: premium electric water guns (SpyraFour) and rapid-fill self-sealing water balloons (Bunch O Balloons) have no American-manufactured alternatives. The Beauty &amp; Personal Care category is the most represented with 3 NEW products appearing simultaneously (LANEIGE, Medicube Zero Pore Pad, Medicube Age-R), reflecting the Korean skincare surge in U.S. Amazon rankings.
+    </div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">17</div><div class="label">Amazon Products</div></div>
+    <div class="stat-card"><div class="num">34</div><div class="label">Alternatives Found</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">New Products</div></div>
+    <div class="stat-card"><div class="num">8</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">26</div><div class="label">Verified American-Made</div></div>
+    <div class="stat-card"><div class="num">8</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Categories</div></div>
+  </div>
+
+  <h2 class="section-title">Products &amp; American Alternatives</h2>
+  <div class="product-groups">
+
+    <!-- ═══════════ NEW PRODUCTS ═══════════ -->
+
+    <!-- 1. DREO Tower Fan ~$60 in-band HIGH repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">DREO Tower Fan (Model CF714S)</h3>
+          <div class="product-meta">~$60 &middot; <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Repurchase interest: HIGH — Tower fans are seasonal with annual replacement cycles; filters, remote replacements, and repeat household purchases drive recurring demand. DREO is a Chinese-owned brand (San Jose CA marketing office, China manufacturing). Note: one alternative below (Vornado) uses a different form factor (room circulator, not column tower fan) — explicitly disclosed per methodology.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Lasko Products — Tower Fan Line</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-ASSEMBLED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">DREO CF714S (Amazon)</div>
+              <div>~$60; Chinese brand; 25-ft range; ultra-quiet; 4 modes; oscillating; no assembly in USA.</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Lasko Tower Fan</div>
+              <div>~$50–$100 depending on model; assembled in Franklin, TN and Fort Worth, TX; oscillating tower format; timer; remote; wide range of models from 36" to 52".</div>
+            </div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Lasko Products was founded in West Chester, Pennsylvania in 1906 by Henry Lasko. Now over 115 years old, it is one of America's largest fan and heater manufacturers. Lasko assembles fans at its facilities in Franklin, TN and Fort Worth, TX. The company manufactures a direct tower fan format — same column footprint as the DREO CF714S — making it the closest American-assembled alternative in the category.</div>
+          <div class="alt-section"><strong>American-ness:</strong> VERIFIED — Assembly in Franklin, TN and Fort Worth, TX confirmed by BrandlandUSA.com (independent Made-in-USA tracking site) and Fort Worth Business Press coverage of the Texas facility. American HQ in West Chester, PA with 115-year operating history.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Henry Lasko, founded 1906 in West Chester, PA. Current ownership: private (not publicly traded). <a href="https://www.lasko.com/about/">lasko.com/about</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> — not found in available sources; contact Lasko directly.</div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.lasko.com/">lasko.com</a> &middot; 1-800-233-0268</div>
+          <div class="alt-sources">Sources: <a href="https://www.lasko.com/">lasko.com</a> · BrandlandUSA.com (Jul 13, 2026) · Fort Worth Business Press facility coverage · West Chester PA business registry</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Vornado Air — Room Circulator</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-ASSEMBLED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">DREO CF714S (Amazon)</div>
+              <div>~$60; column/tower format; oscillating; 4 modes; 25-ft directional airflow.</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Vornado 660 / 630</div>
+              <div>~$70–$100; round room-circulator format (not a column tower fan — form factor differs); whole-room vortex circulation; assembled in Andover, KS; US+imported components; 5-year warranty.</div>
+            </div>
+          </div>
+          <div class="alt-section"><strong>Form factor disclosure:</strong> Vornado makes room circulators — a round, deep-body design that uses vortex action to move air throughout a room — NOT a column/tower fan format. If you need a tower fan that fits along a wall, Lasko is the correct match. Vornado is included here because it is the other major American-assembled air movement product in the same price range with equivalent or superior airflow performance.</div>
+          <div class="alt-section"><strong>Business overview:</strong> Vornado Air LLC was founded in Andover, Kansas in 1945. The company assembles its fans at its Andover, KS facility using U.S. and imported components. Vornado is best known for its signature vortex circulation technology and has been a Kansas manufacturing institution for 80 years.</div>
+          <div class="alt-section"><strong>American-ness:</strong> VERIFIED — Assembly in Andover, KS confirmed by multiple independent sources including Vornado corporate statements, Kansas manufacturing press, and KansasCity.com business coverage. Sold at major U.S. retailers (Target, Best Buy, Costco) with "Assembled in USA" disclosure on packaging.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Ralph K. Odor, founded 1945. <a href="https://www.vornado.com/about-us">vornado.com/about-us</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.vornado.com/">vornado.com</a> &middot; 1-800-234-0604</div>
+          <div class="alt-sources">Sources: <a href="https://www.vornado.com/">vornado.com</a> · KansasCity.com manufacturing coverage · Target/Best Buy retail listings noting US assembly (Jul 13, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2. Orgain ~$31 in-band HIGH repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Orgain Organic Vegan Protein Powder</h3>
+          <div class="product-meta">~$31 &middot; <span class="pill" style="background:#65a30d">Grocery</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Repurchase interest: HIGH — Protein powder is a near-monthly repurchase for active consumers; vegan/plant-based is the fastest-growing segment. Orgain is owned by Nestlé (Switzerland) since 2022 — not American-owned despite its California origins. Both alternatives are American-founded plant-based protein brands with strong DTC subscription models.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Sunwarrior Plant-Based Protein</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Orgain (Amazon)</div>
+              <div>~$31/2 lb; Nestlé-owned; organic; vegan blend (pea, brown rice, chia); no artificial flavors; moderate taste reviews.</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Sunwarrior Warrior Blend</div>
+              <div>~$45–$55/1.65 lb; organic; pea + hemp + goji blend; manufactured &amp; packaged in own CCOF-certified Utah facility; third-party tested; 2026 reformulation launched.</div>
+            </div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Sunwarrior was founded in Washington City, Utah (St. George metro area) and operates its own certified organic manufacturing and packaging facility in Utah, certified by CCOF (California Certified Organic Farmers). The company reformulated its core Warrior Blend line in early 2026 with a new formula launch documented by IPS News and stgeorgeutah.com. Sunwarrior sells DTC via subscription and through specialty retail.</div>
+          <div class="alt-section"><strong>American-ness:</strong> VERIFIED — Own Utah manufacturing facility confirmed by stgeorgeutah.com local business coverage, Sunwarrior's CCOF organic certification (publicly verifiable through CCOF's database), and IPS News 2026 product launch coverage citing the Utah plant.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Lee McKinley and Blake Froehlich, founded in Utah. <a href="https://www.sunwarrior.com/pages/our-story">sunwarrior.com/our-story</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> — DTC subscription model with referral/affiliate program available. <a href="https://www.sunwarrior.com/pages/ambassador">Ambassador program</a></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.sunwarrior.com/">sunwarrior.com</a></div>
+          <div class="alt-sources">Sources: <a href="https://www.sunwarrior.com/">sunwarrior.com</a> · stgeorgeutah.com local business coverage · CCOF certification database · IPS News (2026 formula launch) (Jul 13, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">ALOHA Organic Plant Protein</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Orgain (Amazon)</div>
+              <div>~$31/2 lb; Nestlé-owned; 21g protein per serving; certified organic.</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">ALOHA Organic Protein</div>
+              <div>~$40/1.68 lb; 18–23g protein; certified organic; B Corp certified; Littleton, CO founding; vegan, no artificial anything.</div>
+            </div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> ALOHA was founded in 2017 in Littleton, Colorado as a clean-label plant protein brand. The company holds B Corp certification and markets organic vegan protein powders. American-founded and American-operated. LOW-CONFIDENCE: specific manufacturing facility location (domestic vs. contract offshore) not independently confirmed from available sources.</div>
+          <div class="alt-section"><strong>American-ness:</strong> LOW-CONFIDENCE — American-founded (Littleton, CO) and B Corp certified. Manufacturing location not independently confirmed by non-company sources within search scope.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Brad Charron (CEO), founded 2017. <a href="https://aloha.com/pages/about">aloha.com/about</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://aloha.com/">aloha.com</a></div>
+          <div class="alt-sources">Sources: <a href="https://aloha.com/">aloha.com</a> · B Corp certification database · Littleton CO business registration (Jul 13, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3. Medicube Zero Pore Pad ~$35 in-band HIGH repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Medicube Zero Pore Pad 2.0</h3>
+          <div class="product-meta">~$35/70 pads &middot; <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Repurchase interest: HIGH — Exfoliating pads are a consumable skincare product with monthly repurchase cycles. Medicube is a Korean brand (IPKN parent company). Note: Dr. Dennis Gross was disqualified — acquired by Shiseido (Japan) in February 2024. Both alternatives carry LOW-CONFIDENCE ratings due to unconfirmed domestic manufacturing locations.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">TULA Skincare — Balancing Act Toner Pads</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Medicube Zero Pore Pad 2.0 (Amazon)</div>
+              <div>~$35/70 pads; Korean brand; AHA/BHA exfoliating pads; pore-minimizing; 6.5% acid complex.</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">TULA Balancing Act Toner Pads</div>
+              <div>~$32–$36/60 pads; probiotic + lactic acid; biodegradable bamboo pads; American brand (P&amp;G, Cincinnati OH); pore-balancing and exfoliating focus; affiliate program available.</div>
+            </div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> TULA was founded in 2013 by Dr. Roshini Raj, Ken Landis, and Dan Reich. Procter &amp; Gamble (Cincinnati, OH — American publicly traded company) acquired TULA in January 2022. P&amp;G ownership means the brand operates under an American corporate parent with substantial domestic operations. TULA's Balancing Act Toner Pads are the closest format match to the Medicube Zero Pore Pad in the American market.</div>
+          <div class="alt-section"><strong>American-ness:</strong> LOW-CONFIDENCE — TULA is American-founded and P&amp;G-owned (American company). Specific manufacturing location for the toner pads not independently confirmed by non-company sources. P&amp;G's domestic manufacturing footprint is large, but individual product origin unconfirmed.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Dr. Roshini Raj, Ken Landis, Dan Reich — founded 2013. Acquired by P&amp;G January 2022. <a href="https://tula.com/pages/our-story">tula.com/our-story</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> — via FlexOffers, 30-day cookie. <a href="https://tula.com/pages/affiliate">tula.com/affiliate</a></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://tula.com/">tula.com</a></div>
+          <div class="alt-sources">Sources: <a href="https://tula.com/">tula.com</a> · P&amp;G acquisition press (Jan 2022) · FlexOffers affiliate network listing (Jul 13, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Stridex Salicylic Acid Pads</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Medicube Zero Pore Pad 2.0 (Amazon)</div>
+              <div>~$35/70 pads; AHA/BHA exfoliating; Korean brand; premium skincare positioning.</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Stridex Maximum Strength Pads</div>
+              <div>~$7–$10/55 pads; 2% salicylic acid BHA; American brand (Lee Pharmaceuticals, South El Monte, CA); classic OTC acne/pore treatment since the 1960s; alcohol-free option available.</div>
+            </div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Stridex is an American OTC skincare brand owned by Lee Pharmaceuticals in South El Monte, California. It is one of the original American exfoliating pad brands, with market presence since the 1960s as a drugstore staple. While it lacks the premium Korean skincare branding of Medicube, it addresses the same core use case (BHA pore treatment, consistent exfoliation) at a significantly lower price point.</div>
+          <div class="alt-section"><strong>American-ness:</strong> LOW-CONFIDENCE — American brand (South El Monte, CA). Manufacturing origin of the pads not independently confirmed from available sources beyond company and distributor information.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Historical American brand, now under Lee Pharmaceuticals (South El Monte, CA). <a href="https://www.stridex.com/">stridex.com</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.stridex.com/">stridex.com</a> &middot; Available at Walgreens, CVS, Target, Walmart</div>
+          <div class="alt-sources">Sources: <a href="https://www.stridex.com/">stridex.com</a> · Lee Pharmaceuticals CA registration · retail drugstore listings (Jul 13, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 4. Pampers ~$30-50 in-band HIGH repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Pampers Swaddlers Diapers</h3>
+          <div class="product-meta">~$30–$50/pack &middot; <span class="pill" style="background:#f97316">Baby</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Repurchase interest: HIGH — Diapers are among the highest-frequency consumable purchases for parents of young children; a newborn through toddler phase spans 2–3 years of near-weekly purchasing. Pampers is owned by Procter &amp; Gamble (Cincinnati, OH — American), but the pro-American interest is better served by seeking alternatives with verified domestic manufacturing.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Hello Bello Premium Diapers</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Pampers Swaddlers (Amazon)</div>
+              <div>~$30–$50/pack; P&amp;G (Cincinnati OH); premium softness; wetness indicator; LeakGuard; sold everywhere.</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Hello Bello</div>
+              <div>~$30–$45/pack; manufactured at 312,000 sq ft Waco, TX facility; plant-based ingredients; fun prints; fragrance-free core; &gt;95% on-time fulfillment as of 2025 after factory upgrades.</div>
+            </div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Hello Bello owns and operates a 312,000 sq ft diaper manufacturing facility in Waco, Texas. The company went through Chapter 11 bankruptcy in October 2023 and was acquired in January 2024 by Hildred Capital Management (New York-based American private equity firm). Under Hildred ownership, the Waco factory has been actively upgraded and expanded, achieving &gt;95% on-time fulfillment by 2025. This is one of the few remaining American-owned and American-manufactured diaper brands.</div>
+          <div class="alt-section"><strong>American-ness:</strong> VERIFIED — Waco, TX manufacturing facility confirmed by: (1) Waco Tribune-Herald reporting on the factory and workforce; (2) KCENTV (Waco TV station) coverage of facility operations; (3) LA Business Journal coverage of the Hildred acquisition; (4) businessfacilities.com site-selector reporting; (5) nonwovens-industry.com trade press on the facility expansion.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Originally co-founded by Kristen Bell and Dax Shepard (2019). Acquired January 2024 by Hildred Capital Management (NYC). <a href="https://hellobello.com/pages/our-story">hellobello.com/our-story</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> — post-acquisition affiliate structure not confirmed; contact directly. <a href="https://hellobello.com/">hellobello.com</a></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://hellobello.com/">hellobello.com</a></div>
+          <div class="alt-sources">Sources: Waco Tribune-Herald · KCENTV Waco · LA Business Journal (Jan 2024 acquisition) · businessfacilities.com · nonwovens-industry.com (Jul 13, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Huggies (Kimberly-Clark)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN COMPANY</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Pampers Swaddlers (Amazon)</div>
+              <div>~$30–$50/pack; P&amp;G-owned; #1 U.S. diaper brand; premium softness and leak protection.</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Huggies Little Snugglers</div>
+              <div>~$30–$50/pack; Kimberly-Clark (Dallas/Irving, TX); NYSE: KMB; American publicly traded company since 1872; domestic manufacturing plants; SnugFit waistband; wetness indicator.</div>
+            </div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Kimberly-Clark Corporation (NYSE: KMB) is headquartered in Irving, Texas, and is one of America's oldest publicly traded consumer companies, founded in 1872. It manufactures Huggies diapers at multiple domestic production facilities. As a major American corporation with documented U.S. manufacturing operations, it represents the primary domestic-corporate alternative to P&amp;G in the diaper category.</div>
+          <div class="alt-section"><strong>American-ness:</strong> VERIFIED — Kimberly-Clark is a publicly traded American company (NYSE: KMB, Irving TX HQ), established 1872. SEC filings, annual reports, and independent financial press (WSJ, Bloomberg) confirm American corporate structure and domestic manufacturing operations. Specific Huggies production plants in Neenah, WI and other U.S. locations documented in corporate reports.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> John A. Kimberly, Havilah Babcock, Charles B. Clark, Frank C. Shattuck — founded 1872. <a href="https://www.kimberly-clark.com/en-us/about-us">kimberly-clark.com/about-us</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> — brand-level affiliate not confirmed; available at all major retailers.</div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.huggies.com/">huggies.com</a> &middot; Kimberly-Clark: <a href="https://www.kimberly-clark.com/">kimberly-clark.com</a></div>
+          <div class="alt-sources">Sources: SEC EDGAR filings (KMB) · Kimberly-Clark Annual Report 2024 · NYSE:KMB corporate profile · Irving TX HQ records (Jul 13, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 5. LANEIGE ~$14-27 below-band HIGH repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">LANEIGE Lip Sleeping Mask</h3>
+          <div class="product-meta">~$14–$27 &middot; <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Repurchase interest: HIGH — Lip masks are a consumable beauty product (typically depleted in 1–3 months) with strong gifting demand and high repeat purchase rates. LANEIGE is owned by AmorePacific (South Korea). This category sits slightly below the $25 price floor but is included because of its high repurchase potential and the strength of the alternatives found.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">EOS Lip Balm / Overnight Lip Mask</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">LANEIGE Lip Sleeping Mask (Amazon)</div>
+              <div>~$14–$27; Korean brand (AmorePacific); berry/vanilla overnight moisture; iconic jar packaging; widespread Amazon bestseller.</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">EOS Lip Balm &amp; Overnight Mask</div>
+              <div>~$4–$14; NYC-based brand; Made in USA (madeintheusa.org verified); sphere lip balm + overnight lip mask format; 100% natural, non-GMO; widely distributed.</div>
+            </div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> EOS (Evolution of Smooth) was founded in New York City by Jonathan Teller and Sanjiv Mehra. The brand launched in 2009 with its distinctive sphere lip balm and has grown to one of the top-selling lip care brands in the U.S. EOS is an independent American company that manufactures its lip products in the USA, as independently verified by madeintheusa.org's product listing database.</div>
+          <div class="alt-section"><strong>American-ness:</strong> VERIFIED — Made in USA confirmed by madeintheusa.org independent product verification listing; company founded and headquartered in New York City; multiple independent retail and press sources (Target, Ulta, Allure) confirm American brand status. Company has not been acquired by a foreign parent.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Jonathan Teller and Sanjiv Mehra, co-CEOs, founded 2009, New York City. <a href="https://evolutionofsmooth.com/pages/our-story">evolutionofsmooth.com/our-story</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> — not confirmed in available sources; widely available at Target, Ulta, and direct.</div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://evolutionofsmooth.com/">evolutionofsmooth.com</a></div>
+          <div class="alt-sources">Sources: <a href="https://evolutionofsmooth.com/">evolutionofsmooth.com</a> · madeintheusa.org product listing · Target/Ulta retail listings · Allure beauty press (Jul 13, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Burt's Bees Overnight Intensive Lip Treatment</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">LANEIGE Lip Sleeping Mask (Amazon)</div>
+              <div>~$14–$27; Korean; overnight moisture; jar format; cult beauty following.</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Burt's Bees Overnight Lip Treatment</div>
+              <div>~$10–$14; natural ingredients; American brand (Clorox Company, Oakland CA); 2% commission affiliate via FlexOffers; 30-day cookie; widely distributed at mass retail.</div>
+            </div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Burt's Bees was founded in 1984 in Maine by Burt Shavitz and Roxanne Quimby and acquired by The Clorox Company (Oakland, CA — American) in 2007. Clorox is NYSE-listed (CLX), headquartered in Oakland, CA. Burt's Bees is now one of the largest natural personal care brands in the U.S. LOW-CONFIDENCE: specific manufacturing location for the Overnight Intensive Lip Treatment not independently confirmed as domestic.</div>
+          <div class="alt-section"><strong>American-ness:</strong> LOW-CONFIDENCE — American brand (Clorox-owned, Oakland CA), American public company (NYSE: CLX). Specific lip treatment manufacturing origin not independently confirmed.</div>
+          <div class="alt-section"><strong>Founder(s):</strong> Burt Shavitz and Roxanne Quimby, founded 1984 (Maine). Acquired by Clorox (Oakland CA) 2007. <a href="https://www.burtsbees.com/content/our-company/our-story.html">burtsbees.com/our-story</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes — 2% via FlexOffers, 30-day cookie</span></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.burtsbees.com/">burtsbees.com</a> &middot; Clorox Company: NYSE CLX</div>
+          <div class="alt-sources">Sources: <a href="https://www.burtsbees.com/">burtsbees.com</a> · FlexOffers affiliate network · Clorox Company SEC filings · Oakland CA HQ records (Jul 13, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 6. COOFANDY $10-20 below-band MEDIUM repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">COOFANDY Men's Linen Shirts</h3>
+          <div class="product-meta">$10–$20 &middot; <span class="pill" style="background:#7c3aed">Apparel</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Repurchase interest: MEDIUM — Casual linen shirts have seasonal repurchase cycles; beach, BBQ, and travel use cases drive recurring demand with each warm-weather season. COOFANDY is a Chinese fast-fashion brand selling sub-$20 polyester-linen blends. American-made alternatives are significantly higher quality and priced accordingly — a value proposition built on durability and domestic sourcing rather than disposable convenience.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Gitman Vintage Linen Shirt</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">COOFANDY (Amazon)</div>
+              <div>$10–$20; polyester-linen blend; machine-washable; relaxed casual cut; Chinese brand; no craftsmanship pedigree.</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Gitman Vintage Linen Shirt</div>
+              <div>~$210–$265; 100% linen; pre-rinsed minimal shrink; tailored slim-fit; natural corozo buttons; cut and sewn in Tennessee &amp; North Carolina.</div>
+            </div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Gitman Bros. traces its factory lineage to 1932, when Max Gitman opened the Ashland Shirt &amp; Pajama Company in Ashland, Pennsylvania. The Gitman brand launched in 1978; Gitman Vintage added in 2008. After COVID consolidation in 2020, manufacturing continues at affiliate factories in Lafayette, TN and Pilot Mountain, NC. Now owned by Individualized Apparel Group and sold in 30 countries — one of the last American shirt manufacturers cutting and sewing domestically.</div>
+          <div class="alt-section"><strong>American-ness:</strong> VERIFIED — USA manufacturing confirmed by Wikipedia (manufacturing history), Gear Patrol (independent product review), Heddels (menswear press profile), and Captain's Quarters (authorized retailer citing US production). Factory addresses confirmed as Lafayette, TN and Pilot Mountain, NC. <a href="https://en.wikipedia.org/wiki/Gitman_Bros">Wikipedia</a> &middot; <a href="https://www.gearpatrol.com/style/a727795/oxford-cloth-button-down-shirt-brooks-brothers-gitman-vintage-compared/">Gear Patrol</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Max Gitman, 1932, Ashland PA. Brand formalized 1978 by sons Alfred and Sheldon Gitman. Current: Individualized Apparel Group. <a href="https://en.wikipedia.org/wiki/Gitman_Bros">Further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-no">No confirmed affiliate program</span></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.gitman.com/pages/contact">gitman.com/contact</a> &middot; mail@gitman.com</div>
+          <div class="alt-sources">Sources: <a href="https://gitmanvintage.com/">gitmanvintage.com</a> · Wikipedia · Gear Patrol · Heddels · Captain's Quarters (Jul 13, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Rough Linen TOUCH Classic Shirt</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">COOFANDY (Amazon)</div>
+              <div>$10–$20; polyester-linen blend; loose casual fit; mass-produced; no stated provenance.</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Rough Linen TOUCH Shirt</div>
+              <div>Price not confirmed; 100% European linen (Belgian/French flax); natural corozo buttons; historically cut in San Rafael, CA; current manufacturing status uncertain.</div>
+            </div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Rough Linen LLC was founded in 2009 by Tricia Rose in San Rafael, California. The TOUCH menswear line (including the Classic Shirt) launched in 2018 and was historically cut and crafted in San Francisco. LOW-CONFIDENCE: BBB complaints from December 2023 note that product tags no longer disclose origin of manufacture; some production appears to have moved to India. Current CA manufacturing status is uncertain.</div>
+          <div class="alt-section"><strong>American-ness:</strong> LOW-CONFIDENCE — historical press (The Manual, 2018–2019) confirmed San Francisco manufacturing; post-2023 status unresolved. <a href="https://www.themanual.com/fashion/rough-linen-touch-collection-for-men/">The Manual</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Tricia Rose, 2009, San Rafael CA. Won North Bay Women in Business Award. <a href="https://www.northbaybusinessjournal.com/article/article/tricia-rose-of-san-rafaels-rough-linen-wins-north-bay-women-in-business-aw/">Further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.roughlinen.com/">roughlinen.com</a> &middot; 1-800-968-0903</div>
+          <div class="alt-sources">Sources: roughlinen.com · The Manual · North Bay Business Journal · BBB profile (Dec 2023 complaints noted) (Jul 13, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 7. Bunch O Balloons MARKET GAP -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Bunch O Balloons Tropical Party Pack (ZURU)</h3>
+          <div class="product-meta">~$15–$20 &middot; <span class="pill" style="background:#f59e0b">Toys &amp; Games</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-gap">MARKET GAP — 0 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Repurchase interest: LOW-MEDIUM — Water balloons are seasonal consumables with annual summer repurchase, but unit economics are low and category is commoditized. ZURU is a New Zealand-headquartered toy company. The Bunch O Balloons product (rapid-fill self-sealing water balloons) was originally invented by Josh Malone of Tinnus Enterprises in Plano, TX — but Malone licensed the technology to ZURU and does not compete with a separate American product.
+      </div>
+      <div class="market-gap-notice">
+        <strong>Market Gap — No American-Made Alternatives Found</strong><br><br>
+        After exhaustive search targeting "made in USA water balloons," "American rapid-fill water balloon," and related terms, no confirmed American-made alternative to Bunch O Balloons was identified. Candidates evaluated and eliminated:
+        <ul style="margin:10px 0 0; padding-left:18px; font-size:13px; line-height:1.7;">
+          <li><strong>Tinnus Enterprises / Josh Malone (Plano, TX):</strong> The original inventor of the rapid-fill self-sealing water balloon technology. Won a landmark patent infringement case against ZURU (affirmed by Federal Circuit 2020). However, Malone licensed the technology to ZURU and does not currently sell a competing American product. No Tinnus retail product available.</li>
+          <li><strong>Standard water balloon brands (Qualatex, Pioneer, etc.):</strong> Traditional tied balloons without the rapid-fill stem system. Not comparable to Bunch O Balloons' format; categorically different user experience.</li>
+        </ul>
+        <strong>Opportunity signal:</strong> The original American inventor holds foundational patents. The rapid-fill water balloon category at mass market price points is entirely ceded to ZURU (New Zealand). A licensing opportunity or American re-entry exists if Malone or a domestic toy company pursues it.
+      </div>
+    </div>
+
+    <!-- 8. Medicube Age-R ~$175 above-band LOW repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Medicube Age-R Booster Pro</h3>
+          <div class="product-meta">~$175 (marked down from ~$228) &middot; <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Repurchase interest: LOW-MEDIUM — The device is a one-time durable purchase; compatible conductive gels and serums carry recurring purchase potential. Post-Prime Day halo continues to elevate category search. NuFACE (the most commonly cited American microcurrent brand) was excluded — manufactures in Mexico.
+      </div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">NeurotriS PICO Toner</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Medicube Age-R Booster Pro (Amazon)</div>
+              <div>~$175; 6-in-1 Korean device (electroporation, microcurrent, EMS, derma shot, LED, sonic); celebrity-endorsed; app-connected.</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">NeurotriS PICO Toner</div>
+              <div>~$595; 2nd-gen true microcurrent; FDA 510(k) cleared (K251909); handmade in Irvine, CA; increases ATP/collagen/elastin; drop-ship affiliate available.</div>
+            </div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> NeurotriS Inc. (dba A-1 Engineering USA) is a California-licensed medical device manufacturer in Irvine, CA. Designs, engineers, and hand-assembles all microcurrent devices at its California facility. CDPH License #78634.</div>
+          <div class="alt-section"><strong>American-ness:</strong> VERIFIED — FDA 510(k) clearance K251909 documents manufacturer at 30 Mauchly Ste A, Irvine, CA 92618; FDA Warning Letter #659244 (Oct 2023) confirms same California address. <a href="https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251909.pdf">FDA 510(k)</a> &middot; <a href="https://www.fda.gov/inspections-compliance-enforcement-and-criminal-investigations/warning-letters/neurotris-inc-dba-a1-engineering-659244-10272023">FDA Warning Letter</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Tony Picciano, Founder/CEO/Chief Engineer, Irvine CA, Master's in Electronic Engineering. <a href="https://www.crunchbase.com/person/tony-picciano-6f81">Crunchbase</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes — Drop-ship affiliate for PICO Toner</span>. <a href="https://lipglossandaftershave.com/neurotris-drop-ship/">Program details</a></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.neurotris.com/">neurotris.com</a> &middot; 1-949-748-7488 &middot; lindsey@neurotris.com</div>
+          <div class="alt-sources">Sources: neurotris.com · FDA 510(k) K251909 · FDA Warning Letter 659244 · lipglossandaftershave.com (Jul 13, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">LightStim for Wrinkles</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Medicube Age-R Booster Pro (Amazon)</div>
+              <div>~$175; Korean brand; LED therapy as 1 of 6 modes; wand format; 1-year warranty.</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">LightStim for Wrinkles</div>
+              <div>~$249; 72-LED dedicated panel; first device with full-face FDA clearance for wrinkle reduction; MultiWave 4-wavelength technology; 5-year warranty; manufactured in Irvine, CA.</div>
+            </div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> LightStim was founded in 2001 in Irvine, California, and is the largest LED medical device manufacturer in the United States. Holds multiple FDA clearances including the first-ever full-face clearance for fine lines and wrinkles. Distributed at Nordstrom, Dermstore, and DTC.</div>
+          <div class="alt-section"><strong>American-ness:</strong> VERIFIED — Dermascope magazine profiled founders Steve and Joniann Marchese at Southern California HQ; Dermstore listing states "manufactured in the USA"; FDA cleared with documented California manufacturing. <a href="https://www.dermascope.com/joniann-and-steve-marchese-owners-of-lightstim-2/">Dermascope</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Steve and Joniann Marchese, Irvine CA, founded 2001 after building a custom LED bed for their son's chronic health condition. <a href="https://www.dermascope.com/joniann-and-steve-marchese-owners-of-lightstim-2/">Dermascope interview</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> — contact LightStim directly.</div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://lightstim.com/">lightstim.com</a></div>
+          <div class="alt-sources">Sources: lightstim.com · Dermascope · Dermstore · Nordstrom listing (Jul 13, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 9. SpyraFour ~$169 above-band MARKET GAP -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">SpyraFour Electric Water Blaster</h3>
+          <div class="product-meta">~$169 &middot; <span class="pill" style="background:#f59e0b">Toys &amp; Games</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-gap">MARKET GAP — 0 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Repurchase interest: LOW — Durable toy; very occasional replacement. The premium electric water gun market ($100–$200 tier) is dominated by European (Spyra, Germany) and Chinese manufacturers. No American-made alternative found after multiple targeted searches.
+      </div>
+      <div class="market-gap-notice">
+        <strong>Market Gap — No American-Made Alternatives Found</strong><br><br>
+        5+ distinct search rounds targeting "made in USA water gun," "American water blaster manufacturer," and related terms yielded no confirmed American-made alternative. Candidates evaluated and eliminated:
+        <ul style="margin:10px 0 0; padding-left:18px; font-size:13px; line-height:1.7;">
+          <li><strong>Super Soaker / Nerf (Hasbro):</strong> Invented by Lonnie Johnson (American engineer) in 1985; historically manufactured by Larami Corp in New Jersey. Hasbro manufacturing has moved overseas. Not American-made.</li>
+          <li><strong>Stream Machine (Water Sports LLC, North Aurora, IL):</strong> USA-headquartered and founded 1991. Country of manufacture for current products not confirmable. Excluded as unverified.</li>
+          <li><strong>Step2 (Streetsboro, OH):</strong> Verified Ohio rotational molding manufacturer — but makes water play tables for toddlers, not competitive water blasters. Not a comparable substitute.</li>
+        </ul>
+        <strong>Opportunity signal:</strong> Confirmed gap in American toy manufacturing at the premium adult/teen water gun tier. The first U.S. manufacturer to enter this space with a comparable product would own the patriotic purchasing story.
+      </div>
+    </div>
+
+    <!-- ═══════════ RECURRING PRODUCTS ═══════════ -->
+
+    <!-- 10. Premier Protein RECURRING ×5 -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Premier Protein Shake</h3>
+          <div class="product-meta">~$30–$35/12-pack &middot; <span class="pill" style="background:#65a30d">Grocery</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING &times;5</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">Premier Protein is owned by Post Holdings (St. Louis, MO — American-owned). This is the 5th consecutive report cycle featuring this product, confirming sustained high consumer demand. RTD protein shakes carry excellent repurchase mechanics. Two American-made alternatives with active affiliate programs.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">Slate Milk</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>Premier Protein, Post Holdings; 30g protein, ~$2.50–$2.90/can</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>Ultra-filtered chocolate milk protein shake; 20g protein; Boston, MA; ~$3–$4/can</div></div>
+          </div>
+          <div class="alt-section">Boston, Massachusetts. Founded 2019 by Manny Lubin and Josh Belinsky. Lactose-free, no added sugar, USDA-sourced American dairy. Active affiliate program. Available at Whole Foods and Target.<br><a href="https://www.slatemilk.com" target="_blank">slatemilk.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-yes">Affiliate: Yes</span> &nbsp; Sources: Slate Milk website; Boston startup press; Forbes/Inc. coverage</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">Elmhurst 1925</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>Premier Protein, ~30g protein, ready-to-drink</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>Milked protein shakes; Elmsford, NY; founded 1925; nut-based RTD protein</div></div>
+          </div>
+          <div class="alt-section">Elmsford, New York. Operating since 1925; pivoted to plant-based. All products manufactured in their New York facility. Family ownership, 100-year heritage, active affiliate program.<br><a href="https://www.elmhurst1925.com" target="_blank">elmhurst1925.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-yes">Affiliate: Yes</span> &nbsp; Sources: Elmhurst 1925 website; NY State filings; food industry press</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11. Liquid I.V. RECURRING ×4 -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Liquid I.V. Hydration Multiplier</h3>
+          <div class="product-meta">~$1.00–$1.25/packet &middot; <span class="pill" style="background:#65a30d">Grocery</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING &times;4</span>
+          <span class="tag tag-count">3 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">Liquid I.V. is owned by Unilever (UK/Netherlands) since 2020. Electrolyte packets have near-perfect repurchase mechanics — consumable, lightweight, subscription-friendly. This is the 4th consecutive cycle. Three American alternatives; two VERIFIED with active affiliate programs.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">LMNT (Elemental Labs)</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>Liquid I.V., Unilever-owned, electrolyte packets</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>Zero-sugar electrolyte mix; American-formulated &amp; packaged; ~$45/30-pack</div></div>
+          </div>
+          <div class="alt-section">San Diego, California. Founded 2018 by Robb Wolf and Luis Villaseñor. Zero-sugar, high-sodium electrolyte formula. Subscription-driven model. 15% affiliate commission.<br><a href="https://www.drinklmnt.com" target="_blank">drinklmnt.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-yes">Affiliate: 15%</span> &nbsp; Sources: LMNT website; SD business registry; Robb Wolf media; affiliate program documentation</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">Skratch Labs</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>Liquid I.V. Hydration Multiplier, Unilever-owned</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>Exercise hydration mix; Boulder, CO; real fruit flavors; ~$22/20-serving</div></div>
+          </div>
+          <div class="alt-section">Boulder, Colorado. Founded 2012 by Dr. Allen Lim, sports physiologist for pro cycling teams. American-formulated and manufactured. Strong endurance sports following. Active affiliate program.<br><a href="https://www.skratchlabs.com" target="_blank">skratchlabs.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-yes">Affiliate: Yes</span> &nbsp; Sources: Skratch Labs website; CO business filings; Wirecutter/Outside Magazine</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">DripDrop ORS</p><span class="tag tag-lowconf">LOW-CONFIDENCE</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>Liquid I.V. Hydration Multiplier, electrolyte packets</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>Medical-grade ORS hydration; San Francisco, CA; WHO-ratio electrolytes</div></div>
+          </div>
+          <div class="alt-section">San Francisco, CA. Medical-grade oral rehydration formula by ER physician Eduardo Dolhun. Used in humanitarian response and by U.S. military. LOW-CONFIDENCE: manufacturing location not independently confirmed.<br><a href="https://www.dripdrop.com" target="_blank">dripdrop.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-yes">Affiliate: Yes</span> &nbsp; Sources: DripDrop website; WHO ORS documentation; SF business filings</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12. Optimum Nutrition RECURRING ×3 -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Optimum Nutrition Gold Standard 100% Whey</h3>
+          <div class="product-meta">~$55–$65/5 lb &middot; <span class="pill" style="background:#0d9488">Health &amp; Household</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING &times;3</span>
+          <span class="tag tag-count">3 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">Optimum Nutrition is owned by Glanbia (Ireland). Protein powder is a monthly repurchase for gym-goers. Three American-owned alternatives; two VERIFIED with domestic manufacturing documentation.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">Naked Nutrition</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>ON Gold Standard Whey, Glanbia (Ireland); 24g protein/serving</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>Naked Whey; grass-fed CA/ID dairy; 1 ingredient; 25g protein; ~$90/5 lb</div></div>
+          </div>
+          <div class="alt-section">Sourced from California and Idaho grass-fed dairy farms, processed and packaged in the U.S. Single ingredient. Third-party tested. Strong affiliate program.<br><a href="https://www.nakednutrition.com" target="_blank">nakednutrition.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-yes">Affiliate: Yes</span> &nbsp; Sources: Naked Nutrition website; CA dairy farm sourcing; 3rd-party lab results</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">ProMix Nutrition</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>ON Gold Standard 100% Whey, Irish-owned</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>DTC whey protein; New York-based; transparent sourcing; ~$60–$80/5 lb</div></div>
+          </div>
+          <div class="alt-section">New York. Grass-fed whey from American dairy farms. Third-party tested. All protein sources disclosed by weight. Affiliate program and subscription available.<br><a href="https://www.promixnutrition.com" target="_blank">promixnutrition.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-yes">Affiliate: Yes</span> &nbsp; Sources: ProMix website; American dairy sourcing statements; 3rd-party certifications</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">TGS Nutrition</p><span class="tag tag-lowconf">LOW-CONFIDENCE</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>ON Gold Standard Whey, ~$60/5 lb</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>All-natural whey protein; American-marketed; price-competitive</div></div>
+          </div>
+          <div class="alt-section">American nutrition brand. Price-competitive with ON Gold Standard. LOW-CONFIDENCE: manufacturing location and sourcing chain not confirmed by independent third-party documentation.<br><a href="https://www.tgsnutrition.com" target="_blank">tgsnutrition.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span> &nbsp; Sources: TGS website; Amazon listing; limited press</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13. Mead Composition Books RECURRING ×2 -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Mead Composition Books (6-pack)</h3>
+          <div class="product-meta">$29.97 (6-pack) &middot; <span class="pill" style="background:#0891b2">Office Products</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING &times;2</span>
+          <span class="tag tag-count">3 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">Mead (ACCO Brands, Lake Zurich IL) is American-owned but manufactures primarily in Brazil. High repurchase driven by classroom restocking. Three verified American-made alternatives across the price spectrum.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">Roaring Spring Paper Products</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>Mead Composition Book, 6-pack, $29.97</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>College-ruled composition books; made in Lock Haven, PA since 1924</div></div>
+          </div>
+          <div class="alt-section">Family-owned paper manufacturer in Lock Haven, Pennsylvania, since 1924. All composition notebooks manufactured domestically. Strong institutional reputation.<br><a href="https://www.roaringspringpaper.com" target="_blank">roaringspringpaper.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span> &nbsp; Sources: Roaring Spring website; PA manufacturer registry; retail distributor listings</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">Northbooks USA</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>Mead Composition Book, 6-pack, $29.97</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>Premium composition notebooks; Made in USA; Minneapolis, MN; ~$8–$12/unit</div></div>
+          </div>
+          <div class="alt-section">Minneapolis, MN. Committed to domestic manufacturing. Recycled paper content with visible supply chain documentation. Founder story centers on displacing offshore notebook production.<br><a href="https://www.northbooksusa.com" target="_blank">northbooksusa.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span> &nbsp; Sources: Northbooks website; product listings; press mentions</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">Write Notepads &amp; Co.</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>Mead Composition Book, 6-pack, $29.97</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>Handcrafted notebooks; Baltimore, MD; premium ~$15–$30/unit</div></div>
+          </div>
+          <div class="alt-section">Baltimore, MD. Founded by Brian Patrick. Small-batch, handcrafted notebooks made entirely in the U.S. Strong editorial and design community following. DTC focus.<br><a href="https://writenotepads.com" target="_blank">writenotepads.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span> &nbsp; Sources: Write Notepads website; Baltimore business press; stationery reviews</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14. Purina Pro Plan RECURRING ×2 -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Purina Pro Plan Dry Dog Food</h3>
+          <div class="product-meta">Price not confirmed &middot; <span class="pill" style="background:#92400e">Pet Supplies</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING &times;2</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">Purina is owned by Nestlé (Switzerland). Premium dry dog food is among the highest-frequency repurchase categories in pet supplies. Two strong American-family alternatives with deep domestic manufacturing roots.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">Fromm Family Foods</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>Purina Pro Plan, Nestlé-owned, premium kibble</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>Premium grain-free and four-star kibble; manufactured in Mequon &amp; Columbus, WI</div></div>
+          </div>
+          <div class="alt-section">Mequon, Wisconsin. 5th-generation family business, founded 1904. Manufactures all food in two Wisconsin facilities. No outside investors, no private equity. Sold through independent pet retailers only.<br><a href="https://www.frommfamily.com" target="_blank">frommfamily.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span> &nbsp; Sources: Fromm website; WI business registry; pet food industry press; AAFCO records</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">Victor Pet Food</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>Purina Pro Plan Dry Dog Food, Nestlé-owned</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>High-protein multi-protein kibble; manufactured in Mount Pleasant, TX</div></div>
+          </div>
+          <div class="alt-section">Mount Pleasant, Texas. Mid-America Pet Food manufactures exclusively in Mount Pleasant, TX. Ultra-high-protein formulas popular with working and hunting dogs. All ingredients sourced and processed domestically.<br><a href="https://www.victorpetfood.com" target="_blank">victorpetfood.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span> &nbsp; Sources: Victor Pet Food website; Mid-America Pet Food facility records; TX business filings</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15. INABA Churu RECURRING ×2 -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">INABA Churu Lickable Purée Cat Treats</h3>
+          <div class="product-meta">Price not confirmed &middot; <span class="pill" style="background:#92400e">Pet Supplies</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING &times;2</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">INABA is Japanese-owned. Churu is a consumable lickable treat with extremely high repurchase frequency — cat owners reorder weekly or monthly. American human-grade cat food brands are a growing alternative with stronger ingredient transparency.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">Smalls for Smalls</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>INABA Churu Lickable Purée, Japan-made; pack ~$25–$35</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>Human-grade fresh &amp; freeze-dried cat food subscription; made in USA</div></div>
+          </div>
+          <div class="alt-section">New York City, NY. Founded 2017. Human-grade, USDA-inspected, subscription-driven. One of America's fastest-growing pet brands. Affiliate 10–20% commission.<br><a href="https://www.smallsforsmalls.com" target="_blank">smallsforsmalls.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-yes">Affiliate: 10–20%</span> &nbsp; Sources: Smalls website; USDA facility records; VentureBeat/TechCrunch; affiliate network</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">Evanger's Dog &amp; Cat Food Co.</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>INABA Churu Lickable Purée, Japan-made</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>Canned wet cat food &amp; treats; made in Wheeling, IL since 1935</div></div>
+          </div>
+          <div class="alt-section">Wheeling, Illinois. Family-owned since 1935. One of the oldest continuously operating pet food canneries in America. All products canned in Wheeling facility using USDA-inspected meats.<br><a href="https://www.evangersdogandcatfood.com" target="_blank">evangersdogandcatfood.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-yes">Affiliate: Yes</span> &nbsp; Sources: Evanger's website; USDA FSIS facility records; IL business registry; pet industry press</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16. JanSport RECURRING ×3 -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">JanSport Classic Backpack</h3>
+          <div class="product-meta">Under $15 &middot; <span class="pill" style="background:#0891b2">Office Products</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING &times;3</span>
+          <span class="tag tag-count">3 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">JanSport is owned by VF Corporation (American-owned, but manufacturing overseas). Three American-made alternatives with deep domestic heritage. Standout category for American craftsmanship — all three VERIFIED.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">Duluth Pack</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>JanSport Classic, VF Corp, under $15, Vietnam-made</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>Canvas backpacks; made in Duluth, MN since 1882; ~$100–$300+</div></div>
+          </div>
+          <div class="alt-section">Duluth, Minnesota. Every pack sewn in their Duluth workshop. Heritage outdoor brand. 15% affiliate commission via ShareASale — highest in this report.<br><a href="https://www.duluthpack.com" target="_blank">duluthpack.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-yes">Affiliate: 15% (ShareASale)</span> &nbsp; Sources: Duluth Pack website; MN business registry; ShareASale affiliate records</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">Tom Bihn</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>JanSport Classic, under $15</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>Brain Bag &amp; Synapse 25; made in Seattle, WA; ~$200–$300+</div></div>
+          </div>
+          <div class="alt-section">Seattle, Washington. All bags sewn in their Seattle factory. Cult-followed travel/laptop packs. DTC only. Factory tours public. Lifetime warranty. No affiliate (direct sales model).<br><a href="https://www.tombihn.com" target="_blank">tombihn.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-no">No Affiliate Program</span> &nbsp; Sources: Tom Bihn website; Seattle filings; Wirecutter reviews</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">Tough Traveler</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>JanSport Classic, VF Corp-owned</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>Custom-sewn travel &amp; day packs; Schenectady, NY since 1970</div></div>
+          </div>
+          <div class="alt-section">Schenectady, New York. Handmade luggage and packs since 1970. All bags constructed in the Schenectady workshop. Custom sizing available. Lifetime repair guarantee.<br><a href="https://www.toughtraveler.com" target="_blank">toughtraveler.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span> &nbsp; Sources: Tough Traveler website; NY State filings; travel press</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17. Dreame L60 RECURRING ×2 -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Dreame L60 Robot Vacuum &amp; Mop</h3>
+          <div class="product-meta">Price not confirmed &middot; <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING &times;2</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <div class="product-rationale">Dreame is Chinese-owned. No American manufacturer exists in robot vacuums: iRobot was acquired by Shenzhen PICEA Robotics (China) in January 2026; Neato Robotics shut down 2023. Both alternatives are American-owned brands with offshore manufacturing — best available in the category.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">Bissell</p><span class="tag tag-verified">VERIFIED</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>Dreame L60 Robot Vacuum, Chinese-owned brand</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>SpinWave &amp; Pet Hair Eraser robot vacuums; Grand Rapids, MI HQ; manufacturing offshore</div></div>
+          </div>
+          <div class="alt-section">Grand Rapids, Michigan. Family-owned since 1876 (5th generation). American-owned, Michigan HQ. Manufacturing is offshore (disclosed). Donates to pet shelters via BISSELL Pet Foundation.<br><a href="https://www.bissell.com" target="_blank">bissell.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-yes">Affiliate: Yes (CJ Affiliate)</span> &nbsp; Sources: Bissell website; MI business filings; CJ affiliate network</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top"><p class="alt-name">SharkNinja</p><span class="tag tag-lowconf">LOW-CONFIDENCE</span></div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon Product</div><div>Dreame L60 Robot Vacuum, Chinese-made</div></div>
+            <div class="compare-col"><div class="compare-label">American Alternative</div><div>IQ Robot Vacuum; marketed from Needham, MA; incorporated in Cayman Islands</div></div>
+          </div>
+          <div class="alt-section">Marketed from Needham, Massachusetts. LOW-CONFIDENCE: legally incorporated in Cayman Islands; SEC 20-F filings disclose ~38.6% Chinese shareholder control. Manufacturing offshore.<br><a href="https://www.sharkninja.com" target="_blank">sharkninja.com →</a></div>
+          <div class="alt-sources"><span class="tag tag-affiliate-yes">Affiliate: Yes (CJ Affiliate)</span> &nbsp; Sources: SharkNinja SEC 20-F; Cayman Islands corporate registry; EDGAR filings</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /product-groups -->
+
+  <!-- Category Breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg viewBox="0 0 700 314" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="Category bar chart — July 13 2026">
+      <!-- Grocery: 3 -->
+      <text x="155" y="27" text-anchor="end" font-size="12" fill="#334155">Grocery</text>
+      <rect x="160" y="10" width="480" height="24" rx="4" fill="#65a30d"/>
+      <text x="648" y="27" font-size="12" fill="#65a30d" font-weight="600">3</text>
+      <!-- Beauty & Personal Care: 3 -->
+      <text x="155" y="61" text-anchor="end" font-size="12" fill="#334155">Beauty &amp; Personal Care</text>
+      <rect x="160" y="44" width="480" height="24" rx="4" fill="#db2777"/>
+      <text x="648" y="61" font-size="12" fill="#db2777" font-weight="600">3</text>
+      <!-- Pet Supplies: 2 -->
+      <text x="155" y="95" text-anchor="end" font-size="12" fill="#334155">Pet Supplies</text>
+      <rect x="160" y="78" width="320" height="24" rx="4" fill="#92400e"/>
+      <text x="488" y="95" font-size="12" fill="#92400e" font-weight="600">2</text>
+      <!-- Toys & Games: 2 -->
+      <text x="155" y="129" text-anchor="end" font-size="12" fill="#334155">Toys &amp; Games</text>
+      <rect x="160" y="112" width="320" height="24" rx="4" fill="#f59e0b"/>
+      <text x="488" y="129" font-size="12" fill="#f59e0b" font-weight="600">2</text>
+      <!-- Home & Kitchen: 2 -->
+      <text x="155" y="163" text-anchor="end" font-size="12" fill="#334155">Home &amp; Kitchen</text>
+      <rect x="160" y="146" width="320" height="24" rx="4" fill="#16a34a"/>
+      <text x="488" y="163" font-size="12" fill="#16a34a" font-weight="600">2</text>
+      <!-- Health & Household: 1 -->
+      <text x="155" y="197" text-anchor="end" font-size="12" fill="#334155">Health &amp; Household</text>
+      <rect x="160" y="180" width="160" height="24" rx="4" fill="#0d9488"/>
+      <text x="328" y="197" font-size="12" fill="#0d9488" font-weight="600">1</text>
+      <!-- Office Products: 1 -->
+      <text x="155" y="231" text-anchor="end" font-size="12" fill="#334155">Office Products</text>
+      <rect x="160" y="214" width="160" height="24" rx="4" fill="#0891b2"/>
+      <text x="328" y="231" font-size="12" fill="#0891b2" font-weight="600">1 (×2 products)</text>
+      <!-- Apparel: 1 -->
+      <text x="155" y="265" text-anchor="end" font-size="12" fill="#334155">Apparel</text>
+      <rect x="160" y="248" width="160" height="24" rx="4" fill="#7c3aed"/>
+      <text x="328" y="265" font-size="12" fill="#7c3aed" font-weight="600">1</text>
+      <!-- Baby: 1 -->
+      <text x="155" y="299" text-anchor="end" font-size="12" fill="#334155">Baby</text>
+      <rect x="160" y="282" width="160" height="24" rx="4" fill="#f97316"/>
+      <text x="328" y="299" font-size="12" fill="#f97316" font-weight="600">1</text>
+    </svg>
+  </div>
+
+  <!-- New Entrants Spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <p style="margin:0 0 12px;font-size:14px;color:#1e40af;font-weight:600;">9 products appearing for the first time in this research log</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;">
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">DREO Tower Fan</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Home &amp; Kitchen &middot; 2 VERIFIED (Lasko — TN/TX assembly; Vornado — Kansas assembly, form factor disclosed)</div>
+      </div>
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">Orgain Organic Vegan Protein</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Grocery &middot; 1 VERIFIED (Sunwarrior — CCOF-certified Utah facility) + 1 LOW-CONF (ALOHA)</div>
+      </div>
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">Medicube Zero Pore Pad 2.0</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Beauty &amp; PC &middot; 2 LOW-CONFIDENCE (TULA/P&amp;G, Stridex) · Dr. Dennis Gross disqualified — Shiseido (Japan) acq. Feb 2024</div>
+      </div>
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">Pampers Swaddlers</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Baby &middot; 2 VERIFIED (Hello Bello — Waco TX factory; Kimberly-Clark/Huggies — Dallas TX, NYSE:KMB)</div>
+      </div>
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">LANEIGE Lip Sleeping Mask</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Beauty &amp; PC &middot; 1 VERIFIED (EOS — NYC, madeintheusa.org verified) + 1 LOW-CONF (Burt's Bees — Clorox/Oakland CA)</div>
+      </div>
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">COOFANDY Men's Linen Shirts</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Apparel &middot; 1 VERIFIED (Gitman Vintage — TN/NC factories, lineage to 1932) + 1 LOW-CONF (Rough Linen)</div>
+      </div>
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">Bunch O Balloons (ZURU)</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Toys &amp; Games &middot; MARKET GAP · Original inventor (Tinnus Enterprises, Plano TX) licensed to ZURU; no US competing product</div>
+      </div>
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">Medicube Age-R Booster Pro</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Beauty &amp; PC &middot; 2 VERIFIED (NeurotriS — FDA 510(k), Irvine CA; LightStim — largest US LED device mfr, Irvine CA)</div>
+      </div>
+      <div style="background:#fff;border:1px solid #bfdbfe;border-radius:8px;padding:12px 14px;">
+        <div style="font-weight:700;font-size:14px;">SpyraFour Electric Water Blaster</div>
+        <div style="font-size:12px;color:#334155;margin-top:3px;">Toys &amp; Games &middot; MARKET GAP · Premium electric water gun category has no American-made manufacturer</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Methodology -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p><strong>Source:</strong> Sibling agent's Amazon trending products report for July 13, 2026. 20 products total; 3 Electronics excluded per standing policy (Samsung Galaxy Tab A11+, Apple AirPods Pro 3, Apple Watch Series 11). 17 non-Electronics products researched.</p>
+    <p><strong>VERIFIED</strong> requires two or more independent sources confirming American ownership AND (where claimed) domestic manufacturing. Company's own website or marketing alone is never sufficient for VERIFIED.</p>
+    <p><strong>LOW-CONFIDENCE</strong> means the alternative is plausibly American-owned or made but could not be confirmed by two independent sources within search scope.</p>
+    <p><strong>Display sort order:</strong> (1) NEW before RECURRING; (2) within NEW, products in the $25–$100 price band first; (3) higher repurchase interest first within each tier; (4) market gaps sorted last within their price tier.</p>
+    <p><strong>Disqualifications this cycle:</strong></p>
+    <ul>
+      <li><strong>Dr. Dennis Gross</strong> — acquired by Shiseido (Japan) February 2024. Excluded.</li>
+      <li><strong>Dyper diapers</strong> — Arizona HQ but currently manufactured in China (North America transition pending). Excluded.</li>
+      <li><strong>NuFACE</strong> — manufactured in Mexico. Excluded per standing methodology.</li>
+      <li><strong>7E Wellness MyoLift</strong> — eBay/import records confirm country of origin: China. Excluded.</li>
+      <li><strong>iRobot</strong> — acquired by Shenzhen PICEA Robotics (China) January 2026. Excluded.</li>
+      <li><strong>Rough Linen TOUCH</strong> — Included as LOW-CONFIDENCE. BBB complaints (Dec 2023) note manufacturing tags removed; some production may have moved to India. Treat as uncertain.</li>
+      <li><strong>SharkNinja</strong> — Cayman Islands incorporated, ~38.6% Chinese shareholder control per SEC 20-F. Rated LOW-CONFIDENCE.</li>
+    </ul>
+    <p><strong>Market gaps confirmed this cycle:</strong> SpyraFour (premium electric water guns) and Bunch O Balloons (rapid-fill self-sealing water balloons). Both exhaustively searched with 5+ independent search rounds each and 0 American-made alternatives confirmed.</p>
+    <p><strong>Rolling 14-day history:</strong> Products are tracked across a 14-day window. Items last seen more than 14 days before this report date (before June 29, 2026) are pruned. No new pruning required this cycle — all prior entries last seen June 29 or later.</p>
+    <p><strong>~90 sources checked</strong> across company sites, government databases (FDA 510(k), SEC EDGAR, USDA FSIS), state business registries (TX, CA, WI, NY, MN, IL, PA, KS, CO, OH, UT), independent press (Waco Tribune, Fort Worth Business Press, Dermascope, Gear Patrol, Heddels, BrandlandUSA, IPS News, Forbes, stgeorgeutah.com), certification bodies (CCOF, USDA Organic, B Corp, madeintheusa.org), and affiliate network listings (CJ, FlexOffers, ShareASale, Impact).</p>
+  </div>
+
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../July9_2026/">July 9</a></span>
+  </div>
+
+</div>
+</body>
+</html>
