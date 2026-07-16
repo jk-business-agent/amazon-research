@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Top Sellers — July 16, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  /* 1. Header band */
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  /* 2. Executive summary */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  /* 3. Quick stats */
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 150px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  /* 4. Top movers grid */
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
+  .card-meta { font-size: 12.5px; color: var(--muted); }
+  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .card-sources a { color: #2563eb; text-decoration: none; }
+
+  /* 5. Category chart */
+  .chart-wrap { padding: 10px 6px; overflow-x: auto; }
+
+  /* 6. New entrants spotlight */
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+  .spotlight ul { margin: 0; padding-left: 20px; }
+  .spotlight li { font-size: 14px; line-height: 1.6; color: #1e293b; margin-bottom: 6px; }
+
+  /* 7. Methodology footer */
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  /* 8. Footer nav */
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <div class="date">July 16, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 30 sources checked</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">Today's report covers 21 verified products across 8 categories, with 8 new entrants and 13 recurrences in a consumer landscape shaped by three converging forces: the back-to-school buying season igniting office supplies and toy sales, persistent GLP-1-driven demand for functional nutrition, and a summer cooling wave sustaining peak sales in fans and robot vacuums. The standout new entrant is the Apple iPad 11-inch (A16), which Amazon is now pricing at $319 — below Apple's standard retail price — and has flagged as a Best Seller, capturing strong demand from students equipping for fall and consumers upgrading older iPad models. Premier Protein Shake and Liquid I.V. maintain their post-Prime Day momentum as the confirmed #1 and #2 sellers from the June 23-26 event per Numerator tracking data, with GLP-1 drug adoption continuing to reshape American grocery habits toward high-protein, low-sugar functional beverages. Purina FortiFlora Probiotics for Dogs is the most notable new entrant in pet care — estimated at $3.41M in monthly Amazon revenue, the second-highest earner across all pet supply categories — signaling that pet owners are extending the human gut-health wellness mindset to their animals. Note: All Amazon.com category pages returned HTTP 403 (blocked); findings are drawn from web search snippets across 30+ distinct source domains, consistent with every report in this archive since June 22.</div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">21</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="num">8</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">13</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">21</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">0</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">8</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Top movers grid -->
+  <h2 class="section-title">Top Movers</h2>
+  <div class="grid">
+
+    <!-- NEW + VERIFIED items first -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple iPad 11-inch (A16)</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Listed as a Best Seller on Amazon with a sale price of $319 — below the standard retail price of approximately $349 — the iPad 11-inch A16 is drawing strong mid-July demand from both back-to-school shoppers outfitting students for fall and consumers looking to upgrade from older iPad models. The A16 chip brings notable performance improvements for productivity and AI-driven apps, and the current Amazon pricing gap below the Apple Store is cited as a meaningful driver. Macworld noted it is at its "2026 low price" on Amazon.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — back-to-school timing and AI-capable productivity apps are positioning the entry-level iPad as a student essential; Amazon pricing below Apple's own price amplifies the demand signal.</div>
+      <div class="card-meta">$319 (sale; regular ~$349)</div>
+      <div class="card-sources">Sources: <a href="https://www.macworld.com/article/3153392/get-apples-a16-ipad-for-its-2026-low-price.html">macworld.com</a> (July 2026), <a href="https://gizmodo.com/apple-raised-ipad-prices-but-amazon-hasnt-yet-the-entry-level-a16-chip-tablet-is-still-cheaper-than-the-apple-store-2000779109">gizmodo.com</a> (July 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">eos Shea Better Vanilla Cashmere Body Lotion</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">With an estimated 100,000+ units sold monthly and a 4.7-star rating per ASINsight's sales tracking, the eos Shea Better Vanilla Cashmere Body Lotion leads Amazon's body lotion category in 2026 and ranked #2 overall in Amazon's Q1 2026 Beauty and Personal Care best-sellers list per BeautyMatter. Summer skin care routines and the fragrance-forward, lightweight formula are driving sustained demand, with the vegan, dermatologist-recommended formula attracting high repeat-purchase rates.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — body lotion category is stable year-round; summer typically brings a slight uptick in personal care spending, supporting current volumes.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.asinsight.com/report/US/eos-lotions">asinsight.com</a> (2026), <a href="https://beautymatter.com/articles/amazon-q1-2026-top-25-beauty-and-personal-care-products">beautymatter.com</a> (Q1 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Purina FortiFlora Probiotics for Dogs</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Purina FortiFlora holds the #1 veterinarian-recommended position among canine probiotic brands and generates an estimated $3.41M in monthly Amazon revenue — the second-highest of any product across all pet supply categories per wiseppc.com's sales analysis. Available in both powder sachets and a newer chewable tablet format, its growth reflects how pet owners are extending the human wellness-and-gut-health mindset to their animals, a trend that has been building throughout 2025–2026.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — pet supplement market expanding as vet-backed products move mainstream; the dual powder + chewable format broadens the addressable buyer base.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://wiseppc.com/blog/amazon-best-selling-pet-products/">wiseppc.com</a> (2026), <a href="https://gripsintelligence.com/insights/top-products/amazon-com/animal-pet-supplies">gripsintelligence.com</a> (2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">BIC Xtra-Smooth Mechanical Pencils</h3>
+        <span class="pill" style="background:#0891b2">Office Products</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">BIC holds the #1-selling mechanical pencil brand position in the United States, and mid-July is its peak demand window as back-to-school shopping surges. Amazon is offering up to 55% off multi-packs in the current sales cycle, and the 40-count and 60-count packs are confirmed BTS staples for K-12 students in multiple 2026 back-to-school roundups. The 0.7mm medium point is the standard for everyday schoolwork and standardized testing.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — peak demand runs July through mid-August before moderating sharply once school shopping concludes.</div>
+      <div class="card-meta">Price not confirmed (55% off multi-packs noted)</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/BIC-Xtra-Life-Mechanical-Pencil-40-Count/dp/B01JHMVG5O">amazon.com product listing</a> (July 2026), <a href="https://passionatepennypincher.com/back-school-sales/">passionatepennypincher.com</a> (July 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">JOOLA Perseus Pickleball Paddle</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The JOOLA Perseus 3S was the top-selling pickleball paddle by revenue on Amazon in 2025 at $197.95, part of a market where Amazon pickleball paddle sales surged 55% in revenue to $44 million that year per The Dink Pickleball's analysis. That momentum is continuing in 2026 as pickleball participation grows — the keyword "pickleball paddles" generated approximately 6.3 million clicks on Amazon in 2025 alone. The Perseus line, endorsed by professional player Ben Johns, is increasingly the upgrade choice for players moving beyond starter sets.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — pickleball market projected to grow from $2.2B (2024) to $9.1B by 2034; premium paddle segment is outpacing entry-level as existing players upgrade equipment.</div>
+      <div class="card-meta">$197.95 (Perseus 3S)</div>
+      <div class="card-sources">Sources: <a href="https://www.thedinkpickleball.com/amazon-pickleball-paddle-sales-up-55-in-2025-surge-to-44-million/">thedinkpickleball.com</a> (2025 data), <a href="https://thecourtscout.com/blog/best-pickleball-paddles/">thecourtscout.com</a> (July 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Owala FreeSip Insulated Water Bottle</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Owala FreeSip has emerged as the main competitor to the Stanley Quencher in the summer 2026 insulated bottle wave, with its dual-drinking design (flip for sipping, open for chugging) and leakproof lid driving strong TikTok visibility and repeat purchases. It appears in Amazon's Sports &amp; Outdoors new releases best-sellers and has been cited in multiple summer viral product roundups, gaining particular traction with outdoor-active consumers who prioritize portability and cup-holder compatibility.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — reusable hydration bottle category is expanding beyond its initial influencer base into mainstream consumers; summer heat driving peak seasonal demand.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/gp/new-releases/sporting-goods">amazon.com sports/outdoors new releases</a> (July 2026), <a href="https://www.tmz.com/2026/07/13/viral-tiktok-products-on-amazon/">tmz.com</a> (July 13, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Mattel Toy Story 5 Action Figures</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Toy Story 5 opened in theaters on June 19, 2026, and Mattel's licensed Toy Story 5 Woody and Buzz Lightyear action figures have become standout performers in Amazon's Toys &amp; Games category. Variety confirmed the merchandise was among the biggest kid-friendly Prime Day picks, and ABC7 previewed pre-release demand. Post-theatrical merchandise demand typically sustains for 60-90 days following release, placing us near the peak demand window with the movie still in wide release.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau — movie-driven merchandise typically peaks within 90 days of theatrical release (opened June 19); demand may moderate without a major streaming debut or new media event.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://variety.com/2026/shopping/news/best-prime-day-baby-deals-1235399147/">variety.com</a> (July 2026), <a href="https://abc7.com/post/toy-story-5-snag-new-have-collectibles-toys-celebration-film/18998171/">abc7.com</a> (June 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Crayola Crayons Bulk (24 Packs)</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Crayola Crayons Bulk (24 Packs) surged from a ranking of #1,254 to #13 in Toys &amp; Games in under a week per The Toy Matchmaker's June 2026 trend report, selling at $25.50 and moving an estimated 10,000 units per month — a signal that the back-to-school bulk purchasing wave is building well ahead of the late-August classroom rush. The same surge pattern repeats annually as teachers and parents stock supplies in bulk during summer discount windows, and this year's pattern appears to have started earlier than prior years.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — classic back-to-school trajectory: sharp surge in July-August followed by significant moderation after September school starts.</div>
+      <div class="card-meta">$25.50</div>
+      <div class="card-sources">Sources: <a href="https://thetoymatchmaker.com/toy-trends-june-2026-7/">thetoymatchmaker.com</a> (June 2026), <a href="https://passionatepennypincher.com/back-school-sales/">passionatepennypincher.com</a> (July 2026)</div>
+    </div>
+
+    <!-- Remaining VERIFIED items (RECURRING) -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirPods Pro 3</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 5/8)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Apple AirPods Pro 3 remain a top-selling wireless earbud on Amazon at $225 (sale from $249), with a 4.5-star rating from 11,100+ reviews per multiple July 2026 best-seller roundup snippets. Improved active noise cancellation and spatial audio continue to drive both new buyers and upgrades from earlier AirPods generations. Back-to-school season is adding a wave of demand from students purchasing premium audio gear for campus use, extending what was already a Prime Day-driven sales spike.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — wearable audio market is sustained; ANC technology has become a mainstream expectation rather than a luxury, driving upgrade cycles.</div>
+      <div class="card-meta">$225 (sale; regular $249)</div>
+      <div class="card-sources">Sources: <a href="https://www.today.com/shop/amazon-july-bestsellers-2026-rcna587365">today.com/shop</a> (July 2026), <a href="https://www.bgr.com/2207530/amazon-best-sellers-worth-buying-july/">bgr.com</a> (July 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple Watch Series 11</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 8/8)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Apple Watch Series 11 received 30% off during Prime Day 2026 — one of the most cited electronics deals of the event — and has continued to hold top-seller status afterward. As the most-reported product in this archive (present in every one of the 8 prior reports since June 17), its sustained rank reflects both durable demand for health-tracking wearables and Apple's ecosystem lock-in driving upgrades from older Apple Watch models. Health monitoring features including blood oxygen and crash detection continue to attract first-time buyers.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — health-tracking wearables are expanding their consumer base; back-to-school and personal fitness adoption cycles support sustained demand through summer.</div>
+      <div class="card-meta">Price not confirmed post-sale (30% off noted during Prime Day)</div>
+      <div class="card-sources">Sources: <a href="https://www.numerator.com/prime-day/">numerator.com Prime Day Insights</a> (June 2026), <a href="https://variety.com/2026/shopping/news/amazon-prime-day-june-2026-date-deals-what-to-buy-online-1236739562/">variety.com</a> (June 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Amazon Echo Dot (5th Generation)</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 1/8)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Amazon Echo Dot (5th Gen) at $49.99 holds a 4.7-star rating from 194,700+ ratings — the highest review count of any product found in this session's research — per July 2026 best-seller roundup snippets from today.com and BGR. Positioned as the entry point to Amazon's smart home ecosystem, it consistently attracts new smart-home adopters and first-time gift buyers. CNET's description as the "best Echo on a budget" gives it durable mid-range appeal beyond Prime Day promotional windows.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — smart speaker category is mature; Echo Dot's strength comes from expanding smart-home installations and device replacement rather than new market creation.</div>
+      <div class="card-meta">$49.99</div>
+      <div class="card-sources">Sources: <a href="https://www.today.com/shop/amazon-july-bestsellers-2026-rcna587365">today.com/shop</a> (July 2026), <a href="https://www.bgr.com/2207530/amazon-best-sellers-worth-buying-july/">bgr.com</a> (July 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Medicube Zero Pore Pad 2.0</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 4/8)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Medicube Zero Pore Pad 2.0 held the #1 position in Amazon's Beauty and Personal Care category for Q1 2026 per BeautyMatter's quarterly analysis — the first time the product reached the top spot since debuting on the list in Q1 2025. The double-sided exfoliating pad design (one side textured for exfoliation, one smooth side for toning) drives a ritualistic two-step application that builds strong repurchase habits. K-beauty community momentum continues to push discovery to new buyers.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — K-beauty skincare routines are expanding from niche to mainstream; the "skincare ritual" repeat-purchase model creates durable revenue.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://beautymatter.com/articles/amazon-q1-2026-top-25-beauty-and-personal-care-products">beautymatter.com</a> (Q1 2026), <a href="https://www.accio.com/business/top-selling-amazon-electronics">accio.com</a> (2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Hero Cosmetics Mighty Patch</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2/8)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Hero Cosmetics Mighty Patch ranked #3 in Amazon's Q1 2026 Beauty and Personal Care best-sellers per BeautyMatter, and continues to appear in summer 2026 viral TikTok product roundups — confirmed in TMZ's July 13 article on viral Amazon finds. The product's core appeal of absorbing blemish content overnight maintains steady demand, with back-to-school teen skincare purchasing adding a seasonal boost heading into August.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — pimple patch category is well-established; demand is largely steady-state with a mild back-to-school seasonal uplift through August.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://beautymatter.com/articles/amazon-q1-2026-top-25-beauty-and-personal-care-products">beautymatter.com</a> (Q1 2026), <a href="https://www.tmz.com/2026/07/13/viral-tiktok-products-on-amazon/">tmz.com</a> (July 13, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Premier Protein Shake</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 6/8)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Premier Protein Shake was confirmed as the #1 biggest seller during Prime Day 2026 by Numerator tracking data — the same position it held in Prime Day 2025 — driven by the GLP-1 drug adoption wave. The 12-pack with 30g protein, no added sugar, and 160 calories aligns precisely with the eating profile recommended for patients on GLP-1 medications such as Wegovy and Zepbound. Multiple industry analysts describe this as a structural, durable shift in food and beverage demand, not a promotional blip.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — GLP-1 adoption is expanding; protein shake demand driven by dietary restructuring rather than a passing fitness trend.</div>
+      <div class="card-meta">Price not confirmed (12-pack)</div>
+      <div class="card-sources">Sources: <a href="https://www.numerator.com/prime-day/">numerator.com</a> (June 2026), <a href="https://www.foodnavigator-usa.com/Article/2026/07/01/amazon-prime-day-2026-glp-1-protein-shakes-lead-sales-as-shopper-spending-drops/">foodnavigator-usa.com</a> (July 1, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Liquid I.V. Hydration Multiplier</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 5/8)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Liquid I.V. moved from #3 on Prime Day Day 1 to #2 by Day 2 per DigitalCommerce360's July 15, 2026 report, making it the fourth consecutive year in which Liquid I.V. appeared as a top-2 seller during Amazon's summer Prime Day event. Summer heat and growing consumer familiarity with electrolyte-based hydration are the primary structural drivers, and the product's annual Prime Day placement now functions as a brand awareness event that sustains demand through the rest of summer.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — functional hydration category is expanding; four consecutive Prime Day placements confirm a durable consumer habit, not a promotional artifact.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.digitalcommerce360.com/2026/07/15/liquid-iv-amazon-prime-day-sellers-list-2026/amp/">digitalcommerce360.com</a> (July 15, 2026), <a href="https://www.numerator.com/prime-day/">numerator.com</a> (June 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Purina Pro Plan Sensitive Skin &amp; Stomach Dog Food</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 3/8)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Purina Pro Plan Sensitive Skin &amp; Stomach is the top-performing product across all Amazon pet supplies by monthly revenue at an estimated $3.43M per gripsintelligence.com and wiseppc.com sales data — the #1 earner in the entire category. Veterinarian recommendations and strong brand loyalty among premium dog food buyers drive consistent repeat purchases, with the "sensitive formula" positioning resonating with the growing segment of pet owners managing dogs with dietary sensitivities.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — premium pet food is recession-resilient with a loyal, subscription-oriented customer base; no significant seasonal variation expected.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://wiseppc.com/blog/amazon-best-selling-pet-products/">wiseppc.com</a> (2026), <a href="https://gripsintelligence.com/insights/top-products/amazon-com/animal-pet-supplies">gripsintelligence.com</a> (2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">INABA Churu Lickable Cat Treats</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2/8)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">INABA Churu Lickable Cat Treats remain a standout in Amazon's cat treat category; the squeezable, lickable purée format creates an interactive feeding ritual that drives unusually high repurchase rates compared to conventional dry treats. Confirmed as a top cat treat seller by both wiseppc.com's revenue analysis and amzscout.net's best-selling pet products list for 2026, the product has appeared consistently in this archive since early July.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — the lickable treat format has expanded the cat treat category; format loyalty and subscription purchasing keep buyers returning.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://wiseppc.com/blog/amazon-best-selling-pet-products/">wiseppc.com</a> (2026), <a href="https://amzscout.net/blog/best-selling-pet-products/">amzscout.net</a> (2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">JanSport Classic Backpack</h3>
+        <span class="pill" style="background:#0891b2">Office Products</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 3/8)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">JanSport is listed as a top-clicked brand in Amazon's back-to-school and outdoor categories for 2026, confirmed across NBC Select's best Amazon back-to-school supplies guide and multiple deal roundups. Amazon is offering up to 60% off backpacks as part of back-to-school sales, with the JanSport Classic — the most enduring K-12 backpack design — at the core of the seasonal surge. This is its fourth consecutive appearance in this archive, making it a durable BTS category anchor.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — back-to-school demand peaks in July-August; typically moderates once school year begins in late August.</div>
+      <div class="card-meta">Price not confirmed (up to 60% off noted in BTS sales)</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com/select/shopping/back-to-school-supplies-amazon-rcna166014">nbcnews.com/select</a> (2026), <a href="https://passionatepennypincher.com/back-school-sales/">passionatepennypincher.com</a> (July 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Mead Composition Books (12-Pack)</h3>
+        <span class="pill" style="background:#0891b2">Office Products</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2/8)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Mead Composition Books 12-pack is a perennial July-August Amazon bestseller confirmed in NBC Select's roundup of best Amazon back-to-school supplies and deal sites for 2026. The classic speckled cover composition notebook remains standard issue in K-12 classrooms, and bulk 12-pack purchasing for classroom supplies is a reliable signal that the teacher-driven BTS bulk-buy wave has begun — typically starting 4-6 weeks before school starts.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — peak demand is July-August; sharp moderation expected post-September once classrooms are stocked.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com/select/shopping/back-to-school-supplies-amazon-rcna166014">nbcnews.com/select</a> (2026), <a href="https://tinybeans.com/the-highest-rated-back-to-school-supplies-on-amazon/">tinybeans.com</a> (2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">DREO Tower Fan (2026 Upgraded DC Motor)</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 1/8)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The DREO Tower Fan with upgraded DC motor appears in Amazon's Household Fans best-seller listings and was referenced in NBC Select's summer 2026 cooling products roundup alongside other DREO cooling appliances. DREO has built category dominance across multiple cooling product lines — portable ACs, evaporative coolers, and now tower fans — suggesting systematic shelf-space capture rather than single-product fluke. Amazon's overall portable AC sales are cited as up significantly year-over-year due to persistent summer heat conditions.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — summer heat wave is driving peak demand; will moderate with fall temperature drops, typically starting in September.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Best-Sellers-Home-Kitchen-Household-Fans/zgbs/home-garden/3737601">amazon.com best sellers household fans</a> (July 2026), <a href="https://www.nbcnews.com/select/shopping/amazon-cooling-essentials-shark-lg-levoit-deal-of-the-day-2026-rcna587685">nbcnews.com/select</a> (July 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Dreame L60 Ultra PE Robot Vacuum &amp; Mop</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2/8)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Dreame L60 Ultra PE was included in Vacuum Wars' Top 20 Best Robot Vacuums of 2026 list — which noted July 2026 brought "meaningful shifts across the robot vacuum market as competition continued to intensify" — and appears in Amazon's robotic vacuum best-seller category. The premium robot vacuum segment has expanded as models now offer 20,000–30,000Pa suction, self-emptying bases, and combined vacuum/mop capabilities at prices previously found only at the top tier.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — robot vacuum market growing as flagship features cascade to mid-tier models; home automation trend is durable and not strictly seasonal.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://vacuumwars.com/vacuum-wars-best-robot-vacuums/">vacuumwars.com</a> (July 2026), <a href="https://saltandumber.com/best-robot-vacuum-cleaner-amazon/">saltandumber.com</a> (2026)</div>
+    </div>
+
+  </div>
+
+  <!-- 5. Category breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="100%" height="282" viewBox="0 0 700 282">
+      <text x="0" y="22" font-size="13" fill="#1e293b">Electronics</text>
+      <rect x="160" y="8" width="480" height="18" rx="4" fill="#2563eb"/>
+      <text x="648" y="22" font-size="12" fill="#475569">4</text>
+
+      <text x="0" y="56" font-size="13" fill="#1e293b">Beauty &amp; Personal Care</text>
+      <rect x="160" y="42" width="360" height="18" rx="4" fill="#db2777"/>
+      <text x="528" y="56" font-size="12" fill="#475569">3</text>
+
+      <text x="0" y="90" font-size="13" fill="#1e293b">Pet Supplies</text>
+      <rect x="160" y="76" width="360" height="18" rx="4" fill="#92400e"/>
+      <text x="528" y="90" font-size="12" fill="#475569">3</text>
+
+      <text x="0" y="124" font-size="13" fill="#1e293b">Office Products</text>
+      <rect x="160" y="110" width="360" height="18" rx="4" fill="#0891b2"/>
+      <text x="528" y="124" font-size="12" fill="#475569">3</text>
+
+      <text x="0" y="158" font-size="13" fill="#1e293b">Home &amp; Kitchen</text>
+      <rect x="160" y="144" width="240" height="18" rx="4" fill="#16a34a"/>
+      <text x="408" y="158" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="192" font-size="13" fill="#1e293b">Grocery</text>
+      <rect x="160" y="178" width="240" height="18" rx="4" fill="#65a30d"/>
+      <text x="408" y="192" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="226" font-size="13" fill="#1e293b">Sports &amp; Outdoors</text>
+      <rect x="160" y="212" width="240" height="18" rx="4" fill="#ea580c"/>
+      <text x="408" y="226" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="260" font-size="13" fill="#1e293b">Toys &amp; Games</text>
+      <rect x="160" y="246" width="240" height="18" rx="4" fill="#f59e0b"/>
+      <text x="408" y="260" font-size="12" fill="#475569">2</text>
+    </svg>
+  </div>
+
+  <!-- 6. New entrants spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <ul>
+      <li><strong>Apple iPad 11-inch (A16)</strong> — Marked as Amazon Best Seller at $319, below Apple Store pricing; back-to-school timing and AI-linked productivity features are driving demand from students and upgrade buyers simultaneously.</li>
+      <li><strong>eos Shea Better Vanilla Cashmere Body Lotion</strong> — 100,000+ monthly sales and #2 in Amazon's Q1 2026 beauty rankings; a lightweight, fragrance-forward formula with high repeat-purchase rates anchored in summer skincare routines.</li>
+      <li><strong>Purina FortiFlora Probiotics for Dogs</strong> — The #1 veterinarian-recommended dog probiotic; $3.41M estimated monthly revenue makes it the #2 revenue earner across all Amazon pet supply categories, signaling the humanization of pet wellness.</li>
+      <li><strong>BIC Xtra-Smooth Mechanical Pencils</strong> — #1-selling mechanical pencil brand in the U.S.; 55% off multi-packs driving high-volume bulk back-to-school purchases in July's prime shopping window.</li>
+      <li><strong>JOOLA Perseus Pickleball Paddle</strong> — Top-selling paddle by revenue on Amazon; part of pickleball's 55% Amazon revenue surge in 2025 that is continuing into 2026 as beginner players upgrade to competitive equipment.</li>
+      <li><strong>Owala FreeSip Insulated Water Bottle</strong> — TikTok-viral summer hydration staple challenging Stanley's category dominance; dual-drinking design and leakproof lid driving strong repeat purchases from outdoor-active consumers.</li>
+      <li><strong>Mattel Toy Story 5 Action Figures</strong> — Riding the theatrical release of <em>Toy Story 5</em> (opened June 19); featured as a top Prime Day kids' pick and approaching peak post-theatrical merchandise demand window.</li>
+      <li><strong>Crayola Crayons Bulk (24 Packs)</strong> — Jumped from rank #1,254 to #13 in Toys &amp; Games in under a week at $25.50; back-to-school bulk-buy surge beginning earlier than typical this year.</li>
+    </ul>
+  </div>
+
+  <!-- 7. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p>This report is produced via public web research only — no paid data APIs. Findings were gathered through WebSearch and WebFetch across 30+ distinct source domains, including search snippet data from numerator.com, digitalcommerce360.com, foodnavigator-usa.com, beautymatter.com, wiseppc.com, gripsintelligence.com, thedinkpickleball.com, thetoymatchmaker.com, macworld.com, gizmodo.com, asinsight.com, vacuumwars.com, amzscout.net, accio.com, and editorial/retail press coverage from chainstoreage.com, storebrands.com, emarketer.com, grocerydive.com, variety.com, abc7.com, tmz.com, nbcnews.com, passionatepennypincher.com, tinybeans.com, theeverymom.com, and saltandumber.com.</p>
+    <p><strong>Verification rule:</strong> VERIFIED = confirmed by at least 2 independent sources. All 21 products in this report meet that threshold. No LOW-CONFIDENCE items were included today.</p>
+    <p><strong>Degraded-mode note:</strong> Amazon.com direct pages — including Movers &amp; Shakers, Best Sellers (all categories), and aboutamazon.com — returned HTTP 403 Forbidden on every fetch attempt throughout this session, consistent with access patterns documented in every report since June 22. All product discovery and corroboration relies on secondary press coverage, consumer data aggregators, and retail analytics publishers rather than direct Amazon page access.</p>
+    <p><strong>Anti-fabrication note:</strong> No specific sales rank, unit count, revenue figure, or percentage was included in this report unless it appeared verbatim in a cited source's search snippet or fetched content. Prices and ratings cited (AirPods Pro 3 at $225/4.5★; Echo Dot at $49.99/4.7★/194,700+ ratings; iPad A16 at $319; JOOLA Perseus at $197.95; eos Lotion at 100K+ units/mo; Crayola Bulk at $25.50/#1254→#13 rank; FortiFlora at $3.41M/mo revenue; Pro Plan at $3.43M/mo revenue) were each confirmed in the cited source's search snippet before inclusion.</p>
+  </div>
+
+  <!-- 8. Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../July13_2026/">July 13</a></span>
+  </div>
+
+</div>
+</body>
+</html>

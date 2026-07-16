@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-13",
+  "last_updated": "2026-07-16",
   "window_days": 14,
   "products": [
     {
@@ -7,24 +7,24 @@
       "name": "Apple AirPods Pro 3",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-06-17", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-13"]
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-06-17", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-13", "2026-07-16"]
     },
     {
       "key": "apple-watch-series-11",
       "name": "Apple Watch Series 11",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-06-17", "2026-06-22", "2026-06-25", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13"]
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-06-17", "2026-06-22", "2026-06-25", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16"]
     },
     {
       "key": "medicube-zero-pore-pad-2",
       "name": "Medicube Zero Pore Pad 2.0",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-06-17", "2026-06-22", "2026-07-02", "2026-07-13"]
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-06-17", "2026-06-22", "2026-07-02", "2026-07-13", "2026-07-16"]
     },
     {
       "key": "pampers-swaddlers-size-5",
@@ -47,40 +47,24 @@
       "name": "Hero Cosmetics Mighty Patch",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-06-22", "2026-07-02"]
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-06-22", "2026-07-02", "2026-07-16"]
     },
     {
       "key": "premier-protein-shake",
       "name": "Premier Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-06-22", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13"]
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-06-22", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16"]
     },
     {
       "key": "purina-pro-plan-sensitive-skin-dry-dog-food",
       "name": "Purina Pro Plan Sensitive Skin & Stomach Dry Dog Food",
       "category": "Pet Supplies",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-06-22", "2026-07-09", "2026-07-13"]
-    },
-    {
-      "key": "blink-outdoor-4-camera",
-      "name": "Blink Outdoor 4 Wireless Security Camera",
-      "category": "Electronics",
-      "first_seen": "2026-06-25",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-25", "2026-06-29"]
-    },
-    {
-      "key": "owlet-dream-duo-baby-monitor",
-      "name": "Owlet Dream Duo (Gen 3) Smart Baby Monitor",
-      "category": "Baby",
-      "first_seen": "2026-06-25",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-25", "2026-06-29"]
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-06-22", "2026-07-09", "2026-07-13", "2026-07-16"]
     },
     {
       "key": "toniebox-2-audio-player",
@@ -95,8 +79,8 @@
       "name": "Liquid I.V. Hydration Multiplier",
       "category": "Grocery",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13"]
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16"]
     },
     {
       "key": "temptations-cat-treats",
@@ -113,30 +97,6 @@
       "first_seen": "2026-06-29",
       "last_seen": "2026-07-02",
       "seen_dates": ["2026-06-29", "2026-07-02"]
-    },
-    {
-      "key": "stanley-quencher-h2-tumbler",
-      "name": "Stanley Quencher H2.0 Insulated Tumbler",
-      "category": "Sports & Outdoors",
-      "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-29"]
-    },
-    {
-      "key": "kpop-demon-hunters-huntrix-merch",
-      "name": "KPop Demon Hunters HUNTR/X Merchandise",
-      "category": "Toys & Games",
-      "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-29"]
-    },
-    {
-      "key": "levis-prime-day-denim",
-      "name": "Levi's Denim (Prime Day markdowns)",
-      "category": "Apparel",
-      "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-29"]
     },
     {
       "key": "cascade-platinum-dishwasher-pods",
@@ -287,8 +247,8 @@
       "name": "JanSport Classic Backpack",
       "category": "Office Products",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13"]
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16"]
     },
     {
       "key": "silk-sleep-bonnets",
@@ -303,8 +263,8 @@
       "name": "Amazon Echo Dot (5th Generation)",
       "category": "Electronics",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-09",
-      "seen_dates": ["2026-07-09"]
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-07-09", "2026-07-16"]
     },
     {
       "key": "kindle-paperwhite-2026",
@@ -319,8 +279,8 @@
       "name": "Dreame L60 Ultra PE Robot Vacuum & Mop",
       "category": "Home & Kitchen",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-07-09", "2026-07-13"]
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16"]
     },
     {
       "key": "dreo-portable-air-conditioner-515s",
@@ -343,16 +303,16 @@
       "name": "Mead Composition Books (12-pack)",
       "category": "Office Products",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-07-09", "2026-07-13"]
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16"]
     },
     {
       "key": "inaba-churu-cat-treats",
       "name": "INABA Churu Lickable Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-07-09", "2026-07-13"]
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16"]
     },
     {
       "key": "crayola-back-to-school-art-set",
@@ -383,8 +343,8 @@
       "name": "DREO Tower Fan (2026 Upgraded DC Motor)",
       "category": "Home & Kitchen",
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-07-13"]
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-07-13", "2026-07-16"]
     },
     {
       "key": "samsung-galaxy-tab-a11",
@@ -425,6 +385,70 @@
       "first_seen": "2026-07-13",
       "last_seen": "2026-07-13",
       "seen_dates": ["2026-07-13"]
+    },
+    {
+      "key": "apple-ipad-11-a16",
+      "name": "Apple iPad 11-inch (A16)",
+      "category": "Electronics",
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-07-16"]
+    },
+    {
+      "key": "eos-shea-better-vanilla-cashmere-lotion",
+      "name": "eos Shea Better Vanilla Cashmere Body Lotion",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-07-16"]
+    },
+    {
+      "key": "purina-fortiflora-probiotics-dogs",
+      "name": "Purina FortiFlora Probiotics for Dogs",
+      "category": "Pet Supplies",
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-07-16"]
+    },
+    {
+      "key": "bic-xtra-smooth-mechanical-pencils",
+      "name": "BIC Xtra-Smooth Mechanical Pencils",
+      "category": "Office Products",
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-07-16"]
+    },
+    {
+      "key": "joola-perseus-pickleball-paddle",
+      "name": "JOOLA Perseus Pickleball Paddle",
+      "category": "Sports & Outdoors",
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-07-16"]
+    },
+    {
+      "key": "owala-freesip-water-bottle",
+      "name": "Owala FreeSip Insulated Water Bottle",
+      "category": "Sports & Outdoors",
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-07-16"]
+    },
+    {
+      "key": "mattel-toy-story-5-action-figures",
+      "name": "Mattel Toy Story 5 Action Figures",
+      "category": "Toys & Games",
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-07-16"]
+    },
+    {
+      "key": "crayola-crayons-bulk",
+      "name": "Crayola Crayons Bulk (24 Packs)",
+      "category": "Toys & Games",
+      "first_seen": "2026-07-16",
+      "last_seen": "2026-07-16",
+      "seen_dates": ["2026-07-16"]
     }
   ]
 }
