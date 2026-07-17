@@ -1,17 +1,97 @@
 {
-  "last_updated": "2026-07-13",
-  "last_processed_sibling_report": "July13_2026",
+  "last_updated": "2026-07-17",
+  "last_processed_sibling_report": "July16_2026",
   "window_days": 14,
   "products": [
     {
+      "key": "crayola-crayons-bulk-24",
+      "name": "Crayola Crayons Bulk (24 Packs)",
+      "category": "Toys & Games",
+      "amazon_price_band": "$25.50",
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-07-17"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "eos-shea-better-body-lotion",
+      "name": "eos Shea Better Vanilla Cashmere Body Lotion",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-07-17"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "purina-fortiflora-probiotics",
+      "name": "Purina FortiFlora Probiotics for Dogs",
+      "category": "Pet Supplies",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-07-17"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "hero-mighty-patch",
+      "name": "Hero Cosmetics Mighty Patch",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-07-17"],
+      "alternatives_count": 1
+    },
+    {
+      "key": "bic-mechanical-pencils",
+      "name": "BIC Xtra-Smooth Mechanical Pencils",
+      "category": "Office Products",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-07-17"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "owala-freesip-water-bottle",
+      "name": "Owala FreeSip Insulated Water Bottle",
+      "category": "Sports & Outdoors",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-07-17"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "mattel-toy-story-5",
+      "name": "Mattel Toy Story 5 Action Figures",
+      "category": "Toys & Games",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-07-17"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "joola-perseus-pickleball-paddle",
+      "name": "JOOLA Perseus Pickleball Paddle",
+      "category": "Sports & Outdoors",
+      "amazon_price_band": "$197.95",
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-07-17"],
+      "alternatives_count": 3
+    },
+    {
       "key": "dreo-tower-fan",
-      "name": "DREO Tower Fan (Model CF714S)",
+      "name": "DREO Tower Fan (2026 Upgraded DC Motor)",
       "category": "Home & Kitchen",
       "amazon_price_band": "~$60",
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-07-13"],
-      "alternatives_count": 2
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-07-13", "2026-07-17"],
+      "alternatives_count": 1
     },
     {
       "key": "orgain-organic-vegan-protein",
@@ -29,9 +109,9 @@
       "category": "Beauty & Personal Care",
       "amazon_price_band": "~$35/70 pads",
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-07-13"],
-      "alternatives_count": 2
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-07-13", "2026-07-17"],
+      "alternatives_count": 1
     },
     {
       "key": "pampers-swaddlers",
@@ -99,8 +179,8 @@
       "category": "Grocery",
       "amazon_price_band": "~$2.50–$2.90/shake (est. $30–35/12-pack)",
       "first_seen": "2026-06-23",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-06-23", "2026-06-29", "2026-07-07", "2026-07-09", "2026-07-13"],
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-06-23", "2026-06-29", "2026-07-07", "2026-07-09", "2026-07-13", "2026-07-17"],
       "alternatives_count": 2
     },
     {
@@ -109,9 +189,9 @@
       "category": "Grocery",
       "amazon_price_band": "~$1.00–$1.25/packet",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-06-29", "2026-07-07", "2026-07-09", "2026-07-13"],
-      "alternatives_count": 3
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-06-29", "2026-07-07", "2026-07-09", "2026-07-13", "2026-07-17"],
+      "alternatives_count": 2
     },
     {
       "key": "optimum-nutrition-gold-standard-whey",
@@ -125,22 +205,22 @@
     },
     {
       "key": "mead-composition-books",
-      "name": "Mead Composition Books (6-pack)",
+      "name": "Mead Composition Books (12-Pack)",
       "category": "Office Products",
-      "amazon_price_band": "$29.97 (6-pack)",
+      "amazon_price_band": "price not confirmed",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-07-09", "2026-07-13"],
-      "alternatives_count": 3
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-17"],
+      "alternatives_count": 2
     },
     {
       "key": "purina-pro-plan-dry-dog-food",
-      "name": "Purina Pro Plan Dry Dog Food",
+      "name": "Purina Pro Plan Sensitive Skin & Stomach Dog Food",
       "category": "Pet Supplies",
       "amazon_price_band": "price not confirmed",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-07-09", "2026-07-13"],
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-17"],
       "alternatives_count": 2
     },
     {
@@ -149,9 +229,9 @@
       "category": "Pet Supplies",
       "amazon_price_band": "price not confirmed",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-07-09", "2026-07-13"],
-      "alternatives_count": 2
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-17"],
+      "alternatives_count": 1
     },
     {
       "key": "jansport-classic-backpack",
@@ -159,19 +239,19 @@
       "category": "Office Products",
       "amazon_price_band": "under $15",
       "first_seen": "2026-07-07",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-07-07", "2026-07-09", "2026-07-13"],
-      "alternatives_count": 3
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-07-07", "2026-07-09", "2026-07-13", "2026-07-17"],
+      "alternatives_count": 2
     },
     {
       "key": "dreame-l60-robot-vacuum",
-      "name": "Dreame L60 Robot Vacuum & Mop",
+      "name": "Dreame L60 Ultra PE Robot Vacuum & Mop",
       "category": "Home & Kitchen",
       "amazon_price_band": "price not confirmed",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-07-09", "2026-07-13"],
-      "alternatives_count": 2
+      "last_seen": "2026-07-17",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-17"],
+      "alternatives_count": 1
     },
     {
       "key": "sleep-mouth-tape",
@@ -244,16 +324,6 @@
       "alternatives_count": 2
     },
     {
-      "key": "toniebox-2-audio-player-bundles",
-      "name": "Toniebox 2 Audio Player Bundles",
-      "category": "Toys & Games",
-      "amazon_price_band": "$129.99, down from $209.99",
-      "first_seen": "2026-06-25",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-25", "2026-06-29"],
-      "alternatives_count": 1
-    },
-    {
       "key": "temptations-cat-treats",
       "name": "Temptations Classic Cat Treats",
       "category": "Pet Supplies",
@@ -262,76 +332,6 @@
       "last_seen": "2026-07-07",
       "seen_dates": ["2026-06-29", "2026-07-07"],
       "alternatives_count": 3
-    },
-    {
-      "key": "kpop-demon-hunters-huntrx-merchandise",
-      "name": "KPop Demon Hunters HUNTR/X Merchandise",
-      "category": "Toys & Games",
-      "amazon_price_band": "apparel from under $20; puzzle price not confirmed",
-      "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-29"],
-      "alternatives_count": 3
-    },
-    {
-      "key": "crest-3d-whitestrips-professional-effects",
-      "name": "Crest 3D Whitestrips Professional Effects",
-      "category": "Beauty & Personal Care",
-      "amazon_price_band": "35% off (exact dollar price not confirmed)",
-      "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-29"],
-      "alternatives_count": 0
-    },
-    {
-      "key": "levis-denim",
-      "name": "Levi's Denim (Prime Day markdowns)",
-      "category": "Apparel",
-      "amazon_price_band": "up to 65% off (exact dollar price not confirmed)",
-      "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-29"],
-      "alternatives_count": 3
-    },
-    {
-      "key": "stanley-quencher-h2-tumbler",
-      "name": "Stanley Quencher H2.0 Insulated Tumbler",
-      "category": "Sports & Outdoors",
-      "amazon_price_band": "~$20, down from $40",
-      "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-29"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "cascade-platinum-plus-dishwasher-pods",
-      "name": "Cascade Platinum Plus Dishwasher Pods",
-      "category": "Health & Household",
-      "amazon_price_band": "$18.99 for 62 pods, down from $24.99",
-      "first_seen": "2026-06-29",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-29"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "owlet-dream-duo-baby-monitor",
-      "name": "Owlet Dream Duo (Gen 3) Smart Baby Monitor",
-      "category": "Baby",
-      "amazon_price_band": "$256.49, down from $379.99",
-      "first_seen": "2026-06-25",
-      "last_seen": "2026-06-29",
-      "seen_dates": ["2026-06-25", "2026-06-29"],
-      "alternatives_count": 3
-    },
-    {
-      "key": "shark-nv356e-upright-vacuum",
-      "name": "Shark NV356E Navigator Lift-Away Upright Vacuum",
-      "category": "Home & Kitchen",
-      "amazon_price_band": "~50% off list during July 4th sale",
-      "first_seen": "2026-06-29",
-      "last_seen": "2026-07-07",
-      "seen_dates": ["2026-06-29", "2026-07-07"],
-      "alternatives_count": 2
     },
     {
       "key": "the-ordinary-niacinamide-serum",

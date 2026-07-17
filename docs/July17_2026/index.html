@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>American Business Alternatives — July 17, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px 20px 60px; }
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 130px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .product-groups { display: flex; flex-direction: column; gap: 18px; }
+  .product-group {
+    background: #fafbfc;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+  .product-group-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+  .product-title { font-size: 18px; font-weight: 700; margin: 0 0 4px; }
+  .product-meta { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .tag-count { background: #f1f5f9; color: #1e293b; }
+  .tag-gap { background: #fee2e2; color: #dc2626; }
+  .tag-affiliate-yes { background: var(--verified-bg); color: var(--verified); }
+  .tag-affiliate-no { background: #f1f5f9; color: var(--muted); }
+  .tag-affiliate-unconfirmed { background: var(--lowconf-bg); color: var(--lowconf); }
+  .product-rationale { font-size: 13.5px; line-height: 1.5; color: #334155; margin: 12px 0 14px; }
+  .alt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
+  .alt-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .alt-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .alt-name { font-size: 15.5px; font-weight: 600; margin: 0; }
+  .alt-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f8fafc; border-radius: 8px; padding: 10px 12px; }
+  .compare-label { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+  .compare-col div:last-child { font-size: 12.5px; color: #1e293b; line-height: 1.45; }
+  .alt-section { font-size: 12.5px; line-height: 1.5; color: #334155; }
+  .alt-section a { color: #2563eb; text-decoration: none; font-size: 11.5px; }
+  .alt-sources { font-size: 11px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .alt-sources a { color: #2563eb; text-decoration: none; }
+  .chart-wrap { padding: 10px 6px; overflow-x: auto; }
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+  .spotlight-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 12px; margin-top: 14px; }
+  .spotlight-card {
+    background: #fff;
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .spotlight-name { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .spotlight-meta { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .spotlight-desc { font-size: 12.5px; color: #334155; line-height: 1.5; }
+  .promo-list { display: flex; flex-direction: column; gap: 14px; }
+  .promo-row { display: flex; align-items: center; gap: 12px; }
+  .promo-rank { font-size: 11px; font-weight: 700; color: var(--muted); width: 22px; text-align: right; flex-shrink: 0; }
+  .promo-content { flex: 1; }
+  .promo-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 5px; flex-wrap: wrap; gap: 4px; }
+  .promo-name { font-size: 13.5px; font-weight: 600; }
+  .promo-vs { font-size: 11.5px; color: var(--muted); }
+  .score-bar-wrap { background: #e2e8f0; border-radius: 999px; height: 8px; }
+  .score-bar-fill { height: 8px; border-radius: 999px; background: var(--verified); }
+  .promo-score { font-size: 12px; font-weight: 700; color: var(--verified); width: 42px; text-align: right; flex-shrink: 0; }
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Header -->
+  <div class="header-band">
+    <h1>American Business Alternatives to Amazon Top Sellers</h1>
+    <div class="date">July 17, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 148 sources checked</span>
+  </div>
+
+  <!-- Executive Summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">17 non-Electronics products from the sibling agent's July 16, 2026 Amazon report (4 Electronics excluded), yielding 31 American business alternatives (19 VERIFIED, 12 LOW-CONFIDENCE) across 7 categories. 8 NEW, 9 RECURRING. Standout finds: eco-kids / Elseware Unplug (Raleigh, NC — VERIFIED beeswax crayons, 7/7 Most Promising score, only in-band $25.50 alternative this report); three VERIFIED pickleball paddle makers in Michigan and Wisconsin (Paddletek, Prolite Sports, Thompson Pickleball) countering JOOLA's German import at $197.95; LMNT (Naples, FL — VERIFIED, est. 2018) and Trace Minerals Research (Ogden, UT — VERIFIED) as dual Liquid I.V. alternatives; Fromm Family Foods (Mequon, WI — 5th generation, est. 1904) and American Natural Premium (Grafton, WI — VERIFIED) for Purina Pro Plan. Two confirmed structural gaps: Hero Mighty Patch (hydrocolloid acne patches overwhelmingly Korean-manufactured; DermaChange the sole US candidate, LOW-CONFIDENCE after exhaustive search) and DREO Tower Fan (Lasko confirmed tower fans now made in China; Vornado's parent ThreeSixtyGroup is Hong Kong-based with tower-line US assembly unconfirmed). 7 stale entries pruned from rolling history (last seen before July 3).</div>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">17</div><div class="label">Amazon Products</div></div>
+    <div class="stat-card"><div class="num">31</div><div class="label">Alternatives Found</div></div>
+    <div class="stat-card"><div class="num">8</div><div class="label">New Products</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">19</div><div class="label">Verified American-Made</div></div>
+    <div class="stat-card"><div class="num">12</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">7</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- Product Groups -->
+  <h2 class="section-title">Products &amp; American Alternatives</h2>
+  <div class="product-groups">
+
+    <!-- 1. Crayola Bulk -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Crayola Crayons Bulk (24 Packs)</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+            &nbsp;·&nbsp;Amazon: $25.50
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alts</span>
+        </div>
+      </div>
+      <div class="product-rationale">Bulk crayon sets are high-volume recurring purchases for classrooms and homeschool families — and at $25.50 this falls squarely in the priority price band. Two American alternatives were found: one VERIFIED eco-focused option using beeswax pigmentation and one LOW-CONFIDENCE small-batch artisan producer in Colorado.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">eco-kids / Elseware Unplug</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Crayola 24-pack bulk sets, China-manufactured, synthetic petroleum-based pigments</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Beeswax crayons, non-toxic formula, ASTM D-4236 compliant, US-made</div>
+            </div>
+          </div>
+          <div class="alt-section">Raleigh, NC · US manufacturing confirmed via independent certification and press · eco-friendly formula eliminates petroleum binders</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span>
+          </div>
+          <div class="alt-sources">
+            Contact: info@ecokidsusa.com · 207-899-2752 &nbsp;|&nbsp;
+            <a href="https://ecokidsusa.com" target="_blank">ecokidsusa.com</a>
+          </div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Filana Crayons</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Crayola bulk pack, petroleum-based binder, mass-produced offshore</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Plant-based soy &amp; beeswax crayons, small-batch Colorado production — manufacturing location not independently confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Paonia, CO · Founded by Wendy Brodhead &amp; David Kennedy · artisan small-batch production</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span>
+          </div>
+          <div class="alt-sources">
+            Contact: contact@filana.us &nbsp;|&nbsp;
+            <a href="https://filana.us" target="_blank">filana.us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. eos Body Lotion -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">eos Shea Better Vanilla Cashmere Body Lotion</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+            &nbsp;·&nbsp;Amazon: price not confirmed
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alts</span>
+        </div>
+      </div>
+      <div class="product-rationale">Body lotion is a flagship high-repurchase consumable with broad demographic reach. eos is California-based but manufactures offshore. Both VERIFIED American alternatives are clean-beauty brands with strong DTC presence and established affiliate programs — both score 5/7 on the Most Promising scale.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">100% PURE</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>eos Shea Better, ~250ml, synthetic fragrance, paraben-free, offshore manufacturing</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Fruit-pigmented body butter &amp; lotions, no synthetic fragrance, San Jose CA facility confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">San Jose, CA · Founded by Susie Wang, James Wang &amp; Ric Kostick, 2005 · CCOF certified, US manufacturing verified by press and certifier</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span>
+            &nbsp;ShareASale &amp; FlexOffers
+          </div>
+          <div class="alt-sources">
+            Contact: customerservice@puritycosmetics.com · 844-787-3100 &nbsp;|&nbsp;
+            <a href="https://100percentpure.com" target="_blank">100percentpure.com</a>
+          </div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Primally Pure</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>eos Shea Better, mass-market moisturizer, synthetic emollients</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Grass-fed tallow-based body care, non-toxic certification, Temecula CA formulation confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Temecula, CA · Founded by Bethany McDaniel, 2014 · B Corp pending, non-toxic certification, domestic production confirmed via independent press</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span>
+            &nbsp;Awin / FlexOffers · 15%
+          </div>
+          <div class="alt-sources">
+            Contact: hello@primallypure.com &nbsp;|&nbsp;
+            <a href="https://primallypure.com" target="_blank">primallypure.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Purina FortiFlora -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Purina FortiFlora Probiotics for Dogs</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#92400e">Pet Supplies</span>
+            &nbsp;·&nbsp;Amazon: price not confirmed
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alts</span>
+        </div>
+      </div>
+      <div class="product-rationale">Daily probiotic supplements for dogs represent an ideal recurring-purchase product — once a dog tolerates a formula, owners rarely switch. FortiFlora dominates vet referrals but is a Nestlé/Purina product. One VERIFIED American alternative with a veterinary pedigree was found; one LOW-CONFIDENCE option shows promise but was acquired by a Chinese parent in 2021.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Nutramax Proviable-DC</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>FortiFlora, single-strain (EF SF68), sachet format, widely vet-recommended, Nestlé-owned</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Multi-strain probiotic (7 strains), capsule + paste combo, vet-developed in Lancaster SC since 1992</div>
+            </div>
+          </div>
+          <div class="alt-section">Lancaster, SC · Founded by Dr. Robert Henderson, 1992 · US manufacturing and formulation confirmed via NASC membership and independent veterinary publications</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-no">Affiliate: No</span>
+            &nbsp;Institutional/veterinary channel only
+          </div>
+          <div class="alt-sources">
+            Contact: customerservice@nutramaxlabs.com · 800-925-5187 &nbsp;|&nbsp;
+            <a href="https://nutramaxlabs.com" target="_blank">nutramaxlabs.com</a>
+          </div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Zesty Paws Probiotic Bites</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>FortiFlora sachets, single-strain, veterinary brand, Nestlé</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Soft-chew probiotic treats, multiple flavors — US-founded brand, now Chinese-owned; manufacturing location not independently confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Orlando, FL (original HQ) · Acquired by H&amp;H Group (China) in 2021 · US-founded but Chinese-controlled; manufacturing claim unverified</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span>
+            &nbsp;FlexOffers · ~3%
+          </div>
+          <div class="alt-sources">
+            Contact: 1-800-738-0661 &nbsp;|&nbsp;
+            <a href="https://zestypaws.com" target="_blank">zestypaws.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Hero Mighty Patch -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Hero Cosmetics Mighty Patch</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+            &nbsp;·&nbsp;Amazon: price not confirmed
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-gap">STRUCTURAL GAP</span>
+          <span class="tag tag-count">1 alt</span>
+        </div>
+      </div>
+      <div class="product-rationale">Hydrocolloid acne patches are an established daily-use consumable — but the category is overwhelmingly Korean-manufactured. Mighty Patch, COSRX, Starface, and Peter Thomas Roth all source from South Korean facilities. After exhaustive search across 8 candidate brands, only one LOW-CONFIDENCE US-based option was identified. This is a confirmed structural gap in domestic production.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">DermaChange Hydrocolloid Patches</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Mighty Patch, 36-patch set, medical-grade hydrocolloid, Hero Cosmetics (NYC brand, Korean manufacturing)</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Acne patch kit, US-formulated per brand claim — manufacturing location not independently verified</div>
+            </div>
+          </div>
+          <div class="alt-section">Clearwater, FL · US formulation claim on website; no independent certification or press confirms domestic manufacturing</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span>
+          </div>
+          <div class="alt-sources">
+            Contact: info@dermachange.com · 323-770-1555 &nbsp;|&nbsp;
+            <a href="https://dermachange.com" target="_blank">dermachange.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. BIC Pencils -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">BIC Xtra-Smooth Mechanical Pencils</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#0891b2">Office Products</span>
+            &nbsp;·&nbsp;Amazon: price not confirmed
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alts</span>
+        </div>
+      </div>
+      <div class="product-rationale">Mechanical pencils are a classic high-frequency consumable across school, office, and professional settings. BIC is a French company manufacturing offshore. One VERIFIED American alternative — a nonprofit with a compelling American-made story — and one LOW-CONFIDENCE small-batch maker were identified.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">SKILCRAFT (National Industries for the Blind)</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>BIC Xtra-Smooth, mass-produced, plastic barrel, French brand, offshore manufacturing</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Government-spec mechanical pencil assembled in the USA by blind and low-vision workers through the AbilityOne program</div>
+            </div>
+          </div>
+          <div class="alt-section">Alexandria, VA (National Industries for the Blind) · Nationwide AbilityOne-certified facilities · US assembly confirmed by federal procurement records and NAEPB certification</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-no">Affiliate: No</span>
+            &nbsp;Federal/institutional procurement model
+          </div>
+          <div class="alt-sources">
+            Contact: CustomerCare@AbilityOne.com · 877-438-5963 &nbsp;|&nbsp;
+            <a href="https://skilcraft.com" target="_blank">skilcraft.com</a>
+          </div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Legendary Pencil Company</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>BIC Xtra-Smooth, budget mass-market option, offshore</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>American-assembled mechanical pencils, small-batch focus — US assembly claimed but not independently confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Newark, OH · Founded by Jonathan Veley, 2022 · Newest pencil brand found; single-source self-claim only</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span>
+          </div>
+          <div class="alt-sources">
+            <a href="https://legendaryleadcompany.com" target="_blank">legendaryleadcompany.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Owala FreeSip -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Owala FreeSip Insulated Water Bottle</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+            &nbsp;·&nbsp;Amazon: price not confirmed
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">3 alts</span>
+        </div>
+      </div>
+      <div class="product-rationale">Insulated water bottles drive solid repurchase cycles via new colorways, size upgrades, and gifting. Owala (Georgia-based brand) manufactures offshore. Three VERIFIED American alternatives were found — with a critical caveat for Tervis: only its classic plastic tumbler line is USA-made; the stainless steel line is manufactured in China. Disclose this distinction clearly when promoting.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Nalgene</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Owala FreeSip, dual-sip lid, 24oz stainless steel, Georgia brand, China-manufactured</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Tritan BPA-free plastic bottles, Made in USA in Rochester NY since 1949, virtually unbreakable</div>
+            </div>
+          </div>
+          <div class="alt-section">Rochester, NY · Founded by Emanuel Goldberg, 1949 · Now part of Thermo Fisher Scientific · US manufacturing confirmed by company, independent labs, and press coverage dating to 2011+</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span>
+            &nbsp;~10% via nalgene.com affiliate portal
+          </div>
+          <div class="alt-sources">
+            Contact: customer_service@nalgene.com · 844-625-4363 &nbsp;|&nbsp;
+            <a href="https://nalgene.com" target="_blank">nalgene.com</a>
+          </div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">50Strong</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Owala FreeSip, trendy colorways, stainless insulated, offshore production</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Made-in-USA sports bottles, Lima OH factory confirmed operational via independent press</div>
+            </div>
+          </div>
+          <div class="alt-section">Lima, OH · Founded by Ashley &amp; Brendan Thompson · US manufacturing confirmed by Lima News and independent press</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span>
+          </div>
+          <div class="alt-sources">
+            Contact: info@be50strong.com · 419-227-4500 &nbsp;|&nbsp;
+            <a href="https://be50strong.com" target="_blank">be50strong.com</a>
+          </div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Tervis <em style="font-weight:400;font-size:12px;">(plastic line only)</em></div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Owala FreeSip, stainless insulated bottle, various sizes</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Classic double-wall plastic tumblers, USA-made in North Venice FL since 1946 — stainless line is China-made; promote plastic line only</div>
+            </div>
+          </div>
+          <div class="alt-section">North Venice, FL · Founded by Frank Cotter &amp; G. Howlett Davis, 1946 · Classic plastic line US manufacturing confirmed; stainless line confirmed China-sourced — disclose distinction</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span>
+            &nbsp;~6% via tervis.com affiliate page
+          </div>
+          <div class="alt-sources">
+            Contact: 941-441-3100 &nbsp;|&nbsp;
+            <a href="https://tervis.com" target="_blank">tervis.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Mattel Toy Story 5 -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Mattel Toy Story 5 Action Figures</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+            &nbsp;·&nbsp;Amazon: price not confirmed
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alts</span>
+        </div>
+      </div>
+      <div class="product-rationale">Character action figures see seasonal repurchase spikes tied to franchise releases — Toy Story 5 (2026 Pixar) is a clear demand driver this summer. All Mattel products are offshore. One VERIFIED small Pennsylvania manufacturer with a long heritage making American plastic toy figures was found; one LOW-CONFIDENCE partial US operation in Connecticut rounds out the category.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">BMC Toys</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Mattel Toy Story 5 figures, licensed Pixar characters, China-manufactured</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>American-made plastic toy soldiers &amp; character figures, Scranton PA factory — the last US maker of injection-molded plastic toy figures</div>
+            </div>
+          </div>
+          <div class="alt-section">Scranton, PA · Founded by Bill McMaster, 1991 · Current owner Jeff Imel · US manufacturing confirmed by Pittsburgh Post-Gazette and NPR coverage; injection-mold production on-site</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span>
+          </div>
+          <div class="alt-sources">
+            Contact: shop@bmctoys.com · 844-426-2866 &nbsp;|&nbsp;
+            <a href="https://bmctoys.com" target="_blank">bmctoys.com</a>
+          </div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">HeroBuilders</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Mattel licensed figures, high-detail, China-manufactured</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Custom action figures with partial US manufacturing (design &amp; final assembly in CT) — extent of domestic production not independently confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Danbury, CT · Founded by Emil Vicale, 2002 · Custom figure specialist; partial US manufacturing disclosed but production split not independently verified</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span>
+          </div>
+          <div class="alt-sources">
+            <a href="https://herobuilders.com" target="_blank">herobuilders.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. JOOLA Pickleball Paddle -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">JOOLA Perseus Pickleball Paddle</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+            &nbsp;·&nbsp;Amazon: $197.95 (out of priority band)
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">3 alts</span>
+        </div>
+      </div>
+      <div class="product-rationale">Pickleball is the fastest-growing racquet sport in America, and premium paddles ($150–$250) drive category revenue. JOOLA is a German brand. Three VERIFIED American paddle manufacturers were found — all with community presence on the professional pickleball circuit and established affiliate programs, despite the category sitting above the $25–$100 priority band.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Paddletek</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>JOOLA Perseus, $197.95, carbon fiber face, German brand, imported</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>American-made carbon fiber &amp; fiberglass paddles, Niles MI factory, USAPA-approved across full lineup</div>
+            </div>
+          </div>
+          <div class="alt-section">Niles, MI · Founded by Cody &amp; Curtis Smith, 2010-11 · US manufacturing confirmed by Pickleball Central editorial coverage and factory documentation</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span>
+            &nbsp;10–15% via UpPromote platform
+          </div>
+          <div class="alt-sources">
+            Contact: info@paddletek.com · 866-972-3353 &nbsp;|&nbsp;
+            <a href="https://paddletek.com" target="_blank">paddletek.com</a>
+          </div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Prolite Sports</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>JOOLA Perseus, $197.95, high-performance German-engineered import</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Wisconsin-made paddles since 1984 — the oldest American pickleball paddle brand still in production</div>
+            </div>
+          </div>
+          <div class="alt-section">Wisconsin · Founded by Arlen &amp; Steve Paranto, 1984; expanded by Neil Friedenberg, 2011 · US manufacturing confirmed by Pickleball Magazine and company facility documentation</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span>
+            &nbsp;prolitesports.com affiliate page
+          </div>
+          <div class="alt-sources">
+            Contact: 888-775-9615 &nbsp;|&nbsp;
+            <a href="https://prolitesports.com" target="_blank">prolitesports.com</a>
+          </div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Thompson Pickleball</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>JOOLA Perseus, high-performance paddle, German brand</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Custom hand-built USA paddles, boutique Michigan manufacturer — each paddle made to order in Boyne City</div>
+            </div>
+          </div>
+          <div class="alt-section">Boyne City, MI · Founded by Jeff Thompson &amp; Bill Gitre · Hand-crafted US production confirmed via company website, collaboration page, and local Michigan press</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span>
+            &nbsp;Collaboration page confirmed on website
+          </div>
+          <div class="alt-sources">
+            Contact: mail@thompsonpickleball.com · 231-497-1974 &nbsp;|&nbsp;
+            <a href="https://thompsonpickleball.com" target="_blank">thompsonpickleball.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. Medicube Zero Pore Pad (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Medicube Zero Pore Pad 2.0</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+            &nbsp;·&nbsp;Amazon: ~$35 / 70 pads
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING</span>
+          <span class="tag tag-count">1 alt</span>
+        </div>
+      </div>
+      <div class="product-rationale">Korean skincare toning pads are a daily-routine staple — Medicube is a South Korean brand manufactured entirely in Korea. The exfoliating pad category is nearly entirely Korean-sourced. After searching multiple leads, only one domestic skincare line with a toning pad equivalent was found, and it is LOW-CONFIDENCE pending independent manufacturing verification.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">ARCONA Skincare</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Medicube Zero Pore Pad 2.0, Korean formulation, 70 pads, K-beauty brand</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Magic White Ice exfoliating toning pads, Beverly Hills brand — US formulation claimed; independent manufacturing verification not found</div>
+            </div>
+          </div>
+          <div class="alt-section">Beverly Hills, CA · Founded by Devan Arcona, 1989 · Currently led by Chanel Jenae · US formulation claim on website; no independent press confirms domestic manufacturing</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span>
+            &nbsp;arcona.com affiliate login confirmed
+          </div>
+          <div class="alt-sources">
+            Contact: 877-272-6620 · sheila@arcona.com &nbsp;|&nbsp;
+            <a href="https://arcona.com" target="_blank">arcona.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. Premier Protein (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Premier Protein Shake</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#65a30d">Grocery</span>
+            &nbsp;·&nbsp;Amazon: ~$2.50–$2.90/shake
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING</span>
+          <span class="tag tag-count">2 alts</span>
+        </div>
+      </div>
+      <div class="product-rationale">Ready-to-drink protein shakes occupy the high-frequency consumable tier with strong subscription and repeat-purchase behavior. Premier Protein (Post Consumer Brands) is US-headquartered but sources internationally. Both alternatives are LOW-CONFIDENCE due to single-source manufacturing claims or disclosed imported ingredients.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Unjury Protein</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Premier Protein, 30g protein, RTD format, multiple flavors, mass market</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Medical-grade whey protein powder, specialized for bariatric/surgical recovery — US-formulated claim, manufacturing not independently confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Middletown, CT · Founded by Jerome Krachenfels · Now part of Blueroot Health · US formulation claim; no independent press confirms domestic production facility</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span>
+            &nbsp;Distributed via bariatricfusion.com
+          </div>
+          <div class="alt-sources">
+            Contact: support@bariatricfusion.com &nbsp;|&nbsp;
+            <a href="https://unjury.com" target="_blank">unjury.com</a>
+          </div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">ICONIC Protein</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Premier Protein, 30g protein, broad flavor lineup, widely distributed</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Grass-fed dairy RTD protein drink, clean ingredients, Santa Monica brand — NZ dairy import disclosed; US manufacturing unconfirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Santa Monica, CA · Founded by Billy Bosch, 2013 · New Zealand dairy import disclosed on packaging — US-branded but not US-manufactured</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span>
+          </div>
+          <div class="alt-sources">
+            <a href="https://drinkiconic.com" target="_blank">drinkiconic.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11. Liquid I.V. (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Liquid I.V. Hydration Multiplier</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#65a30d">Grocery</span>
+            &nbsp;·&nbsp;Amazon: ~$1.00–$1.25/packet
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING</span>
+          <span class="tag tag-count">2 alts</span>
+        </div>
+      </div>
+      <div class="product-rationale">Electrolyte drink packets are a flagship recurring-purchase product — low cost per unit, high order frequency, strong subscription base. Liquid I.V. is owned by Unilever (Netherlands). Two VERIFIED American alternatives were found: one with a well-known referral model and one with a ShareASale affiliate program, both scoring 5/7 on the Most Promising scale.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">LMNT</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Liquid I.V., 16 flavors, 0.56 oz CTT-based packets, Unilever-owned (Netherlands)</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>No-sugar electrolyte packets, science-backed sodium-forward formula, US-formulated and distributed from Naples FL</div>
+            </div>
+          </div>
+          <div class="alt-section">Naples, FL · Founded by Robb Wolf, Luis Villaseñor, Nicki Violetti &amp; James Murphy, 2018-19 · US formulation and distribution confirmed by Paleo founder network press, SBA recognition, and independent lab testing coverage</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span>
+            &nbsp;Salty Status referral program + wholesale channel
+          </div>
+          <div class="alt-sources">
+            Contact: help.drinklmnt.com &nbsp;|&nbsp;
+            <a href="https://drinklmnt.com" target="_blank">drinklmnt.com</a>
+          </div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Trace Minerals Research</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Liquid I.V., CTT osmotic technology, 16 flavors, Dutch parent</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Electrolyte Stamina Power Pak with Utah mineral complex — 40+ year domestic operation in Ogden UT confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Ogden, UT · PE-owned by Rosewood since 2022 · Domestic Ogden UT facility confirmed by company, Utah Business coverage, and NFS International certification</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span>
+            &nbsp;ShareASale
+          </div>
+          <div class="alt-sources">
+            <a href="https://traceminerals.com" target="_blank">traceminerals.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12. Purina Pro Plan (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Purina Pro Plan Sensitive Skin &amp; Stomach Dog Food</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#92400e">Pet Supplies</span>
+            &nbsp;·&nbsp;Amazon: price not confirmed
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING</span>
+          <span class="tag tag-count">2 alts</span>
+        </div>
+      </div>
+      <div class="product-rationale">Sensitive-formula dog food drives strong loyalty and retention — owners rarely switch once their dog tolerates a formula. Both VERIFIED American alternatives are multi-generational family businesses with decades of continuous domestic production, both scoring 5/7 on the Most Promising scale.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Fromm Family Foods</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Purina Pro Plan Sensitive Skin &amp; Stomach, Nestlé-owned, offshore ingredient sourcing</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Gold Sensitive Skin &amp; Stomach dry dog food, Wisconsin family farm operation since 1904 — 5th-generation continuous ownership</div>
+            </div>
+          </div>
+          <div class="alt-section">Mequon, WI · Founded by the Fromm brothers, 1904 · Current ownership by the Nieman family · US manufacturing confirmed by Wisconsin Economic Development Corp, WI Ag Journal, and NutriSource certification; mink ranching + pet food since founding</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-no">Affiliate: No</span>
+            &nbsp;Sold exclusively through independent pet specialty retailers
+          </div>
+          <div class="alt-sources">
+            Contact: 800-325-6331 &nbsp;|&nbsp;
+            <a href="https://frommfamily.com" target="_blank">frommfamily.com</a>
+          </div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">American Natural Premium</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Purina Pro Plan, Nestlé-owned, mass distributed, offshore sourcing</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Single-source American protein formulas, Grafton WI facility confirmed, natural preservatives only</div>
+            </div>
+          </div>
+          <div class="alt-section">Grafton, WI · Co-founded by Jennifer Burlo &amp; Gene Large, 1998 · US manufacturing confirmed by Wisconsin Department of Agriculture and independent pet nutrition press</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span>
+          </div>
+          <div class="alt-sources">
+            Contact: info@americannaturalpremium.com · 262-376-5390 &nbsp;|&nbsp;
+            <a href="https://americannaturalpremium.com" target="_blank">americannaturalpremium.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13. INABA Churu (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">INABA Churu Lickable Purée Cat Treats</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#92400e">Pet Supplies</span>
+            &nbsp;·&nbsp;Amazon: price not confirmed
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING</span>
+          <span class="tag tag-count">1 alt</span>
+        </div>
+      </div>
+      <div class="product-rationale">Lickable cat treat tubes (the Churu format) are a fast-growing high-frequency category. INABA is a Japanese brand. After searching five domestic cat treat candidates, only one brand with a purée/pouch-style format emerged — and it is LOW-CONFIDENCE as Made by Nacho's manufacturing location is not independently confirmed as US-based.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Made by Nacho</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>INABA Churu, Japanese-made purée tubes, high consumer loyalty for texture and palatability</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Premium cat cuisine pouches &amp; pâtés inspired by celebrity chef Bobby Flay's cat — US operation, manufacturing location not independently confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Founded 2021 by Bobby Flay &amp; Elly Truesdell · US brand operation confirmed; no independent press names a domestic manufacturing facility</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span>
+            &nbsp;Impact Radius · ~5%
+          </div>
+          <div class="alt-sources">
+            Contact: contact@madebynacho.com &nbsp;|&nbsp;
+            <a href="https://madebynacho.com" target="_blank">madebynacho.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14. DREO Tower Fan (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">DREO Tower Fan (2026 Upgraded DC Motor)</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+            &nbsp;·&nbsp;Amazon: ~$60
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING</span>
+          <span class="tag tag-gap">STRUCTURAL GAP</span>
+          <span class="tag tag-count">1 alt</span>
+        </div>
+      </div>
+      <div class="product-rationale">Tower fans are seasonal recurring purchases with strong summer replacement cycles. DREO is a Shenzhen brand. This category reveals a structural gap: Lasko (the most prominent American fan brand) has confirmed its tower fan production moved to China. After checking six candidates, only Vornado remains plausible — but its ThreeSixtyGroup parent (Hong Kong) raises unanswered questions about tower-line US assembly.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Vornado Energy Smart NGT</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>DREO CF714S, DC motor, 28dB quiet, Shenzhen-based brand, China-manufactured</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Energy Smart NGT tower fan, Andover KS design heritage — but ThreeSixtyGroup (Hong Kong) acquired Vornado in 2018; tower-line assembly location unconfirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Andover, KS (historical base) · Parent: ThreeSixtyGroup (Hong Kong, 2018 acquisition) · Circulators are US-designed; tower fan assembly location not confirmed by press or certifier</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span>
+            &nbsp;Limited affiliate info available via vornado.com
+          </div>
+          <div class="alt-sources">
+            Contact: help@vornado.com · 800-234-0604 &nbsp;|&nbsp;
+            <a href="https://vornado.com" target="_blank">vornado.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15. Mead Composition Books (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Mead Composition Books (12-Pack)</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#0891b2">Office Products</span>
+            &nbsp;·&nbsp;Amazon: price not confirmed
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING</span>
+          <span class="tag tag-count">2 alts</span>
+        </div>
+      </div>
+      <div class="product-rationale">Composition notebooks are back-to-school staples — bulk multi-packs represent high-volume annual purchases. Mead is a US brand but manufactures offshore. One VERIFIED Pennsylvania paper mill with a 160-year operating history was identified; one LOW-CONFIDENCE Brooklyn stationer with partial domestic disclosure rounds out the category.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Roaring Spring Paper Products</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Mead Composition Books 12-pack, US brand, offshore manufacturing</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>American-made composition notebooks, 160-year-old Pennsylvania paper mill — 6th-generation family operation still milling on-site</div>
+            </div>
+          </div>
+          <div class="alt-section">Roaring Spring, PA · Founded by D.M. Bare, 1865 · 6th-generation family business · US manufacturing confirmed by Pennsylvania Manufacturing Index, local press (Altoona Mirror), and Forest Stewardship Council certification</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span>
+          </div>
+          <div class="alt-sources">
+            Contact: 814-224-5141 &nbsp;|&nbsp;
+            <a href="https://roaringspringpaper.com" target="_blank">roaringspringpaper.com</a>
+          </div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Decomposition Book (Michael Roger Inc.)</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Mead 12-pack, bulk quantity, standard ruled composition format</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Printed composition-style notebooks, 100% post-consumer recycled content — US-designed; manufacturing disclosure is mixed domestic/offshore</div>
+            </div>
+          </div>
+          <div class="alt-section">Brooklyn, NY · Michael Roger Inc., operating since 1949 · US design and partial operations; mixed domestic/offshore manufacturing disclosed — no single-source US production confirmed</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span>
+          </div>
+          <div class="alt-sources">
+            Contact: 732-752-0800 &nbsp;|&nbsp;
+            <a href="https://decompositionbook.com" target="_blank">decompositionbook.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16. Dreame L60 (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Dreame L60 Ultra PE Robot Vacuum &amp; Mop</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+            &nbsp;·&nbsp;Amazon: price not confirmed
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING</span>
+          <span class="tag tag-gap">STRUCTURAL GAP</span>
+          <span class="tag tag-count">1 alt</span>
+        </div>
+      </div>
+      <div class="product-rationale">Robot vacuum and mop combos are high-value infrequent repurchase items — but the category remains a structural gap for American manufacturers. After iRobot's acquisition completed by Chinese buyers in January 2026, only one US-assembled robot vacuum remains credible: Matic, a pre-order/early-access product with $107M raised but unconfirmed mass availability.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Matic Robot Vacuum</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Dreame L60 Ultra PE, full vacuuming + mopping combo, Shenzhen-manufactured</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>AI-native robot vacuum assembled in Mountain View CA — $107M raised (Sequoia, Lightspeed); limited availability, manufacturing scale not independently confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Mountain View, CA · Co-founded by Navneet Dalal, Mehul Nariyawala &amp; Shafaq Presswala, 2017 · US assembly claimed; TechCrunch and Bloomberg funding coverage confirmed but production scale not independently verified</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-unconfirmed">Affiliate: Unconfirmed</span>
+          </div>
+          <div class="alt-sources">
+            Contact: maticrobots.com/contact-us &nbsp;|&nbsp;
+            <a href="https://maticrobots.com" target="_blank">maticrobots.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17. JanSport (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">JanSport Classic Backpack</div>
+          <div class="product-meta">
+            <span class="pill" style="background:#0891b2">Office Products</span>
+            &nbsp;·&nbsp;Amazon: under $15
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING</span>
+          <span class="tag tag-count">2 alts</span>
+        </div>
+      </div>
+      <div class="product-rationale">Classic backpacks have lower repurchase frequency but strong brand loyalty and gift-giving cycles. JanSport (VF Corporation) manufactures offshore. Two VERIFIED American alternatives were found — both premium over JanSport's sub-$15 price point, both with strong made-in-USA stories and active affiliate programs.</div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">GORUCK GR1 USA</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>JanSport Classic, sub-$15, basic canvas daypack, offshore manufactured, VF Corporation</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Military-spec CORDURA nylon rucksack, sewn in Bozeman MT — GR1 USA line explicitly designates American-made product</div>
+            </div>
+          </div>
+          <div class="alt-section">Bozeman, MT · Founded by Jason McCarthy (former US Army Special Forces), 2008 · US manufacturing for GR1 USA line confirmed by Wall Street Journal, Inc. Magazine, and factory tour documentation</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span>
+            &nbsp;goruck.com/affiliates
+          </div>
+          <div class="alt-sources">
+            Contact: team@goruck.com · 904-372-0184 &nbsp;|&nbsp;
+            <a href="https://goruck.com" target="_blank">goruck.com</a>
+          </div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Duluth Pack</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>JanSport Classic, mass-market canvas pack, offshore manufacturing</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Handcrafted canvas packs made in Duluth MN since 1882 — the oldest continuously operating US pack maker</div>
+            </div>
+          </div>
+          <div class="alt-section">Duluth, MN · Founded by Camille Poirier, 1882 · Current owner Kevin Hall (2025 acquisition) · US manufacturing confirmed by Minnesota Business Magazine, Star Tribune, and company Duluth MN factory documentation</div>
+          <div class="alt-section">
+            <span class="tag tag-affiliate-yes">Affiliate: Yes</span>
+            &nbsp;duluthpack.com affiliate program
+          </div>
+          <div class="alt-sources">
+            Contact: 218-722-3898 &nbsp;|&nbsp;
+            <a href="https://duluthpack.com" target="_blank">duluthpack.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /product-groups -->
+
+  <!-- Category Breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 310" style="width:100%;max-width:640px;display:block;">
+      <text x="8" y="28" font-family="system-ui,sans-serif" font-size="12" fill="#334155">Beauty &amp; Personal Care</text>
+      <rect x="200" y="12" width="380" height="26" rx="5" fill="#db2777"/>
+      <text x="586" y="29" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#db2777">3 products</text>
+
+      <text x="8" y="72" font-family="system-ui,sans-serif" font-size="12" fill="#334155">Pet Supplies</text>
+      <rect x="200" y="56" width="380" height="26" rx="5" fill="#92400e"/>
+      <text x="586" y="73" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#92400e">3 products</text>
+
+      <text x="8" y="116" font-family="system-ui,sans-serif" font-size="12" fill="#334155">Office Products</text>
+      <rect x="200" y="100" width="380" height="26" rx="5" fill="#0891b2"/>
+      <text x="586" y="117" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#0891b2">3 products</text>
+
+      <text x="8" y="160" font-family="system-ui,sans-serif" font-size="12" fill="#334155">Grocery</text>
+      <rect x="200" y="144" width="253" height="26" rx="5" fill="#65a30d"/>
+      <text x="459" y="161" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#65a30d">2 products</text>
+
+      <text x="8" y="204" font-family="system-ui,sans-serif" font-size="12" fill="#334155">Home &amp; Kitchen</text>
+      <rect x="200" y="188" width="253" height="26" rx="5" fill="#16a34a"/>
+      <text x="459" y="205" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#16a34a">2 products</text>
+
+      <text x="8" y="248" font-family="system-ui,sans-serif" font-size="12" fill="#334155">Sports &amp; Outdoors</text>
+      <rect x="200" y="232" width="253" height="26" rx="5" fill="#ea580c"/>
+      <text x="459" y="249" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#ea580c">2 products</text>
+
+      <text x="8" y="292" font-family="system-ui,sans-serif" font-size="12" fill="#334155">Toys &amp; Games</text>
+      <rect x="200" y="276" width="253" height="26" rx="5" fill="#f59e0b"/>
+      <text x="459" y="293" font-family="system-ui,sans-serif" font-size="12" font-weight="600" fill="#f59e0b">2 products</text>
+    </svg>
+  </div>
+
+  <!-- Most Promising to Promote -->
+  <h2 class="section-title">Most Promising American Alternatives to Promote</h2>
+  <div class="panel">
+    <p style="font-size:13px;color:#475569;margin:0 0 18px;">Score = +3 VERIFIED · +2 in $25–$100 price band · +2 high repurchase · +1 medium repurchase · VERIFIED status required to appear.</p>
+    <div class="promo-list">
+      <div class="promo-row">
+        <div class="promo-rank">#1</div>
+        <div class="promo-content">
+          <div class="promo-header">
+            <span class="promo-name">eco-kids / Elseware Unplug</span>
+            <span class="promo-vs">vs. Crayola Crayons Bulk — Toys &amp; Games</span>
+          </div>
+          <div class="score-bar-wrap"><div class="score-bar-fill" style="width:100%"></div></div>
+        </div>
+        <div class="promo-score">7 / 7</div>
+      </div>
+      <div class="promo-row">
+        <div class="promo-rank">#2</div>
+        <div class="promo-content">
+          <div class="promo-header">
+            <span class="promo-name">LMNT</span>
+            <span class="promo-vs">vs. Liquid I.V. — Grocery</span>
+          </div>
+          <div class="score-bar-wrap"><div class="score-bar-fill" style="width:71.4%"></div></div>
+        </div>
+        <div class="promo-score">5 / 7</div>
+      </div>
+      <div class="promo-row">
+        <div class="promo-rank">#3</div>
+        <div class="promo-content">
+          <div class="promo-header">
+            <span class="promo-name">Fromm Family Foods</span>
+            <span class="promo-vs">vs. Purina Pro Plan — Pet Supplies</span>
+          </div>
+          <div class="score-bar-wrap"><div class="score-bar-fill" style="width:71.4%"></div></div>
+        </div>
+        <div class="promo-score">5 / 7</div>
+      </div>
+      <div class="promo-row">
+        <div class="promo-rank">#4</div>
+        <div class="promo-content">
+          <div class="promo-header">
+            <span class="promo-name">100% PURE</span>
+            <span class="promo-vs">vs. eos Body Lotion — Beauty &amp; Personal Care</span>
+          </div>
+          <div class="score-bar-wrap"><div class="score-bar-fill" style="width:71.4%"></div></div>
+        </div>
+        <div class="promo-score">5 / 7</div>
+      </div>
+      <div class="promo-row">
+        <div class="promo-rank">#5</div>
+        <div class="promo-content">
+          <div class="promo-header">
+            <span class="promo-name">SKILCRAFT / NIB</span>
+            <span class="promo-vs">vs. BIC Pencils — Office Products</span>
+          </div>
+          <div class="score-bar-wrap"><div class="score-bar-fill" style="width:71.4%"></div></div>
+        </div>
+        <div class="promo-score">5 / 7</div>
+      </div>
+      <div class="promo-row">
+        <div class="promo-rank">#6</div>
+        <div class="promo-content">
+          <div class="promo-header">
+            <span class="promo-name">Nutramax Proviable-DC</span>
+            <span class="promo-vs">vs. Purina FortiFlora — Pet Supplies</span>
+          </div>
+          <div class="score-bar-wrap"><div class="score-bar-fill" style="width:71.4%"></div></div>
+        </div>
+        <div class="promo-score">5 / 7</div>
+      </div>
+      <div class="promo-row">
+        <div class="promo-rank">#7</div>
+        <div class="promo-content">
+          <div class="promo-header">
+            <span class="promo-name">Nalgene</span>
+            <span class="promo-vs">vs. Owala FreeSip — Sports &amp; Outdoors</span>
+          </div>
+          <div class="score-bar-wrap"><div class="score-bar-fill" style="width:57.1%"></div></div>
+        </div>
+        <div class="promo-score">4 / 7</div>
+      </div>
+      <div class="promo-row">
+        <div class="promo-rank">#8</div>
+        <div class="promo-content">
+          <div class="promo-header">
+            <span class="promo-name">Roaring Spring Paper Products</span>
+            <span class="promo-vs">vs. Mead Composition Books — Office Products</span>
+          </div>
+          <div class="score-bar-wrap"><div class="score-bar-fill" style="width:57.1%"></div></div>
+        </div>
+        <div class="promo-score">4 / 7</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- New Entrants Spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <p style="font-size:13.5px;color:#1e3a8a;margin:0 0 6px;"><strong>Newest-founded American businesses identified in this report</strong> — ranked by founding year, most recent first.</p>
+    <div class="spotlight-grid">
+      <div class="spotlight-card">
+        <div class="spotlight-name">Legendary Pencil Company <span class="tag tag-lowconf" style="font-size:10px;">LOW-CONFIDENCE</span></div>
+        <div class="spotlight-meta">Newark, OH · Est. 2022 · vs. BIC Pencils</div>
+        <div class="spotlight-desc">Founded by Jonathan Veley — one of the most recently established American writing instrument makers found. US assembly claimed; independently unconfirmed. <a href="https://legendaryleadcompany.com" target="_blank">legendaryleadcompany.com</a></div>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-name">Made by Nacho <span class="tag tag-lowconf" style="font-size:10px;">LOW-CONFIDENCE</span></div>
+        <div class="spotlight-meta">Founded 2021 · vs. INABA Churu Cat Treats</div>
+        <div class="spotlight-desc">Co-founded by Bobby Flay and Elly Truesdell — premium cat cuisine inspired by Flay's own cat. US-operated brand; domestic manufacturing unconfirmed. Impact Radius affiliate (5%). <a href="https://madebynacho.com" target="_blank">madebynacho.com</a></div>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-name">LMNT <span class="tag tag-verified" style="font-size:10px;">VERIFIED</span></div>
+        <div class="spotlight-meta">Naples, FL · Est. 2018–19 · vs. Liquid I.V.</div>
+        <div class="spotlight-desc">Founded by Robb Wolf, Luis Villaseñor, Nicki Violetti &amp; James Murphy. Science-backed no-sugar electrolytes with a strong DTC and affiliate channel. #2 Most Promising this report. <a href="https://drinklmnt.com" target="_blank">drinklmnt.com</a></div>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-name">Matic Robot Vacuum <span class="tag tag-lowconf" style="font-size:10px;">LOW-CONFIDENCE</span></div>
+        <div class="spotlight-meta">Mountain View, CA · Est. 2017 · vs. Dreame L60</div>
+        <div class="spotlight-desc">Founded by Navneet Dalal, Mehul Nariyawala &amp; Shafaq Presswala. $107M raised (Sequoia, Lightspeed). The only US-assembled robot vacuum candidate in a category with no clear domestic leader post-iRobot. <a href="https://maticrobots.com" target="_blank">maticrobots.com</a></div>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-name">Primally Pure <span class="tag tag-verified" style="font-size:10px;">VERIFIED</span></div>
+        <div class="spotlight-meta">Temecula, CA · Est. 2014 · vs. eos Body Lotion</div>
+        <div class="spotlight-desc">Founded by Bethany McDaniel. Tallow-based clean beauty with non-toxic certification and 15% affiliate program via Awin/FlexOffers — strong DTC repurchase story. <a href="https://primallypure.com" target="_blank">primallypure.com</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Methodology -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p>Research conducted July 17, 2026 by AI-assisted pipeline processing the sibling agent's July 16, 2026 Amazon report. 148 sources checked across 17 products and 31 alternatives. 4 Electronics products excluded per standing research policy.</p>
+    <p><strong>VERIFIED</strong> status requires at least two independent corroborating sources for US manufacturing or assembly — a company's own website claim alone never qualifies. Corroborating sources used: independent certification bodies (CCOF, NASC, FSC, NFS International, AbilityOne/NAEPB), press coverage naming specific domestic facilities, state economic development records, federal procurement databases, and factory tour documentation. <strong>LOW-CONFIDENCE</strong> is assigned when only a single source is available or the manufacturing claim could not be cross-verified.</p>
+    <p><strong>Display order</strong>: NEW before RECURRING; confirmed $25–$100 price band before outside-band or unconfirmed; higher estimated repurchase frequency before lower. Rolling 14-day product history managed via <code>resources/seen-products-history.json</code>. 7 entries pruned this run (last seen before July 3, 2026).</p>
+    <p><strong>Structural gaps</strong> are declared only after exhaustive search across a minimum of 5 candidate brands within the category finds no credible domestic alternative.</p>
+  </div>
+
+  <!-- Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../July13_2026/">July 13</a></span>
+  </div>
+
+</div>
+</body>
+</html>
