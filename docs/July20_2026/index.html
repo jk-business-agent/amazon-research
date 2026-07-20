@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Top Sellers — July 20, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  /* 1. Header band */
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  /* 2. Executive summary */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  /* 3. Quick stats */
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 150px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  /* 4. Top movers grid */
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
+  .card-meta { font-size: 12.5px; color: var(--muted); }
+  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .card-sources a { color: #2563eb; text-decoration: none; }
+
+  /* 5. Category chart */
+  .chart-wrap { padding: 10px 6px; overflow-x: auto; }
+
+  /* 6. New entrants spotlight */
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+  .spotlight ul { margin: 8px 0 0; padding-left: 20px; }
+  .spotlight li { margin-bottom: 7px; font-size: 14px; line-height: 1.5; color: #1e293b; }
+
+  /* 7. Methodology footer */
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  /* 8. Footer nav */
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <div class="date">July 20, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 25 sources checked</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">Today's scan across 9 categories and 25 source domains returns 23 products — one of the more novel reports in recent weeks, with 11 NEW entrants. The standout story is the emergence of a true AI toy category: the Stickerbox AI sticker printer (voice-to-printed-sticker, $99.99) is selling out and drawing "one of the hottest toys of the season" coverage from Tom's Guide. A parallel wave of accessible-price AR is arriving: XREAL's a01+ AR glasses ($299, launched July 10) are generating "this may quietly outsell all other AR glasses" commentary at VR.org. The back-to-school cycle is now in full surge — three Office Products recurrents appear together this week (JanSport, Mead, Pilot G2), signaling that peak mid-July BTS purchasing is underway. Health and functional beverages continue a multi-month dominance: Liquid I.V., CELSIUS, Quest Nutrition, and Sports Research Organic Collagen Peptides all appear, consistent with the GLP-1/wellness macro trend visible across prior reports. On the home front, robot vacuums are entering an upgrade cycle: the Dreame L40 Ultra Gen 2 (25,000Pa, privacy-focused) debuts alongside the still-recurring Dreame L60 Ultra PE. <strong>Methodology note:</strong> All Amazon.com direct page fetches returned HTTP 403 on every attempt this session; all findings are sourced from WebSearch-derived discovery across press, trade, and retail-analytics domains (25 distinct domains logged).</div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">23</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="num">11</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">12</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">22</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">1</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Top movers grid -->
+  <h2 class="section-title">Top Movers</h2>
+  <div class="grid">
+
+    <!-- VERIFIED + NEW items first -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Stickerbox AI Voice-Powered Sticker Maker</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Brooklyn startup Hapiko's AI kids' toy converts voice prompts into custom black-and-white stickers via thermal printing (no ink). Tom's Guide called it "one of the hottest toys of the season" after it sold out quickly post-launch. Kids press a button, describe an idea, and the device prints a sticker to color — a "screen-free" creativity pitch that's resonating strongly with parents and going viral on social media. At $99.99, it sits at a premium but accessible gift price point; it was listed at $103 on Amazon during Prime Day and remained high-demand afterward.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — AI + hands-on creativity is an underserved product space with strong upside; viral social coverage continues to drive awareness</div>
+      <div class="card-meta">~$99.99</div>
+      <div class="card-sources">Sources: <a href="https://www.tomsguide.com/ai/this-viral-ai-toy-is-finally-available-to-buy-today-and-its-already-one-of-the-hottest-toys-of-the-season">tomsguide.com</a> (Jul 20, 2026), <a href="https://shopping.yahoo.com/toys-games/articles/ai-toy-kids-ditching-screen-222049482.html">shopping.yahoo.com</a> (Jul 20, 2026), <a href="https://techcrunch.com/2025/11/24/hands-on-with-stickerbox-the-ai-powered-sticker-maker-for-kids/">techcrunch.com</a> (Jul 20, 2026), <a href="https://www.amazon.com/Stickerbox-Voice-Powered-Mini-Sticker-Maker/dp/B0G3XGR2G6">amazon.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">XREAL 1S AR Glasses / X By XREAL a01+</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Projects a claimed 500" virtual screen via USB-C with 52° FOV and native 3DoF. The a01+ variant (no camera, no AI onboard) launched July 10, 2026 at $299 across Amazon, Best Buy, B&amp;H, and Micro Center. VR.org noted it "might quietly outsell all other AR glasses" precisely because it avoids the $2,000+ premium of camera-equipped AI competitors. Compatible with iPhone 17/16, Steam Deck, ROG Ally, and any USB-C DisplayPort device; strong gaming-setup, travel, and remote-work appeal. Featured in The Gadgeteer's July 19 gadgets roundup.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — consumer AR glasses are in early mass-market adoption; $299 accessibility positions XREAL as a volume leader while AI-glasses competitors fight at 6× the price</div>
+      <div class="card-meta">$299 (a01+)</div>
+      <div class="card-sources">Sources: <a href="https://vr.org/articles/xreal-a01-plus-299-display-glasses-ar-that-sells-2026">vr.org</a> (Jul 20, 2026), <a href="https://armchairarcade.com/perspectives/2026/07/10/x-by-xreal-a01-ar-glasses-launch-price/">armchairarcade.com</a> (Jul 20, 2026), <a href="https://finance.yahoo.com/technology/articles/xreal-opens-u-sales-x-130000091.html">finance.yahoo.com</a> (Jul 20, 2026), <a href="https://the-gadgeteer.com/2026/07/19/gadgets-worth-noticing-july-2026/">the-gadgeteer.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Dreame L40 Ultra Gen 2 Robot Vacuum &amp; Mop</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The L40 Ultra Gen 2 delivers 25,000Pa suction — a claimed 127% jump over the original L40 Ultra — and replaces its predecessor's RGB video camera with 3DAdapt structured light and LiDAR, addressing growing consumer privacy concerns about in-home cameras. The DuoScrub mopping system and extendable side brush add versatility. Gizmodo featured it during Amazon Prime Day with early discounts from $650; current pricing is approximately $460 (29% off). VacuumWars covered the full spec upgrade. This represents the upgrade cycle alongside the still-recurring Dreame L60 Ultra PE.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — robot vacuum category has strong tailwinds; privacy-first redesign differentiates from competitors who still use cameras</div>
+      <div class="card-meta">~$460 (marked down from $650)</div>
+      <div class="card-sources">Sources: <a href="https://gizmodo.com/dreame-goes-all-in-on-robot-vacuum-and-mop-deals-as-the-25000pa-l40-ultra-gen-2-gets-early-prime-day-discounts-2000772275">gizmodo.com</a> (Jul 20, 2026), <a href="https://vacuumwars.com/dreame-l40-ultra-gen-2-and-d30-ultra-ce/">vacuumwars.com</a> (Jul 20, 2026), <a href="https://www.amazon.com/DREAME-Suction-Extendable-Self-Emptying-Cleaning/dp/B0FSJPFDPV">amazon.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">DREO TurboCool Misting Fan 765S</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">DREO is self-reported as the #1 Household Fan Brand on Amazon U.S. for three consecutive years (PR Newswire, 2026 summer lineup announcement). The 765S delivers a claimed 10°F temperature drop via 17μm ultrafine mist combined with 34 ft/s TurboWind airflow, with a 6L water tank supporting up to 24 hours of continuous operation at just 20 dB. Consumer Reports independently tested DREO misting fans. A DREO Summer Chill Sale (July 9–21) has been driving purchases in the back half of July's peak heat season. This is a distinct product from the DREO Tower Fan (DC Motor) and DREO Portable AC previously featured in this archive.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — peak summer demand; will ease sharply after August</div>
+      <div class="card-meta">Price not confirmed (see DREO summer sale)</div>
+      <div class="card-sources">Sources: <a href="https://www.prnewswire.com/news-releases/dreo-unveils-2026-summer-lineup-led-by-turbocool-technology-for-next-gen-cooling-302744759.html">prnewswire.com</a> (Jul 20, 2026), <a href="https://www.consumerreports.org/appliances/air-conditioners/dreo-misting-fan-review-a6625382472/">consumerreports.org</a> (Jul 20, 2026), <a href="https://www.amazon.com/DREO-TurboCool-Misting-Evaporative-Grey/dp/B0GN9G7NTL">amazon.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Maybelline Lash Sensational Sky High Mascara</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Ranked #5 in Amazon's Top 25 Beauty &amp; Personal Care products for Q1 2026 (BeautyMatter). Available in washable and waterproof formulations across multiple shades including tinted variants (Burgundy Haze, Green Altitude, Blue Mist) that have driven TikTok-fueled viral moments. The buildable bamboo-extract formula with a flexible brush appeals to everyday and editorial looks alike. At ~$10–12, it holds the top spot among mass-market mascaras on Amazon's Best Sellers Mascara list — a category where drugstore price accessibility drives high unit velocity.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — consistently in Amazon beauty top 5; not seasonal; mass-market price drives repeat purchase</div>
+      <div class="card-meta">~$10–12</div>
+      <div class="card-sources">Sources: <a href="https://beautymatter.com/articles/amazon-q1-2026-top-25-beauty-and-personal-care-products">beautymatter.com</a> (Jul 20, 2026), <a href="https://www.asinsight.com/report/US/mascara-maybelline">asinsight.com</a> (Jul 20, 2026), <a href="https://www.amazon.com/Best-Sellers-Mascara/zgbs/beauty/11058611">amazon.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Sports Research Organic Collagen Peptides</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">An Amazon bestseller and Amazon's Choice in the collagen peptides category, with 129,000+ customer reviews. Sports Research markets this as the "World's First Organic Collagen Peptides" — USDA organic certified, grass-fed sourced, third-party tested for heavy metals. Each serving delivers 11g of hydrolyzed Type I &amp; III collagen with a full spectrum of 18 amino acids. TreelineReview named it a top pick in its 2026 best collagen powders guide. Growing consumer interest in collagen for skin, joint, and nail health — amplified by social media wellness communities and Prime Day supplement deals coverage — drives sustained category expansion.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — wellness collagen trend is durable and growing; subscription model encourages repeat purchase</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Sports-Research-Organic-Collagen-Peptides/dp/B0C86RVNPS">amazon.com</a> (Jul 20, 2026), <a href="https://www.treelinereview.com/gearreviews/best-collagen-powders">treelinereview.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirTag 2 (4-Pack)</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Apple's second-generation AirTag 4-pack has sat at its all-time low price of $89 (down from $99) since a 4th of July promotion — 9to5toys confirmed this on July 6 as "the best deal ever." The 2nd gen features a louder built-in speaker for easier item finding and improved Precision Finding. Popular for summer travel luggage tracking, key finders, and pet collars. Featured in CNN Underscored's 4th of July Apple deals and MacRumors' Best Apple Deals roundup. This product last appeared in the archive on July 2 and has now re-entered after a 14-day gap.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — AirTag demand is consistent; all-time-low pricing is a temporary boost but underlying demand is durable</div>
+      <div class="card-meta">$89 (4-pack, all-time low)</div>
+      <div class="card-sources">Sources: <a href="https://9to5toys.com/2026/07/06/best-deal-ever-apple-airtag-2/">9to5toys.com</a> (Jul 20, 2026), <a href="https://www.macrumors.com/2026/07/03/best-apple-deals-of-the-week-7-3-26/">macrumors.com</a> (Jul 20, 2026), <a href="https://www.cnn.com/cnn-underscored/deals/apple-4th-of-july-sale-2026-06-29">cnn.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">CELSIUS Assorted Flavors Variety Pack (12-ct)</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">CELSIUS holds the #3 energy drink brand position in the United States and leads the functional fitness beverage segment on Amazon. The Assorted Flavors variety pack is a consistent top Grocery bestseller, with functional beverages outperforming traditional soda across Amazon's grocery category in 2026. Summer drives energy drink consumption; CELSIUS's active-lifestyle brand positioning (gym, outdoors, travel) aligns with seasonal demand. Featured in Prime Day 2026 supplement deal roundups and multiple wellness deal publications. Peach Vibe variety noted as strongest sales performer within the brand's lineup.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — functional beverages are a durable macro trend; health-conscious consumer adoption is broad and accelerating</div>
+      <div class="card-meta">~$21 for 12-pack</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/CELSIUS-Fitness-Energy-Standard-Variety/dp/B06X6J5266">amazon.com</a> (Jul 20, 2026), <a href="https://lexavebrew.com/best-amazon-prime-day-supplement-deals-2026/">lexavebrew.com</a> (Jul 20, 2026), <a href="https://sixstoreys.com/best-amazon-prime-day-supplement-deals-2026/">sixstoreys.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Quest Nutrition Ultimate Variety Pack Protein Bars (12-ct)</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Quest dominates the Amazon protein bar category with 14+ flavor options, high protein, low carb, and keto-friendly credentials that appeal to multiple diet communities simultaneously. ProteinBar.com called it the Amazon protein bar with "excellent macros, huge flavor variety, and consistent Subscribe &amp; Save availability that drops the price to ~$1.80/bar." The Grocery category's growing health orientation (visible across multiple prior reports in this archive) has pushed protein bars deeper into mainstream purchasing. The Ultimate Variety Pack allows sampling across flavors, driving trial and repeat purchases.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — protein bar market is mature and stable; Quest's keto/low-carb positioning keeps it relevant across multiple diet cycles</div>
+      <div class="card-meta">~$23 for 12-pack</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Quest-Nutrition-Ultimate-Variety-Friendly/dp/B07J2MM23Z">amazon.com</a> (Jul 20, 2026), <a href="https://proteinbar.com/blog/best-protein-bars-on-amazon-2026">proteinbar.com</a> (Jul 20, 2026), <a href="https://thebodyblueprint.com/quest-protein-bar-review-buyers-guide/">thebodyblueprint.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Pilot G2 Premium Gel Pens (12-ct)</h3>
+        <span class="pill" style="background:#0891b2">Office Products</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Described as "America's #1 selling gel ink pen" in Amazon's own product context. Back-to-school season (peak purchasing period July–August) is the clear primary driver this week, with NBC Select naming it a top BTS supply for 2026. Amazon has 4-packs marked down by more than 50% compared to in-store pricing at major retailers. Available in multiple point sizes (0.5mm, 0.7mm, 1.0mm) and assorted ink colors, making it ideal for color-coded student organization. Refillable and retractable design supports multi-year use, adding perceived value at the BTS price point.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — BTS demand peaks July–August and fades sharply by September; underlying product demand is steady year-round</div>
+      <div class="card-meta">~$12–18 (12-ct pack)</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com/select/shopping/back-to-school-supplies-amazon-rcna166014">nbcnews.com</a> (Jul 20, 2026), <a href="https://www.amazon.com/Pilot-Retractable-Premium-Roller-31020/dp/B001GAOTSW">amazon.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <!-- VERIFIED RECURRING items -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple Watch Series 11</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 9 of 10 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The most consistently present product in this archive — in 9 of 10 reports since the first run on June 17. Currently cited as #19 on Amazon's overall Best Seller list. Health monitoring features (ECG, blood oxygen, advanced sleep tracking) have expanded its audience well beyond fitness enthusiasts into mainstream health-awareness consumers. Apple ecosystem stickiness, summer gifting activity, and continued media coverage of wearable health tracking sustain demand at a high plateau. No single viral driver this week — just durable structural demand.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — wearable health tracking is mature and growing; Apple Watch holds dominant market share with no near-term challenger</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Best-Sellers-Electronics/zgbs/electronics">amazon.com</a> (Jul 20, 2026), <a href="https://www.bgr.com/2207530/amazon-best-sellers-worth-buying-july/">bgr.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Liquid I.V. Hydration Multiplier</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 6 of 7 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">A summer hydration staple appearing in 6 of the last 7 reports. The Popsicle Firecracker flavor is highlighted among Amazon's top electrolyte sellers in multiple supplement roundups. The electrolyte multiplier trend continues to expand as consumers seek functional hydration over plain water or sugary sports drinks. Strong Subscribe &amp; Save uptake and a wide flavor assortment reinforce repeat purchasing. Consistent with the broader health/wellness and functional-beverage macro trend visible across this entire archive.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth (summer peak) — summer heat amplifies demand; some seasonal dip expected in fall, but the functional hydration category has structural growth beyond seasonality</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Best-Sellers-Grocery-Gourmet-Food/zgbs/grocery">amazon.com</a> (Jul 20, 2026), <a href="https://lexavebrew.com/best-amazon-prime-day-supplement-deals-2026/">lexavebrew.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Medicube Zero Pore Pad 2.0</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 5 of 10 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Held #1 in Amazon Beauty for Q1 2026 per BeautyMatter. The wider Medicube brand was the #3 most-searched term across all of Amazon on Prime Day 2026, with an estimated 4.3 million searches — up from roughly 1.2 million in the prior year (BeautyMatter). K-beauty exfoliating toner pads with BHA, AHA, and PHA acids address pore texture, a universal skincare concern. High repeat-purchase rate driven by daily-use format (use once or twice daily, pad depletes). No sign of plateau despite 5 appearances in this archive.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — K-beauty interest is durable; Medicube's Prime Day dominance signals a loyal and growing customer base</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://beautymatter.com/articles/amazon-q2-2026-top-25-beauty-and-personal-care-products">beautymatter.com</a> (Jul 20, 2026), <a href="https://www.amazon.com/Best-Sellers-Beauty-Personal-Care/zgbs/beauty">amazon.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">JanSport Classic Backpack</h3>
+        <span class="pill" style="background:#0891b2">Office Products</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 4 of 5 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The BTS backpack perennial. Available in 38 colors with dual main compartments, a dedicated laptop sleeve, and JanSport's lifetime repair/replacement guarantee. NBC Select named it a top BTS pick for 2026; The Garden Style's BTS Amazon Finds guide featured it prominently. Four consecutive appearances in this archive beginning July 6 confirm the BTS purchasing season is sustaining backpack demand through mid-July. Peak buying typically occurs July–mid-August before school starts.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — BTS-specific demand; will fall sharply once schools are in session</div>
+      <div class="card-meta">~$35–55</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com/select/shopping/back-to-school-supplies-amazon-rcna166014">nbcnews.com</a> (Jul 20, 2026), <a href="https://www.thegardenstyle.com/gift-guides/back-to-school-amazon-finds/">thegardenstyle.com</a> (Jul 20, 2026), <a href="https://www.amazon.com/Best-Sellers-undefined/zgbs/undefined/1297489011">amazon.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Purina Pro Plan Sensitive Skin &amp; Stomach Dry Dog Food</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 4 of 5 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The top-selling individual pet food product on Amazon by revenue, with $3.43 million in estimated monthly revenue (MetricsCart June 2026 data). Purina was among the featured brands at Amazon Pet Days 2026, reinforcing its platform dominance. The Sensitive Skin &amp; Stomach formula addresses a growing segment of health-conscious pet owners seeking digestive and dermatological solutions for dogs. Salmon and rice formulation appeals broadly; high Subscribe &amp; Save adoption produces predictable repeat volume. Has appeared in 4 of the last 5 reports.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — pet food is a non-discretionary recurring consumable; Purina Pro Plan holds strong brand loyalty with vets and pet owners alike</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://metricscart.com/bestseller-reports/amazon-com/categories/Pet%20Supplies/">metricscart.com</a> (Jul 20, 2026), <a href="https://www.amazon.com/Best-Sellers-Pet-Supplies/zgbs/pet-supplies">amazon.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Optimum Nutrition Gold Standard 100% Whey Protein</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 3 of 4 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">A perennial top performer in Amazon's Sports Nutrition category. Double Rich Chocolate is the signature flavor. Featured in Prime Day 2026 supplement deal roundups with significant discounts; summer fitness activity sustains post-Prime-Day demand. Consistent presence in the archive (3 of 4 reports since July 6) reflects structural, not event-driven, demand. The brand's reputation for purity, third-party testing, and wide flavor availability makes it the default protein powder choice for many gym-goers.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — protein powder market is mature and stable; ON Gold Standard is the category anchor product</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Best-Sellers-Sports-Nutrition-Products/zgbs/hpc/6973663011">amazon.com</a> (Jul 20, 2026), <a href="https://lexavebrew.com/best-amazon-prime-day-supplement-deals-2026/">lexavebrew.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Dreame L60 Ultra PE Robot Vacuum &amp; Mop</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 3 of 4 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The L60 Ultra PE has maintained a consistent presence across 3 of the last 4 reports (July 9, 13, 16). VacuumWars recognized Dreame's L-series as category leaders in robot vacuum and mop combo performance for 2026. The L60 Ultra PE features a fully automated self-emptying dock, hot-mop washing at 149°F, automatic solution refilling, and an extendable side brush — the most comprehensive cleaning automation at its price tier. Its ongoing presence alongside the newly debuting L40 Ultra Gen 2 confirms that the robot vacuum upgrade cycle is generating multiple products in the top sellers simultaneously.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — robot vacuum market continues to expand; the L60 Ultra PE holds its position as the flagship SKU in Dreame's lineup</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://vacuumwars.com/dreame-l40-ultra-gen-2-and-d30-ultra-ce/">vacuumwars.com</a> (Jul 20, 2026), <a href="https://www.amazon.com/dreame-Removable-Extendable-SideBrush-Auto-Empty/dp/B0D6VS4SLX">amazon.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Hero Cosmetics Mighty Patch</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 3 of 5 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Ranked #3 in Amazon's Top 25 Beauty &amp; Personal Care products for Q1 2026 (BeautyMatter). Hydrocolloid pimple patches that absorb blemish fluid overnight while protecting from touching and bacteria. Available in Original, Invisible+, and Duo variants. A TikTok-driven skincare staple with strong daily-use repeat purchase behavior. Has appeared in 3 of the 5 reports since June 22 — enough recurrence to confirm this is structural bestseller status, not a transient spike.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — acne patch category is in growth; Mighty Patch is the category anchor brand with strong consumer loyalty</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://beautymatter.com/articles/amazon-q1-2026-top-25-beauty-and-personal-care-products">beautymatter.com</a> (Jul 20, 2026), <a href="https://www.amazon.com/Best-Sellers-Beauty-Personal-Care/zgbs/beauty">amazon.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Mead Composition Books (6-Pack)</h3>
+        <span class="pill" style="background:#0891b2">Office Products</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 3 of 4 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">A BTS classroom staple. The 6-pack of Mead composition notebooks (different colored covers, 70 wide-ruled pages each) is available for approximately $7 — low enough to be a household impulse purchase for parents stocking up for the year. NBC Select's BTS guide for 2026 highlighted Mead as a top value BTS brand. Three consecutive appearances in this archive (July 9, 13, 16) confirm sustained mid-July BTS purchasing. The color-coded cover approach encourages multi-subject classroom organization.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — BTS demand; volume will fall sharply once the school year starts</div>
+      <div class="card-meta">~$7 (6-pack)</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com/select/shopping/back-to-school-supplies-amazon-rcna166014">nbcnews.com</a> (Jul 20, 2026), <a href="https://www.amazon.com/Best-Sellers-Subject-Notebooks/zgbs/office-products/490756011">amazon.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Amazon Echo Dot (5th Generation)</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2 of 3 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The most-reviewed smart speaker on Amazon with 194,700+ ratings and a 4.7-star average. CNET has called it "the best Echo on a budget." At $49.99, it provides Alexa voice assistant, music streaming, smart home hub functionality, and intercom features at entry price. Summer gifting, smart home adoption, and its role as a home automation gateway for Ring and other Amazon devices sustain consistent demand. Appeared in the July 9 and July 16 archive reports; its presence here suggests a structural bestseller position.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — smart speaker market is mature; Echo Dot is the volume leader at the entry price point</div>
+      <div class="card-meta">$49.99</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Best-Sellers-Electronics/zgbs/electronics">amazon.com</a> (Jul 20, 2026), <a href="https://www.bgr.com/2207530/amazon-best-sellers-worth-buying-july/">bgr.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Owala FreeSip Insulated Water Bottle</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 1 of 2 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Branded by TikTok consumers as the water bottle that "replaced the Stanley," with the #owala hashtag accumulating 272 million views (asinsight.com, March 2026 data). Unique 2-in-1 FreeSip spout allows sipping through a built-in straw or swigging from the wide mouth. Available in multiple vibrant colorways that photograph well — important for social-media-driven discovery. CNN Underscored named it among the best water bottles of 2026. Summer heat is driving hydration product purchasing across multiple categories in today's report.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Owala's TikTok-driven brand awareness is durable; strong gifting potential and wide size range support year-round demand</div>
+      <div class="card-meta">~$25–35 (depending on size)</div>
+      <div class="card-sources">Sources: <a href="https://www.asinsight.com/report/US/owala-cup">asinsight.com</a> (Jul 20, 2026), <a href="https://www.cnn.com/cnn-underscored/reviews/best-water-bottle">cnn.com</a> (Jul 20, 2026), <a href="https://www.amazon.com/Owala-Insulated-Stainless-Steel-Push-Button-Marshmallow/dp/B085DVNHHK">amazon.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Bunch O Balloons Tropical Party — ZURU (6-Pack)</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 1 of 2 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Self-sealing rapid-fill water balloons — 200+ tropical-colored balloons per set, filled in seconds via a garden hose adapter. ZURU's patented design dominates the water balloon category. Asinsight.com's outdoor water toys analysis for 2026 found that the top products in this category generate between 10,000 and 50,000 monthly sales, placing Bunch O Balloons among the top revenue earners in summer toy purchases. Backyard parties, summer camps, and outdoor family events are the primary demand drivers this week.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — purely seasonal summer product; demand will fall sharply post-August</div>
+      <div class="card-meta">Price not confirmed (estimated $8–20 for 6-pack)</div>
+      <div class="card-sources">Sources: <a href="https://www.asinsight.com/report/US/outdoor-water-toys">asinsight.com</a> (Jul 20, 2026), <a href="https://www.amazon.com/Best-Sellers-Swimming-Pool-Outdoor-Water-Toys/zgbs/toys-and-games/166437011">amazon.com</a> (Jul 20, 2026)</div>
+    </div>
+
+    <!-- LOW-CONFIDENCE items last -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">SLOOSH 60" Non-Slip Splash Pad Sprinkler</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Appeared in Amazon's Best Sellers for Outdoor Water Play Sprinklers based on search results referencing the category list. A 60" non-slip circular splash pad with an integrated sprinkler targets toddlers and younger children for safe, cool backyard water play. The summer seasonal surge in outdoor water toys is well-documented in today's research. However, a second independent press or aggregator source specifically corroborating this product's ranking could not be found in today's research session, so this card is marked LOW-CONFIDENCE. Include as a directional indicator of the sprinkler category performing well this week.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — seasonal summer toy; demand fades sharply post-August</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Best-Sellers-Outdoor-Water-Play-Sprinklers/zgbs/toys-and-games/2493040011">amazon.com</a> (Jul 20, 2026)</div>
+    </div>
+
+  </div>
+
+  <!-- 5. Category breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="100%" height="316" viewBox="0 0 700 316">
+      <!-- Electronics: 4 -->
+      <text x="0" y="22" font-size="13" fill="#1e293b">Electronics</text>
+      <rect x="160" y="8" width="500" height="18" rx="4" fill="#2563eb"/>
+      <text x="668" y="22" font-size="12" fill="#475569">4</text>
+      <!-- Home &amp; Kitchen: 3 -->
+      <text x="0" y="56" font-size="13" fill="#1e293b">Home &amp; Kitchen</text>
+      <rect x="160" y="42" width="375" height="18" rx="4" fill="#16a34a"/>
+      <text x="543" y="56" font-size="12" fill="#475569">3</text>
+      <!-- Beauty &amp; Personal Care: 3 -->
+      <text x="0" y="90" font-size="13" fill="#1e293b">Beauty &amp; Personal Care</text>
+      <rect x="160" y="76" width="375" height="18" rx="4" fill="#db2777"/>
+      <text x="543" y="90" font-size="12" fill="#475569">3</text>
+      <!-- Grocery: 3 -->
+      <text x="0" y="124" font-size="13" fill="#1e293b">Grocery</text>
+      <rect x="160" y="110" width="375" height="18" rx="4" fill="#65a30d"/>
+      <text x="543" y="124" font-size="12" fill="#475569">3</text>
+      <!-- Health &amp; Household: 2 -->
+      <text x="0" y="158" font-size="13" fill="#1e293b">Health &amp; Household</text>
+      <rect x="160" y="144" width="250" height="18" rx="4" fill="#0d9488"/>
+      <text x="418" y="158" font-size="12" fill="#475569">2</text>
+      <!-- Office Products: 3 -->
+      <text x="0" y="192" font-size="13" fill="#1e293b">Office Products</text>
+      <rect x="160" y="178" width="375" height="18" rx="4" fill="#0891b2"/>
+      <text x="543" y="192" font-size="12" fill="#475569">3</text>
+      <!-- Toys &amp; Games: 3 -->
+      <text x="0" y="226" font-size="13" fill="#1e293b">Toys &amp; Games</text>
+      <rect x="160" y="212" width="375" height="18" rx="4" fill="#f59e0b"/>
+      <text x="543" y="226" font-size="12" fill="#475569">3</text>
+      <!-- Sports &amp; Outdoors: 1 -->
+      <text x="0" y="260" font-size="13" fill="#1e293b">Sports &amp; Outdoors</text>
+      <rect x="160" y="246" width="125" height="18" rx="4" fill="#ea580c"/>
+      <text x="293" y="260" font-size="12" fill="#475569">1</text>
+      <!-- Pet Supplies: 1 -->
+      <text x="0" y="294" font-size="13" fill="#1e293b">Pet Supplies</text>
+      <rect x="160" y="280" width="125" height="18" rx="4" fill="#92400e"/>
+      <text x="293" y="294" font-size="12" fill="#475569">1</text>
+    </svg>
+  </div>
+
+  <!-- 6. New entrants spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <p style="margin:0 0 4px;font-size:14px;color:#1e293b;font-weight:600;">11 new entrants today — one of the highest NEW counts in this archive's history:</p>
+    <ul>
+      <li><strong>Stickerbox AI Voice-Powered Sticker Maker</strong> — The season's most buzzed AI toy: kids speak an idea, device prints a custom sticker. Viral "screen-free creativity" positioning; selling out since launch.</li>
+      <li><strong>XREAL 1S AR Glasses / X By XREAL a01+</strong> — Consumer AR finally at an accessible price ($299); privacy-first (no camera, no AI) with a 500" projected virtual screen. Shipped July 10; already drawing "will quietly outsell all other AR glasses" commentary.</li>
+      <li><strong>Dreame L40 Ultra Gen 2 Robot Vacuum &amp; Mop</strong> — Privacy-redesigned upgrade (removed RGB camera, added 3DAdapt LiDAR) with 25,000Pa suction. Marks an upgrade cycle alongside the still-recurring L60 Ultra PE.</li>
+      <li><strong>DREO TurboCool Misting Fan 765S</strong> — DREO's summer flagship: claims a 10°F temperature drop, 34 ft/s airflow, 6L tank, 20 dB operation. #1 Household Fan Brand on Amazon U.S. for 3 consecutive years (PR Newswire).</li>
+      <li><strong>Maybelline Lash Sensational Sky High Mascara</strong> — #5 in Amazon Beauty for Q1 2026; TikTok-fueled tinted variants (Burgundy Haze, Green Altitude) driving new color-mascara interest at a sub-$12 price point.</li>
+      <li><strong>Sports Research Organic Collagen Peptides</strong> — Amazon's Choice in collagen peptides; 129,000+ reviews; world's first USDA-organic collagen peptides; driven by the sustained wellness-supplement macro trend.</li>
+      <li><strong>Apple AirTag 2 (4-Pack)</strong> — Re-entering after a 14-day gap; 2nd gen at an all-time low $89 (9to5toys confirmed July 6); summer travel luggage-tracking use case driving renewed purchasing.</li>
+      <li><strong>CELSIUS Assorted Flavors Variety Pack</strong> — #3 U.S. energy drink brand; functional fitness beverage trend (over traditional soda) pushing it into top Amazon Grocery; Peach Vibe is the top-performing SKU.</li>
+      <li><strong>Quest Nutrition Ultimate Variety Pack Protein Bars</strong> — Category-dominant protein bar on Amazon; 14+ flavors, high protein, keto-friendly; entering this archive as GLP-1/protein macro trend drives consistent grocery channel growth.</li>
+      <li><strong>Pilot G2 Premium Gel Pens (12-ct)</strong> — "America's #1 selling gel ink pen" returning to the sellers chart as back-to-school season reaches peak purchasing; Amazon offering 50%+ off vs. brick-and-mortar pricing (NBC Select).</li>
+      <li><strong>SLOOSH 60" Non-Slip Splash Pad Sprinkler</strong> — <em>LOW-CONFIDENCE:</em> appearing in Amazon's Outdoor Water Play Sprinklers best sellers; summer splash-pad category shows strong seasonal demand, but second source was not found this session.</li>
+    </ul>
+  </div>
+
+  <!-- 7. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p><strong>Research approach:</strong> Product discovery used WebSearch queries across Amazon Movers &amp; Shakers, Amazon Best Sellers (Electronics, Home &amp; Kitchen, Beauty &amp; Personal Care, Grocery, Health &amp; Household, Office Products, Toys &amp; Games, Sports &amp; Outdoors, Pet Supplies), Amazon New Releases, and corroborating press/industry coverage. Category rotation today covered 9 of 12 taxonomy categories (skipped: Apparel, Tools &amp; Home Improvement, Baby).</p>
+    <p><strong>Degraded-mode fallback — Amazon direct pages blocked all session:</strong> Every direct Amazon.com page fetch (amazon.com/gp/movers-and-shakers, amazon.com/Best-Sellers/zgbs, and all category variants) returned HTTP 403 Forbidden on every attempt. No Amazon page content was retrieved via WebFetch. All product discovery, verification, and ranking data was derived from WebSearch result snippets and secondary press, trade, and retail-analytics coverage. This is logged per workflow protocol and may mean some products climbing rapidly on Amazon's own internal mover charts were missed entirely.</p>
+    <p><strong>Verification rule:</strong> VERIFIED = corroborated by at least 2 independent sources (Amazon listing URL + at least one independent press article, trade publication, or retail analytics report). LOW-CONFIDENCE = single source found or second source not accessible during this session. No confidence label was silently upgraded. All specific numbers (percentages, prices, review counts, revenue figures) were drawn from source snippets and not inferred or invented.</p>
+    <p><strong>25 distinct source domains checked today:</strong> amazon.com, tomsguide.com, shopping.yahoo.com (Yahoo Shopping), techcrunch.com, vr.org, armchairarcade.com, finance.yahoo.com, the-gadgeteer.com, gizmodo.com, vacuumwars.com, everydayhomecomfort.com, prnewswire.com, consumerreports.org, beautymatter.com, asinsight.com, 9to5toys.com, macrumors.com, cnn.com (CNN Underscored), lexavebrew.com, sixstoreys.com, proteinbar.com, thebodyblueprint.com, nbcnews.com (NBC Select), treelinereview.com, bgr.com</p>
+  </div>
+
+  <!-- 8. Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../July16_2026/">July 16</a></span>
+  </div>
+
+</div>
+</body>
+</html>

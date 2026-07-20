@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-16",
+  "last_updated": "2026-07-20",
   "window_days": 14,
   "products": [
     {
@@ -15,16 +15,16 @@
       "name": "Apple Watch Series 11",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-16",
-      "seen_dates": ["2026-06-17", "2026-06-22", "2026-06-25", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16"]
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-06-17", "2026-06-22", "2026-06-25", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20"]
     },
     {
       "key": "medicube-zero-pore-pad-2",
       "name": "Medicube Zero Pore Pad 2.0",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-16",
-      "seen_dates": ["2026-06-17", "2026-06-22", "2026-07-02", "2026-07-13", "2026-07-16"]
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-06-17", "2026-06-22", "2026-07-02", "2026-07-13", "2026-07-16", "2026-07-20"]
     },
     {
       "key": "pampers-swaddlers-size-5",
@@ -47,8 +47,8 @@
       "name": "Hero Cosmetics Mighty Patch",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-16",
-      "seen_dates": ["2026-06-22", "2026-07-02", "2026-07-16"]
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-06-22", "2026-07-02", "2026-07-16", "2026-07-20"]
     },
     {
       "key": "premier-protein-shake",
@@ -63,24 +63,16 @@
       "name": "Purina Pro Plan Sensitive Skin & Stomach Dry Dog Food",
       "category": "Pet Supplies",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-16",
-      "seen_dates": ["2026-06-22", "2026-07-09", "2026-07-13", "2026-07-16"]
-    },
-    {
-      "key": "toniebox-2-audio-player",
-      "name": "Toniebox 2 Audio Player Bundles",
-      "category": "Toys & Games",
-      "first_seen": "2026-06-25",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-06-25", "2026-06-29", "2026-07-02"]
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-06-22", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20"]
     },
     {
       "key": "liquid-iv-hydration-multiplier",
       "name": "Liquid I.V. Hydration Multiplier",
       "category": "Grocery",
       "first_seen": "2026-06-29",
-      "last_seen": "2026-07-16",
-      "seen_dates": ["2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16"]
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20"]
     },
     {
       "key": "temptations-cat-treats",
@@ -91,22 +83,6 @@
       "seen_dates": ["2026-06-29", "2026-07-02", "2026-07-06"]
     },
     {
-      "key": "crest-3d-whitestrips-professional-effects",
-      "name": "Crest 3D Whitestrips Professional Effects",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-06-29",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-06-29", "2026-07-02"]
-    },
-    {
-      "key": "cascade-platinum-dishwasher-pods",
-      "name": "Cascade Platinum Plus Dishwasher Pods",
-      "category": "Health & Household",
-      "first_seen": "2026-06-29",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-06-29", "2026-07-02"]
-    },
-    {
       "key": "shark-nv356e-navigator-vacuum",
       "name": "Shark NV356E Navigator Lift-Away Upright Vacuum",
       "category": "Home & Kitchen",
@@ -115,52 +91,12 @@
       "seen_dates": ["2026-06-29", "2026-07-02", "2026-07-06"]
     },
     {
-      "key": "hefty-ultra-strong-trash-bags",
-      "name": "Hefty Ultra Strong Trash Bags (13-Gallon)",
-      "category": "Health & Household",
-      "first_seen": "2026-07-02",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-07-02"]
-    },
-    {
       "key": "america-250-anniversary-apparel",
       "name": "America 250 Anniversary Apparel & Merch",
       "category": "Apparel",
       "first_seen": "2026-07-02",
       "last_seen": "2026-07-06",
       "seen_dates": ["2026-07-02", "2026-07-06"]
-    },
-    {
-      "key": "lego-star-wars-smart-play",
-      "name": "LEGO Star Wars SMART Play Sets",
-      "category": "Toys & Games",
-      "first_seen": "2026-07-02",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-07-02"]
-    },
-    {
-      "key": "apple-airtag-4-pack",
-      "name": "Apple AirTag (4-Pack)",
-      "category": "Electronics",
-      "first_seen": "2026-07-02",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-07-02"]
-    },
-    {
-      "key": "cornhole-sets-outdoor-games",
-      "name": "Cornhole Sets (Portable Lawn Game Sets)",
-      "category": "Sports & Outdoors",
-      "first_seen": "2026-07-02",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-07-02"]
-    },
-    {
-      "key": "frogg-toggs-chilly-pad",
-      "name": "FROGG TOGGS Chilly Pad Cooling Towel",
-      "category": "Sports & Outdoors",
-      "first_seen": "2026-07-02",
-      "last_seen": "2026-07-02",
-      "seen_dates": ["2026-07-02"]
     },
     {
       "key": "the-ordinary-niacinamide-serum",
@@ -223,8 +159,8 @@
       "name": "Optimum Nutrition Gold Standard 100% Whey Protein",
       "category": "Health & Household",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13"]
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13", "2026-07-20"]
     },
     {
       "key": "dreo-evaporative-cooler-2026",
@@ -247,8 +183,8 @@
       "name": "JanSport Classic Backpack",
       "category": "Office Products",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-16",
-      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16"]
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20"]
     },
     {
       "key": "silk-sleep-bonnets",
@@ -263,8 +199,8 @@
       "name": "Amazon Echo Dot (5th Generation)",
       "category": "Electronics",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-16",
-      "seen_dates": ["2026-07-09", "2026-07-16"]
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-09", "2026-07-16", "2026-07-20"]
     },
     {
       "key": "kindle-paperwhite-2026",
@@ -279,8 +215,8 @@
       "name": "Dreame L60 Ultra PE Robot Vacuum & Mop",
       "category": "Home & Kitchen",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-16",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16"]
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20"]
     },
     {
       "key": "dreo-portable-air-conditioner-515s",
@@ -300,11 +236,11 @@
     },
     {
       "key": "mead-composition-books",
-      "name": "Mead Composition Books (12-pack)",
+      "name": "Mead Composition Books (6-pack)",
       "category": "Office Products",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-16",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16"]
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20"]
     },
     {
       "key": "inaba-churu-cat-treats",
@@ -367,8 +303,8 @@
       "name": "Bunch O Balloons Tropical Party (ZURU)",
       "category": "Toys & Games",
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-07-13"]
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-13", "2026-07-20"]
     },
     {
       "key": "orgain-organic-vegan-protein",
@@ -431,8 +367,8 @@
       "name": "Owala FreeSip Insulated Water Bottle",
       "category": "Sports & Outdoors",
       "first_seen": "2026-07-16",
-      "last_seen": "2026-07-16",
-      "seen_dates": ["2026-07-16"]
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-16", "2026-07-20"]
     },
     {
       "key": "mattel-toy-story-5-action-figures",
@@ -449,6 +385,94 @@
       "first_seen": "2026-07-16",
       "last_seen": "2026-07-16",
       "seen_dates": ["2026-07-16"]
+    },
+    {
+      "key": "stickerbox-ai-sticker-maker",
+      "name": "Stickerbox AI Voice-Powered Sticker Maker",
+      "category": "Toys & Games",
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-20"]
+    },
+    {
+      "key": "xreal-1s-ar-glasses",
+      "name": "XREAL 1S AR Glasses / X By XREAL a01+",
+      "category": "Electronics",
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-20"]
+    },
+    {
+      "key": "dreame-l40-ultra-gen-2",
+      "name": "Dreame L40 Ultra Gen 2 Robot Vacuum & Mop",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-20"]
+    },
+    {
+      "key": "dreo-turbocool-misting-fan",
+      "name": "DREO TurboCool Misting Fan 765S",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-20"]
+    },
+    {
+      "key": "maybelline-sky-high-mascara",
+      "name": "Maybelline Lash Sensational Sky High Mascara",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-20"]
+    },
+    {
+      "key": "sports-research-collagen-peptides",
+      "name": "Sports Research Organic Collagen Peptides",
+      "category": "Health & Household",
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-20"]
+    },
+    {
+      "key": "apple-airtag-2",
+      "name": "Apple AirTag 2 (4-Pack)",
+      "category": "Electronics",
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-20"]
+    },
+    {
+      "key": "celsius-assorted-variety-pack",
+      "name": "CELSIUS Assorted Flavors Variety Pack (12-ct)",
+      "category": "Grocery",
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-20"]
+    },
+    {
+      "key": "quest-nutrition-protein-bars",
+      "name": "Quest Nutrition Ultimate Variety Pack Protein Bars (12-ct)",
+      "category": "Grocery",
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-20"]
+    },
+    {
+      "key": "pilot-g2-premium-gel-pens",
+      "name": "Pilot G2 Premium Gel Pens (12-ct)",
+      "category": "Office Products",
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-20"]
+    },
+    {
+      "key": "sloosh-splash-pad-sprinkler",
+      "name": "SLOOSH 60\" Non-Slip Splash Pad Sprinkler",
+      "category": "Toys & Games",
+      "first_seen": "2026-07-20",
+      "last_seen": "2026-07-20",
+      "seen_dates": ["2026-07-20"]
     }
   ]
 }
