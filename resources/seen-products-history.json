@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-20",
+  "last_updated": "2026-07-23",
   "window_days": 14,
   "products": [
     {
@@ -15,8 +15,8 @@
       "name": "Apple Watch Series 11",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-20",
-      "seen_dates": ["2026-06-17", "2026-06-22", "2026-06-25", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20"]
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-06-17", "2026-06-22", "2026-06-25", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23"]
     },
     {
       "key": "medicube-zero-pore-pad-2",
@@ -47,8 +47,8 @@
       "name": "Hero Cosmetics Mighty Patch",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-20",
-      "seen_dates": ["2026-06-22", "2026-07-02", "2026-07-16", "2026-07-20"]
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-06-22", "2026-07-02", "2026-07-16", "2026-07-20", "2026-07-23"]
     },
     {
       "key": "premier-protein-shake",
@@ -75,30 +75,6 @@
       "seen_dates": ["2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20"]
     },
     {
-      "key": "temptations-cat-treats",
-      "name": "Temptations Cat Treats",
-      "category": "Pet Supplies",
-      "first_seen": "2026-06-29",
-      "last_seen": "2026-07-06",
-      "seen_dates": ["2026-06-29", "2026-07-02", "2026-07-06"]
-    },
-    {
-      "key": "shark-nv356e-navigator-vacuum",
-      "name": "Shark NV356E Navigator Lift-Away Upright Vacuum",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-06-29",
-      "last_seen": "2026-07-06",
-      "seen_dates": ["2026-06-29", "2026-07-02", "2026-07-06"]
-    },
-    {
-      "key": "america-250-anniversary-apparel",
-      "name": "America 250 Anniversary Apparel & Merch",
-      "category": "Apparel",
-      "first_seen": "2026-07-02",
-      "last_seen": "2026-07-06",
-      "seen_dates": ["2026-07-02", "2026-07-06"]
-    },
-    {
       "key": "the-ordinary-niacinamide-serum",
       "name": "The Ordinary Niacinamide 10% + Zinc 1% Serum",
       "category": "Beauty & Personal Care",
@@ -111,48 +87,8 @@
       "name": "Apple AirPods 4",
       "category": "Electronics",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-09",
-      "seen_dates": ["2026-07-06", "2026-07-09"]
-    },
-    {
-      "key": "oura-ring-4",
-      "name": "Oura Ring 4",
-      "category": "Electronics",
-      "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06",
-      "seen_dates": ["2026-07-06"]
-    },
-    {
-      "key": "jackery-explorer-1000-v2",
-      "name": "Jackery Explorer 1000 V2 Portable Power Station",
-      "category": "Tools & Home Improvement",
-      "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06",
-      "seen_dates": ["2026-07-06"]
-    },
-    {
-      "key": "igloo-trailmate-cooler",
-      "name": "Igloo Trailmate Wheeled Cooler",
-      "category": "Sports & Outdoors",
-      "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06",
-      "seen_dates": ["2026-07-06"]
-    },
-    {
-      "key": "sleep-mouth-tape",
-      "name": "Sleep Mouth Tape (Hostage Tape / ZzzTape / Intake)",
-      "category": "Health & Household",
-      "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06",
-      "seen_dates": ["2026-07-06"]
-    },
-    {
-      "key": "flat-back-earrings",
-      "name": "Flat-Back Sleeper Earrings",
-      "category": "Apparel",
-      "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06",
-      "seen_dates": ["2026-07-06"]
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-23"]
     },
     {
       "key": "optimum-nutrition-gold-standard-whey",
@@ -163,44 +99,20 @@
       "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13", "2026-07-20"]
     },
     {
-      "key": "dreo-evaporative-cooler-2026",
-      "name": "DREO Evaporative Air Swamp Cooler (2026 Upgraded)",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06",
-      "seen_dates": ["2026-07-06"]
-    },
-    {
-      "key": "soundcore-sleep-a20-anker",
-      "name": "Soundcore Sleep A20 by Anker",
-      "category": "Electronics",
-      "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06",
-      "seen_dates": ["2026-07-06"]
-    },
-    {
       "key": "jansport-classic-backpack",
       "name": "JanSport Classic Backpack",
       "category": "Office Products",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-20",
-      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20"]
-    },
-    {
-      "key": "silk-sleep-bonnets",
-      "name": "Silk Sleep Bonnets",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-07-06",
-      "last_seen": "2026-07-06",
-      "seen_dates": ["2026-07-06"]
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23"]
     },
     {
       "key": "amazon-echo-dot-5th-gen",
       "name": "Amazon Echo Dot (5th Generation)",
       "category": "Electronics",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-20",
-      "seen_dates": ["2026-07-09", "2026-07-16", "2026-07-20"]
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-07-09", "2026-07-16", "2026-07-20", "2026-07-23"]
     },
     {
       "key": "kindle-paperwhite-2026",
@@ -215,8 +127,8 @@
       "name": "Dreame L60 Ultra PE Robot Vacuum & Mop",
       "category": "Home & Kitchen",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-20",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20"]
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23"]
     },
     {
       "key": "dreo-portable-air-conditioner-515s",
@@ -239,16 +151,16 @@
       "name": "Mead Composition Books (6-pack)",
       "category": "Office Products",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-20",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20"]
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23"]
     },
     {
       "key": "inaba-churu-cat-treats",
       "name": "INABA Churu Lickable Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-16",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16"]
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23"]
     },
     {
       "key": "crayola-back-to-school-art-set",
@@ -271,8 +183,8 @@
       "name": "LANEIGE Lip Sleeping Mask",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-07-13",
-      "last_seen": "2026-07-13",
-      "seen_dates": ["2026-07-13"]
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-07-13", "2026-07-23"]
     },
     {
       "key": "dreo-tower-fan-2026",
@@ -367,8 +279,8 @@
       "name": "Owala FreeSip Insulated Water Bottle",
       "category": "Sports & Outdoors",
       "first_seen": "2026-07-16",
-      "last_seen": "2026-07-20",
-      "seen_dates": ["2026-07-16", "2026-07-20"]
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-07-16", "2026-07-20", "2026-07-23"]
     },
     {
       "key": "mattel-toy-story-5-action-figures",
@@ -447,8 +359,8 @@
       "name": "CELSIUS Assorted Flavors Variety Pack (12-ct)",
       "category": "Grocery",
       "first_seen": "2026-07-20",
-      "last_seen": "2026-07-20",
-      "seen_dates": ["2026-07-20"]
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-07-20", "2026-07-23"]
     },
     {
       "key": "quest-nutrition-protein-bars",
@@ -473,6 +385,62 @@
       "first_seen": "2026-07-20",
       "last_seen": "2026-07-20",
       "seen_dates": ["2026-07-20"]
+    },
+    {
+      "key": "hydrojug-traveler",
+      "name": "HydroJug Traveler Insulated Tumbler",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-07-23"]
+    },
+    {
+      "key": "needoh-nice-ice-baby",
+      "name": "Schylling NeeDoh Nice Ice Baby",
+      "category": "Toys & Games",
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-07-23"]
+    },
+    {
+      "key": "cerave-moisturizing-cream",
+      "name": "CeraVe Moisturizing Cream",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-07-23"]
+    },
+    {
+      "key": "sunzel-biker-shorts",
+      "name": "Sunzel High Waist Biker Shorts",
+      "category": "Apparel",
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-07-23"]
+    },
+    {
+      "key": "naturewise-vitamin-d3-5000iu",
+      "name": "NatureWise Vitamin D3 5000 IU",
+      "category": "Health & Household",
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-07-23"]
+    },
+    {
+      "key": "sol-de-janeiro-body-badalada-water-lotion",
+      "name": "Sol de Janeiro Body Badalada Water Lotion",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-07-23"]
+    },
+    {
+      "key": "ring-video-doorbell-wired",
+      "name": "Ring Video Doorbell Wired",
+      "category": "Tools & Home Improvement",
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-07-23",
+      "seen_dates": ["2026-07-23"]
     }
   ]
 }
