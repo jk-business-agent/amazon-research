@@ -1,8 +1,158 @@
 {
-  "last_updated": "2026-07-17",
-  "last_processed_sibling_report": "July16_2026",
+  "last_updated": "2026-07-27",
+  "last_processed_sibling_report": "July27_2026",
   "window_days": 14,
   "products": [
+    {
+      "key": "eltamd-uv-clear-sunscreen",
+      "name": "EltaMD UV Clear Broad-Spectrum SPF 46",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "~$37",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "seen_dates": ["2026-07-27"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "cerave-moisturizing-cream",
+      "name": "CeraVe Moisturizing Cream",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "~$17",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "seen_dates": ["2026-07-27"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "celsius-assorted-variety-pack",
+      "name": "CELSIUS Assorted Flavors Variety Pack",
+      "category": "Grocery",
+      "amazon_price_band": "~$29",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "seen_dates": ["2026-07-27"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "naturewise-vitamin-d3",
+      "name": "NatureWise Vitamin D3 5000 IU",
+      "category": "Health & Household",
+      "amazon_price_band": "~$16",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "seen_dates": ["2026-07-27"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "nature-made-creatine-monohydrate",
+      "name": "Nature Made Creatine Monohydrate Powder",
+      "category": "Health & Household",
+      "amazon_price_band": "~$22",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "seen_dates": ["2026-07-27"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "pure-encapsulations-magnesium-glycinate",
+      "name": "Pure Encapsulations Magnesium Glycinate",
+      "category": "Health & Household",
+      "amazon_price_band": "~$35",
+      "first_seen": "2026-07-27",
+      "last_seen": "2026-07-27",
+      "seen_dates": ["2026-07-27"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "hero-mighty-patch",
+      "name": "Hero Cosmetics Mighty Patch",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-27",
+      "seen_dates": ["2026-07-17", "2026-07-27"],
+      "alternatives_count": 1
+    },
+    {
+      "key": "owala-freesip-water-bottle",
+      "name": "Owala FreeSip Insulated Water Bottle",
+      "category": "Sports & Outdoors",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-17",
+      "last_seen": "2026-07-27",
+      "seen_dates": ["2026-07-17", "2026-07-27"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "premier-protein-shake",
+      "name": "Premier Protein Shake",
+      "category": "Grocery",
+      "amazon_price_band": "~$2.50–$2.90/shake (est. $30–35/12-pack)",
+      "first_seen": "2026-06-23",
+      "last_seen": "2026-07-27",
+      "seen_dates": ["2026-06-23", "2026-06-29", "2026-07-07", "2026-07-09", "2026-07-13", "2026-07-17", "2026-07-27"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "liquid-iv-hydration-multiplier",
+      "name": "Liquid I.V. Hydration Multiplier",
+      "category": "Grocery",
+      "amazon_price_band": "~$1.00–$1.25/packet",
+      "first_seen": "2026-06-29",
+      "last_seen": "2026-07-27",
+      "seen_dates": ["2026-06-29", "2026-07-07", "2026-07-09", "2026-07-13", "2026-07-17", "2026-07-27"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "purina-pro-plan-dry-dog-food",
+      "name": "Purina Pro Plan Sensitive Skin & Stomach Dog Food",
+      "category": "Pet Supplies",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-09",
+      "last_seen": "2026-07-27",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-17", "2026-07-27"],
+      "alternatives_count": 3
+    },
+    {
+      "key": "inaba-churu-cat-treats",
+      "name": "INABA Churu Lickable Purée Cat Treats",
+      "category": "Pet Supplies",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-09",
+      "last_seen": "2026-07-27",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-17", "2026-07-27"],
+      "alternatives_count": 1
+    },
+    {
+      "key": "mead-composition-books",
+      "name": "Mead Composition Books (12-Pack)",
+      "category": "Office Products",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-09",
+      "last_seen": "2026-07-27",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-17", "2026-07-27"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "jansport-classic-backpack",
+      "name": "JanSport Classic Backpack",
+      "category": "Office Products",
+      "amazon_price_band": "under $15",
+      "first_seen": "2026-07-07",
+      "last_seen": "2026-07-27",
+      "seen_dates": ["2026-07-07", "2026-07-09", "2026-07-13", "2026-07-17", "2026-07-27"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "dreame-l60-robot-vacuum",
+      "name": "Dreame L60 Ultra PE Robot Vacuum & Mop",
+      "category": "Home & Kitchen",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-07-09",
+      "last_seen": "2026-07-27",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-17", "2026-07-27"],
+      "alternatives_count": 1
+    },
     {
       "key": "crayola-crayons-bulk-24",
       "name": "Crayola Crayons Bulk (24 Packs)",
@@ -34,16 +184,6 @@
       "alternatives_count": 2
     },
     {
-      "key": "hero-mighty-patch",
-      "name": "Hero Cosmetics Mighty Patch",
-      "category": "Beauty & Personal Care",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-07-17",
-      "last_seen": "2026-07-17",
-      "seen_dates": ["2026-07-17"],
-      "alternatives_count": 1
-    },
-    {
       "key": "bic-mechanical-pencils",
       "name": "BIC Xtra-Smooth Mechanical Pencils",
       "category": "Office Products",
@@ -52,16 +192,6 @@
       "last_seen": "2026-07-17",
       "seen_dates": ["2026-07-17"],
       "alternatives_count": 2
-    },
-    {
-      "key": "owala-freesip-water-bottle",
-      "name": "Owala FreeSip Insulated Water Bottle",
-      "category": "Sports & Outdoors",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-07-17",
-      "last_seen": "2026-07-17",
-      "seen_dates": ["2026-07-17"],
-      "alternatives_count": 3
     },
     {
       "key": "mattel-toy-story-5",
@@ -174,26 +304,6 @@
       "alternatives_count": 0
     },
     {
-      "key": "premier-protein-shake",
-      "name": "Premier Protein Shake",
-      "category": "Grocery",
-      "amazon_price_band": "~$2.50–$2.90/shake (est. $30–35/12-pack)",
-      "first_seen": "2026-06-23",
-      "last_seen": "2026-07-17",
-      "seen_dates": ["2026-06-23", "2026-06-29", "2026-07-07", "2026-07-09", "2026-07-13", "2026-07-17"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "liquid-iv-hydration-multiplier",
-      "name": "Liquid I.V. Hydration Multiplier",
-      "category": "Grocery",
-      "amazon_price_band": "~$1.00–$1.25/packet",
-      "first_seen": "2026-06-29",
-      "last_seen": "2026-07-17",
-      "seen_dates": ["2026-06-29", "2026-07-07", "2026-07-09", "2026-07-13", "2026-07-17"],
-      "alternatives_count": 2
-    },
-    {
       "key": "optimum-nutrition-gold-standard-whey",
       "name": "Optimum Nutrition Gold Standard 100% Whey Protein",
       "category": "Health & Household",
@@ -201,176 +311,6 @@
       "first_seen": "2026-07-07",
       "last_seen": "2026-07-13",
       "seen_dates": ["2026-07-07", "2026-07-09", "2026-07-13"],
-      "alternatives_count": 3
-    },
-    {
-      "key": "mead-composition-books",
-      "name": "Mead Composition Books (12-Pack)",
-      "category": "Office Products",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-07-09",
-      "last_seen": "2026-07-17",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-17"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "purina-pro-plan-dry-dog-food",
-      "name": "Purina Pro Plan Sensitive Skin & Stomach Dog Food",
-      "category": "Pet Supplies",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-07-09",
-      "last_seen": "2026-07-17",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-17"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "inaba-churu-cat-treats",
-      "name": "INABA Churu Lickable Purée Cat Treats",
-      "category": "Pet Supplies",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-07-09",
-      "last_seen": "2026-07-17",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-17"],
-      "alternatives_count": 1
-    },
-    {
-      "key": "jansport-classic-backpack",
-      "name": "JanSport Classic Backpack",
-      "category": "Office Products",
-      "amazon_price_band": "under $15",
-      "first_seen": "2026-07-07",
-      "last_seen": "2026-07-17",
-      "seen_dates": ["2026-07-07", "2026-07-09", "2026-07-13", "2026-07-17"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "dreame-l60-robot-vacuum",
-      "name": "Dreame L60 Ultra PE Robot Vacuum & Mop",
-      "category": "Home & Kitchen",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-07-09",
-      "last_seen": "2026-07-17",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-17"],
-      "alternatives_count": 1
-    },
-    {
-      "key": "sleep-mouth-tape",
-      "name": "Sleep Mouth Tape (Hostage Tape / ZzzTape / Intake)",
-      "category": "Health & Household",
-      "amazon_price_band": "~$10–$20 per pack",
-      "first_seen": "2026-07-07",
-      "last_seen": "2026-07-07",
-      "seen_dates": ["2026-07-07"],
-      "alternatives_count": 3
-    },
-    {
-      "key": "flat-back-sleeper-earrings",
-      "name": "Flat-Back \"Sleeper\" Earrings",
-      "category": "Apparel",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-07-07",
-      "last_seen": "2026-07-07",
-      "seen_dates": ["2026-07-07"],
-      "alternatives_count": 3
-    },
-    {
-      "key": "silk-sleep-bonnets",
-      "name": "Silk Sleep Bonnets",
-      "category": "Beauty & Personal Care",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-07-07",
-      "last_seen": "2026-07-07",
-      "seen_dates": ["2026-07-07"],
-      "alternatives_count": 3
-    },
-    {
-      "key": "jackery-explorer-1000-v2",
-      "name": "Jackery Explorer 1000 V2 Portable Power Station",
-      "category": "Tools & Home Improvement",
-      "amazon_price_band": "$399–$450 on sale (regular $799)",
-      "first_seen": "2026-07-07",
-      "last_seen": "2026-07-07",
-      "seen_dates": ["2026-07-07"],
-      "alternatives_count": 3
-    },
-    {
-      "key": "igloo-trailmate-wheeled-cooler",
-      "name": "Igloo Trailmate Wheeled Cooler",
-      "category": "Sports & Outdoors",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-07-07",
-      "last_seen": "2026-07-07",
-      "seen_dates": ["2026-07-07"],
-      "alternatives_count": 3
-    },
-    {
-      "key": "america-250-anniversary-apparel",
-      "name": "America 250 Anniversary Apparel & Merch",
-      "category": "Apparel",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-07-07",
-      "last_seen": "2026-07-07",
-      "seen_dates": ["2026-07-07"],
-      "alternatives_count": 3
-    },
-    {
-      "key": "dreo-evaporative-air-cooler",
-      "name": "DREO Evaporative Air Swamp Cooler (2026 Upgraded)",
-      "category": "Home & Kitchen",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-07-07",
-      "last_seen": "2026-07-07",
-      "seen_dates": ["2026-07-07"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "temptations-cat-treats",
-      "name": "Temptations Classic Cat Treats",
-      "category": "Pet Supplies",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-06-29",
-      "last_seen": "2026-07-07",
-      "seen_dates": ["2026-06-29", "2026-07-07"],
-      "alternatives_count": 3
-    },
-    {
-      "key": "the-ordinary-niacinamide-serum",
-      "name": "The Ordinary Niacinamide 10% + Zinc 1% Serum",
-      "category": "Beauty & Personal Care",
-      "amazon_price_band": "~$10",
-      "first_seen": "2026-07-09",
-      "last_seen": "2026-07-09",
-      "seen_dates": ["2026-07-09"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "pastel-highlighter-gel-pen-sets",
-      "name": "Pastel Highlighter & Gel Pen Sets (39-piece bundles)",
-      "category": "Office Products",
-      "amazon_price_band": "under $20",
-      "first_seen": "2026-07-09",
-      "last_seen": "2026-07-09",
-      "seen_dates": ["2026-07-09"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "dreo-portable-ac-515s",
-      "name": "DREO Portable Air Conditioner 515S",
-      "category": "Home & Kitchen",
-      "amazon_price_band": "price not confirmed",
-      "first_seen": "2026-07-09",
-      "last_seen": "2026-07-09",
-      "seen_dates": ["2026-07-09"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "crayola-super-art-coloring-kit",
-      "name": "Crayola Super Art Coloring Kit",
-      "category": "Toys & Games",
-      "amazon_price_band": "~$25",
-      "first_seen": "2026-07-09",
-      "last_seen": "2026-07-09",
-      "seen_dates": ["2026-07-09"],
       "alternatives_count": 3
     }
   ]
