@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-30",
+  "last_updated": "2026-08-03",
   "window_days": 14,
   "products": [
     {
@@ -7,8 +7,8 @@
       "name": "Apple AirPods Pro 3",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-07-30",
-      "seen_dates": ["2026-06-17", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-13", "2026-07-16", "2026-07-27", "2026-07-30"]
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-06-17", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-13", "2026-07-16", "2026-07-27", "2026-07-30", "2026-08-03"]
     },
     {
       "key": "apple-watch-series-11",
@@ -23,16 +23,16 @@
       "name": "Hero Cosmetics Mighty Patch",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-30",
-      "seen_dates": ["2026-06-22", "2026-07-02", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30"]
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-06-22", "2026-07-02", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03"]
     },
     {
       "key": "premier-protein-shake",
       "name": "Premier Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-30",
-      "seen_dates": ["2026-06-22", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-27", "2026-07-30"]
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-06-22", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-27", "2026-07-30", "2026-08-03"]
     },
     {
       "key": "liquid-iv-hydration-multiplier",
@@ -63,8 +63,8 @@
       "name": "JanSport Classic Backpack",
       "category": "Office Products",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-07-30",
-      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30"]
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03"]
     },
     {
       "key": "amazon-echo-dot-5th-gen",
@@ -87,16 +87,16 @@
       "name": "Mead Composition Books (6-pack)",
       "category": "Office Products",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-30",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30"]
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03"]
     },
     {
       "key": "inaba-churu-cat-treats",
       "name": "INABA Churu Lickable Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-07-30",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30"]
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03"]
     },
     {
       "key": "laneige-lip-sleeping-mask",
@@ -119,24 +119,24 @@
       "name": "Purina Pro Plan Sensitive Skin & Stomach Dry Dog Food",
       "category": "Pet Supplies",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-07-30",
-      "seen_dates": ["2026-06-22", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-27", "2026-07-30"]
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-06-22", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-27", "2026-07-30", "2026-08-03"]
     },
     {
       "key": "owala-freesip-water-bottle",
       "name": "Owala FreeSip Insulated Water Bottle",
       "category": "Sports & Outdoors",
       "first_seen": "2026-07-16",
-      "last_seen": "2026-07-30",
-      "seen_dates": ["2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30"]
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03"]
     },
     {
       "key": "celsius-assorted-variety-pack",
       "name": "CELSIUS Assorted Flavors Variety Pack (12-ct)",
       "category": "Grocery",
       "first_seen": "2026-07-20",
-      "last_seen": "2026-07-30",
-      "seen_dates": ["2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30"]
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03"]
     },
     {
       "key": "hydrojug-traveler",
@@ -159,8 +159,8 @@
       "name": "CeraVe Moisturizing Cream",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-07-23",
-      "last_seen": "2026-07-30",
-      "seen_dates": ["2026-07-23", "2026-07-27", "2026-07-30"]
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03"]
     },
     {
       "key": "sunzel-biker-shorts",
@@ -199,8 +199,8 @@
       "name": "Beats Solo 4 Wireless Headphones",
       "category": "Electronics",
       "first_seen": "2026-07-27",
-      "last_seen": "2026-07-30",
-      "seen_dates": ["2026-07-27", "2026-07-30"]
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-07-27", "2026-07-30", "2026-08-03"]
     },
     {
       "key": "eltamd-uv-clear-spf-46",
@@ -231,8 +231,8 @@
       "name": "Medicube Zero Pore Pad 2.0",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-07-30",
-      "last_seen": "2026-07-30",
-      "seen_dates": ["2026-07-30"]
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-07-30", "2026-08-03"]
     },
     {
       "key": "anua-pdrn-hyaluronic-acid-cream",
@@ -257,6 +257,70 @@
       "first_seen": "2026-07-30",
       "last_seen": "2026-07-30",
       "seen_dates": ["2026-07-30"]
+    },
+    {
+      "key": "apple-macbook-air-m5-2026",
+      "name": "Apple MacBook Air M5 (2026) — 13-inch",
+      "category": "Electronics",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-08-03"]
+    },
+    {
+      "key": "pokemon-tcg-booster-packs",
+      "name": "Pokémon TCG Booster Packs (Scarlet & Violet)",
+      "category": "Toys & Games",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-08-03"]
+    },
+    {
+      "key": "squishy-kawaii-party-favor-toys-30-pack",
+      "name": "Squishy Kawaii Party Favor Toys (30-Pack)",
+      "category": "Toys & Games",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-08-03"]
+    },
+    {
+      "key": "bic-xtra-smooth-mechanical-pencils-40-count",
+      "name": "BIC Xtra-Smooth Mechanical Pencils (40-Count)",
+      "category": "Office Products",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-08-03"]
+    },
+    {
+      "key": "nespresso-capsules-vertuo-variety-pack",
+      "name": "Nespresso Capsules Vertuo Variety Pack (30-ct)",
+      "category": "Grocery",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-08-03"]
+    },
+    {
+      "key": "purina-fortiflora-probiotic-dogs",
+      "name": "Purina FortiFlora Probiotic for Dogs (30-ct)",
+      "category": "Pet Supplies",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-08-03"]
+    },
+    {
+      "key": "earth-rated-dog-poop-bags-270-count",
+      "name": "Earth Rated Dog Poop Bags (270-Count)",
+      "category": "Pet Supplies",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-08-03"]
+    },
+    {
+      "key": "ecovacs-deebot-t80s-omni",
+      "name": "ECOVACS DEEBOT T80S Omni Robot Vacuum & Mop",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-08-03",
+      "last_seen": "2026-08-03",
+      "seen_dates": ["2026-08-03"]
     }
   ]
 }
