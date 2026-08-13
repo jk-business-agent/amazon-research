@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-10",
+  "last_updated": "2026-08-13",
   "window_days": 14,
   "products": [
     {
@@ -7,32 +7,24 @@
       "name": "Apple AirPods Pro 3",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-06-17", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-13", "2026-07-16", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10"]
-    },
-    {
-      "key": "apple-watch-series-11",
-      "name": "Apple Watch Series 11",
-      "category": "Electronics",
-      "first_seen": "2026-06-17",
-      "last_seen": "2026-07-27",
-      "seen_dates": ["2026-06-17", "2026-06-22", "2026-06-25", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27"]
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-06-17", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-13", "2026-07-16", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13"]
     },
     {
       "key": "hero-cosmetics-mighty-patch",
       "name": "Hero Cosmetics Mighty Patch",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-08-06",
-      "seen_dates": ["2026-06-22", "2026-07-02", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06"]
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-06-22", "2026-07-02", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-13"]
     },
     {
       "key": "premier-protein-shake",
       "name": "Premier Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-06-22", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10"]
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-06-22", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13"]
     },
     {
       "key": "liquid-iv-hydration-multiplier",
@@ -47,80 +39,48 @@
       "name": "JanSport Classic Backpack",
       "category": "Office Products",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10"]
-    },
-    {
-      "key": "amazon-echo-dot-5th-gen",
-      "name": "Amazon Echo Dot (5th Generation)",
-      "category": "Electronics",
-      "first_seen": "2026-07-09",
-      "last_seen": "2026-07-30",
-      "seen_dates": ["2026-07-09", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30"]
-    },
-    {
-      "key": "dreame-l60-ultra-pe-robot-vacuum",
-      "name": "Dreame L60 Ultra PE Robot Vacuum & Mop",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-07-09",
-      "last_seen": "2026-07-30",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30"]
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13"]
     },
     {
       "key": "mead-composition-books",
       "name": "Mead Composition Books (6-pack)",
       "category": "Office Products",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10"]
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13"]
     },
     {
       "key": "inaba-churu-cat-treats",
       "name": "INABA Churu Lickable Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10"]
-    },
-    {
-      "key": "samsung-galaxy-tab-a11",
-      "name": "Samsung Galaxy Tab A11+ (2026)",
-      "category": "Electronics",
-      "first_seen": "2026-07-13",
-      "last_seen": "2026-07-27",
-      "seen_dates": ["2026-07-13", "2026-07-27"]
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13"]
     },
     {
       "key": "purina-pro-plan-sensitive-skin-dry-dog-food",
       "name": "Purina Pro Plan Sensitive Skin & Stomach Dry Dog Food",
       "category": "Pet Supplies",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-08-06",
-      "seen_dates": ["2026-06-22", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06"]
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-06-22", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-13"]
     },
     {
       "key": "owala-freesip-water-bottle",
       "name": "Owala FreeSip Insulated Water Bottle",
       "category": "Sports & Outdoors",
       "first_seen": "2026-07-16",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10"]
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13"]
     },
     {
       "key": "celsius-assorted-variety-pack",
       "name": "CELSIUS Assorted Flavors Variety Pack (12-ct)",
       "category": "Grocery",
       "first_seen": "2026-07-20",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10"]
-    },
-    {
-      "key": "needoh-nice-ice-baby",
-      "name": "Schylling NeeDoh Nice Ice Baby",
-      "category": "Toys & Games",
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-30",
-      "seen_dates": ["2026-07-23", "2026-07-30"]
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13"]
     },
     {
       "key": "cerave-moisturizing-cream",
@@ -131,20 +91,20 @@
       "seen_dates": ["2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03"]
     },
     {
+      "key": "needoh-nice-ice-baby",
+      "name": "Schylling NeeDoh Nice Ice Baby",
+      "category": "Toys & Games",
+      "first_seen": "2026-07-23",
+      "last_seen": "2026-07-30",
+      "seen_dates": ["2026-07-23", "2026-07-30"]
+    },
+    {
       "key": "sunzel-biker-shorts",
       "name": "Sunzel High Waist Biker Shorts",
       "category": "Apparel",
       "first_seen": "2026-07-23",
       "last_seen": "2026-07-30",
       "seen_dates": ["2026-07-23", "2026-07-30"]
-    },
-    {
-      "key": "naturewise-vitamin-d3-5000iu",
-      "name": "NatureWise Vitamin D3 5000 IU",
-      "category": "Health & Household",
-      "first_seen": "2026-07-23",
-      "last_seen": "2026-07-27",
-      "seen_dates": ["2026-07-23", "2026-07-27"]
     },
     {
       "key": "beats-solo-4-wireless-headphones",
@@ -155,36 +115,12 @@
       "seen_dates": ["2026-07-27", "2026-07-30", "2026-08-03"]
     },
     {
-      "key": "eltamd-uv-clear-spf-46",
-      "name": "EltaMD UV Clear Face Sunscreen SPF 46",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
-      "seen_dates": ["2026-07-27"]
-    },
-    {
-      "key": "nature-made-creatine-monohydrate",
-      "name": "Nature Made Micronized Creatine Monohydrate Powder",
-      "category": "Health & Household",
-      "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
-      "seen_dates": ["2026-07-27"]
-    },
-    {
-      "key": "pure-encapsulations-magnesium-glycinate",
-      "name": "Pure Encapsulations Magnesium Glycinate",
-      "category": "Health & Household",
-      "first_seen": "2026-07-27",
-      "last_seen": "2026-07-27",
-      "seen_dates": ["2026-07-27"]
-    },
-    {
       "key": "medicube-zero-pore-pad-2-0",
       "name": "Medicube Zero Pore Pad 2.0",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-07-30",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10"]
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13"]
     },
     {
       "key": "anua-pdrn-hyaluronic-acid-cream",
@@ -207,8 +143,24 @@
       "name": "Crayola Colored Pencils (36ct)",
       "category": "Toys & Games",
       "first_seen": "2026-07-30",
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-07-30", "2026-08-13"]
+    },
+    {
+      "key": "amazon-echo-dot-5th-gen",
+      "name": "Amazon Echo Dot (5th Generation)",
+      "category": "Electronics",
+      "first_seen": "2026-07-09",
       "last_seen": "2026-07-30",
-      "seen_dates": ["2026-07-30"]
+      "seen_dates": ["2026-07-09", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30"]
+    },
+    {
+      "key": "dreame-l60-ultra-pe-robot-vacuum",
+      "name": "Dreame L60 Ultra PE Robot Vacuum & Mop",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-07-09",
+      "last_seen": "2026-07-30",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30"]
     },
     {
       "key": "apple-macbook-air-m5-2026",
@@ -279,8 +231,8 @@
       "name": "Apple AirTag 2nd Generation (4-Pack)",
       "category": "Electronics",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-08-06", "2026-08-10"]
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-08-06", "2026-08-10", "2026-08-13"]
     },
     {
       "key": "core-power-fairlife-elite-protein-shake",
@@ -319,8 +271,8 @@
       "name": "Bentgo Chill Kids Bento Box",
       "category": "Home & Kitchen",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-08-06", "2026-08-10"]
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-08-06", "2026-08-10", "2026-08-13"]
     },
     {
       "key": "bose-quietcomfort-headphones",
@@ -335,8 +287,8 @@
       "name": "COSRX Advanced Snail 96 Mucin Power Essence",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-08-10"]
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-08-10", "2026-08-13"]
     },
     {
       "key": "crocs-classic-clogs",
@@ -385,6 +337,54 @@
       "first_seen": "2026-08-10",
       "last_seen": "2026-08-10",
       "seen_dates": ["2026-08-10"]
+    },
+    {
+      "key": "biodance-bio-collagen-real-deep-mask",
+      "name": "Biodance Bio-Collagen Real Deep Mask (4-Pack)",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-08-13"]
+    },
+    {
+      "key": "ecovacs-deebot-t90-pro-omni",
+      "name": "ECOVACS DEEBOT T90 PRO Omni Robot Vacuum & Mop",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-08-13"]
+    },
+    {
+      "key": "lmnt-zero-sugar-electrolytes",
+      "name": "LMNT Zero Sugar Electrolytes",
+      "category": "Health & Household",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-08-13"]
+    },
+    {
+      "key": "niimbot-d110-mini-label-maker",
+      "name": "NIIMBOT D110 Mini Label Maker",
+      "category": "Office Products",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-08-13"]
+    },
+    {
+      "key": "levoit-air-purifier-core-300",
+      "name": "LEVOIT Air Purifier Core 300",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-08-13"]
+    },
+    {
+      "key": "cosrx-low-ph-good-morning-gel-cleanser",
+      "name": "COSRX Low pH Good Morning Gel Cleanser",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-08-13",
+      "last_seen": "2026-08-13",
+      "seen_dates": ["2026-08-13"]
     }
   ]
 }
