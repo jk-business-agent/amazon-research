@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Top Sellers — August 17, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 150px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
+  .card-meta { font-size: 12.5px; color: var(--muted); }
+  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .card-sources a { color: #2563eb; text-decoration: none; }
+
+  .chart-wrap { padding: 10px 6px; }
+
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header-band">
+    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <div class="date">August 17, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 24 sources checked</span>
+  </div>
+
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">Today's report is dominated by two mid-August signals. First, Apple's back-to-school sale on Amazon is the deepest of the year: AirPods 4 at $99 (down from $129) and Apple Watch Series 11 42mm GPS at $299 (down $100) are both matching or beating Prime Day pricing, per AppleInsider and 9to5toys. Second, the BISSELL Little Green portable carpet cleaner debuts as the day's headline NEW entrant — press reports describe it selling more than 20,000 units on Amazon in a single month, one of the strongest viral-cleaning stories on the platform in 2026. Sony's brand-new WH-1000XM6 also enters at $398 (13% off), pricing close to used units this back-to-school season. Broader signals: K-beauty holds its Amazon shelf (Medicube, COSRX Advanced Snail, Biodance), CRZ YOGA emerges as the platform's leading Lululemon-alternative activewear brand at ~25% of the price, and creatine keeps compounding — sales +65% YoY to $241.7M, with Nutricost holding Amazon's #1 creatine slot at 60,000+ reviews. Note: Amazon.com pages and the majority of secondary editorial sites (CNN, NBC News, Yahoo, TomsGuide, ABC News) were blocked by the network egress proxy; this report is built entirely from WebSearch snippets across 24 domains, so specific numeric figures are quoted directly from those snippets rather than from full-page reads.</div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">20</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="num">10</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">10</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">20</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">0</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">8</div><div class="label">Categories</div></div>
+  </div>
+
+  <h2 class="section-title">Top Movers</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">BISSELL Little Green Portable Carpet Cleaner</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Press this week reports the compact spot-cleaner has sold more than 20,000 units on Amazon in the last month, extending a multi-year viral pet-stain story into back-to-school season as parents restock cleaning gear ahead of muddy fall shoes and daycare messes. Yahoo Lifestyle describes it as a "social media sensation with over one million sold" over the product's life.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — sustained viral demand plus back-to-school timing keeps household-mess buyers reaching for the cheapest deep-cleaner on the platform.</div>
+      <div class="card-meta">$81–$124 (Prime Day price to list; recent Amazon pricing per Yahoo/AOL)</div>
+      <div class="card-sources">Sources: <a href="https://www.yahoo.com/lifestyle/home-garden/cleaning/article/see-spot-go-the-viral-124-bissell-little-green-is-a-rare-85-ahead-of-black-friday-144214175.html">yahoo.com</a> (2026-08-17), <a href="https://www.aol.com/lifestyle/hurry-viral-bissell-little-green-140000090.html">aol.com</a> (2026-08-17), <a href="https://www.tomsguide.com/sales-events/surprise-bissells-little-green-machine-is-on-sale-for-dollar81-this-prime-day">tomsguide.com</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirPods 4</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Amazon's back-to-school promotion has AirPods 4 at $99 shipped, matching the year's lowest price and undercutting Prime Day, 4th of July, and Memorial Day pricing per 9to5toys. PopSci and PCWorld both note the model holds Amazon's #1 Best Seller badge for wireless earbuds with over 44,200 reviews at a 4.5-star average.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Apple's late-summer discount cycle plus the pre-iPhone 18 ecosystem-refresh window drives the highest AirPods 4 order volume of the year.</div>
+      <div class="card-meta">$99 (base), $119–$134.99 (ANC model)</div>
+      <div class="card-sources">Sources: <a href="https://9to5toys.com/2026/08/04/best-airpods-august-deals-pro-3-max-2/">9to5toys.com</a> (2026-08-17), <a href="https://www.popsci.com/gear/amazon-back-to-school-headphones-earbuds-sony-bose-beats-deal/">popsci.com</a> (2026-08-17), <a href="https://appleinsider.com/articles/26/08/11/amazons-99-airpods-4-189-airpods-pro-3-449-airpods-max-2-deals-are-still-going-strong">appleinsider.com</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Sony WH-1000XM6 Headphones</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Sony's brand-new flagship noise-canceler is on Amazon at $398, a 13% discount off the $460 list — Gizmodo notes the price puts it "close to used ones this back-to-school season." PCGuide confirms the sale spans all five colorways (Black, Midnight Blue, Platinum Silver, Sand Pink, Sandstone), pointing to broad channel availability rather than a stock-clearing dump.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — first meaningful Amazon markdown on a still-new flagship, arriving in the peak college back-to-school buying window.</div>
+      <div class="card-meta">$398 (down from $460)</div>
+      <div class="card-sources">Sources: <a href="https://gizmodo.com/sony-wh-1000xm6-headphones-are-now-priced-close-to-used-ones-this-back-to-school-season-on-amazon-2000797505">gizmodo.com</a> (2026-08-17), <a href="https://www.pcguide.com/deals/sony-wh-1000xm6-get-a-big-price-cut-with-this-amazon-deal/">pcguide.com</a> (2026-08-17), <a href="https://consequence.net/2026/08/best-headphone-deals-august-2026/">consequence.net</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple Watch Series 11</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The base GPS-only 42mm Apple Watch Series 11 is $299 at Amazon (down $100), with the 46mm at $329 — 9to5toys reports this matches the year's lowest pricing since Prime Day, and NBC Selected lists a similar 25% cut running at "major retailers." A separate deal cycle for Cellular models has been hitting best-ever prices at up to $180 off.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — deepest pre-fall Watch discount landing right as college and high-school buyers upgrade fitness/notification wearables.</div>
+      <div class="card-meta">$299 (42mm GPS) — $180 off (Cellular)</div>
+      <div class="card-sources">Sources: <a href="https://9to5toys.com/2026/08/03/affordable-apple-watch-series-11-deals/">9to5toys.com</a> (2026-08-17), <a href="https://www.nbcnews.com/select/shopping/apple-watch-series-11-deal-of-the-day-2026-rcna591972">nbcnews.com</a> (2026-08-17), <a href="https://9to5toys.com/2026/07/24/apple-watch-series-11-cell-models-best-amazon-prices-ever/">9to5toys.com</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Ninja CREAMi Scoop &amp; Swirl (NC701)</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The 13-in-1 ice-cream/soft-serve maker is $279 shipped at Amazon — 9to5toys calls it a 20% markdown ($71 off) and the second-lowest Amazon price of 2026 (an April flash dip to $200 briefly went lower). TechRadar frames it as "hugely popular" — the Swirl variant continues the CREAMi line's viral run as protein-ice-cream TikTok content keeps recruiting new buyers.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — late-summer heat plus enduring high-protein-dessert social content, but the platform-lowest-ever price already came and went in April.</div>
+      <div class="card-meta">$279 (down from $350 list)</div>
+      <div class="card-sources">Sources: <a href="https://9to5toys.com/2026/08/05/ninjas-creami-scoop-swirl-ice-cream-maker-279/">9to5toys.com</a> (2026-08-17), <a href="https://www.techradar.com/home/small-appliances/the-hugely-popular-ninja-swirl-by-creami-drops-to-its-lowest-ever-price-at-amazon">techradar.com</a> (2026-08-17), <a href="https://9to5toys.com/2026/06/12/summer-ninja-creami-swirl-ice-cream-maker-sale/">9to5toys.com</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Nutricost Creatine Monohydrate Micronized Powder</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Garage Gym Reviews, StreetsOfKante and CreatineFinders all cite Nutricost as Amazon's #1 selling creatine, with 60,000+ reviews at 4.6 stars and a per-serving cost of about $0.23. The category itself is the fastest-growing supplement on the platform — SmartScout puts creatine sales +65% YoY at $241.7M (up from $146.6M), reflecting creatine's mainstream crossover from gym-culture niche to general wellness, especially among women.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — structural category expansion plus a subscription-friendly product with monthly repurchase economics.</div>
+      <div class="card-meta">Approx. $23 for 100 servings ($0.23/serving per cited review)</div>
+      <div class="card-sources">Sources: <a href="https://www.garagegymreviews.com/nutricost-creatine-review">garagegymreviews.com</a> (2026-08-17), <a href="https://creatinefinders.com/review/nutricost-creatine">creatinefinders.com</a> (2026-08-17), <a href="https://www.smartscout.com/blog/women-are-fueling-creatines-biggest-year-in-three-decades-and-amazons-data-shows-exactly-why">smartscout.com</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Ray-Ban Meta Wayfarer Smart Glasses</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Amazon's Best Sellers "Wearable Tech Glasses" category is topped by Ray-Ban Meta Wayfarer (12MP camera, open-ear audio, video capture), with ASINSight's real-sales report citing ~9,359 weekly Amazon searches — the strongest signal yet that AI smart-glasses have graduated from tech-blog curiosity into a genuine mainstream wearable category on Amazon.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — early-stage category on a steep adoption curve; Meta continues to layer AI features and Meta rumored a Gen 3 refresh, which typically pulls demand forward on Gen 2.</div>
+      <div class="card-meta">Price not confirmed (retail typically $299–$379)</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Best-Sellers-Electronics-Smart-Glasses/zgbs/electronics/10048708011">amazon.com</a> (2026-08-17, from search-result snippet), <a href="https://www.asinsight.com/report/US/ray-ban">asinsight.com</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">CRZ YOGA Butterluxe Leggings</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">CRZ YOGA is Amazon's leading Lululemon-alternative activewear brand — WeTried and TheGuysList both name it the #1 dupe pick, delivering the same "buttery-soft" fabric feel at roughly a quarter of the price ($28–$45 vs. Lululemon's $118). ASINSight's June 2026 report puts one CRZ Yoga capri legging SKU at an estimated 10,000 monthly sales. Back-to-school leggings buying tends to peak in the second half of August as college students restock athleisure.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — cost-conscious consumers keep trading down from premium activewear, and Amazon's ratings/review moat compounds for CRZ YOGA specifically.</div>
+      <div class="card-meta">$28–$45 per pair</div>
+      <div class="card-sources">Sources: <a href="https://wetried.it/10-best-lululemon-alternatives/">wetried.it</a> (2026-08-17), <a href="https://theguyslist.com/amazon-finds/best-lululemon-dupes-on-amazon/">theguyslist.com</a> (2026-08-17), <a href="https://www.asinsight.com/report/US/crz-yoga-capri-leggings">asinsight.com</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Stanley Quencher H2.0 FlowState Tumbler</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Amazon is running up to 35% off Stanley water bottles this month per Tom's Guide, with the 64-oz Quencher H2.0 hitting $35.99 in SlickDeals-tracked pricing. The Quencher hits back-to-school with a Pro Tour variant at $57 aimed at kids; the brand has ceded Amazon's #1 tumbler slot to HydroJug's Traveler earlier this summer but remains a consistent volume anchor in the category.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — deep discounts help hold share against the HydroJug Traveler; still a top-3 tumbler on Amazon by volume.</div>
+      <div class="card-meta">$18–$57 depending on size/model</div>
+      <div class="card-sources">Sources: <a href="https://www.tomsguide.com/wellness/fitness/amazon-has-stanley-water-bottles-on-sale-from-usd18-heres-7-back-to-school-deals-worth-shopping-now">tomsguide.com</a> (2026-08-17), <a href="https://slickdeals.net/f/18680281-35-99-64-oz-stanley-quencher-h2-0-flowstate-stainless-steel-water-bottle-at-amazon">slickdeals.net</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Nintendo Switch 2 Console &amp; Accessories</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Amazon's Best Sellers "Nintendo Switch 2 Accessories" page is packed today with the Belkin Nintendo Switch 2 Case with AirTag Holder, JSAUX 3-Pack Ultra HD Screen Protector, PowerA Slim Case, and Turtle Beach Airlite Fit gaming headset — a broad accessory footprint indicating the console itself remains the dominant late-summer gaming purchase. Tech-Insider cites Nintendo Switch 2 lifetime hardware sales of 19.86 million units as of March 31, 2026, at a $449.99 MSRP.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Switch 2 is the only mainstream console holding a sub-$500 MSRP after PS5's April hike to $649.99 and Xbox Series X's August 1 jump to $799.99, giving it a widening price moat.</div>
+      <div class="card-meta">Console $449.99; accessories $10–$60 typical</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Best-Sellers-Nintendo-Switch-2-Accessories/zgbs/videogames/206234611011">amazon.com</a> (2026-08-17, from search-result snippet), <a href="https://tech-insider.org/nintendo-switch-2-vs-ps5-vs-xbox-series-x-2026/">tech-insider.org</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirPods Pro 3</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (13th appearance)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Amazon's back-to-school Apple event has AirPods Pro 3 at $189 — AppleInsider notes the deal has held for over a week alongside the AirPods 4 at $99 and AirPods Max 2 at $449. Consequence's August roundup lists Pro 3 as the mid-tier upgrade recommendation for students prioritizing ANC without paying flagship Sony/Bose pricing.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — deepest sustained Pro 3 discount of 2026 so far, timed to back-to-school peak; the archive's most consistent Electronics seller since June.</div>
+      <div class="card-meta">$189 (down from $249)</div>
+      <div class="card-sources">Sources: <a href="https://appleinsider.com/articles/26/08/11/amazons-99-airpods-4-189-airpods-pro-3-449-airpods-max-2-deals-are-still-going-strong">appleinsider.com</a> (2026-08-17), <a href="https://consequence.net/2026/08/best-headphone-deals-august-2026/">consequence.net</a> (2026-08-17), <a href="https://9to5toys.com/2026/08/04/best-airpods-august-deals-pro-3-max-2/">9to5toys.com</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Owala FreeSip Insulated Water Bottle</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (10th appearance)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Owala's Back-to-School Sale extended past the initial August 8 cutoff, with CNN Underscored reporting up to 37% off across Amazon this week. NBC Selected named the FreeSip Twist a 2026 Wellness Award Winner, citing dual sip-or-gulp lids as the reason it consistently outsells single-mode Stanley/Hydro Flask alternatives. Still the second-place volume tumbler on Amazon behind the HydroJug Traveler.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — sale extension into the second half of August captures late-buying families and the college move-in wave.</div>
+      <div class="card-meta">Most bottles under $30 on sale</div>
+      <div class="card-sources">Sources: <a href="https://edition.cnn.com/cnn-underscored/deals/owala-back-to-school-sale-2026-08-06">cnn.com</a> (2026-08-17), <a href="https://www.nbcnews.com/select/shopping/owala-back-to-school-sale-of-the-week-2026-rcna590608">nbcnews.com</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">JanSport Classic Backpack</h3>
+        <span class="pill" style="background:#0891b2">Office Products</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (13th appearance)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Classic JanSport backpacks are discounted up to 58% on Amazon in multiple colorways for back-to-school, with the interior laptop sleeve and mesh water-bottle pocket cited as the durability features driving teacher recommendations. This is the archive's most consistent Office Products seller — its 13th consecutive report, spanning all of July and August so far.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — sales peak right now through Labor Day, then fall sharply once school starts.</div>
+      <div class="card-meta">Price not confirmed (up to 58% off cited)</div>
+      <div class="card-sources">Sources: <a href="https://tinybeans.com/the-highest-rated-back-to-school-supplies-on-amazon/">tinybeans.com</a> (2026-08-17), <a href="https://www.cnn.com/cnn-underscored/deals/best-back-to-school-sales-2026-08-11">cnn.com</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Mead Composition Books (6-pack)</h3>
+        <span class="pill" style="background:#0891b2">Office Products</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (12th appearance)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Mead composition books remain Amazon's default classroom notebook — press notes the sturdy covers and thick pages "handle lunchbox crumbs and locker scrapes," which is the durability story that keeps them on teacher back-to-school supply lists. Sales sit at their annual peak through the back-half of August.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — classic mid-August spike that decelerates sharply once classrooms fill.</div>
+      <div class="card-meta">Price not confirmed (typical multi-pack $8–$15)</div>
+      <div class="card-sources">Sources: <a href="https://www.foxnews.com/deals/school-supplies-teachers-recommend">foxnews.com</a> (2026-08-17), <a href="https://tinybeans.com/the-highest-rated-back-to-school-supplies-on-amazon/">tinybeans.com</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Bentgo Chill Kids Bento Box</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (4th appearance)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Bentgo is described by press as "the #1 bento box brand" and its Chill Kids model — built-in ice pack, leak-proof, four compartments, 3.3-cup capacity, PFAS/BPA-free — is a top back-to-school pick for ages 3–7. Broader trending-product coverage names bento lunch boxes as one of the categories seeing "massive demand spikes" in August 2026.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — very seasonal buy that peaks with the school start, tails off through September.</div>
+      <div class="card-meta">Price not confirmed (typical retail $18–$28)</div>
+      <div class="card-sources">Sources: <a href="https://www.sheknows.com/parenting/articles/2463045/bento-style-lunch-box-amazon-back-to-school/">sheknows.com</a> (2026-08-17), <a href="https://amzscout.net/blog/amazon-trending-products/">amzscout.net</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Medicube Zero Pore Pad 2.0</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (6th appearance)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Medicube's Toner Pads Zero Pore Pad 2.0 is still the leading K-beauty product in the Amazon Top 25 Bestsellers list, cited as the first K-beauty item to take the top position since debuting in Q1 2025. Amazon's Summer Beauty Event 2026 is currently featuring Medicube alongside Biodance as headline K-beauty deals.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — K-beauty's 10.5%-of-search share on Amazon Beauty (per earlier archive reports) shows no sign of ceding shelf, and Medicube leads the movement.</div>
+      <div class="card-meta">Price not confirmed (typical Amazon range $25–$32)</div>
+      <div class="card-sources">Sources: <a href="https://www.newbeauty.com/view/bestselling-beauty-products-on-amazon-winter-spring-2026">newbeauty.com</a> (2026-08-17), <a href="https://shopping.yahoo.com/beauty/articles/23-k-beauty-favorites-editors-202621906.html">yahoo.com</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">COSRX Advanced Snail 96 Mucin Power Essence</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (3rd appearance)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">COSRX's Advanced Snail 96 Mucin Power Essence was ranked #2 in Amazon Facial Serums and #25 across all Amazon U.S. Beauty &amp; Personal Care during Prime Day 2026, per COSRX's own PR release — and the category holds through summer, with Seoul Signal and Biodance both naming it a 2026 top K-beauty essence.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — a mature "gateway" K-beauty SKU with strong subscribe-and-save momentum; not a viral spike but a durable share holder.</div>
+      <div class="card-meta">Price not confirmed (typical range $15–$25)</div>
+      <div class="card-sources">Sources: <a href="https://www.prnewswire.com/news-releases/cosrx-secures-multiple-top-five-amazon-rankings-during-prime-day-2026-302837218.html">prnewswire.com</a> (2026-08-17), <a href="https://seoulsignal.co/k-beauty/best-korean-toners-review-2026">seoulsignal.co</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Biodance Bio-Collagen Real Deep Mask (4-Pack)</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2nd appearance)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Biodance Bio-Collagen Real Deep Mask sits at #6 in Amazon's Top 25 Bestselling Beauty Products list per NewBeauty and remains a headliner in Amazon's Summer Beauty Event 2026. K-beauty's mass-market moment on Amazon continues with Biodance, Medicube, and COSRX all holding top-25 slots simultaneously — a first for the category.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — first-timer K-beauty buyers keep entering via mask products, and Biodance is the current mass entry point.</div>
+      <div class="card-meta">Price not confirmed (typical 4-pack Amazon $16–$22)</div>
+      <div class="card-sources">Sources: <a href="https://www.newbeauty.com/view/bestselling-beauty-products-on-amazon-winter-spring-2026">newbeauty.com</a> (2026-08-17), <a href="https://shopping.yahoo.com/beauty/articles/23-k-beauty-favorites-editors-202621906.html">yahoo.com</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Core Power Fairlife Elite 42g Protein Shake</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2nd appearance)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Fairlife's Core Power lineup remains a GLP-1-era grocery staple: Axios and GLP1Newsroom both describe Fairlife Core Power (42g protein) as a "GLP-1 diet staple" for the 9M+ Americans on Ozempic/Wegovy/Mounjaro who are advised to protect lean mass. ProteinCompared confirms broad Amazon availability at the 12-pack level. This aligns with earlier archive reports naming Premier Protein Shake the #1 overall Prime Day 2026 seller per Numerator — the whole protein-shake shelf is compounding.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — GLP-1 tailwind is structural, not cyclical; Fairlife's ultra-filtered milk positioning has genuine formulation moat.</div>
+      <div class="card-meta">Price not confirmed (typical 12-pack Amazon $30–$40)</div>
+      <div class="card-sources">Sources: <a href="https://www.axios.com/2025/05/13/protein-shake-oikos-glp-ozempic-zepbound">axios.com</a> (2026-08-17), <a href="https://www.glp1newsroom.com/post/best-30g-protein-shakes-for-glp-1-diets-in-2025">glp1newsroom.com</a> (2026-08-17), <a href="https://proteincompared.com/brands/fairlife">proteincompared.com</a> (2026-08-17)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Pure Encapsulations Magnesium Glycinate</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Magnesium Glycinate holds Amazon's #1 Vitamins/Supplements slot per Accio and SupplysideSJ, with Pure Encapsulations cited as the top performer in the 40,000–180,000+ review range. Magnesium is one leg of the sleep-and-wellness trio (magnesium/creatine/D3) that dominates Amazon Health searches in 2026 and drives repeat monthly purchases via Subscribe &amp; Save.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — mainstream sleep-wellness narrative keeps recruiting new users; the SKU has consumer-grade brand recognition rare in supplements.</div>
+      <div class="card-meta">$10–$30 typical (per cited review)</div>
+      <div class="card-sources">Sources: <a href="https://www.accio.com/business/top-10-best-selling-health-products-on-amazon">accio.com</a> (2026-08-17), <a href="https://www.supplysidesj.com/market-trends-analysis/amazon-supplements-sales-bounce-back-after-flattening-">supplysidesj.com</a> (2026-08-17)</div>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="100%" height="282" viewBox="0 0 700 282">
+      <text x="0" y="22" font-size="13" fill="#1e293b">Electronics</text>
+      <rect x="200" y="8" width="240" height="18" rx="4" fill="#2563eb"/>
+      <text x="448" y="22" font-size="12" fill="#475569">6</text>
+
+      <text x="0" y="56" font-size="13" fill="#1e293b">Beauty &amp; Personal Care</text>
+      <rect x="200" y="42" width="120" height="18" rx="4" fill="#db2777"/>
+      <text x="328" y="56" font-size="12" fill="#475569">3</text>
+
+      <text x="0" y="90" font-size="13" fill="#1e293b">Home &amp; Kitchen</text>
+      <rect x="200" y="76" width="120" height="18" rx="4" fill="#16a34a"/>
+      <text x="328" y="90" font-size="12" fill="#475569">3</text>
+
+      <text x="0" y="124" font-size="13" fill="#1e293b">Health &amp; Household</text>
+      <rect x="200" y="110" width="80" height="18" rx="4" fill="#0d9488"/>
+      <text x="288" y="124" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="158" font-size="13" fill="#1e293b">Office Products</text>
+      <rect x="200" y="144" width="80" height="18" rx="4" fill="#0891b2"/>
+      <text x="288" y="158" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="192" font-size="13" fill="#1e293b">Sports &amp; Outdoors</text>
+      <rect x="200" y="178" width="80" height="18" rx="4" fill="#ea580c"/>
+      <text x="288" y="192" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="226" font-size="13" fill="#1e293b">Apparel</text>
+      <rect x="200" y="212" width="40" height="18" rx="4" fill="#7c3aed"/>
+      <text x="248" y="226" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="260" font-size="13" fill="#1e293b">Grocery</text>
+      <rect x="200" y="246" width="40" height="18" rx="4" fill="#65a30d"/>
+      <text x="248" y="260" font-size="12" fill="#475569">1</text>
+    </svg>
+  </div>
+
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <ul>
+      <li><strong>BISSELL Little Green Portable Carpet Cleaner</strong> — 20,000+ units sold on Amazon in the past month per Yahoo/AOL, extending a multi-year viral pet-stain phenomenon into back-to-school season.</li>
+      <li><strong>Apple AirPods 4</strong> — Amazon's back-to-school promo has these at $99, matching or beating every 2026 sale price so far, alongside a #1 Best Seller badge with 44,200+ reviews.</li>
+      <li><strong>Sony WH-1000XM6 Headphones</strong> — First meaningful Amazon markdown ($398, 13% off) on Sony's brand-new flagship noise-canceler, described as "close to used" pricing.</li>
+      <li><strong>Apple Watch Series 11</strong> — $100 off the base 42mm GPS at Amazon ($299) — the year's lowest since Prime Day.</li>
+      <li><strong>Ninja CREAMi Scoop &amp; Swirl (NC701)</strong> — 13-in-1 ice cream/soft-serve maker at $279 (down from $350), second-lowest Amazon price of 2026.</li>
+      <li><strong>Nutricost Creatine Monohydrate</strong> — Amazon's #1 creatine SKU (60,000+ reviews, 4.6 stars) in a category up 65% YoY to $241.7M.</li>
+      <li><strong>Ray-Ban Meta Wayfarer Smart Glasses</strong> — #1 on Amazon's Wearable Tech Glasses best-seller list, the strongest sign yet that AI smart glasses have hit mainstream.</li>
+      <li><strong>CRZ YOGA Butterluxe Leggings</strong> — Amazon's leading Lululemon-alternative activewear brand, cited by multiple review sites as the #1 dupe at ~25% of Lululemon's price.</li>
+      <li><strong>Stanley Quencher H2.0 FlowState Tumbler</strong> — Up to 35% off on Amazon this month per Tom's Guide.</li>
+      <li><strong>Nintendo Switch 2 Console &amp; Accessories</strong> — Belkin AirTag case, JSAUX screen protectors, and PowerA Slim Case all on Amazon's Switch 2 accessories best-seller list; console has moved 19.86M lifetime hardware units as of March 31, 2026.</li>
+      <li><strong>Pure Encapsulations Magnesium Glycinate</strong> — Category #1 in Amazon Vitamins &amp; Supplements, part of the magnesium/creatine/D3 wellness trio dominating Amazon Health searches.</li>
+    </ul>
+  </div>
+
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p>Source types checked today: Amazon best-seller/movers-and-shakers category pages (all blocked at the network egress proxy), press/editorial coverage (CNN Underscored, NBC Selected, Yahoo, Gizmodo, PCGuide, Tom's Guide, AppleInsider, MacRumors, ABC News — all blocked at proxy), industry/trade reporting (SmartScout, SupplysideSJ, Beautymatter, ProteinCompared, Business of Fashion, Cosmetics Business, PR Newswire, GarageGymReviews, CreatineFinders, ASINSight — most blocked at proxy), 9to5Toys, Consequence, SlickDeals price aggregators, and general WebSearch snippet coverage. Verification rule: each VERIFIED product has at least two independent sources cited in its card that describe the same trend/rank/price signal.</p>
+    <p><strong>Degraded-mode note:</strong> The network egress proxy blocked every WebFetch attempt today — Amazon.com, CNN, NBC News, Yahoo, Tom's Guide, MacRumors, AppleInsider, 9to5toys, Gizmodo, Business of Fashion, and roughly two dozen other domains all returned EGRESS_BLOCKED. This report is therefore built entirely from WebSearch result snippets rather than full-page reads. Where a specific number (unit count, review count, dollar figure, discount percentage) appears in a card, it is copied from a WebSearch snippet in which that number was directly quoted — no numbers were reconstructed from memory or inferred from the surrounding context. Some product-level nuances (exact current sales rank, ASIN-level revenue) that a direct Amazon read would provide are not available in today's report.</p>
+    <p><strong>Judgment call:</strong> The Ray-Ban Meta Wayfarer and Nintendo Switch 2 accessory sourcing both rely on the Amazon.com Best Sellers category page URL surfacing as the top result in WebSearch — I've treated the fact that Amazon itself surfaces those SKUs in the "Best Sellers: Wearable Tech Glasses" and "Best Sellers: Nintendo Switch 2 Accessories" URLs as evidence of bestseller status. Corroborated in each case with one industry source (ASINSight for Ray-Ban, Tech-Insider for Switch 2 hardware numbers).</p>
+    <p>Distinct source domains checked today: amazon.com, yahoo.com, aol.com, tomsguide.com, appleinsider.com, macrumors.com, 9to5toys.com, gizmodo.com, pcguide.com, consequence.net, nbcnews.com, cnn.com, edition.cnn.com, popsci.com, foxnews.com, tinybeans.com, sheknows.com, amzscout.net, asinsight.com, smartscout.com, garagegymreviews.com, creatinefinders.com, prnewswire.com, seoulsignal.co, newbeauty.com, wetried.it, theguyslist.com, glp1newsroom.com, proteincompared.com, axios.com, accio.com, supplysidesj.com, slickdeals.net, tech-insider.org.</p>
+  </div>
+
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../August13_2026/">August 13</a></span>
+  </div>
+
+</div>
+</body>
+</html>
