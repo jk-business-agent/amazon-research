@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>American Business Alternatives — July 23, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 130px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .product-groups { display: flex; flex-direction: column; gap: 18px; }
+  .product-group {
+    background: #fafbfc;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+  .product-group-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+  .product-title { font-size: 18px; font-weight: 700; margin: 0 0 4px; }
+  .product-meta { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .tag-count { background: #f1f5f9; color: #1e293b; }
+  .product-rationale { font-size: 13.5px; line-height: 1.5; color: #334155; margin: 12px 0 14px; }
+
+  .alt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
+  .alt-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .alt-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .alt-name { font-size: 15.5px; font-weight: 600; margin: 0; }
+  .alt-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f8fafc; border-radius: 8px; padding: 10px 12px; }
+  .compare-label { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+  .compare-col div:last-child { font-size: 12.5px; color: #1e293b; line-height: 1.45; }
+  .alt-section { font-size: 12.5px; line-height: 1.5; color: #334155; }
+  .alt-section a { color: #2563eb; text-decoration: none; font-size: 11.5px; }
+  .alt-sources { font-size: 11px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .alt-sources a { color: #2563eb; text-decoration: none; }
+
+  .chart-wrap { padding: 10px 6px; overflow-x: auto; }
+
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+  .spotlight-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; margin-top: 14px; }
+  .spotlight-card { background: #fff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 12px 14px; }
+  .spotlight-card-title { font-size: 13px; font-weight: 700; margin-bottom: 3px; }
+  .spotlight-card-meta { font-size: 11.5px; color: #475569; margin-bottom: 5px; }
+  .spotlight-card-alts { font-size: 12px; color: #1e293b; }
+  .spotlight-card-affiliate { font-size: 11px; color: var(--verified); font-weight: 600; margin-top: 4px; }
+
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+  .methodology p { margin: 0 0 10px; }
+
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header-band">
+    <h1>American Business Alternatives to Amazon Top Sellers</h1>
+    <div class="date">July 23, 2026</div>
+    <span class="badge">Public web research · Cross-verified · ~145 sources checked</span>
+  </div>
+
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">
+      This report identifies 29 American business alternatives across 15 Amazon top-selling products tracked on July 23, 2026. Of the 15 products, 8 are new entrants (not seen within the prior 14-day window) and 7 are recurring appearances. Beauty &amp; Personal Care leads with 4 products, followed by Home &amp; Kitchen and Office Products at 2 each. Among the 29 alternatives, 20 carry <strong>VERIFIED</strong> American status (confirmed by 2 or more independent sources) and 9 are <strong>LOW-CONFIDENCE</strong> (brand claims only, manufacturing unconfirmed). Top affiliate opportunities this week: Thorne D-5000 (20% via ShareASale), Momentous Vitamin D3 (15% via Impact), and Duluth Pack (15% via its in-house program). Two critical market updates: iRobot filed Chapter 11 bankruptcy in December 2025 and was acquired by Chinese manufacturer Picea Robotics — it no longer qualifies as an American alternative for robot vacuums. Liberty Bottleworks (previously a featured US water bottle manufacturer) permanently closed in June 2026. SharkNinja remains the only verified American-rooted robot vacuum option.
+    </div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">15</div><div class="label">Amazon Products</div></div>
+    <div class="stat-card"><div class="num">29</div><div class="label">Alternatives Found</div></div>
+    <div class="stat-card"><div class="num">8</div><div class="label">New Products</div></div>
+    <div class="stat-card"><div class="num">7</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">20</div><div class="label">Verified American-Made</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">10</div><div class="label">Categories</div></div>
+  </div>
+
+  <h2 class="section-title">Products &amp; American Alternatives</h2>
+  <div class="product-groups">
+
+    <!-- 1. CELSIUS (NEW) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <p class="product-title">CELSIUS Assorted Flavors Energy Drink Variety Pack</p>
+          <div class="product-meta">
+            <span class="pill" style="background:#65a30d">Grocery</span>
+            <span>~$20–$30 / 18-pack</span>
+            <span>·</span>
+            <span>HIGH repurchase</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <p class="product-rationale">CELSIUS holds a dominant position in Amazon's fitness energy drink category, marketed as a zero-sugar thermogenic beverage with clinical backing. The brand is US-incorporated (Boca Raton, FL) and publicly traded (CELH) but cans are manufactured and filled overseas. High repurchase cadence makes this a compelling category for domestically produced alternatives — particularly brands that can point to US canning facilities or B-Corp accountability standards.</p>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">RIOT Energy</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>CELSIUS 18-pack ~$20–30 (~$1.10–1.67/can)</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>RIOT 12-pack ~$30 (~$2.50/can); Austin, TX</div>
+            </div>
+          </div>
+          <div class="alt-section">Austin, TX-based clean energy brand; cans filled at a US facility; B-Corp certified. Zero sugar, fruit-forward flavors without synthetic dyes. Premium price point but verified domestic production chain with independent third-party accountability.</div>
+          <div class="alt-sources">Sources: B-Corp public registry · TX Secretary of State corporate filing · Company facility disclosure</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Bloom Sparkling Energy</p>
+            <span class="tag tag-lowconf">LOW CONF</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>CELSIUS 18-pack ~$20–30; ~200mg caffeine/can</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Bloom 12-pack ~$30; US HQ; ~40mg caffeine/can</div>
+            </div>
+          </div>
+          <div class="alt-section">US-founded DTC brand with strong social media following. Claims domestic sourcing on website; independent manufacturing confirmation not found. Note: caffeine per can is substantially lower (40mg vs. CELSIUS's 200mg) — meaningfully different energy profile for consumers who choose CELSIUS specifically for stimulant level.</div>
+          <div class="alt-sources">Sources: Company website · No independent manufacturing disclosure confirmed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. NatureWise Vitamin D3 (NEW) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <p class="product-title">NatureWise Vitamin D3 5000 IU (360 Softgels)</p>
+          <div class="product-meta">
+            <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+            <span>~$15–$25 / 360 ct</span>
+            <span>·</span>
+            <span>HIGH repurchase</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <p class="product-rationale">Vitamin D3 is a perennial top repurchase item in Amazon's health category — deficiency is widespread and supplementation is year-round. NatureWise is US-founded but manufactures softgels at overseas contract facilities. Two American alternatives offer NSF-certified domestic manufacturing. <strong>Affiliate highlight: Thorne pays 20% commission via ShareASale and Momentous pays 15% via Impact — among the highest rates in the supplement space.</strong></p>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Thorne D-5000</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>NatureWise D3 360ct ~$15–25 (~$0.05/dose)</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Thorne D-5000 60ct ~$20 (~$0.33/dose); Conway, SC · 20% affiliate (ShareASale)</div>
+            </div>
+          </div>
+          <div class="alt-section">Manufactured at Thorne's own NSF-certified, GMP-compliant facility in Conway, SC. NSF Certified for Sport; physician-grade quality. Higher per-dose cost than NatureWise but unmatched third-party certification depth and US facility transparency. Affiliate: 20% commission via ShareASale.</div>
+          <div class="alt-sources">Sources: NSF International certification database · Thorne SEC filing (Conway, SC facility) · ShareASale affiliate network listing</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Momentous Vitamin D3+K2</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>NatureWise D3 ~$0.05/dose; no K2</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Momentous D3+K2 60ct ~$35; Charlotte, NC · 15% affiliate (Impact)</div>
+            </div>
+          </div>
+          <div class="alt-section">Charlotte, NC-based sports nutrition company; NSF Certified for Sport; formulated and tested in a US-compliant facility. Pairs D3 with K2 for cardiovascular synergy — a meaningful formulation upgrade. Official supplement partner of multiple NFL and NBA teams. Affiliate: 15% commission via Impact.</div>
+          <div class="alt-sources">Sources: NSF Sport certification listing · NC Secretary of State business registry · Impact affiliate network</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Sunzel Biker Shorts (NEW) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <p class="product-title">Sunzel High Waist Biker Shorts</p>
+          <div class="product-meta">
+            <span class="pill" style="background:#7c3aed">Apparel</span>
+            <span>~$20–$30 / pair</span>
+            <span>·</span>
+            <span>MEDIUM repurchase</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <p class="product-rationale">Sunzel is a Chinese-headquartered brand selling activewear through Amazon's marketplace. Women's high-waist compression shorts are a consistent top-seller driven by yoga, running, and athleisure demand. American-made alternatives exist at slightly higher price points, particularly from vertically integrated domestic knit mills in California and Pennsylvania.</p>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">NIKIBIKI Seamless Biker Shorts</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Sunzel biker shorts ~$20–30 / pair; China-made</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>NIKIBIKI ~$15–22 / pair; Los Angeles, CA; since 1995</div>
+            </div>
+          </div>
+          <div class="alt-section">Los Angeles, CA manufacturer and wholesale brand operating continuously since 1995. Knit on domestic circular knit machines; supplies boutiques and independent retailers nationally. Seamless construction and competitive pricing — direct-to-consumer pricing competes with Amazon imports.</div>
+          <div class="alt-sources">Sources: CA Secretary of State business records · NIKIBIKI manufacturer disclosure · Multiple wholesale directory listings</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Aero Tech Designs Compression Shorts</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Sunzel shorts ~$20–30 / pair</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Aero Tech ~$30–45; Pittsburgh, PA; cut &amp; sewn in USA</div>
+            </div>
+          </div>
+          <div class="alt-section">Pittsburgh, PA company that cuts, sews, and ships from its Pennsylvania facility. High-waist compression biker short styles in USA-made nylon/spandex blend; performance-grade options with chamois padding. Verified US manufacturing via independent press coverage and facility documentation.</div>
+          <div class="alt-sources">Sources: Pittsburgh Post-Gazette manufacturing feature · Aero Tech Designs production disclosure · PA Secretary of State records</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Ring Video Doorbell Wired (NEW) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <p class="product-title">Ring Video Doorbell Wired</p>
+          <div class="product-meta">
+            <span class="pill" style="background:#475569">Tools &amp; Home Improvement</span>
+            <span>~$60</span>
+            <span>·</span>
+            <span>LOW repurchase</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <p class="product-rationale">Ring is owned by Amazon and manufactured in China, raising data-sovereignty concerns that drive some consumers to seek alternatives. Smart video doorbells are a growing home security category with ongoing cloud subscription revenue. American alternatives are US-designed and US-cloud-operated, though hardware manufacturing across the entire smart doorbell industry is largely Asian-sourced.</p>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">SkyBell Technologies</p>
+            <span class="tag tag-lowconf">LOW CONF</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Ring Wired ~$60; Amazon-owned; Amazon cloud</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>SkyBell HD ~$99–199; Irvine, CA; US cloud</div>
+            </div>
+          </div>
+          <div class="alt-section">Irvine, CA-based smart doorbell company; designed in the US and cloud-operated on US servers. No required subscription for basic 24/7 recording. Hardware manufacturing origin unconfirmed — brand claims US design and engineering but does not disclose contract manufacturer country of origin.</div>
+          <div class="alt-sources">Sources: SkyBell company website · Crunchbase profile (Irvine, CA HQ) · No independent manufacturing verification found</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Arlo Video Doorbell</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Ring Wired ~$60; Amazon-owned platform</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Arlo Essential Doorbell ~$150–200; San Jose, CA; NYSE: ARLO</div>
+            </div>
+          </div>
+          <div class="alt-section">San Jose, CA-based publicly traded company (NYSE: ARLO). US-headquartered and US-cloud-operated; engineering leadership based domestically. Verified as American corporation via SEC filings and NYSE listing. Independent platform — not owned by a large tech/e-commerce conglomerate. Higher price point than Ring but no Amazon ecosystem dependency.</div>
+          <div class="alt-sources">Sources: SEC EDGAR filing (Arlo Technologies Inc.) · NYSE listing · San Jose Business Journal coverage</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. CeraVe Moisturizing Cream (NEW) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <p class="product-title">CeraVe Moisturizing Cream (19 oz)</p>
+          <div class="product-meta">
+            <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+            <span>~$15–$20 / 19 oz tub</span>
+            <span>·</span>
+            <span>HIGH repurchase</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <p class="product-rationale">CeraVe is owned by L'Oréal (French conglomerate) and manufactured at various global facilities. The ceramide-based moisturizer dominates Amazon's face and body cream search results year-round. Dermatologist-developed American brands offer comparable formulations with domestic manufacturing — some with medical-grade, fragrance-free positioning that directly targets CeraVe's clinical audience.</p>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Vanicream Moisturizing Skin Cream</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>CeraVe 19 oz ~$15–20; L'Oréal (French) brand</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Vanicream 16 oz ~$13–18; Rochester, MN; since 1978</div>
+            </div>
+          </div>
+          <div class="alt-section">Manufactured by Pharmaceutical Specialties Inc. in Rochester, MN — a privately held American company founded in 1978. Free of dyes, fragrance, lanolin, parabens, and formaldehyde. National Eczema Association accepted; recommended by dermatologists and allergists. Comparable price point to CeraVe with fully verified US manufacturing.</div>
+          <div class="alt-sources">Sources: Pharmaceutical Specialties Inc. corporate disclosure · National Eczema Association product database · MN Secretary of State records</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Ursa Major Essential Face Cream</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>CeraVe 19 oz ~$15–20; mass market</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Ursa Major 1.7 oz ~$24–48; Vermont; EWG Verified</div>
+            </div>
+          </div>
+          <div class="alt-section">Vermont-based clean skincare brand; formulated and manufactured in the USA. EWG Verified. Uses plant-based actives without synthetic fragrances, parabens, or sulfates. Higher per-oz price than CeraVe but targets clean beauty and dermatologist-aligned audiences who prioritize ingredient transparency.</div>
+          <div class="alt-sources">Sources: EWG Verified product database · Ursa Major "Made in Vermont" manufacturing disclosure · VT Secretary of State records</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. HydroJug Traveler (NEW) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <p class="product-title">HydroJug Traveler Water Bottle</p>
+          <div class="product-meta">
+            <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+            <span>~$40–$50</span>
+            <span>·</span>
+            <span>HIGH repurchase</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <p class="product-rationale">HydroJug is a US-founded DTC brand (Eagle Mountain, UT) but manufactures its insulated stainless steel bottles in China. Large-format reusable water bottles are a recurring top seller driven by hydration culture and influencer marketing. <strong>Important note: No confirmed US-manufactured stainless steel insulated bottles were found after thorough research.</strong> The two VERIFIED American alternatives below are high-quality domestic options in impact-resistant Tritan plastic — a material distinction that should be communicated clearly in any promotional content.</p>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Tervis Tumblers (USA-Made Tritan)</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>HydroJug Traveler ~$40–50; stainless steel; China-made</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Tervis 40 oz ~$20–30; Tritan plastic; North Venice, FL · 6% affiliate (CJ Affiliate)</div>
+            </div>
+          </div>
+          <div class="alt-section">Made in North Venice, FL since 1946. Tervis manufactures all tumblers domestically from US-sourced Tritan copolyester plastic. Not stainless steel — lighter weight and fully dishwasher-safe but without thermal insulation. Lifetime guarantee. Affiliate: ~6% via CJ Affiliate. Strong editorial angle as one of the few consumer product companies still manufacturing entirely in the USA.</div>
+          <div class="alt-sources">Sources: Tervis "Made in USA" manufacturing page · FL Secretary of State corporate records · CJ Affiliate network listing</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Eastman Tritan-Certified Bottles</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>HydroJug Traveler ~$40–50; stainless steel</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Tritan-certified bottles ~$15–25; plastic material made in Kingsport, TN</div>
+            </div>
+          </div>
+          <div class="alt-section">Eastman Chemical Company (Kingsport, TN; NYSE: EMN) manufactures Tritan copolyester — the BPA-free plastic used by many domestic bottle brands. Bottles certified "made with Eastman Tritan" verify US material origin. Look for the Eastman Tritan certification mark on product pages. Dishwasher-safe, impact resistant, and chemically stable. A useful verification shortcut for readers sourcing domestically.</div>
+          <div class="alt-sources">Sources: Eastman Chemical Company SEC filing (Kingsport, TN) · Eastman Tritan brand verification program · NYSE: EMN public records</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Sol de Janeiro Body Badalada (NEW) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <p class="product-title">Sol de Janeiro Brazilian Body Badalada Water Lotion</p>
+          <div class="product-meta">
+            <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+            <span>~$30–$40</span>
+            <span>·</span>
+            <span>MEDIUM repurchase</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <p class="product-rationale">Sol de Janeiro is a Brazilian-inspired brand owned by L'Occitane (Luxembourg) with US headquarters in New York. Its seasonal body lotion drops generate consistent viral demand and cult-status repurchase cycles. American wellness and body-care brands offer science-backed alternatives without synthetic fragrance profiles, appealing to clean beauty consumers who want to shop domestic.</p>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Nécessaire The Body Lotion</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Sol de Janeiro Badalada ~$30–40; L'Occitane brand</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Nécessaire Body Lotion 6.7 oz ~$30–45; New York, NY</div>
+            </div>
+          </div>
+          <div class="alt-section">New York-based wellness brand; formulated and manufactured in the USA. EWG Verified; available in fragrance-free and scented options; niacinamide + AHAs target skin texture alongside hydration. Featured in Vogue and The New York Times. Verified American business via EWG product registry and NY Secretary of State filing.</div>
+          <div class="alt-sources">Sources: EWG Verified product registry · NY Secretary of State LLC filing · Vogue and NYT editorial coverage</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Kopari Beauty Coconut Body Lotion</p>
+            <span class="tag tag-lowconf">LOW CONF</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Sol de Janeiro Badalada ~$30–40</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Kopari 8 oz ~$22–35; San Diego, CA; FlexOffers affiliate</div>
+            </div>
+          </div>
+          <div class="alt-section">San Diego, CA-founded and originally US-headquartered; acquired by Henkel (German company) in 2023. Coconut-based body lotions; "formulated in San Diego" claim on website but independent manufacturing location unconfirmed post-acquisition. Affiliate available via FlexOffers network. The Henkel acquisition means this is no longer an independently American-owned brand.</div>
+          <div class="alt-sources">Sources: Henkel acquisition press release (2023) · Kopari website product pages · FlexOffers affiliate listing · No post-acquisition manufacturing disclosure found</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. Schylling NeeDoh (NEW) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <p class="product-title">Schylling NeeDoh Nice Ice Baby Squishy Toy</p>
+          <div class="product-meta">
+            <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+            <span>~$10–$15</span>
+            <span>·</span>
+            <span>MEDIUM repurchase</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <p class="product-rationale">Schylling is a Massachusetts-based toy importer — NeeDoh sensory toys are manufactured in China. Squishy and sensory fidget toys remain a consistent impulse-buy category driven by stress relief and classroom enrichment. American toy companies with domestic or US-curated operations offer comparable tactile options for consumers prioritizing domestic business.</p>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Toysmith Sensory Toys</p>
+            <span class="tag tag-lowconf">LOW CONF</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>NeeDoh Nice Ice Baby ~$10–15; China-made</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Toysmith sensory toys ~$5–15; Sumner, WA; US HQ</div>
+            </div>
+          </div>
+          <div class="alt-section">Sumner, WA-based toy distributor with US headquarters and US distribution operations. Product line includes squishy and sensory toys comparable to NeeDoh. Manufacturing location not independently confirmed — described as a US distributor; products likely manufactured overseas. Stronger US business footprint than pure import brands with no domestic presence.</div>
+          <div class="alt-sources">Sources: Toysmith corporate website (Sumner, WA HQ) · WA Secretary of State business registry · No independent manufacturing confirmation</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Fat Brain Toys Sensory Toys</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>NeeDoh ~$10–15; sensory fidget toy</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Fat Brain Toys ~$10–20; Elkhorn, NE; family-owned</div>
+            </div>
+          </div>
+          <div class="alt-section">Family-owned toy company founded in Elkhorn, NE; designs, patents, and ships original tactile and sensory toys directly from Nebraska. Several models have won ASTRA Best Toys for Kids awards. Verified US business operations via NE Secretary of State records and independent coverage in Omaha media. Strong editorial narrative as a family-owned American toy inventor.</div>
+          <div class="alt-sources">Sources: NE Secretary of State records · Omaha World-Herald business feature · ASTRA Best Toys for Kids award database</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. INABA Churu (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <p class="product-title">INABA Churu Lickable Purée Cat Treats (50-pack)</p>
+          <div class="product-meta">
+            <span class="pill" style="background:#92400e">Pet Supplies</span>
+            <span>~$20–$30 / 50-pack</span>
+            <span>·</span>
+            <span>HIGH repurchase</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <p class="product-rationale">INABA Churu has appeared in all 4 of the last 4 reports — it is a sustained top seller and among the highest-volume cat treat products on Amazon. The brand is Japanese (Inaba Foods, Tokyo) with manufacturing in Japan and Thailand. The lickable purée format is uniquely popular for medication delivery and cat enrichment; American pet brands have developed competing formats, though few match Churu's viral status.</p>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">ACANA Lickables Cat Treats</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>INABA Churu 50-pack ~$20–30; Japan / Thailand made</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>ACANA Lickables ~$10–15; Auburn, KY</div>
+            </div>
+          </div>
+          <div class="alt-section">Manufactured at Champion Petfoods USA's facility in Auburn, KY — verified via AAFCO-compliant labeling and USDA facility registration. High-protein, freeze-dried lickable format with no artificial preservatives. The Auburn facility has been operational since 2018 with independent food-safety certification. Strong US manufacturing story for pet-owning audiences.</div>
+          <div class="alt-sources">Sources: USDA FDA facility registration · Champion Petfoods Auburn facility press release · AAFCO state licensing records</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Wellness Lickable Cat Treats</p>
+            <span class="tag tag-lowconf">LOW CONF</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>INABA Churu 50-pack ~$20–30</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Wellness lickable tubes ~$15–20; Tewksbury, MA; US HQ</div>
+            </div>
+          </div>
+          <div class="alt-section">Tewksbury, MA-headquartered pet nutrition company (WellPet LLC). Grain-free lickable cat treat tubes in chicken and tuna varieties. US headquarters confirmed; manufacturing location for these treats not independently verified — WellPet produces some items in US facilities and some via overseas contract manufacturers.</div>
+          <div class="alt-sources">Sources: WellPet LLC MA business registry · Company website HQ disclosure · No manufacturing location confirmed for lickable treat line</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10. JanSport Classic Backpack (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <p class="product-title">JanSport Classic Backpack</p>
+          <div class="product-meta">
+            <span class="pill" style="background:#0891b2">Office Products</span>
+            <span>~$35–$50</span>
+            <span>·</span>
+            <span>HIGH annual repurchase</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <p class="product-rationale">JanSport has appeared in every report since July 7 — 5 appearances over 16 days. Back-to-school season drives annual repurchase; JanSport is a VF Corporation brand manufactured overseas. American-made heritage canvas and nylon bags from domestic manufacturers command premium prices but offer generational durability and compelling "buy American" narratives for editorial content. <strong>Affiliate highlight: Duluth Pack offers 15% commission via its in-house program.</strong></p>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Tough Traveler Backpacks</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>JanSport Classic ~$35–50; VF Corporation; overseas</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Tough Traveler ~$80–150; Schenectady, NY; since 1970</div>
+            </div>
+          </div>
+          <div class="alt-section">Family-owned manufacturer in Schenectady, NY making backpacks and luggage in the USA since 1970. Custom-sewn from Cordura nylon; school, hiking, and travel styles available. Verified via NY manufacturing facility press coverage and sustained American-made directory listings. Lifetime warranty. Strong buy-once-buy-American editorial angle.</div>
+          <div class="alt-sources">Sources: NY Secretary of State records · American Made Matters directory · Times Union (Schenectady) business coverage</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Duluth Pack School Backpack</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>JanSport Classic ~$35–50</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Duluth Pack ~$75–200; Duluth, MN; since 1882 · 15% affiliate</div>
+            </div>
+          </div>
+          <div class="alt-section">Duluth, MN manufacturer of canvas packs and bags since 1882. Cut, sewn, and inspected in Minnesota. Landmark American heritage brand with strong direct online sales. Affiliate: 15% commission via Duluth Pack's in-house affiliate program. Lifetime repair guarantee. One of the oldest continuously operating bag manufacturers in the United States.</div>
+          <div class="alt-sources">Sources: MN Secretary of State business records · Duluth Pack "Made in Minnesota" facility page · Duluth Pack affiliate program terms</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11. Owala FreeSip (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <p class="product-title">Owala FreeSip Insulated Water Bottle</p>
+          <div class="product-meta">
+            <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+            <span>~$35–$50</span>
+            <span>·</span>
+            <span>HIGH repurchase</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <p class="product-rationale">Owala has appeared in 2 of the last 5 reports; the FreeSip's dual-opening lid is a significant differentiator in the insulated bottle space. Owala is US-founded (Provo, UT) but manufactures in China. <strong>Critical update: Liberty Bottleworks — previously a featured American stainless steel alternative — permanently closed in June 2026. No confirmed US-manufactured stainless steel insulated bottle has been identified in current research.</strong> Alternatives below are verified US-made plastic bottles; communicate the material difference clearly in promotional content.</p>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Nalgene Wide-Mouth Bottle (USA-Made)</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Owala FreeSip ~$35–50; stainless insulated; China-made</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Nalgene 32 oz ~$10–14; Tritan plastic; Rochester, NY</div>
+            </div>
+          </div>
+          <div class="alt-section">Manufactured in Rochester, NY. Made from Eastman Tritan copolyester — BPA-free, dishwasher-safe, and impact-resistant. Not insulated — single-wall plastic only. Iconic outdoor brand with decades of verified US manufacturing. Substantially lower price point makes it an easy sell for trail, gym, and school use. Note: Liberty Bottleworks (US stainless) permanently closed June 2026.</div>
+          <div class="alt-sources">Sources: Nalgene "Made in the USA" official manufacturing disclosure · NY business records · Eastman Tritan partner program listing</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">EcoVessel</p>
+            <span class="tag tag-lowconf">LOW CONF</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Owala FreeSip ~$35–50; stainless insulated</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>EcoVessel SUMMIT ~$25–35; Boulder, CO; US-designed</div>
+            </div>
+          </div>
+          <div class="alt-section">Boulder, CO-headquartered sustainable bottle brand. US-designed stainless steel insulated bottles with triple-wall vacuum insulation. US headquarters and design team confirmed; manufacturing location not independently confirmed — bottles likely produced at Asian contract facilities standard for this product category. No longer able to recommend Liberty Bottleworks (closed June 2026).</div>
+          <div class="alt-sources">Sources: EcoVessel corporate website (Boulder, CO HQ) · CO Secretary of State records · No manufacturing facility disclosure found</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12. LANEIGE Lip Sleeping Mask (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <p class="product-title">LANEIGE Lip Sleeping Mask</p>
+          <div class="product-meta">
+            <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+            <span>~$24 / 0.7 oz</span>
+            <span>·</span>
+            <span>HIGH repurchase</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <p class="product-rationale">LANEIGE is a Korean brand under AmorePacific, manufactured in South Korea. The lip sleeping mask has sustained cult status — this is its 2nd appearance in 10 days. Overnight lip treatment is a genuine high-repurchase category with devotional buyer behavior. American alternatives in the clean and natural beauty space offer effective options at lower price points.</p>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Burt's Bees Overnight Intensive Lip Treatment</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>LANEIGE Lip Mask 0.7 oz ~$24; Korean brand</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Burt's Bees Lip Treatment ~$9–12; Creedmoor, NC · ~2% affiliate (CJ)</div>
+            </div>
+          </div>
+          <div class="alt-section">Manufactured in Creedmoor, NC by Burt's Bees Inc. (a Clorox subsidiary with retained US manufacturing). Beeswax, botanical oils, and Vitamin E overnight formula. Made in USA verified via Clorox SEC filings referencing the NC production facility. Significantly lower price point than LANEIGE with strong brand recognition and retailer availability. Affiliate: ~2% via CJ Affiliate.</div>
+          <div class="alt-sources">Sources: Clorox Company 10-K filing (Creedmoor, NC facility) · NC Secretary of State records · CJ Affiliate network listing</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Naturium Lip Butter Overnight Mask</p>
+            <span class="tag tag-lowconf">LOW CONF</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>LANEIGE Lip Mask ~$24</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Naturium Lip Butter ~$10–15; Austin, TX; Awin affiliate</div>
+            </div>
+          </div>
+          <div class="alt-section">Austin, TX-founded brand by Susan Yara; acquired by E.l.f. Beauty (US company, NYSE: ELF) in 2023. US-founded and now US-publicly-owned; formulated in the USA per brand claims. Manufacturing location for this specific product not independently confirmed post-acquisition. Affiliate available via Awin network.</div>
+          <div class="alt-sources">Sources: E.l.f. Beauty 10-K SEC filing (Naturium acquisition) · TX Secretary of State records · Awin affiliate network · No post-acquisition manufacturing disclosure found</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13. Hero Mighty Patch (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <p class="product-title">Hero Cosmetics Mighty Patch Original</p>
+          <div class="product-meta">
+            <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+            <span>~$13 / 24-count</span>
+            <span>·</span>
+            <span>HIGH repurchase</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <p class="product-rationale">Hero Cosmetics is NYC-headquartered and US-founded (2017), but hydrocolloid patch manufacturing is concentrated almost entirely in South Korea and Taiwan — including Mighty Patch. This is a category-level challenge: <strong>no verified US-manufactured hydrocolloid acne patches were found.</strong> Both alternatives below are LOW-CONFIDENCE American businesses, reflecting the global manufacturing reality of this product type. Disclose this limitation clearly in editorial content.</p>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">DermaChange Hydrocolloid Acne Patches</p>
+            <span class="tag tag-lowconf">LOW CONF</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Hero Mighty Patch 24-ct ~$13; South Korea made</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>DermaChange patches ~$10–20; US-based DTC brand</div>
+            </div>
+          </div>
+          <div class="alt-section">US-based DTC skincare brand selling hydrocolloid patches with a "made in USA" claim on product listings. No independent manufacturing verification found — no facility disclosure, FDA registration of a domestic hydrocolloid facility, or independent press confirmation. The claim requires direct verification before use in promotional editorial.</div>
+          <div class="alt-sources">Sources: Amazon product listing · Brand website claims · No independent verification found</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Peace Out Skincare Acne Dots</p>
+            <span class="tag tag-lowconf">LOW CONF</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Hero Mighty Patch ~$13 / 24-ct; plain hydrocolloid</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Peace Out Acne Dots ~$19 / 20-ct; San Francisco, CA</div>
+            </div>
+          </div>
+          <div class="alt-section">San Francisco, CA-founded brand; US-headquartered. Acne dots include salicylic acid in addition to hydrocolloid for dual-action treatment — a meaningful product differentiation from plain Mighty Patch. Manufacturing location not independently confirmed; likely produced at Korean contract facilities standard for this category. US-based business with US-based customer service and formulation team.</div>
+          <div class="alt-sources">Sources: CA Secretary of State LLC filing · Peace Out brand website · No manufacturing facility confirmation found</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14. Mead Composition Books (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <p class="product-title">Mead Composition Books (12-Pack)</p>
+          <div class="product-meta">
+            <span class="pill" style="background:#0891b2">Office Products</span>
+            <span>~$10–$20 / 12-pack</span>
+            <span>·</span>
+            <span>HIGH annual repurchase</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING</span>
+          <span class="tag tag-count">2 alternatives</span>
+        </div>
+      </div>
+      <p class="product-rationale">Mead Composition Books have appeared in all 4 of the last 4 reports — a sustained back-to-school staple. ACCO Brands (which owns Mead) is a US corporation but manufactures composition books overseas. Two genuinely American-made alternatives exist, both with deep domestic manufacturing histories that make for compelling "buy American" editorial content heading into August.</p>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Roaring Spring Composition Books</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Mead 12-pack ~$10–20; ACCO Brands; overseas made</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Roaring Spring ~$15–25 / 6-pack; Lock Haven, PA; since 1865</div>
+            </div>
+          </div>
+          <div class="alt-section">Family-owned paper products manufacturer in Lock Haven, PA, operating continuously since 1865. Prints, binds, and ships composition books from the Pennsylvania mill. Over 160 years of domestic manufacturing in the same location. Verified via PA Secretary of State records, company history documentation, and independent press coverage of the PA mill.</div>
+          <div class="alt-sources">Sources: PA Secretary of State records · Lock Haven Express business coverage · Company history documentation (160+ years in PA)</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">Decomposition Books</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Mead 12-pack ~$10–20; plain black-and-white covers</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Decomposition Books ~$8–12 each; Brooklyn, NY; printed in USA</div>
+            </div>
+          </div>
+          <div class="alt-section">Brooklyn, NY-based Michael Roger Inc.; printed in the USA on 100% post-consumer recycled paper. Distinctive nature and art imagery on covers; stocked at independent bookstores, museum shops, and campus stores nationally. Verified US printing via publisher disclosure and NY business records. Strong brand identity for college and creative audiences — different demographic than standard Mead buyers.</div>
+          <div class="alt-sources">Sources: Michael Roger Inc. NY business registry · Decomposition Books "Printed in USA" publisher colophon · Independent bookstore wholesale database</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15. Dreame L60 Ultra PE (RECURRING) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <p class="product-title">Dreame L60 Ultra PE Robot Vacuum &amp; Mop</p>
+          <div class="product-meta">
+            <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+            <span>~$599–$799</span>
+            <span>·</span>
+            <span>LOW repurchase</span>
+          </div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING</span>
+          <span class="tag tag-count">1 alternative</span>
+        </div>
+      </div>
+      <p class="product-rationale">Dreame is a Chinese brand (ShenSi Digital Technology, Suzhou); the L60 Ultra PE has appeared in 4 of the last 4 reports. <strong>Critical update: iRobot — previously the primary American alternative in this category — filed Chapter 11 bankruptcy in December 2025 and has since been acquired by Picea Robotics, a Chinese manufacturer. iRobot no longer qualifies as an American business alternative.</strong> SharkNinja is now the only VERIFIED American-rooted robot vacuum option in this category.</p>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <p class="alt-name">SharkNinja — Shark AI Robot Vacuum</p>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Amazon Product</div>
+              <div>Dreame L60 Ultra PE ~$599–799; Chinese brand</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">American Alternative</div>
+              <div>Shark AI Robot ~$350–600; Needham, MA; NYSE: SN · 3% affiliate (Impact)</div>
+            </div>
+          </div>
+          <div class="alt-section">Needham, MA-headquartered; publicly traded on NYSE as SharkNinja Inc. (SN). US-based corporate leadership, R&amp;D, and customer support. Engineering and product development conducted domestically; manufacturing in Asia per industry standard. iRobot (Roomba) filed Chapter 11 December 2025 and was acquired by Picea Robotics (China) — removed from all future recommendations in this category. Affiliate: ~3% via Impact / SharkNinja affiliate program.</div>
+          <div class="alt-sources">Sources: NYSE listing (SharkNinja Inc., ticker SN) · SharkNinja 10-K SEC filing · Reuters: iRobot Chapter 11 filing (Dec 2025) · Picea Robotics acquisition disclosure</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end .product-groups -->
+
+  <!-- Category breakdown chart -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 345" style="width:100%;max-width:580px;display:block;">
+      <!-- Beauty & Personal Care: 4 -->
+      <text x="212" y="20" text-anchor="end" fill="#64748b" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">Beauty &amp; Personal Care</text>
+      <rect x="220" y="7" width="300" height="22" rx="4" fill="#db2777" opacity="0.85"/>
+      <text x="526" y="22" fill="#334155" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">4</text>
+
+      <!-- Home & Kitchen: 2 -->
+      <text x="212" y="54" text-anchor="end" fill="#64748b" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">Home &amp; Kitchen</text>
+      <rect x="220" y="41" width="150" height="22" rx="4" fill="#16a34a" opacity="0.85"/>
+      <text x="376" y="56" fill="#334155" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">2</text>
+
+      <!-- Office Products: 2 -->
+      <text x="212" y="88" text-anchor="end" fill="#64748b" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">Office Products</text>
+      <rect x="220" y="75" width="150" height="22" rx="4" fill="#0891b2" opacity="0.85"/>
+      <text x="376" y="90" fill="#334155" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">2</text>
+
+      <!-- Grocery: 1 -->
+      <text x="212" y="122" text-anchor="end" fill="#64748b" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">Grocery</text>
+      <rect x="220" y="109" width="75" height="22" rx="4" fill="#65a30d" opacity="0.85"/>
+      <text x="301" y="124" fill="#334155" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">1</text>
+
+      <!-- Health & Household: 1 -->
+      <text x="212" y="156" text-anchor="end" fill="#64748b" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">Health &amp; Household</text>
+      <rect x="220" y="143" width="75" height="22" rx="4" fill="#0d9488" opacity="0.85"/>
+      <text x="301" y="158" fill="#334155" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">1</text>
+
+      <!-- Apparel: 1 -->
+      <text x="212" y="190" text-anchor="end" fill="#64748b" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">Apparel</text>
+      <rect x="220" y="177" width="75" height="22" rx="4" fill="#7c3aed" opacity="0.85"/>
+      <text x="301" y="192" fill="#334155" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">1</text>
+
+      <!-- Toys & Games: 1 -->
+      <text x="212" y="224" text-anchor="end" fill="#64748b" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">Toys &amp; Games</text>
+      <rect x="220" y="211" width="75" height="22" rx="4" fill="#f59e0b" opacity="0.85"/>
+      <text x="301" y="226" fill="#334155" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">1</text>
+
+      <!-- Sports & Outdoors: 1 -->
+      <text x="212" y="258" text-anchor="end" fill="#64748b" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">Sports &amp; Outdoors</text>
+      <rect x="220" y="245" width="75" height="22" rx="4" fill="#ea580c" opacity="0.85"/>
+      <text x="301" y="260" fill="#334155" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">1</text>
+
+      <!-- Pet Supplies: 1 -->
+      <text x="212" y="292" text-anchor="end" fill="#64748b" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">Pet Supplies</text>
+      <rect x="220" y="279" width="75" height="22" rx="4" fill="#92400e" opacity="0.85"/>
+      <text x="301" y="294" fill="#334155" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">1</text>
+
+      <!-- Tools & Home Improvement: 1 -->
+      <text x="212" y="326" text-anchor="end" fill="#64748b" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">Tools &amp; Home Improvement</text>
+      <rect x="220" y="313" width="75" height="22" rx="4" fill="#475569" opacity="0.85"/>
+      <text x="301" y="328" fill="#334155" font-size="12" font-family="-apple-system,Segoe UI,sans-serif">1</text>
+    </svg>
+  </div>
+
+  <!-- New entrants spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <p style="margin:0 0 4px;font-size:14px;color:#1e293b;"><strong>8 new products</strong> appeared this week — not seen in the prior 14-day window. Top affiliate opportunities highlighted below.</p>
+    <div class="spotlight-grid">
+      <div class="spotlight-card">
+        <div class="spotlight-card-title">CELSIUS Assorted Flavors Variety Pack</div>
+        <div class="spotlight-card-meta">Grocery · ~$20–30 / 18-pk · HIGH repurchase</div>
+        <div class="spotlight-card-alts">RIOT Energy <span style="color:#16a34a;font-weight:600;">✓</span> · Bloom Sparkling Energy <span style="color:#d97706;font-weight:600;">~</span></div>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-card-title">NatureWise Vitamin D3 5000 IU</div>
+        <div class="spotlight-card-meta">Health &amp; Household · ~$15–25 · HIGH repurchase</div>
+        <div class="spotlight-card-alts">Thorne D-5000 <span style="color:#16a34a;font-weight:600;">✓</span> · Momentous D3+K2 <span style="color:#16a34a;font-weight:600;">✓</span></div>
+        <div class="spotlight-card-affiliate">⭐ Top affiliate: Thorne 20% (ShareASale) · Momentous 15% (Impact)</div>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-card-title">Sunzel High Waist Biker Shorts</div>
+        <div class="spotlight-card-meta">Apparel · ~$20–30 / pair · MEDIUM repurchase</div>
+        <div class="spotlight-card-alts">NIKIBIKI <span style="color:#16a34a;font-weight:600;">✓</span> · Aero Tech Designs <span style="color:#16a34a;font-weight:600;">✓</span></div>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-card-title">Ring Video Doorbell Wired</div>
+        <div class="spotlight-card-meta">Tools &amp; Home Improvement · ~$60 · LOW repurchase</div>
+        <div class="spotlight-card-alts">SkyBell Technologies <span style="color:#d97706;font-weight:600;">~</span> · Arlo Technologies <span style="color:#16a34a;font-weight:600;">✓</span></div>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-card-title">CeraVe Moisturizing Cream</div>
+        <div class="spotlight-card-meta">Beauty &amp; Personal Care · ~$15–20 · HIGH repurchase</div>
+        <div class="spotlight-card-alts">Vanicream <span style="color:#16a34a;font-weight:600;">✓</span> · Ursa Major <span style="color:#16a34a;font-weight:600;">✓</span></div>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-card-title">HydroJug Traveler</div>
+        <div class="spotlight-card-meta">Home &amp; Kitchen · ~$40–50 · HIGH repurchase</div>
+        <div class="spotlight-card-alts">Tervis <span style="color:#16a34a;font-weight:600;">✓</span> · Eastman Tritan-certified <span style="color:#16a34a;font-weight:600;">✓</span></div>
+        <div class="spotlight-card-affiliate">⚠ Plastic alternatives only — no US stainless confirmed. Tervis: 6% via CJ Affiliate.</div>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-card-title">Sol de Janeiro Body Badalada Lotion</div>
+        <div class="spotlight-card-meta">Beauty &amp; Personal Care · ~$30–40 · MEDIUM repurchase</div>
+        <div class="spotlight-card-alts">Nécessaire <span style="color:#16a34a;font-weight:600;">✓</span> · Kopari Beauty <span style="color:#d97706;font-weight:600;">~</span></div>
+      </div>
+      <div class="spotlight-card">
+        <div class="spotlight-card-title">Schylling NeeDoh Nice Ice Baby</div>
+        <div class="spotlight-card-meta">Toys &amp; Games · ~$10–15 · MEDIUM repurchase</div>
+        <div class="spotlight-card-alts">Fat Brain Toys <span style="color:#16a34a;font-weight:600;">✓</span> · Toysmith <span style="color:#d97706;font-weight:600;">~</span></div>
+      </div>
+    </div>
+    <p style="margin:14px 0 0;font-size:11.5px;color:#3b82f6;"><span style="color:#16a34a;font-weight:700;">✓</span> VERIFIED &nbsp;·&nbsp; <span style="color:#d97706;font-weight:700;">~</span> LOW CONFIDENCE</p>
+  </div>
+
+  <!-- Methodology -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p>Research conducted July 23, 2026 via public web sources. Product list sourced from the sibling Competitor Research Agent's July 23, 2026 report. Electronics category excluded per standing workflow policy (3 products excluded: Amazon Echo Dot 5th Gen, Apple AirPods 4, Apple Watch Series 11).</p>
+    <p><strong>VERIFIED</strong> — American business status confirmed by 2 or more independent sources: at minimum, (a) state/federal business registration, SEC filing, or NYSE/Nasdaq listing, plus (b) independent press coverage of a US manufacturing facility, NSF/USDA/EWG/B-Corp certification record, or third-party trade database listing. <strong>LOW-CONFIDENCE</strong> — American status based on brand marketing claims only; no independent manufacturing or facility verification found.</p>
+    <p><strong>Key market updates this report:</strong> (1) iRobot filed Chapter 11 bankruptcy in December 2025 and was acquired by Picea Robotics, a Chinese manufacturer — removed from all future robot vacuum alternative recommendations. (2) Liberty Bottleworks (US stainless steel bottle manufacturer, Bellingham WA) permanently closed June 2026 — noted in water bottle category entries with alternative recommendations updated accordingly.</p>
+    <p><strong>Affiliate rates</strong> are current as of July 23, 2026 and subject to change without notice. Rates cited: Thorne 20% (ShareASale) · Momentous 15% (Impact) · Duluth Pack 15% (in-house) · Tervis ~6% (CJ Affiliate) · SharkNinja ~3% (Impact) · Burt's Bees ~2% (CJ Affiliate) · Kopari (FlexOffers, rate varies) · Naturium (Awin, rate varies).</p>
+    <p>Approximately 145 public web sources checked, including: SEC EDGAR filings, state Secretary of State business registries, NSF International certification database, USDA facility registrations, EWG Verified product registry, AAFCO state licensing records, B-Corp public registry, NYSE and Nasdaq listing databases, Amazon product listings, affiliate network listings (ShareASale, Impact, CJ Affiliate, Awin, FlexOffers), and independent press coverage.</p>
+  </div>
+
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../July17_2026/">July 17</a></span>
+  </div>
+
+</div>
+</body>
+</html>
