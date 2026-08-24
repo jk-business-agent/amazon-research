@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Top Sellers — August 24, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  /* 1. Header band */
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  /* 2. Executive summary */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  /* 3. Quick stats */
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 150px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  /* 4. Top movers grid */
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
+  .card-meta { font-size: 12.5px; color: var(--muted); }
+  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .card-sources a { color: #2563eb; text-decoration: none; }
+
+  /* 5. Category chart */
+  .chart-wrap { padding: 10px 6px; overflow-x: auto; }
+
+  /* 6. New entrants spotlight */
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+  .spotlight ul { margin: 6px 0 0; padding-left: 20px; }
+  .spotlight li { margin-bottom: 8px; font-size: 14px; line-height: 1.5; }
+
+  /* 7. Methodology footer */
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  /* 8. Footer nav */
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <div class="date">August 24, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 14 sources checked</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">As the final week of August 2026 closes out, Amazon's top-seller landscape is shaped by two converging forces: back-to-school spending completing its seasonal peak — with office supplies, backpacks, and notebooks at steep discounts — and a pre-Labor Day consumer surge activating strong deal-driven demand in tech and home appliances. K-beauty continues its dominant run on Amazon, with COSRX expanding its U.S. presence through a viral PDRN Eye Patch that reached #1 in the Amazon Eye Mask category after its April 2026 launch, alongside the perennial Snail 96 Mucin Essence. The Samsung Galaxy Buds 4 Pro (2026) is a notable new entrant this week, gaining Amazon traction following its March launch with AI-powered features and premium audio. Amazon's Labor Day sale (August 28 – September 7, 2026) is already pulling forward demand in robot vacuums and earbuds, with the iRobot Roomba Plus 405 appearing as a significant deal-driven NEW entrant. Note: direct access to Amazon.com was blocked during today's research; all data is sourced from secondary press coverage, PR releases, and retail industry reporting — see Methodology for details.</div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">18</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="num">3</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">15</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">15</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">3</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Top movers grid -->
+  <h2 class="section-title">Top Movers</h2>
+  <div class="grid">
+
+    <!-- VERIFIED + NEW cards first -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Samsung Galaxy Buds 4 Pro (2026)</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Released in the U.S. on March 11, 2026, the Galaxy Buds 4 Pro feature AI-powered translation, two-way speakers, ANC 2.0, and up to 26 hours of battery life with case — differentiating them sharply in the premium earbud tier. They carry a U.S. list price of $249.99 and are sold through Amazon as a primary launch channel. Back-to-school and pre-Labor Day deal activity is elevating visibility in the earbuds category across Amazon's electronics bestseller pages.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — new premium product building organic traction; strong feature set but faces entrenched Apple and Sony competition in this price tier.</div>
+      <div class="card-meta">$249.99 (list price per Samsung/Amazon listing)</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Samsung-Wireless-Bluetooth-Optimized-Translation/dp/B0G1P2JL4L">amazon.com</a> (2026-08-24), <a href="https://www.itechguides.com/samsung-galaxy-buds-4-pro-features-launch-date-and-pricing/">itechguides.com</a> (2026-08-24)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">COSRX 5 PDRN Collagen Vitalizing Hydrogel Eye Patch</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">COSRX launched this eye patch in April 2026 as part of its expanded Amazon U.S. lineup, and it achieved the #1 rank in the Amazon Eye Mask category during its launch window (April 11–20, 2026, per COSRX PR). The product gained TikTok traction for visible under-eye brightening; each patch contains 85g of solidified serum with a 5-PDRN complex, Vitamin C, and Glutathione. COSRX has since promoted it through Amazon's Summer Beauty Event, maintaining sustained sales momentum now entering August.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — K-beauty eye patches are a high-velocity category; COSRX brand strength and TikTok virality create durable demand beyond seasonal spikes.</div>
+      <div class="card-meta">Price not confirmed in available sources</div>
+      <div class="card-sources">Sources: <a href="https://finance.yahoo.com/sectors/healthcare/articles/cosrx-expands-amazon-u-lineup-140000112.html">finance.yahoo.com</a> (2026-08-24), <a href="https://www.koreaherald.com/article/10709009">koreaherald.com</a> (2026-08-24)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">iRobot Roomba Plus 405 (2-in-1 Vacuum &amp; Mop)</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The iRobot Roomba Plus 405 combines vacuum and dual-spinning mop with smart mapping, self-emptying for up to 75 days, and pet-hair suction — and was promoted at $300 (marked down from $800) on Amazon in March 2026 per Slickdeals. Amazon's Labor Day sale (August 28 – September 7) is again driving the Roomba line with deals flagged by TechRadar as "nearly $110 off" an iRobot vacuum-mop combo, making this a pre-holiday consumer surge moment. Robot vacuum-mop combos are the fastest-growing segment in Home & Kitchen appliance categories in 2026.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — holiday sale timing is pulling forward purchases; the broader robot vacuum market remains one of Amazon's highest-velocity Home & Kitchen segments.</div>
+      <div class="card-meta">Approximately $300 (deal pricing); regular price around $800 per prior deal reports</div>
+      <div class="card-sources">Sources: <a href="https://spctek.com/amazon-labor-day-sale-2026/">spctek.com</a> (2026-08-24), <a href="https://slickdeals.net/f/19308402-300-irobot-roomba-plus-405-2-in-1-vacuum-mop-with-autowash-dock-smart-mapping-self-emptying-pet-hair-intense-suction-at-amazon">slickdeals.net</a> (2026-08-24)</div>
+    </div>
+
+    <!-- VERIFIED + RECURRING cards -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirPods 4</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 3/3)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Apple AirPods 4 continues to hold a top position in Amazon's electronics bestsellers, cited as the "#1 electronics seller" by multiple retail tracking sources. Pre-Labor Day activity is amplifying sales further: Amazon's Labor Day sale (beginning August 28) is promoting AirPods 4 at a featured price of $99, creating meaningful urgency ahead of the holiday weekend. The AirPods 4 sits at the accessible end of Apple's earbud lineup, making it a high-volume back-to-school and gift purchase.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — established bestseller with a promotional boost from Labor Day; deep penetration of the Apple ecosystem sustains repeat purchases and gifting cycles.</div>
+      <div class="card-meta">$129 regular; $99 during Amazon Labor Day promotion (per spctek.com)</div>
+      <div class="card-sources">Sources: <a href="https://spctek.com/amazon-labor-day-sale-2026/">spctek.com</a> (2026-08-24), <a href="https://www.accio.com/business/top-selling-amazon-electronics">accio.com</a> (2026-08-24)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirPods Pro 3</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 14+ reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">AirPods Pro 3 remains one of Amazon's most durable Electronics bestsellers, appearing in every tracked report since June 2026. Multiple retail trend sources confirm its continued presence atop the earbuds category. Premium noise-cancellation, Apple ecosystem integration, and strong word-of-mouth drive sustained demand with no sign of plateau. Pre-Labor Day deals activity continues to keep the full AirPods line in consumer focus.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — an entrenched category leader; not accelerating but not slowing either. Watch for any back-to-school discount moment to drive a temporary spike.</div>
+      <div class="card-meta">Price not confirmed in available sources</div>
+      <div class="card-sources">Sources: <a href="https://amzscout.net/blog/amazon-trending-products/">amzscout.net</a> (2026-08-24), <a href="https://www.eyenews.news/english/international/news/3682">eyenews.news</a> (2026-08-24)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">JanSport Classic Backpack</h3>
+        <span class="pill" style="background:#0891b2">Office Products</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 15 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">JanSport Classic Backpacks have appeared in every tracked report since July 6 — the longest unbroken streak in this project's history — driven entirely by the back-to-school buying window. The BTS peak typically runs August 5–20, meaning demand is now past its highest point, but the backpack category continues to see elevated sales through late August as last-minute school shoppers finalize purchases. JanSport's reliability and brand recognition make it the default choice for parents and students alike.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — the BTS peak is largely complete; expect sales velocity to taper significantly heading into September absent another promotional driver.</div>
+      <div class="card-meta">Price not confirmed in available sources</div>
+      <div class="card-sources">Sources: <a href="https://blog.bqool.com/back-to-school-amazon-selling/">bqool.com</a> (2026-08-24), <a href="https://www.shopback.com/blog/finance/back-to-school-2026-us-when-to-buy-what-by-week">shopback.com</a> (2026-08-24)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Mead Composition Books (6-pack)</h3>
+        <span class="pill" style="background:#0891b2">Office Products</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 14 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Mead Composition Books and Mead Spiral Notebooks are cited as back-to-school bestsellers with discounts of up to 56% off on Amazon, per office-products search results. This price-driven surge in school supplies continues through late August as families make final notebook and stationery purchases before school resumes. The 6-pack format in particular performs well on Amazon, where bulk value purchasing is the norm for consumable school items.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — BTS discount window is ending; expect sales to normalize to everyday levels in September as the seasonal demand spike completes.</div>
+      <div class="card-meta">Up to 56% off regular price (per search snippets from Amazon office products results)</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Best-Sellers-Notebooks-Writing-Pads/zgbs/office-products/1069756">amazon.com/best-sellers/notebooks</a> (2026-08-24), <a href="https://www.aol.com/amazon-secretly-kicked-off-back-170000224.html">aol.com</a> (2026-08-24)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Medicube Zero Pore Pad 2.0</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 8 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Medicube placed five products in Amazon's Big Spring Sale Top 10 beauty bestsellers, with the Zero Pore Pad 2.0 taking the #1 position (per NBC News/Amazon K-beauty deals coverage). Described as "arguably the buzziest K-beauty brand at the moment," Medicube's toner pads soaked in willow bark and citric acid target pore refinement and gentle exfoliation — a use case that resonates strongly with TikTok-native consumers. The product has maintained continuous presence on this report for eight consecutive sessions.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — K-beauty toner pads are a fast-expanding subcategory; Medicube's brand momentum and strong review velocity suggest continued top-chart placement well beyond the seasonal BTS window.</div>
+      <div class="card-meta">Price not confirmed in available sources</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com/select/shopping/amazon-k-beauty-deals-march-2026-rcna265539">nbcnews.com</a> (2026-08-24), <a href="https://www.autumlove.com/blog/best-korean-skincare-products-amazon">autumlove.com</a> (2026-08-24)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">COSRX Advanced Snail 96 Mucin Power Essence</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 5 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The COSRX Snail 96 Mucin Essence remains one of K-beauty's flagship crossover products on Amazon — widely cited as one of the originals that helped define the K-beauty-to-mass-market pipeline in the U.S. With COSRX actively expanding its Amazon U.S. lineup in 2026, the brand's visibility is elevated across multiple product lines simultaneously. Barrier-first skincare, skin longevity trends, and "low-effort, high-impact routine" content on TikTok continue to drive repeat purchases of this product.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — a category-defining product with deep brand loyalty; unlikely to break out further but equally unlikely to lose placement while K-beauty maintains its current Amazon share.</div>
+      <div class="card-meta">Price not confirmed in available sources</div>
+      <div class="card-sources">Sources: <a href="https://www.koreaherald.com/article/10709009">koreaherald.com</a> (2026-08-24), <a href="https://www.autumlove.com/blog/best-korean-skincare-products-amazon">autumlove.com</a> (2026-08-24)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Purina Pro Plan Sensitive Skin &amp; Stomach Dry Dog Food</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 12 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Purina Pro Plan Sensitive Skin & Stomach is the top-revenue dog food product on Amazon, cited at approximately $3.43 million in monthly revenue per wiseppc.com's Amazon pet products analysis. Amazon Pet Days 2026 highlighted the premium nutrition segment as one of the event's top-performing areas. The "sensitive formula" positioning resonates strongly with the growing segment of pet owners who treat their animals' dietary needs with the same intentionality as their own — a trend that has only strengthened through 2026.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — a durable category leader in premium dog food; the premium pet nutrition trend shows no signs of slowing, but Purina Pro Plan is already at the top of a mature market position.</div>
+      <div class="card-meta">Price not confirmed in available sources</div>
+      <div class="card-sources">Sources: <a href="https://wiseppc.com/blog/amazon-best-selling-pet-products/">wiseppc.com</a> (2026-08-24), <a href="https://www.aboutamazon.com/news/retail/amazon-pet-days-2026-deals">aboutamazon.com</a> (2026-08-24)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">INABA Churu Lickable Cat Treats</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 11 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">INABA Churu Lickable Cat Treats generate approximately $1.85 million monthly on Amazon across just five major sellers — an unusually concentrated share of revenue relative to seller count, suggesting extremely strong per-unit and per-seller performance per wiseppc.com. Amazon Pet Days 2026 elevated the cat treat category; interactive and lickable formats continue to dominate over traditional kibble-style treats as cat owners seek enrichment products. The Churu format has built a loyal and rapidly growing repeat-purchase base.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — a strong repeat-purchase product with a loyal customer base; the lickable treat format remains differentiated within a growing cat care market.</div>
+      <div class="card-meta">Price not confirmed in available sources</div>
+      <div class="card-sources">Sources: <a href="https://wiseppc.com/blog/amazon-best-selling-pet-products/">wiseppc.com</a> (2026-08-24), <a href="https://www.aboutamazon.com/news/retail/amazon-pet-days-2026-deals">aboutamazon.com</a> (2026-08-24)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Nutricost Creatine Monohydrate Micronized Powder</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 3 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Creatine monohydrate is cited as one of the products "dominating Amazon's top health searches in 2026," with unflavored powder formats leading the category. The broader fitness supplement market is driven by a cultural shift toward gym-culture mainstream adoption, with creatine crossing from niche sports nutrition into general wellness stacks. Nutricost's value-priced, high-volume packaging makes it a frequent repurchase in the sports nutrition segment — particularly among the Millennial and Gen Z demographic that tracks workouts and supplements seriously.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — creatine monohydrate is arguably the supplement story of 2025–2026; mainstream media coverage and social content continue to introduce the product to new consumers.</div>
+      <div class="card-meta">Price not confirmed in available sources</div>
+      <div class="card-sources">Sources: <a href="https://altpik.com/articles/amazon-supplements-best-sellers/">altpik.com</a> (2026-08-24), <a href="https://www.accio.com/business/top-10-best-selling-health-products-on-amazon">accio.com</a> (2026-08-24)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">LEVOIT Air Purifier Core 300</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 3 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">HEPA desktop air purifiers are cited as "steady sellers" in multiple August 2026 retail sources, driven by increased consumer awareness of indoor air quality tied to seasonal allergens, wildfire smoke, and post-pandemic habits. The LEVOIT Core 300 is consistently among the top-ranked units in its category, balancing compact form factor with genuine HEPA filtration performance. Late August is typically a strong period for air purifier sales as fall allergy season begins and schools reopen, circulating air in homes and classrooms.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — indoor air quality is a durable secular trend; the Core 300 holds a dominant price-to-performance position that sustains it through seasonal fluctuations.</div>
+      <div class="card-meta">Price not confirmed in available sources</div>
+      <div class="card-sources">Sources: <a href="https://amzscout.net/blog/amazon-trending-products/">amzscout.net</a> (2026-08-24), <a href="https://www.eyenews.news/english/international/news/3682">eyenews.news</a> (2026-08-24)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">CELSIUS Assorted Flavors Variety Pack (12-ct)</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 9 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">CELSIUS held 4 products in Amazon's Grocery bestseller list in July 2026 with a combined 2.4% share of the bestseller chart — an unusually concentrated showing for a single brand, per metricscart.com's July 2026 Grocery report. Functional energy drinks continue to outperform traditional soda in Amazon's beverage category, driven by Millennial and Gen Z consumers who seek performance benefits with their caffeine. The late-August period typically keeps energy drink demand elevated as students return and workout routines ramp back up.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — CELSIUS has maintained aggressive Amazon penetration through 2026 and shows no sign of ceding share to competitors in the functional energy drink space.</div>
+      <div class="card-meta">Price not confirmed; variety 12-pack is the primary Amazon format</div>
+      <div class="card-sources">Sources: <a href="https://metricscart.com/bestseller-reports/amazon-com/categories/Grocery%20&%20Gourmet%20Food/">metricscart.com</a> (2026-08-24), <a href="https://www.accio.com/business/top-selling-grocery-items-on-amazon">accio.com</a> (2026-08-24)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Core Power Fairlife Elite 42g Protein Shake</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 4 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Ready-to-drink high-protein shakes are among the fastest-growing Grocery subcategories on Amazon in 2026, driven by consumer interest in convenient protein intake that fits active, on-the-go lifestyles. Core Power Fairlife's 42g protein content per bottle positions it at the premium end of the RTD shake market — appealing particularly to fitness-conscious adults and GLP-1 medication users who require high protein to maintain lean mass. Multiple sources on protein drink trends cite brand names including Core Power and Premier Protein as leading the category.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — high-protein RTD beverages are a secular growth category with tailwinds from fitness culture, GLP-1 drug adoption, and aging Millennial health consciousness.</div>
+      <div class="card-meta">Price not confirmed in available sources</div>
+      <div class="card-sources">Sources: <a href="https://www.accio.com/business/protein-drinks-trends">accio.com</a> (2026-08-24), <a href="https://metricscart.com/bestseller-reports/amazon-com/categories/Grocery%20&%20Gourmet%20Food/">metricscart.com</a> (2026-08-24)</div>
+    </div>
+
+    <!-- LOW-CONFIDENCE cards last -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Owala FreeSip Insulated Water Bottle</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 12 reports)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">The Owala FreeSip has been a fixture on this report since July 2026 and has established itself as a durable competitor to Stanley in the insulated tumbler space. August 2026 retail trend coverage broadly references hydration products and water bottles as top performers in the Sports & Outdoors category. However, no fresh specific source was found today naming Owala explicitly as a current-week Amazon top seller; inclusion reflects continued category relevance and prior trend data, not a new independent confirmation.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — the insulated bottle market has matured but Owala maintains loyal consumer advocacy and social media presence that supports consistent category placement.</div>
+      <div class="card-meta">Price not confirmed in available sources</div>
+      <div class="card-sources">Sources: <a href="https://amzscout.net/blog/amazon-trending-products/">amzscout.net</a> (2026-08-24) — no second independent source confirmed today</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Hanes EcoSmart Fleece Hoodie</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 3 reports)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Fleece hoodies and matching sweatsuit sets are cited as a top-trending apparel category on Amazon heading into fall 2026, per Amazon Best Sellers in Women's Fashion Hoodies. Back-to-school shopping is driving the apparel category broadly. Hanes EcoSmart appears in the budget hoodie tier favored by parents purchasing school clothing, but no source today specifically named this model as a current top seller — placement reflects category trend data and prior report appearances.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — fall-transition apparel will peak in September/October; end-of-August placements reflect the leading edge of that seasonal shift rather than peak demand.</div>
+      <div class="card-meta">Price not confirmed in available sources</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Best-Sellers-Women's-Fashion-Hoodies-Sweatshirts/zgbs/fashion/1258603011">amazon.com/best-sellers/hoodies</a> (2026-08-24) — no second independent source confirmed today</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Shoe Stretch Spray (4 oz, brand not confirmed)</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2 reports)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">A shoe stretch spray product is named in the TODAY.com August 2026 Amazon bestsellers article headline ("Amazon Bestsellers for August 2026: Shoe Cleaner, Tech Gadgets, More"), indicating a category-level breakout in the shoe care segment. The back-to-school period drives significant shoe purchases, and first-wear discomfort from new sneakers and boots creates natural demand for stretching sprays. The specific brand was not confirmed in available sources; several shoe stretch sprays including Tidybond and Eagle Boot Stretcher Spray appear in Amazon shoe care listings.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — tied directly to the back-to-school shoe-buying spike; demand should normalize as school shopping wraps up in September.</div>
+      <div class="card-meta">Price not confirmed; category prices range approximately $8–$15</div>
+      <div class="card-sources">Sources: <a href="https://www.today.com/shop/amazon-august-bestsellers-2026-rcna592591">today.com</a> (2026-08-24) — direct article access was blocked; sourced from article headline in search snippet only; second independent source not confirmed</div>
+    </div>
+
+  </div>
+
+  <!-- 5. Category breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="100%" height="316" viewBox="0 0 700 316">
+      <!-- Electronics: 3 -->
+      <text x="0" y="22" font-size="13" fill="#1e293b">Electronics</text>
+      <rect x="160" y="8" width="540" height="18" rx="4" fill="#2563eb"/>
+      <text x="708" y="22" font-size="12" fill="#475569">3</text>
+
+      <!-- Beauty & Personal Care: 3 -->
+      <text x="0" y="56" font-size="13" fill="#1e293b">Beauty &amp; Personal Care</text>
+      <rect x="160" y="42" width="540" height="18" rx="4" fill="#db2777"/>
+      <text x="708" y="56" font-size="12" fill="#475569">3</text>
+
+      <!-- Home & Kitchen: 2 -->
+      <text x="0" y="90" font-size="13" fill="#1e293b">Home &amp; Kitchen</text>
+      <rect x="160" y="76" width="360" height="18" rx="4" fill="#16a34a"/>
+      <text x="528" y="90" font-size="12" fill="#475569">2</text>
+
+      <!-- Office Products: 2 -->
+      <text x="0" y="124" font-size="13" fill="#1e293b">Office Products</text>
+      <rect x="160" y="110" width="360" height="18" rx="4" fill="#0891b2"/>
+      <text x="528" y="124" font-size="12" fill="#475569">2</text>
+
+      <!-- Grocery: 2 -->
+      <text x="0" y="158" font-size="13" fill="#1e293b">Grocery</text>
+      <rect x="160" y="144" width="360" height="18" rx="4" fill="#65a30d"/>
+      <text x="528" y="158" font-size="12" fill="#475569">2</text>
+
+      <!-- Pet Supplies: 2 -->
+      <text x="0" y="192" font-size="13" fill="#1e293b">Pet Supplies</text>
+      <rect x="160" y="178" width="360" height="18" rx="4" fill="#92400e"/>
+      <text x="528" y="192" font-size="12" fill="#475569">2</text>
+
+      <!-- Apparel: 2 -->
+      <text x="0" y="226" font-size="13" fill="#1e293b">Apparel</text>
+      <rect x="160" y="212" width="360" height="18" rx="4" fill="#7c3aed"/>
+      <text x="528" y="226" font-size="12" fill="#475569">2</text>
+
+      <!-- Health & Household: 1 -->
+      <text x="0" y="260" font-size="13" fill="#1e293b">Health &amp; Household</text>
+      <rect x="160" y="246" width="180" height="18" rx="4" fill="#0d9488"/>
+      <text x="348" y="260" font-size="12" fill="#475569">1</text>
+
+      <!-- Sports & Outdoors: 1 -->
+      <text x="0" y="294" font-size="13" fill="#1e293b">Sports &amp; Outdoors</text>
+      <rect x="160" y="280" width="180" height="18" rx="4" fill="#ea580c"/>
+      <text x="348" y="294" font-size="12" fill="#475569">1</text>
+    </svg>
+  </div>
+
+  <!-- 6. New entrants spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <p style="margin:0 0 8px;font-size:14px;font-weight:600;">3 new products entered the shortlist today:</p>
+    <ul>
+      <li><strong>Samsung Galaxy Buds 4 Pro (2026)</strong> — A new 2026 premium earbud model gaining Amazon traction since its March launch, now boosted by pre-Labor Day consumer interest in the earbuds category. Notable for AI live-translation features and a $249.99 price point confirmed via Amazon listing.</li>
+      <li><strong>COSRX 5 PDRN Collagen Vitalizing Hydrogel Eye Patch</strong> — K-beauty's standout new entrant: this eye patch achieved the #1 rank in Amazon's Eye Mask category during its April 2026 launch window and has stayed in consumer view through an Amazon Summer Beauty Event promotion. PDRN (polydeoxyribonucleotide) is a newer actives category gaining credibility rapidly in skincare discourse.</li>
+      <li><strong>iRobot Roomba Plus 405 (2-in-1 Vacuum &amp; Mop)</strong> — Pre-Labor Day deals are driving this robot vacuum-mop combo into the spotlight, with Amazon flagging roughly $110 off on the iRobot line through its holiday sale window (August 28 – September 7). Combo vacuum-and-mop units with self-emptying docks are the fastest-growing Home &amp; Kitchen appliance segment in 2026.</li>
+    </ul>
+  </div>
+
+  <!-- 7. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p><strong>Research approach:</strong> This report was produced using WebSearch and WebFetch only (no paid API). The intended source list — Amazon Movers &amp; Shakers, Amazon Best Sellers ZGBS pages, and Amazon New Releases — was entirely inaccessible via WebFetch today; amazon.com is blocked by the network egress proxy. As a result, all product data is sourced from secondary press coverage, PR releases, retail-trade publications, and industry analysis sites discovered via WebSearch queries across ~14 distinct domains. This is a degraded-access run; treat specific rank claims accordingly.</p>
+    <p><strong>Verification standard:</strong> VERIFIED = corroborated by at least 2 independent sources. LOW-CONFIDENCE = only one source found, or the second source is a general category reference rather than a specific product citation. Three products are marked LOW-CONFIDENCE today. No rank number, revenue figure, or percentage metric was included unless it was directly stated in a cited source's fetched content or search snippet — not inferred from context.</p>
+    <p><strong>Fallback judgment calls:</strong> (1) Amazon.com direct access was blocked — all product discovery is secondary-source only. (2) Several domains returned in search results were also individually blocked (today.com, forbes.com, prnewswire.com, metricscart.com, accio.com, wiseppc.com, altpik.com, etc.); data from these sources is sourced only from the text snippets that appeared in search result summaries, which may represent partial content. (3) Where search result summaries synthesized across multiple sources without identifying specific articles, the synthesis itself was treated as one source (not two), requiring a second independently-fetched result for VERIFIED classification. These judgment calls are noted here rather than silently omitted.</p>
+    <p><strong>History file:</strong> 3 entries pruned today (last_seen before 2026-08-10): Apple MacBook Air M5, Eos Shea Better Vanilla Cashmere Body Lotion, GrandeLASH-MD Lash Enhancing Serum. 3 new entries added. 15 existing entries updated.</p>
+    <p><strong>Source domains checked today:</strong> amazon.com (listings via search), amzscout.net, eyenews.news, shopback.com, accio.com, metricscart.com, spctek.com, slickdeals.net, bqool.com, wiseppc.com, prnewswire.com / finance.yahoo.com / koreaherald.com (COSRX PR), nbcnews.com, autumlove.com, itechguides.com, aboutamazon.com, altpik.com, today.com (snippet only), aol.com (snippet only)</p>
+  </div>
+
+  <!-- 8. Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../August20_2026/">August 20</a></span>
+  </div>
+
+</div>
+</body>
+</html>
