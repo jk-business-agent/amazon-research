@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>American Business Alternatives — August 27, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 130px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .product-groups { display: flex; flex-direction: column; gap: 18px; }
+  .product-group {
+    background: #fafbfc;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+  .product-group-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+  .product-title { font-size: 18px; font-weight: 700; margin: 0 0 4px; }
+  .product-meta { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .tag-count { background: #f1f5f9; color: #1e293b; }
+  .tag-affiliate-yes { background: var(--verified-bg); color: var(--verified); }
+  .tag-affiliate-no { background: #f1f5f9; color: var(--muted); }
+  .tag-affiliate-unconfirmed { background: var(--lowconf-bg); color: var(--lowconf); }
+  .product-rationale { font-size: 13.5px; line-height: 1.5; color: #334155; margin: 12px 0 14px; }
+
+  .alt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
+  .alt-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .alt-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .alt-name { font-size: 15.5px; font-weight: 600; margin: 0; }
+  .alt-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f8fafc; border-radius: 8px; padding: 10px 12px; }
+  .compare-label { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+  .compare-col div:last-child { font-size: 12.5px; color: #1e293b; line-height: 1.45; }
+  .alt-section { font-size: 12.5px; line-height: 1.5; color: #334155; }
+  .alt-section a { color: #2563eb; text-decoration: none; font-size: 11.5px; }
+  .alt-sources { font-size: 11px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .alt-sources a { color: #2563eb; text-decoration: none; }
+
+  .chart-wrap { padding: 10px 6px; overflow-x: auto; }
+
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>American Business Alternatives to Amazon Top Sellers</h1>
+    <div class="date">August 27, 2026</div>
+    <span class="badge">Public web research · Cross-verified · ~109 sources checked</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">This run processes the sibling agent's August 27, 2026 Amazon report — 14 products at the intersection of back-to-school season close and Labor Day weekend — after removing 2 Electronics products (Oura Ring 5, Anker Prime Power Bank), leaving 12 products across 8 categories. The standout American find is Wild Gainz Creatine Gummies (VERIFIED): a US-manufactured, NSF-facility-certified, batch-tested gummy creatine brand founded after the founder's father sustained a traumatic brain injury — one of the most compelling brand-origin stories found in this archive. It is a direct competitive format to the trending Create brand and is verified via independent editorial sources separate from any brand marketing. Air purifier alternatives this run are the strongest on record: Austin Air Systems (Buffalo, NY — VERIFIED, 36 years of US manufacturing) and Oransi (Radford, VA — VERIFIED, reshored in 2023–24) both counter the Chinese-owned LEVOIT Core 300. Premier Protein Ultimate 42g (BRBR, NYSE-listed) launched July 2026 specifically to compete with Core Power Fairlife Elite — its US manufacturing at named Texas and Ohio facilities is independently confirmed by trade press. Three category gaps were documented: (a) COSRX snail secretion filtrate essence has no American equivalent — alternatives target the same skin goals via different mechanisms; (b) INABA Churu's lickable squeeze-tube format is not manufactured in the USA — freeze-dried American-made alternatives are offered instead; (c) vacuum-insulated stainless steel water bottle manufacturing does not exist domestically, confirmed by AllAmerican.org investigation and industry sourcing analysis.</div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">12</div><div class="label">Amazon Products</div></div>
+    <div class="stat-card"><div class="num">24</div><div class="label">Alternatives Found</div></div>
+    <div class="stat-card"><div class="num">3</div><div class="label">New Products</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">15</div><div class="label">Verified American-Made</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">8</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Product groups -->
+  <h2 class="section-title">Products &amp; American Alternatives</h2>
+  <div class="product-groups">
+
+    <!-- 1. Create Creatine Gummies — NEW, IN-BAND, HIGH repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Create Creatine Gummies</h3>
+          <div class="product-meta">$52–57 &middot; <span class="pill" style="background:#0d9488">Health &amp; Household</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: HIGH — creatine is a daily supplement requiring continuous resupply; the confirmed women-driven adoption cycle creates durable habitual purchase behavior. Create holds 8.2% market share in the fastest-growing supplement subcategory (up 90% YoY) and gained $488K in additional monthly revenue in August alone. The gummies format's novelty and the structural demographic shift toward women buyers make this a priority research target.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Wild Gainz Creatine Gummies</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>~$52–57 for ~90-count; 1.5g creatine/gummy (3 gummies = ~4.5g/serving); No. 4 spot in category; targets women first-time buyers; multiple-ingredient gummy format.</div></div>
+            <div class="compare-col"><div class="compare-label">Wild Gainz</div><div>~$35–40 for 150-count (30-day supply); 5g creatine monohydrate per serving; vegan pectin-based; lemon flavor; non-GMO, gluten-free; batch Eurofins COAs published publicly. Lower price per serving; single-ingredient focus.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Wild Gainz is a US supplement brand founded after Joshua Khoury sought a more accessible creatine format for his father recovering from a traumatic brain injury. The company has earned editorial recognition from Fortune, BarBend, and Garage Gym Reviews. Products are manufactured in a GMP-compliant, NSF-certified, FDA-registered US facility.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Manufactured in an NSF-certified, GMP-compliant, FDA-registered US facility. Verified by Garage Gym Reviews and Active Gear Review editorial reviews independently naming US manufacturing and Eurofins third-party batch testing, plus Amazon listing title stating "Made in USA, 3rd party tested, GMP &amp; NSF certified facility." <a href="https://www.garagegymreviews.com/equipment/wild-gainz-creatine-gummies">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Joshua Khoury — founded Wild Gainz after his father sustained a traumatic brain injury and needed a more accessible format for doctor-recommended creatine. <a href="https://www.streetinsider.com/PRNewswire/Wild+Gainz+Shares+Fathers+Day+Story+Behind+Nationally+Recognized+Creatine+Gummy+Brand+Founded+to+Help+One+Dad+Recover/26651565.html">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> — UGC/creator collab page exists at getwildgainz.com/pages/collab; traditional affiliate commission terms not confirmed.</div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://getwildgainz.com/">getwildgainz.com</a> · press@getwildgainz.com</div>
+          <div class="alt-sources">Sources: <a href="https://getwildgainz.com/">getwildgainz.com</a> (Aug 27, 2026), <a href="https://www.garagegymreviews.com/equipment/wild-gainz-creatine-gummies">garagegymreviews.com</a> (Aug 27, 2026), <a href="https://www.activegearreview.com/nutrition/wild-gainz-creatine-gummies-review/">activegearreview.com</a> (Aug 27, 2026), <a href="https://www.streetinsider.com/PRNewswire/Wild+Gainz+Shares+Fathers+Day+Story+Behind+Nationally+Recognized+Creatine+Gummy+Brand+Founded+to+Help+One+Dad+Recover/26651565.html">streetinsider.com</a> (Aug 27, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Bear Balanced Creatine Gummies</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>~$52–57; 1.5g creatine/gummy; $4.7M/month Amazon revenue; single-focus creatine format.</div></div>
+            <div class="compare-col"><div class="compare-label">Bear Balanced</div><div>~$39.99 for 90-count (30-day supply); Creapure-grade creatine + L-Theanine + L-Tyrosine + Vitamin B12; sugar-free, vegan, keto; blueberry flavor. Focus-and-strength stack beyond pure creatine.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2020 in Los Angeles, CA by Dylan Menter, a former SpaceX aerospace engineer and competitive bodybuilder. The brand claims to have originated the creatine gummy format and markets as "World's First Creatine Gummies." Stocked in Bristol Farms, Lazy Acres, and on Amazon.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Headquartered in Los Angeles, CA (confirmed by Crunchbase, Bristol Farms editorial profile, nutraingredients.com coverage). An eBay product listing records country of origin as United States. No independent certification body or editorial source has confirmed US manufacturing specifically — LOW-CONFIDENCE. <a href="https://www.bristolfarms.com/founders/mtf-dylan-menter-bear-balanced">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Dylan Menter — aerospace engineer at SpaceX who founded Bear Balanced while training as a competitive bodybuilder. <a href="https://www.bristolfarms.com/founders/mtf-dylan-menter-bear-balanced">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> — <a href="https://creatinegummies.com/pages/affiliate-portal">creatinegummies.com/pages/affiliate-portal</a></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://creatinegummies.com/">creatinegummies.com</a></div>
+          <div class="alt-sources">Sources: <a href="https://creatinegummies.com/">creatinegummies.com</a> (Aug 27, 2026), <a href="https://www.bristolfarms.com/founders/mtf-dylan-menter-bear-balanced">bristolfarms.com</a> (Aug 27, 2026), <a href="https://barbend.com/bear-balanced-creatine-gummies-review/">barbend.com</a> (Aug 27, 2026), <a href="https://www.crunchbase.com/organization/bear-balanced-f8bf">crunchbase.com</a> (Aug 27, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2. Medicube Kojic Acid Serum — NEW, out-of-band, HIGH repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Medicube Kojic Acid Turmeric Niacinamide Facial Serum</h3>
+          <div class="product-meta">~$13–17 &middot; <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: HIGH — kojic acid brightening results require months of consistent daily application and reverse quickly without continued use, creating a structural repurchase cycle rather than one-time purchase. Medicube leads this category with 100,000+ units/month and 17 of the top 100 trending TikTok Shop US skincare products. Korean brand with no American manufacturing equivalent in the snail-mucin or kojic complex format; American alternatives target the same brightening goals through different mechanisms.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">SeoulCeuticals Ultra Brightening Kojic Acid Serum</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>~$13–17 / 1 oz; kojic acid + turmeric + niacinamide; Korean brand; 100,000+ units/month; leads category on TikTok Shop and Amazon BSR.</div></div>
+            <div class="compare-col"><div class="compare-label">SeoulCeuticals</div><div>~$20.99 / 1 fl oz (iHerb); kojic acid + alpha arbutin + glycolic acid + salicylic acid + licorice extract; adds chemical exfoliants, omits turmeric and niacinamide. Available at Nordstrom, Ulta Beauty, Amazon.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2017 in Palm Beach, FL by Craig and Amy Romero. Craig Romero previously co-founded OZNaturals (2013) and Admire My Skin — a serial Amazon-native skincare brand builder. Distributed internationally including the Middle East; stocked at Nordstrom and Ulta Beauty.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Headquartered in Palm Beach, FL (confirmed by Tracxn and PR Newswire). Brand states products are "100% made in a state-of-the-art US facility" with Korean-sourced ingredients. No independent certification body or press source has separately confirmed the specific manufacturing facility — LOW-CONFIDENCE. <a href="https://tracxn.com/d/companies/seoul-ceuticals/__1NErMItuUd2lDIsF3JDuB3F8tiodLChV_qibpiHLHEQ">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Craig Romero and Amy Romero — Craig identified US consumer demand for Korean skincare through search data analysis before launching SeoulCeuticals with his wife Amy in 2017. <a href="https://medium.com/authority-magazine/meet-the-inventors-craig-romero-of-admire-my-skin-on-how-to-go-from-idea-to-store-shelf-5733e327aa6b">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> — contact support@seoulceuticals.com for inquiry.</div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://seoulceuticals.com/pages/contact">seoulceuticals.com/pages/contact</a> · support@seoulceuticals.com</div>
+          <div class="alt-sources">Sources: <a href="https://seoulceuticals.com/products/ultra-brightening-kojic-acid-serum">seoulceuticals.com</a> (Aug 27, 2026), <a href="https://tracxn.com/d/companies/seoul-ceuticals/__1NErMItuUd2lDIsF3JDuB3F8tiodLChV_qibpiHLHEQ">tracxn.com</a> (Aug 27, 2026), <a href="https://www.nordstrom.com/s/korean-skincare-ultra-brightening-kojic-acid-serum/7861747">nordstrom.com</a> (Aug 27, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">OMIC Geisha Kojic Acid Serum (Mitchell Brands)</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Medicube ~$13–17 / 1 oz; kojic acid + turmeric + niacinamide; dominant TikTok Shop and Amazon position; Korean brand.</div></div>
+            <div class="compare-col"><div class="compare-label">OMIC Geisha</div><div>1 fl oz; kojic acid + hyaluronic acid; dermatologically tested; part of a broader kojic acid line (cream, body cream, soap). Price not confirmed in available sources.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> OMIC Geisha is a product line under Mitchell Brands, a Miami, FL beauty company with 65+ years of operation. Addresses hyperpigmentation and brightening across multiple formats. Sold on Amazon and through mitchellbrands.com; distributed internationally including Saudi Arabia.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Headquartered in Miami, FL with 65+ years US operation (confirmed by ZoomInfo). Amazon listing title includes "Made in USA." No independent certification body or press source explicitly confirms the specific US manufacturing facility — LOW-CONFIDENCE. <a href="https://www.mitchellbrands.com/pages/copy-of-about-us">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> not found in available sources</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.mitchellbrands.com/">mitchellbrands.com</a></div>
+          <div class="alt-sources">Sources: <a href="https://www.mitchellbrands.com/products/geisha-brightening-serum-30ml">mitchellbrands.com</a> (Aug 27, 2026), <a href="https://www.mitchellbrands.com/pages/copy-of-about-us">mitchellbrands.com/about</a> (Aug 27, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3. VALITIC Kojic Acid Soap — NEW, out-of-band, MEDIUM repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">VALITIC Kojic Acid Dark Spot Remover Soap Bars</h3>
+          <div class="product-meta">price not confirmed &middot; <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-new">NEW</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: MEDIUM — bar soap is inherently repurchaseable with regular depletion, but the VALITIC product's category position is heavily trend-driven; viral attention may normalize to a lower steady-state repurchase rate once the kojic acid novelty cycle matures. Riding the same 871% five-year search growth wave as Medicube; appears in TikTok Shop trending listings. Best American alternative, Kitsch, is particularly promising: woman-founded, $300M+ annual revenue, active ambassador program at 20% commission.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Kitsch Kojic Acid Bar</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>VALITIC combines kojic acid + Vitamin C + Retinol + Collagen + Turmeric; viral trend product; top-ranked in Amazon kojic soap category; price not confirmed.</div></div>
+            <div class="compare-col"><div class="compare-label">Kitsch</div><div>$12.00 / 4 oz (Ulta); kojic acid + turmeric + hyaluronic acid + shea butter; paraben/phthalate/silicone/sulfate-free; vegan; Cruelty Free certified. Available at Ulta, Target, Walgreens, Whole Foods, TikTok Shop (4.7 ★ / 892 reviews).</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Kitsch is a Los Angeles, CA beauty brand founded in 2010 by Cassandra Morales Thurswell with $30,000 in personal savings. Among the largest self-funded, woman-owned beauty companies in the US — $300M+ annual sales across 27,000+ retail locations. Named 2025 CNBC Changemaker. The kojic acid bar is a line extension into the trending brightening category.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Amazon listing explicitly states "Made in USA." EWG Skin Deep Cosmetics Database independently rates and lists the Kitsch Kojic Acid Bar with full ingredient data — two independent sources separate from brand marketing. <a href="https://www.ewg.org/skindeep/products/1225587-Kitsch_Kitsch_Kojic_Acid_Bar_for_Hyperpigmentation__Dark_Spots/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Cassandra Morales Thurswell — bootstrapped Kitsch with $30,000 in 2010; scaled to 9-figure annual revenue without outside funding. Named 2025 CNBC Changemaker. <a href="https://www.cnbc.com/2025/02/24/cassandra-morales-thurswell-2025-changemakers.html">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> — 20% commission; 15% discount for followers; PayPal payouts. <a href="https://ambassador.mykitsch.com/">ambassador.mykitsch.com</a></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.mykitsch.com/">mykitsch.com</a> · <a href="https://ambassador.mykitsch.com/">ambassador program</a></div>
+          <div class="alt-sources">Sources: <a href="https://www.amazon.com/Kitsch-Kojic-Acid-Face-Body/dp/B0D827ZY5Y">amazon.com</a> (Aug 27, 2026), <a href="https://www.ewg.org/skindeep/products/1225587-Kitsch_Kitsch_Kojic_Acid_Bar_for_Hyperpigmentation__Dark_Spots/">ewg.org</a> (Aug 27, 2026), <a href="https://www.cnbc.com/2025/02/24/cassandra-morales-thurswell-2025-changemakers.html">cnbc.com</a> (Aug 27, 2026), <a href="https://www.ulta.com/p/kojic-acid-brightening-body-wash-bar-pimprod2046531?sku=2627877">ulta.com</a> (Aug 27, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Ammoya Naturals Kojic Alpha Arbutin Turmeric Soap</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>VALITIC multi-active mass-market formulation; strong TikTok viral traffic; top-ranked Amazon kojic soap category; price not confirmed.</div></div>
+            <div class="compare-col"><div class="compare-label">Ammoya Naturals</div><div>Handmade in small batches; kojic acid + alpha arbutin + turmeric + shea butter + natural botanical oils; vegan; available in 3-pack and 5-pack. Artisan/natural positioning vs. VALITIC's mass-market approach. Price not confirmed.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> A US-based family skincare brand founded by a mother whose newborn experienced severe eczema. Brand name derives from the middle name of the founder's eldest daughter. Listed as Amazon small business and Black-owned brand; also sold on Etsy and at ammoyanaturals.com.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Operates US-based website; listed as US small business and Black-owned seller on Amazon; handmade-in-small-batches claim indicates domestic production. No independent certification body or press has confirmed the specific US manufacturing location — LOW-CONFIDENCE. <a href="https://www.ammoyanaturals.com/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Founder's full name not confirmed in available public sources; brand origin story described on company About page. not found in available sources</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.ammoyanaturals.com/">ammoyanaturals.com</a></div>
+          <div class="alt-sources">Sources: <a href="https://www.ammoyanaturals.com/">ammoyanaturals.com</a> (Aug 27, 2026), <a href="https://www.amazon.com/Kojic-Alpha-Arbutin-Turmeric-Soap/dp/B0C3TRG1PW">amazon.com</a> (Aug 27, 2026), <a href="https://www.etsy.com/market/ammoya_naturals">etsy.com</a> (Aug 27, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 4. LEVOIT Air Purifier — RECURRING, IN-BAND, HIGH repurchase (filters) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">LEVOIT Air Purifier Core 300</h3>
+          <div class="product-meta">~$79 (reduced from $99) &middot; <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING (streak: 2 of 2 reports)</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: HIGH — HEPA filter replacements every 6–8 months create a built-in repeat-purchase cycle; 40,000+ monthly unit sales signal deep consumer adoption sustaining a large replacement-filter customer base independent of new unit sales. Chinese-owned brand (Vesync/LEVOIT). The two American alternatives found this run — Austin Air (Buffalo, NY) and Oransi (Radford, VA) — are among the most compellingly verified domestic manufacturers in this archive.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Austin Air Systems — HealthMate Jr.</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>LEVOIT Core 300 — $79; True HEPA + activated carbon; ~219 sq ft coverage; plastic housing; filter lifespan ~6–8 months; Chinese-owned brand.</div></div>
+            <div class="compare-col"><div class="compare-label">Austin Air HealthMate Jr.</div><div>~$415–$549; True Medical HEPA + activated carbon (360° intake); up to 700 sq ft; solid steel housing; filter rated 5 years. Significant upfront premium; lower cost-per-year over lifetime when filter replacement frequency is factored.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Austin Air Systems has manufactured HEPA air purifiers in Buffalo, New York since 1990. Founded to address a personal health need; grew into what the company describes as the world's largest air cleaner manufacturing facility at 480,000 sq ft. Products use a 4-stage filtration sequence made from steel with domestically sourced materials.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Manufactures in Buffalo, NY since 1990; all major materials US-sourced. Verified by a 2022 Buffalo News obituary independently naming the Buffalo, NY manufacturing facility, and by a 1992 Consumer Reports review establishing long-running US operation corroborated by consistent subsequent press coverage. <a href="https://buffalonews.com/obituaries/richard-g-taylor-76-former-music-club-owner-who-founded-austin-air-systems/article_2f7d8e18-7977-11ec-b9c0-9b67cb558547.html">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Richard Taylor (d. January 2022) and Joyce Taylor — Richard, a former Buffalo music club owner, engineered the first unit in his home workshop to address his wife Joyce's lifelong respiratory difficulties. The couple started the company with borrowed funds and sold from a folding table at trade fairs before a 1992 Consumer Reports mention drove national growth. <a href="https://buffalonews.com/obituaries/richard-g-taylor-76-former-music-club-owner-who-founded-austin-air-systems/article_2f7d8e18-7977-11ec-b9c0-9b67cb558547.html">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> — 5% commission via CJ Affiliate network. Search Austin Air within <a href="https://www.cj.com">cj.com</a></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://austinairsystems.com/pages/contact">austinairsystems.com/pages/contact</a> · info@austinair.com · (716) 856-6023 · (800) 724-8403</div>
+          <div class="alt-sources">Sources: <a href="https://buffalonews.com/obituaries/richard-g-taylor-76-former-music-club-owner-who-founded-austin-air-systems/article_2f7d8e18-7977-11ec-b9c0-9b67cb558547.html">buffalonews.com</a> (Aug 27, 2026), <a href="https://austinairsystems.com/pages/about-us">austinairsystems.com</a> (Aug 27, 2026), <a href="https://www.achooallergy.com/blog/learning/austin-air-company-history/">achooallergy.com</a> (Aug 27, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Oransi — AirMend 150HB</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>LEVOIT Core 300 — $79; True HEPA + activated carbon; ~219 sq ft coverage; plastic housing; Chinese-owned brand.</div></div>
+            <div class="compare-col"><div class="compare-label">Oransi AirMend 150HB</div><div>~$130–$180; True HEPA; up to 1,418 sq ft coverage per spec; ENERGY STAR certified; assembled in Radford, VA. Meaningfully higher price than LEVOIT but significantly lower than Austin Air; covers larger room footprint.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2009 by Peter Mann in Radford, Virginia. Veteran and minority-owned company. Reshored its AirMend line to a Virginia assembly facility starting 2023–24; merged with Aviemore (a motor technology company) to develop a new brushless motor design assembled at the same facility. Markets the AirMend as the first affordable HEPA purifier assembled in the USA.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Assembled in Radford, VA; domestically sourced components where possible. Verified by Virginia Business magazine ("Oransi launches U.S.-made air purifiers from Radford") and Virginia Manufacturers Association independently covering the same product launch — both editorial, not advertising. <a href="https://virginiabusiness.com/oransi-launches-u-s-made-air-purifiers-from-radford/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Peter Mann — former Dell and Tech Data executive who co-founded an e-commerce business and launched Alen Corp. (2005) before founding Oransi in 2009 after his asthmatic son's health drove a career pivot. <a href="https://oransi.com/pages/about-peter-mann">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> — active on FlexOffers + company affiliate page. <a href="https://oransi.com/page/become-an-affiliate">oransi.com/page/become-an-affiliate</a></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://oransi.com/pages/contact-us">oransi.com/pages/contact-us</a> · cs@oransi.com · 888-281-3948</div>
+          <div class="alt-sources">Sources: <a href="https://virginiabusiness.com/oransi-launches-u-s-made-air-purifiers-from-radford/">virginiabusiness.com</a> (Aug 27, 2026), <a href="https://vamanufacturers.com/oransi-launches-u-s-made-air-purifiers-from-radford/">vamanufacturers.com</a> (Aug 27, 2026), <a href="https://chiefexecutive.net/how-oransis-ceo-reshored-motor-manufacturing/">chiefexecutive.net</a> (Aug 27, 2026), <a href="https://oransi.com/pages/about-peter-mann">oransi.com</a> (Aug 27, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 5. Core Power Protein Shake — RECURRING, out-of-band, HIGH repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Core Power Fairlife Elite 42g Protein Shake</h3>
+          <div class="product-meta">price not confirmed &middot; <span class="pill" style="background:#65a30d">Grocery</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING (streak: 2 of 2 reports)</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: HIGH — ready-to-drink protein shakes are daily-use habitual products; the 42g high-protein format builds strong loyalty among fitness-consistent consumers who repurchase in bulk. The protein supplement surge confirmed by creatine's 90% YoY growth is lifting adjacent categories. Premier Protein Ultimate 42g, a direct American-made format competitor, launched specifically July 2026 to counter this product — unusual timing alignment for this report.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Premier Protein Ultimate 42g Protein Shake</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Core Power Fairlife Elite 42g — 14 fl oz; 42g protein from ultra-filtered milk; lactose-free; Coca-Cola owned; price not confirmed.</div></div>
+            <div class="compare-col"><div class="compare-label">Premier Protein Ultimate 42g</div><div>14 fl oz; 42g protein (whey/casein blend); 220 calories; 2g sugar; 24 vitamins and minerals; four flavors; lactose-free, gluten-free. Launched July 2026 directly positioned against Fairlife Core Power Elite.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> BellRing Brands (NYSE: BRBR) — publicly traded US company owning Premier Protein, Dymatize, and PowerBar. Spun off from Post Holdings, completed as independent public company November 2022; $1B+ annual revenue. The Premier Protein Ultimate 42g shake launched July 2026 as a direct competitive answer to Fairlife Core Power Elite.</div>
+          <div class="alt-section"><strong>American-ness:</strong> US-incorporated, NYSE-listed company manufacturing via US contract manufacturers. Verified by SunOpta's July 2023 BusinessWire press release confirming manufacturing at its new Midlothian, Texas facility, and Food Dive independently reporting Post Holdings' $86M facility build in West Jefferson, Ohio specifically for BellRing Brands protein drinks — two independent editorial sources confirming US-soil production. <a href="https://www.businesswire.com/news/home/20230711399029/en/SunOpta-Enters-Nutritional-Beverage-Category-via-Partnership-with-BellRing-Brands">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Premier Protein was acquired, not founded by BellRing Brands. Current CEO (as of July 29, 2026): Michael Axelrod, formerly CEO of Snak King with career history at Del Real Foods, TreeHouse Foods, and Kraft Foods. <a href="https://www.fooddive.com/news/bellring-brands-premier-protein-ceo-michael-axelrod/825037/">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-no">No</span> — no active affiliate program found.</div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.premierprotein.com/contact-us">premierprotein.com/contact-us</a> · 888-836-8977 · social@premiernutrition.com</div>
+          <div class="alt-sources">Sources: <a href="https://bellring.com/news/premier-protein-ultimate">bellring.com</a> (Aug 27, 2026), <a href="https://www.businesswire.com/news/home/20230711399029/en/SunOpta-Enters-Nutritional-Beverage-Category-via-Partnership-with-BellRing-Brands">businesswire.com</a> (Aug 27, 2026), <a href="https://www.fooddive.com/news/post-holdings-to-spend-86m-on-new-ohio-facility-creating-200-jobs/611189/">fooddive.com</a> (Aug 27, 2026), <a href="https://www.dairyfoods.com/articles/99251-premier-protein-ultimate-delivers-42-grams-of-protein">dairyfoods.com</a> (Aug 27, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">ICONIC Protein — Ready-to-Drink Shake</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Core Power Fairlife 42g — 42g protein / 14 fl oz; ultra-filtered milk; lactose-free; Coca-Cola owned.</div></div>
+            <div class="compare-col"><div class="compare-label">ICONIC Protein</div><div>20g grass-fed whey protein isolate / 12 fl oz; 0g sugar; non-GMO, gluten-free, lactose-free, soy-free, hormone-free, kosher. Significantly lower protein count (20g vs. 42g) — different tier, not a direct format equivalent.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2015, headquartered in Santa Monica, California. US brand focused on grass-fed whey protein isolate from humanely raised cows. Positioned in the clean/natural RTD segment. Available DTC and through Amazon.</div>
+          <div class="alt-section"><strong>American-ness:</strong> US-headquartered (Santa Monica, CA). Company markets grass-fed and non-GMO sourcing. Manufacturing location for bottling/production not independently confirmed — LOW-CONFIDENCE. <a href="https://www.drinkiconic.com/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> not found in available sources</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.drinkiconic.com/">drinkiconic.com</a></div>
+          <div class="alt-sources">Sources: <a href="https://www.drinkiconic.com/">drinkiconic.com</a> (Aug 27, 2026), <a href="https://www.cbinsights.com/company/iconic">cbinsights.com</a> (Aug 27, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 6. COSRX Snail Mucin — RECURRING, out-of-band, HIGH repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">COSRX Advanced Snail 96 Mucin Power Essence</h3>
+          <div class="product-meta">price not confirmed &middot; <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING (streak: 2 of 2 reports)</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: HIGH — daily-use AM/PM skincare essences have strong habitual repurchase cadence; 60,000+ Amazon reviews and #1 BSR in Facial Serums indicate deeply entrenched customer base with TikTok continuously refilling the purchase funnel. Category gap note: no American brand manufactures a snail secretion filtrate essence — this ingredient is uniquely Korean in mainstream skincare. Both alternatives below address the same consumer goals (hydration, barrier repair, skin glow) through different active mechanisms and are transparently noted as functionally adjacent rather than equivalent.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">100% Pure — Rose Water Hyaluronic Acid Serum</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>COSRX 3.38 fl oz; 96% snail secretion filtrate; lightweight gel-serum; targets hydration, barrier repair, fine lines; ~$24; Korean brand.</div></div>
+            <div class="compare-col"><div class="compare-label">100% Pure</div><div>$48 / 1 fl oz (30ml); organic aloe, rose hydrosol, HA, glycerin, beta-glucan, calendula. HA-based humectant vs. snail secretion — different mechanism, same goal. Fragrance from rose essential oil present. Higher price per ounce than COSRX.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2005 by Susie Wang, Richard Kostick, and James Wang in Napa, CA; now headquartered at "Purity Park," an 8-acre solar-powered campus in San Jose, CA. Operates an ISO-certified in-house manufacturing facility. Known for Fruit Pigmented makeup and natural skincare. Products sold DTC, on Amazon, and through retail partners.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Manufactures at Purity Park ISO-certified facility in San Jose, CA per company blog and About page. EWG Skin Deep listing (independent database) and Clean Beauty Awards' "42 Clean Beauty Brands in the USA" editorial both provide independent confirmation of US operations, though neither independently names the specific manufacturing facility — LOW-CONFIDENCE. <a href="https://www.100percentpure.com/pages/about-us">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Susie Wang (co-founder, Chief Creative Officer), Richard Kostick, and James Wang — Susie, a research chemist, experienced a skin reaction to conventional cosmetics and reformulated a lipstick using fruit pigments; the three launched 100% Pure in 2005. <a href="https://www.100percentpure.com/blogs/feed/meet-the-founder-and-chief-creative-of-100-pure">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> — 8% commission on completed US transactions; 7-day cookie. <a href="https://www.100percentpure.com/pages/affiliates">100percentpure.com/pages/affiliates</a> · affiliates@100percentpure.com</div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.100percentpure.com/pages/contact-us">100percentpure.com/pages/contact-us</a> · affiliates@100percentpure.com</div>
+          <div class="alt-sources">Sources: <a href="https://www.100percentpure.com/pages/about-us">100percentpure.com</a> (Aug 27, 2026), <a href="https://www.cleanbeautyawards.com/blog/42-clean-beauty-brands-in-the-usa-you-should-try">cleanbeautyawards.com</a> (Aug 27, 2026), <a href="https://www.ewg.org/skindeep/browse/brands/4303-100_Pure/">ewg.org</a> (Aug 27, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">True Botanicals — Microbiome Enzyme Essence</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>COSRX 3.38 fl oz; 96% snail secretion filtrate; ~$24; Korean brand. Barrier repair + hydration mechanism.</div></div>
+            <div class="compare-col"><div class="compare-label">True Botanicals</div><div>$80 / 4 fl oz; active prebiotics, AHAs, and enzymes; targets microbiome balance and surface exfoliation rather than barrier repair. Different functional mechanism; significant price premium. Addresses overlapping skin goals (hydration, texture, glow).</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2015 by Hillary Peterson, headquartered in Mill Valley, California. Products stocked at Nordstrom, Credo Beauty, and DTC. States production in its own certified organic and natural California laboratory. Covered by Vogue and New Beauty.</div>
+          <div class="alt-section"><strong>American-ness:</strong> States production in its own California certified organic lab. No independent press or certification body found in available sources confirming the specific manufacturing facility location — LOW-CONFIDENCE. <a href="https://truebotanicals.com/pages/our-story">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Hillary Peterson — left a technology and environmental advocacy career after a personal health diagnosis; founded True Botanicals in 2015 in Northern California. <a href="https://www.whowhatwear.com/second-life-podcast-hillary-peterson">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> — 8–16% commission; 30-day cookie; monthly payouts; free products and exclusive codes for affiliates. <a href="https://truebotanicals.com/pages/affiliate">truebotanicals.com/pages/affiliate</a> · affiliates@truebotanicals.com</div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://truebotanicals.com/pages/contact-us">truebotanicals.com/pages/contact-us</a> · trueteam@truebotanicals.com · 1-888-416-0870</div>
+          <div class="alt-sources">Sources: <a href="https://truebotanicals.com/pages/our-story">truebotanicals.com</a> (Aug 27, 2026), <a href="https://www.whowhatwear.com/second-life-podcast-hillary-peterson">whowhatwear.com</a> (Aug 27, 2026), <a href="https://truebotanicals.com/pages/affiliate">truebotanicals.com/pages/affiliate</a> (Aug 27, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 7. Nutricost Creatine — RECURRING, out-of-band, HIGH repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Nutricost Creatine Monohydrate Micronized Powder</h3>
+          <div class="product-meta">price not confirmed &middot; <span class="pill" style="background:#0d9488">Health &amp; Household</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING (streak: 2 of 2 reports)</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: HIGH — creatine is a daily supplement (3–5g/serving); a 500g container yields ~100 servings, creating a predictable 3-month repurchase cycle for consistent users. The subcategory is up 90% YoY and adding 37,000 new search queries per month. NutraBio is the standout alternative here: New Jersey manufactured, FDA-registered, CGMP-inspected, with a verifiable physical facility address — one of the most thoroughly documented manufacturing claims in the supplement space.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">NutraBio Creatine Monohydrate</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Nutricost 500g unflavored micronized creatine monohydrate; 3rd-party tested; ~$25–35 / 500g (~$0.05–0.07/g). Single-ingredient, pure powder.</div></div>
+            <div class="compare-col"><div class="compare-label">NutraBio</div><div>300g unflavored micronized creatine; HPLC tested to 99.9% purity; ~$29.99/300g (~$0.10/g). Slightly higher per-gram cost; single-ingredient, full label disclosure; same 5g/serving. Also available in larger sizes.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> NutraBio Labs, Inc. — founded 1996 by Mark Glazier (a martial arts instructor in NJ). By 2002 took manufacturing in-house at its Middlesex, NJ facility (564 Lincoln Blvd., Middlesex, NJ 08846), an FDA-registered, 21 CFR Part 111 CGMP plant. Early champion of full label disclosure and banning proprietary blends. Distributes nationally through GNC, Amazon, and independents.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Owns and operates manufacturing at Middlesex, NJ (564 Lincoln Blvd.) — FDA-registered and CGMP-inspected. Verified by: NutraBio CEO blog naming the NJ facility, PricePlow editorial specifically documenting the New Jersey manufacturing operation, and USC Annenberg School public event listing confirming the founder/CEO. <a href="https://nutrabio.com/blogs/blog/qa-with-nutrabio-ceofounder-mark-glazier">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Mark Glazier — New Jersey martial arts instructor who started NutraBio in 1996 to supply clean supplements to his students; 25+ years publicly advocating for supplement industry transparency. <a href="https://annenberg.usc.edu/events/conversation-mark-glazier-president-and-ceo-nutrabio">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> — BioCrew Leader Program; multi-tier commissions via Post Affiliate Pro. <a href="https://nutrabio.com/pages/affiliate">nutrabio.com/pages/affiliate</a></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://nutrabio.com/pages/contact-us">nutrabio.com/pages/contact-us</a></div>
+          <div class="alt-sources">Sources: <a href="https://nutrabio.com/products/creatine-monohydrate-powder">nutrabio.com</a> (Aug 27, 2026), <a href="https://blog.priceplow.com/supplement-news/nutrabio">blog.priceplow.com</a> (Aug 27, 2026), <a href="https://annenberg.usc.edu/events/conversation-mark-glazier-president-and-ceo-nutrabio">annenberg.usc.edu</a> (Aug 27, 2026), <a href="https://nutrabio.com/pages/affiliate">nutrabio.com/pages/affiliate</a> (Aug 27, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">It's Just! Creatine Monohydrate (138 Foods, Inc.)</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Nutricost 500g micronized creatine; ~$25–35; 3rd-party tested; broadly distributed.</div></div>
+            <div class="compare-col"><div class="compare-label">It's Just!</div><div>500g unflavored creatine monohydrate; labeled "Made in USA"; 3rd-party tested by Certified Laboratories (ISO 17025); ~$10–15 / 500g (~$0.02–0.03/g). Significantly lower price per gram than Nutricost. Available primarily through Amazon.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> It's Just! is a brand of 138 Foods, Inc., based in Claremont, California (2058 N Mills Ave., Claremont, CA 91711). Also produces Monk Drops, Smart Monk, and Keto B'stro lines. Holds "IT'S JUST!" trademark (USPTO #5863054, filed 2019). Company founding details not publicly disclosed.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Labels all products "Made in USA" on Amazon and own storefront. California address documented in Amazon seller profile and USPTO trademark registration. No independent press, certification-body listing, or facility inspection record found to independently confirm Claremont as the point of manufacture — LOW-CONFIDENCE. Note: 3rd-party lab testing confirms purity, not manufacturing location. <a href="https://trademarks.justia.com/883/45/it-s-88345137.html">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> not found in available sources</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://138foods.com/">138foods.com</a></div>
+          <div class="alt-sources">Sources: <a href="https://138foods.com/products/its-just-creatine-monohydrate-powder">138foods.com</a> (Aug 27, 2026), <a href="https://trademarks.justia.com/883/45/it-s-88345137.html">trademarks.justia.com</a> (Aug 27, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 8. INABA Churu Cat Treats — RECURRING, out-of-band, HIGH repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">INABA Churu Lickable Cat Treats</h3>
+          <div class="product-meta">price not confirmed &middot; <span class="pill" style="background:#92400e">Pet Supplies</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING (streak: 2 of 2 reports)</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: HIGH — a single-serve squeeze tube is consumed in one sitting; cats develop strong flavor preferences; a 50-pack lasts 4–8 weeks at typical feeding frequency, yielding a predictable monthly repurchase cycle. Category gap note: the lickable squeeze-tube format was pioneered by Japanese manufacturers and is predominantly produced in Japan and Thailand — no American company was found manufacturing this specific format. Alternatives below (Vital Essentials, Primal Pet Foods) are American-made, high-protein, freeze-dried cat treats — a different texture but serving the same high-palatability function. Both are VERIFIED.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Vital Essentials Freeze-Dried Raw Cat Treats</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>INABA Churu 50-pack squeeze tubes; ~$20–30; pureed tuna/chicken in lickable tube format; grain-free; Japanese manufacture.</div></div>
+            <div class="compare-col"><div class="compare-label">Vital Essentials</div><div>~$8–15/bag; single-ingredient freeze-dried (minnows, chicken, salmon, rabbit); USDA-inspected protein; no fillers; crunchy/crumbly format (not squeeze tubes). Higher protein density per gram than Churu's water-heavy purée.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Vital Essentials is a brand of Carnivore Meat Company, a family-owned business headquartered in Green Bay, Wisconsin. Operates what it describes as the largest freeze-dried pet food manufacturing facility in North America, located in Green Bay. Claims to be the most tenured raw pet food brand in the United States; distributes through 7,000+ US retailers and 14 international markets. Carries GFSI FSC22000 Certification.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Manufactures in Green Bay, WI facility. Verified by Vital Essentials' own product descriptions confirming the Green Bay, WI facility, and independently by Only Natural Pet (specialty retailer) carrying the line under a "USA Made Single Ingredient Treats" listing, and Amazon product listings explicitly stating "USA Made with U.S. &amp; Globally Sourced Ingredients." <a href="https://www.onlynaturalpet.com/products/vital-essentials-freeze-dried-usa-made-single-ingredient-treats-for-cats">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Lanny Viegut — CEO and Owner of Carnivore Meat Company; Green Bay, WI. Extended biographical details not found in available sources. <a href="https://www.vitalessentials.com/raw-guide/explosive-growth-drives-pet-food-company-expansion">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> — affiliate/influencer partner program. <a href="https://www.vitalessentials.com/partner-with-us">vitalessentials.com/partner-with-us</a></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.vitalessentials.com/contact">vitalessentials.com/contact</a></div>
+          <div class="alt-sources">Sources: <a href="https://www.vitalessentials.com/">vitalessentials.com</a> (Aug 27, 2026), <a href="https://www.onlynaturalpet.com/products/vital-essentials-freeze-dried-usa-made-single-ingredient-treats-for-cats">onlynaturalpet.com</a> (Aug 27, 2026), <a href="https://www.vitalessentials.com/partner-with-us">vitalessentials.com/partner-with-us</a> (Aug 27, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Primal Pet Foods Freeze-Dried Cat Treats</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>INABA Churu 50-pack squeeze tubes; ~$20–30; pureed tuna/chicken; lickable format; Japanese manufacture; high cat palatability.</div></div>
+            <div class="compare-col"><div class="compare-label">Primal Pet Foods</div><div>~$8–15/bag; human-grade ingredients; single-protein or limited-ingredient (chicken, beef, turkey, rabbit); 100% USA manufactured; no added preservatives, hormones, or antibiotics. Format: freeze-dried pieces. Higher protein density per gram than Churu.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2001 by Matt Koss in Fairfield, California, after his dog was diagnosed with renal failure and a holistic veterinarian recommended a raw food diet. Grew from single-facility Northern California operation to multi-state manufacturing group (California, Colorado, Texas, Washington). One of the largest dedicated raw/freeze-dried pet food manufacturers in North America.</div>
+          <div class="alt-section"><strong>American-ness:</strong> All products manufactured in the USA. Verified by Primal Pet Foods' own support FAQ ("all products manufactured in the USA") and independently by Paxiom trade publication specifically naming Primal Pet Group's US manufacturing facilities across California, Colorado, Texas, and Washington. <a href="https://support.primalpetfoods.com/support/solutions/articles/26000025386-are-all-of-your-products-manufactured-in-the-usa-">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Matt Koss — Founder and Chief Product Officer; Bay Area, California; founded Primal in 2001 after his dog Luna's health crisis. <a href="https://www.petage.com/five-questions-primal-pet-raw-dog-foods-founder-matt-koss/">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> — no affiliate program found in available sources.</div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.primalpetfoods.com/">primalpetfoods.com</a></div>
+          <div class="alt-sources">Sources: <a href="https://primalpetfoods.com/pages/our-story">primalpetfoods.com</a> (Aug 27, 2026), <a href="https://support.primalpetfoods.com/support/solutions/articles/26000025386-are-all-of-your-products-manufactured-in-the-usa-">support.primalpetfoods.com</a> (Aug 27, 2026), <a href="https://www.paxiom.com/articles/primal-instincts-a-journey-of-growth-and-innovation-in-pet-food/">paxiom.com</a> (Aug 27, 2026), <a href="https://www.petage.com/five-questions-primal-pet-raw-dog-foods-founder-matt-koss/">petage.com</a> (Aug 27, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 9. JanSport Backpack — RECURRING, out-of-band, HIGH repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">JanSport Classic Backpack</h3>
+          <div class="product-meta">price not confirmed &middot; <span class="pill" style="background:#0891b2">Office Products</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING (streak: 2 of 2 reports)</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: HIGH per category streak — 16-week unbroken bestseller run signals strong brand loyalty and category demand that carries into fall. Duluth Pack (Duluth, MN — manufacturing since 1882) and Frost River (founded 2001 by a veteran Duluth Pack designer) are both VERIFIED American manufacturers; both serve a premium durables market at a meaningful price premium over JanSport, which is accurately reflected as a different durability/value proposition rather than a direct price equivalent.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Duluth Pack</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>JanSport Classic ~$35–50; lightweight polyester daypack; basic pocket organization; lifetime warranty; overseas manufacturing (Kontoor Brands/VF Corp spinoff).</div></div>
+            <div class="compare-col"><div class="compare-label">Duluth Pack</div><div>From $49.95 (drawstring) to $324+ (laptop/rucksack); waxed canvas and genuine leather; solid brass hardware; handcrafted at Canal Park, Duluth MN; lifetime guarantee. Significantly heavier and more durable. Price premium reflects domestic handcraft labor.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Duluth Pack has manufactured continuously in Duluth, Minnesota since 1882 — the oldest canvas and leather pack maker in the USA. All items are handcrafted at their Canal Park facility by local workers. Operates a retail storefront plus direct-to-consumer online sales.</div>
+          <div class="alt-section"><strong>American-ness:</strong> All production in Duluth, MN since 1882. Independently verified by a 2019 Forbes manufacturing profile, the Wikipedia company article, and an AllAmerican.org Spotlight interview naming the facility and workforce — all editorial, not advertising. <a href="https://www.forbes.com/sites/jimvinoski/2019/03/04/manufacturing-the-old-fashioned-way-at-duluth-pack/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Camille Poirier — French-Canadian immigrant who patented the original Duluth Pack (then "Poirier Pack Sack") on December 12, 1882 in Duluth, MN. Business sold to Duluth Tent &amp; Awning in 1911, continuing uninterrupted. <a href="https://duluthpack.com/pages/our-storied-history">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> — up to 15% commission per sale. <a href="https://www.duluthpack.com/pages/become-an-affiliate-partner">duluthpack.com/pages/become-an-affiliate-partner</a></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.duluthpack.com/pages/contact-us">duluthpack.com/pages/contact-us</a> · customerservice@duluthpack.com · (218) 722-3898</div>
+          <div class="alt-sources">Sources: <a href="https://duluthpack.com/pages/our-storied-history">duluthpack.com</a> (Aug 27, 2026), <a href="https://www.forbes.com/sites/jimvinoski/2019/03/04/manufacturing-the-old-fashioned-way-at-duluth-pack/">forbes.com</a> (Aug 27, 2026), <a href="https://allamerican.org/spotlight/duluth-pack/">allamerican.org</a> (Aug 27, 2026), <a href="https://www.duluthpack.com/pages/become-an-affiliate-partner">duluthpack.com/pages/become-an-affiliate</a> (Aug 27, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Frost River</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>JanSport Classic ~$35–50; lightweight polyester; basic organization; lifetime warranty; overseas manufacturing.</div></div>
+            <div class="compare-col"><div class="compare-label">Frost River</div><div>~$279–$571+ (Isle Royale Bushcraft Pack, Geologist Pack); waxed cotton canvas; Minnesota-sourced leather; solid brass hardware; handmade on-site in Duluth, MN; lifetime guarantee. Heritage aesthetic; significantly heavier and more expensive than JanSport.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2001 in Duluth, Minnesota. All products handcrafted in their on-site Duluth workshop, open to public visitors during production hours. Occupies a premium heritage-outdoor bag niche; operates a retail store plus online DTC channel. Small-scale independent manufacturer.</div>
+          <div class="alt-section"><strong>American-ness:</strong> All production in Duluth, MN workshop. Verified by Worn &amp; Wound (independent watch and gear media) "American-Built: Frost River Bags" feature, and by a MadeAmerica.org marketplace listing for the Geologist Pack — two editorial sources separate from brand marketing. <a href="https://wornandwound.com/american-built-frost-river-bags/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Steve Emerson — served as head designer at Duluth Pack for 20+ years before founding Frost River in 2001 in Duluth, MN. <a href="https://wornandwound.com/american-built-frost-river-bags/">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> — no affiliate program found in available sources.</div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://frostriver.com/pages/contact-us">frostriver.com/pages/contact-us</a> · (218) 623-6367 · frsales@frostriver.com</div>
+          <div class="alt-sources">Sources: <a href="https://frostriver.com/">frostriver.com</a> (Aug 27, 2026), <a href="https://wornandwound.com/american-built-frost-river-bags/">wornandwound.com</a> (Aug 27, 2026), <a href="https://madeamerica.org/products/frost-river-geologist-pack">madeamerica.org</a> (Aug 27, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 10. Owala FreeSip — RECURRING, out-of-band, HIGH repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Owala FreeSip Insulated Water Bottle</h3>
+          <div class="product-meta">price not confirmed &middot; <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING (streak: 2 of 2 reports)</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: HIGH per archive frequency — appeared in 12 of 18 sibling reports, one of the most consistent performers across all categories. Category gap note: vacuum-insulated stainless steel water bottle manufacturing does not exist in the United States, confirmed by AllAmerican.org investigation and multiple industry sourcing analyses. Polar Bottle (insulated plastic, Colorado) and Liberty Bottleworks Original (non-insulated recycled aluminum, Washington State — with LOW-CONFIDENCE flag due to 2020 acquisition) are the only US-made options identified; neither matches the Owala on insulation performance or lid design. This gap is documented transparently.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Polar Bottle (Insulated Sport Water Bottle)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Owala FreeSip ~$35–50; stainless steel double-wall vacuum insulated; up to 24-hour cold retention; dual-sip lid (straw + chug); BPA-free; made in China.</div></div>
+            <div class="compare-col"><div class="compare-label">Polar Bottle</div><div>~$15–30; insulated plastic (LDPE) with reflective foil-liner; keeps drinks cool for several hours under normal conditions (does not match stainless vacuum performance); squeeze-to-drink flow-jet lid (not dual-sip); BPA-free; made in Longmont, Colorado. Functionally different insulation mechanism.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 1994 in Boulder, Colorado as Product Architects Inc. by Robert Heiberger and Judy Amabile; invented the first insulated plastic sport water bottle for cyclists. Later acquired by HydraPak (outdoor gear group); continues US manufacturing in Longmont, CO under the HydraPak umbrella.</div>
+          <div class="alt-section"><strong>American-ness:</strong> USA manufacturing (Longmont, CO). Verified by AllAmerican.org investigation (confirmed US production) and Alliance for American Manufacturing American-made water bottle roundup — both independent of brand marketing. <a href="https://allamerican.org/investigation/polar-bottle/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Robert Heiberger and Judy Amabile — mechanical engineer and business partner; co-founded in 1994 in a Boulder, CO garage to build a bottle that kept drinks cold on long bike rides. <a href="https://hydrationanywhere.com/company-spotlight-polar-bottle/">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> — no affiliate program found for Polar Bottle directly; now part of HydraPak. Check <a href="https://www.hydrapak.com">hydrapak.com</a> for current partner programs.</div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://polarbottle.com/">polarbottle.com</a> · HydraPak parent: <a href="https://www.hydrapak.com">hydrapak.com</a></div>
+          <div class="alt-sources">Sources: <a href="https://allamerican.org/investigation/polar-bottle/">allamerican.org</a> (Aug 27, 2026), <a href="https://www.americanmanufacturing.org/blog/keep-cool-this-summer-with-an-american-made-water-bottle/">americanmanufacturing.org</a> (Aug 27, 2026), <a href="https://hydrationanywhere.com/company-spotlight-polar-bottle/">hydrationanywhere.com</a> (Aug 27, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Liberty Bottleworks / Liberty Works (Original Aluminum Line Only)</h4>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Owala FreeSip ~$35–50; stainless steel vacuum insulated; 24-hour cold retention; dual-sip lid; BPA-free; made in China.</div></div>
+            <div class="compare-col"><div class="compare-label">Liberty Works Original</div><div>~$20–35; single-wall non-insulated recycled aluminum; no temperature retention; standard lid; fully customizable graphics; lighter than stainless. Functionally a different product category from the FreeSip (no insulation). Only the Original aluminum bottle qualifies; all insulated/tumbler lines are China-made.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2010 by Timothy Andis and Ryan Clark in Union Gap, WA (near Yakima). Pioneered recycled-aluminum USA-made water bottles; represented Washington state at a White House "Made in America" event in 2017. Acquired by Olympia Tools in September 2020, rebranded as Liberty Works. Original aluminum bottle line continues domestic production; all other lines are China-made.</div>
+          <div class="alt-section"><strong>American-ness:</strong> AllAmerican.org investigation confirmed Original aluminum line is USA-made; Seattle Business magazine independently profiled the Washington State manufacturing. Post-2020 acquisition manufacturing continuity marked LOW-CONFIDENCE absent current independent re-verification. <a href="https://allamerican.org/investigation/liberty-bottleworks/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Timothy Andis and Ryan Clark — co-founded in 2010 in Union Gap, WA; no longer listed as owners following the 2020 Olympia Tools acquisition. <a href="https://seattlebusinessmag.com/manufacturing/made-washington-liberty-bottleworks">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span></div>
+          <div class="alt-section"><strong>Contact:</strong> Search Liberty Works or libertybottleworks.com for current contact information.</div>
+          <div class="alt-sources">Sources: <a href="https://allamerican.org/investigation/liberty-bottleworks/">allamerican.org</a> (Aug 27, 2026), <a href="https://seattlebusinessmag.com/manufacturing/made-washington-liberty-bottleworks">seattlebusinessmag.com</a> (Aug 27, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 11. Hanes EcoSmart Hoodie — RECURRING, out-of-band, MEDIUM repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Hanes EcoSmart Fleece Hoodie</h3>
+          <div class="product-meta">price not confirmed &middot; <span class="pill" style="background:#7c3aed">Apparel</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING (streak: 2 of 2 reports)</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: MEDIUM — fall seasonal transition and Labor Day deals drive the current spike, but value-tier hoodies see deal-driven repeat purchases rather than strong brand loyalty. American Giant has one of the most thoroughly documented American-made manufacturing claims in this archive (verified by 6 independent press sources), and a 20% affiliate commission via Partnerize. All American Clothing Co. fills the mid-price tier as a family-run Ohio business with independent "Made in the USA Certified" certification.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">American Giant (Classic Full Zip &amp; Pullover Hoodie)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Hanes EcoSmart ~$20–30; value-tier cotton/polyester blend; lightweight; basic kangaroo pocket; made overseas.</div></div>
+            <div class="compare-col"><div class="compare-label">American Giant</div><div>Classic Full Zip ~$168; pullover from ~$108; heavyweight cotton fleece from US-grown cotton; designed for long-term durability; lifetime quality guarantee. Significantly heavier and more structured; major price premium vs. Hanes.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded February 2012 by Bayard Winthrop in San Francisco with a mission of rebuilding domestic apparel manufacturing. Has sold over 1 million hoodies. As of late 2025–2026, production is concentrated in a Los Angeles factory with cotton grown in the US Southeast. Named one of Fast Company's 50 Most Innovative Companies in 2015.</div>
+          <div class="alt-section"><strong>American-ness:</strong> 100% US manufacturing. Verified independently by Forbes (2023 and 2025 articles), Alliance for American Manufacturing feature, CBS News profile, Morning Brew supply chain reporting, Wikipedia, and Glossy trade coverage — six independent editorial sources. <a href="https://www.americanmanufacturing.org/blog/american-giant-a-21st-century-apparel-company/">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Bayard Winthrop — former head of Chrome Industries (cycling/urban gear brand); founded American Giant in 2012; serves as CEO. <a href="https://en.wikipedia.org/wiki/American_Giant">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> — managed via Partnerize/Ascend platform. <a href="https://www.american-giant.com/pages/affiliate-partners">american-giant.com/pages/affiliate-partners</a></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.american-giant.com/pages/service-portal">american-giant.com/pages/service-portal</a> · service@american-giant.com · 1-855-254-4474</div>
+          <div class="alt-sources">Sources: <a href="https://en.wikipedia.org/wiki/American_Giant">wikipedia.org</a> (Aug 27, 2026), <a href="https://www.americanmanufacturing.org/blog/american-giant-a-21st-century-apparel-company/">americanmanufacturing.org</a> (Aug 27, 2026), <a href="https://www.forbes.com/sites/shelleykohan/2025/12/17/american-giant-relaunches-its-american-made-greatest-hoodie-ever/">forbes.com</a> (Aug 27, 2026), <a href="https://www.american-giant.com/pages/affiliate-partners">american-giant.com</a> (Aug 27, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">All American Clothing Co. (AA Pullover Hoodie)</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>Hanes EcoSmart ~$20–30; standard value-tier cotton/polyester fleece; basic kangaroo pocket; made overseas.</div></div>
+            <div class="compare-col"><div class="compare-label">All American Clothing Co.</div><div>AA Pullover Hoodie from $44.95; Premium Pullover $83.95–$103.95; 70/30 cotton/polyester heavyweight 13 oz fleece; labeled "made in USA with domestic and imported materials"; mid-price tier between Hanes and American Giant.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Founded 2003 in Arcanum, Ohio by Lawson Nickol after discovering his prior employer was outsourcing to Mexico. His son B.J. Nickol now runs the company. Sources from 20+ states; carries "Made in the USA Certified" independent certification. Small family-run operation with DTC online sales and a physical presence in Arcanum, OH.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Labeled "made in USA with domestic and imported materials" on all products, plus "Made in the USA Certified" independent certification noted in Bamtech USA's comprehensive American-made clothing brand directory entry. <a href="https://bamtechusa.com/blogs/news/the-complete-list-of-american-made-clothing-brands">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Lawson Nickol (deceased) and son B.J. Nickol — Lawson founded the company in 2003 in Arcanum, OH; B.J. currently runs it. not found in available sources beyond company About page.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> — no affiliate program found.</div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://www.allamericanclothing.com/pages/contact-us">allamericanclothing.com/pages/contact-us</a> · 888-937-8009 · 1 Pop Rite Dr, Arcanum, OH 45304</div>
+          <div class="alt-sources">Sources: <a href="https://www.allamericanclothing.com/collections/hooded-sweatshirts">allamericanclothing.com</a> (Aug 27, 2026), <a href="https://bamtechusa.com/blogs/news/the-complete-list-of-american-made-clothing-brands">bamtechusa.com</a> (Aug 27, 2026), <a href="https://www.bbb.org/us/oh/arcanum/profile/clothing/all-american-clothing-0322-1098">bbb.org</a> (Aug 27, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 12. Shoe Stretch Spray — RECURRING, out-of-band, LOW repurchase -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <h3 class="product-title">Shoe Stretch Spray (FOOTMATTERS)</h3>
+          <div class="product-meta">price not confirmed &middot; <span class="pill" style="background:#7c3aed">Apparel</span></div>
+        </div>
+        <div class="badge-row">
+          <span class="tag tag-recurring">RECURRING (streak: 2 of 2 reports)</span>
+          <span class="tag tag-count">2 alternatives found</span>
+        </div>
+      </div>
+      <div class="product-rationale">Repurchase interest: LOW — shoe stretch spray is a solution-to-occasion product; a 4 oz bottle is used in small amounts and typically lasts months to over a year, making repeat purchases infrequent. Seasonal back-to-school spikes reflect first-time buyers, not replenishment cycles. Both American alternatives found (FootFitter, Angelus) are VERIFIED — Angelus being especially notable as a brand with continuous US manufacturing dating to 1907.</div>
+      <div class="alt-grid">
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">FootFitter Premium Shoe &amp; Boot Stretch Spray</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>FOOTMATTERS 4 oz; works on leather/suede/nubuck/canvas/synthetics; professional grade; ~$8–15; manufacture origin not stated on product page.</div></div>
+            <div class="compare-col"><div class="compare-label">FootFitter</div><div>4 oz; works on leather, suede, nubuck, canvas, and synthetics; stretches up to ½ size; price-comparable to FOOTMATTERS at ~$8–15. Amazon listing explicitly states "Made in USA." Comparable feature set at the same price tier.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> FootFitter was founded in 2000; owned by KUGO, Inc. (1721 Whittier Ave., Costa Mesa, CA 92627), which also operates RoyalShave and ShoeAndFootCare.com. 25+ years in operation; available through Amazon, Walmart, and own website. Note: founder identified only as a German-born entrepreneur who relocated to the US in 1995; name not indexed in available sources.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Amazon listing states "Made in USA"; independently confirmed by a specialty retailer (freshsshoe.com) labeling the product "Made in the USA" and one search source noting the formulation is produced in Milwaukee, WI. <a href="https://www.amazon.com/FootFitter-Shoe-Boot-Stretch-Spray/dp/B07C63BF24">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Founder's name not found in available sources — identified only as a German-born entrepreneur who relocated to the US in 1995 and established FootFitter in 2000.</div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-unconfirmed">Unconfirmed</span> — FlexOffers listing shows inactive status; verify directly at <a href="https://footfitter.com/pages/contact-us">footfitter.com</a> or (800) 871-4624.</div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://footfitter.com/pages/contact-us">footfitter.com/pages/contact-us</a> · info@footfitter.com · (800) 871-4624</div>
+          <div class="alt-sources">Sources: <a href="https://www.amazon.com/FootFitter-Shoe-Boot-Stretch-Spray/dp/B07C63BF24">amazon.com</a> (Aug 27, 2026), <a href="https://freshsshoe.com/products/footfitter-shoe-and-boot-stretch-spray-stretcher-solution-for-leather-suede-nubuck-and-canvas-made-in-the-usa">freshsshoe.com</a> (Aug 27, 2026), <a href="https://www.kugo.com/?page_id=59">kugo.com</a> (Aug 27, 2026)</div>
+        </div>
+
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <h4 class="alt-name">Angelus Professional Shoe Stretch Spray</h4>
+            <span class="tag tag-verified">VERIFIED AMERICAN-MADE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col"><div class="compare-label">Amazon product</div><div>FOOTMATTERS 4 oz; professional grade; works across multiple material types; ~$8–15; manufacture origin not stated.</div></div>
+            <div class="compare-col"><div class="compare-label">Angelus</div><div>4 oz spray pump; ~$9.79–$10 (Walmart); works on leather and suede; clear formula, no staining. Also available in 32 oz size for lower cost-per-ounce. Brand has 100+ years of documented US manufacturing.</div></div>
+          </div>
+          <div class="alt-section"><strong>Business overview:</strong> Angelus shoe care products trace to 1907, when Paul T. Angelos, a Greek immigrant in Los Angeles, created his own shoe polish recipe. Built a five-story plant on Maple Avenue in Los Angeles by 1924. After postwar ownership transition (~1947), relocated to Santa Fe Springs, California where it operates today. Angelus Direct (angelusdirect.com) is the current consumer-facing e-commerce entity.</div>
+          <div class="alt-section"><strong>American-ness:</strong> Manufactured in Los Angeles/Southern California continuously since 1907. Verified by Angelus Direct's own "Made in the USA" blog post, Walmart product listing recording Country of Origin: US, and Hypebeast (independent media) publishing a 2016 company profile documenting uninterrupted US manufacturing history since 1907. <a href="https://hypebeast.com/2016/7/angelus-shoe-polish-company">further reading</a></div>
+          <div class="alt-section"><strong>Founder(s):</strong> Paul T. Angelos — Greek immigrant who arrived at Ellis Island, traveled to Los Angeles, and founded Angelus Shoe Polish in 1907 after developing his own polish recipe. <a href="https://angelusbrand.com/pages/about-us">further reading</a></div>
+          <div class="alt-section"><strong>Affiliate program:</strong> <span class="tag tag-affiliate-yes">Yes</span> (referral program) — <a href="https://angelusdirect.com/pages/referralprogram">angelusdirect.com/pages/referralprogram</a></div>
+          <div class="alt-section"><strong>Contact:</strong> <a href="https://angelusdirect.com">angelusdirect.com</a></div>
+          <div class="alt-sources">Sources: <a href="https://angelusdirect.com/blogs/news/70834437-angelus-direct-made-in-the-usa">angelusdirect.com</a> (Aug 27, 2026), <a href="https://hypebeast.com/2016/7/angelus-shoe-polish-company">hypebeast.com</a> (Aug 27, 2026), <a href="https://www.walmart.com/ip/Angelus-Brand-Professional-Shoe-Stretch-Spray-Pump-870-4-oz/157248775">walmart.com</a> (Aug 27, 2026), <a href="https://angelusdirect.com/pages/referralprogram">angelusdirect.com/pages/referralprogram</a> (Aug 27, 2026)</div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 5. Category breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="100%" height="282" viewBox="0 0 700 282">
+      <!-- Beauty & Personal Care: 3 products -->
+      <text x="0" y="22" font-size="13" fill="#1e293b">Beauty &amp; Personal Care</text>
+      <rect x="200" y="8" width="498" height="18" rx="4" fill="#db2777"/>
+      <text x="706" y="22" font-size="12" fill="#475569">3</text>
+      <!-- Health & Household: 2 products -->
+      <text x="0" y="56" font-size="13" fill="#1e293b">Health &amp; Household</text>
+      <rect x="200" y="42" width="332" height="18" rx="4" fill="#0d9488"/>
+      <text x="540" y="56" font-size="12" fill="#475569">2</text>
+      <!-- Apparel: 2 products -->
+      <text x="0" y="90" font-size="13" fill="#1e293b">Apparel</text>
+      <rect x="200" y="76" width="332" height="18" rx="4" fill="#7c3aed"/>
+      <text x="540" y="90" font-size="12" fill="#475569">2</text>
+      <!-- Grocery: 1 product -->
+      <text x="0" y="124" font-size="13" fill="#1e293b">Grocery</text>
+      <rect x="200" y="110" width="166" height="18" rx="4" fill="#65a30d"/>
+      <text x="374" y="124" font-size="12" fill="#475569">1</text>
+      <!-- Home & Kitchen: 1 product -->
+      <text x="0" y="158" font-size="13" fill="#1e293b">Home &amp; Kitchen</text>
+      <rect x="200" y="144" width="166" height="18" rx="4" fill="#16a34a"/>
+      <text x="374" y="158" font-size="12" fill="#475569">1</text>
+      <!-- Office Products: 1 product -->
+      <text x="0" y="192" font-size="13" fill="#1e293b">Office Products</text>
+      <rect x="200" y="178" width="166" height="18" rx="4" fill="#0891b2"/>
+      <text x="374" y="192" font-size="12" fill="#475569">1</text>
+      <!-- Pet Supplies: 1 product -->
+      <text x="0" y="226" font-size="13" fill="#1e293b">Pet Supplies</text>
+      <rect x="200" y="212" width="166" height="18" rx="4" fill="#92400e"/>
+      <text x="374" y="226" font-size="12" fill="#475569">1</text>
+      <!-- Sports & Outdoors: 1 product -->
+      <text x="0" y="260" font-size="13" fill="#1e293b">Sports &amp; Outdoors</text>
+      <rect x="200" y="246" width="166" height="18" rx="4" fill="#ea580c"/>
+      <text x="374" y="260" font-size="12" fill="#475569">1</text>
+    </svg>
+  </div>
+
+  <!-- 6. New entrants spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <p style="margin:0 0 10px;font-size:13.5px;line-height:1.6;color:#1e293b;">Three new products (per this agent's 14-day history) appeared in the sibling's August 27, 2026 report and are researched for the first time in this run:</p>
+    <ul style="margin:0;padding-left:20px;line-height:1.9;font-size:13.5px;color:#1e293b;">
+      <li><strong>Create Creatine Gummies</strong> (Health &amp; Household, $52–57) — Gummies-format creatine at the center of the biggest supplement category surge in 30 years (up 90% YoY; women as primary new-buyer demographic). High repurchase, in the $25–$100 priority band, and the strongest American alternative found this run (Wild Gainz, VERIFIED, NSF-certified US facility, compelling founder story). Priority research target.</li>
+      <li><strong>Medicube Kojic Acid Turmeric Niacinamide Facial Serum</strong> (Beauty &amp; Personal Care, ~$13–17) — Korean brand dominating the Amazon kojic acid serum category at 100,000+ units/month and 17 of the top 100 trending TikTok Shop US skincare products. High repurchase, below the $25–$100 priority band. No American brand manufactures a snail-mucin or kojic acid complex serum with comparable Korean-formulation heritage; SeoulCeuticals (Palm Beach, FL) is the closest US-operated alternative but carries LOW-CONFIDENCE on its manufacturing claim.</li>
+      <li><strong>VALITIC Kojic Acid Dark Spot Remover Soap Bars</strong> (Beauty &amp; Personal Care, price not confirmed) — Riding the same 871% five-year search growth wave as Medicube but with lower category penetration. Medium repurchase. Kitsch (Los Angeles, CA — VERIFIED, $300M+ revenue, 20% affiliate commission) is an exceptional American alternative: woman-founded, bootstrapped to 9-figure scale, active on TikTok Shop, and itself already competing in the same viral trend channel.</li>
+    </ul>
+  </div>
+
+  <!-- 7. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p><strong>Sibling report processed:</strong> August 27, 2026 (14 Amazon products, 9 categories). Electronics excluded: Oura Ring 5 and Anker Prime Power Bank (hard-exclude rule). 12 non-Electronics products researched via 4 parallel general-purpose subagents, each covering 3 products.</p>
+    <p><strong>Sort precedence applied (Step 2):</strong> (1) This agent's own NEW products before RECURRING — NEW determined by this agent's 14-day history, independent of the sibling's own NEW/RECURRING tags. (2) Within each group, products in the $25–$100 price band before outside-band products (display order only; no product excluded for price). (3) Within each group, higher repurchase-interest before lower, per per-product subagent judgment. Within tied cells, order follows natural research sequence.</p>
+    <p><strong>Verification rule for American-ness:</strong> VERIFIED requires two independent sources — the business's own claim plus one of: a certification-body listing, independent press naming the manufacturing location, or a public-records signal (state incorporation, real factory address, USPTO/SEC filing). A claim backed only by the business's own About page or marketing copy is marked LOW-CONFIDENCE and labeled visibly; never silently upgraded.</p>
+    <p><strong>Per-product alternative cap:</strong> Soft cap of 2–3 alternatives per product was applied. No product's circuit breaker (3 source failures with zero alternatives) was triggered. All 12 products received at least 2 alternatives.</p>
+    <p><strong>Category gaps documented:</strong> (a) COSRX Snail 96 Mucin — snail secretion filtrate essence is not manufactured by any American brand; alternatives target the same skincare goals via HA-based and enzyme-based mechanisms, transparently noted. (b) INABA Churu — lickable squeeze-tube cat treat format is not produced in the USA (pioneered by Japanese manufacturers, predominantly produced in Japan and Thailand); freeze-dried American-made alternatives offered instead, with format difference explicitly noted. (c) Owala FreeSip / vacuum-insulated stainless steel water bottles — manufacturing does not exist in the United States, confirmed by AllAmerican.org investigation and multiple independent industry sourcing analyses; Polar Bottle (insulated plastic, Colorado) and Liberty Bottleworks Original (non-insulated aluminum, Washington State — LOW-CONFIDENCE due to 2020 acquisition) are the only US-made options identified.</p>
+    <p><strong>Approximately 109 source URLs</strong> were fetched or searched across all 4 subagents this run. The sibling agent's own cited sources were not re-cited as this agent's own sources.</p>
+  </div>
+
+  <!-- 8. Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../August24_2026/">August 24</a></span>
+  </div>
+
+</div>
+</body>
+</html>

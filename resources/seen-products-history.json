@@ -1,8 +1,38 @@
 {
-  "last_updated": "2026-08-24",
-  "last_processed_sibling_report": "August24_2026",
+  "last_updated": "2026-08-27",
+  "last_processed_sibling_report": "August27_2026",
   "window_days": 14,
   "products": [
+    {
+      "key": "create-creatine-gummies",
+      "name": "Create Creatine Gummies",
+      "category": "Health & Household",
+      "amazon_price_band": "$52-57",
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-27"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "medicube-kojic-acid-turmeric-serum",
+      "name": "Medicube Kojic Acid Turmeric Niacinamide Facial Serum",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "~$13-17",
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-27"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "valitic-kojic-acid-soap-bars",
+      "name": "VALITIC Kojic Acid Dark Spot Remover Soap Bars",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "price not confirmed",
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-27"],
+      "alternatives_count": 2
+    },
     {
       "key": "celsius-variety-pack-12ct",
       "name": "CELSIUS Assorted Flavors Variety Pack (12-ct)",
@@ -19,8 +49,8 @@
       "category": "Grocery",
       "amazon_price_band": "~$30-$40 / 12-pack",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-24"],
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-24", "2026-08-27"],
       "alternatives_count": 2
     },
     {
@@ -49,8 +79,8 @@
       "category": "Beauty & Personal Care",
       "amazon_price_band": "~$20-$25",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-24"],
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-24", "2026-08-27"],
       "alternatives_count": 2
     },
     {
@@ -69,8 +99,8 @@
       "category": "Pet Supplies",
       "amazon_price_band": "~$20-$30 / 50-pack",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-24"],
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-24", "2026-08-27"],
       "alternatives_count": 2
     },
     {
@@ -79,18 +109,18 @@
       "category": "Health & Household",
       "amazon_price_band": "~$25-$35 / 500g",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-24"],
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-24", "2026-08-27"],
       "alternatives_count": 2
     },
     {
       "key": "levoit-air-purifier-core-300",
       "name": "LEVOIT Air Purifier Core 300",
       "category": "Home & Kitchen",
-      "amazon_price_band": "~$99-$129",
+      "amazon_price_band": "~$79 (reduced from $99)",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-24"],
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-24", "2026-08-27"],
       "alternatives_count": 2
     },
     {
@@ -105,12 +135,12 @@
     },
     {
       "key": "shoe-stretch-spray-4oz",
-      "name": "Shoe Stretch Spray (4 oz, brand not confirmed)",
+      "name": "Shoe Stretch Spray (FOOTMATTERS)",
       "category": "Apparel",
       "amazon_price_band": "~$8-$15",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-24"],
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-24", "2026-08-27"],
       "alternatives_count": 2
     },
     {
@@ -119,8 +149,8 @@
       "category": "Office Products",
       "amazon_price_band": "~$35-$50",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-24"],
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-24", "2026-08-27"],
       "alternatives_count": 2
     },
     {
@@ -129,9 +159,9 @@
       "category": "Sports & Outdoors",
       "amazon_price_band": "~$35-$50",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-24"],
-      "alternatives_count": 1
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-24", "2026-08-27"],
+      "alternatives_count": 2
     },
     {
       "key": "hanes-ecosmart-fleece-hoodie",
@@ -139,8 +169,8 @@
       "category": "Apparel",
       "amazon_price_band": "~$20-$30",
       "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-24"],
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-24", "2026-08-27"],
       "alternatives_count": 2
     },
     {
