@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-24",
+  "last_updated": "2026-08-27",
   "window_days": 14,
   "products": [
     {
@@ -31,8 +31,8 @@
       "name": "JanSport Classic Backpack",
       "category": "Office Products",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24"]
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27"]
     },
     {
       "key": "mead-composition-books",
@@ -47,8 +47,8 @@
       "name": "INABA Churu Lickable Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24"]
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-27"]
     },
     {
       "key": "purina-pro-plan-sensitive-skin-dry-dog-food",
@@ -63,8 +63,8 @@
       "name": "Owala FreeSip Insulated Water Bottle",
       "category": "Sports & Outdoors",
       "first_seen": "2026-07-16",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24"]
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27"]
     },
     {
       "key": "celsius-assorted-variety-pack",
@@ -91,14 +91,6 @@
       "seen_dates": ["2026-07-30", "2026-08-13"]
     },
     {
-      "key": "bic-xtra-smooth-mechanical-pencils-40-count",
-      "name": "BIC Xtra-Smooth Mechanical Pencils (40-Count)",
-      "category": "Office Products",
-      "first_seen": "2026-08-03",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-08-03", "2026-08-06", "2026-08-10"]
-    },
-    {
       "key": "apple-airtag-2nd-generation-4-pack",
       "name": "Apple AirTag 2nd Generation (4-Pack)",
       "category": "Electronics",
@@ -111,16 +103,8 @@
       "name": "Core Power Fairlife Elite 42g Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-06", "2026-08-17", "2026-08-20", "2026-08-24"]
-    },
-    {
-      "key": "dymo-letratag-100h-label-maker",
-      "name": "DYMO LetraTag 100H Label Maker",
-      "category": "Office Products",
-      "first_seen": "2026-08-06",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-08-06", "2026-08-10"]
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-06", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27"]
     },
     {
       "key": "bentgo-chill-kids-bento-box",
@@ -131,68 +115,20 @@
       "seen_dates": ["2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17"]
     },
     {
-      "key": "bose-quietcomfort-headphones",
-      "name": "Bose QuietComfort Headphones",
-      "category": "Electronics",
-      "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-08-10"]
-    },
-    {
       "key": "cosrx-advanced-snail-96-mucin-power-essence",
       "name": "COSRX Advanced Snail 96 Mucin Power Essence",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24"]
-    },
-    {
-      "key": "crocs-classic-clogs",
-      "name": "Crocs Classic Clogs",
-      "category": "Apparel",
-      "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-08-10"]
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27"]
     },
     {
       "key": "hanes-ecosmart-fleece-hoodie",
       "name": "Hanes EcoSmart Fleece Hoodie",
       "category": "Apparel",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-10", "2026-08-20", "2026-08-24"]
-    },
-    {
-      "key": "anua-rice-70-glow-milky-toner",
-      "name": "Anua Rice 70 Glow Milky Toner",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-08-10"]
-    },
-    {
-      "key": "somnfix-mouth-strips",
-      "name": "SomniFix Mouth Strips",
-      "category": "Health & Household",
-      "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-08-10"]
-    },
-    {
-      "key": "ninja-af101-air-fryer",
-      "name": "Ninja AF101 Air Fryer (4-Quart)",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-08-10"]
-    },
-    {
-      "key": "saltair-shimmering-body-oil",
-      "name": "Saltair Shimmering Body Oil",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-08-10",
-      "last_seen": "2026-08-10",
-      "seen_dates": ["2026-08-10"]
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-10", "2026-08-20", "2026-08-24", "2026-08-27"]
     },
     {
       "key": "biodance-bio-collagen-real-deep-mask",
@@ -231,8 +167,8 @@
       "name": "LEVOIT Air Purifier Core 300",
       "category": "Home & Kitchen",
       "first_seen": "2026-08-13",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-13", "2026-08-20", "2026-08-24"]
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-13", "2026-08-20", "2026-08-24", "2026-08-27"]
     },
     {
       "key": "cosrx-low-ph-good-morning-gel-cleanser",
@@ -279,8 +215,8 @@
       "name": "Nutricost Creatine Monohydrate Micronized Powder",
       "category": "Health & Household",
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-17", "2026-08-20", "2026-08-24"]
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27"]
     },
     {
       "key": "ninja-creami-scoop-swirl",
@@ -356,11 +292,11 @@
     },
     {
       "key": "shoe-stretch-spray",
-      "name": "Shoe Stretch Spray (4 oz, brand not confirmed)",
+      "name": "Shoe Stretch Spray (FOOTMATTERS)",
       "category": "Apparel",
       "first_seen": "2026-08-20",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-20", "2026-08-24"]
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-20", "2026-08-24", "2026-08-27"]
     },
     {
       "key": "ohuhu-alcohol-markers-80ct",
@@ -401,6 +337,46 @@
       "first_seen": "2026-08-24",
       "last_seen": "2026-08-24",
       "seen_dates": ["2026-08-24"]
+    },
+    {
+      "key": "oura-ring-5",
+      "name": "Oura Ring 5",
+      "category": "Electronics",
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-27"]
+    },
+    {
+      "key": "create-creatine-gummies",
+      "name": "Create Creatine Gummies",
+      "category": "Health & Household",
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-27"]
+    },
+    {
+      "key": "medicube-kojic-acid-turmeric-serum",
+      "name": "Medicube Kojic Acid Turmeric Dark Spot Serum",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-27"]
+    },
+    {
+      "key": "valitic-kojic-acid-soap-bars",
+      "name": "VALITIC Kojic Acid Soap Bars",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-27"]
+    },
+    {
+      "key": "anker-prime-power-bank",
+      "name": "Anker Prime Power Bank (27,650mAh)",
+      "category": "Electronics",
+      "first_seen": "2026-08-27",
+      "last_seen": "2026-08-27",
+      "seen_dates": ["2026-08-27"]
     }
   ]
 }
