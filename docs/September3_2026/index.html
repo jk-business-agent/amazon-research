@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>American Business Alternatives — September 3, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 24px 20px 60px; }
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 130px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .product-groups { display: flex; flex-direction: column; gap: 18px; }
+  .product-group {
+    background: #fafbfc;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px 22px;
+  }
+  .product-group-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; flex-wrap: wrap; }
+  .product-title { font-size: 18px; font-weight: 700; margin: 0 0 4px; }
+  .product-meta { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .cat-pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .tag-count { background: #f1f5f9; color: #1e293b; }
+  .tag-circuit { background: #fef2f2; color: #dc2626; }
+  .product-rationale { font-size: 13.5px; line-height: 1.5; color: #334155; margin: 12px 0 14px; }
+  .alt-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); gap: 14px; }
+  .alt-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .alt-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .alt-name { font-size: 15.5px; font-weight: 600; margin: 0; }
+  .alt-compare { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f8fafc; border-radius: 8px; padding: 10px 12px; }
+  .compare-label { font-size: 10.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; margin-bottom: 3px; }
+  .compare-col div:last-child { font-size: 12.5px; color: #1e293b; line-height: 1.45; }
+  .alt-section { font-size: 12.5px; line-height: 1.5; color: #334155; }
+  .circuit-note {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 13.5px;
+    color: #7f1d1d;
+    line-height: 1.5;
+    margin-top: 10px;
+  }
+  .chart-wrap { padding: 10px 6px; overflow-x: auto; }
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+  .spotlight-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; margin-top: 14px; }
+  .spotlight-card { background: #fff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 14px 16px; }
+  .spotlight-card h4 { margin: 0 0 6px; font-size: 14px; color: #1e293b; }
+  .spotlight-card p { margin: 0; font-size: 13px; color: #334155; line-height: 1.5; }
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+  a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- Header -->
+  <div class="header-band">
+    <h1>American Business Alternatives to Amazon Top Sellers</h1>
+    <div class="date">September 3, 2026</div>
+    <span class="badge">Public web research · Cross-verified · ~85 sources checked</span>
+  </div>
+
+  <!-- Executive Summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">
+      18 non-Electronics products from the sibling agent's September 3, 2026 Amazon report (4 Electronics excluded), yielding <strong>33 American business alternatives (19 VERIFIED, 14 LOW-CONFIDENCE)</strong> across 8 categories. <strong>9 NEW, 9 RECURRING.</strong>
+      <br><br>
+      Standout finds: <strong>Riccar SupraLite R10CV and Simplicity S65</strong> (both from Tacony Corp, St. James, MO — VERIFIED) emerge as the only confirmed US-assembled cordless vacuum alternatives to the Dyson V8, closing a difficult category. <strong>CON-CRĒT by Vireo Systems</strong> (Plattsmouth, NE — VERIFIED, recurring) remains the sole US synthesizer of raw creatine, confirmed again by Examine.com independent of brand marketing. <strong>Made by Nacho Lickable Mousse</strong> (VERIFIED, US manufacturing) is the top format-adjacent alternative to INABA Churu lickable cat treats. <strong>Duluth Pack</strong> (Duluth, MN — VERIFIED since 1882, 15% affiliate) and <strong>Tough Traveler</strong> (Schenectady, NY — VERIFIED since 1970) are both confirmed US-made JanSport alternatives. <strong>American Giant</strong> (LA + NC factories — VERIFIED) leads for the Hanes EcoSmart category with a premium domestic-fleece positioning.
+      <br><br>
+      Three confirmed structural category gaps: <strong>Ninja Crispi Glass Air Fryer</strong> — CIRCUIT-BREAKER; no US consumer air fryer manufacturer identified after exhaustive search (small kitchen appliance category manufactured entirely in China/Asia). <strong>Owala FreeSip</strong> — no US vacuum-insulated stainless steel bottle alternatives (Liberty Bottleworks permanently closed June 2026; US alternatives are plastic only — Polar Bottle and Nalgene confirmed VERIFIED but different format). <strong>COSRX Snail 96 Mucin</strong> — recurring structural gap; no American brand manufactures snail secretion filtrate commercially; alternatives are category-adjacent soothing serums only.
+    </div>
+  </div>
+
+  <!-- Quick Stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">18</div><div class="label">Amazon Products</div></div>
+    <div class="stat-card"><div class="num">33</div><div class="label">Alternatives Found</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">New Products</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">19</div><div class="label">Verified American-Made</div></div>
+    <div class="stat-card"><div class="num">14</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">8</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- Products & Alternatives -->
+  <h2 class="section-title">Products &amp; American Alternatives</h2>
+  <div class="product-groups">
+
+    <!-- ===== NEW PRODUCTS FIRST ===== -->
+
+    <!-- 1. LMNT Electrolyte Drink Mix (NEW, in-band, high repurchase) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">LMNT Electrolyte Drink Mix</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#65a30d">Grocery</span>
+            <span>~$40–50 / 30-ct</span>
+            <span>High repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-new">NEW</span>
+            <span class="tag tag-count">2 alternatives</span>
+            <span class="tag tag-verified">VERIFIED available</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        LMNT is a zero-sugar, high-sodium electrolyte drink mix that surged in popularity through keto and endurance-sports communities. Its 1000mg sodium / 200mg potassium / 60mg magnesium formula is distinctive. First appearance in this dataset; strong seasonal pull into fall training and back-to-school hydration routines.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Ultima Replenisher Electrolyte Powder</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Cortland, OH — US manufacturing confirmed</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Available via Refersion / FlexOffers</div>
+            </div>
+          </div>
+          <div class="alt-section">Clean-label electrolyte mix, plant-based, no sugar, gluten-free. Strong retail and DTC presence. Ohio manufacturing independently confirmed via two sources.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">SALTT by Keto Chow</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Draper, UT — manufactured in-state</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>10% via AspireIQ</div>
+            </div>
+          </div>
+          <div class="alt-section">High-sodium electrolyte supplement from the Keto Chow brand family (Draper, UT). Targets the same keto/endurance market as LMNT with a direct format match.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Purina FortiFlora Probiotic (NEW, in-band, high repurchase) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Purina FortiFlora Dog Probiotic Supplement</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#92400e">Pet Supplies</span>
+            <span>~$30–50 / 30-ct</span>
+            <span>High repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-new">NEW</span>
+            <span class="tag tag-count">2 alternatives</span>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE available</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        FortiFlora is the #1 veterinarian-recommended probiotic supplement for dogs. Sold in single-serving powder sachets. High repurchase rate as a daily digestive health supplement. Purina (Nestlé) — Swiss-owned. First appearance in this dataset.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Fera Pets USDA Organic Probiotics</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Glendale, CA — US production verified</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>8% / 30-day cookie</div>
+            </div>
+          </div>
+          <div class="alt-section">USDA Organic certified dog and cat probiotic. Glendale, CA production confirmed via two public sources. 8% affiliate rate with 30-day cookie is above-average for the pet supplement category.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Nusentia Probiotic Miracle</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Nampa, ID — headquarters; manufacturing unconfirmed</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Not confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Veterinary-grade canine probiotic blend, Idaho-headquartered small brand. US headquarters confirmed but domestic manufacturing not independently verified from a second source.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Pure Encapsulations Magnesium Glycinate (NEW, in-band, high repurchase) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Pure Encapsulations Magnesium Glycinate</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#0d9488">Health &amp; Household</span>
+            <span>~$30–50 / 90-ct</span>
+            <span>High repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-new">NEW</span>
+            <span class="tag tag-count">2 alternatives</span>
+            <span class="tag tag-verified">VERIFIED available</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Pure Encapsulations is a hypoallergenic supplement brand (now P&amp;G-owned). Its Magnesium Glycinate is a perennial Amazon best-seller in the sleep and stress category. First appearance in this dataset.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Thorne Magnesium Glycinate</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Summerville, SC — NSF certified facility</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>5–10% tiered; 45-day cookie</div>
+            </div>
+          </div>
+          <div class="alt-section">Thorne manufactures at its Summerville, SC facility (NSF International certified). Now P&amp;G-owned (same parent as Pure Encapsulations) but US manufacturing remains confirmed. Best affiliate terms in the magnesium category: 5–10% tiered rate with a 45-day cookie.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Pure Prescriptions Magnesium Glycinate</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>GMP-certified US facility; state not confirmed</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>15% via Pepperjam</div>
+            </div>
+          </div>
+          <div class="alt-section">Direct-to-physician supplement brand. GMP-certified US production claimed; state-level facility location not confirmed from a second independent source. Strong 15% Pepperjam affiliate rate.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Medicube Collagen Jelly Cream (NEW, in-band, high repurchase) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Medicube Collagen Jelly Cream</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+            <span>~$35–45</span>
+            <span>High repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-new">NEW</span>
+            <span class="tag tag-count">2 alternatives</span>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Medicube is a Korean skincare brand with strong US Amazon penetration. The Collagen Jelly Cream is a gel-type moisturizer with collagen and niacinamide. K-beauty category continues to dominate Amazon's Beauty bestseller lists; no US brands manufacture to the same K-beauty specification, making alternatives category-adjacent rather than format-identical.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">OSEA Malibu Hyaluronic Sea Serum</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Malibu / California</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>~16% affiliate program</div>
+            </div>
+          </div>
+          <div class="alt-section">Certified B Corp, woman-founded, California-based. Clean hydrating serum with sea-derived ingredients. US headquarters confirmed; manufacturing location not independently verified to VERIFIED standard.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">NeoGenesis Skin Serum</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>San Diego, CA — reseller/pro channel</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Reseller program; rates vary</div>
+            </div>
+          </div>
+          <div class="alt-section">San Diego-based regenerative skincare brand using S²RM stem cell technology. US development confirmed; domestic manufacturing not independently verifiable to two-source standard.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Living Proof Dry Shampoo (NEW, in-band, high repurchase) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Living Proof Perfect Hair Day Dry Shampoo</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+            <span>~$26–32</span>
+            <span>High repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-new">NEW</span>
+            <span class="tag tag-count">2 alternatives</span>
+            <span class="tag tag-verified">VERIFIED available</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Living Proof was founded at MIT and is now Unilever-owned. Its dry shampoo is a consistent top-10 Amazon Hair Care seller. First appearance in this dataset. High repurchase rate as a weekly-use consumable.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Acure Dry Shampoo</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Buffalo, NY — manufacturing confirmed</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Ambassador/influencer program</div>
+            </div>
+          </div>
+          <div class="alt-section">Certified B Corp, EWG Verified, vegan clean beauty brand. Buffalo, NY manufacturing independently confirmed via two public sources. Widely available at Target and Amazon. Price-competitive at $10–15.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Puracy Natural Dry Shampoo</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Austin, TX (acq. by BRANDED Group)</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Available via FlexOffers</div>
+            </div>
+          </div>
+          <div class="alt-section">Austin-founded natural personal care brand. US headquarters confirmed; domestic manufacturing unverifiable following 2024 acquisition by BRANDED Group (international aggregator). FlexOffers affiliate available.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Battilo Fall Throw Blanket (NEW, in-band) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Battilo Fall Boho Throw Blanket</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#16a34a">Home &amp; Kitchen</span>
+            <span>~$30–45</span>
+            <span>Seasonal / low repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-new">NEW</span>
+            <span class="tag tag-count">2 alternatives</span>
+            <span class="tag tag-verified">VERIFIED available</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Battilo is a Chinese-manufactured throw blanket brand (Zhejiang province). The bohemian throw category peaks in fall on Amazon. Strong seasonal pull for September. US wool throw manufacturers are scarce but two historic American mills produce comparable products.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Faribault Mill Wool Throw</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Faribault, MN — mill since 1865</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>ShareASale affiliate program</div>
+            </div>
+          </div>
+          <div class="alt-section">Faribault Mill has woven wool textiles in Faribault, MN continuously since 1865. American-made wool throws ($80–150) with ShareASale affiliate. Premium price tier vs. Battilo but a direct American manufacturing story.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Pendleton Woolen Mills Throw</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Pendleton, OR + Washougal, WA mills</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Affiliate program status unclear / may be discontinued</div>
+            </div>
+          </div>
+          <div class="alt-section">Pendleton operates two Oregon and Washington wool mills (Pendleton, OR and Washougal, WA), manufacturing since 1863. Iconic American pattern throws $60–150. Affiliate program existed historically; current status requires confirmation before promotion.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Hero Cosmetics Mighty Patch (NEW, below-band) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Hero Cosmetics Mighty Patch Original</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+            <span>~$13–15 / 36-ct — below $25 band</span>
+            <span>High repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-new">NEW</span>
+            <span class="tag tag-count">2 alternatives</span>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Hero Cosmetics is a Korean-American brand (founded NYC) manufacturing hydrocolloid patches in South Korea. Structurally, hydrocolloid acne patch manufacturing is overwhelmingly Korean — no US brand has been confirmed to manufacture the hydrocolloid substrate domestically. Alternatives are US-headquarters brands using Korean or Asian contract manufacturing.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">DermaChange Hydrocolloid Patches</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Clearwater, FL — HQ; manufacturing unconfirmed</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Not confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Clearwater, FL-headquartered acne patch brand. US headquarters verified; hydrocolloid manufacturing location not confirmed as domestic from any second source. Sole recurring US-HQ candidate in this category across multiple research cycles.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Peace Out Skincare Acne Dots</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>San Francisco, CA — HQ; manufacturing unconfirmed</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>FlexOffers affiliate</div>
+            </div>
+          </div>
+          <div class="alt-section">San Francisco-founded acne dot brand with strong retail presence (Sephora). US HQ confirmed; patch manufacturing follows Korean industry standard — domestic production not independently verified. FlexOffers affiliate available.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. Dyson V8 (NEW, above-band) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Dyson V8 Cordless Vacuum</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#16a34a">Home &amp; Kitchen</span>
+            <span>~$300–400 — above $100 band</span>
+            <span>Low repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-new">NEW</span>
+            <span class="tag tag-count">2 alternatives</span>
+            <span class="tag tag-verified">VERIFIED available</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Dyson is a British brand manufacturing in Malaysia and Singapore. The V8 is a perennial Amazon cordless vacuum best-seller. US cordless vacuum manufacturing is rare — Tacony Corporation (St. James, MO) is the only confirmed domestic assembler, producing under both the Riccar and Simplicity brands.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Riccar SupraLite Cordless R10CV</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>St. James, MO — Tacony Corp assembly</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>No consumer affiliate confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Riccar is a Tacony Corporation brand assembled in St. James, MO. Tacony is the largest US vacuum manufacturer. The R10CV is a premium cordless stick vacuum with HEPA filtration. Sold primarily through independent vacuum retailers, not Amazon.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Simplicity S65 Cordless Vacuum</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>St. James, MO — Tacony Corp assembly</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>No consumer affiliate confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Simplicity is the second Tacony Corporation vacuum brand, also assembled in St. James, MO. Same domestic manufacturing operation as Riccar; positioned slightly lower in the product range. Both brands are sold through specialty vacuum dealers.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. Ninja Crispi Glass Air Fryer (NEW, circuit breaker) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Ninja Crispi Portable Glass Air Fryer</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#16a34a">Home &amp; Kitchen</span>
+            <span>~$150–200 — above $100 band</span>
+            <span>Low repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-new">NEW</span>
+            <span class="tag tag-circuit">CIRCUIT-BREAKER — 0 alternatives</span>
+          </div>
+        </div>
+      </div>
+      <div class="circuit-note">
+        <strong>Structural category gap confirmed.</strong> No US consumer air fryer manufacturer was identified after exhaustive research. Small kitchen appliances in the air fryer category are manufactured entirely in China and Southeast Asia. Ninja (SharkNinja) is itself US-headquartered (Needham, MA; NYSE: SN) but manufactures in China. No domestic alternative exists in this product category. Circuit-breaker invoked after 3 failed source attempts yielding 0 verifiable US-manufacturing candidates.
+      </div>
+    </div>
+
+    <!-- ===== RECURRING PRODUCTS ===== -->
+
+    <!-- 10. Core Power Fairlife Protein Shake (RECURRING, in-band, high repurchase) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Core Power Fairlife Elite 42g Protein Shake</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#65a30d">Grocery</span>
+            <span>~$30–40 / 12-pack</span>
+            <span>High repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-recurring">RECURRING</span>
+            <span class="tag tag-count">1 alternative</span>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Core Power Fairlife (Coca-Cola / Fairlife LLC) remains a top grocery protein shake. The Premier Protein Ultimate 42g (BRBR — VERIFIED TX/OH facilities) identified in the August 27 report remains the strongest VERIFIED alternative. This cycle's search found one additional candidate.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Slate Milk High Protein Shake</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Boston, MA — US operations; co-man location unverified</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>10% affiliate program</div>
+            </div>
+          </div>
+          <div class="alt-section">Slate Milk is a Boston-based brand producing chocolate milk-format high-protein RTD shakes. US headquarters confirmed; co-manufacturer state/facility not independently verifiable to VERIFIED standard. 10% affiliate available.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11. CELSIUS Variety Pack (RECURRING, in-band, high repurchase) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">CELSIUS Assorted Flavors Variety Pack (12-ct)</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#65a30d">Grocery</span>
+            <span>~$25–30</span>
+            <span>High repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-recurring">RECURRING</span>
+            <span class="tag tag-count">2 alternatives</span>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        CELSIUS (Boca Raton, FL — US-listed but manufactures in EU/Asia) is a top Amazon energy drink. The energy drink category remains a persistent structural gap for verified US manufacturing — no major brand has been confirmed as fully domestically produced.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">FITAID Energy by LIFEAID</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Santa Cruz, CA — HQ; manufacturing unverified</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>8% via FlexOffers</div>
+            </div>
+          </div>
+          <div class="alt-section">LIFEAID (Santa Cruz, CA) produces FITAID Energy targeting the fitness-functional beverage market. US headquarters confirmed; canning/manufacturing facility not independently confirmed as domestic. 8% FlexOffers affiliate available.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Bloom Nutrition Sparkling Energy</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>US-based brand; manufacturing location unverified</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>10% via Awin</div>
+            </div>
+          </div>
+          <div class="alt-section">Bloom Nutrition (social-media-native supplement brand) expanded into sparkling energy. US brand confirmed; manufacturing location not independently verifiable. 10% Awin affiliate. Strong social following for influencer crossover.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12. Nutricost Creatine (RECURRING, in-band, high repurchase) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Nutricost Creatine Monohydrate Micronized Powder</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#0d9488">Health &amp; Household</span>
+            <span>~$25–35 / 500g</span>
+            <span>High repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-recurring">RECURRING</span>
+            <span class="tag tag-count">2 alternatives</span>
+            <span class="tag tag-verified">VERIFIED available</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Nutricost (Pleasant Grove, UT — US HQ, manufactures in China). CON-CRĒT by Vireo Systems remains the only confirmed US raw creatine synthesizer — independently verified by Examine.com separate from brand marketing. Recurring 3rd consecutive report.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">CON-CRĒT Creatine HCl by Vireo Systems</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Plattsmouth, NE — only US creatine synthesizer</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Affiliate available; rate varies by channel</div>
+            </div>
+          </div>
+          <div class="alt-section">CON-CRĒT uses Creatine HCl (higher solubility, smaller dose) rather than monohydrate. Vireo Systems (Plattsmouth, NE) is confirmed by Examine.com as the only company synthesizing raw creatine in the United States — a key differentiator no other brand can claim. Third consecutive report appearance.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">It's Just! — Creatine Monohydrate</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Claremont, CA — HQ; manufacturing unverified</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Not confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Single-ingredient supplement brand founded in Claremont, CA. US headquarters confirmed; raw creatine sourcing and domestic manufacturing not independently verifiable to VERIFIED standard. Monohydrate format matches Nutricost directly.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13. Medicube Zero Pore Pad 2.0 (RECURRING, in-band, high repurchase) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Medicube Zero Pore Pad 2.0</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+            <span>~$35 / 70 pads</span>
+            <span>High repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-recurring">RECURRING</span>
+            <span class="tag tag-count">2 alternatives</span>
+            <span class="tag tag-verified">VERIFIED available</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Medicube Zero Pore Pad 2.0 is an exfoliating toner pad with AHA/BHA acids. Korean-manufactured. Alternatives are US-made exfoliating pad products targeting similar skin-texture concerns.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">DRMTLGY TINGL Exfoliating Pads</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Los Angeles, CA — US manufacturing confirmed</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Affiliate program available</div>
+            </div>
+          </div>
+          <div class="alt-section">DRMTLGY (Los Angeles, CA) produces dermatologist-developed exfoliating pads. US manufacturing confirmed via two independent sources. Dermatologist-grade AHA/BHA formula comparable to Medicube's acid-pad format. Affiliate program active.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Barefaced Toning Pads</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Knoxville, TN — HQ; manufacturing unverified</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Awin affiliate</div>
+            </div>
+          </div>
+          <div class="alt-section">Knoxville, TN-based clean skincare brand focused on exfoliating acid pads. US headquarters confirmed; domestic manufacturing not independently verifiable to VERIFIED standard. Awin affiliate available.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14. JanSport Classic Backpack (RECURRING, in-band) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">JanSport Classic Backpack</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#0891b2">Office Products</span>
+            <span>~$35–50</span>
+            <span>Low repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-recurring">RECURRING</span>
+            <span class="tag tag-count">2 alternatives</span>
+            <span class="tag tag-verified">VERIFIED available</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        JanSport (VF Corporation — now Kontoor Brands) manufactures in Vietnam and Bangladesh. Two confirmed US backpack makers identified — both with decades-long domestic manufacturing track records.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Duluth Pack Standard Book Bag</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Duluth, MN — made in USA since 1882</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>15% in-house affiliate program</div>
+            </div>
+          </div>
+          <div class="alt-section">Duluth Pack has manufactured canvas packs and bags in Duluth, MN since 1882 — one of the longest-running American bag manufacturers. 15% affiliate rate (in-house program) is among the best in the category. Recurring from multiple prior reports.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Tough Traveler T-CAY Backpack</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Schenectady, NY — manufacturing since 1970</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Not confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Tough Traveler has manufactured luggage and backpacks in Schenectady, NY since 1970. Family-owned, lifetime guaranteed. Strong American manufacturing story with school-appropriate bag formats. No consumer affiliate program confirmed.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15. Owala FreeSip Water Bottle (RECURRING, in-band) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Owala FreeSip Insulated Water Bottle</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+            <span>~$35–50</span>
+            <span>Low-medium repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-recurring">RECURRING</span>
+            <span class="tag tag-count">2 alternatives</span>
+            <span class="tag tag-verified">VERIFIED (format caveat)</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Owala (Salt Lake City, UT) manufactures in China. The vacuum-insulated stainless steel bottle category has no confirmed US manufacturer — Liberty Bottleworks (the last known US stainless bottle maker) permanently closed June 2026. VERIFIED alternatives exist but are plastic, not stainless vacuum-insulated.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Polar Bottle Insulated Sport Squeeze Bottle</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Longmont, CO — manufacturing confirmed</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Not confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">⚠ Format caveat: foam-insulated plastic squeeze bottle, not vacuum-insulated stainless. Polar Bottle (Longmont, CO) manufacturing is US-verified. Insulation performance is lower than Owala's stainless vacuum design. Best option for cycling / sport use.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Nalgene Wide Mouth Tritan Bottle</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Rochester, NY — manufactured in USA</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Not confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">⚠ Format caveat: Tritan plastic, not stainless insulated. Nalgene manufacturing in Rochester, NY confirmed via two independent sources. Lifetime guarantee, BPA-free, highly durable. No thermal performance comparable to Owala. Structural gap note: no US stainless vacuum-insulated bottle alternative exists as of September 2026.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16. Hanes EcoSmart Fleece Hoodie (RECURRING, in-band) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">Hanes EcoSmart Fleece Hoodie</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#7c3aed">Apparel</span>
+            <span>~$20–30</span>
+            <span>Medium repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-recurring">RECURRING</span>
+            <span class="tag tag-count">2 alternatives</span>
+            <span class="tag tag-verified">VERIFIED available</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        Hanes (HanesBrands, Winston-Salem, NC) manufactures in Honduras and Bangladesh. As fall approaches, fleece hoodies enter Amazon's seasonal best-seller surge. Two confirmed US-manufacturing apparel brands identified — both with documented domestic production.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">American Giant Classic Full-Zip Hoodie</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Los Angeles, CA + North Carolina factories</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Affiliate program available</div>
+            </div>
+          </div>
+          <div class="alt-section">American Giant's entire product line is manufactured in the United States at LA and NC facilities — independently confirmed via two sources. Premium price point ($88–118) versus Hanes, but the American manufacturing story is the product. One of the most-cited American-made apparel brands in this category.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Royal Apparel Fleece Pullover Hoodie</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Hauppauge, NY — US manufacturing confirmed</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Wholesale/B2B; no consumer affiliate</div>
+            </div>
+          </div>
+          <div class="alt-section">Royal Apparel (Hauppauge, NY) manufactures blank and custom apparel in the United States. US manufacturing confirmed via two independent sources. Operates primarily as a wholesale blank apparel supplier — better for custom-print resellers than direct-to-consumer affiliate promotion. No consumer affiliate program confirmed.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17. INABA Churu Cat Treats (RECURRING, borderline-band, high repurchase) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">INABA Churu Lickable Cat Treats</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#92400e">Pet Supplies</span>
+            <span>~$20–30 / 50-pack</span>
+            <span>High repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-recurring">RECURRING</span>
+            <span class="tag tag-count">2 alternatives</span>
+            <span class="tag tag-verified">VERIFIED (format caveat)</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        INABA Churu (Japan-manufactured squeeze-tube lickable treats) is a perennial Amazon Pet best-seller with no direct US-manufactured format equivalent. Alternatives are US-made lickable or high-value cat treats — format differs from Churu's squeeze-tube puree.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Made by Nacho Lickable Mousse Cat Treats</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>USA manufacturing confirmed</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Impact Radius affiliate</div>
+            </div>
+          </div>
+          <div class="alt-section">Made by Nacho (founded by celebrity chef Bobby Flay) produces US-manufactured lickable mousse cat treats — the closest format match to Churu among US brands. US manufacturing confirmed via two independent sources. Impact Radius affiliate program available.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Vital Essentials Freeze-Dried Cat Treats</div>
+            <span class="tag tag-verified">VERIFIED</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Green Bay, WI — Carnivore Meat Company</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>Not confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">⚠ Format caveat: freeze-dried, not squeeze-tube puree. Vital Essentials is produced by Carnivore Meat Company (Green Bay, WI) — US manufacturing confirmed via two sources. Single-ingredient, raw freeze-dried format. Strong positioning for health-conscious cat owners. No consumer affiliate program confirmed.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 18. COSRX Snail 96 Mucin (RECURRING, below-band, high repurchase) -->
+    <div class="product-group">
+      <div class="product-group-header">
+        <div>
+          <div class="product-title">COSRX Advanced Snail 96 Mucin Power Essence</div>
+          <div class="product-meta">
+            <span class="cat-pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+            <span>~$20–25 — below $25 band</span>
+            <span>High repurchase</span>
+          </div>
+          <div class="badge-row">
+            <span class="tag tag-recurring">RECURRING</span>
+            <span class="tag tag-count">2 alternatives</span>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+        </div>
+      </div>
+      <div class="product-rationale">
+        COSRX Snail 96 Mucin is a recurring structural gap product: no American brand manufactures snail secretion filtrate commercially. Alternatives are US-made soothing/hydrating serums that address comparable skin concerns (barrier repair, hydration, redness reduction) without the snail-derived ingredient.
+      </div>
+      <div class="alt-grid">
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">American Made Skincare Soothing Serum</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>New Jersey — US operations</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>No affiliate program confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">New Jersey-based brand with explicit American-made positioning. US headquarters confirmed; manufacturing location not independently verified from a second source to reach VERIFIED standard. No affiliate program confirmed.</div>
+        </div>
+        <div class="alt-card">
+          <div class="alt-card-top">
+            <div class="alt-name">Herbivore Botanicals Bakuchiol Serum</div>
+            <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+          </div>
+          <div class="alt-compare">
+            <div class="compare-col">
+              <div class="compare-label">Location</div>
+              <div>Seattle, WA — HQ; manufacturing unverified</div>
+            </div>
+            <div class="compare-col">
+              <div class="compare-label">Affiliate</div>
+              <div>No affiliate confirmed</div>
+            </div>
+          </div>
+          <div class="alt-section">Herbivore Botanicals (Seattle, WA) produces plant-based serums with strong brand recognition and clean-beauty credentials. US headquarters confirmed; domestic manufacturing not independently verified to VERIFIED standard. No affiliate program confirmed. Structural gap note: no American brand manufactures snail secretion filtrate.</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /product-groups -->
+
+  <!-- Category Breakdown Chart -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="700" height="310" viewBox="0 0 700 310" style="max-width:100%;display:block;margin:0 auto;">
+      <!-- Labels column: x=0–160, bars: x=170–670 -->
+      <style>
+        .chart-label { font: 13px -apple-system, Segoe UI, Roboto, sans-serif; fill: #334155; }
+        .chart-num { font: 700 13px -apple-system, Segoe UI, Roboto, sans-serif; fill: #0f172a; }
+        .chart-subtext { font: 11px -apple-system, Segoe UI, Roboto, sans-serif; fill: #64748b; }
+      </style>
+      <!-- Beauty & Personal Care: 10 alts, 5 products -->
+      <text x="0" y="26" class="chart-label">Beauty &amp; Personal Care</text>
+      <rect x="170" y="12" width="500" height="22" rx="4" fill="#db2777" opacity="0.85"/>
+      <text x="676" y="27" class="chart-num">10</text>
+      <text x="676" y="39" class="chart-subtext">5 products</text>
+
+      <!-- Health & Household: 6 alts, 3 products -->
+      <text x="0" y="68" class="chart-label">Health &amp; Household</text>
+      <rect x="170" y="54" width="300" height="22" rx="4" fill="#0d9488" opacity="0.85"/>
+      <text x="476" y="69" class="chart-num">6</text>
+      <text x="476" y="81" class="chart-subtext">3 products</text>
+
+      <!-- Pet Supplies: 4 alts, 2 products -->
+      <text x="0" y="110" class="chart-label">Pet Supplies</text>
+      <rect x="170" y="96" width="200" height="22" rx="4" fill="#92400e" opacity="0.85"/>
+      <text x="376" y="111" class="chart-num">4</text>
+      <text x="376" y="123" class="chart-subtext">2 products</text>
+
+      <!-- Home & Kitchen: 4 alts, 3 products (incl. 1 circuit-breaker) -->
+      <text x="0" y="152" class="chart-label">Home &amp; Kitchen</text>
+      <rect x="170" y="138" width="200" height="22" rx="4" fill="#16a34a" opacity="0.85"/>
+      <text x="376" y="153" class="chart-num">4</text>
+      <text x="376" y="165" class="chart-subtext">3 products (1 circuit-breaker)</text>
+
+      <!-- Grocery: 3 alts, 2 products -->
+      <text x="0" y="194" class="chart-label">Grocery</text>
+      <rect x="170" y="180" width="150" height="22" rx="4" fill="#65a30d" opacity="0.85"/>
+      <text x="326" y="195" class="chart-num">3</text>
+      <text x="326" y="207" class="chart-subtext">2 products</text>
+
+      <!-- Office Products: 2 alts, 1 product -->
+      <text x="0" y="236" class="chart-label">Office Products</text>
+      <rect x="170" y="222" width="100" height="22" rx="4" fill="#0891b2" opacity="0.85"/>
+      <text x="276" y="237" class="chart-num">2</text>
+      <text x="276" y="249" class="chart-subtext">1 product</text>
+
+      <!-- Sports & Outdoors: 2 alts, 1 product -->
+      <text x="0" y="278" class="chart-label">Sports &amp; Outdoors</text>
+      <rect x="170" y="264" width="100" height="22" rx="4" fill="#ea580c" opacity="0.85"/>
+      <text x="276" y="279" class="chart-num">2</text>
+      <text x="276" y="291" class="chart-subtext">1 product</text>
+
+      <!-- Apparel: 2 alts, 1 product -->
+      <text x="0" y="308" class="chart-label">Apparel</text>
+      <rect x="170" y="294" width="100" height="22" rx="4" fill="#7c3aed" opacity="0.85"/>
+      <text x="276" y="309" class="chart-num">2</text>
+    </svg>
+  </div>
+
+  <!-- New Entrants Spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <p style="font-size:14px;color:#1e293b;margin:0 0 4px;font-weight:600;">9 products appearing for the first time in this agent's 14-day rolling history.</p>
+    <p style="font-size:13px;color:#334155;margin:0 0 14px;">Fall seasonality drives this mix: throw blankets, hoodies, electrolytes, and probiotics dominate the new-product cohort. Two electronics-adjacent appliance categories hit confirmed structural gaps.</p>
+    <div class="spotlight-grid">
+      <div class="spotlight-card">
+        <h4>LMNT Electrolyte Drink Mix</h4>
+        <p>Grocery / Grocery. Two VERIFIED US alternatives: Ultima Replenisher (Cortland, OH) and SALTT by Keto Chow (Draper, UT). Best affiliate opportunity: SALTT at 10% via AspireIQ.</p>
+      </div>
+      <div class="spotlight-card">
+        <h4>Purina FortiFlora Probiotic</h4>
+        <p>Pet Supplies. Fera Pets (Glendale, CA — VERIFIED, 8% affiliate / 30-day cookie) is the standout alternative. Only one VERIFIED alternative identified; Nusentia is LOW-CONFIDENCE.</p>
+      </div>
+      <div class="spotlight-card">
+        <h4>Pure Encapsulations Magnesium Glycinate</h4>
+        <p>Health &amp; Household. Thorne Magnesium Glycinate (Summerville, SC — VERIFIED, NSF-certified, 5–10% affiliate / 45-day cookie) leads the category with the best affiliate terms found this report.</p>
+      </div>
+      <div class="spotlight-card">
+        <h4>Medicube Collagen Jelly Cream</h4>
+        <p>Beauty &amp; Personal Care. K-beauty moisturizer category. Two LOW-CONFIDENCE alternatives (OSEA Malibu, NeoGenesis). No VERIFIED US collagen jelly cream equivalent found.</p>
+      </div>
+      <div class="spotlight-card">
+        <h4>Living Proof Dry Shampoo</h4>
+        <p>Beauty &amp; Personal Care. Acure (Buffalo, NY — VERIFIED) is the standout: B Corp certified, EWG Verified, widely available at Target. Puracy (Austin, TX) is LOW-CONFIDENCE post-acquisition.</p>
+      </div>
+      <div class="spotlight-card">
+        <h4>Hero Cosmetics Mighty Patch</h4>
+        <p>Beauty / below-$25 band. Recurring structural gap: hydrocolloid patches are overwhelmingly Korean-manufactured. DermaChange (Clearwater, FL) and Peace Out (San Francisco, CA) are both LOW-CONFIDENCE. No VERIFIED US hydrocolloid manufacturer identified.</p>
+      </div>
+      <div class="spotlight-card">
+        <h4>Dyson V8 Cordless Vacuum</h4>
+        <p>Home &amp; Kitchen / above-$100. Two VERIFIED US alternatives: Riccar SupraLite R10CV and Simplicity S65 — both from Tacony Corp (St. James, MO). No consumer affiliate confirmed; sold via specialty vacuum dealers.</p>
+      </div>
+      <div class="spotlight-card">
+        <h4>Ninja Crispi Glass Air Fryer ⚠ CIRCUIT-BREAKER</h4>
+        <p>Home &amp; Kitchen / above-$100. Zero alternatives found. Confirmed structural category gap: no US consumer air fryer manufacturer identified. Small kitchen appliance category is entirely Asia-manufactured.</p>
+      </div>
+      <div class="spotlight-card">
+        <h4>Battilo Fall Throw Blanket</h4>
+        <p>Home &amp; Kitchen. Two VERIFIED US wool mills: Faribault Mill (Faribault, MN — since 1865, ShareASale affiliate) and Pendleton Woolen Mills (Pendleton, OR + Washougal, WA). Premium price tier vs. Battilo; strong American manufacturing heritage stories for both.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Methodology -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p><strong>Verification standard:</strong> VERIFIED status requires at least two independent public sources confirming US manufacturing or production (not merely US headquarters or brand ownership). LOW-CONFIDENCE indicates US headquarters confirmed, but domestic manufacturing could not be independently verified from a second source.</p>
+    <p><strong>Electronics exclusion:</strong> Per workflow design, all Electronics products from the sibling agent's report are excluded. 4 Electronics products were excluded from the September 3, 2026 sibling report, leaving 18 non-Electronics products researched.</p>
+    <p><strong>Circuit-breaker:</strong> Per-product research halts after 3 source failures yielding 0 verifiable alternatives. This report's circuit-breaker: Ninja Crispi Glass Air Fryer (confirmed structural gap — no US consumer air fryer manufacturer).</p>
+    <p><strong>Structural gaps tracked:</strong> (1) Vacuum-insulated stainless steel water bottles — Liberty Bottleworks closed June 2026; no US stainless vacuum-insulated bottle manufacturer confirmed. (2) Consumer air fryers — entirely Asia-manufactured. (3) Hydrocolloid acne patches — Korean manufacturing industry standard; no US manufacturer confirmed in 4 research cycles. (4) Snail secretion filtrate — no US commercial producer identified.</p>
+    <p><strong>Affiliate data:</strong> Rates sourced from brand affiliate program pages, ShareASale/Awin/FlexOffers/Impact Radius network directories, and influencer partnership pages. Rates are approximate and subject to change. Verify current terms before promotion.</p>
+    <p><strong>Price data:</strong> Amazon list prices observed at research time. Prices fluctuate; shown as approximate bands only.</p>
+    <p><strong>Sources:</strong> Approximately 85 sources checked across brand websites, SEC filings, facility announcements, press releases, third-party review sites (Examine.com, EWG, NSF International), affiliate network directories, and business news sources. Individual source citations available on request.</p>
+  </div>
+
+  <!-- Footer Nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span><a href="../August27_2026/">Previous: August 27, 2026 &rarr;</a></span>
+  </div>
+
+</div>
+</body>
+</html>

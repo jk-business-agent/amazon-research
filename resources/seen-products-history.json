@@ -1,8 +1,188 @@
 {
-  "last_updated": "2026-08-27",
-  "last_processed_sibling_report": "August27_2026",
+  "last_updated": "2026-09-03",
+  "last_processed_sibling_report": "September3_2026",
   "window_days": 14,
   "products": [
+    {
+      "key": "medicube-collagen-jelly-cream",
+      "name": "Medicube Collagen Jelly Cream",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "~$35-45",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "lmnt-electrolyte-drink-mix",
+      "name": "LMNT Electrolyte Drink Mix",
+      "category": "Grocery",
+      "amazon_price_band": "~$40-50 / 30-ct",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "living-proof-dry-shampoo",
+      "name": "Living Proof Perfect Hair Day Dry Shampoo",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "~$26-32",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "purina-fortiflora-probiotic",
+      "name": "Purina FortiFlora Dog Probiotic Supplement",
+      "category": "Pet Supplies",
+      "amazon_price_band": "~$30-50 / 30-ct",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "pure-encapsulations-magnesium-glycinate",
+      "name": "Pure Encapsulations Magnesium Glycinate",
+      "category": "Health & Household",
+      "amazon_price_band": "~$30-50 / 90ct",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "hero-cosmetics-mighty-patch",
+      "name": "Hero Cosmetics Mighty Patch Original",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "~$13-15 / 36-ct",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "dyson-v8-cordless-vacuum",
+      "name": "Dyson V8 Cordless Vacuum",
+      "category": "Home & Kitchen",
+      "amazon_price_band": "~$300-400",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "ninja-crispi-glass-air-fryer",
+      "name": "Ninja Crispi Portable Glass Air Fryer",
+      "category": "Home & Kitchen",
+      "amazon_price_band": "~$150-200",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"],
+      "alternatives_count": 0
+    },
+    {
+      "key": "battilo-fall-throw-blanket",
+      "name": "Battilo Fall Boho Throw Blanket",
+      "category": "Home & Kitchen",
+      "amazon_price_band": "~$30-45",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "medicube-zero-pore-pad",
+      "name": "Medicube Zero Pore Pad 2.0",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "~$35 / 70 pads",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-08-24", "2026-09-03"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "cosrx-snail-96-mucin",
+      "name": "COSRX Advanced Snail 96 Mucin Power Essence",
+      "category": "Beauty & Personal Care",
+      "amazon_price_band": "~$20-$25",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-08-24", "2026-08-27", "2026-09-03"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "nutricost-creatine-monohydrate",
+      "name": "Nutricost Creatine Monohydrate Micronized Powder",
+      "category": "Health & Household",
+      "amazon_price_band": "~$25-$35 / 500g",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-08-24", "2026-08-27", "2026-09-03"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "celsius-variety-pack-12ct",
+      "name": "CELSIUS Assorted Flavors Variety Pack (12-ct)",
+      "category": "Grocery",
+      "amazon_price_band": "~$25-$30",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-08-24", "2026-09-03"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "core-power-fairlife-protein-shake",
+      "name": "Core Power Fairlife Elite 42g Protein Shake",
+      "category": "Grocery",
+      "amazon_price_band": "~$30-$40 / 12-pack",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-08-24", "2026-08-27", "2026-09-03"],
+      "alternatives_count": 1
+    },
+    {
+      "key": "inaba-churu-cat-treats",
+      "name": "INABA Churu Lickable Cat Treats",
+      "category": "Pet Supplies",
+      "amazon_price_band": "~$20-$30 / 50-pack",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-08-24", "2026-08-27", "2026-09-03"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "jansport-classic-backpack",
+      "name": "JanSport Classic Backpack",
+      "category": "Office Products",
+      "amazon_price_band": "~$35-$50",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-08-24", "2026-08-27", "2026-09-03"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "owala-freesip-water-bottle",
+      "name": "Owala FreeSip Insulated Water Bottle",
+      "category": "Sports & Outdoors",
+      "amazon_price_band": "~$35-$50",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-08-24", "2026-08-27", "2026-09-03"],
+      "alternatives_count": 2
+    },
+    {
+      "key": "hanes-ecosmart-fleece-hoodie",
+      "name": "Hanes EcoSmart Fleece Hoodie",
+      "category": "Apparel",
+      "amazon_price_band": "~$20-$30",
+      "first_seen": "2026-08-24",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-08-24", "2026-08-27", "2026-09-03"],
+      "alternatives_count": 2
+    },
     {
       "key": "create-creatine-gummies",
       "name": "Create Creatine Gummies",
@@ -34,26 +214,6 @@
       "alternatives_count": 2
     },
     {
-      "key": "celsius-variety-pack-12ct",
-      "name": "CELSIUS Assorted Flavors Variety Pack (12-ct)",
-      "category": "Grocery",
-      "amazon_price_band": "~$25-$30",
-      "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-24"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "core-power-fairlife-protein-shake",
-      "name": "Core Power Fairlife Elite 42g Protein Shake",
-      "category": "Grocery",
-      "amazon_price_band": "~$30-$40 / 12-pack",
-      "first_seen": "2026-08-24",
-      "last_seen": "2026-08-27",
-      "seen_dates": ["2026-08-24", "2026-08-27"],
-      "alternatives_count": 2
-    },
-    {
       "key": "cosrx-pdrn-eye-patch",
       "name": "COSRX 5 PDRN Collagen Vitalizing Hydrogel Eye Patch",
       "category": "Beauty & Personal Care",
@@ -64,26 +224,6 @@
       "alternatives_count": 1
     },
     {
-      "key": "medicube-zero-pore-pad",
-      "name": "Medicube Zero Pore Pad 2.0",
-      "category": "Beauty & Personal Care",
-      "amazon_price_band": "~$35 / 70 pads",
-      "first_seen": "2026-08-24",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-24"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "cosrx-snail-96-mucin",
-      "name": "COSRX Advanced Snail 96 Mucin Power Essence",
-      "category": "Beauty & Personal Care",
-      "amazon_price_band": "~$20-$25",
-      "first_seen": "2026-08-24",
-      "last_seen": "2026-08-27",
-      "seen_dates": ["2026-08-24", "2026-08-27"],
-      "alternatives_count": 2
-    },
-    {
       "key": "purina-pro-plan-sensitive",
       "name": "Purina Pro Plan Sensitive Skin & Stomach Dry Dog Food",
       "category": "Pet Supplies",
@@ -91,26 +231,6 @@
       "first_seen": "2026-08-24",
       "last_seen": "2026-08-24",
       "seen_dates": ["2026-08-24"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "inaba-churu-cat-treats",
-      "name": "INABA Churu Lickable Cat Treats",
-      "category": "Pet Supplies",
-      "amazon_price_band": "~$20-$30 / 50-pack",
-      "first_seen": "2026-08-24",
-      "last_seen": "2026-08-27",
-      "seen_dates": ["2026-08-24", "2026-08-27"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "nutricost-creatine-monohydrate",
-      "name": "Nutricost Creatine Monohydrate Micronized Powder",
-      "category": "Health & Household",
-      "amazon_price_band": "~$25-$35 / 500g",
-      "first_seen": "2026-08-24",
-      "last_seen": "2026-08-27",
-      "seen_dates": ["2026-08-24", "2026-08-27"],
       "alternatives_count": 2
     },
     {
@@ -138,36 +258,6 @@
       "name": "Shoe Stretch Spray (FOOTMATTERS)",
       "category": "Apparel",
       "amazon_price_band": "~$8-$15",
-      "first_seen": "2026-08-24",
-      "last_seen": "2026-08-27",
-      "seen_dates": ["2026-08-24", "2026-08-27"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "jansport-classic-backpack",
-      "name": "JanSport Classic Backpack",
-      "category": "Office Products",
-      "amazon_price_band": "~$35-$50",
-      "first_seen": "2026-08-24",
-      "last_seen": "2026-08-27",
-      "seen_dates": ["2026-08-24", "2026-08-27"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "owala-freesip-water-bottle",
-      "name": "Owala FreeSip Insulated Water Bottle",
-      "category": "Sports & Outdoors",
-      "amazon_price_band": "~$35-$50",
-      "first_seen": "2026-08-24",
-      "last_seen": "2026-08-27",
-      "seen_dates": ["2026-08-24", "2026-08-27"],
-      "alternatives_count": 2
-    },
-    {
-      "key": "hanes-ecosmart-fleece-hoodie",
-      "name": "Hanes EcoSmart Fleece Hoodie",
-      "category": "Apparel",
-      "amazon_price_band": "~$20-$30",
       "first_seen": "2026-08-24",
       "last_seen": "2026-08-27",
       "seen_dates": ["2026-08-24", "2026-08-27"],
