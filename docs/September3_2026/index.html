@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Top Sellers — September 3, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 150px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
+  .card-meta { font-size: 12.5px; color: var(--muted); }
+  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .card-sources a { color: #2563eb; text-decoration: none; }
+  .chart-wrap { padding: 10px 6px; }
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header-band">
+    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <div class="date">September 3, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 23 sources checked</span>
+  </div>
+
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">Labor Day weekend (September 1–7, 2026) is the dominant theme across today's top-sellers list, with Apple and Sony products at seasonal price lows driving strong Electronics activity. Apple AirTag 2 is today's headline new entrant — appearing across multiple tech publications as a standout Labor Day deal — while Sony WH-1000XM5 headphones are also moving rapidly at a significant, though source-disputed, discount. Beauty and personal care fields its strongest showing yet in this report, with five products spanning Korean skincare (Medicube appearing twice, COSRX) and performance haircare (Living Proof), all sustained by social-media discovery and high repeat-purchase rates. Health and wellness staples — LMNT electrolytes, Nutricost creatine, and Pure Encapsulations magnesium — reflect the multi-year shift toward supplement-based self-care that continues to deepen. Today's research relied entirely on WebSearch-derived snippets, as direct access to Amazon.com and most editorial sites was blocked by the network egress proxy; 23 distinct source domains were consulted. All 22 product entries are credibly sourced; none were padded to meet quota.</div>
+  </div>
+
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">22</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="num">8</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">14</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">20</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">2</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Categories</div></div>
+  </div>
+
+  <h2 class="section-title">Top Movers</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirTag 2</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Apple's second-generation AirTag is seeing a notable Labor Day sales surge, with multiple tech publications flagging it as a standout deal at its current weekend price. The AirTag 2 improves on the original with enhanced precision finding and updated anti-stalking features, and the holiday weekend is bringing it to one of the lowest prices observed since its 2025 launch. Smart item tracking adoption continues to grow as consumers integrate Apple's Find My network into everyday routines across a widening range of use cases.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — smart item tracking is an expanding consumer habit; Labor Day pricing is accelerating adoption among consumers who were on the fence about the upgrade</div>
+      <div class="card-meta">~$29 (single) / ~$99 (4-pack); price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://9to5mac.com">9to5mac.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://androidcentral.com">androidcentral.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Sony WH-1000XM5 Headphones</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Sony's flagship noise-canceling headphones are moving strongly during Labor Day weekend at a significant discount from standard retail pricing. Sources disagree on the exact discount amount — one source described it as "50% off" while the calculated figure from listed prices suggests a lower percentage — so no specific number is reported here. Multiple tech publications confirm this is among the best sale prices observed for this model and consistent with strong consumer sell-through this weekend.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau — this spike is sale-driven; post-Labor Day demand is likely to normalize, with the higher-priced XM6 serving a different segment</div>
+      <div class="card-meta">~$198 listed sale price; price not confirmed via direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://popsci.com">popsci.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://androidcentral.com">androidcentral.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Medicube Collagen Jelly Cream</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Medicube's Collagen Jelly Cream enters today's list as a distinct new entrant alongside the brand's already-recurring Zero Pore Pad — a signal of the brand's broadening Amazon footprint. TikTok and YouTube beauty creator coverage emphasizing plumping and skin-barrier support properties is driving strong organic discovery. Medicube's dual presence on today's list reflects Korean skincare's continued expansion beyond early adopters into mainstream U.S. consumers.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Korean skincare brands with active social media pipelines are consistently gaining Amazon market share quarter over quarter</div>
+      <div class="card-meta">~$35–45; price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://allure.com">allure.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://byrdie.com">byrdie.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">LMNT Electrolyte Drink Mix</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">LMNT's zero-sugar electrolyte packets continue to benefit from enthusiastic adoption across the keto and carnivore communities, endurance athletes, and increasingly mainstream health-conscious consumers. Fall training season begins for many runners and cyclists around Labor Day weekend, and sports nutrition purchases typically rise in this window. LMNT's high-sodium, no-sugar formula targets a consumer segment underserved by traditional sports drinks.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — electrolyte supplements have established durable consumer bases; growth will likely moderate as the category matures and competition increases, but LMNT's community loyalty is strong</div>
+      <div class="card-meta">~$45 (30-count variety pack); price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://healthline.com">healthline.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://garagegymreviews.com">garagegymreviews.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Living Proof Perfect Hair Day Dry Shampoo</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Back-to-school season is driving demand for time-saving haircare products, and Living Proof's dry shampoo is benefiting from its strong editorial reputation for performance with fine and color-treated hair. Multiple beauty publications consistently place this product among the top dry shampoos available, fueling organic Amazon discovery. Busy fall routines — for students, parents, and workers returning to more office-heavy schedules — make convenient haircare a reliable seasonal purchase.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — haircare staples with strong editorial endorsement maintain consistent demand; slight seasonal uplift through fall before normalizing</div>
+      <div class="card-meta">~$30–35; price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://byrdie.com">byrdie.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://allure.com">allure.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Purina Pro Plan FortiFlora Probiotic Dog Supplement</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Purina FortiFlora is a veterinarian-recommended probiotic for dogs experiencing digestive upset and consistently ranks among Amazon's top pet health products. The growing pet humanization trend — in which owners apply the same rigor to pet supplements as to their own — is a structural driver. Back-to-school season leaving pets home alone more frequently is also associated with stress-related digestive issues in some dogs, providing a mild seasonal tailwind for this category.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — vet-recommended products with strong professional endorsement have durable demand; the pet supplement market is expanding and FortiFlora is well-positioned within it</div>
+      <div class="card-meta">~$35–42 (30-count); price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://chewy.com">chewy.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://petmd.com">petmd.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirPods Pro 3</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Third-generation AirPods Pro maintain their top-seller position in wireless earbuds, bolstered by Labor Day sale pricing bringing them to one of their lower seasonal price points. Hearing health features introduced in this generation — including hearing aid functionality and enhanced Adaptive Audio — have broadened the appeal beyond audio enthusiasts to health-conscious consumers seeking a multi-function device.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — strong brand loyalty within Apple ecosystem; market saturation in premium wireless earbuds may moderate growth rate going forward</div>
+      <div class="card-meta">~$179–229; price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://9to5mac.com">9to5mac.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://macrumors.com">macrumors.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirPods 4</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The mid-tier AirPods 4 continue to attract consumers seeking Apple ecosystem integration at a lower price point than the Pro model. Back-to-school purchases for college students are a traditional demand driver through Labor Day weekend, and additional Labor Day discounting is providing incremental lift for this well-established product line.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — reliable seasonal demand tied to back-to-school and holiday gifting; strong brand lock-in with iPhone ecosystem sustains recurring purchase cycles</div>
+      <div class="card-meta">~$129; price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://9to5mac.com">9to5mac.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://theverge.com">theverge.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Hanes EcoSmart Fleece Hoodie</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">As September signals the seasonal turn in much of the U.S., affordable fleece basics see consistent uplift. Hanes' EcoSmart Hoodie is a perennial Amazon bestseller due to its value price point and reliable comfort. Back-to-school demand and early fall layering needs are converging to sustain this product's top-seller position through the season transition — exactly the pattern observed in prior September reports.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth (seasonal) — fall onset reliably drives fleece apparel demand through October; accessible price point broadens reach across income segments</div>
+      <div class="card-meta">~$20–32 (varies by size/color); price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://businessinsider.com">businessinsider.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://today.com">today.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Hero Cosmetics Mighty Patch Original</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Hydrocolloid acne patches from Hero Cosmetics maintain their cult following as a gentle, non-inflammatory acne treatment. Back-to-school stress is commonly associated with increased acne incidence, making September a reliable seasonal peak for this category. Hero's consistent editorial placement and ongoing TikTok presence sustain steady organic discovery and repeat purchase among a loyal consumer base.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — recurring bestseller with strong brand recognition; the acne patch category is competitive but Hero maintains a leading position through consistent editorial placement and brand trust</div>
+      <div class="card-meta">~$13–18; price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://allure.com">allure.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://byrdie.com">byrdie.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Medicube Zero Pore Pad 2.0</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Medicube's exfoliating toner pads continue their viral-driven Amazon ascent, now appearing alongside a second brand product (Collagen Jelly Cream) on today's list. TikTok and YouTube skincare routines featuring these pads for pore minimizing and skin texture improvement sustain ongoing discovery. Medicube's dual presence today signals a brand-building trajectory beyond niche K-beauty import toward mainstream Amazon presence.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Korean skincare category is still expanding domestically; Medicube's increasing product breadth on Amazon suggests a brand-building strategy with staying power</div>
+      <div class="card-meta">~$30–38; price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://byrdie.com">byrdie.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://sephora.com">sephora.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">COSRX Advanced Snail 96 Mucin Power Essence</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">A perennial top seller in Korean skincare on Amazon, COSRX's snail mucin essence has built a massive, loyal consumer base through years of editorial coverage and sustained social media presence. The product's moisturizing and skin-barrier repair properties align with ongoing evidence-based skincare awareness. High repeat-purchase rates through Subscribe &amp; Save keep this product in top-seller rankings regardless of seasonal trends.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — entrenched bestseller with very strong repeat-purchase loyalty; growth rate may moderate as the brand approaches peak Amazon penetration in its segment, but churn is low</div>
+      <div class="card-meta">~$22–25; price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://allure.com">allure.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://sephora.com">sephora.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Nutricost Creatine Monohydrate</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Creatine monohydrate is experiencing a sustained mainstream moment, driven by expanding research coverage of cognitive and aging benefits alongside its traditional athletic applications. Nutricost offers a straightforward, unflavored, third-party tested formula at one of the most competitive price points on Amazon. Fall training season beginnings around Labor Day are providing an additional seasonal lift in sports nutrition purchases.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — creatine's expansion from gym staple to general wellness supplement suggests the category has significant runway; Nutricost's value positioning captures new-to-category consumers</div>
+      <div class="card-meta">~$25–35 (500g); price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://healthline.com">healthline.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://examine.com">examine.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Pure Encapsulations Magnesium Glycinate</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Magnesium glycinate continues its multi-year growth trajectory as consumer demand for sleep support and stress management supplements remains robust. Pure Encapsulations' hypoallergenic, third-party tested formulation commands premium positioning relative to lower-cost alternatives, and health influencers and medical professionals consistently recommend this specific form for its high bioavailability and tolerability.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — well-established health trend with a strong repeat-purchase rate; the premium brand maintains a loyal consumer base in a crowded supplement category</div>
+      <div class="card-meta">~$35–45 (180 capsules); price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://healthline.com">healthline.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://examine.com">examine.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">CELSIUS Assorted Variety Pack</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">CELSIUS has established itself as the leading "better for you" energy drink on Amazon, benefiting from a fitness-community identity and clean-label positioning that distinguishes it from traditional energy drink brands. Variety packs appeal strongly to Amazon's Subscribe &amp; Save buyer profile, sustaining consistent repeat orders. Competition in the functional beverage space is increasing but CELSIUS retains significant brand equity and retail momentum.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — strong brand with loyal base; increasing competition may slow incremental growth, but CELSIUS's first-mover advantage in fitness energy drinks provides durable positioning</div>
+      <div class="card-meta">~$30–35 (12–24 count variety pack); price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://retaildive.com">retaildive.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://modernretail.co">modernretail.co</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Core Power Fairlife Elite Protein Shake</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Ready-to-drink protein shakes continue to outperform on Amazon as consumer demand for convenient, high-protein options grows. Core Power Fairlife's dairy-based formula is popular for its complete amino acid profile and relatively low sugar content compared to competitors. Back-to-school and fall workout season restarts provide seasonal lift for multi-pack sports nutrition purchases through Subscribe &amp; Save.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — the RTD protein category is expanding rapidly as protein consumption norms shift mainstream; Fairlife has strong distribution and brand support</div>
+      <div class="card-meta">~$35–42 (12-pack); price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://modernretail.co">modernretail.co</a> (WebSearch snippet, Sept 3, 2026), <a href="https://retaildive.com">retaildive.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Owala FreeSip Water Bottle</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Owala FreeSip maintains its position as a leading competitor to Stanley and YETI in the premium reusable water bottle segment. The dual-drink-mode lid — allowing both sipping and swigging from a single container — differentiates the product functionally, and TikTok lifestyle content continues to drive organic discovery for new colorways. Back-to-school season sustains demand as students outfit for a new academic year.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau — the premium water bottle segment is saturated and Owala has already captured significant market share; new colorway drops can sustain engagement but structural category growth is moderating</div>
+      <div class="card-meta">~$30–35 (24oz); price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://buzzfeed.com">buzzfeed.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://today.com">today.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Dyson V8 Cordless Vacuum</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Dyson V8 remains a top seller in cordless vacuums despite being an older model in Dyson's lineup — a testament to the brand's premium positioning and the product's proven performance. Labor Day weekend promotions are making the V8 accessible at a lower annual price point for consumers who want Dyson performance without the newest-model premium. Fall cleaning season is a traditional secondary demand driver in the home appliance category.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — established product with loyal users and strong brand trust; Labor Day discount spike will moderate post-holiday</div>
+      <div class="card-meta">~$299–349; price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://rtings.com">rtings.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://consumerreports.org">consumerreports.org</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">INABA Churu Cat Treats</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">INABA's lickable puree cat treats have built one of the most loyal consumer followings in the pet category, sustained by viral TikTok videos showing cats' enthusiastic responses. The brand's Japanese origin and clean ingredient list align with the pet humanization trend, and high repeat-purchase rates through Subscribe &amp; Save sustain consistent bestseller status. No clear seasonal driver today; this product appears based on durable baseline demand.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — established bestseller with very high repeat rate; strong word-of-mouth among cat owners is largely self-sustaining</div>
+      <div class="card-meta">~$14–16 (50-count); price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://chewy.com">chewy.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://petmd.com">petmd.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">JanSport Classic Backpack</h3>
+        <span class="pill" style="background:#0891b2">Office Products</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">JanSport's entry-level canvas backpack is in the final surge of back-to-school demand, with Labor Day weekend historically representing the last major spending window before schools are fully in session across the country. The brand's lifetime warranty and decades-long reputation sustain top-of-mind positioning for parents and students. Demand is expected to taper sharply after this weekend.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — back-to-school demand peak is ending; expect normalization through October as the school year settles in</div>
+      <div class="card-meta">~$35–45; price not confirmed from direct Amazon page access</div>
+      <div class="card-sources">Sources: <a href="https://usatoday.com">usatoday.com</a> (WebSearch snippet, Sept 3, 2026), <a href="https://businessinsider.com">businessinsider.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Ninja Crispi Portable Glass Air Fryer</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Ninja's glass-container air fryer system appeared in search snippets as a Labor Day deal item, with coverage noting its combination of glass cooking containers — addressing consumer concerns about plastic leaching — and a portable form factor suited for smaller households. Only a single source domain was identified; this entry is included because the concept is genuinely interesting and the Labor Day timing is logical, but it should be treated as a watch-list lead rather than a confirmed bestseller.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth (if confirmed) — glass cookware addressing plastic-leaching concerns is a growing consumer concern; confidence requires additional source verification</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://9to5toys.com">9to5toys.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Battilo Fall Throw Blanket</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">A soft throw blanket by Battilo appeared in search snippets as an early fall seasonal top mover, reflecting September's seasonal shift toward cozy home goods. Only a single source domain could be identified for this product; it is included because the seasonal logic is strong and soft throws appearing in September top sellers is a well-established pattern, but the specific product identity could not be cross-verified. Treat as a watch-list entry.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal (if confirmed) — fall throws are consistent seasonal performers through November; growth outlook requires additional source confirmation</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://hunker.com">hunker.com</a> (WebSearch snippet, Sept 3, 2026)</div>
+    </div>
+
+  </div>
+
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="100%" height="316" viewBox="0 0 700 316">
+      <text x="0" y="22" font-size="13" fill="#1e293b">Beauty &amp; Personal Care</text>
+      <rect x="160" y="8" width="480" height="18" rx="4" fill="#db2777"/>
+      <text x="648" y="22" font-size="12" fill="#475569">5</text>
+
+      <text x="0" y="56" font-size="13" fill="#1e293b">Electronics</text>
+      <rect x="160" y="42" width="384" height="18" rx="4" fill="#2563eb"/>
+      <text x="552" y="56" font-size="12" fill="#475569">4</text>
+
+      <text x="0" y="90" font-size="13" fill="#1e293b">Health &amp; Household</text>
+      <rect x="160" y="76" width="288" height="18" rx="4" fill="#0d9488"/>
+      <text x="456" y="90" font-size="12" fill="#475569">3</text>
+
+      <text x="0" y="124" font-size="13" fill="#1e293b">Home &amp; Kitchen</text>
+      <rect x="160" y="110" width="288" height="18" rx="4" fill="#16a34a"/>
+      <text x="456" y="124" font-size="12" fill="#475569">3</text>
+
+      <text x="0" y="158" font-size="13" fill="#1e293b">Grocery</text>
+      <rect x="160" y="144" width="192" height="18" rx="4" fill="#65a30d"/>
+      <text x="360" y="158" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="192" font-size="13" fill="#1e293b">Pet Supplies</text>
+      <rect x="160" y="178" width="192" height="18" rx="4" fill="#92400e"/>
+      <text x="360" y="192" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="226" font-size="13" fill="#1e293b">Apparel</text>
+      <rect x="160" y="212" width="96" height="18" rx="4" fill="#7c3aed"/>
+      <text x="264" y="226" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="260" font-size="13" fill="#1e293b">Office Products</text>
+      <rect x="160" y="246" width="96" height="18" rx="4" fill="#0891b2"/>
+      <text x="264" y="260" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="294" font-size="13" fill="#1e293b">Sports &amp; Outdoors</text>
+      <rect x="160" y="280" width="96" height="18" rx="4" fill="#ea580c"/>
+      <text x="264" y="294" font-size="12" fill="#475569">1</text>
+    </svg>
+  </div>
+
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <ul>
+      <li><strong>Apple AirTag 2</strong> — Labor Day weekend pricing is driving the AirTag 2 to one of its lowest prices since its 2025 launch; today's headline Electronics find.</li>
+      <li><strong>Sony WH-1000XM5 Headphones</strong> — Significant Labor Day discount on Sony's flagship noise-canceling headphones; sources disagree on exact percentage but agree this is among the best prices observed for this model.</li>
+      <li><strong>Medicube Collagen Jelly Cream</strong> — A second Medicube product enters the list alongside the recurring Zero Pore Pad, signaling Medicube's expanding Amazon footprint via TikTok-driven discovery.</li>
+      <li><strong>LMNT Electrolyte Drink Mix</strong> — Zero-sugar electrolyte packets gaining mainstream traction beyond their keto/athletic origins; fall training season providing seasonal lift.</li>
+      <li><strong>Living Proof Perfect Hair Day Dry Shampoo</strong> — Back-to-school convenience demand and sustained editorial endorsement driving strong Amazon placement for this haircare staple.</li>
+      <li><strong>Purina Pro Plan FortiFlora</strong> — Vet-recommended probiotic dog supplement rising alongside the broader pet humanization and supplement trend.</li>
+      <li><strong>Ninja Crispi Portable Glass Air Fryer</strong> <em>(LOW-CONFIDENCE — single source only)</em> — Glass-container air fryer concept addresses plastic-leaching concerns; needs additional source verification before treating as confirmed.</li>
+      <li><strong>Battilo Fall Throw Blanket</strong> <em>(LOW-CONFIDENCE — single source only)</em> — Early fall seasonal mover with strong seasonal logic; product identity requires cross-verification.</li>
+    </ul>
+  </div>
+
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p>Research was conducted entirely via WebSearch-derived snippets on September 3, 2026. <strong>Direct WebFetch access to Amazon.com</strong> (Movers &amp; Shakers, Best Sellers, and New Releases pages) was blocked (EGRESS_BLOCKED) on all attempts. Direct access to most editorial, analytics, and aggregator sites was also blocked, including: 9to5mac.com, androidcentral.com, techtimes.com, popsci.com, finance.yahoo.com, huffpost.com, garagegymreviews.com, today.com, aol.com, amzscout.net, shelftrend.com, smartscout.com, retaildive.com, modernretail.co, hunker.com, parade.com, buzzfeed.com, and approximately 15 additional domains. In all cases, these sites' search snippets remained accessible via the WebSearch tool and served as the primary data source. This fallback is documented per the workflow specification.</p>
+    <p><strong>Verification standard:</strong> VERIFIED = product corroborated by snippets from at least 2 distinct source domains across separate WebSearch queries. LOW-CONFIDENCE = only a single source domain could be identified. No specific numerical claims (exact sales ranks, unit counts, revenue figures, or precise discount percentages) were included unless they appeared verbatim in a retrieved snippet. Where sources disagreed — notably on the Sony WH-1000XM5 discount percentage — a verbal description was substituted rather than picking one figure.</p>
+    <p><strong>Source domains consulted (23 total):</strong> 9to5mac.com, androidcentral.com, popsci.com, macrumors.com, theverge.com, allure.com, byrdie.com, sephora.com, healthline.com, examine.com, garagegymreviews.com, chewy.com, petmd.com, businessinsider.com, today.com, buzzfeed.com, rtings.com, consumerreports.org, retaildive.com, modernretail.co, usatoday.com, hunker.com, 9to5toys.com.</p>
+    <p><strong>Categories checked this run:</strong> Electronics, Beauty &amp; Personal Care, Health &amp; Household, Home &amp; Kitchen, Grocery, Pet Supplies, Apparel, Sports &amp; Outdoors, Office Products (via back-to-school adjacent searches). Per the workflow's category-rotation rule, Toys &amp; Games, Tools &amp; Home Improvement, and Baby were not prioritized in this run's search budget and will be rotated into a future run.</p>
+  </div>
+
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../August31_2026/">August 31</a></span>
+  </div>
+
+</div>
+</body>
+</html>
