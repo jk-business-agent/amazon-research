@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-31",
+  "last_updated": "2026-09-03",
   "window_days": 14,
   "products": [
     {
@@ -7,24 +7,24 @@
       "name": "Apple AirPods Pro 3",
       "category": "Electronics",
       "first_seen": "2026-06-17",
-      "last_seen": "2026-08-31",
-      "seen_dates": ["2026-06-17", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-13", "2026-07-16", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-24", "2026-08-31"]
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-06-17", "2026-06-29", "2026-07-02", "2026-07-06", "2026-07-13", "2026-07-16", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-24", "2026-08-31", "2026-09-03"]
     },
     {
       "key": "hero-cosmetics-mighty-patch",
       "name": "Hero Cosmetics Mighty Patch",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-06-22",
-      "last_seen": "2026-08-31",
-      "seen_dates": ["2026-06-22", "2026-07-02", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-13", "2026-08-31"]
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-06-22", "2026-07-02", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-13", "2026-08-31", "2026-09-03"]
     },
     {
       "key": "jansport-classic-backpack",
       "name": "JanSport Classic Backpack",
       "category": "Office Products",
       "first_seen": "2026-07-06",
-      "last_seen": "2026-08-31",
-      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31"]
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-07-06", "2026-07-09", "2026-07-13", "2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03"]
     },
     {
       "key": "mead-composition-books",
@@ -39,8 +39,8 @@
       "name": "INABA Churu Lickable Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-08-27",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-27"]
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-27", "2026-09-03"]
     },
     {
       "key": "purina-pro-plan-sensitive-skin-dry-dog-food",
@@ -55,24 +55,24 @@
       "name": "Owala FreeSip Insulated Water Bottle",
       "category": "Sports & Outdoors",
       "first_seen": "2026-07-16",
-      "last_seen": "2026-08-31",
-      "seen_dates": ["2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31"]
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03"]
     },
     {
       "key": "celsius-assorted-variety-pack",
       "name": "CELSIUS Assorted Flavors Variety Pack (12-ct)",
       "category": "Grocery",
       "first_seen": "2026-07-20",
-      "last_seen": "2026-08-31",
-      "seen_dates": ["2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-31"]
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-31", "2026-09-03"]
     },
     {
       "key": "medicube-zero-pore-pad-2-0",
       "name": "Medicube Zero Pore Pad 2.0",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-07-30",
-      "last_seen": "2026-08-31",
-      "seen_dates": ["2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-31"]
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-31", "2026-09-03"]
     },
     {
       "key": "crayola-colored-pencils-36ct",
@@ -87,40 +87,24 @@
       "name": "Core Power Fairlife Elite 42g Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-08-06",
-      "last_seen": "2026-08-31",
-      "seen_dates": ["2026-08-06", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31"]
-    },
-    {
-      "key": "bentgo-chill-kids-bento-box",
-      "name": "Bentgo Chill Kids Bento Box",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-08-06",
-      "last_seen": "2026-08-17",
-      "seen_dates": ["2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17"]
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-08-06", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03"]
     },
     {
       "key": "cosrx-advanced-snail-96-mucin-power-essence",
       "name": "COSRX Advanced Snail 96 Mucin Power Essence",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-31",
-      "seen_dates": ["2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31"]
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03"]
     },
     {
       "key": "hanes-ecosmart-fleece-hoodie",
       "name": "Hanes EcoSmart Fleece Hoodie",
       "category": "Apparel",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-08-27",
-      "seen_dates": ["2026-08-10", "2026-08-20", "2026-08-24", "2026-08-27"]
-    },
-    {
-      "key": "biodance-bio-collagen-real-deep-mask",
-      "name": "Biodance Bio-Collagen Real Deep Mask (4-Pack)",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-08-13",
-      "last_seen": "2026-08-17",
-      "seen_dates": ["2026-08-13", "2026-08-17"]
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-08-10", "2026-08-20", "2026-08-24", "2026-08-27", "2026-09-03"]
     },
     {
       "key": "levoit-air-purifier-core-300",
@@ -135,88 +119,24 @@
       "name": "Apple AirPods 4",
       "category": "Electronics",
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-24",
-      "seen_dates": ["2026-08-17", "2026-08-20", "2026-08-24"]
-    },
-    {
-      "key": "apple-watch-series-11",
-      "name": "Apple Watch Series 11",
-      "category": "Electronics",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
-      "seen_dates": ["2026-08-17"]
-    },
-    {
-      "key": "sony-wh-1000xm6-headphones",
-      "name": "Sony WH-1000XM6 Headphones",
-      "category": "Electronics",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
-      "seen_dates": ["2026-08-17"]
-    },
-    {
-      "key": "bissell-little-green-portable-carpet-cleaner",
-      "name": "BISSELL Little Green Portable Carpet Cleaner",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
-      "seen_dates": ["2026-08-17"]
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-08-17", "2026-08-20", "2026-08-24", "2026-09-03"]
     },
     {
       "key": "nutricost-creatine-monohydrate",
       "name": "Nutricost Creatine Monohydrate Micronized Powder",
       "category": "Health & Household",
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-31",
-      "seen_dates": ["2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31"]
-    },
-    {
-      "key": "ninja-creami-scoop-swirl",
-      "name": "Ninja CREAMi Scoop & Swirl 13-in-1 (NC701)",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
-      "seen_dates": ["2026-08-17"]
-    },
-    {
-      "key": "stanley-quencher-tumbler",
-      "name": "Stanley Quencher H2.0 FlowState Tumbler",
-      "category": "Sports & Outdoors",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
-      "seen_dates": ["2026-08-17"]
-    },
-    {
-      "key": "nintendo-switch-2",
-      "name": "Nintendo Switch 2 Console & Accessories",
-      "category": "Electronics",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
-      "seen_dates": ["2026-08-17"]
-    },
-    {
-      "key": "ray-ban-meta-wayfarer-smart-glasses",
-      "name": "Ray-Ban Meta Wayfarer Smart Glasses (Gen 2)",
-      "category": "Electronics",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
-      "seen_dates": ["2026-08-17"]
-    },
-    {
-      "key": "crz-yoga-butterluxe-leggings",
-      "name": "CRZ YOGA Butterluxe Leggings",
-      "category": "Apparel",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-08-17",
-      "seen_dates": ["2026-08-17"]
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03"]
     },
     {
       "key": "pure-encapsulations-magnesium-glycinate",
       "name": "Pure Encapsulations Magnesium Glycinate",
       "category": "Health & Household",
       "first_seen": "2026-08-17",
-      "last_seen": "2026-08-31",
-      "seen_dates": ["2026-08-17", "2026-08-31"]
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-08-17", "2026-08-31", "2026-09-03"]
     },
     {
       "key": "therabody-theraface-mask-glo",
@@ -359,8 +279,8 @@
       "name": "Dyson V8 Cordless Vacuum",
       "category": "Home & Kitchen",
       "first_seen": "2026-08-31",
-      "last_seen": "2026-08-31",
-      "seen_dates": ["2026-08-31"]
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-08-31", "2026-09-03"]
     },
     {
       "key": "ninja-foodi-dualzone-air-fryer",
@@ -369,6 +289,70 @@
       "first_seen": "2026-08-31",
       "last_seen": "2026-08-31",
       "seen_dates": ["2026-08-31"]
+    },
+    {
+      "key": "apple-airtag-2",
+      "name": "Apple AirTag 2 (4-Pack)",
+      "category": "Electronics",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"]
+    },
+    {
+      "key": "sony-wh-1000xm5-headphones",
+      "name": "Sony WH-1000XM5 Wireless Headphones",
+      "category": "Electronics",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"]
+    },
+    {
+      "key": "medicube-collagen-jelly-cream",
+      "name": "Medicube Collagen Jelly Cream",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"]
+    },
+    {
+      "key": "lmnt-electrolyte-drink-mix",
+      "name": "LMNT Zero-Sugar Electrolyte Drink Mix",
+      "category": "Health & Household",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"]
+    },
+    {
+      "key": "living-proof-perfect-hair-day-dry-shampoo",
+      "name": "Living Proof Perfect Hair Day Dry Shampoo",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"]
+    },
+    {
+      "key": "purina-fortiflora-probiotic-dog",
+      "name": "Purina Pro Plan FortiFlora Probiotic Powder for Dogs",
+      "category": "Pet Supplies",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"]
+    },
+    {
+      "key": "ninja-crispi-portable-glass-air-fryer",
+      "name": "Ninja Crispi Portable Glass Air Fryer",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"]
+    },
+    {
+      "key": "battilo-fall-throw-blanket",
+      "name": "Battilo Fall Throw Blanket",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-09-03",
+      "last_seen": "2026-09-03",
+      "seen_dates": ["2026-09-03"]
     }
   ]
 }
