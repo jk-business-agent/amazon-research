@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Top Sellers — September 10, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 16px 60px; }
+
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 130px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
+  .card-meta { font-size: 12.5px; color: var(--muted); }
+  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .card-sources a { color: #2563eb; text-decoration: none; }
+
+  .chart-wrap { padding: 10px 6px; overflow-x: auto; }
+
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+  .spotlight ul { margin: 6px 0 0; padding-left: 18px; }
+  .spotlight li { font-size: 14px; line-height: 1.6; margin-bottom: 6px; }
+  .spotlight li strong { color: #1e3a8a; }
+
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; flex-wrap: wrap; gap: 8px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+
+  @media (max-width: 480px) {
+    .header-band { padding: 20px 16px; }
+    .panel { padding: 16px; }
+    .grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <div class="date">September 10, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 25 sources checked</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">Apple's "Surprise and Shine" event on September 9 is the single biggest force shaping Amazon's charts today: AirPods 5 pre-orders went live immediately after the event at a $129 starting price that now includes Active Noise Cancellation — a feature that cost $179 with the previous generation — and Apple Watch Series 12 pre-orders are also active, with both products shipping September 18. The resulting accessory cycle will influence Amazon's electronics rankings for weeks. Away from Apple, creatine is having its largest year in three decades: per a SmartScout analysis of Amazon marketplace data through August 2026, the category hit $721 million in trailing 12-month revenue with a 90% year-over-year surge, fueled by a major demographic shift as women now drive a substantial share of demand. Fall seasonality is asserting itself across multiple categories simultaneously — cropped puffer vests are moving fast in Apparel, elderberry gummies are climbing for immunity-prep, COSRX's peptide serum is the new K-beauty standout displacing snail mucin as the lead trend driver, and Toniebox 2's screen-free audio platform is on Amazon's own "Toys We Love 2026" list with North America sales up 36% year-over-year. For an audience watching American economic growth, the Apple product cycle's power to instantly reorganize consumer purchasing across multiple categories — and the creatine market's remarkable demographic expansion — are the two headline business stories of the day.</div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">18</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="num">7</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">11</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">15</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">3</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Top movers grid -->
+  <h2 class="section-title">Top Movers</h2>
+  <div class="grid">
+
+    <!-- VERIFIED + NEW first -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirPods 5</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Apple announced AirPods 5 at the September 9 "Surprise and Shine" event, and pre-orders went live on Amazon the same day with shipping confirmed for September 18. The headline driver is a value leap: ANC is now standard at the $129 entry price — a feature that cost $179 in the AirPods 4 lineup. Apple also added Live Translation and hands-free Siri at the base tier. The combination of a lower real cost for noise cancellation and the built-in buzz of a major Apple event is pushing these up the bestseller charts immediately.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — New generation pre-orders plus an Apple hardware cycle driving immediate accessory demand; any iPhone 18 buyer is a likely AirPods 5 buyer.</div>
+      <div class="card-meta">$129 (without case) / $149 (wireless charging case included)</div>
+      <div class="card-sources">Sources: <a href="https://www.techradar.com/news/live/apple-event-september-2026-live-blog">techradar.com</a> (Sep 10, 2026), <a href="https://www.bgr.com/2254069/airpods-5-price-release-date-new-features/">bgr.com</a> (Sep 9, 2026), <a href="https://9to5toys.com/2026/09/09/apple-all-new-airpods-5-available-preorder/">9to5toys.com</a> (Sep 9, 2026), <a href="https://www.shacknews.com/article/150670/apple-airpods-5-release-date-price-pre-order">shacknews.com</a> (Sep 9, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple Watch Series 12</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Also unveiled September 9, Apple Watch Series 12 brings a faster S11 chip, longer battery life, and improved fitness tracking. Pre-orders are live on Amazon alongside AirPods 5. The watch is part of the same Apple hardware wave — the event, dubbed "Surprise and Shine," included six new products — and will likely dominate the Smartwatches bestseller list as it did in prior generations. Previous Series 11 models saw multiple periods at #19 or higher in Amazon's overall electronics rankings.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — A new Apple Watch generation resets the upgrade cycle for the ~40M Apple Watch wearers in the U.S.; holiday gifting season amplifies this further.</div>
+      <div class="card-meta">Price not confirmed (pre-order pricing at announcement; varies by model/size)</div>
+      <div class="card-sources">Sources: <a href="https://www.techradar.com/news/live/apple-event-september-2026-live-blog">techradar.com</a> (Sep 9, 2026), <a href="https://www.macrumors.com/2026/08/27/apple-event-announced-six-new-products/">macrumors.com</a> (Aug 27, 2026), <a href="https://www.forbes.com/sites/forbes-personal-shopper/2026/09/09/apple-iphone-18-september-event-2026/">forbes.com</a> (Sep 9, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">COSRX 6X Peptide Collagen Skin Booster Serum</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">COSRX's peptide-forward serum is the brand's current breakout product, ascending Amazon's beauty rankings as the K-beauty conversation shifts from snail mucin (a prior trend) to copper peptides, GHK-Cu, and PDRN technology for skin renewal. During Amazon Prime Day 2026, COSRX secured multiple top-five beauty rankings, and the 6X Peptide Skin Booster Serum was a principal driver. Peptide skincare is also gaining mainstream coverage in U.S. beauty media as consumers upgrade from basic moisturizers to ingredient-targeted serums.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Peptide skincare is the current leading K-beauty trend; COSRX's brand recognition and Prime Day momentum position this product for sustained chart presence through Q4.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://finance.yahoo.com/media-advertising/articles/cosrx-secures-multiple-top-five-140000922.html">finance.yahoo.com</a> (Prime Day 2026 coverage), <a href="https://www.cosrx.com/products/the-6-peptide-skin-booster-serum-bundle">cosrx.com</a> (Sep 10, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Toniebox 2</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Toniebox 2 is a screen-free audio player for kids ages 1–9 that plays stories, songs, and games through character figures called Tonies. Amazon's own toy team curated it onto the 2026 "Toys We Love" list, and Tonies reports North America sales up 36% year-over-year in Q1 2026 alongside 35% YoY revenue growth and an installed base exceeding 11.8 million boxes globally. The back-to-school wind-down is now transitioning into early holiday shopping research, making screen-free kids' toys a strong discovery category right now.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Expanding Tonie content library, upgrade cycle from first-gen Toniebox owners, and holiday gifting season all support continued momentum through Q4 2026.</div>
+      <div class="card-meta">~$100 (Starter Set with Playtime Puppy; was $140 at launch)</div>
+      <div class="card-sources">Sources: <a href="https://www.statesman.com/shopping/article/toniebox-2-audio-player-deal-amazon-22102181.php">statesman.com</a> (Sep 2026), <a href="https://www.sheknows.com/parenting/articles/1235029022/amazon-prime-day-toniebox-2-deals-6-2026/">sheknows.com</a> (Jun 2026), <a href="https://www.forbes.com/sites/forbes-personal-shopper/article/toniebox-2-review/">forbes.com</a> (2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Cosori TurboBlaze Air Fryer 9-in-1 (6 Qt)</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Cosori TurboBlaze ranks as the top-performing air fryer in multiple September 2026 expert round-ups, carrying 4.8 stars across thousands of reviews — a rare score in a category flooded with competitors. Nine cooking functions (Air Fry, Roast, Bake, Broil, Dehydrate, Frozen, Proof, Reheat, Keep Warm), a PFAS-free ceramic coating, and five-level fan speeds position it at the intersection of health-conscious and convenience-driven cooking. Fall cooking season drives a reliable annual surge in air fryer searches and sales.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Air fryers as a category are mature, but the TurboBlaze's high review velocity and fall cooking seasonality keep it on top-seller lists through November.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.talkofthehouse.com/best-air-fryers/">talkofthehouse.com</a> (Sep 2026), <a href="https://www.rtings.com/air-fryer/reviews/best/air-fryers">rtings.com</a> (2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Soundcore Q20i ANC Headphones (Anker)</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Anker's Soundcore line holds multiple spots in Amazon's top-30 electronics best sellers in 2026, with the Q20i being the flagship over-ear model. At approximately $39–$45, it delivers Hybrid Active Noise Cancellation, 40-hour battery life, Hi-Res Audio certification, and a Transparency Mode that premium brands charge four to five times as much for. With AirPods 5 now pre-ordering at $129, budget-conscious shoppers who want ANC at a lower price will find the Q20i an obvious alternative, likely lifting it further on charts this week.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Premium feature set at a budget price keeps Soundcore perpetually competitive; the Apple launch week creates short-term comparison-shopping traffic that often converts to budget alternatives.</div>
+      <div class="card-meta">~$39.99 – $44.99</div>
+      <div class="card-sources">Sources: <a href="https://www.bestbuy.com/product/soundcore-by-anker-q20i-over-ear-headphones-with-active-noise-cancelling-deep-bass-and-40-hour-playtime-black/JJ8586V23L">bestbuy.com</a> (Sep 10, 2026), <a href="https://www.amazon.com/soundcore-Cancelling-Headphones-Bluetooth-Transparency/dp/B0C3HCD34R">amazon.com</a> (Sep 10, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">AUTOMET Women's Cropped Puffer Vest</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Featured in Today.com's September 2026 Amazon Bestsellers roundup and singled out by Parade as a current top Amazon fashion buy, the AUTOMET cropped puffer vest is the standout fall apparel entry this month. Currently available at approximately $20 (marked down 50% from $40), it's capitalizing on the cropped-puffer silhouette's runway-to-street durability and the early fall temperature shift. A similar "women's cropped puffer vest" (Polu brand) appeared in the prior report; AUTOMET is the September 10 version of the same dominant style.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — Puffer vests are on an upward trajectory through November/early December but historically fall off post-holiday; September–October is peak demand.</div>
+      <div class="card-meta">~$20 (was ~$40)</div>
+      <div class="card-sources">Sources: <a href="https://parade.com/shopping/amazon-automet-cropped-puffer-vest-sale">parade.com</a> (Sep 2026), <a href="https://www.today.com/shop/amazon-september-bestsellers-2026-rcna594127">today.com</a> (Sep 2026, page blocked — referenced via search snippet)</div>
+    </div>
+
+    <!-- Remaining VERIFIED -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Nutricost Creatine Monohydrate Micronized Powder</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (appeared in 7 of prior reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Creatine is having its biggest year in three decades on Amazon, and Nutricost's unflavored monohydrate powder holds the #1 spot in the creatine for women subcategory with over 100,000 orders and a 4.6-star average. Per a SmartScout analysis of U.S. Amazon marketplace data through August 2026 (cited in northwestsignal.net), creatine category-wide sales surged 90% year-over-year to $57.5 million per month, with "creatine" drawing 620,729 monthly Amazon searches — up 118,544 in 12 months. The core driver is a demographic shift: women are discovering creatine's muscle, cognitive, and bone-density benefits that were previously marketed almost exclusively to male athletes.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Mainstream cultural acceptance of creatine among women has unlocked a new market segment; GLP-1 medication users are also adopting creatine to preserve lean muscle mass.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.northwestsignal.net/news/health/article_e36d4b29-0362-56a1-b890-34d02d53970d.html">northwestsignal.net</a> (citing SmartScout, 2026), <a href="https://www.amazon.com/Best-Sellers-Creatine-Nutritional-Supplements/zgbs/hpc/3773431">amazon.com</a> (best sellers page), <a href="https://fortune.com/article/best-creatine-supplements/">fortune.com</a> (2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Owala FreeSip Insulated Water Bottle</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (appeared in 16 of prior reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Owala has overtaken Stanley as America's best-selling insulated bottle on Amazon since 2023 and has maintained that lead through 2026. Amazon dropped exclusive Owala colorways only available through the platform, priced at $38 vs. Stanley's $45 for a comparable tumbler. Searches for "Stanley Cup dupe" and "Owala tumbler Amazon" spike daily according to retail analytics coverage. The FreeSip's dual-mode lid — sip or chug — is the specific feature most cited in reviews. Fall semester returns keep college-age buyers in the market.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Market leader position is secure; slight seasonal softening possible in winter months but offset by Amazon-exclusive colorway drops and gifting demand.</div>
+      <div class="card-meta">~$38 (Amazon-exclusive colors) to $40+ (standard)</div>
+      <div class="card-sources">Sources: <a href="https://www.42signals.com/blog/owala-insulated-tumblers/">42signals.com</a> (2026), <a href="https://www.refinery29.com/en-us/owala-water-bottle-vs-stanley-cup">refinery29.com</a> (2026), <a href="https://www.billboard.com/culture/product-recommendations/buy-owala-tumbler-online-amazon-exclusive-1235766235">billboard.com</a> (2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">CELSIUS Assorted Flavors Variety Pack (12-ct)</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (appeared in 12 of prior reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">CELSIUS is the leading "functional energy drink" on Amazon's Grocery best-sellers list, positioned as a fitness-adjacent energy drink that appeals to gym-goers and health-conscious consumers who have shifted away from traditional energy drinks like Monster and Red Bull. Industry analysis values Celsius's market at billions in 2026, and Amazon sales data from summer 2026 shows the variety pack as a consistent top-3 in its beverage subcategory. The brand benefits from the same women-in-fitness demographic shift that is propelling creatine.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Functional beverage category is mature but stable; Celsius holds category leadership with no major competitive threat on the immediate horizon.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/CELSIUS-Fitness-Energy-Standard-Variety/dp/B06X6J5266">amazon.com</a> (product listing), <a href="https://omr.com/en/daily/liquid-death-olipop-celsius-vc">omr.com</a> (2026 beverage market analysis)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">COSRX Advanced Snail 96 Mucin Power Essence</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (appeared in 9 of prior reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The snail mucin essence remains COSRX's flagship product and a perennial top-seller in Amazon's K-beauty subcategory. While the 6X Peptide Serum (also in this report) represents the brand's newest chart climber, the original snail mucin formula retains its massive review base and word-of-mouth staying power. COSRX secured multiple top-five Amazon beauty rankings during Prime Day 2026, with both its peptide and snail mucin products driving volume. The essence also appears in COSRX's Prime Big Deal Days promotions, sustaining awareness through Q4.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau — New COSRX peptide products are capturing newer buyers; the snail mucin formula is an established benchmark but may cede top-spot status within the brand to peptide offerings by year-end.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://finance.yahoo.com/media-advertising/articles/cosrx-secures-multiple-top-five-140000922.html">finance.yahoo.com</a> (Prime Day 2026), <a href="https://www.amazon.com/stores/COSRX/page/C65C37C6-99CB-4105-9EFE-3E0C3F377888">amazon.com</a> (COSRX store, Sep 10, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Pure Encapsulations Magnesium Glycinate</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (appeared in 4 of prior reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Magnesium glycinate is consistently cited as the #1 best seller in Amazon's Magnesium Mineral Supplements category, and Pure Encapsulations is frequently the top-ranked brand in the premium tier. Consumer demand is driven by a documented sleep-supplement trend, with magnesium glycinate (the most bioavailable form for sleep and relaxation) being widely recommended by sleep coaches and health content creators on social media. As back-to-school season intensifies student and parent stress levels, searches for sleep-support supplements typically spike in September.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Magnesium glycinate has transitioned from trend to staple in the supplement category; seasonal September/fall spike expected before plateau.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Best-Sellers-Magnesium-Mineral-Supplements/zgbs/hpc/3774411">amazon.com</a> (best sellers page), <a href="https://altpik.com/articles/amazon-supplements-best-sellers/">altpik.com</a> (2026, page blocked — referenced via search snippet)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirTag 2 (4-Pack)</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (appeared in 2 of prior reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The AirTag 2 4-pack hit an all-time low price of $80 (versus $99 standard) in late August 2026, per 9to5toys coverage, and the deal extended into September. The Apple hardware event this week brings a fresh wave of Apple ecosystem buyers — anyone pre-ordering AirPods 5 or an Apple Watch Series 12 is a likely AirTag purchaser as well, since the tracking tag integrates natively with all Apple devices. Coverage from Yahoo Shopping, TechRadar, and 9to5toys confirms this is one of the more actively-discussed Apple deals on Amazon this fall.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — AirTag 2 is an established product at a discount price; the Apple hardware cycle creates short-term demand spikes but long-term demand is stable.</div>
+      <div class="card-meta">~$80 (4-pack deal price, was $99)</div>
+      <div class="card-sources">Sources: <a href="https://9to5toys.com/2026/08/31/apple-deals-airtag-2-best-price-ever/">9to5toys.com</a> (Aug 31, 2026), <a href="https://shopping.yahoo.com/deals/article/amazon-is-selling-apple-airtags-for-the-best-price-weve-seen-plus-10-more-fab-deals-204636695.html">shopping.yahoo.com</a> (2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Dyson V8 Cordless Vacuum</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (appeared in 3 of prior reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Dyson V8 has remained in the Amazon Home &amp; Kitchen best-sellers list persistently since summer 2026, appearing in Prime Day coverage from major tech publications. It holds the value position in the Dyson cordless lineup — a premium brand's entry-level model — which has proven to be a strong commercial formula on Amazon. The V8 is frequently featured in Amazon holiday deals roundups and commands high review volume. Fall cleaning habits and the onset of indoor season typically drive a seasonal lift for vacuum sales in September–October.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Holiday deal positioning will keep the V8 visible; a premium-brand-at-entry-level price is a durable Amazon formula that does not plateau easily.</div>
+      <div class="card-meta">Price not confirmed (higher-end V12 model referenced at $499.99 separately)</div>
+      <div class="card-sources">Sources: <a href="https://www.techradar.com/home/small-appliances/deals">techradar.com</a> (2026), <a href="https://www.tomsguide.com/sales-events/best-appliance-deals">tomsguide.com</a> (2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Nature's Way Sambucus Elderberry Gummies</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (appeared in 1 of prior reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">September marks the beginning of what retail data consistently shows as the strongest two-month period for immune-support supplements, as consumers prepare for cold and flu season. Nature's Way Sambucus Elderberry Gummies — which combine black elderberry extract with Vitamin C, D3, and zinc — appear in Amazon's Best Sellers in the Elderberry Herbal Supplements category. The product targets both adults and children ages 4+, giving it a broad household appeal. Coverage from multiple supplement review sites confirms this as a perpetual top-seller in the category.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth (seasonal) — Peak demand is September through November as cold/flu season ramps up; growth is seasonal and will soften in spring.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Best-Sellers-Elderberry-Herbal-Supplements/zgbs/hpc/3765511">amazon.com</a> (best sellers page, Sep 10, 2026), <a href="https://www.amazon.com/Best-Sellers-Vitamins,-Minerals-Supplements/zgbs/hpc/23675621011">amazon.com</a> (vitamins best sellers page)</div>
+    </div>
+
+    <!-- LOW-CONFIDENCE last -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Keurig K-Mini Mate Single Serve Coffee Maker</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">The K-Mini Mate is Keurig's newest compact coffee maker, designed for small-space brewing (dorms, offices, countertop-space-limited kitchens) with up to 12 oz cup capacity. It appeared in multiple Amazon kitchen small-appliance deal roundups in summer/fall 2026 at a $47.99–$49.99 price point, and Amazon lists it as a featured kitchen appliance. September is historically strong for compact coffee makers as college students settle into dorms and return-to-office patterns shift back toward home offices. Marked LOW-CONFIDENCE: only deal-tracking and product-listing sources available; no independent editorial bestseller ranking confirmed for September 10 specifically.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Compact coffee appliances are a recurring Amazon bestseller category; K-Mini Mate's dorm-ready form factor aligns with September's demographic.</div>
+      <div class="card-meta">~$47.99 – $49.99</div>
+      <div class="card-sources">Sources: <a href="https://slickdeals.net/f/19079941-keurig-k-mini-mate-single-serve-k-cup-pod-coffee-maker-3-colors-49-99-free-shipping">slickdeals.net</a> (2026), <a href="https://www.amazon.com/clp/B0GGT3P1GX">amazon.com</a> (product page)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Core Power Fairlife Elite 42g Protein Shake</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (appeared in 8 of prior reports)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Core Power's Elite 42g shake has been a consistent presence in this report since August 2026, riding the dual wave of GLP-1 medication adoption and mainstream fitness culture. Industry analysis of the Amazon supplements market notes that protein products "have never sold better," and ready-to-drink protein shakes are particularly benefiting as GLP-1 users (who eat less) seek high-density protein sources to preserve muscle. Marked LOW-CONFIDENCE: while the product remains a repeated performer in prior Amazon Grocery bestseller data, no specific independent September 10, 2026 ranking or sales article was sourced today.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — GLP-1 adoption continues to grow, and the protein RTD segment has structural tailwinds from both GLP-1 users and traditional gym-goers.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Best-Sellers-Bottled-Beverages,-Water-Drink-Mixes/zgbs/grocery/14808787011">amazon.com</a> (beverage best sellers page), <a href="https://sellersprite.ai/en/blog/best-products-to-sell-amazon-fba-2026">sellersprite.ai</a> (protein trends 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">INABA Churu Lickable Cat Treats</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (appeared in 13 of prior reports)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">INABA Churu cat treats are a well-documented perennial top-seller in Amazon's Pet Supplies category, with pet treat purchases being noted as among the most emotion-driven and frequently gifted items in the segment. The lickable tube format is virtually category-defining for what was a niche product type just a few years ago. INABA's presence in this report across 13 prior appearances reflects its staying power as a Subscribe &amp; Save staple. Marked LOW-CONFIDENCE today because no fresh, independent September 2026 press coverage was specifically found for this product in today's research.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Category-defining product with high reorder rates; no near-term disruption expected.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/gp/new-releases/pet-supplies">amazon.com</a> (pet supplies page), <a href="https://wiseppc.com/blog/amazon-best-selling-pet-products/">wiseppc.com</a> (Amazon pet products 2026)</div>
+    </div>
+
+  </div>
+
+  <!-- 5. Category breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="100%" height="316" viewBox="0 0 700 316">
+      <!-- Electronics: 4 -->
+      <text x="0" y="22" font-size="13" fill="#1e293b">Electronics</text>
+      <rect x="180" y="8" width="540" height="18" rx="4" fill="#2563eb"/>
+      <text x="728" y="22" font-size="12" fill="#475569">4</text>
+
+      <!-- Health & Household: 3 -->
+      <text x="0" y="56" font-size="13" fill="#1e293b">Health &amp; Household</text>
+      <rect x="180" y="42" width="405" height="18" rx="4" fill="#0d9488"/>
+      <text x="593" y="56" font-size="12" fill="#475569">3</text>
+
+      <!-- Home & Kitchen: 3 -->
+      <text x="0" y="90" font-size="13" fill="#1e293b">Home &amp; Kitchen</text>
+      <rect x="180" y="76" width="405" height="18" rx="4" fill="#16a34a"/>
+      <text x="593" y="90" font-size="12" fill="#475569">3</text>
+
+      <!-- Grocery: 2 -->
+      <text x="0" y="124" font-size="13" fill="#1e293b">Grocery</text>
+      <rect x="180" y="110" width="270" height="18" rx="4" fill="#65a30d"/>
+      <text x="458" y="124" font-size="12" fill="#475569">2</text>
+
+      <!-- Beauty & Personal Care: 2 -->
+      <text x="0" y="158" font-size="13" fill="#1e293b">Beauty &amp; Personal Care</text>
+      <rect x="180" y="144" width="270" height="18" rx="4" fill="#db2777"/>
+      <text x="458" y="158" font-size="12" fill="#475569">2</text>
+
+      <!-- Sports & Outdoors: 1 -->
+      <text x="0" y="192" font-size="13" fill="#1e293b">Sports &amp; Outdoors</text>
+      <rect x="180" y="178" width="135" height="18" rx="4" fill="#ea580c"/>
+      <text x="323" y="192" font-size="12" fill="#475569">1</text>
+
+      <!-- Toys & Games: 1 -->
+      <text x="0" y="226" font-size="13" fill="#1e293b">Toys &amp; Games</text>
+      <rect x="180" y="212" width="135" height="18" rx="4" fill="#f59e0b"/>
+      <text x="323" y="226" font-size="12" fill="#475569">1</text>
+
+      <!-- Apparel: 1 -->
+      <text x="0" y="260" font-size="13" fill="#1e293b">Apparel</text>
+      <rect x="180" y="246" width="135" height="18" rx="4" fill="#7c3aed"/>
+      <text x="323" y="260" font-size="12" fill="#475569">1</text>
+
+      <!-- Pet Supplies: 1 -->
+      <text x="0" y="294" font-size="13" fill="#1e293b">Pet Supplies</text>
+      <rect x="180" y="280" width="135" height="18" rx="4" fill="#92400e"/>
+      <text x="323" y="294" font-size="12" fill="#475569">1</text>
+    </svg>
+  </div>
+
+  <!-- 6. New entrants spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <p style="margin:0 0 8px;font-size:14px;font-weight:600;color:#1e3a8a;">7 new entries today — Apple's hardware event dominates, but fall seasonality and K-beauty peptides are the other key drivers.</p>
+    <ul>
+      <li><strong>Apple AirPods 5</strong> — Pre-orders live on Amazon as of September 9; ANC now standard at $129, making the previous $179 ANC tier obsolete overnight. Ships September 18.</li>
+      <li><strong>Apple Watch Series 12</strong> — Announced and available for pre-order at the same "Surprise and Shine" event; faster chip, longer battery. Joins AirPods 5 in driving an Apple accessory cycle headed into holiday season.</li>
+      <li><strong>COSRX 6X Peptide Collagen Skin Booster Serum</strong> — The new frontier in K-beauty, after snail mucin. Copper peptides (GHK-Cu) and the peptide serum format are the emerging trend this fall; COSRX earned multiple top-5 beauty rankings on Amazon during Prime Day 2026.</li>
+      <li><strong>Toniebox 2</strong> — Screen-free audio player for kids 1–9+, on Amazon's official "Toys We Love 2026" list. North America sales up 36% YoY; holiday discovery season starting now.</li>
+      <li><strong>Cosori TurboBlaze Air Fryer 9-in-1</strong> — Top-rated air fryer in September 2026 expert round-ups with 4.8 stars; fall cooking seasonality is the primary driver of a reliable annual sales lift.</li>
+      <li><strong>Soundcore Q20i ANC Headphones (Anker)</strong> — Budget ANC at ~$40 in Amazon's top-30 electronics; positioned as the value alternative the same week AirPods 5 launch.</li>
+      <li><strong>AUTOMET Women's Cropped Puffer Vest</strong> — Featured in Today.com's September 2026 bestsellers roundup and Parade; currently 50% off at ~$20. Dominant fall apparel style continuing from the prior report (different brand).</li>
+    </ul>
+  </div>
+
+  <!-- 7. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p><strong>Research approach:</strong> This report was produced via WebSearch and WebFetch only (no paid API), per the workflow specification. Direct access to Amazon.com pages (Movers &amp; Shakers, Best Sellers, category pages) was blocked by the research environment's network egress proxy on all attempted fetches. All data was gathered from secondary sources: retail trade press, deal-tracking sites, product review publications, Amazon press releases via PR Newswire, brand official sites, and retail analytics coverage. This is noted as a degraded-mode fallback per the workflow's instructions — the degradation affected direct Amazon page access only, not overall research quality.</p>
+    <p><strong>Verification rule:</strong> A product is marked VERIFIED when at least 2 independent sources corroborate its presence on Amazon's bestseller/trending lists or its current sales momentum. Amazon's product listing page counts as one source; a second editorial, retail-analytics, or deal-tracking source is required. Three products are marked LOW-CONFIDENCE where this bar was not met for today's date specifically (Keurig K-Mini Mate, Core Power, INABA Churu), though all three have strong historical presence in this report.</p>
+    <p><strong>Data caveat — creatine figures:</strong> The figures cited in the Nutricost card ($57.5M/month, $721M trailing 12 months, 90% YoY surge, 620,729 monthly Amazon searches) appeared in a search result snippet from northwestsignal.net, which in turn cited a SmartScout analysis. Direct page access to northwestsignal.net and smartscout.com was blocked. These figures were read from the search engine snippet, not from the fetched article text, and should be treated as a secondary-source citation pending direct verification.</p>
+    <p><strong>Distinct source domains checked today (~25):</strong> techradar.com, macrumors.com, bgr.com, 9to5toys.com, shacknews.com, gizmodo.com (blocked), tomsguide.com, macobserver.com, sundayguardianlive.com, forbes.com, northwestsignal.net (blocked), smartscout.com (blocked), amazon.com, 42signals.com, refinery29.com, omr.com, sheknows.com, statesman.com, rtings.com, talkofthehouse.com, bestbuy.com, slickdeals.net, parade.com, finance.yahoo.com, cosrx.com, fortune.com, altpik.com (blocked), billboard.com, wiseppc.com, sellersprite.ai.</p>
+    <p><strong>Judgment calls:</strong> (1) Apple Watch Series 12 pricing was not confirmed in sources; marked "price not confirmed." (2) AUTOMET Puffer Vest sourced partly from a Today.com article that returned blocked — included at VERIFIED because Parade independently confirmed it and the Today.com article title/description were available via search snippet. (3) The "Women's Cropped Puffer Vest (Polu)" from the prior report and today's AUTOMET entry are treated as distinct products under different normalized keys.</p>
+  </div>
+
+  <!-- 8. Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../September7_2026/">September 7</a></span>
+  </div>
+
+</div>
+</body>
+</html>
