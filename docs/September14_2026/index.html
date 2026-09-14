@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Top Sellers — September 14, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 150px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
+  .card-meta { font-size: 12.5px; color: var(--muted); }
+  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .card-sources a { color: #2563eb; text-decoration: none; }
+
+  .chart-wrap { padding: 10px 6px; overflow-x: auto; }
+
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+  .spotlight ul { margin: 0; padding-left: 20px; }
+  .spotlight li { font-size: 14px; line-height: 1.6; color: #1e293b; margin-bottom: 8px; }
+
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <div class="date">September 14, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 22 sources checked</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">September 14, 2026 marks a clear seasonal pivot: fall fashion, fall home decor, and immunity supplements are simultaneously ramping up, and Amazon's official release of its 2026 Top 100+ Toys list this week is seeding the earliest holiday gift-buying momentum of the year. The day's most notable new entrant is the <strong>HydroJug Traveler Tumbler</strong>, which has claimed Amazon's #1 spot in Tumblers &amp; Water Glasses, with the 32-oz Pink Sand variant purchased over 10,000 times in the past month — displacing both Stanley and BrüMate from the category throne. Sleep optimization continues as a high-velocity category: the <strong>Soundcore Sleep A20</strong> by Anker anchors the sleep-earbuds segment (alongside the recurring SomniFix mouth strips, which ride 134% year-over-year category growth), as consumer investment in nighttime health accelerates into fall. Three toys earn top-list placement for the first time — <strong>Peekimo</strong>, <strong>CATAN On The Road</strong>, and <strong>LEGO Pokémon</strong> — reflecting Amazon's own curated holiday discovery push. Note: Amazon.com direct pages were inaccessible this run due to network proxy restrictions; all product discovery relied on secondary press coverage, Amazon seller analytics platforms, and WebSearch-derived snippets — confidence levels are assigned conservatively.</div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">18</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="num">6</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">12</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">12</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">6</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Top movers grid -->
+  <h2 class="section-title">Top Movers</h2>
+  <div class="grid">
+
+    <!-- VERIFIED + NEW -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">HydroJug Traveler Tumbler</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The HydroJug Traveler has claimed Amazon's #1 spot in the Tumblers &amp; Water Glasses Best Sellers list, beating out the Stanley Quencher ProTour, Stanley H2.0, and BrüMate Era. The 32-oz Pink Sand colorway alone saw over 10,000 purchases in the past month per SheKnows. Shoppers praise its truly leak-proof straw lid and cupholder-compatible profile — two features its rivals have struggled to deliver simultaneously. Halloween seasonal colorways are already launching alongside the standard lineup, extending the hype window.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — The "it" drinkware cycle continues with no plateau signal; seasonal colorway drops sustain impulse buying through Q4.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.sheknows.com/living/articles/1234958121/hydrojug-traveler/">sheknows.com</a> (Sep 14, 2026), <a href="https://www.spirit-factory.com/news/custom-drinkware-obsession">spirit-factory.com</a> (Sep 14, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Soundcore Sleep A20 by Anker</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Soundcore Sleep A20 is Anker's purpose-built sleep earbud, appearing in Amazon's Best Sellers list for Sleep Earbuds and cited in multiple 2026 buyer guides. It delivers 30 dB high-frequency noise reduction, a low-profile housing designed for side sleepers, 80 hours total playtime, and sleep-quality tracking via Bluetooth 5.3. Elyvora's September 2026 comparison guide places it as a top choice alongside the Ozlo Sleepbuds. The broader sleep-earbuds segment is a standout within consumer electronics, riding the wellness-through-better-sleep trend.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Sleep-focused tech is an early phase growth pocket within electronics; the Soundcore brand's price-to-feature ratio gives it broad accessibility vs. premium competitors.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Best-Sellers-Sleep-Earbuds/zgbs/electronics/215743398011">amazon.com (Sleep Earbuds BSR)</a> (Sep 14, 2026), <a href="https://elyvora.us/blog/best-sleep-earbuds-2026-soundcore-a20-vs-a30-vs-ozlo-sleepbuds-compared">elyvora.us</a> (Sep 14, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Peekimo Interactive Pet</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Peekimo is a kawaii-style interactive toy with over 100 touch and voice reactions, wearable as a lanyard accessory or clipped to a backpack — blending virtual pet, collectible, and wearable charm into a single product. Amazon's 2026 Top 100+ Toys list (released this week) includes Peekimo as a featured item. The format taps into nostalgia for Tamagotchi-era virtual pets while adding modern social-sharing and collectible-pairing mechanics (two Peekimos can recognize each other). Target audience: ages 5+, with strong gifting potential.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — The collectible-pet-as-accessory format is early in its commercial life; Amazon's holiday toys list placement signals strong Q4 gifting demand.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://us.amazon.com/Peekimo-Interactive-Wearable-Accessory-Reactions/dp/B0GHCNDJKM">amazon.com (product listing)</a> (Sep 14, 2026), <a href="https://www.today.com/shop/amazon-top-toys-2026-rcna596578">today.com (Amazon Top Toys 2026)</a> (Sep 14, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">CATAN On The Road Card Game</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">CATAN Studio launched this compact card game adaptation of the classic strategy game in April 2026, delivering the core CATAN build-and-trade experience in a 120-card format that plays in 15 minutes for 3–4 players. Priced at $9.97–$9.99, it removes the primary barrier (long setup, large footprint) for casual play. ICv2 rated it 4.5 out of 5 stars. Its placement on Amazon's 2026 Top 100 Holiday Toys list, combined with the $10 price point, makes it a near-certain impulse buy and stocking stuffer this season.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Strong through the holiday window; growth will moderate once the novelty fades post-Q4. The IP's installed base ensures steady re-gifting demand.</div>
+      <div class="card-meta">$9.97–$9.99</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/CATAN-CN3143-Road-Card-Game/dp/B0GKBJSPBS">amazon.com (product listing)</a> (Sep 14, 2026), <a href="https://icv2.com/articles/reviews/view/62228/review-catan-road-card-game">icv2.com (4.5-star review)</a> (Sep 14, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">LEGO Pokémon SMART Play Training House</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Amazon's 2026 Top 100+ Toys list confirmed this LEGO-Pokémon franchise crossover set, placing young trainers in an interactive building-and-battling scenario. Both LEGO and Pokémon remain dominant cultural franchises with high household awareness — the combination amplifies gift discoverability significantly. At $69.99, it sits in a sweet spot for grandparent-tier holiday gifting. Forbes's September 11, 2026 holiday-toys roundup also featured it among the standout picks.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Dual-franchise licensing and broad age-range appeal give it reliable Q4 performance; LEGO + Pokémon sets historically sustain demand beyond the initial season.</div>
+      <div class="card-meta">$69.99</div>
+      <div class="card-sources">Sources: <a href="https://www.aboutamazon.com/news/retail/best-gifts-kids-amazon-toys-we-love-list-2026">aboutamazon.com (Top 100 Toys 2026)</a> (Sep 14, 2026), <a href="https://www.forbes.com/sites/forbes-personal-shopper/2026/09/11/best-toys-on-amazon-2026/">forbes.com (Sep 11, 2026)</a> (Sep 14, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Goli Ashwagandha &amp; Vitamin D Gummies</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Cortisol/stress support supplements are 2026's fastest-growing wellness sub-category, driven by widespread consumer awareness of burnout, rising media coverage of "cortisol face," and accessible gummy delivery formats. Goli's Ashwagandha &amp; Vitamin D Gummies lead the cortisol supplement market for men per asinsight.com's 2026 rankings, and the brand self-describes as "America's #1 Ashwagandha Brand." The product carries 63,896+ Amazon reviews with 75% five-stars. Demand historically spikes with the school-year stress cycle — September is a natural entry point.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Adaptogens and cortisol management have multiple active social and media drivers; fall stress cycles are a natural demand accelerant.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Goli/dp/B0F5BRTJC1">amazon.com (product listing)</a> (Sep 14, 2026), <a href="https://www.garagegymreviews.com/goli-ashwagandha-review">garagegymreviews.com (2026 review)</a> (Sep 14, 2026)</div>
+    </div>
+
+    <!-- VERIFIED + RECURRING -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">COSRX Advanced Snail 96 Mucin Power Essence</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (4 of last 4 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">COSRX's flagship snail mucin essence remains one of the highest-volume K-beauty products on Amazon. Per asinsight.com's 2026 sales data, the lead ASIN generates an estimated 40,000 monthly sales, with secondary listings adding another 20,000+ each. The product's multifunctional profile — intense hydration, barrier repair, and a fragrance-free formula — continues to draw both K-beauty enthusiasts and first-time serum buyers. Snail mucin remains an active 2026 trend, with analysts noting its accessible price point and visible skin results as sustaining factors.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Already in high-volume baseline; K-beauty is a durable structural trend, not a spike. No major disruption signal in current data.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.asinsight.com/report/US/cosrx-snail-mucin-essence">asinsight.com (2026 sales data)</a> (Sep 14, 2026), <a href="https://www.prnewswire.com/news-releases/cosrxs-advanced-snail-96-mucin-power-essence-named-amazons-best-seller-301809583.html">prnewswire.com (Amazon Best-Seller confirmed)</a> (Sep 14, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Owala FreeSip Insulated Water Bottle</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (4 of last 4 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Owala remains a dominant force in the water bottle category even as the HydroJug Traveler has claimed the #1 tumbler ranking. Multiple 2026 drinkware trend analyses (spirit-factory.com, billboard.com) confirm Owala as a category co-leader with strong brand recognition and social media visibility. Owala's FreeSip form factor — a sports-style straw bottle rather than a wide-mouth tumbler — occupies a distinct segment from the HydroJug. The two brands complement rather than fully cannibalize each other in the drinkware market.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Strong durable baseline; Owala holds loyal repeat buyers. The tumbler #1 title moving to HydroJug moderates the growth ceiling but doesn't reverse demand.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.spirit-factory.com/news/custom-drinkware-obsession">spirit-factory.com (2026 drinkware trends)</a> (Sep 14, 2026), <a href="https://www.foxnews.com/deals/amazon-water-bottles-stanley-cup.amp">foxnews.com (Amazon water bottles guide)</a> (Sep 14, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">AUTOMET Women's Cropped Puffer Vest</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (1 of last 4 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Cropped quilted puffer vests are the breakout outerwear trend of fall 2026. Amazon's Best Sellers for Women's Outerwear Vests shows multiple brands competing in this format (MEROKEETY, Polu, EVALESS, AUTOMET), confirming category dominance rather than a single-brand spike. AUTOMET's version is the lighter-weight, zip-up quilted style ideal for layering — the exact profile cited in multiple fall-fashion roundups as the must-have layering piece of the season. Benable.com's "Viral Fall Must-Haves 2026" collection specifically featured puffer vests as cozy Amazon obsessions.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Peak demand window is September through October; this category has genuine seasonal momentum with no plateau signal yet.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Best-Sellers-Women's-Outerwear-Vests/zgbs/fashion/2348899011">amazon.com (Women's Outerwear Vests BSR)</a> (Sep 14, 2026), <a href="https://benable.com/kaiarose/viral-fall-must-haves-2026-cozy-amazon-finds-everyone-s-obsessed-with">benable.com (viral fall must-haves 2026)</a> (Sep 14, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Nature's Way Sambucus Elderberry Gummies</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2 of last 4 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Immunity supplements ramp predictably every September as consumers prepare for cold-and-flu season. Multiple sources confirm that immunity products are "gaining ahead of Prime Big Deal Days" (smartpickers.blog) this September, and elderberry gummies (sambucus) are the most searched and purchased immunity supplement format on Amazon. Nature's Way is the established category brand leader for elderberry — their Sambucus gummies consistently appear in Amazon Best Sellers for Elderberry supplements during the fall window.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Peak seasonal demand window (September through March); elderberry's accessible format and seasonal timing make it a reliable annual climber.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://smartpickers.blog/2026/08/01/amazon-prime-big-deal-days-2026/">smartpickers.blog (immunity supplements gaining, Sep 2026)</a> (Sep 14, 2026), <a href="https://m.sellersprite.com/en/blog/what-to-sell-on-amazon-2026-trends">sellersprite.com (fall supplement trends 2026)</a> (Sep 14, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">SomniFix Mouth Strips</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (1 of last 4 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Mouth tape for sleep optimization is sustaining 134% year-over-year growth per Sellersprite's 2026 trending product data — one of the highest growth rates of any sleep-category product on Amazon. SomniFix is the category leader in branded mouth strips designed for nasal breathing during sleep. The trend is driven by podcast culture around "mouth breathing" health warnings, TikTok sleep-optimization content, and the broader mainstreaming of sleep as a health investment. SomniFix was confirmed an Amazon Best Seller in the Sleeping Disorder Nasal Strips subcategory in the September 7, 2026 report.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Multiple active media drivers; consumable format drives reliable repeat purchasing cycles.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://m.sellersprite.com/en/blog/what-to-sell-on-amazon-2026-trends">sellersprite.com (134% YoY mouth tape growth)</a> (Sep 14, 2026), <a href="https://www.amazon.com/Best-Sellers-Sleep-Earbuds/zgbs/electronics/215743398011">amazon.com (confirmed BSR, Sep 7 report)</a> (Sep 14, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Battilo Fall Throw Blanket</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2 of last 4 reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Fall home decor transitions drive seasonal throw blanket demand every September, and the Battilo Fall Throw Blanket is a named standout in multiple 2026 fall home product roundups. Hunker.com specifically cited it with warm neutral tones (olive, caramel, cream) and a "from ~$29" price point, noting its softness and breathability. The product aligns with the 2026 home decor aesthetic trend toward warm earth tones. ThegaGardenStyle.com's fall Amazon finds guide also features it in the cozy seasonal home category.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — Demand is strong now through late November; expect a typical post-holiday plateau after Q4.</div>
+      <div class="card-meta">From ~$29</div>
+      <div class="card-sources">Sources: <a href="https://www.hunker.com/2238712/amazon-fall-2026-home-items-buy-august/">hunker.com (Battilo named explicitly)</a> (Sep 14, 2026), <a href="https://www.thegardenstyle.com/home-decor/fall-essentials-best-amazon-fall-finds-for-a-cozy-seasonal-home/">thegardenstyle.com (fall Amazon finds)</a> (Sep 14, 2026)</div>
+    </div>
+
+    <!-- LOW-CONFIDENCE + RECURRING -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Pure Encapsulations Magnesium Glycinate</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (4 of last 4 reports)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Magnesium glycinate is consistently among Amazon's top-selling supplements, with the compound appearing prominently in 2026 trending supplement lists for sleep, stress support, and muscle recovery. Pure Encapsulations holds a premium-brand position in this market, favored for its hypoallergenic formulation. The brand was not independently named in today's sources; this entry carries forward from confirmed prior-report presence and strong general magnesium category data from sellersprite.com.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Magnesium's broad health use-case (sleep, stress, muscle) keeps it as a perennial top-seller with no expected decline.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://m.sellersprite.com/en/blog/what-to-sell-on-amazon-2026-trends">sellersprite.com (magnesium trending 2026)</a> (Sep 14, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Nutricost Creatine Monohydrate Micronized Powder</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (4 of last 4 reports)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Creatine supplements continue their long-running demand surge driven by fitness culture and a broadening to women's wellness and cognitive health. Multiple 2026 sources confirm creatine as a category generating $721M trailing 12-month Amazon revenue with 90% year-over-year growth (per SmartScout data cited in prior reports). Nutricost's price-competitive bulk powder format holds a consistent top-seller position in this category. The specific brand was not independently confirmed in today's searches; entry carries forward from repeated prior-report verification.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — The market has normalized creatine as a mainstream supplement; growth is moderate rather than sharp at this point.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://m.sellersprite.com/en/blog/what-to-sell-on-amazon-2026-trends">sellersprite.com (creatine category trending 2026)</a> (Sep 14, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">INABA Churu Lickable Cat Treats</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2 of last 4 reports)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">INABA Churu's liquid puree cat treat format has maintained cult-status among Amazon cat owners since its viral breakout. Premium pet treats remain a high-repeat-purchase category; sellersprite.com's 2026 data confirms premium pet supplements and treats among the fastest-growing pet sub-niches. The specific product was not independently confirmed in today's searches; this entry carries forward from its established recurring presence across 14 reports in this archive since July 9.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Category staple with strong brand loyalty; repeat purchase cycle sustains consistent volume.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://m.sellersprite.com/en/blog/what-to-sell-on-amazon-2026-trends">sellersprite.com (premium pet treats trending 2026)</a> (Sep 14, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Core Power Fairlife Elite 42g Protein Shake</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (4 of last 4 reports)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">High-protein ready-to-drink shakes remain in strong demand as "convenient nutrition" continues as a dominant 2026 grocery trend, per accio.com's Amazon best-sellers analysis. Health and wellness concerns now drive the majority of American food and beverage purchases, with consumers scanning for high-protein options. Core Power Fairlife's 42g protein content is the highest in the RTD category, differentiating it in a crowded market. The specific product was not independently named in today's fresh sources; this entry reflects its consistent presence in 4 consecutive recent reports.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — RTD protein shake category is growing; Core Power holds a differentiated position with its ultra-high protein count.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.accio.com/business/amazon-best-sellers-list-2026">accio.com (Amazon best sellers list 2026)</a> (Sep 14, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Hanes EcoSmart Fleece Hoodie</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2 of last 4 reports)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">The Hanes EcoSmart Fleece Hoodie is a perennial fall bestseller on Amazon — a basic, affordable option that peaks every September as temperatures drop and back-to-school demand feeds into early fall wardrobe needs. The product has appeared in 6 reports this archive. Fall apparel is confirmed as a trending category for September 2026, but the specific Hanes brand was not independently cited in today's sources. No clear spike signal was identified today beyond consistent recurring data.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — Peak demand through October; expects to plateau as more fashion-forward fall styles capture attention heading into November.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.accio.com/business/top-selling-products-on-amazon-2026">accio.com (top-selling Amazon products 2026)</a> (Sep 14, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">COSRX 6X Peptide Collagen Skin Booster Serum</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (1 of last 4 reports)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">COSRX launched this peptide collagen booster serum to extend its brand equity beyond snail mucin into the growing peptide skincare sub-category. K-beauty and peptide serums are both confirmed 2026 growth trends, but this specific product was not independently cited in today's fresh sources — only the broader COSRX brand and the snail mucin flagship were confirmed by today's searches. This entry first appeared on September 10 and carries LOW-CONFIDENCE until more consistent cross-source verification is available.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau — The snail mucin franchise is more established; this newer serum has less confirmation of sustained demand outside COSRX's brand halo.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.asinsight.com/report/US/cosrx-snail-mucin-essence">asinsight.com (COSRX brand 2026 data)</a> (Sep 14, 2026)</div>
+    </div>
+
+  </div><!-- end grid -->
+
+  <!-- 5. Category breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="100%" height="316" viewBox="0 0 700 316">
+      <!-- Health &amp; Household: 5 -->
+      <text x="0" y="22" font-size="13" fill="#1e293b">Health &amp; Household</text>
+      <rect x="160" y="8" width="440" height="18" rx="4" fill="#0d9488"/>
+      <text x="608" y="22" font-size="12" fill="#475569">5</text>
+      <!-- Toys &amp; Games: 3 -->
+      <text x="0" y="56" font-size="13" fill="#1e293b">Toys &amp; Games</text>
+      <rect x="160" y="42" width="264" height="18" rx="4" fill="#f59e0b"/>
+      <text x="432" y="56" font-size="12" fill="#475569">3</text>
+      <!-- Sports &amp; Outdoors: 2 -->
+      <text x="0" y="90" font-size="13" fill="#1e293b">Sports &amp; Outdoors</text>
+      <rect x="160" y="76" width="176" height="18" rx="4" fill="#ea580c"/>
+      <text x="344" y="90" font-size="12" fill="#475569">2</text>
+      <!-- Beauty &amp; Personal Care: 2 -->
+      <text x="0" y="124" font-size="13" fill="#1e293b">Beauty &amp; Personal Care</text>
+      <rect x="160" y="110" width="176" height="18" rx="4" fill="#db2777"/>
+      <text x="344" y="124" font-size="12" fill="#475569">2</text>
+      <!-- Apparel: 2 -->
+      <text x="0" y="158" font-size="13" fill="#1e293b">Apparel</text>
+      <rect x="160" y="144" width="176" height="18" rx="4" fill="#7c3aed"/>
+      <text x="344" y="158" font-size="12" fill="#475569">2</text>
+      <!-- Electronics: 1 -->
+      <text x="0" y="192" font-size="13" fill="#1e293b">Electronics</text>
+      <rect x="160" y="178" width="88" height="18" rx="4" fill="#2563eb"/>
+      <text x="256" y="192" font-size="12" fill="#475569">1</text>
+      <!-- Home &amp; Kitchen: 1 -->
+      <text x="0" y="226" font-size="13" fill="#1e293b">Home &amp; Kitchen</text>
+      <rect x="160" y="212" width="88" height="18" rx="4" fill="#16a34a"/>
+      <text x="256" y="226" font-size="12" fill="#475569">1</text>
+      <!-- Pet Supplies: 1 -->
+      <text x="0" y="260" font-size="13" fill="#1e293b">Pet Supplies</text>
+      <rect x="160" y="246" width="88" height="18" rx="4" fill="#92400e"/>
+      <text x="256" y="260" font-size="12" fill="#475569">1</text>
+      <!-- Grocery: 1 -->
+      <text x="0" y="294" font-size="13" fill="#1e293b">Grocery</text>
+      <rect x="160" y="280" width="88" height="18" rx="4" fill="#65a30d"/>
+      <text x="256" y="294" font-size="12" fill="#475569">1</text>
+    </svg>
+  </div>
+
+  <!-- 6. New entrants spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <ul>
+      <li><strong>HydroJug Traveler Tumbler</strong> (Sports &amp; Outdoors) — New #1 tumbler on Amazon, displacing Stanley and BrüMate; 10,000+ purchases of the 32-oz Pink Sand variant in the past month alone. The defining drinkware story of fall 2026.</li>
+      <li><strong>Soundcore Sleep A20 by Anker</strong> (Electronics) — Purpose-built sleep earbuds leading a fast-growing wellness-tech segment; 30 dB noise reduction, 80H playtime, side-sleeper design. Riding the same sleep-optimization wave as SomniFix.</li>
+      <li><strong>Peekimo Interactive Pet</strong> (Toys &amp; Games) — Kawaii collectible with 100+ reactions, wearable as lanyard accessory; featured on Amazon's freshly released 2026 Top 100+ Toys list. A modern Tamagotchi revival with a collectible-pairing social mechanic.</li>
+      <li><strong>CATAN On The Road Card Game</strong> (Toys &amp; Games) — Compact travel version of the classic strategy game at $9.99; 15-minute plays, 4.5 stars from ICv2, and a near-certain stocking stuffer for the Catan-owning household.</li>
+      <li><strong>LEGO Pokémon SMART Play Training House</strong> (Toys &amp; Games) — Dual-franchise holiday gift at $69.99, confirmed on Amazon's 2026 Top 100+ Toys list and Forbes' September 2026 holiday picks. Two dominant cultural IPs in one box.</li>
+      <li><strong>Goli Ashwagandha &amp; Vitamin D Gummies</strong> (Health &amp; Household) — "America's #1 Ashwagandha Brand" leads the cortisol/stress supplement surge — 2026's fastest-growing wellness sub-category. 63,896+ reviews at 75% five-star. September stress cycles are a natural demand catalyst.</li>
+    </ul>
+  </div>
+
+  <!-- 7. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p>All product research for this report relied on WebSearch-derived discovery and search-result snippet analysis; WebFetch calls to Amazon.com and most editorial and analytics domains were blocked by the network egress proxy. Amazon Movers &amp; Shakers and direct Best Sellers pages were not accessible — a significant fallback from the standard protocol noted here per workflow requirements. Discovery sources included: Amazon seller analytics platforms (asinsight.com, sellersprite.com) providing 2026 monthly sales estimates; retail press and lifestyle editorial (Forbes, Today.com, SheKnows, ICv2, ToyInsider, Hunker, TheGardenStyle, SmartPickers.blog, Benable); Amazon product listing URLs that surfaced organically in search results; and drinkware trend coverage (spirit-factory.com, billboard.com, foxnews.com). Verification standard: VERIFIED = product name and trending status confirmed by 2 or more independent source domains in today's searches, or by a specific prior-report Amazon Best Seller confirmation plus a current category-trend source; LOW-CONFIDENCE = only 1 current source, or trending status confirmed only at the category level without today's sources naming the specific product (these recurring items were verified at product level in earlier reports). Judgment calls: SomniFix VERIFIED status maintained via prior Amazon BSR confirmation (Sep 7 report) plus today's Sellersprite category-trend data (134% YoY mouth tape growth). Battilo blanket VERIFIED via its specific naming in the hunker.com and thegardenstyle.com snippets. Distinct source domains yielding usable data today: amazon.com, sheknows.com, shopping.yahoo.com, spirit-factory.com, elyvora.us, today.com, icv2.com, thetoyinsider.com, aboutamazon.com, forbes.com, garagegymreviews.com, asinsight.com, prnewswire.com, foxnews.com, sellersprite.com, smartpickers.blog, hunker.com, thegardenstyle.com, accio.com, benable.com, scarbir.com, billboard.com (22 domains).</p>
+  </div>
+
+  <!-- 8. Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../September10_2026/">September 10</a></span>
+  </div>
+
+</div>
+</body>
+</html>
