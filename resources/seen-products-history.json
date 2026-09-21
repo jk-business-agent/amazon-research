@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-17",
+  "last_updated": "2026-09-21",
   "window_days": 14,
   "products": [
     {
@@ -31,32 +31,24 @@
       "name": "INABA Churu Lickable Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-27", "2026-09-03", "2026-09-10", "2026-09-14", "2026-09-17"]
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-27", "2026-09-03", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21"]
     },
     {
       "key": "owala-freesip-water-bottle",
       "name": "Owala FreeSip Insulated Water Bottle",
       "category": "Sports & Outdoors",
       "first_seen": "2026-07-16",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17"]
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21"]
     },
     {
       "key": "celsius-assorted-variety-pack",
       "name": "CELSIUS Assorted Flavors Variety Pack (12-ct)",
       "category": "Grocery",
       "first_seen": "2026-07-20",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-17"]
-    },
-    {
-      "key": "medicube-zero-pore-pad-2-0",
-      "name": "Medicube Zero Pore Pad 2.0",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-07-30",
-      "last_seen": "2026-09-03",
-      "seen_dates": ["2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-31", "2026-09-03"]
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-17", "2026-09-21"]
     },
     {
       "key": "core-power-fairlife-elite-protein-shake",
@@ -71,40 +63,32 @@
       "name": "COSRX Advanced Snail 96 Mucin Power Essence",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17"]
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21"]
     },
     {
       "key": "hanes-ecosmart-fleece-hoodie",
       "name": "Hanes EcoSmart Fleece Hoodie",
       "category": "Apparel",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-08-10", "2026-08-20", "2026-08-24", "2026-08-27", "2026-09-03", "2026-09-07", "2026-09-14", "2026-09-17"]
-    },
-    {
-      "key": "apple-airpods-4",
-      "name": "Apple AirPods 4",
-      "category": "Electronics",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-09-03",
-      "seen_dates": ["2026-08-17", "2026-08-20", "2026-08-24", "2026-09-03"]
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-08-10", "2026-08-20", "2026-08-24", "2026-08-27", "2026-09-03", "2026-09-07", "2026-09-14", "2026-09-17", "2026-09-21"]
     },
     {
       "key": "nutricost-creatine-monohydrate",
       "name": "Nutricost Creatine Monohydrate Micronized Powder",
       "category": "Health & Household",
       "first_seen": "2026-08-17",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17"]
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21"]
     },
     {
       "key": "pure-encapsulations-magnesium-glycinate",
       "name": "Pure Encapsulations Magnesium Glycinate",
       "category": "Health & Household",
       "first_seen": "2026-08-17",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-08-17", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17"]
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-08-17", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21"]
     },
     {
       "key": "dyson-v8-cordless-vacuum",
@@ -121,54 +105,6 @@
       "first_seen": "2026-09-03",
       "last_seen": "2026-09-10",
       "seen_dates": ["2026-09-03", "2026-09-07", "2026-09-10"]
-    },
-    {
-      "key": "sony-wh-1000xm5-headphones",
-      "name": "Sony WH-1000XM5 Wireless Headphones",
-      "category": "Electronics",
-      "first_seen": "2026-09-03",
-      "last_seen": "2026-09-03",
-      "seen_dates": ["2026-09-03"]
-    },
-    {
-      "key": "medicube-collagen-jelly-cream",
-      "name": "Medicube Collagen Jelly Cream",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-09-03",
-      "last_seen": "2026-09-03",
-      "seen_dates": ["2026-09-03"]
-    },
-    {
-      "key": "lmnt-electrolyte-drink-mix",
-      "name": "LMNT Zero-Sugar Electrolyte Drink Mix",
-      "category": "Health & Household",
-      "first_seen": "2026-09-03",
-      "last_seen": "2026-09-03",
-      "seen_dates": ["2026-09-03"]
-    },
-    {
-      "key": "living-proof-perfect-hair-day-dry-shampoo",
-      "name": "Living Proof Perfect Hair Day Dry Shampoo",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-09-03",
-      "last_seen": "2026-09-03",
-      "seen_dates": ["2026-09-03"]
-    },
-    {
-      "key": "purina-fortiflora-probiotic-dog",
-      "name": "Purina Pro Plan FortiFlora Probiotic Powder for Dogs",
-      "category": "Pet Supplies",
-      "first_seen": "2026-09-03",
-      "last_seen": "2026-09-03",
-      "seen_dates": ["2026-09-03"]
-    },
-    {
-      "key": "ninja-crispi-portable-glass-air-fryer",
-      "name": "Ninja Crispi Portable Glass Air Fryer",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-09-03",
-      "last_seen": "2026-09-03",
-      "seen_dates": ["2026-09-03"]
     },
     {
       "key": "battilo-fall-throw-blanket",
@@ -199,8 +135,8 @@
       "name": "Nature's Way Sambucus Elderberry Gummies",
       "category": "Health & Household",
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17"]
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21"]
     },
     {
       "key": "blink-outdoor-4",
@@ -271,8 +207,8 @@
       "name": "AUTOMET Women's Cropped Puffer Vest",
       "category": "Apparel",
       "first_seen": "2026-09-10",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-09-10", "2026-09-14", "2026-09-17"]
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21"]
     },
     {
       "key": "keurig-k-mini-mate",
@@ -361,6 +297,78 @@
       "first_seen": "2026-09-17",
       "last_seen": "2026-09-17",
       "seen_dates": ["2026-09-17"]
+    },
+    {
+      "key": "amazon-fire-tv-stick-4k-max",
+      "name": "Amazon Fire TV Stick 4K Max",
+      "category": "Electronics",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-09-21"]
+    },
+    {
+      "key": "kindle-paperwhite",
+      "name": "Kindle Paperwhite (Latest Generation)",
+      "category": "Electronics",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-09-21"]
+    },
+    {
+      "key": "lego-jack-o-lantern-pickup-truck",
+      "name": "LEGO Jack-O'-Lantern Pickup Truck (Set 40822)",
+      "category": "Toys & Games",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-09-21"]
+    },
+    {
+      "key": "dewalt-20v-max-combo-kit",
+      "name": "DEWALT 20V MAX Drill/Impact Driver Combo Kit (DCK240C2)",
+      "category": "Tools & Home Improvement",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-09-21"]
+    },
+    {
+      "key": "ring-battery-doorbell-2k-plus",
+      "name": "Ring Battery Doorbell 2K Plus (Retinal, 2026)",
+      "category": "Electronics",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-09-21"]
+    },
+    {
+      "key": "shark-ai-ultra-robot-vacuum",
+      "name": "Shark AI Ultra 2-in-1 Robot Vacuum & Mop",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-09-21"]
+    },
+    {
+      "key": "quest-nutrition-protein-bars",
+      "name": "Quest Nutrition Protein Bars (Chocolate Chip Cookie Dough)",
+      "category": "Grocery",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-09-21"]
+    },
+    {
+      "key": "premier-protein-high-protein-shake",
+      "name": "Premier Protein 30g High Protein Shake",
+      "category": "Grocery",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-09-21"]
+    },
+    {
+      "key": "nanit-pro-smart-baby-monitor",
+      "name": "Nanit Pro Smart Baby Monitor",
+      "category": "Baby",
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-09-21",
+      "seen_dates": ["2026-09-21"]
     }
   ]
 }
