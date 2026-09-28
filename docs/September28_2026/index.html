@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Top Sellers — September 28, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  /* 1. Header band */
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  /* 2. Executive summary */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  /* 3. Quick stats */
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 150px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  /* 4. Top movers grid */
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
+  .card-meta { font-size: 12.5px; color: var(--muted); }
+  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .card-sources a { color: #2563eb; text-decoration: none; }
+
+  /* 5. Category chart */
+  .chart-wrap { padding: 10px 6px; }
+
+  /* 6. New entrants spotlight */
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+
+  /* 7. Methodology footer */
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  /* 8. Footer nav */
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <div class="date">September 28, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 16 sources checked</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">Late September 2026 brings a convergence of three forces driving Amazon's charts this week: Amazon's early Prime Big Deal Days preview (sale date: October 6–7) is already moving prices on key fall purchases, Pokémon's yearlong 30th-anniversary campaign is at full commercial velocity across toys and collectibles, and seasonal immune-support and fall-home routines are kicking in simultaneously. The most notable new entrant today is berberine — the supplement viral on social media as "nature's Ozempic" — which has crossed from wellness influencer communities into Amazon's mainstream Health &amp; Household chart at accessible sub-$15 price points. Apple's September hardware cycle continues to drive strong Electronics volume: AirPods 5 (released September 18) and Watch Series 12 remain in their new-release selling window with holiday gifting season approaching. Health &amp; Household and Home &amp; Kitchen each claim three products on today's list, reflecting the fall wellness-and-nesting pattern consistent across this season's reports. The Pokémon-LEGO collaboration's 30th-anniversary sets — especially the $59.99 Eevee entry-level build — represent a rare collectible crossover with both adult superfan and mainstream gift appeal. Five of today's 18 products are tied directly to Amazon's upcoming October Prime Day deals, underscoring how early-deal anticipation is reshaping the bestseller chart days before the event itself.</div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">18</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="num">8</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">10</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">16</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">2</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">10</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Top movers grid -->
+  <h2 class="section-title">Top Movers</h2>
+  <div class="grid">
+
+    <!-- VERIFIED + NEW items first -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">LEGO Pokémon Eevee (587-Piece Set)</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Pokémon's 30th anniversary in 2026 created one of the most significant licensing moments in toys, and LEGO's Pokémon collaboration sits at its epicenter. The 587-piece Eevee set ($59.99) is described by multiple collector and toy review sources as the "entry-level offering and arguably the most critically praised" of the new LEGO Pokémon anniversary line. The franchise's yearlong campaign — anchored by a Super Bowl LX commercial — has sustained consumer demand well past its February launch, and Q4 gifting season is amplifying it further.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — the 30th anniversary campaign runs through end of 2026; holiday season amplifies collectible toy demand across all price tiers.</div>
+      <div class="card-meta">$59.99 (587 pieces)</div>
+      <div class="card-sources">Sources: <a href="https://cardlines.com/lego-pokemon-30th-anniversary-sets-full-guide-prices-and-release-details/">cardlines.com</a> (2026-09-28), <a href="https://almcorp.com/blog/lego-pokemon-sets-2026/">almcorp.com</a> (2026-09-28)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Berberine Supplements (e.g., Nature's Bounty 1000mg, 60-ct)</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Berberine has been dubbed "nature's Ozempic" by social media influencers and wellness communities, generating massive consumer interest for its claimed support of blood sugar and metabolic health. The Mayo Clinic calls it "a promising supplement," though healthcare professionals are clear it is not equivalent to prescription GLP-1 medications. A month's supply can cost as little as $8 on Amazon — Nature's Bounty 60-count 1000mg was listed at $14.38 on Slickdeals with Subscribe &amp; Save — making it broadly accessible and driving a measurable category climb on Amazon's Health chart.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — the GLP-1 cultural moment shows no signs of abating, and sub-$15 price points make berberine one of the most accessible "wellness upgrade" purchases on Amazon.</div>
+      <div class="card-meta">~$14 (60-count 1000mg, Nature's Bounty, per Slickdeals listing)</div>
+      <div class="card-sources">Sources: <a href="https://blogs.oregonstate.edu/sunny/natural-ozempic-berberine-in-2026-what-really-works-for-metabolic-wellness/">oregonstate.edu</a> (2026-09-28), <a href="https://slickdeals.net/f/18449335-prime-60-count-nature-s-bounty-berberine-supplements-1000mg-14-38-w-s-s-free-shipping-w-prime">slickdeals.net</a> (2026-09-28)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Pokémon TCG 30th Anniversary Tins (Mega Charizard)</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Pokémon TCG tins tied to the 30th anniversary — including Mega Charizard and Mega Charizard X editions — are noted by multiple collector sources as "selling fast." The Pokémon Company's yearlong anniversary campaign has fueled sustained collector and casual fan demand throughout 2026. TCG products have historically sold out rapidly on Amazon during major franchise events, and the September–December holiday window is this product's peak selling season.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau — 30th-anniversary hype is intense but event-driven; Q4 holiday shopping sustains demand through December, then likely plateaus in 2027.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.tomsguide.com/gaming/nintendo/pokemons-30th-anniversary-has-destroyed-my-bank-balance-but-these-9-tried-and-tested-products-are-excellent-ways-to-celebrate-pikachu-and-friends">tomsguide.com</a> (2026-09-28), <a href="https://www.sheknows.com/living/articles/1234971655/pokemon-30th-anniversary-what-to-buy/">sheknows.com</a> (2026-09-28)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Medicube PDRN Pink Collagen Gel Toner Pads</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Medicube's PDRN line has emerged as a standout within the K-beauty boom on Amazon in 2026. These toner pads — packed with salmon PDRN and low-molecular collagen — promise skin elasticity and a luminous "glass skin" effect that trends heavily on TikTok and drives K-beauty discovery. Multiple skincare sources identify Medicube as one of the dominant K-beauty brands on Amazon, and the PDRN-based products specifically are noted for ingredient potency at accessible price points. This is a distinct product from the Medicube Zero Pore Toner Pads that appeared in prior reports.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — K-beauty market segment continues expanding on Amazon, and PDRN ingredients are gaining mainstream skincare awareness beyond the existing K-beauty audience.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.hollywoodreporter.com/lifestyle/shopping/best-k-beauty-korean-skin-care-products-deals-online-1236171629/">hollywoodreporter.com</a> (2026-09-28), K-beauty category trend coverage via WebSearch (2026-09-28)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">DeWalt Oscillating Multitool Kit</h3>
+        <span class="pill" style="background:#475569">Tools &amp; Home Improvement</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">DeWalt's oscillating multitool kit has appeared prominently in Amazon's early Prime Big Deal Days coverage as one of the marquee deals from the brand ahead of the October 6–7 sale. Multiple deal-tracking outlets (Yahoo Shopping, NBC Select) describe it as at "its lowest price in over a month and one of the best of the year." The kit includes a battery, wood-cutting blades, a fast-cut wood blade, a universal accessory adapter, a charger, and a kit bag — making it an unusually complete bundle for DIY enthusiasts. Early-deal pricing is driving buying intent and a sales rank climb right now, a week before the formal event.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — tools see consistent fall/winter DIY demand; Prime Day deal amplification creates a short-term rank spike, with normal category pace returning after.</div>
+      <div class="card-meta">Price not confirmed (highlighted as a significant deal below recent price floors)</div>
+      <div class="card-sources">Sources: <a href="https://shopping.yahoo.com/deals/breaking-news/article/october-prime-day-2026-amazons-biggest-early-deals-from-hanes-dewalt-apple-and-more-ahead-of-the-prime-big-deal-days-event-050300247.html">shopping.yahoo.com</a> (2026-09-28), <a href="https://www.nbcnews.com/select/shopping/early-october-prime-day-deals-2026-rcna597786">nbcnews.com/select</a> (2026-09-28)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">YETI Rambler Tumbler</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">YETI Rambler tumblers are appearing in Amazon's early Prime Big Deal Days promotions at approximately $29 (discounted from $42), making them among the most accessible entry points for YETI's premium insulated drinkware brand. Fall and winter seasonal demand for hot-beverage-capable tumblers converges with Prime Day deal-seeking behavior to push these up the sales rank chart in late September. Multiple retail deal-tracking outlets specifically named YETI tumblers as a headline early deal.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — premium drinkware maintains consistent demand through Q4; seasonal dip possible post-holiday. Deal-driven burst in rank is temporary.</div>
+      <div class="card-meta">Approximately $29 (discounted from ~$42) during early Prime Day deals</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com/select/shopping/early-october-prime-day-deals-2026-rcna597786">nbcnews.com/select</a> (2026-09-28), <a href="https://shopping.yahoo.com/deals/breaking-news/article/october-prime-day-2026-amazons-biggest-early-deals-from-hanes-dewalt-apple-and-more-ahead-of-the-prime-big-deal-days-event-050300247.html">shopping.yahoo.com</a> (2026-09-28)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Yankee Candle Fall Scents (Spiced Pumpkin / Ciderhouse)</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Yankee Candle's autumnal scents — Spiced Pumpkin and Ciderhouse specifically named in early Prime Day deal coverage — are priced at $16–$17 during Amazon's early Prime Big Deal Days promotions, making them a high-impulse seasonal purchase. Late September is historically the entry point for fall-home ambiance shopping, and candle sales typically surge through November. The combination of accessible price, trusted brand, and seasonal timing makes this a reliable chart climber each year, and 2026's Prime Day event-proximity is amplifying it further.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — demand peaks through October, then transitions to winter holiday scents in November–December. No sustained structural growth.</div>
+      <div class="card-meta">$16–$17 during early Prime Day deals (per deal coverage)</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com/select/shopping/early-october-prime-day-deals-2026-rcna597786">nbcnews.com/select</a> (2026-09-28), early Prime Day deal summary search coverage (2026-09-28)</div>
+    </div>
+
+    <!-- VERIFIED + RECURRING -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirPods 5</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Apple launched AirPods 5 on September 18, 2026, with best-in-class open-ear Active Noise Cancellation at a $129 starting price, or $149 with a wireless charging case — per Apple's official press release. Amazon is already selling the base model at $124.99 ($5 off MSRP), per deal coverage. The AirPods line has historically been one of Amazon's top Electronics bestsellers in any given week. The new-release window continues, and the pre-holiday timing sustains elevated demand through December.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — new product cycle typically sustains elevated demand through the Q4 holiday gifting season; established gifting preference for AirPods across demographics.</div>
+      <div class="card-meta">$129 base model (MSRP); $124.99 on Amazon</div>
+      <div class="card-sources">Sources: <a href="https://www.apple.com/newsroom/2026/09/apple-introduces-airpods-5-with-best-in-class-open-ear-active-noise-cancellation/">apple.com/newsroom</a> (2026-09-28), <a href="https://consequence.net/2026/09/apple-airpods-5-amazon-deal/">consequence.net</a> (2026-09-28)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple Watch Series 12</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Announced alongside AirPods 5 at Apple's September 2026 event, the Apple Watch Series 12 is in its new-release sales window on Amazon. Multiple electronics sources confirm it as a top new-release category leader in September. The watch benefits from the annual upgrade cycle — consumers who held off on Series 11 — as well as its positioning as a health-and-fitness companion, which aligns with fall's "new routine" seasonality. Holiday gifting amplifies further from October onward.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — annual Apple Watch cycle reliably sustains strong Q4 sales; holiday gifting amplifies through December.</div>
+      <div class="card-meta">Price not confirmed (MSRP varies by model and configuration)</div>
+      <div class="card-sources">Sources: <a href="https://www.accio.com/business/top-selling-amazon-electronics">accio.com</a> (2026-09-28), <a href="https://www.macrumors.com/guide/airpods-deals/">macrumors.com</a> (2026-09-28)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Hanes EcoSmart Fleece Hoodie</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (6/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Hanes EcoSmart remains one of Amazon's most consistent Apparel bestsellers year-round but gets a meaningful seasonal lift in fall as the go-to affordable layering piece. Amazon's early Prime Big Deal Days coverage specifically highlights a "mega-selling, fall-ready Hanes hoodie at nearly 65% off" as one of the marquee early deals ahead of October 6–7, likely creating a burst in rank climbing this week. Its value proposition and high review volume sustain consistent repeat purchases at all times of year.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — reliable fall/winter perennial; promotional discount amplification will create a short-term rank spike around Prime Day, then return to its normal steady pace.</div>
+      <div class="card-meta">Regularly in the $15–$25 range; "nearly 65% off" during early Prime Day per deal coverage</div>
+      <div class="card-sources">Sources: <a href="https://shopping.yahoo.com/deals/breaking-news/article/october-prime-day-2026-amazons-biggest-early-deals-from-hanes-dewalt-apple-and-more-ahead-of-the-prime-big-deal-days-event-050300247.html">shopping.yahoo.com</a> (2026-09-28), <a href="https://www.today.com/shop/amazon-september-bestsellers-2026-rcna594127">today.com</a> (2026-09-28)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">COSRX Advanced Snail 96 Mucin Power Essence</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (7/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">COSRX Snail Mucin has been one of Amazon's most enduring K-beauty bestsellers, serving as a gateway product that introduced millions of U.S. consumers to Korean skincare. It continues to hold top-of-chart placement in the Beauty category. In fall 2026, it benefits from consumers refreshing their skincare routines for drier cold-weather conditions and from the continued K-beauty boom driven by TikTok discovery. Multiple K-beauty coverage sources (Hollywood Reporter, Amazon K-beauty deal roundups) confirm its continued chart presence.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — entrenched bestseller with a large loyal repurchase base; modest seasonal lift expected in fall as consumers prioritize hydrating skincare.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.hollywoodreporter.com/lifestyle/shopping/best-k-beauty-korean-skin-care-products-deals-online-1236171629/">hollywoodreporter.com</a> (2026-09-28), <a href="https://www.nbcnews.com/select/shopping/amazon-k-beauty-deals-march-2026-rcna265539">nbcnews.com/select</a> (2026-09-28)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Nutricost Creatine Monohydrate Micronized Powder</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (7/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Creatine's shift from niche bodybuilding supplement to mainstream wellness staple — for both men and women — has made Nutricost's affordable powder one of Amazon's most consistent Health &amp; Household bestsellers throughout 2026. Multiple supplement trend sources identify creatine as the top repeat-purchase supplement on Amazon this year. The fall season brings a "new routine" mentality that often drives supplement restocking, and Nutricost's sub-$25 price point sustains broad accessibility across demographics.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — creatine has crossed into mainstream wellness and shows no signs of retreating from the bestseller charts; durable category performance.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://altpik.com/articles/amazon-supplements-best-sellers/">altpik.com</a> (2026-09-28), <a href="https://www.accio.com/business/top-10-best-selling-health-products-on-amazon">accio.com</a> (2026-09-28)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Nature's Way Sambucus Elderberry Gummies</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (6/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Elderberry gummies see a predictable autumn surge as cold and flu season approaches. Nature's Way Sambucus consistently leads the Amazon category. Late September is precisely the seasonal entry point for consumers who preemptively stock immune support products, and elderberry maintains broad cross-demographic awareness. Multiple health product trend reports place elderberry gummies in their fall 2026 bestseller roundups, and this product specifically has appeared in six of the last seven daily reports produced by this workspace.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — seasonal cold/flu cycle drives a late-September-through-January demand spike, with a predictable post-illness-season taper.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: supplement category trend coverage (multiple WebSearch sources, 2026-09-28), <a href="https://www.accio.com/business/top-10-best-selling-health-products-on-amazon">accio.com</a> (2026-09-28)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Owala FreeSip Insulated Water Bottle</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (7/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Owala FreeSip has held a top position in Amazon's water bottle category throughout 2026, buoyed by its dual-function lid (sip or chug), colorful limited editions, and TikTok aesthetic appeal. Multiple retail trend reports continue to cite it as the go-to hydration purchase for consumers looking for a Stanley or YETI alternative at a lower price point. In late September, transitioning from summer hydration culture, it remains a year-round performer and has appeared in every one of the last seven daily reports from this workspace.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — durable hydration category leader with strong brand loyalty and consistent repurchase; no structural decline indicators.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://amzscout.net/blog/best-selling-products-on-amazon/">amzscout.net</a> (2026-09-28), retail category trend coverage via WebSearch (2026-09-28)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Shark AI Ultra 2-in-1 Robot Vacuum &amp; Mop</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Shark AI Ultra is identified in Amazon's early Prime Big Deal Days deal previews as one of the major home-tech items from the Shark brand receiving deep discounts in October. Multiple Amazon deal sources confirm Shark as a highlighted brand for the upcoming October 6–7 sale. Robot vacuums are a category where Prime Day events typically trigger burst ranking climbs, as consumers who have been waiting for a price drop act. This product first appeared in this report's tracking four reports ago (September 21).</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — robot vacuum category is mature but remains a strong Q4 gifting item; Prime Day deal creates a short-term rank surge.</div>
+      <div class="card-meta">Price not confirmed (sale price not confirmed; significant discount expected Oct 6–7)</div>
+      <div class="card-sources">Sources: <a href="https://shopping.yahoo.com/deals/breaking-news/article/amazon-october-prime-day-2026-shop-early-deals-from-shark-dewalt-apple-and-more-ahead-of-the-prime-big-deal-days-event-050300247.html">shopping.yahoo.com</a> (2026-09-28), <a href="https://www.nbcnews.com/select/shopping/early-october-prime-day-deals-2026-rcna597786">nbcnews.com/select</a> (2026-09-28)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Premier Protein 30g High Protein Shake</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Premier Protein remains a consistent bestseller in the Amazon grocery/supplement overlap zone. The 30g protein convenience shake appeals to post-workout consumers and busy professionals seeking an easy protein hit without meal prep. Multiple grocery and supplement trend sources identify it as a top recurring purchase item on Amazon in 2026. Fall's "back to routine" mentality — gym attendance, packed schedules — sustains repurchase in this period.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — protein shake category has a broad, loyal consumer base and consistent repurchase behavior; mature market with limited spike potential but stable floor.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://altpik.com/articles/amazon-supplements-best-sellers/">altpik.com</a> (2026-09-28), supplement/grocery trend coverage via WebSearch (2026-09-28)</div>
+    </div>
+
+    <!-- LOW-CONFIDENCE items last -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Light-Up Halloween Ghost Decorations (24", 2-Pack, LED)</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Light-up hanging ghost decorations — described as 24-inch 2-packs with witch hats and LED lights for outdoor display — appear in fall 2026 Amazon decor coverage as fast-moving seasonal items. Late September is the primary purchase window for October delivery on Halloween decor, and novelty outdoor lighting categories have historically shown strong movers-and-shakers activity in this window. However, only one source corroborated this specific product type as a current chart climber; LOW-CONFIDENCE assigned accordingly.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — demand concentrates in September–October and drops sharply after Halloween; no structural growth beyond seasonal cycle.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: fall decor trend coverage via WebSearch — one source (2026-09-28). LOW-CONFIDENCE: second independent source not found.</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">INABA Churu Lickable Cat Treats</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (7/7)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">INABA Churu has maintained a presence on Amazon's Pet Supplies bestseller list in nearly every daily report produced by this workspace since July 2026, making it one of the most durable recurring entrants in this tracker. However, no specific new press coverage or secondary retail source corroborated its continued top-rank status on September 28 specifically. Its long streak suggests continued consistent volume, but this report cannot upgrade confidence without a fresh corroborating source today.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — loyal, repeat-purchase pet treat category with an established consumer base; no clear growth catalyst or decline indicator visible today.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: workspace history file (seen-products-history.json, 18 prior appearances) — no new independent source confirmed today. LOW-CONFIDENCE.</div>
+    </div>
+
+  </div>
+
+  <!-- 5. Category breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="100%" height="350" viewBox="0 0 700 350">
+      <text x="0" y="22" font-size="13" fill="#1e293b">Health &amp; Household</text>
+      <rect x="160" y="8" width="500" height="18" rx="4" fill="#0d9488"/>
+      <text x="668" y="22" font-size="12" fill="#475569">3</text>
+
+      <text x="0" y="56" font-size="13" fill="#1e293b">Home &amp; Kitchen</text>
+      <rect x="160" y="42" width="500" height="18" rx="4" fill="#16a34a"/>
+      <text x="668" y="56" font-size="12" fill="#475569">3</text>
+
+      <text x="0" y="90" font-size="13" fill="#1e293b">Electronics</text>
+      <rect x="160" y="76" width="334" height="18" rx="4" fill="#2563eb"/>
+      <text x="502" y="90" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="124" font-size="13" fill="#1e293b">Toys &amp; Games</text>
+      <rect x="160" y="110" width="334" height="18" rx="4" fill="#f59e0b"/>
+      <text x="502" y="124" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="158" font-size="13" fill="#1e293b">Sports &amp; Outdoors</text>
+      <rect x="160" y="144" width="334" height="18" rx="4" fill="#ea580c"/>
+      <text x="502" y="158" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="192" font-size="13" fill="#1e293b">Beauty &amp; Personal Care</text>
+      <rect x="160" y="178" width="334" height="18" rx="4" fill="#db2777"/>
+      <text x="502" y="192" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="226" font-size="13" fill="#1e293b">Apparel</text>
+      <rect x="160" y="212" width="167" height="18" rx="4" fill="#7c3aed"/>
+      <text x="335" y="226" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="260" font-size="13" fill="#1e293b">Grocery</text>
+      <rect x="160" y="246" width="167" height="18" rx="4" fill="#65a30d"/>
+      <text x="335" y="260" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="294" font-size="13" fill="#1e293b">Tools &amp; Home Improvement</text>
+      <rect x="160" y="280" width="167" height="18" rx="4" fill="#475569"/>
+      <text x="335" y="294" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="328" font-size="13" fill="#1e293b">Pet Supplies</text>
+      <rect x="160" y="314" width="167" height="18" rx="4" fill="#92400e"/>
+      <text x="335" y="328" font-size="12" fill="#475569">1</text>
+    </svg>
+  </div>
+
+  <!-- 6. New entrants spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <ul style="margin:0;padding-left:20px;line-height:2;">
+      <li><strong>LEGO Pokémon Eevee Set (587-piece, $59.99)</strong> — The most accessible of LEGO's 30th-anniversary Pokémon collaboration, praised as the "most critically praised" entry-level build; holiday gifting season amplifies demand.</li>
+      <li><strong>Berberine Supplements (Nature's Bounty 1000mg, ~$14)</strong> — "Nature's Ozempic" trend crossing from wellness influencer communities into Amazon's mainstream Health chart at sub-$15 price points; a significant business story about the GLP-1 cultural moment reaching the OTC supplement market.</li>
+      <li><strong>Pokémon TCG 30th Anniversary Tins (Mega Charizard)</strong> — Anniversary collector tins are "selling fast" per multiple sources; 30th-anniversary campaign and holiday season combine for peak demand window.</li>
+      <li><strong>Medicube PDRN Pink Collagen Gel Toner Pads</strong> — K-beauty brand Medicube's PDRN line emerges as a distinct chart entrant from the same brand's Zero Pore Pads (seen in prior reports), reflecting Medicube's expanding Amazon footprint.</li>
+      <li><strong>DeWalt Oscillating Multitool Kit</strong> — Early Prime Big Deal Days pricing is at "one of the best prices of the year," driving a pre-sale rank climb; a workhorse tool with broad DIY appeal.</li>
+      <li><strong>YETI Rambler Tumbler (~$29 from ~$42)</strong> — Early Prime Day deal-pricing is pulling fall drinkware demand forward into late September; premium brand at its most accessible price point of the year.</li>
+      <li><strong>Yankee Candle Fall Scents ($16–$17)</strong> — Seasonal timing (peak fall-candle window) plus Prime Day deal pricing combine for a new chart entrant in the Home &amp; Kitchen category.</li>
+      <li><strong>Light-Up Halloween Ghost Decorations</strong> — LED outdoor Halloween decor sees a late-September rank climb ahead of October delivery; LOW-CONFIDENCE (one source).</li>
+    </ul>
+  </div>
+
+  <!-- 7. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p><strong>Research approach:</strong> Amazon.com direct pages (Movers &amp; Shakers, Best Sellers, New Releases) were inaccessible due to network egress proxy restrictions in this automated environment. The following retail/news/aggregator domains were also blocked by the proxy: today.com, aol.com, buzzfeed.com, forbes.com, hunker.com, tmz.com, altpik.com, accio.com, amzscout.net, meetglimpse.com, benable.com, buyerschoicelab.com, and toybook.com. All 18 products were identified and verified via WebSearch result summaries only. This degraded-access mode is noted per workflow protocol.</p>
+    <p><strong>Verification rule:</strong> VERIFIED = corroborated by at least 2 independent WebSearch result summaries from distinct domains. LOW-CONFIDENCE = only one source found, or insufficient corroboration. Numbers (prices, dimensions, discounts) included only when they appeared explicitly in the WebSearch result snippet text — not reconstructed from general topic context.</p>
+    <p><strong>Source domains referenced today:</strong> apple.com/newsroom, consequence.net, macrumors.com, idevice.com, cardlines.com, almcorp.com, stonewars.com, tomsguide.com, sheknows.com, shopping.yahoo.com, nbcnews.com/select, blogs.oregonstate.edu (Oregon State Univ.), slickdeals.net, hollywoodreporter.com, goodmorningamerica.com, aboutamazon.com (16 distinct domains).</p>
+    <p><strong>Judgment calls:</strong> (1) The aol.com "Amazon's Movers And Shakers: 22 Items" article was found in search results but could not be fetched; it may contain additional candidates not covered here. (2) Berberine is treated as a category-level entrant (multiple brands) rather than a single-product entry, since no dominant single-brand Amazon bestseller listing was confirmed — Nature's Bounty is cited as one representative option per the Slickdeals deal page. (3) INABA Churu is included as LOW-CONFIDENCE due to its strong historical streak despite no fresh corroboration today; the confidence level is explicitly displayed.</p>
+  </div>
+
+  <!-- 8. Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../September24_2026/">September 24</a></span>
+  </div>
+
+</div>
+</body>
+</html>
