@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-24",
+  "last_updated": "2026-09-28",
   "window_days": 14,
   "products": [
     {
@@ -7,16 +7,16 @@
       "name": "INABA Churu Lickable Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-09-24",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-27", "2026-09-03", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24"]
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-27", "2026-09-03", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28"]
     },
     {
       "key": "owala-freesip-water-bottle",
       "name": "Owala FreeSip Insulated Water Bottle",
       "category": "Sports & Outdoors",
       "first_seen": "2026-07-16",
-      "last_seen": "2026-09-24",
-      "seen_dates": ["2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24"]
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28"]
     },
     {
       "key": "celsius-assorted-variety-pack",
@@ -39,24 +39,24 @@
       "name": "COSRX Advanced Snail 96 Mucin Power Essence",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-09-24",
-      "seen_dates": ["2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24"]
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28"]
     },
     {
       "key": "hanes-ecosmart-fleece-hoodie",
       "name": "Hanes EcoSmart Fleece Hoodie",
       "category": "Apparel",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-09-24",
-      "seen_dates": ["2026-08-10", "2026-08-20", "2026-08-24", "2026-08-27", "2026-09-03", "2026-09-07", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24"]
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-08-10", "2026-08-20", "2026-08-24", "2026-08-27", "2026-09-03", "2026-09-07", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28"]
     },
     {
       "key": "nutricost-creatine-monohydrate",
       "name": "Nutricost Creatine Monohydrate Micronized Powder",
       "category": "Health & Household",
       "first_seen": "2026-08-17",
-      "last_seen": "2026-09-24",
-      "seen_dates": ["2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24"]
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28"]
     },
     {
       "key": "pure-encapsulations-magnesium-glycinate",
@@ -65,22 +65,6 @@
       "first_seen": "2026-08-17",
       "last_seen": "2026-09-21",
       "seen_dates": ["2026-08-17", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21"]
-    },
-    {
-      "key": "dyson-v8-cordless-vacuum",
-      "name": "Dyson V8 Cordless Vacuum",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-08-31",
-      "last_seen": "2026-09-10",
-      "seen_dates": ["2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10"]
-    },
-    {
-      "key": "apple-airtag-2",
-      "name": "Apple AirTag 2 (4-Pack)",
-      "category": "Electronics",
-      "first_seen": "2026-09-03",
-      "last_seen": "2026-09-10",
-      "seen_dates": ["2026-09-03", "2026-09-07", "2026-09-10"]
     },
     {
       "key": "battilo-fall-throw-blanket",
@@ -99,52 +83,28 @@
       "seen_dates": ["2026-09-07", "2026-09-14", "2026-09-17"]
     },
     {
-      "key": "dash-mini-waffle-maker",
-      "name": "Dash Mini Waffle Maker",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-09-07",
-      "last_seen": "2026-09-07",
-      "seen_dates": ["2026-09-07"]
-    },
-    {
       "key": "natures-way-sambucus-elderberry-gummies",
       "name": "Nature's Way Sambucus Elderberry Gummies",
       "category": "Health & Household",
       "first_seen": "2026-09-07",
-      "last_seen": "2026-09-24",
-      "seen_dates": ["2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24"]
-    },
-    {
-      "key": "blink-outdoor-4",
-      "name": "Blink Outdoor 4 Wireless Security Camera",
-      "category": "Electronics",
-      "first_seen": "2026-09-07",
-      "last_seen": "2026-09-07",
-      "seen_dates": ["2026-09-07"]
-    },
-    {
-      "key": "womens-cropped-puffer-vest",
-      "name": "Women's Cropped Puffer Vest (Polu)",
-      "category": "Apparel",
-      "first_seen": "2026-09-07",
-      "last_seen": "2026-09-07",
-      "seen_dates": ["2026-09-07"]
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28"]
     },
     {
       "key": "apple-airpods-5",
       "name": "Apple AirPods 5",
       "category": "Electronics",
       "first_seen": "2026-09-10",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-09-10", "2026-09-17"]
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-09-10", "2026-09-17", "2026-09-28"]
     },
     {
       "key": "apple-watch-series-12",
       "name": "Apple Watch Series 12",
       "category": "Electronics",
       "first_seen": "2026-09-10",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-09-10", "2026-09-17"]
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-09-10", "2026-09-17", "2026-09-28"]
     },
     {
       "key": "cosrx-6x-peptide-skin-booster-serum",
@@ -155,44 +115,12 @@
       "seen_dates": ["2026-09-10", "2026-09-14", "2026-09-17"]
     },
     {
-      "key": "toniebox-2",
-      "name": "Toniebox 2",
-      "category": "Toys & Games",
-      "first_seen": "2026-09-10",
-      "last_seen": "2026-09-10",
-      "seen_dates": ["2026-09-10"]
-    },
-    {
-      "key": "cosori-turboblaze-air-fryer",
-      "name": "Cosori TurboBlaze Air Fryer 9-in-1 (6 Qt)",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-09-10",
-      "last_seen": "2026-09-10",
-      "seen_dates": ["2026-09-10"]
-    },
-    {
-      "key": "soundcore-q20i-anker",
-      "name": "Soundcore Q20i ANC Headphones (Anker)",
-      "category": "Electronics",
-      "first_seen": "2026-09-10",
-      "last_seen": "2026-09-10",
-      "seen_dates": ["2026-09-10"]
-    },
-    {
       "key": "automet-womens-cropped-puffer-vest",
       "name": "AUTOMET Women's Cropped Puffer Vest",
       "category": "Apparel",
       "first_seen": "2026-09-10",
       "last_seen": "2026-09-21",
       "seen_dates": ["2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21"]
-    },
-    {
-      "key": "keurig-k-mini-mate",
-      "name": "Keurig K-Mini Mate Single Serve Coffee Maker",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-09-10",
-      "last_seen": "2026-09-10",
-      "seen_dates": ["2026-09-10"]
     },
     {
       "key": "hydrojug-traveler",
@@ -319,8 +247,8 @@
       "name": "Shark AI Ultra 2-in-1 Robot Vacuum & Mop",
       "category": "Home & Kitchen",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-09-24",
-      "seen_dates": ["2026-09-21", "2026-09-24"]
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-09-21", "2026-09-24", "2026-09-28"]
     },
     {
       "key": "quest-nutrition-protein-bars",
@@ -335,8 +263,8 @@
       "name": "Premier Protein 30g High Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-09-24",
-      "seen_dates": ["2026-09-21", "2026-09-24"]
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-09-21", "2026-09-24", "2026-09-28"]
     },
     {
       "key": "nanit-pro-smart-baby-monitor",
@@ -385,6 +313,70 @@
       "first_seen": "2026-09-24",
       "last_seen": "2026-09-24",
       "seen_dates": ["2026-09-24"]
+    },
+    {
+      "key": "lego-pokemon-eevee-587-piece",
+      "name": "LEGO Pokémon Eevee (587-Piece Set)",
+      "category": "Toys & Games",
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-09-28"]
+    },
+    {
+      "key": "berberine-supplements-natures-bounty",
+      "name": "Berberine Supplements (Nature's Bounty 1000mg, 60-ct)",
+      "category": "Health & Household",
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-09-28"]
+    },
+    {
+      "key": "pokemon-tcg-30th-anniversary-tins",
+      "name": "Pokémon TCG 30th Anniversary Tins (Mega Charizard)",
+      "category": "Toys & Games",
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-09-28"]
+    },
+    {
+      "key": "medicube-pdrn-pink-collagen-toner-pads",
+      "name": "Medicube PDRN Pink Collagen Gel Toner Pads",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-09-28"]
+    },
+    {
+      "key": "dewalt-oscillating-multitool-kit",
+      "name": "DeWalt Oscillating Multitool Kit",
+      "category": "Tools & Home Improvement",
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-09-28"]
+    },
+    {
+      "key": "yeti-rambler-tumbler",
+      "name": "YETI Rambler Tumbler",
+      "category": "Sports & Outdoors",
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-09-28"]
+    },
+    {
+      "key": "yankee-candle-fall-scents-spiced-pumpkin",
+      "name": "Yankee Candle Fall Scents (Spiced Pumpkin / Ciderhouse)",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-09-28"]
+    },
+    {
+      "key": "light-up-halloween-ghost-decorations",
+      "name": "Light-Up Halloween Ghost Decorations (24\", 2-Pack, LED)",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-09-28",
+      "last_seen": "2026-09-28",
+      "seen_dates": ["2026-09-28"]
     }
   ]
 }
