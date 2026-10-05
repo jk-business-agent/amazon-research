@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-01",
+  "last_updated": "2026-10-05",
   "window_days": 14,
   "products": [
     {
@@ -39,24 +39,24 @@
       "name": "COSRX Advanced Snail 96 Mucin Power Essence",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-10-01",
-      "seen_dates": ["2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01"]
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05"]
     },
     {
       "key": "hanes-ecosmart-fleece-hoodie",
       "name": "Hanes EcoSmart Fleece Hoodie",
       "category": "Apparel",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-10-01",
-      "seen_dates": ["2026-08-10", "2026-08-20", "2026-08-24", "2026-08-27", "2026-09-03", "2026-09-07", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01"]
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-08-10", "2026-08-20", "2026-08-24", "2026-08-27", "2026-09-03", "2026-09-07", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05"]
     },
     {
       "key": "nutricost-creatine-monohydrate",
       "name": "Nutricost Creatine Monohydrate Micronized Powder",
       "category": "Health & Household",
       "first_seen": "2026-08-17",
-      "last_seen": "2026-10-01",
-      "seen_dates": ["2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01"]
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05"]
     },
     {
       "key": "pure-encapsulations-magnesium-glycinate",
@@ -67,28 +67,12 @@
       "seen_dates": ["2026-08-17", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21"]
     },
     {
-      "key": "battilo-fall-throw-blanket",
-      "name": "Battilo Fall Throw Blanket",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-09-03",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-09-03", "2026-09-07", "2026-09-14", "2026-09-17"]
-    },
-    {
-      "key": "somnifix-mouth-strips",
-      "name": "SomniFix Mouth Strips",
-      "category": "Health & Household",
-      "first_seen": "2026-09-07",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-09-07", "2026-09-14", "2026-09-17"]
-    },
-    {
       "key": "natures-way-sambucus-elderberry-gummies",
       "name": "Nature's Way Sambucus Elderberry Gummies",
       "category": "Health & Household",
       "first_seen": "2026-09-07",
-      "last_seen": "2026-10-01",
-      "seen_dates": ["2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01"]
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05"]
     },
     {
       "key": "apple-airpods-5",
@@ -107,14 +91,6 @@
       "seen_dates": ["2026-09-10", "2026-09-17", "2026-09-28"]
     },
     {
-      "key": "cosrx-6x-peptide-skin-booster-serum",
-      "name": "COSRX 6X Peptide Collagen Skin Booster Serum",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-09-10",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-09-10", "2026-09-14", "2026-09-17"]
-    },
-    {
       "key": "automet-womens-cropped-puffer-vest",
       "name": "AUTOMET Women's Cropped Puffer Vest",
       "category": "Apparel",
@@ -123,60 +99,20 @@
       "seen_dates": ["2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21"]
     },
     {
-      "key": "lego-pokemon-smart-play",
-      "name": "LEGO Pokémon Smart Play Sets",
-      "category": "Toys & Games",
-      "first_seen": "2026-09-14",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-09-14", "2026-09-17"]
-    },
-    {
       "key": "goli-ashwagandha-vitamin-d-gummies",
       "name": "Goli Ashwagandha & Vitamin D Gummies",
       "category": "Health & Household",
       "first_seen": "2026-09-14",
-      "last_seen": "2026-09-24",
-      "seen_dates": ["2026-09-14", "2026-09-17", "2026-09-24"]
-    },
-    {
-      "key": "tirtir-tinted-skin-glow-cushion",
-      "name": "TIRTIR Tinted Skin Glow Cushion",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-09-17",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-09-17"]
-    },
-    {
-      "key": "best-friends-by-sheri-calming-donut-dog-bed",
-      "name": "Best Friends by Sheri Original Calming Donut Dog Bed",
-      "category": "Pet Supplies",
-      "first_seen": "2026-09-17",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-09-17"]
-    },
-    {
-      "key": "wireless-rechargeable-under-cabinet-led-lights",
-      "name": "Wireless Rechargeable Under-Cabinet Motion Sensor LED Lights",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-09-17",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-09-17"]
-    },
-    {
-      "key": "stanley-quencher-pro-tumbler",
-      "name": "Stanley Quencher Pro Tumbler",
-      "category": "Sports & Outdoors",
-      "first_seen": "2026-09-17",
-      "last_seen": "2026-09-17",
-      "seen_dates": ["2026-09-17"]
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-09-14", "2026-09-17", "2026-09-24", "2026-10-05"]
     },
     {
       "key": "amazon-fire-tv-stick-4k-max",
       "name": "Amazon Fire TV Stick 4K Max",
       "category": "Electronics",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-01",
-      "seen_dates": ["2026-09-21", "2026-10-01"]
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-09-21", "2026-10-01", "2026-10-05"]
     },
     {
       "key": "kindle-paperwhite",
@@ -231,8 +167,8 @@
       "name": "Premier Protein 30g High Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-01",
-      "seen_dates": ["2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01"]
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05"]
     },
     {
       "key": "nanit-pro-smart-baby-monitor",
@@ -255,8 +191,8 @@
       "name": "Medicube Zero Pore Pads 2.0 (70-count)",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-09-24",
-      "last_seen": "2026-10-01",
-      "seen_dates": ["2026-09-24", "2026-09-28", "2026-10-01"]
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05"]
     },
     {
       "key": "fuinloth-womens-quilted-puffer-vest",
@@ -359,16 +295,16 @@
       "name": "iRobot Roomba 115X Combo Robot Vacuum & Mop",
       "category": "Home & Kitchen",
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-01",
-      "seen_dates": ["2026-10-01"]
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-10-01", "2026-10-05"]
     },
     {
       "key": "amazon-echo-dot",
       "name": "Amazon Echo Dot (Latest Generation)",
       "category": "Electronics",
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-01",
-      "seen_dates": ["2026-10-01"]
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-09-21", "2026-10-01", "2026-10-05"]
     },
     {
       "key": "ninja-nj601amz-blender",
@@ -417,6 +353,102 @@
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-01",
       "seen_dates": ["2026-10-01"]
+    },
+    {
+      "key": "charlotte-tilbury-pillow-talk",
+      "name": "Charlotte Tilbury Pillow Talk Collection (Lipstick, Liner, Blush Wand)",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-10-05"]
+    },
+    {
+      "key": "physicians-choice-60-billion-probiotics",
+      "name": "Physician's Choice 60 Billion CFU Probiotics",
+      "category": "Health & Household",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-10-05"]
+    },
+    {
+      "key": "naturewise-vitamin-d3-5000iu",
+      "name": "NatureWise Vitamin D3 5000IU Mini Softgels",
+      "category": "Health & Household",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-10-05"]
+    },
+    {
+      "key": "la-roche-posay-toleriane-double-repair",
+      "name": "La Roche-Posay Toleriane Double Repair Face Moisturizer",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-10-05"]
+    },
+    {
+      "key": "breville-barista-express",
+      "name": "Breville Barista Express Espresso Machine",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-10-05"]
+    },
+    {
+      "key": "poppi-prebiotic-soda",
+      "name": "Poppi Prebiotic Soda (Variety Pack, 12-ct)",
+      "category": "Grocery",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-10-05"]
+    },
+    {
+      "key": "ugg-cozy-throw-blanket",
+      "name": "UGG Cozy Throw Blanket",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-10-05"]
+    },
+    {
+      "key": "barefoot-dreams-cozychic-throw",
+      "name": "Barefoot Dreams CozyChic Throw Blanket",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-10-05"]
+    },
+    {
+      "key": "ag1-athletic-greens-powder",
+      "name": "AG1 Athletic Greens Powder (Refill Pouch)",
+      "category": "Grocery",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-10-05"]
+    },
+    {
+      "key": "trendy-queen-womens-oversized-hoodie",
+      "name": "Trendy Queen Women's Oversized Zip-Up Hoodie",
+      "category": "Apparel",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-10-05"]
+    },
+    {
+      "key": "lego-city-advent-calendar-2026",
+      "name": "LEGO City Advent Calendar 2026 (Set 60510, 252 pieces)",
+      "category": "Toys & Games",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-10-05"]
+    },
+    {
+      "key": "amazon-echo-frames",
+      "name": "Amazon Echo Frames (Alexa Smart Glasses)",
+      "category": "Electronics",
+      "first_seen": "2026-10-05",
+      "last_seen": "2026-10-05",
+      "seen_dates": ["2026-10-05"]
     }
   ]
 }
