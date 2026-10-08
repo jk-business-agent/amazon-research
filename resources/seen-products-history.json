@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-05",
+  "last_updated": "2026-10-08",
   "window_days": 14,
   "products": [
     {
@@ -7,8 +7,8 @@
       "name": "INABA Churu Lickable Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-10-01",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-27", "2026-09-03", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01"]
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-27", "2026-09-03", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-08"]
     },
     {
       "key": "owala-freesip-water-bottle",
@@ -59,14 +59,6 @@
       "seen_dates": ["2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05"]
     },
     {
-      "key": "pure-encapsulations-magnesium-glycinate",
-      "name": "Pure Encapsulations Magnesium Glycinate",
-      "category": "Health & Household",
-      "first_seen": "2026-08-17",
-      "last_seen": "2026-09-21",
-      "seen_dates": ["2026-08-17", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21"]
-    },
-    {
       "key": "natures-way-sambucus-elderberry-gummies",
       "name": "Nature's Way Sambucus Elderberry Gummies",
       "category": "Health & Household",
@@ -91,14 +83,6 @@
       "seen_dates": ["2026-09-10", "2026-09-17", "2026-09-28"]
     },
     {
-      "key": "automet-womens-cropped-puffer-vest",
-      "name": "AUTOMET Women's Cropped Puffer Vest",
-      "category": "Apparel",
-      "first_seen": "2026-09-10",
-      "last_seen": "2026-09-21",
-      "seen_dates": ["2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21"]
-    },
-    {
       "key": "goli-ashwagandha-vitamin-d-gummies",
       "name": "Goli Ashwagandha & Vitamin D Gummies",
       "category": "Health & Household",
@@ -111,40 +95,24 @@
       "name": "Amazon Fire TV Stick 4K Max",
       "category": "Electronics",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-05",
-      "seen_dates": ["2026-09-21", "2026-10-01", "2026-10-05"]
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-09-21", "2026-10-01", "2026-10-05", "2026-10-08"]
     },
     {
       "key": "kindle-paperwhite",
       "name": "Kindle Paperwhite (Latest Generation)",
       "category": "Electronics",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-09-21",
-      "seen_dates": ["2026-09-21"]
-    },
-    {
-      "key": "lego-jack-o-lantern-pickup-truck",
-      "name": "LEGO Jack-O'-Lantern Pickup Truck (Set 40822)",
-      "category": "Toys & Games",
-      "first_seen": "2026-09-21",
-      "last_seen": "2026-09-21",
-      "seen_dates": ["2026-09-21"]
-    },
-    {
-      "key": "dewalt-20v-max-combo-kit",
-      "name": "DEWALT 20V MAX Drill/Impact Driver Combo Kit (DCK240C2)",
-      "category": "Tools & Home Improvement",
-      "first_seen": "2026-09-21",
-      "last_seen": "2026-09-21",
-      "seen_dates": ["2026-09-21"]
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-09-21", "2026-10-08"]
     },
     {
       "key": "ring-battery-doorbell-2k-plus",
       "name": "Ring Battery Doorbell 2K Plus",
       "category": "Electronics",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-01",
-      "seen_dates": ["2026-09-21", "2026-10-01"]
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-09-21", "2026-10-01", "2026-10-08"]
     },
     {
       "key": "shark-ai-ultra-robot-vacuum",
@@ -155,28 +123,12 @@
       "seen_dates": ["2026-09-21", "2026-09-24", "2026-09-28"]
     },
     {
-      "key": "quest-nutrition-protein-bars",
-      "name": "Quest Nutrition Protein Bars (Chocolate Chip Cookie Dough)",
-      "category": "Grocery",
-      "first_seen": "2026-09-21",
-      "last_seen": "2026-09-21",
-      "seen_dates": ["2026-09-21"]
-    },
-    {
       "key": "premier-protein-high-protein-shake",
       "name": "Premier Protein 30g High Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-05",
-      "seen_dates": ["2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05"]
-    },
-    {
-      "key": "nanit-pro-smart-baby-monitor",
-      "name": "Nanit Pro Smart Baby Monitor",
-      "category": "Baby",
-      "first_seen": "2026-09-21",
-      "last_seen": "2026-09-21",
-      "seen_dates": ["2026-09-21"]
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05", "2026-10-08"]
     },
     {
       "key": "anker-3in1-magsafe-charger",
@@ -287,8 +239,8 @@
       "name": "Apple AirPods Pro 3",
       "category": "Electronics",
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-01",
-      "seen_dates": ["2026-10-01"]
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-10-01", "2026-10-08"]
     },
     {
       "key": "irobot-roomba-115x-combo",
@@ -302,9 +254,9 @@
       "key": "amazon-echo-dot",
       "name": "Amazon Echo Dot (Latest Generation)",
       "category": "Electronics",
-      "first_seen": "2026-10-01",
-      "last_seen": "2026-10-05",
-      "seen_dates": ["2026-09-21", "2026-10-01", "2026-10-05"]
+      "first_seen": "2026-09-21",
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-09-21", "2026-10-01", "2026-10-05", "2026-10-08"]
     },
     {
       "key": "ninja-nj601amz-blender",
@@ -327,8 +279,8 @@
       "name": "Crest 3D Whitestrips Professional Effects",
       "category": "Health & Household",
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-01",
-      "seen_dates": ["2026-10-01"]
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-10-01", "2026-10-08"]
     },
     {
       "key": "bounty-quick-size-paper-towels",
@@ -449,6 +401,86 @@
       "first_seen": "2026-10-05",
       "last_seen": "2026-10-05",
       "seen_dates": ["2026-10-05"]
+    },
+    {
+      "key": "vital-proteins-collagen-peptides",
+      "name": "Vital Proteins Collagen Peptides Powder",
+      "category": "Health & Household",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-10-08"]
+    },
+    {
+      "key": "blink-wired-floodlight-camera",
+      "name": "Blink Wired Floodlight Camera",
+      "category": "Electronics",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-10-08"]
+    },
+    {
+      "key": "amazon-essentials-packable-puffer",
+      "name": "Amazon Essentials Packable Hooded Puffer Jacket",
+      "category": "Apparel",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-10-08"]
+    },
+    {
+      "key": "medicube-age-r-booster-jelly-cream",
+      "name": "Medicube Age-R Booster Jelly Cream",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-10-08"]
+    },
+    {
+      "key": "fitbit-charge-6",
+      "name": "Fitbit Charge 6",
+      "category": "Electronics",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-10-08"]
+    },
+    {
+      "key": "laneige-water-sleeping-mask",
+      "name": "LANEIGE Water Sleeping Mask",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-10-08"]
+    },
+    {
+      "key": "lemme-melatonin-magnesium-gummies",
+      "name": "Lemme Melatonin & Magnesium Gummies",
+      "category": "Health & Household",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-10-08"]
+    },
+    {
+      "key": "levis-505-regular-fit-jeans",
+      "name": "Levi's 505 Regular Fit Jeans",
+      "category": "Apparel",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-10-08"]
+    },
+    {
+      "key": "sony-bravia-6-65-oled-tv",
+      "name": "Sony BRAVIA 6 65\" OLED TV",
+      "category": "Electronics",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-10-08"]
+    },
+    {
+      "key": "zanzoon-pokemon-adventures-game",
+      "name": "Zanzoon Pokémon Adventures Electronic Guessing Game",
+      "category": "Toys & Games",
+      "first_seen": "2026-10-08",
+      "last_seen": "2026-10-08",
+      "seen_dates": ["2026-10-08"]
     }
   ]
 }
