@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-08",
+  "last_updated": "2026-10-12",
   "window_days": 14,
   "products": [
     {
@@ -7,8 +7,8 @@
       "name": "INABA Churu Lickable Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-27", "2026-09-03", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-08"]
+      "last_seen": "2026-10-12",
+      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-27", "2026-09-03", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-08", "2026-10-12"]
     },
     {
       "key": "owala-freesip-water-bottle",
@@ -17,22 +17,6 @@
       "first_seen": "2026-07-16",
       "last_seen": "2026-09-28",
       "seen_dates": ["2026-07-16", "2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28"]
-    },
-    {
-      "key": "celsius-assorted-variety-pack",
-      "name": "CELSIUS Assorted Flavors Variety Pack (12-ct)",
-      "category": "Grocery",
-      "first_seen": "2026-07-20",
-      "last_seen": "2026-09-24",
-      "seen_dates": ["2026-07-20", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-17", "2026-09-21", "2026-09-24"]
-    },
-    {
-      "key": "core-power-fairlife-elite-protein-shake",
-      "name": "Core Power Fairlife Elite 42g Protein Shake",
-      "category": "Grocery",
-      "first_seen": "2026-08-06",
-      "last_seen": "2026-09-24",
-      "seen_dates": ["2026-08-06", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-24"]
     },
     {
       "key": "cosrx-advanced-snail-96-mucin-power-essence",
@@ -63,8 +47,8 @@
       "name": "Nature's Way Sambucus Elderberry Gummies",
       "category": "Health & Household",
       "first_seen": "2026-09-07",
-      "last_seen": "2026-10-05",
-      "seen_dates": ["2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05"]
+      "last_seen": "2026-10-12",
+      "seen_dates": ["2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05", "2026-10-12"]
     },
     {
       "key": "apple-airpods-5",
@@ -95,8 +79,8 @@
       "name": "Amazon Fire TV Stick 4K Max",
       "category": "Electronics",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-09-21", "2026-10-01", "2026-10-05", "2026-10-08"]
+      "last_seen": "2026-10-12",
+      "seen_dates": ["2026-09-21", "2026-10-01", "2026-10-05", "2026-10-08", "2026-10-12"]
     },
     {
       "key": "kindle-paperwhite",
@@ -127,48 +111,16 @@
       "name": "Premier Protein 30g High Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05", "2026-10-08"]
-    },
-    {
-      "key": "anker-3in1-magsafe-charger",
-      "name": "Anker 3-in-1 MagSafe Foldable Charger",
-      "category": "Electronics",
-      "first_seen": "2026-09-24",
-      "last_seen": "2026-09-24",
-      "seen_dates": ["2026-09-24"]
+      "last_seen": "2026-10-12",
+      "seen_dates": ["2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05", "2026-10-08", "2026-10-12"]
     },
     {
       "key": "medicube-zero-pore-toner-pads",
       "name": "Medicube Zero Pore Pads 2.0 (70-count)",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-09-24",
-      "last_seen": "2026-10-05",
-      "seen_dates": ["2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05"]
-    },
-    {
-      "key": "fuinloth-womens-quilted-puffer-vest",
-      "name": "Fuinloth Women's Quilted Puffer Vest",
-      "category": "Apparel",
-      "first_seen": "2026-09-24",
-      "last_seen": "2026-09-24",
-      "seen_dates": ["2026-09-24"]
-    },
-    {
-      "key": "soundcore-liberty-5-pro",
-      "name": "Soundcore Liberty 5 Pro (Anker)",
-      "category": "Electronics",
-      "first_seen": "2026-09-24",
-      "last_seen": "2026-09-24",
-      "seen_dates": ["2026-09-24"]
-    },
-    {
-      "key": "integrative-therapeutics-cortisol-manager",
-      "name": "Integrative Therapeutics Cortisol Manager",
-      "category": "Health & Household",
-      "first_seen": "2026-09-24",
-      "last_seen": "2026-09-24",
-      "seen_dates": ["2026-09-24"]
+      "last_seen": "2026-10-12",
+      "seen_dates": ["2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05", "2026-10-12"]
     },
     {
       "key": "lego-pokemon-eevee-587-piece",
@@ -239,8 +191,8 @@
       "name": "Apple AirPods Pro 3",
       "category": "Electronics",
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-10-01", "2026-10-08"]
+      "last_seen": "2026-10-12",
+      "seen_dates": ["2026-10-01", "2026-10-08", "2026-10-12"]
     },
     {
       "key": "irobot-roomba-115x-combo",
@@ -255,8 +207,8 @@
       "name": "Amazon Echo Dot (Latest Generation)",
       "category": "Electronics",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-09-21", "2026-10-01", "2026-10-05", "2026-10-08"]
+      "last_seen": "2026-10-12",
+      "seen_dates": ["2026-09-21", "2026-10-01", "2026-10-05", "2026-10-08", "2026-10-12"]
     },
     {
       "key": "ninja-nj601amz-blender",
@@ -303,8 +255,8 @@
       "name": "Outdoor Halloween Animatronic Ghost Decoration",
       "category": "Home & Kitchen",
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-01",
-      "seen_dates": ["2026-10-01"]
+      "last_seen": "2026-10-12",
+      "seen_dates": ["2026-10-01", "2026-10-12"]
     },
     {
       "key": "charlotte-tilbury-pillow-talk",
@@ -327,8 +279,8 @@
       "name": "NatureWise Vitamin D3 5000IU Mini Softgels",
       "category": "Health & Household",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-05",
-      "seen_dates": ["2026-10-05"]
+      "last_seen": "2026-10-12",
+      "seen_dates": ["2026-10-05", "2026-10-12"]
     },
     {
       "key": "la-roche-posay-toleriane-double-repair",
@@ -343,8 +295,8 @@
       "name": "Breville Barista Express Espresso Machine",
       "category": "Home & Kitchen",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-05",
-      "seen_dates": ["2026-10-05"]
+      "last_seen": "2026-10-12",
+      "seen_dates": ["2026-10-05", "2026-10-12"]
     },
     {
       "key": "poppi-prebiotic-soda",
@@ -423,8 +375,8 @@
       "name": "Amazon Essentials Packable Hooded Puffer Jacket",
       "category": "Apparel",
       "first_seen": "2026-10-08",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-10-08"]
+      "last_seen": "2026-10-12",
+      "seen_dates": ["2026-10-08", "2026-10-12"]
     },
     {
       "key": "medicube-age-r-booster-jelly-cream",
@@ -481,6 +433,38 @@
       "first_seen": "2026-10-08",
       "last_seen": "2026-10-08",
       "seen_dates": ["2026-10-08"]
+    },
+    {
+      "key": "amazon-kindle-2026-redesign",
+      "name": "Amazon Kindle 2026 (Redesigned Lineup — Base, Paperwhite, Colorsoft)",
+      "category": "Electronics",
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "seen_dates": ["2026-10-12"]
+    },
+    {
+      "key": "inflatable-trex-halloween-costume",
+      "name": "Inflatable T-Rex Halloween Costume",
+      "category": "Apparel",
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "seen_dates": ["2026-10-12"]
+    },
+    {
+      "key": "crunchlabs-mark-rober-stem-toys",
+      "name": "CrunchLabs by Mark Rober — Elephant Toothpaste Blast (STEM Toy Line)",
+      "category": "Toys & Games",
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "seen_dates": ["2026-10-12"]
+    },
+    {
+      "key": "shark-av2501s-robot-vacuum",
+      "name": "Shark AV2501S Robot Vacuum",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-10-12",
+      "last_seen": "2026-10-12",
+      "seen_dates": ["2026-10-12"]
     }
   ]
 }
