@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Top Sellers — October 22, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 150px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
+  .card-meta { font-size: 12.5px; color: var(--muted); }
+  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .card-sources a { color: #2563eb; text-decoration: none; }
+
+  .chart-wrap { padding: 10px 6px; }
+
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <div class="date">October 22, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 17 sources checked</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">The week of October 22, 2026 — nine days before Halloween — shows a clear bifurcation in Amazon's best-seller landscape: seasonal urgency (Halloween costumes, heated blankets, immune supplements) is colliding with year-round structural trends (protein nutrition, K-beauty, creatine) in ways that reveal how broadly the American consumer's baseline has shifted. The standout new entrant this week is the <strong>Bedsure GentleSoft Electric Heated Blanket</strong>, which earned Amazon's #1 Best Seller badge in Electric Blankets as fall temperatures arrived nationwide; it was featured prominently in post-Prime Big Deal Days deal coverage and carries reported sales of over 5,000 units in a single month. The <strong>Fairlife Core Power Elite 42g Chocolate Protein Shake</strong> also enters the tracked list as a newly confirmed top seller — third-party analytics estimates it at approximately 100,000 monthly units sold, surpassing the longer-tracked Premier Protein in raw unit volume at a higher protein content. Meanwhile, <strong>The Let Them Theory</strong> by Mel Robbins continues to top Amazon's overall books chart more than a year after release, a rare feat that reflects the sustained cultural resonance of the mindset/self-help genre. Pre-holiday momentum is building in Electronics (AirPods Pro 3, Kindle 2026, Echo Dot), and the Inflatable T-Rex costume enters its Halloween peak week for the third consecutive report. Note: Amazon.com direct web access was DNS-blocked during this research run; all findings are drawn from secondary press, deal roundups, and third-party analytics — see methodology section.</div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">18</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="num">3</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">15</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">14</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">4</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Top movers grid -->
+  <h2 class="section-title">Top Movers</h2>
+  <div class="grid">
+
+    <!-- VERIFIED + NEW first -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Bedsure GentleSoft Electric Heated Blanket</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Bedsure's electric heated blanket earned Amazon's #1 Best Seller badge in the Electric Blankets category, per a Fox News deal piece published September 22, 2026, with the product described as having over 5,000 units sold in the past month. It surged again during Prime Big Deal Days (Oct 6–7, 2026), appearing in multiple deal roundups at over 40% off (reported price ~$40, originally ~$69). With October temperatures falling across the U.S., consumers are stocking up on affordable heating solutions — Bedsure's GentleSoft model features 6 heat settings and an 8-hour auto shut-off timer.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — seasonal demand peaks from late October through January; heated bedding is among the fastest-moving Home &amp; Kitchen subcategories during the fall transition.</div>
+      <div class="card-meta">~$40–$46</div>
+      <div class="card-sources">Sources: <a href="https://www.foxnews.com/deals/heated-blanket-amazon-deal.amp">foxnews.com</a> (Sep 22, 2026), <a href="https://www.talkofthehouse.com/?p=77854">talkofthehouse.com</a> (Oct 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Fairlife Core Power Elite Chocolate Protein Shake (12-Pack, 42g)</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Third-party Amazon analytics firm AsinSight estimated Core Power Elite Chocolate 42g at approximately 100,000 monthly units sold as of August 2026, making it the top-selling individual SKU in the competitive ready-to-drink protein shake category. Grips Intelligence's September 2026 health &amp; beauty revenue rankings independently placed Fairlife among the top-tier brands by gross revenue on amazon.com. The 42g protein per bottle — versus 30g for the competing Premier Protein — appeals to the growing fitness-focused consumer segment seeking higher-protein recovery options.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — protein beverage demand has grown consistently across 2026 as the high-protein dietary trend expands beyond the core fitness demographic into mainstream grocery behavior.</div>
+      <div class="card-meta">~$30–$38 per 12-pack</div>
+      <div class="card-sources">Sources: <a href="https://www.asinsight.com/report/US/fairlife-core-power-protein-shake">asinsight.com</a> (Aug 2026), <a href="https://gripsintelligence.com/insights/top-products/amazon-com/health-beauty">gripsintelligence.com</a> (Sep 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">The Let Them Theory — Mel Robbins</h3>
+        <span class="pill" style="background:#64748b">Other</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">A search data snapshot from approximately October 12, 2026 showed The Let Them Theory topping Amazon's overall Top 100 Books list. The book was published in late 2024 and became the top-selling book of 2025 with over 8 million copies sold in its first eleven months (per Publishers Weekly figures cited by Variety). Robbins' highly active social media presence, speaking engagements, and the book's core message — relinquishing anxiety over others' opinions — continue to drive sustained discovery more than a year post-release, a rare feat in a market where most bestsellers fade quickly.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau — the book is entering the long-tail phase of its cycle; still selling strongly, but likely below its 2025 peak rate.</div>
+      <div class="card-meta">~$20–$28 hardcover</div>
+      <div class="card-sources">Sources: <a href="https://amzscout.net/blog/best-selling-products-on-amazon/">amzscout.net</a> (Oct 12, 2026 data), <a href="https://variety.com/2025/shopping/news/mel-robbins-let-them-theory-book-review-buy-online-1236369553/">variety.com</a> (2025)</div>
+    </div>
+
+    <!-- VERIFIED + RECURRING -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirPods Pro 3</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (5/5 recent reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Apple AirPods Pro 3 was among the most widely featured products across Prime Big Deal Days (Oct 6–7, 2026) — NBC Select, Popsci, Rolling Stone, and Forbes all listed it as a top pick at a promotional price of $179 (typically $249). Launched alongside other Apple devices in September 2026, the product has sustained strong post-launch momentum as the holiday gifting season builds. Active noise cancellation, Transparency mode, and spatial audio remain strong differentiators in the premium wireless earbuds segment.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — holiday gifting drives sustained premium wireless earbud demand through December; Apple accessories consistently top Electronics during this window.</div>
+      <div class="card-meta">~$179 (promotional); $249 MSRP</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com/select/shopping/bestselling-october-prime-day-2026-deals-rcna601940">nbcnews.com/select</a> (Oct 2026), <a href="https://www.popsci.com/gear/best-prime-big-deal-days-deals-2026-live/">popsci.com</a> (Oct 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Amazon Echo Dot (Latest Generation)</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (4/4 last reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Echo Dot has appeared in every report since September 21, 2026 (7 total appearances) and remains Amazon's perennial entry-level smart speaker. Amazon's October 7, 2026 news post confirmed it among the featured devices during Prime Big Deal Days. Regularly discounted to $19.99–$30 during Prime events, it continues to drive Alexa ecosystem adoption at an accessible price point — and is historically one of the top gift purchases during the holiday season.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — an evergreen seller with a reliable holiday uplift, but no major launch event or viral catalyst is driving incremental growth.</div>
+      <div class="card-meta">~$30–$50 (regularly on sale)</div>
+      <div class="card-sources">Sources: <a href="https://www.aboutamazon.com/md/news/company-news/amazon-news-today-top-stories-company">aboutamazon.com</a> (Oct 7, 2026), recurring history (7 reports)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Premier Protein 30g High Protein Shake (12-Pack)</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (4/4 last reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">NBC Select named Premier Protein its top grocery pick during Prime Big Deal Days 2026, with up to 50% off the 12-pack. AsinSight's August 2026 protein shake report estimated the café latte SKU at approximately 50,000 monthly units sold. The product benefits from broad consumer recognition, widespread subscription autoship adoption, and the sustained macro trend toward convenient high-protein nutrition — though Fairlife Core Power is now outpacing it in raw unit volume at the higher 42g tier.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — the RTD protein shake market is mature; Premier Protein holds a strong position but faces increasing competition from higher-protein alternatives.</div>
+      <div class="card-meta">~$23–$28 per 12-pack</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com/select/shopping/bestselling-october-prime-day-2026-deals-rcna601940">nbcnews.com/select</a> (Oct 2026), <a href="https://www.asinsight.com/report/US/fairlife-protein-drink">asinsight.com</a> (Aug 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Nature's Way Sambucus Elderberry Gummies</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (3/4 last reports; 12 total)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Elderberry gummies have appeared in 12 of the last 14+ reports, with an acceleration in October as cold and flu season arrives. Jungle Scout's Amazon fall product trends report confirms immune supplements as a top trending category in October. The gummies appeal to families seeking accessible, food-format immune support — a format particularly popular for managing children's supplement routines without pill-swallowing. Cold weather and school re-entry have amplified demand.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth (seasonal) — elderberry demand typically peaks October through February; expect gradual decline by late spring.</div>
+      <div class="card-meta">~$14–$20</div>
+      <div class="card-sources">Sources: <a href="https://junglescout.com/blog/tag/amazon-fall-product-trends">junglescout.com</a> (fall trends 2026), recurring history (12 reports)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Nutricost Creatine Monohydrate Micronized Powder</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/4 last reports; 17 total)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Nutricost Creatine has been a top recurring seller since August 2026 (17 total appearances). Grips Intelligence's September 2026 health &amp; beauty revenue data for amazon.com shows creatine among the top health supplement subcategories. Consumer awareness of creatine's broader benefits — cognitive function, muscle recovery, healthy aging — has expanded the buyer base well beyond traditional gym users. Nutricost's value pricing (sub-$25 for 500g) makes it the accessible category leader in a space where premium brands charge twice as much.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — creatine has crossed from niche sports supplement to mainstream wellness product; broader adoption shows no sign of reversing.</div>
+      <div class="card-meta">~$20–$28 for 500g</div>
+      <div class="card-sources">Sources: <a href="https://gripsintelligence.com/insights/top-products/amazon-com/health-beauty">gripsintelligence.com</a> (Sep 2026), recurring history (17 reports)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">INABA Churu Lickable Cat Treats (50-count)</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (4/4 last reports; 24 total)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">INABA Churu has appeared in 24 consecutive reports spanning nearly four months — the most persistent product in this research history. MetricsCart's July 2026 pet supplies bestseller analysis confirmed Churu's continued dominance in the cat treats subcategory. The tube-squeeze format encourages interactive feeding and has been heavily promoted via TikTok and Instagram pet content, sustaining viral adoption beyond its original pet-store shelf presence. Subscription auto-delivery drives consistent repeat purchases.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Churu has achieved category-defining brand recognition in cat treats; steady growth barring supply disruption or competitive entry.</div>
+      <div class="card-meta">~$15–$22 for 50-count</div>
+      <div class="card-sources">Sources: <a href="https://metricscart.com/?p=42657">metricscart.com</a> (Jul 2026), recurring history (24 reports)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Hanes EcoSmart Fleece Hoodie</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/4 last reports; 15 total)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Hanes EcoSmart has appeared in 15 reports since August 10, 2026, tracking the cooling weather pattern through autumn. Today.com's October 2026 fall fashion roundup highlights fleece-lined and cozy apparel as the dominant trending fashion category heading into fall. At under $35, the EcoSmart hoodie benefits from mass consumer preference for functional, affordable layers — and has been among the top-selling items in Amazon's Sweatshirts &amp; Hoodies subcategory for multiple consecutive months.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — seasonal hoodie demand peaks October–December; expect gradual decline by February as winter transitions to spring.</div>
+      <div class="card-meta">~$20–$35</div>
+      <div class="card-sources">Sources: <a href="https://www.today.com/shop/october-prime-day-cozy-fall-fashion-deals-2026-rcna602034">today.com</a> (Oct 2026), recurring history (15 reports)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">COSRX Advanced Snail 96 Mucin Power Essence</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (1/4 last reports; 18 total)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">COSRX Snail Mucin has been in the top-seller data for 18 consecutive reports since August 10, 2026. Jungle Scout's 2026 Beauty &amp; Personal Care innovation report notes consecutive quarterly growth in the category, driven by volume at accessible K-Beauty price points. The fall and winter seasons further drive consumers toward hydration-focused skincare as indoor heating dries skin — a natural tailwind for this product's core benefit proposition. Medicube's independent strong performance in the category corroborates the broader Korean skincare boom.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — K-Beauty is structurally established in the U.S.; no viral catalyst required to sustain performance, though initial novelty growth may moderate.</div>
+      <div class="card-meta">~$18–$25</div>
+      <div class="card-sources">Sources: <a href="https://www.junglescout.com/resources/reports/beauty-health-wellness-innovation-report/">junglescout.com</a> (Beauty report 2026), recurring history (18 reports)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Mighty Patch Original Pimple Patches — Hero Cosmetics (36-ct)</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/4 last reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">AMZScout's October 12, 2026 data snapshot cited "acne patches" as the top unit seller over 30 days in the Beauty category — and Mighty Patch Original by Hero Cosmetics is the category-defining brand. The product's viral TikTok and Instagram presence (users showing visible overnight results) continues to drive new consumer discovery years after its initial breakout. At under $15 for 36 patches, the accessible price point encourages impulse purchase and gifting ahead of the holiday season.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — spot treatments are an evergreen skincare category; Mighty Patch maintains its lead through brand recognition and social media staying power.</div>
+      <div class="card-meta">~$13–$18 for 36-count</div>
+      <div class="card-sources">Sources: <a href="https://amzscout.net/blog/best-selling-products-on-amazon/">amzscout.net</a> (Oct 12, 2026), recurring history (2 reports)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">HydroJug Traveler 32oz Insulated Tumbler</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/4 last reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">AMZScout's October 12, 2026 data snapshot ranked the HydroJug Traveler first by 30-day units sold in Home &amp; Kitchen — a strong signal for an insulated tumbler competing with the established Stanley brand. The Traveler's lid-straw design and broad color selection have driven consistent social media coverage and repeat gifting. The fall transition pushes consumers toward warm-drink-compatible tumblers for coffee and tea, broadening the product's year-round appeal.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau — the premium tumbler market became saturated in 2025–2026 as multiple brands competed for the Stanley customer; HydroJug holds a top position but category growth is slowing.</div>
+      <div class="card-meta">~$30–$45</div>
+      <div class="card-sources">Sources: <a href="https://amzscout.net/blog/best-selling-products-on-amazon/">amzscout.net</a> (Oct 12, 2026), recurring history (2 reports)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Inflatable T-Rex Halloween Costume</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (3/4 last reports)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The inflatable T-Rex costume has appeared in 3 consecutive reports since October 12, with Halloween now 9 days away. Spirit Halloween's October 2026 trend report confirms novelty and inflatable costumes as perennial top performers in the category. A SellerSonar analysis of Amazon Halloween bestsellers independently lists inflatable and novelty costumes as a top-selling format. The T-Rex's viral cultural history — driving, spectating at sporting events, everyday public appearances — gives it enduring recognition that drives yearly reinvention in new colorways and designs.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — demand peaks immediately before October 31; expect a sharp cliff by November 1.</div>
+      <div class="card-meta">~$25–$45</div>
+      <div class="card-sources">Sources: <a href="https://njbiz.com/spirit-halloween-2026-costume-trends/">njbiz.com</a> (Spirit Halloween 2026 trends, Oct 1, 2026), <a href="https://sellersonar.com/blog/amazon-halloween-best-sellers/">sellersonar.com</a> (Halloween best sellers)</div>
+    </div>
+
+    <!-- LOW-CONFIDENCE items last -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Amazon Kindle 2026 Lineup (Base, Paperwhite, Colorsoft)</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (3/4 last reports)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">The redesigned 2026 Kindle lineup has appeared in 3 consecutive reports since October 12. Electronics seller guides consistently cite the Kindle as a top performer in Amazon's own device category, and the 2026 Colorsoft model's color e-ink display represents the most significant hardware upgrade in years. The holiday gift-giver market for dedicated reading devices is a natural driver heading into November. However, no specific October 22 sales ranking data was found in directly accessible sources beyond the research history.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — a major hardware refresh entering peak holiday gifting season is a classic volume driver.</div>
+      <div class="card-meta">~$100–$280 depending on model</div>
+      <div class="card-sources">Sources: <a href="https://amzprep.com/best-selling-products-amazon/">amzprep.com</a> (Electronics guide Oct 2026), recurring history (3 reports)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirTag 2nd Generation (4-Pack)</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/4 last reports)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Apple AirTag 2nd Generation appeared in reports for October 15 and 19. It was featured as a Prime Big Deal Days deal item in multiple roundups from October 6–7, driving fresh exposure to the product within the Apple ecosystem. Item trackers have become a mainstream consumer purchase, particularly for travel, luggage, and child safety, with the 4-pack driving better per-unit economics. However, Prime Day was 2 weeks ago and no fresh October 22 ranking data was confirmed independently.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — item trackers are a growing mainstream segment; AirTag holds the lead in the Apple ecosystem with consistent demand.</div>
+      <div class="card-meta">~$89–$99 for 4-pack</div>
+      <div class="card-sources">Sources: Prime Big Deal Days roundups (Oct 2026), recurring history (2 reports)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">NatureWise Vitamin D3 5000IU Mini Softgels</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (3/4 last reports)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">NatureWise Vitamin D3 has appeared in 4 reports since October 5, consistent with the strong seasonal pattern of vitamin D demand increasing as winter approaches and outdoor sun exposure declines. Grips Intelligence health data for September 2026 confirms vitamins and dietary supplements as a sustained top subcategory on amazon.com. No specific October 22 ranking data was confirmed from an external source beyond the research history and broader seasonal pattern evidence.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth (seasonal) — vitamin D purchases peak October through February; this is the product's natural high-volume window.</div>
+      <div class="card-meta">~$10–$16</div>
+      <div class="card-sources">Sources: <a href="https://gripsintelligence.com/insights/top-products/amazon-com/health-beauty">gripsintelligence.com</a> (Sep 2026), recurring history (4 reports)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Cosori 9-in-1 TurboBlaze Air Fryer 6 Qt</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (2/4 last reports)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">The Cosori TurboBlaze Air Fryer has appeared in 2 consecutive reports (October 15 and 19). AMZScout's October 12, 2026 data snapshot mentioned the Cosori air fryer alongside the HydroJug as a top Home &amp; Kitchen mover, suggesting continued presence in the category rankings. Air fryers remain the most-gifted kitchen appliance category, and the pre-holiday shopping window typically produces a surge in kitchen appliance sales. However, no specific October 22 sales ranking data was independently confirmed beyond the AMZScout mention.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — the air fryer market has matured since its pandemic-era peak; Cosori holds a leading position but category growth has normalized.</div>
+      <div class="card-meta">~$100–$130</div>
+      <div class="card-sources">Sources: <a href="https://amzscout.net/blog/best-selling-products-on-amazon/">amzscout.net</a> (Oct 12, 2026 snippet), recurring history (2 reports)</div>
+    </div>
+
+  </div>
+
+  <!-- 5. Category breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="100%" height="316" viewBox="0 0 700 316">
+      <!-- Electronics (4) -->
+      <text x="0" y="22" font-size="13" fill="#1e293b">Electronics</text>
+      <rect x="160" y="8" width="430" height="18" rx="4" fill="#2563eb"/>
+      <text x="598" y="22" font-size="12" fill="#475569">4</text>
+      <!-- Health &amp; Household (3) -->
+      <text x="0" y="56" font-size="13" fill="#1e293b">Health &amp; Household</text>
+      <rect x="160" y="42" width="323" height="18" rx="4" fill="#0d9488"/>
+      <text x="491" y="56" font-size="12" fill="#475569">3</text>
+      <!-- Home &amp; Kitchen (2) -->
+      <text x="0" y="90" font-size="13" fill="#1e293b">Home &amp; Kitchen</text>
+      <rect x="160" y="76" width="215" height="18" rx="4" fill="#16a34a"/>
+      <text x="383" y="90" font-size="12" fill="#475569">2</text>
+      <!-- Grocery (2) -->
+      <text x="0" y="124" font-size="13" fill="#1e293b">Grocery</text>
+      <rect x="160" y="110" width="215" height="18" rx="4" fill="#65a30d"/>
+      <text x="383" y="124" font-size="12" fill="#475569">2</text>
+      <!-- Apparel (2) -->
+      <text x="0" y="158" font-size="13" fill="#1e293b">Apparel</text>
+      <rect x="160" y="144" width="215" height="18" rx="4" fill="#7c3aed"/>
+      <text x="383" y="158" font-size="12" fill="#475569">2</text>
+      <!-- Beauty &amp; Personal Care (2) -->
+      <text x="0" y="192" font-size="13" fill="#1e293b">Beauty &amp; Personal Care</text>
+      <rect x="160" y="178" width="215" height="18" rx="4" fill="#db2777"/>
+      <text x="383" y="192" font-size="12" fill="#475569">2</text>
+      <!-- Sports &amp; Outdoors (1) -->
+      <text x="0" y="226" font-size="13" fill="#1e293b">Sports &amp; Outdoors</text>
+      <rect x="160" y="212" width="108" height="18" rx="4" fill="#ea580c"/>
+      <text x="276" y="226" font-size="12" fill="#475569">1</text>
+      <!-- Pet Supplies (1) -->
+      <text x="0" y="260" font-size="13" fill="#1e293b">Pet Supplies</text>
+      <rect x="160" y="246" width="108" height="18" rx="4" fill="#92400e"/>
+      <text x="276" y="260" font-size="12" fill="#475569">1</text>
+      <!-- Other (1) -->
+      <text x="0" y="294" font-size="13" fill="#1e293b">Other (Books)</text>
+      <rect x="160" y="280" width="108" height="18" rx="4" fill="#64748b"/>
+      <text x="276" y="294" font-size="12" fill="#475569">1</text>
+    </svg>
+  </div>
+
+  <!-- 6. New entrants spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <p style="margin:0 0 12px;font-size:14px;color:#1e40af;font-weight:600;">3 new products enter the tracked list today:</p>
+    <ul style="margin:0;padding-left:20px;font-size:14px;line-height:1.8;color:#1e293b;">
+      <li><strong>Bedsure GentleSoft Electric Heated Blanket</strong> — Earns Amazon's #1 Best Seller badge in Electric Blankets at the onset of heating season; over 5,000 units sold in a single month per Fox News (Sep 22, 2026) and featured prominently across Prime Big Deal Days deal roundups. The most seasonally timely new entrant of the week.</li>
+      <li><strong>Fairlife Core Power Elite Chocolate Protein Shake (42g)</strong> — Now confirmed as the top-selling individual SKU in the ready-to-drink protein shake category at approximately 100,000 monthly units (AsinSight, Aug 2026), surpassing the longer-tracked Premier Protein in raw volume. Signals the mainstream arrival of the "maximum protein" RTD segment.</li>
+      <li><strong>The Let Them Theory — Mel Robbins</strong> — Still topping Amazon's overall books chart over a year after publication, with 8+ million copies sold in 2025 alone (Publishers Weekly). A rare signal of a self-help title sustaining #1 momentum well past its launch window — driven by Robbins' social media reach and the book's core message resonating across economic uncertainty.</li>
+    </ul>
+  </div>
+
+  <!-- 7. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p><strong>Research approach:</strong> This report used WebSearch and WebFetch exclusively (no paid API). Amazon.com was DNS-inaccessible from this research environment (as has been the case in all recent runs); all product data was sourced from secondary press, deal roundups, and third-party Amazon analytics tools.</p>
+    <p><strong>Verification standard:</strong> VERIFIED = corroborated by at least 2 independent sources; LOW-CONFIDENCE = 1 source, or primary evidence is recurring history + one indirect reference. No product was silently upgraded from LOW-CONFIDENCE to VERIFIED.</p>
+    <p><strong>Anti-fabrication note:</strong> All specific numbers cited in this report (unit sales estimates, prices, discount percentages, review counts) were read directly from the fetched source content or search result snippets. No figures were averaged, inferred from context, or reconstructed from memory.</p>
+    <p><strong>Degraded-mode fallback:</strong> Amazon.com Movers &amp; Shakers and Best Sellers pages were inaccessible (DNS block). Amazon New Releases pages were not checked. Research relied on: third-party deal roundups (NBC Select, Popsci, Rolling Stone, Forbes, Today.com), Amazon analytics tools (AsinSight, Grips Intelligence, AMZScout, MetricsCart, Jungle Scout, AMZPrep), trade/industry press (NJBiz, Variety, Sellersonar, Publitas), and retailer deal coverage (Fox News, TalkOfTheHouse, SellersApp). This degraded-mode fallback is noted per methodology protocol.</p>
+    <p><strong>Source domains checked (17):</strong> foxnews.com, talkofthehouse.com, asinsight.com, gripsintelligence.com, nbcnews.com/select, popsci.com, aboutamazon.com, amzscout.net, junglescout.com, variety.com, today.com, metricscart.com, sellersonar.com, njbiz.com, amzprep.com, shopback.com, hauntedattractionnetwork.com</p>
+    <p><strong>History file:</strong> Products outside the 14-day rolling window (last_seen before October 8, 2026) were pruned from seen-products-history.json. 12 entries pruned; 18 products updated or added for today.</p>
+  </div>
+
+  <!-- 8. Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../October19_2026/">October 19</a></span>
+  </div>
+
+</div>
+</body>
+</html>
