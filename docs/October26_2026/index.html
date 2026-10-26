@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Top Sellers — October 26, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  /* 1. Header band */
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  /* 2. Executive summary */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  /* 3. Quick stats */
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 150px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  /* 4. Top movers grid */
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
+  .card-meta { font-size: 12.5px; color: var(--muted); }
+  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .card-sources a { color: #2563eb; text-decoration: none; }
+
+  /* 5. Category chart */
+  .chart-wrap { padding: 10px 6px; }
+
+  /* 6. New entrants spotlight */
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+
+  /* 7. Methodology footer */
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  /* 8. Footer nav */
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <div class="date">October 26, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 11 sources checked</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">October 26, 2026 sits in the collision zone between Halloween's final stretch (five days out) and the early-season holiday shopping warmup — and both forces are visible across today's list. Five genuinely new entrants appear: the Pokémon TCG 30th Celebration Elite Trainer Box leads the Toys &amp; Games category as a collector-driven anniversary product already named to Amazon's 2026 Top 100 Toys list; the Ninja CREAMi makes its first appearance after hitting its Prime Day price floor on October 7; and both the Owala FreeSip water bottle and CeraVe Moisturizing Cream reflect the continued dominance of hydration culture and accessible dermatologist-grade skincare respectively. Post-Prime Day momentum is visible throughout recurring entries — Apple AirPods Pro 3, Premier Protein Shake, and Levoit's cordless vacuum all rode deal-season discounts to top-seller status and remain there. The Inflatable T-Rex Halloween Costume (recurring for four consecutive reports) is at peak demand this week and expected to drop sharply after October 31. <strong>Methodology note:</strong> Amazon.com was inaccessible via direct fetch in today's automated run due to DNS failure; all data was gathered from secondary press roundups, third-party sales trackers (AMZScout, ASINsight), and web search snippets. Confidence levels are applied conservatively throughout.</div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">18</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="num">7</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">11</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">12</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">6</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Top movers grid -->
+  <h2 class="section-title">Top Movers</h2>
+  <div class="grid">
+
+    <!-- VERIFIED + NEW first -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Cascade Platinum Plus ActionPacs Dishwasher Pods</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Amazon's October Prime Day drove mass purchasing of household staples, and Cascade Platinum Plus led the dishwasher-pod category. Third-party tracker ASINsight estimated approximately 90,000 units sold monthly as of July 2026, indicating strong year-round demand that Prime Day deal pricing amplified significantly. Dishwasher pods are a classic bulk-buy category during sale events — consumers stock up on per-unit cost savings.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — consistent household staple; no structural growth catalyst beyond deal-event lift and subscription adoption.</div>
+      <div class="card-meta">Price: ~$14–20 (varies by pod count); price not confirmed directly from Amazon page today</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com/select/shopping/bestselling-october-prime-day-2026-deals-rcna601940">nbcnews.com</a> (Oct 26, 2026), <a href="https://www.asinsight.com/report/US/cascade-platinum-dishwasher-pods">asinsight.com</a> (Oct 26, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Pokémon TCG: 30th Celebration Elite Trainer Box</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Pokémon 30th Anniversary set (released September 16, 2026) is driving strong collector demand — the Elite Trainer Box includes exclusive Pikachu card variants across 9 booster packs with 30 unique Pikachu rare cards to collect. Amazon named it to its 2026 Top 100 Toys list, and it appears in multiple trending-toys roundups for the year. A convergence of collector FOMO, early holiday gift-season buying, and franchise milestone timing is driving sales; secondary market listings on eBay have reached ~$400, signaling supply pressure at retail's ~$50 price point.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau — limited-edition anniversary product; demand will fade as initial launch enthusiasm and secondary-market premium normalize, though holiday gifting may extend the run through December.</div>
+      <div class="card-meta">~$49.99 retail (third-party retailer pricing; Amazon price not confirmed from today's sources)</div>
+      <div class="card-sources">Sources: <a href="https://toybook.com/amazon-top-100-toys-2026/">toybook.com</a> (Oct 26, 2026), <a href="https://abcnews.com/GMA/Shop/top-trending-toys-2026/story?id=136566666">abcnews.com</a> (Oct 26, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Ninja CREAMi Ice Cream Maker (NC299AMZ)</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Ninja CREAMi hit its Amazon price floor during the October 7 Prime Day sale per CNN Underscored, triggering a burst of first-time purchases. The machine went viral in early 2026 for enabling high-protein frozen desserts from protein shake ingredients — a crossover between the fitness and food-entertainment categories that resonated strongly on social media. ASINsight tracking shows consistent ~10,000–20,000 monthly unit sales through mid-2026, confirming demand persisted well beyond the initial viral moment.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau — the initial viral window has passed; Prime Day likely activated the remaining pool of interested buyers. Expect stable but not growing demand heading into winter, when ice cream demand naturally dips.</div>
+      <div class="card-meta">Price not confirmed from today's sources; CNN confirmed it was at its Amazon lowest price during Oct 7 Prime Day</div>
+      <div class="card-sources">Sources: <a href="https://www.cnn.com/cnn-underscored/deals/best-amazon-prime-day-kitchen-deals-2026-10-07">cnn.com</a> (Oct 26, 2026), <a href="https://www.asinsight.com/report/US/ninja-creami-ice-cream-maker">asinsight.com</a> (Oct 26, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Owala FreeSip 24oz Stainless Steel Water Bottle</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Owala FreeSip 24oz Denim is currently the #1 bestseller in Amazon's Sports &amp; Outdoors category per the Amazon Best Sellers page. ASINsight consistently ranked it the fastest-growing water bottle product through mid-2026, with approximately 20,000 monthly units sold. Owala now occupies the aspirational "everyday carry" hydration space between Stanley (premium/lifestyle) and generic options, at a compelling ~$22–30 price point. The fall-winter season drives demand for insulated bottles used for both hot and cold beverages.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — brand momentum is accelerating into Q4 holiday gift season; strong social media presence and gift-able price point position it well for Black Friday.</div>
+      <div class="card-meta">~$22–30 (ASINsight/Slickdeals pricing data, mid-2026)</div>
+      <div class="card-sources">Sources: <a href="https://www.amazon.com/Best-Sellers-Sports-Outdoors/zgbs/sporting-goods">amazon.com</a> (Best Sellers Sports &amp; Outdoors, search snippet, Oct 26, 2026), <a href="https://www.asinsight.com/report/US/owala-freesip-stainless-steel-water-bottle">asinsight.com</a> (Oct 26, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">CeraVe Moisturizing Cream 19oz</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">CeraVe's 19oz moisturizing cream is Amazon's #3 product in Face Moisturizers with 141,851+ reviews, and ASINsight estimated approximately 100,000 monthly units sold as of July 2026, placing it among the highest-volume SKUs in all of Amazon Beauty. AMZScout's October 12 tracker also named it among top Amazon beauty sellers. October's arrival of colder, drier air drives an annual demand spike as consumers begin seasonal moisturizing routines — a pattern that intensifies through November and December.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — perennial top seller with a predictable cold-weather seasonal lift; brand has category-leading dermatologist endorsements and pharmacy-aisle positioning that sustains year-round demand.</div>
+      <div class="card-meta">~$14–18 for 19oz jar (category pricing data)</div>
+      <div class="card-sources">Sources: <a href="https://amzscout.net/blog/best-selling-products-on-amazon/">amzscout.net</a> (Oct 26, 2026), <a href="https://www.asinsight.com/report/US/cerave-moisturizing-cream">asinsight.com</a> (Oct 26, 2026)</div>
+    </div>
+
+    <!-- VERIFIED + RECURRING -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Mighty Patch Original Pimple Patches (36-ct)</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 3/3)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">AMZScout's October 12, 2026 tracker ranked this the #1 Amazon product by 30-day unit volume with approximately 178,963 units sold — a number this report has seen confirmed in multiple prior runs. Hero Cosmetics' TikTok- and skincare-influencer-driven appeal shows no sign of fading; the product converts casual browsers into repeat subscribers at a ~$12 price point that eliminates purchase hesitation.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — no new viral catalyst driving it; consistent evergreen demand from the skincare community with strong repeat-purchase rates via Subscribe &amp; Save.</div>
+      <div class="card-meta">~$12 (36-count); price not directly confirmed from today's sources</div>
+      <div class="card-sources">Sources: <a href="https://amzscout.net/blog/best-selling-products-on-amazon/">amzscout.net</a> (Oct 26, 2026), <a href="https://www.today.com/shop/amazon-customer-loved-october-2026-rcna603059">today.com</a> (search snippet, Oct 26, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">HydroJug Traveler 32oz Insulated Tumbler</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 3/3)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">AMZScout's October 12, 2026 tracker placed this as the #2 Amazon product by estimated 30-day units with approximately 168,979 units sold. The 32oz form factor hits the sweet spot between portability and all-day hydration coverage; the insulated design suits both hot-coffee and cold-water use, broadening its seasonal appeal as fall temperatures drop. Hydration culture continues to drive high repeat-purchase rates in the tumbler category.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — strong incumbent position; market is competitive with Owala, Stanley, and others making gains, but HydroJug maintains high unit volume through brand loyalty and value positioning.</div>
+      <div class="card-meta">~$35–45; price not directly confirmed from today's sources</div>
+      <div class="card-sources">Sources: <a href="https://amzscout.net/blog/best-selling-products-on-amazon/">amzscout.net</a> (Oct 26, 2026), <a href="https://www.today.com/shop/amazon-customer-loved-october-2026-rcna603059">today.com</a> (search snippet, Oct 26, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirPods Pro 3</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 6/6)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Apple's AirPods Pro 3 launched in September 2026 to strong demand and NBC News named them the "best tech deal" of October Prime Day at $234 (down from $249 MSRP). The combination of a fresh hardware launch, upgraded noise-cancellation, and Prime Day deal pricing has kept them at the top of the Electronics chart for six consecutive reports. Apple's loyal customer base and the AirPods Pro's cross-platform iCloud audio handoff features sustain demand well beyond the launch window.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — post-launch demand normalizing; another boost expected at Black Friday/Cyber Monday. No structural decline in Apple's earbud market leadership.</div>
+      <div class="card-meta">$234 (confirmed from NBC News, October 2026)</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com/select/shopping/amazon-bestsellers-october-prime-day-2026-rcna600365">nbcnews.com</a> (Oct 26, 2026), <a href="https://www.nbcnews.com/select/shopping/bestselling-october-prime-day-2026-deals-rcna601940">nbcnews.com</a> (Oct 26, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Premier Protein 30g High Protein Shake (12-Pack)</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 10/10)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">ASINsight estimated approximately 100,000 monthly units sold in July 2026, placing Premier Protein at the top of all high-protein snack products on Amazon by volume. NBC News included it in its October Prime Day bestsellers list, confirming it held top-seller status through the sale event. Americans' sustained prioritization of protein as the primary macronutrient — accelerated by GLP-1 drug cultural influence — makes this a structural top-seller rather than a trend-dependent one.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — long-term secular trend in protein consumption with no meaningful challenge to category leadership; Subscribe &amp; Save subscriptions likely drive significant recurring volume.</div>
+      <div class="card-meta">~$28–35 for 12-pack; price not directly confirmed from today's sources</div>
+      <div class="card-sources">Sources: <a href="https://www.asinsight.com/report/US/high-protein-snacks">asinsight.com</a> (Oct 26, 2026), <a href="https://www.nbcnews.com/select/shopping/bestselling-october-prime-day-2026-deals-rcna601940">nbcnews.com</a> (Oct 26, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Dawn Platinum Powerwash Dish Spray Bundle</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2/2)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">NBC News listed Dawn Platinum Powerwash among its October Prime Day bestsellers alongside Cascade pods, Energizer batteries, and Levoit vacuum — a cluster confirming household staples dominate Prime Day volume purchasing. The spray-format innovation over traditional dish soap (spray directly on dishes, let sit, rinse — no dilution needed) drives strong word-of-mouth. Bundle pricing during Prime Day amplified the deal-stacking appeal for this repeat-purchase essential.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — established product with strong brand recognition; incremental growth tied to subscription adoption and promotional events.</div>
+      <div class="card-meta">~$10–15 bundle; price not directly confirmed from today's sources</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com/select/shopping/bestselling-october-prime-day-2026-deals-rcna601940">nbcnews.com</a> (Oct 26, 2026), <a href="https://amzprep.com/best-selling-products-amazon/">amzprep.com</a> (Oct 26, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Levoit LVAC-200 Cordless Vacuum Cleaner</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2/2)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">NBC News listed the Levoit LVAC-200 alongside Dawn, Cascade, and Energizer as an October Prime Day bestseller. Levoit leveraged strong Amazon trust ratings built from its air purifier line to expand into cordless vacuums, a strategy that worked — consumer confidence in the brand transferred cleanly. Cordless vacuums remain a high-demand upgrade category as shoppers trade up from corded models and robot vacuums struggle to handle stairs and upholstery.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — post-Prime Day residual demand is strong; holiday gifting may drive another lift; the broader corded-to-cordless transition provides structural tailwind.</div>
+      <div class="card-meta">Price not confirmed from today's sources</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com/select/shopping/bestselling-october-prime-day-2026-deals-rcna601940">nbcnews.com</a> (Oct 26, 2026), <a href="https://amzprep.com/best-selling-products-amazon/">amzprep.com</a> (Oct 26, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Hanes EcoSmart Fleece Full-Zip Hoodie</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (16 appearances since Aug 10)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">ASINsight's June 2026 tracker ranked the Hanes EcoSmart zip-up #1 in men's fleece jackets and hoodies on Amazon with approximately 3,000 monthly sales. October's seasonal temperature drop drives consistent demand for affordable fleece, and Hanes's reputation for durable basics at accessible price points gives it strong search visibility and repeat-purchase rates. This is one of the most durable recurring entries in this archive, appearing in 16 of the past reports.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — heading into the coldest months; holiday gifting for basics amplifies demand through December; fleece hoodies remain a perennial gift-list staple.</div>
+      <div class="card-meta">~$20–25; price not directly confirmed from today's sources</div>
+      <div class="card-sources">Sources: <a href="https://www.asinsight.com/report/US/men%27s-fleece-jackets-%26-coats">asinsight.com</a> (Oct 26, 2026), <a href="https://amzscout.net/blog/best-selling-products-on-amazon/">amzscout.net</a> (Oct 26, 2026)</div>
+    </div>
+
+    <!-- LOW-CONFIDENCE items last -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Inflatable T-Rex Halloween Costume</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 4/4)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">This costume has appeared in four consecutive reports as it reaches its absolute demand peak — Halloween is five days away. The inflatable dinosaur format has been a viral Halloween perennial for several years, and its novelty translates well to social sharing, driving organic discovery through the final week before the holiday. Halloween costume roundups and search data confirm inflatables remain a top costume category. LOW-CONFIDENCE because no new independent press source specifically named this product today; confidence based on consistent prior-report history and category trend data.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — Halloween is days away; post-October 31 demand collapses to near zero until next September. This is a peak-week story, not a growth story.</div>
+      <div class="card-meta">~$60–80; price not confirmed from today's sources</div>
+      <div class="card-sources">Sources: seen-products-history.json (4 consecutive appearances Oct 12–22, 2026), Halloween costume trend search results — <a href="https://the-gadgeteer.com/2026/10/15/halloween-costumes-2026-google-frightgeist-amazon/">the-gadgeteer.com</a> (Oct 26, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">INABA Churu Lickable Purée Cat Treats</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (25+ appearances since Jul 9)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">INABA Churu has appeared in 25 or more of this report's runs since July 9, 2026 — making it the second most durable recurring product in the entire archive. Its lickable tube format differentiates it from dry treats; cats that reject conventional treats often accept the liquid form, giving it outsized word-of-mouth among cat owners. Pet treat trend data from Acadia identifies lickable/puree treats as the fastest-growing subcategory of Amazon pet supplies in 2026. LOW-CONFIDENCE today because no fresh product-specific press source was found in today's search results.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — the lickable treat category continues expanding; no structural threat to Churu's leadership; modest holiday bump likely as pet owners buy for pets.</div>
+      <div class="card-meta">~$15–20 for multi-pack; price not confirmed from today's sources</div>
+      <div class="card-sources">Sources: seen-products-history.json (25+ appearances since Jul 9, 2026), <a href="https://blog.acadia.io/blog/amazon-pet-supplies-5-trends">acadia.io</a> (pet supplies trend data, Oct 26, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Amazon Kindle 2026 (Redesigned Lineup)</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 4/4)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Amazon's 2026 Kindle lineup (Base, Paperwhite, Colorsoft) launched to strong demand in October 2026, with the Paperwhite and new Colorsoft models shipping October 28. The redesigned flush-front, edge-to-edge screen form factor is the biggest hardware refresh in Kindle's history and generated significant press and consumer interest heading into holiday season. E-reader adoption has been rising alongside the screen-time reduction trend among readers who want a distraction-free reading device. LOW-CONFIDENCE today: no fresh press source specifically confirmed current sales rank; confidence based on four consecutive appearances in this archive and Amazon's first-party product launch.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — prime holiday gifting season approaching; Amazon will feature Kindle prominently in Black Friday/Cyber Monday; Colorsoft color e-ink model is a new category that hasn't been fully absorbed yet.</div>
+      <div class="card-meta">Starting at ~$99 (base model); price not directly confirmed from today's sources</div>
+      <div class="card-sources">Sources: seen-products-history.json (4 consecutive appearances Oct 12–22, 2026), <a href="https://amzprep.com/best-selling-products-amazon/">amzprep.com</a> (Oct 26, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">NOONI Appleseed Lip Oil Set</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">AMZScout's October 12, 2026 tracker flagged this as a trending item with a +62% month-over-month sales increase — a steep acceleration suggesting a recent viral moment or influencer push. K-beauty products and lip oils specifically have been gaining consistently throughout 2026 on the back of "glass skin" and "juicy lip" aesthetics popular across TikTok and Instagram beauty communities. LOW-CONFIDENCE: only one source (AMZScout) specifically named this product today; the +62% figure is confirmed from the AMZScout tracker snippet but is from October 12 data, not today's live data.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Possible Plateau — a +62% trend spike often reflects a viral moment rather than a sustained structural shift; expect normalization in 4–8 weeks unless a second catalyst (celebrity endorsement, holiday gift guide feature) emerges.</div>
+      <div class="card-meta">~$12; price not confirmed from today's sources</div>
+      <div class="card-sources">Sources: <a href="https://amzscout.net/blog/best-selling-products-on-amazon/">amzscout.net</a> (Oct 26, 2026 — 1 source; LOW-CONFIDENCE)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Energizer AA/AAA Battery Multi-Pack</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">NBC News listed Energizer batteries among its October Prime Day bestsellers alongside Dawn, Cascade, and Levoit — reflecting the classic pattern of consumers stocking up on household essentials during sale events. Halloween decorations, toys, and electronics all drive battery demand in the last week of October. The upcoming holiday season (November–December) adds additional pressure as gift recipients need batteries for new toys and devices. LOW-CONFIDENCE: based on a single brief mention in the NBC Prime Day bestsellers list; no second independent source confirmed today.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — evergreen household staple; no structural growth catalyst beyond seasonal demand patterns and sale-event bulk buying.</div>
+      <div class="card-meta">~$12–16 (multi-pack); price not confirmed from today's sources</div>
+      <div class="card-sources">Sources: <a href="https://www.nbcnews.com/select/shopping/bestselling-october-prime-day-2026-deals-rcna601940">nbcnews.com</a> (Oct 26, 2026 — 1 source; LOW-CONFIDENCE)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">NatureWise Vitamin D3 5000IU Mini Softgels</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 5/5)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">NatureWise Vitamin D3 has appeared on this list in five consecutive reports since October 5. As Northern US latitudes enter reduced-daylight months, vitamin D supplementation demand rises sharply — this is the established seasonal pattern for this category, and October 26 sits at the inflection point. ASINsight data on comparable products (Nature Made D3 1000IU) shows ~50,000+ monthly units across the vitamin D3 segment. LOW-CONFIDENCE today: no fresh product-specific press source confirmed NatureWise specifically; category-level data is used as corroboration; NatureWise and Nature Made are distinct products.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — peak seasonal demand window expected through November–January as daylight hours decrease; this is the highest-demand quarter of the year for vitamin D supplements.</div>
+      <div class="card-meta">Price not confirmed from today's sources</div>
+      <div class="card-sources">Sources: seen-products-history.json (5 appearances Oct 5–22, 2026), <a href="https://www.asinsight.com/report/US/nature-made-vitamin-d3-5000-iu">asinsight.com</a> (category-level D3 data, Oct 26, 2026)</div>
+    </div>
+
+  </div>
+
+  <!-- 5. Category breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="100%" height="316" viewBox="0 0 700 316">
+      <!-- Row 0: Home & Kitchen (4) -->
+      <text x="0" y="22" font-size="13" fill="#1e293b">Home &amp; Kitchen</text>
+      <rect x="160" y="8" width="460" height="18" rx="4" fill="#16a34a"/>
+      <text x="628" y="22" font-size="12" fill="#475569">4</text>
+      <!-- Row 1: Beauty & Personal Care (3) -->
+      <text x="0" y="56" font-size="13" fill="#1e293b">Beauty &amp; Personal Care</text>
+      <rect x="160" y="42" width="345" height="18" rx="4" fill="#db2777"/>
+      <text x="513" y="56" font-size="12" fill="#475569">3</text>
+      <!-- Row 2: Electronics (2) -->
+      <text x="0" y="90" font-size="13" fill="#1e293b">Electronics</text>
+      <rect x="160" y="76" width="230" height="18" rx="4" fill="#2563eb"/>
+      <text x="398" y="90" font-size="12" fill="#475569">2</text>
+      <!-- Row 3: Apparel (2) -->
+      <text x="0" y="124" font-size="13" fill="#1e293b">Apparel</text>
+      <rect x="160" y="110" width="230" height="18" rx="4" fill="#7c3aed"/>
+      <text x="398" y="124" font-size="12" fill="#475569">2</text>
+      <!-- Row 4: Sports & Outdoors (2) -->
+      <text x="0" y="158" font-size="13" fill="#1e293b">Sports &amp; Outdoors</text>
+      <rect x="160" y="144" width="230" height="18" rx="4" fill="#ea580c"/>
+      <text x="398" y="158" font-size="12" fill="#475569">2</text>
+      <!-- Row 5: Health & Household (2) -->
+      <text x="0" y="192" font-size="13" fill="#1e293b">Health &amp; Household</text>
+      <rect x="160" y="178" width="230" height="18" rx="4" fill="#0d9488"/>
+      <text x="398" y="192" font-size="12" fill="#475569">2</text>
+      <!-- Row 6: Grocery (1) -->
+      <text x="0" y="226" font-size="13" fill="#1e293b">Grocery</text>
+      <rect x="160" y="212" width="115" height="18" rx="4" fill="#65a30d"/>
+      <text x="283" y="226" font-size="12" fill="#475569">1</text>
+      <!-- Row 7: Toys & Games (1) -->
+      <text x="0" y="260" font-size="13" fill="#1e293b">Toys &amp; Games</text>
+      <rect x="160" y="246" width="115" height="18" rx="4" fill="#f59e0b"/>
+      <text x="283" y="260" font-size="12" fill="#475569">1</text>
+      <!-- Row 8: Pet Supplies (1) -->
+      <text x="0" y="294" font-size="13" fill="#1e293b">Pet Supplies</text>
+      <rect x="160" y="280" width="115" height="18" rx="4" fill="#92400e"/>
+      <text x="283" y="294" font-size="12" fill="#475569">1</text>
+    </svg>
+  </div>
+
+  <!-- 6. New entrants spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <ul style="margin:0;padding:0 0 0 18px;line-height:2;">
+      <li><strong>Cascade Platinum Plus ActionPacs Dishwasher Pods</strong> (Home &amp; Kitchen) — Prime Day-driven household staple bulk buying; estimated ~90K monthly units (ASINsight); first appearance on this list.</li>
+      <li><strong>Pokémon TCG: 30th Celebration Elite Trainer Box</strong> (Toys &amp; Games) — Anniversary collector set on Amazon's 2026 Top 100 Toys list; secondary market pressure (~$400 eBay) signals strong demand vs. limited supply.</li>
+      <li><strong>Ninja CREAMi Ice Cream Maker</strong> (Home &amp; Kitchen) — Hit its Amazon price floor during October 7 Prime Day (CNN); sustained by social media protein-ice-cream trend from earlier in 2026.</li>
+      <li><strong>Owala FreeSip 24oz Stainless Steel Water Bottle</strong> (Sports &amp; Outdoors) — Currently #1 in Amazon Sports &amp; Outdoors; fastest-growing water bottle through mid-2026 per ASINsight; ~20K monthly units.</li>
+      <li><strong>CeraVe Moisturizing Cream 19oz</strong> (Beauty &amp; Personal Care) — ~100K monthly units (ASINsight July 2026); seasonal cold-weather dry-skin demand surge now underway.</li>
+      <li><strong>NOONI Appleseed Lip Oil Set</strong> (Beauty &amp; Personal Care, LOW-CONFIDENCE) — +62% month-over-month trend spike flagged by AMZScout Oct 12 data; single-source finding.</li>
+      <li><strong>Energizer AA/AAA Battery Multi-Pack</strong> (Health &amp; Household, LOW-CONFIDENCE) — Listed in NBC Prime Day bestsellers; Halloween decoration demand at peak this week.</li>
+    </ul>
+  </div>
+
+  <!-- 7. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p><strong>Data collection:</strong> This run relied entirely on WebSearch-derived data (search engine snippets and secondary press coverage). Amazon.com Movers &amp; Shakers, Best Sellers, and all Amazon product pages were inaccessible due to DNS failure on every attempt. Major editorial press sites (NBCNews.com, CNN.com, TODAY.com, HuffPost.com, TheStreet.com) also failed DNS resolution when fetched directly; their content was accessed only as text snippets from search engine results. All direct WebFetch calls to third-party analytics sites (AMZScout, ASINsight, BetterReport) also failed DNS resolution.</p>
+    <p><strong>Verification rule:</strong> VERIFIED = corroborated by at least 2 independent sources. Because Amazon's own pages were unavailable, two distinct secondary sources (different publications or different analytics reports) were required for a VERIFIED rating. LOW-CONFIDENCE = only one source found, or sources consist of history-file prior appearances without a fresh external corroboration. LOW-CONFIDENCE items are labeled visibly in each card and were not silently upgraded.</p>
+    <p><strong>Data recency:</strong> NBC News Prime Day bestseller roundups are approximately 4–19 days old as of today (published Oct 7–22). AMZScout tracker data is from October 12, 2026. ASINsight reports are from June–July 2026 (3–4 months old) and used for category-level corroboration, not live ranking. History-file data reflects this project's own verified findings from prior runs.</p>
+    <p><strong>Anti-fabrication note:</strong> All specific figures cited in cards (178,963 units, 168,979 units, ~90,000 units, ~100,000 units, ~20,000 units, $234, +62%) were confirmed as appearing verbatim in the search result snippet for the cited source before inclusion. Figures that sounded plausible but could not be located in the actual snippet text were omitted and replaced with "price not confirmed" or similar language.</p>
+    <p><strong>Source domains consulted (11 total):</strong> nbcnews.com, cnn.com, amzscout.net, asinsight.com, amazon.com (search snippet), toybook.com, abcnews.com/goodmorningamerica.com, today.com, amzprep.com, acadia.io (pet supplies), the-gadgeteer.com</p>
+  </div>
+
+  <!-- 8. Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../October22_2026/">October 22</a></span>
+  </div>
+
+</div>
+</body>
+</html>

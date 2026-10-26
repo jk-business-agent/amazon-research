@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-22",
+  "last_updated": "2026-10-26",
   "window_days": 14,
   "products": [
     {
@@ -7,8 +7,35 @@
       "name": "INABA Churu Lickable Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-10-22",
-      "seen_dates": ["2026-07-09", "2026-07-13", "2026-07-16", "2026-07-23", "2026-07-27", "2026-07-30", "2026-08-03", "2026-08-06", "2026-08-10", "2026-08-13", "2026-08-24", "2026-08-27", "2026-09-03", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-08", "2026-10-12", "2026-10-15", "2026-10-19", "2026-10-22"]
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-07-09",
+        "2026-07-13",
+        "2026-07-16",
+        "2026-07-23",
+        "2026-07-27",
+        "2026-07-30",
+        "2026-08-03",
+        "2026-08-06",
+        "2026-08-10",
+        "2026-08-13",
+        "2026-08-24",
+        "2026-08-27",
+        "2026-09-03",
+        "2026-09-10",
+        "2026-09-14",
+        "2026-09-17",
+        "2026-09-21",
+        "2026-09-24",
+        "2026-09-28",
+        "2026-10-01",
+        "2026-10-08",
+        "2026-10-12",
+        "2026-10-15",
+        "2026-10-19",
+        "2026-10-22",
+        "2026-10-26"
+      ]
     },
     {
       "key": "cosrx-advanced-snail-96-mucin-power-essence",
@@ -16,15 +43,53 @@
       "category": "Beauty & Personal Care",
       "first_seen": "2026-08-10",
       "last_seen": "2026-10-22",
-      "seen_dates": ["2026-08-10", "2026-08-13", "2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05", "2026-10-15", "2026-10-22"]
+      "seen_dates": [
+        "2026-08-10",
+        "2026-08-13",
+        "2026-08-17",
+        "2026-08-20",
+        "2026-08-24",
+        "2026-08-27",
+        "2026-08-31",
+        "2026-09-03",
+        "2026-09-07",
+        "2026-09-10",
+        "2026-09-14",
+        "2026-09-17",
+        "2026-09-21",
+        "2026-09-24",
+        "2026-09-28",
+        "2026-10-01",
+        "2026-10-05",
+        "2026-10-15",
+        "2026-10-22"
+      ]
     },
     {
       "key": "hanes-ecosmart-fleece-hoodie",
       "name": "Hanes EcoSmart Fleece Hoodie",
       "category": "Apparel",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-10-22",
-      "seen_dates": ["2026-08-10", "2026-08-20", "2026-08-24", "2026-08-27", "2026-09-03", "2026-09-07", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05", "2026-10-15", "2026-10-19", "2026-10-22"]
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-08-10",
+        "2026-08-20",
+        "2026-08-24",
+        "2026-08-27",
+        "2026-09-03",
+        "2026-09-07",
+        "2026-09-14",
+        "2026-09-17",
+        "2026-09-21",
+        "2026-09-24",
+        "2026-09-28",
+        "2026-10-01",
+        "2026-10-05",
+        "2026-10-15",
+        "2026-10-19",
+        "2026-10-22",
+        "2026-10-26"
+      ]
     },
     {
       "key": "nutricost-creatine-monohydrate",
@@ -32,7 +97,26 @@
       "category": "Health & Household",
       "first_seen": "2026-08-17",
       "last_seen": "2026-10-22",
-      "seen_dates": ["2026-08-17", "2026-08-20", "2026-08-24", "2026-08-27", "2026-08-31", "2026-09-03", "2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05", "2026-10-15", "2026-10-19", "2026-10-22"]
+      "seen_dates": [
+        "2026-08-17",
+        "2026-08-20",
+        "2026-08-24",
+        "2026-08-27",
+        "2026-08-31",
+        "2026-09-03",
+        "2026-09-07",
+        "2026-09-10",
+        "2026-09-14",
+        "2026-09-17",
+        "2026-09-21",
+        "2026-09-24",
+        "2026-09-28",
+        "2026-10-01",
+        "2026-10-05",
+        "2026-10-15",
+        "2026-10-19",
+        "2026-10-22"
+      ]
     },
     {
       "key": "natures-way-sambucus-elderberry-gummies",
@@ -40,7 +124,21 @@
       "category": "Health & Household",
       "first_seen": "2026-09-07",
       "last_seen": "2026-10-22",
-      "seen_dates": ["2026-09-07", "2026-09-10", "2026-09-14", "2026-09-17", "2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05", "2026-10-12", "2026-10-15", "2026-10-19", "2026-10-22"]
+      "seen_dates": [
+        "2026-09-07",
+        "2026-09-10",
+        "2026-09-14",
+        "2026-09-17",
+        "2026-09-21",
+        "2026-09-24",
+        "2026-09-28",
+        "2026-10-01",
+        "2026-10-05",
+        "2026-10-12",
+        "2026-10-15",
+        "2026-10-19",
+        "2026-10-22"
+      ]
     },
     {
       "key": "amazon-fire-tv-stick-4k-max",
@@ -48,31 +146,34 @@
       "category": "Electronics",
       "first_seen": "2026-09-21",
       "last_seen": "2026-10-15",
-      "seen_dates": ["2026-09-21", "2026-10-01", "2026-10-05", "2026-10-08", "2026-10-12", "2026-10-15"]
-    },
-    {
-      "key": "kindle-paperwhite",
-      "name": "Kindle Paperwhite (Latest Generation)",
-      "category": "Electronics",
-      "first_seen": "2026-09-21",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-09-21", "2026-10-08"]
-    },
-    {
-      "key": "ring-battery-doorbell-2k-plus",
-      "name": "Ring Battery Doorbell 2K Plus",
-      "category": "Electronics",
-      "first_seen": "2026-09-21",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-09-21", "2026-10-01", "2026-10-08"]
+      "seen_dates": [
+        "2026-09-21",
+        "2026-10-01",
+        "2026-10-05",
+        "2026-10-08",
+        "2026-10-12",
+        "2026-10-15"
+      ]
     },
     {
       "key": "premier-protein-high-protein-shake",
       "name": "Premier Protein 30g High Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-22",
-      "seen_dates": ["2026-09-21", "2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05", "2026-10-08", "2026-10-12", "2026-10-15", "2026-10-19", "2026-10-22"]
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-09-21",
+        "2026-09-24",
+        "2026-09-28",
+        "2026-10-01",
+        "2026-10-05",
+        "2026-10-08",
+        "2026-10-12",
+        "2026-10-15",
+        "2026-10-19",
+        "2026-10-22",
+        "2026-10-26"
+      ]
     },
     {
       "key": "medicube-zero-pore-toner-pads",
@@ -80,15 +181,30 @@
       "category": "Beauty & Personal Care",
       "first_seen": "2026-09-24",
       "last_seen": "2026-10-15",
-      "seen_dates": ["2026-09-24", "2026-09-28", "2026-10-01", "2026-10-05", "2026-10-12", "2026-10-15"]
+      "seen_dates": [
+        "2026-09-24",
+        "2026-09-28",
+        "2026-10-01",
+        "2026-10-05",
+        "2026-10-12",
+        "2026-10-15"
+      ]
     },
     {
       "key": "apple-airpods-pro-3",
       "name": "Apple AirPods Pro 3",
       "category": "Electronics",
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-22",
-      "seen_dates": ["2026-10-01", "2026-10-08", "2026-10-12", "2026-10-15", "2026-10-19", "2026-10-22"]
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-10-01",
+        "2026-10-08",
+        "2026-10-12",
+        "2026-10-15",
+        "2026-10-19",
+        "2026-10-22",
+        "2026-10-26"
+      ]
     },
     {
       "key": "amazon-echo-dot",
@@ -96,15 +212,16 @@
       "category": "Electronics",
       "first_seen": "2026-09-21",
       "last_seen": "2026-10-22",
-      "seen_dates": ["2026-09-21", "2026-10-01", "2026-10-05", "2026-10-08", "2026-10-12", "2026-10-15", "2026-10-19", "2026-10-22"]
-    },
-    {
-      "key": "crest-3d-whitestrips-professional-effects",
-      "name": "Crest 3D Whitestrips Professional Effects",
-      "category": "Health & Household",
-      "first_seen": "2026-10-01",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-10-01", "2026-10-08"]
+      "seen_dates": [
+        "2026-09-21",
+        "2026-10-01",
+        "2026-10-05",
+        "2026-10-08",
+        "2026-10-12",
+        "2026-10-15",
+        "2026-10-19",
+        "2026-10-22"
+      ]
     },
     {
       "key": "outdoor-animatronic-halloween-ghost",
@@ -112,15 +229,26 @@
       "category": "Home & Kitchen",
       "first_seen": "2026-10-01",
       "last_seen": "2026-10-15",
-      "seen_dates": ["2026-10-01", "2026-10-12", "2026-10-15"]
+      "seen_dates": [
+        "2026-10-01",
+        "2026-10-12",
+        "2026-10-15"
+      ]
     },
     {
       "key": "naturewise-vitamin-d3-5000iu",
       "name": "NatureWise Vitamin D3 5000IU Mini Softgels",
       "category": "Health & Household",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-22",
-      "seen_dates": ["2026-10-05", "2026-10-12", "2026-10-15", "2026-10-19", "2026-10-22"]
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-10-05",
+        "2026-10-12",
+        "2026-10-15",
+        "2026-10-19",
+        "2026-10-22",
+        "2026-10-26"
+      ]
     },
     {
       "key": "breville-barista-express",
@@ -128,23 +256,10 @@
       "category": "Home & Kitchen",
       "first_seen": "2026-10-05",
       "last_seen": "2026-10-12",
-      "seen_dates": ["2026-10-05", "2026-10-12"]
-    },
-    {
-      "key": "vital-proteins-collagen-peptides",
-      "name": "Vital Proteins Collagen Peptides Powder",
-      "category": "Health & Household",
-      "first_seen": "2026-10-08",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-10-08"]
-    },
-    {
-      "key": "blink-wired-floodlight-camera",
-      "name": "Blink Wired Floodlight Camera",
-      "category": "Electronics",
-      "first_seen": "2026-10-08",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-10-08"]
+      "seen_dates": [
+        "2026-10-05",
+        "2026-10-12"
+      ]
     },
     {
       "key": "amazon-essentials-packable-puffer",
@@ -152,79 +267,38 @@
       "category": "Apparel",
       "first_seen": "2026-10-08",
       "last_seen": "2026-10-12",
-      "seen_dates": ["2026-10-08", "2026-10-12"]
-    },
-    {
-      "key": "medicube-age-r-booster-jelly-cream",
-      "name": "Medicube Age-R Booster Jelly Cream",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-10-08",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-10-08"]
-    },
-    {
-      "key": "fitbit-charge-6",
-      "name": "Fitbit Charge 6",
-      "category": "Electronics",
-      "first_seen": "2026-10-08",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-10-08"]
-    },
-    {
-      "key": "laneige-water-sleeping-mask",
-      "name": "LANEIGE Water Sleeping Mask",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-10-08",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-10-08"]
-    },
-    {
-      "key": "lemme-melatonin-magnesium-gummies",
-      "name": "Lemme Melatonin & Magnesium Gummies",
-      "category": "Health & Household",
-      "first_seen": "2026-10-08",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-10-08"]
-    },
-    {
-      "key": "levis-505-regular-fit-jeans",
-      "name": "Levi's 505 Regular Fit Jeans",
-      "category": "Apparel",
-      "first_seen": "2026-10-08",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-10-08"]
-    },
-    {
-      "key": "sony-bravia-6-65-oled-tv",
-      "name": "Sony BRAVIA 6 65\" OLED TV",
-      "category": "Electronics",
-      "first_seen": "2026-10-08",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-10-08"]
-    },
-    {
-      "key": "zanzoon-pokemon-adventures-game",
-      "name": "Zanzoon Pokémon Adventures Electronic Guessing Game",
-      "category": "Toys & Games",
-      "first_seen": "2026-10-08",
-      "last_seen": "2026-10-08",
-      "seen_dates": ["2026-10-08"]
+      "seen_dates": [
+        "2026-10-08",
+        "2026-10-12"
+      ]
     },
     {
       "key": "amazon-kindle-2026-redesign",
       "name": "Amazon Kindle 2026 (Redesigned Lineup — Base, Paperwhite, Colorsoft)",
       "category": "Electronics",
       "first_seen": "2026-10-12",
-      "last_seen": "2026-10-22",
-      "seen_dates": ["2026-10-12", "2026-10-15", "2026-10-19", "2026-10-22"]
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-10-12",
+        "2026-10-15",
+        "2026-10-19",
+        "2026-10-22",
+        "2026-10-26"
+      ]
     },
     {
       "key": "inflatable-trex-halloween-costume",
       "name": "Inflatable T-Rex Halloween Costume",
       "category": "Apparel",
       "first_seen": "2026-10-12",
-      "last_seen": "2026-10-22",
-      "seen_dates": ["2026-10-12", "2026-10-15", "2026-10-19", "2026-10-22"]
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-10-12",
+        "2026-10-15",
+        "2026-10-19",
+        "2026-10-22",
+        "2026-10-26"
+      ]
     },
     {
       "key": "crunchlabs-mark-rober-stem-toys",
@@ -232,7 +306,9 @@
       "category": "Toys & Games",
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
-      "seen_dates": ["2026-10-12"]
+      "seen_dates": [
+        "2026-10-12"
+      ]
     },
     {
       "key": "shark-av2501s-robot-vacuum",
@@ -240,23 +316,35 @@
       "category": "Home & Kitchen",
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-12",
-      "seen_dates": ["2026-10-12"]
+      "seen_dates": [
+        "2026-10-12"
+      ]
     },
     {
       "key": "mighty-patch-original-pimple-patches",
       "name": "Mighty Patch Original Pimple Patches (Hero Cosmetics, 36-ct)",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-22",
-      "seen_dates": ["2026-10-15", "2026-10-19", "2026-10-22"]
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-10-15",
+        "2026-10-19",
+        "2026-10-22",
+        "2026-10-26"
+      ]
     },
     {
       "key": "hydrojug-traveler-32oz-insulated-tumbler",
       "name": "HydroJug Traveler 32oz Insulated Tumbler",
       "category": "Sports & Outdoors",
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-22",
-      "seen_dates": ["2026-10-15", "2026-10-19", "2026-10-22"]
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-10-15",
+        "2026-10-19",
+        "2026-10-22",
+        "2026-10-26"
+      ]
     },
     {
       "key": "pure-encapsulations-magnesium-glycinate",
@@ -264,7 +352,9 @@
       "category": "Health & Household",
       "first_seen": "2026-10-15",
       "last_seen": "2026-10-15",
-      "seen_dates": ["2026-10-15"]
+      "seen_dates": [
+        "2026-10-15"
+      ]
     },
     {
       "key": "apple-airtag-2nd-gen",
@@ -272,7 +362,11 @@
       "category": "Electronics",
       "first_seen": "2026-10-15",
       "last_seen": "2026-10-22",
-      "seen_dates": ["2026-10-15", "2026-10-19", "2026-10-22"]
+      "seen_dates": [
+        "2026-10-15",
+        "2026-10-19",
+        "2026-10-22"
+      ]
     },
     {
       "key": "columbia-steens-mountain-fleece",
@@ -280,7 +374,9 @@
       "category": "Apparel",
       "first_seen": "2026-10-15",
       "last_seen": "2026-10-15",
-      "seen_dates": ["2026-10-15"]
+      "seen_dates": [
+        "2026-10-15"
+      ]
     },
     {
       "key": "cosori-turbo-blaze-air-fryer",
@@ -288,7 +384,11 @@
       "category": "Home & Kitchen",
       "first_seen": "2026-10-15",
       "last_seen": "2026-10-22",
-      "seen_dates": ["2026-10-15", "2026-10-19", "2026-10-22"]
+      "seen_dates": [
+        "2026-10-15",
+        "2026-10-19",
+        "2026-10-22"
+      ]
     },
     {
       "key": "laneige-lip-sleeping-mask",
@@ -296,23 +396,31 @@
       "category": "Beauty & Personal Care",
       "first_seen": "2026-10-19",
       "last_seen": "2026-10-19",
-      "seen_dates": ["2026-10-19"]
+      "seen_dates": [
+        "2026-10-19"
+      ]
     },
     {
       "key": "dawn-platinum-powerwash-dish-spray",
       "name": "Dawn Platinum Powerwash Dish Spray Bundle",
       "category": "Home & Kitchen",
       "first_seen": "2026-10-19",
-      "last_seen": "2026-10-19",
-      "seen_dates": ["2026-10-19"]
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-10-19",
+        "2026-10-26"
+      ]
     },
     {
       "key": "levoit-lvac200-cordless-vacuum",
       "name": "Levoit LVAC-200 Cordless Vacuum Cleaner",
       "category": "Home & Kitchen",
       "first_seen": "2026-10-19",
-      "last_seen": "2026-10-19",
-      "seen_dates": ["2026-10-19"]
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-10-19",
+        "2026-10-26"
+      ]
     },
     {
       "key": "blue-buffalo-life-protection-dry-dog-food",
@@ -320,7 +428,9 @@
       "category": "Pet Supplies",
       "first_seen": "2026-10-19",
       "last_seen": "2026-10-19",
-      "seen_dates": ["2026-10-19"]
+      "seen_dates": [
+        "2026-10-19"
+      ]
     },
     {
       "key": "ocato-halloween-spider-web-decoration",
@@ -328,7 +438,9 @@
       "category": "Home & Kitchen",
       "first_seen": "2026-10-19",
       "last_seen": "2026-10-19",
-      "seen_dates": ["2026-10-19"]
+      "seen_dates": [
+        "2026-10-19"
+      ]
     },
     {
       "key": "bedsure-gentlesoft-electric-heated-blanket",
@@ -336,7 +448,9 @@
       "category": "Home & Kitchen",
       "first_seen": "2026-10-22",
       "last_seen": "2026-10-22",
-      "seen_dates": ["2026-10-22"]
+      "seen_dates": [
+        "2026-10-22"
+      ]
     },
     {
       "key": "fairlife-core-power-elite-protein-shake",
@@ -344,7 +458,9 @@
       "category": "Grocery",
       "first_seen": "2026-10-22",
       "last_seen": "2026-10-22",
-      "seen_dates": ["2026-10-22"]
+      "seen_dates": [
+        "2026-10-22"
+      ]
     },
     {
       "key": "the-let-them-theory-mel-robbins",
@@ -352,7 +468,79 @@
       "category": "Other",
       "first_seen": "2026-10-22",
       "last_seen": "2026-10-22",
-      "seen_dates": ["2026-10-22"]
+      "seen_dates": [
+        "2026-10-22"
+      ]
+    },
+    {
+      "key": "cascade-platinum-plus-dishwasher-pods",
+      "name": "Cascade Platinum Plus ActionPacs Dishwasher Pods",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-10-26"
+      ]
+    },
+    {
+      "key": "pokemon-tcg-30th-celebration-elite-trainer-box",
+      "name": "Pokémon TCG: 30th Celebration Elite Trainer Box",
+      "category": "Toys & Games",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-10-26"
+      ]
+    },
+    {
+      "key": "ninja-creami-ice-cream-maker",
+      "name": "Ninja CREAMi Ice Cream Maker (NC299AMZ)",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-10-26"
+      ]
+    },
+    {
+      "key": "owala-freesip-24oz-water-bottle",
+      "name": "Owala FreeSip 24oz Stainless Steel Water Bottle",
+      "category": "Sports & Outdoors",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-10-26"
+      ]
+    },
+    {
+      "key": "cerave-moisturizing-cream-19oz",
+      "name": "CeraVe Moisturizing Cream 19oz",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-10-26"
+      ]
+    },
+    {
+      "key": "nooni-appleseed-lip-oil-set",
+      "name": "NOONI Appleseed Lip Oil Set",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-10-26"
+      ]
+    },
+    {
+      "key": "energizer-aa-aaa-battery-pack",
+      "name": "Energizer AA/AAA Battery Multi-Pack",
+      "category": "Health & Household",
+      "first_seen": "2026-10-26",
+      "last_seen": "2026-10-26",
+      "seen_dates": [
+        "2026-10-26"
+      ]
     }
   ]
 }
