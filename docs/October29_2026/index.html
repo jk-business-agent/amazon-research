@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Top Sellers — October 29, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 150px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
+  .card-meta { font-size: 12.5px; color: var(--muted); }
+  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .card-sources a { color: #2563eb; text-decoration: none; }
+
+  .chart-wrap { padding: 10px 6px; }
+
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+  .spotlight ul { margin: 0; padding-left: 18px; }
+  .spotlight li { font-size: 14px; line-height: 1.6; margin-bottom: 6px; }
+
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <div class="date">October 29, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 20 sources checked</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">October 29 — the eve of Halloween — gives today's report a split personality: the Apparel category peaks with Halloween costumes (Marvel character variants and the perennial Inflatable T-Rex holding multiple spots in Amazon's top-10 kids' costume list), while Amazon's October hardware cycle keeps Electronics the widest single category, led by the new Alexa Tablet 11 (Android 16 + Google Play, $329.99) and Ring's first-ever 4K camera lineup. Beauty's headline story is structural: Clean Skin Club Clean Towels XL jumped from #13 to #1 in Amazon's Q3 2026 Beauty &amp; Personal Care chart — the largest single-quarter gain on the list — as disposable face towels cement their place alongside K-beauty staples. Fall health seasonality is in full force, with elderberry gummies and Vitamin D3 in their traditional October–December demand peak. Nine of today's 18 entries are NEW to the 14-day history — the highest new-entrant count since October 5 — anchored by Amazon's hardware launches and the Halloween category reaching its annual apex. <em>Access note: Amazon.com was DNS-blocked this session; all sourcing relied on secondary press, deal aggregators, and retail analytics trackers (20 distinct domains).</em></div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">18</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">14</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">4</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">7</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Top movers grid -->
+  <h2 class="section-title">Top Movers</h2>
+  <div class="grid">
+
+    <!-- VERIFIED + NEW -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Amazon Alexa Tablet 11</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Amazon's first tablet to run Android 16 with full Google Play Store access — a foundational break from Fire OS that signals Amazon repositioning against iPad and Galaxy Tab. Launched October 14, 2026, the Alexa Tablet 11 pairs an 11-inch 2.5K 90Hz display with an 8-core MediaTek MT8189 processor and Dolby Atmos speakers. At $329.99 (64 GB), it undercuts comparable Android tablets while bundling Alexa+ AI features. The Google Play access alone addresses the single biggest objection Fire tablet buyers held for a decade.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — holiday season launch timing plus Google Play differentiation is a structural upgrade over prior Fire tablets; gift-season demand has not yet peaked.</div>
+      <div class="card-meta">$329.99 (64 GB) · $379.99 (128 GB)</div>
+      <div class="card-sources">Sources: <a href="https://techcrunch.com/2026/10/08/amazon-unveils-new-alexa-tablets-with-alexa-and-google-play-store-access/">techcrunch.com</a> (Oct 8, 2026), <a href="https://www.notebookcheck.net/1419297.html">notebookcheck.net</a> (Oct 2026), <a href="https://www.analyticsinsight.net/gadgets/amazons-october-2026-device-launches-whats-new">analyticsinsight.net</a> (Oct 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirPods 5 (with ANC)</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The mainstream AirPods generation that added Active Noise Cancellation as standard, launched at Apple's "Surprise and Shine" September event and immediately appearing on Amazon. During Prime Big Deal Days (Oct 7–8) pricing reached $124 — near the all-time low for the model. With holiday gifting season now open, AirPods 5 re-enters the top movers window as one of the highest-visibility gift electronics on the platform. It had appeared in earlier reports (September 10–24) and is re-entering the 14-day history after a brief gap.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — post-Prime-Day pricing holds near historical low; holiday gifting demand for wireless earbuds peaks Q4.</div>
+      <div class="card-meta">~$124–$129 (post-Prime Day range)</div>
+      <div class="card-sources">Sources: <a href="https://www.macrumors.com/2026/10/04/amazon-early-prime-day-apple/">macrumors.com</a> (Oct 4, 2026), <a href="https://www.tomsguide.com/sales-events/the-new-apple-watch-12-and-airpods-5-are-already-on-sale-at-amazon-plus-15-more-deals-on-apple-devices">tomsguide.com</a> (Oct 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple Watch Series 12</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Launched with AirPods 5 in September 2026 and hit new all-time low prices at Amazon during Prime Big Deal Days — the 42mm GPS variant reached $349.99 (down from $399), confirmed as a new all-time low by multiple sources. The Series 12 re-enters the 14-day tracking window as holiday gift demand builds; smartwatches are a consistent Q4 top-10 Amazon electronics category. Two independent deal-tracking sources corroborate both the launch and the Prime Day pricing.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — post-launch new-release window; holiday gifting ahead maintains demand, but growth rate will moderate as launch excitement normalizes.</div>
+      <div class="card-meta">~$349.99 (42mm GPS, post-Prime Day)</div>
+      <div class="card-sources">Sources: <a href="https://www.macrumors.com/2026/10/05/apple-watch-prime-day-deals-2/">macrumors.com</a> (Oct 5, 2026), <a href="https://www.macworld.com/article/2386629/best-apple-watch-prime-day-deals-2026-october-7.html">macworld.com</a> (Oct 7, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Ring Outdoor Cam 4K Plus</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Part of Ring's first-ever 4K camera lineup, announced October 7, 2026 alongside four other models (Spotlight Cam 4K Plus, Floodlight Cam 4K Plus, Indoor Cam 4K, and Pan-Tilt Indoor Cam 2K). The lineup uses Ring's new Retinal Vision 4K technology offering color video in low light and wide-angle views. The Outdoor Cam 4K Plus supports battery, plug-in, hardwired, solar, and Power over Ethernet configurations — unusually flexible for a consumer security camera. With Halloween driving heightened home-security awareness and the holiday gifting window opening, Ring's new models land at a commercially strong moment.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — new launch in expanding home security category; holiday gifting season for smart home devices peaks Q4.</div>
+      <div class="card-meta">From $69.99 (Pan-Tilt model); outdoor models up to $219.99</div>
+      <div class="card-sources">Sources: <a href="https://www.techradar.com/home/smart-home/amazon-has-just-announced-its-first-ever-4k-ring-video-doorbell-with-alexa-features-heres-what-we-know-so-far">techradar.com</a> (Oct 2026), <a href="https://www.iclarified.com/102642/ring-unveils-hand-rechargeable-smart-lock-and-new-4k-cameras">iclarified.com</a> (Oct 7, 2026), <a href="https://stocktwits.com/news-articles/markets/equity/amazon-4k-ring-security-cameras-ai-pet-finding-feature/chDDOirR393">stocktwits.com</a> (Oct 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Kids' Marvel Halloween Costumes</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Multiple Marvel character costume variants — different versions of the same Marvel character — hold three spots in Amazon's top-10 bestselling kids' Halloween costumes with Halloween tomorrow, per a news roundup published this week. Marvel costume dominance is a consistent October pattern; the spread across multiple variants (rather than one clear winner) suggests broad licensing demand across the MCU character roster. With Halloween on October 30, purchase velocity peaks today as last-minute shoppers confirm orders.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — Halloween is tomorrow; costume sales collapse sharply post-holiday. This is a 24-hour peak moment.</div>
+      <div class="card-meta">~$15–$35 (typical Amazon kids' costume range; specific price not confirmed)</div>
+      <div class="card-sources">Sources: <a href="https://www.ktsm.com/news/these-are-the-top-10-bestselling-kids-halloween-costumes-on-amazon-right-now/">ktsm.com</a> (Oct 2026), <a href="https://fox59.com/news/national-world/these-are-the-top-10-bestselling-kids-halloween-costumes-on-amazon-right-now/">fox59.com</a> (Oct 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Clean Skin Club Clean Towels XL</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Jumped from #13 to #1 in Amazon's Q3 2026 Beauty &amp; Personal Care top-25 chart — the largest single-quarter rank jump on the list, per BeautyMatter's October 2026 analysis. Disposable bamboo face towels have spent two years building from TikTok niche to mainstream Amazon category; the Q3 ascent to #1 suggests the product has crossed fully into mass-market adoption. The brand's rise also reflects a broader "clean-skin tool" trend (separate from traditional skincare products) gaining shelf space. No clear single driver for the Q3 jump was identified in available sources beyond sustained category momentum.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — #1 in a high-volume category with documented upward momentum and no visible sales driver that would cause a correction.</div>
+      <div class="card-meta">Price not confirmed (typical disposable face towels range ~$12–$20)</div>
+      <div class="card-sources">Sources: <a href="https://beautymatter.com/articles/amazon-q3-2026-top-25-beauty-and-personal-care-products">beautymatter.com</a> (Oct 18, 2026), <a href="https://stockhub.kr/en/news/news_f62484bcacf8">stockhub.kr</a> (Oct 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Eos Shea Better Body Lotion (Vanilla Cashmere)</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Ranked #3 in Amazon's Q3 2026 Beauty &amp; Personal Care top-25, per BeautyMatter's October 2026 analysis. Body lotion demand follows a reliable fall seasonality as cooler, drier weather increases moisturization needs — Q4 is consistently the strongest quarter for body lotion on Amazon. The Vanilla Cashmere scent profile aligns with fall/holiday fragrance preferences. Eos appeared in an earlier report (August 6) as a new entrant, was absent from the tracking window through summer, and re-enters now as Q3 data confirms continued high sales volume.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — seasonal tailwind is real but body lotion is a competitive category; this product benefits from brand recognition and favorable seasonal timing rather than a sharp inflection.</div>
+      <div class="card-meta">~$10 (based on prior archive entry; current price not confirmed from today's sources)</div>
+      <div class="card-sources">Sources: <a href="https://beautymatter.com/articles/amazon-q3-2026-top-25-beauty-and-personal-care-products">beautymatter.com</a> (Oct 18, 2026), <a href="https://stockhub.kr/en/news/news_f62484bcacf8">stockhub.kr</a> (Oct 2026)</div>
+    </div>
+
+    <!-- VERIFIED + RECURRING -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Hanes EcoSmart Fleece Hoodie</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (17 of last 80 days)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Holds the #1 Best Seller position in Amazon Clothing, Shoes &amp; Jewelry, confirmed by multiple deal roundups in October 2026. The EcoSmart hoodie is a persistent volume leader driven by extreme value (on sale from $8 in some variants) and availability across 31 colors and all sizes. Fall temperature drop accelerates sales annually, and the product's consistent presence in this archive since August 10 reflects that it never left the top of its category — seasonal amplification is layered onto a year-round baseline.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — reliable #1 Clothing bestseller with seasonal boost already in progress; no near-term threat to its ranking position identified.</div>
+      <div class="card-meta">From $8 (sale price); ~$15–$20 standard</div>
+      <div class="card-sources">Sources: <a href="https://www.tomsguide.com/sales-events/amazons-best-selling-comfortable-and-warm-hoodie-is-on-sale-for-just-usd8-and-it-comes-in-31-colors">tomsguide.com</a> (Oct 2026), <a href="https://www.yahoo.com/lifestyle/warm-while-not-being-bulky-amazons-1-bestselling-hanes-hoodie-is-on-sale-for-as-low-as-15-131025542.html">yahoo.com</a> (Oct 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Inflatable T-Rex Halloween Costume</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (5 reports since Oct 12)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Holds a consistent top position in Amazon's adult and kids' costume categories, appearing in the top-10 kids' Halloween costume list per this week's news roundup. The T-Rex inflatable has become a perennial Halloween staple — less about novelty (the format is several years old) and more about reliable demand volume from buyers who want a high-impact, low-effort costume. With Halloween tomorrow, this is the last day of peak purchase velocity before post-holiday clearance begins.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — Halloween is tomorrow; sales will collapse sharply on October 31. Year-over-year trend remains stable.</div>
+      <div class="card-meta">~$20–$40 (typical inflatable costume range; current price not confirmed from today's sources)</div>
+      <div class="card-sources">Sources: <a href="https://www.ktsm.com/news/these-are-the-top-10-bestselling-kids-halloween-costumes-on-amazon-right-now/">ktsm.com</a> (Oct 2026), <a href="https://fox59.com/news/national-world/these-are-the-top-10-bestselling-kids-halloween-costumes-on-amazon-right-now/">fox59.com</a> (Oct 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Mighty Patch Original Pimple Patches (Hero Cosmetics, 36-ct)</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (4 reports since Oct 15)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Ranked #4 in Amazon's Q3 2026 Beauty &amp; Personal Care top-25 (BeautyMatter, Oct 18, 2026). Hydrocolloid pimple patches have maintained viral social media relevance driven by instantly-visible results; the Mighty Patch remains the category leader with consistent multi-month presence in this archive. This product appeared as a new entrant on October 15 at an estimated ~178,963 units per month (AMZScout Oct 12 data, cited in that report), making it one of the highest-volume beauty SKUs on the platform.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — consistent Q3 chart performer, viral category shows no signs of saturation. Year-round demand with no sharp seasonal driver.</div>
+      <div class="card-meta">~$13–$15</div>
+      <div class="card-sources">Sources: <a href="https://beautymatter.com/articles/amazon-q3-2026-top-25-beauty-and-personal-care-products">beautymatter.com</a> (Oct 18, 2026), <a href="https://amzscout.net/blog/best-selling-beauty-products/">amzscout.net</a> (Oct 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Medicube Zero Pore Pads 2.0 (70-count)</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (6 reports since Sep 24)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Ranked #2 in Amazon's Q3 2026 Beauty &amp; Personal Care top-25 — down from #1 for two consecutive prior quarters (per BeautyMatter), but still firmly the top K-beauty SKU on the platform. Medicube was also the #1-ranked brand in Amazon's skincare subcategory as of Prime Big Deal Days (Oct 7) per Korean securities news coverage of K-beauty's Amazon performance data. The product maintains broad social media visibility and consistent multi-month presence in this archive.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — still top-2 in a high-volume category but slipping one rank from #1 suggests early plateau; K-beauty category growth continues to protect the brand floor.</div>
+      <div class="card-meta">~$18–$22</div>
+      <div class="card-sources">Sources: <a href="https://beautymatter.com/articles/amazon-q3-2026-top-25-beauty-and-personal-care-products">beautymatter.com</a> (Oct 18, 2026), <a href="https://stockhub.kr/en/news/news_f62484bcacf8">stockhub.kr</a> (Oct 7, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Nature's Way Sambucus Elderberry Gummies</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (13 reports since Sep 7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">In their seasonal acceleration window: elderberry supplementation demand consistently peaks between October and December as cold and flu risk rises with falling temperatures and increased indoor contact. The product has been in this archive continuously since September 7 — 13 reports — which is the longest uninterrupted health supplement run in the archive's history. Multiple health and supplement trackers consistently list sambucus elderberry as a top-10 Amazon Health category product in Q4.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — seasonal peak for immunity supplements is just beginning; historical pattern shows November as the highest-volume month. Dip likely after January.</div>
+      <div class="card-meta">~$10–$15</div>
+      <div class="card-sources">Sources: <a href="https://amzprep.com/best-selling-products-amazon/">amzprep.com</a> (Oct 2026), <a href="https://www.asinsight.com/report/US/vitamins-and-supplements">asinsight.com</a> (2026 data)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Premier Protein 30g High Protein Shake (18-Pack)</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (11 reports since Sep 21)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">A permanent fixture in Amazon's top grocery sellers, driven by the GLP-1 weight-loss drug wave reshaping American dietary habits — high-protein, low-calorie products are growing category-wide as users on GLP-1 medications and health-conscious consumers alike prioritize protein intake. Premier Protein has appeared in 11 of the last 11 reports and was the confirmed #1 overall Prime Day 2026 seller per Numerator data. AsinSight's August 2026 tracker places the product at approximately 70,000 monthly units, behind only Core Power Elite in the protein shake segment.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — category structure is strong but Core Power Elite now exceeds it in raw volume estimates; market leader status remains intact for now.</div>
+      <div class="card-meta">~$30–$35 (18-pack)</div>
+      <div class="card-sources">Sources: <a href="https://www.asinsight.com/report/US/%EF%BF%BCprotein-shakes">asinsight.com</a> (Aug 2026), <a href="https://amzprep.com/best-selling-products-amazon/">amzprep.com</a> (Oct 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">HydroJug Traveler 32oz Insulated Tumbler</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (4 reports since Oct 15)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Holds an estimated top-2 position in Amazon Sports &amp; Outdoors by unit volume, at approximately 168,979 units per month (AMZScout October 12 data, cited in the October 15 report). The HydroJug dethroned the Stanley Quencher as Amazon's #1 tumbler earlier in this archive's history, driven by a combination of mid-price-point positioning (~$35–45) and a distinctive handle-forward design popular in social media unboxings. It remains the benchmark hydration item on the platform heading into fall.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — category leader with sustained volume; fall/winter may slightly soften tumbler sales as cold-beverage portability is less urgent.</div>
+      <div class="card-meta">~$35–$45</div>
+      <div class="card-sources">Sources: <a href="https://amzscout.net/blog/best-selling-products-on-amazon/">amzscout.net</a> (Oct 2026), <a href="https://amzprep.com/best-selling-products-amazon/">amzprep.com</a> (Oct 2026)</div>
+    </div>
+
+    <!-- LOW-CONFIDENCE -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Amazon Kindle Scribe Color</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Part of Amazon's October 2026 hardware event, which included an updated Kindle lineup alongside the Alexa Tablet and Ring cameras. Analytics Insight and Latestly both report the launch includes a new Kindle Scribe with color display — notable as the first color-screen e-ink writing tablet from Amazon. No specific sales data, price, or independent ranking information was available in today's sources. Included as a plausible top-mover given the October hardware wave and the holiday gifting context, but with low confidence pending corroborating data.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth (if confirmed) — first color Kindle Scribe is a genuine hardware first; holiday gifting season for e-readers is Q4. Estimate is qualitative only.</div>
+      <div class="card-meta">Price not confirmed</div>
+      <div class="card-sources">Sources: <a href="https://www.analyticsinsight.net/gadgets/amazons-october-2026-device-launches-whats-new">analyticsinsight.net</a> (Oct 2026), <a href="https://www.latestly.com/technology/amazon-ai-powered-echo-devices-amazon-fire-tv-amazon-kindle-scribe-and-ring-4k-cameras-unveiled-check-prices-key-features-of-each-device-7138610.html">latestly.com</a> (Oct 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Sour Patch Kids Halloween Variety Pack</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">TheStreet's October 25, 2026 report on Amazon Halloween candy sales identified gummy candy as the top individual candy category — ahead of chocolate bars — with Sour Patch Kids leading in units. Halloween-eve timing makes this a plausible peak-volume item today. Included with low confidence because TheStreet is the only source with specific product-level candy data for this period; a second independent candy-category source was not located in today's research. No specific unit or revenue figures were confirmed from the source.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — Halloween candy demand collapses immediately post-October 31; candy volume reverts to normal within days.</div>
+      <div class="card-meta">~$10–$20 (bulk Halloween variety packs)</div>
+      <div class="card-sources">Sources: <a href="https://www.thestreet.com/retail/halloween-candy-sales-check-heres-what-amazon-is-selling">thestreet.com</a> (Oct 25, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">NatureWise Vitamin D3 5000IU Mini Softgels</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (6 reports since Oct 5)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">A consistent presence in this archive since October 5 (6 reports), driven by the fall sun-exposure decrease that reliably spikes Vitamin D3 supplementation demand each Q4. AMZPrep lists it as a top Health &amp; Household seller; AsinSight's general vitamins data corroborates Vitamin D3 as a top category. Included with low confidence because no October-specific source corroborated this product by name (vs. the Vitamin D3 category generally) — the classification relies on prior-week trend continuity from the seen-products history.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — seasonal demand for Vitamin D3 continues to build through November and December as daylight shortens.</div>
+      <div class="card-meta">~$12–$20</div>
+      <div class="card-sources">Sources: <a href="https://amzprep.com/best-selling-products-amazon/">amzprep.com</a> (Oct 2026), <a href="https://www.asinsight.com/report/US/daily-vitamins">asinsight.com</a> (2026 data)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">INABA Churu Lickable Cat Treats</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (26+ reports since Jul 9)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">The longest-running product in this archive — present in 26 or more reports since July 9 — Churu has never left the top of Amazon's Pet Supplies best-sellers during the archive's lifetime. The product category (lickable squeeze-tube cat treats) remains one of the highest-velocity pet SKUs on the platform by multi-month volume. Low confidence today because no October 29-specific source confirmed the product is still in its top-seller position vs. earlier in the month; its inclusion is based entirely on multi-week trend continuity from the seen-products history.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — category leader with no visible competitor threat. Pet treat spending is relatively recession-resistant and shows no seasonal variation.</div>
+      <div class="card-meta">~$15–$25</div>
+      <div class="card-sources">Sources: <a href="https://amzscout.net/blog/best-selling-products-on-amazon/">amzscout.net</a> (Oct 2026), <a href="https://amzprep.com/best-selling-products-amazon/">amzprep.com</a> (Oct 2026)</div>
+    </div>
+
+  </div>
+
+  <!-- 5. Category breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="100%" height="248" viewBox="0 0 700 248">
+      <!-- Electronics: 5 -->
+      <text x="0" y="22" font-size="13" fill="#1e293b">Electronics</text>
+      <rect x="160" y="8" width="360" height="18" rx="4" fill="#2563eb"/>
+      <text x="528" y="22" font-size="12" fill="#475569">5</text>
+
+      <!-- Beauty & Personal Care: 4 -->
+      <text x="0" y="56" font-size="13" fill="#1e293b">Beauty &amp; Personal Care</text>
+      <rect x="160" y="42" width="288" height="18" rx="4" fill="#db2777"/>
+      <text x="456" y="56" font-size="12" fill="#475569">4</text>
+
+      <!-- Apparel: 3 -->
+      <text x="0" y="90" font-size="13" fill="#1e293b">Apparel</text>
+      <rect x="160" y="76" width="216" height="18" rx="4" fill="#7c3aed"/>
+      <text x="384" y="90" font-size="12" fill="#475569">3</text>
+
+      <!-- Health & Household: 2 -->
+      <text x="0" y="124" font-size="13" fill="#1e293b">Health &amp; Household</text>
+      <rect x="160" y="110" width="144" height="18" rx="4" fill="#0d9488"/>
+      <text x="312" y="124" font-size="12" fill="#475569">2</text>
+
+      <!-- Grocery: 2 -->
+      <text x="0" y="158" font-size="13" fill="#1e293b">Grocery</text>
+      <rect x="160" y="144" width="144" height="18" rx="4" fill="#65a30d"/>
+      <text x="312" y="158" font-size="12" fill="#475569">2</text>
+
+      <!-- Sports & Outdoors: 1 -->
+      <text x="0" y="192" font-size="13" fill="#1e293b">Sports &amp; Outdoors</text>
+      <rect x="160" y="178" width="72" height="18" rx="4" fill="#ea580c"/>
+      <text x="240" y="192" font-size="12" fill="#475569">1</text>
+
+      <!-- Pet Supplies: 1 -->
+      <text x="0" y="226" font-size="13" fill="#1e293b">Pet Supplies</text>
+      <rect x="160" y="212" width="72" height="18" rx="4" fill="#92400e"/>
+      <text x="240" y="226" font-size="12" fill="#475569">1</text>
+    </svg>
+  </div>
+
+  <!-- 6. New entrants spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <ul>
+      <li><strong>Amazon Alexa Tablet 11</strong> — Amazon's first Android 16 / Google Play tablet; $329.99; launched Oct 14 — a strategic break from Fire OS that positions Amazon against iPad and Galaxy Tab for the holiday gifting window.</li>
+      <li><strong>Apple AirPods 5 (with ANC)</strong> — Re-entering the 14-day window after September reports; mainstream AirPods with ANC now standard; hovering near all-time low pricing of ~$124 post-Prime Day.</li>
+      <li><strong>Apple Watch Series 12</strong> — Re-entering; hit all-time low $349.99 during Prime Big Deal Days; continues as a leading holiday gift electronics item.</li>
+      <li><strong>Ring Outdoor Cam 4K Plus</strong> — Part of Ring's first-ever 4K lineup (5 models, announced Oct 7); entry-level security camera segment now at 4K resolution for $69.99+.</li>
+      <li><strong>Kids' Marvel Halloween Costumes</strong> — Three Marvel character variants in Amazon's top-10 kids' costume list; 24 hours from Halloween peak velocity.</li>
+      <li><strong>Clean Skin Club Clean Towels XL</strong> — #1 in Amazon's Q3 2026 Beauty &amp; Personal Care chart, jumping 9 positions from #13 — the biggest single-quarter rank jump in the top 25.</li>
+      <li><strong>Eos Shea Better Body Lotion (Vanilla Cashmere)</strong> — #3 in Amazon's Q3 2026 Beauty chart; re-entering the 14-day window as fall body lotion demand builds.</li>
+      <li><strong>Amazon Kindle Scribe Color</strong> <em>(LOW-CONFIDENCE)</em> — First color-display Kindle Scribe from Amazon's October hardware event; limited independent sourcing available today.</li>
+      <li><strong>Sour Patch Kids Halloween Variety Pack</strong> <em>(LOW-CONFIDENCE)</em> — TheStreet (Oct 25) identified gummy candy and Sour Patch Kids leading Amazon Halloween candy; one primary source only.</li>
+    </ul>
+  </div>
+
+  <!-- 7. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p><strong>Access:</strong> Amazon.com and all amazon.com subdomains were DNS-unresolvable throughout this session (cloud sandbox network restriction). All primary Amazon list data (Movers &amp; Shakers, Best Sellers, Movers &amp; Shakers by category) was inaccessible for direct fetching. This is consistent with all prior sessions in this archive. The report falls back entirely to secondary source discovery and verification.</p>
+    <p><strong>Source types accessed:</strong> Retail deal aggregators and tech press (macrumors.com, macworld.com, tomsguide.com, techradar.com, iclarified.com, whoismcafee.com, dealnews.com); tech news outlets (techcrunch.com, notebookcheck.net, analyticsinsight.net, latestly.com, stocktwits.com); consumer and retail press (thestreet.com, ktsm.com, fox59.com, yahoo.com); beauty/retail trade press (beautymatter.com — via WebSearch snippet only; direct fetch blocked); retail analytics trackers (amzscout.net, amzprep.com, asinsight.com); Korean trade/securities news (stockhub.kr). Direct WebFetch was blocked for all external domains in this session except via WebSearch snippet summaries. Total: 20 distinct domains.</p>
+    <p><strong>Verification protocol:</strong> VERIFIED = corroborated by at least 2 independent sources with consistent key claims. LOW-CONFIDENCE = single primary source, conflicting data, or only prior-week trend continuity without a same-day independent confirmation. 14 products are VERIFIED; 4 are LOW-CONFIDENCE. LOW-CONFIDENCE entries are included only where they represent plausible seasonal or multi-week trend continuity and where the cost of exclusion (missing a real mover) exceeds the cost of inclusion (marking something that slipped from top positions).</p>
+    <p><strong>Number discipline:</strong> Specific unit sales figures (e.g., 168,979 units / month for HydroJug; 70K / month for Premier Protein) are third-party tracker estimates from AMZScout and AsinSight, cited from prior reports where those sources were accessible. No new specific figures were introduced from today's WebSearch-only session that were not directly readable from a fetched source. Price figures are from source articles or noted as "price not confirmed."</p>
+  </div>
+
+  <!-- 8. Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../October26_2026/">October 26</a></span>
+  </div>
+
+</div>
+</body>
+</html>
