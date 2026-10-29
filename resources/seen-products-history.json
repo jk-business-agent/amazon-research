@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-26",
+  "last_updated": "2026-10-29",
   "window_days": 14,
   "products": [
     {
@@ -7,7 +7,7 @@
       "name": "INABA Churu Lickable Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-29",
       "seen_dates": [
         "2026-07-09",
         "2026-07-13",
@@ -34,7 +34,8 @@
         "2026-10-15",
         "2026-10-19",
         "2026-10-22",
-        "2026-10-26"
+        "2026-10-26",
+        "2026-10-29"
       ]
     },
     {
@@ -70,7 +71,7 @@
       "name": "Hanes EcoSmart Fleece Hoodie",
       "category": "Apparel",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-29",
       "seen_dates": [
         "2026-08-10",
         "2026-08-20",
@@ -88,7 +89,8 @@
         "2026-10-15",
         "2026-10-19",
         "2026-10-22",
-        "2026-10-26"
+        "2026-10-26",
+        "2026-10-29"
       ]
     },
     {
@@ -123,7 +125,7 @@
       "name": "Nature's Way Sambucus Elderberry Gummies",
       "category": "Health & Household",
       "first_seen": "2026-09-07",
-      "last_seen": "2026-10-22",
+      "last_seen": "2026-10-29",
       "seen_dates": [
         "2026-09-07",
         "2026-09-10",
@@ -137,7 +139,8 @@
         "2026-10-12",
         "2026-10-15",
         "2026-10-19",
-        "2026-10-22"
+        "2026-10-22",
+        "2026-10-29"
       ]
     },
     {
@@ -160,7 +163,7 @@
       "name": "Premier Protein 30g High Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-29",
       "seen_dates": [
         "2026-09-21",
         "2026-09-24",
@@ -172,7 +175,8 @@
         "2026-10-15",
         "2026-10-19",
         "2026-10-22",
-        "2026-10-26"
+        "2026-10-26",
+        "2026-10-29"
       ]
     },
     {
@@ -180,14 +184,15 @@
       "name": "Medicube Zero Pore Pads 2.0 (70-count)",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-09-24",
-      "last_seen": "2026-10-15",
+      "last_seen": "2026-10-29",
       "seen_dates": [
         "2026-09-24",
         "2026-09-28",
         "2026-10-01",
         "2026-10-05",
         "2026-10-12",
-        "2026-10-15"
+        "2026-10-15",
+        "2026-10-29"
       ]
     },
     {
@@ -240,41 +245,20 @@
       "name": "NatureWise Vitamin D3 5000IU Mini Softgels",
       "category": "Health & Household",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-29",
       "seen_dates": [
         "2026-10-05",
         "2026-10-12",
         "2026-10-15",
         "2026-10-19",
         "2026-10-22",
-        "2026-10-26"
-      ]
-    },
-    {
-      "key": "breville-barista-express",
-      "name": "Breville Barista Express Espresso Machine",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-10-05",
-      "last_seen": "2026-10-12",
-      "seen_dates": [
-        "2026-10-05",
-        "2026-10-12"
-      ]
-    },
-    {
-      "key": "amazon-essentials-packable-puffer",
-      "name": "Amazon Essentials Packable Hooded Puffer Jacket",
-      "category": "Apparel",
-      "first_seen": "2026-10-08",
-      "last_seen": "2026-10-12",
-      "seen_dates": [
-        "2026-10-08",
-        "2026-10-12"
+        "2026-10-26",
+        "2026-10-29"
       ]
     },
     {
       "key": "amazon-kindle-2026-redesign",
-      "name": "Amazon Kindle 2026 (Redesigned Lineup — Base, Paperwhite, Colorsoft)",
+      "name": "Amazon Kindle 2026 (Redesigned Lineup \u2014 Base, Paperwhite, Colorsoft)",
       "category": "Electronics",
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-26",
@@ -291,33 +275,14 @@
       "name": "Inflatable T-Rex Halloween Costume",
       "category": "Apparel",
       "first_seen": "2026-10-12",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-29",
       "seen_dates": [
         "2026-10-12",
         "2026-10-15",
         "2026-10-19",
         "2026-10-22",
-        "2026-10-26"
-      ]
-    },
-    {
-      "key": "crunchlabs-mark-rober-stem-toys",
-      "name": "CrunchLabs by Mark Rober — Elephant Toothpaste Blast (STEM Toy Line)",
-      "category": "Toys & Games",
-      "first_seen": "2026-10-12",
-      "last_seen": "2026-10-12",
-      "seen_dates": [
-        "2026-10-12"
-      ]
-    },
-    {
-      "key": "shark-av2501s-robot-vacuum",
-      "name": "Shark AV2501S Robot Vacuum",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-10-12",
-      "last_seen": "2026-10-12",
-      "seen_dates": [
-        "2026-10-12"
+        "2026-10-26",
+        "2026-10-29"
       ]
     },
     {
@@ -325,12 +290,13 @@
       "name": "Mighty Patch Original Pimple Patches (Hero Cosmetics, 36-ct)",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-29",
       "seen_dates": [
         "2026-10-15",
         "2026-10-19",
         "2026-10-22",
-        "2026-10-26"
+        "2026-10-26",
+        "2026-10-29"
       ]
     },
     {
@@ -338,12 +304,13 @@
       "name": "HydroJug Traveler 32oz Insulated Tumbler",
       "category": "Sports & Outdoors",
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-10-29",
       "seen_dates": [
         "2026-10-15",
         "2026-10-19",
         "2026-10-22",
-        "2026-10-26"
+        "2026-10-26",
+        "2026-10-29"
       ]
     },
     {
@@ -464,7 +431,7 @@
     },
     {
       "key": "the-let-them-theory-mel-robbins",
-      "name": "The Let Them Theory — Mel Robbins",
+      "name": "The Let Them Theory \u2014 Mel Robbins",
       "category": "Other",
       "first_seen": "2026-10-22",
       "last_seen": "2026-10-22",
@@ -484,7 +451,7 @@
     },
     {
       "key": "pokemon-tcg-30th-celebration-elite-trainer-box",
-      "name": "Pokémon TCG: 30th Celebration Elite Trainer Box",
+      "name": "Pok\u00e9mon TCG: 30th Celebration Elite Trainer Box",
       "category": "Toys & Games",
       "first_seen": "2026-10-26",
       "last_seen": "2026-10-26",
@@ -540,6 +507,96 @@
       "last_seen": "2026-10-26",
       "seen_dates": [
         "2026-10-26"
+      ]
+    },
+    {
+      "key": "amazon-alexa-tablet-11",
+      "name": "Amazon Alexa Tablet 11",
+      "category": "Electronics",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "seen_dates": [
+        "2026-10-29"
+      ]
+    },
+    {
+      "key": "apple-airpods-5",
+      "name": "Apple AirPods 5 (with ANC)",
+      "category": "Electronics",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "seen_dates": [
+        "2026-10-29"
+      ]
+    },
+    {
+      "key": "apple-watch-series-12",
+      "name": "Apple Watch Series 12",
+      "category": "Electronics",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "seen_dates": [
+        "2026-10-29"
+      ]
+    },
+    {
+      "key": "ring-outdoor-cam-4k-plus",
+      "name": "Ring Outdoor Cam 4K Plus",
+      "category": "Electronics",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "seen_dates": [
+        "2026-10-29"
+      ]
+    },
+    {
+      "key": "kids-marvel-halloween-costume",
+      "name": "Kids' Marvel Halloween Costumes",
+      "category": "Apparel",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "seen_dates": [
+        "2026-10-29"
+      ]
+    },
+    {
+      "key": "clean-skin-club-clean-towels-xl",
+      "name": "Clean Skin Club Clean Towels XL",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "seen_dates": [
+        "2026-10-29"
+      ]
+    },
+    {
+      "key": "eos-shea-better-body-lotion",
+      "name": "Eos Shea Better Body Lotion (Vanilla Cashmere)",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "seen_dates": [
+        "2026-10-29"
+      ]
+    },
+    {
+      "key": "amazon-kindle-scribe-color",
+      "name": "Amazon Kindle Scribe Color",
+      "category": "Electronics",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "seen_dates": [
+        "2026-10-29"
+      ]
+    },
+    {
+      "key": "sour-patch-kids-halloween-variety",
+      "name": "Sour Patch Kids Halloween Variety Pack",
+      "category": "Grocery",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "seen_dates": [
+        "2026-10-29"
       ]
     }
   ]
