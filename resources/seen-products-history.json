@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-10-29",
+  "last_updated": "2026-11-02",
   "window_days": 14,
   "products": [
     {
@@ -7,7 +7,7 @@
       "name": "INABA Churu Lickable Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-10-29",
+      "last_seen": "2026-11-02",
       "seen_dates": [
         "2026-07-09",
         "2026-07-13",
@@ -35,7 +35,8 @@
         "2026-10-19",
         "2026-10-22",
         "2026-10-26",
-        "2026-10-29"
+        "2026-10-29",
+        "2026-11-02"
       ]
     },
     {
@@ -71,7 +72,7 @@
       "name": "Hanes EcoSmart Fleece Hoodie",
       "category": "Apparel",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-10-29",
+      "last_seen": "2026-11-02",
       "seen_dates": [
         "2026-08-10",
         "2026-08-20",
@@ -90,7 +91,8 @@
         "2026-10-19",
         "2026-10-22",
         "2026-10-26",
-        "2026-10-29"
+        "2026-10-29",
+        "2026-11-02"
       ]
     },
     {
@@ -125,7 +127,7 @@
       "name": "Nature's Way Sambucus Elderberry Gummies",
       "category": "Health & Household",
       "first_seen": "2026-09-07",
-      "last_seen": "2026-10-29",
+      "last_seen": "2026-11-02",
       "seen_dates": [
         "2026-09-07",
         "2026-09-10",
@@ -140,22 +142,8 @@
         "2026-10-15",
         "2026-10-19",
         "2026-10-22",
-        "2026-10-29"
-      ]
-    },
-    {
-      "key": "amazon-fire-tv-stick-4k-max",
-      "name": "Amazon Fire TV Stick 4K Max",
-      "category": "Electronics",
-      "first_seen": "2026-09-21",
-      "last_seen": "2026-10-15",
-      "seen_dates": [
-        "2026-09-21",
-        "2026-10-01",
-        "2026-10-05",
-        "2026-10-08",
-        "2026-10-12",
-        "2026-10-15"
+        "2026-10-29",
+        "2026-11-02"
       ]
     },
     {
@@ -163,7 +151,7 @@
       "name": "Premier Protein 30g High Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-29",
+      "last_seen": "2026-11-02",
       "seen_dates": [
         "2026-09-21",
         "2026-09-24",
@@ -176,7 +164,8 @@
         "2026-10-19",
         "2026-10-22",
         "2026-10-26",
-        "2026-10-29"
+        "2026-10-29",
+        "2026-11-02"
       ]
     },
     {
@@ -216,7 +205,7 @@
       "name": "Amazon Echo Dot (Latest Generation)",
       "category": "Electronics",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-10-22",
+      "last_seen": "2026-11-02",
       "seen_dates": [
         "2026-09-21",
         "2026-10-01",
@@ -225,19 +214,8 @@
         "2026-10-12",
         "2026-10-15",
         "2026-10-19",
-        "2026-10-22"
-      ]
-    },
-    {
-      "key": "outdoor-animatronic-halloween-ghost",
-      "name": "Outdoor Halloween Animatronic Ghost Decoration",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-10-01",
-      "last_seen": "2026-10-15",
-      "seen_dates": [
-        "2026-10-01",
-        "2026-10-12",
-        "2026-10-15"
+        "2026-10-22",
+        "2026-11-02"
       ]
     },
     {
@@ -245,7 +223,7 @@
       "name": "NatureWise Vitamin D3 5000IU Mini Softgels",
       "category": "Health & Household",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-10-29",
+      "last_seen": "2026-11-02",
       "seen_dates": [
         "2026-10-05",
         "2026-10-12",
@@ -253,12 +231,13 @@
         "2026-10-19",
         "2026-10-22",
         "2026-10-26",
-        "2026-10-29"
+        "2026-10-29",
+        "2026-11-02"
       ]
     },
     {
       "key": "amazon-kindle-2026-redesign",
-      "name": "Amazon Kindle 2026 (Redesigned Lineup \u2014 Base, Paperwhite, Colorsoft)",
+      "name": "Amazon Kindle 2026 (Redesigned Lineup — Base, Paperwhite, Colorsoft)",
       "category": "Electronics",
       "first_seen": "2026-10-12",
       "last_seen": "2026-10-26",
@@ -290,13 +269,14 @@
       "name": "Mighty Patch Original Pimple Patches (Hero Cosmetics, 36-ct)",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-10-15",
-      "last_seen": "2026-10-29",
+      "last_seen": "2026-11-02",
       "seen_dates": [
         "2026-10-15",
         "2026-10-19",
         "2026-10-22",
         "2026-10-26",
-        "2026-10-29"
+        "2026-10-29",
+        "2026-11-02"
       ]
     },
     {
@@ -314,16 +294,6 @@
       ]
     },
     {
-      "key": "pure-encapsulations-magnesium-glycinate",
-      "name": "Pure Encapsulations Magnesium Glycinate 90ct",
-      "category": "Health & Household",
-      "first_seen": "2026-10-15",
-      "last_seen": "2026-10-15",
-      "seen_dates": [
-        "2026-10-15"
-      ]
-    },
-    {
       "key": "apple-airtag-2nd-gen",
       "name": "Apple AirTag 2nd Generation (4-Pack)",
       "category": "Electronics",
@@ -333,16 +303,6 @@
         "2026-10-15",
         "2026-10-19",
         "2026-10-22"
-      ]
-    },
-    {
-      "key": "columbia-steens-mountain-fleece",
-      "name": "Columbia Steens Mountain 2.0 Full-Zip Fleece Jacket",
-      "category": "Apparel",
-      "first_seen": "2026-10-15",
-      "last_seen": "2026-10-15",
-      "seen_dates": [
-        "2026-10-15"
       ]
     },
     {
@@ -431,7 +391,7 @@
     },
     {
       "key": "the-let-them-theory-mel-robbins",
-      "name": "The Let Them Theory \u2014 Mel Robbins",
+      "name": "The Let Them Theory — Mel Robbins",
       "category": "Other",
       "first_seen": "2026-10-22",
       "last_seen": "2026-10-22",
@@ -451,7 +411,7 @@
     },
     {
       "key": "pokemon-tcg-30th-celebration-elite-trainer-box",
-      "name": "Pok\u00e9mon TCG: 30th Celebration Elite Trainer Box",
+      "name": "Pokémon TCG: 30th Celebration Elite Trainer Box",
       "category": "Toys & Games",
       "first_seen": "2026-10-26",
       "last_seen": "2026-10-26",
@@ -484,9 +444,10 @@
       "name": "CeraVe Moisturizing Cream 19oz",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-11-02",
       "seen_dates": [
-        "2026-10-26"
+        "2026-10-26",
+        "2026-11-02"
       ]
     },
     {
@@ -597,6 +558,106 @@
       "last_seen": "2026-10-29",
       "seen_dates": [
         "2026-10-29"
+      ]
+    },
+    {
+      "key": "beats-studio-pro-headphones",
+      "name": "Beats Studio Pro Wireless Headphones",
+      "category": "Electronics",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "seen_dates": [
+        "2026-11-02"
+      ]
+    },
+    {
+      "key": "peekimo-interactive-pet",
+      "name": "Peekimo Interactive Electronic Pet",
+      "category": "Toys & Games",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "seen_dates": [
+        "2026-11-02"
+      ]
+    },
+    {
+      "key": "lego-botanical-wildflower-bouquet",
+      "name": "LEGO Botanical Collection Wildflower Bouquet (10313)",
+      "category": "Toys & Games",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "seen_dates": [
+        "2026-11-02"
+      ]
+    },
+    {
+      "key": "breville-barista-express-espresso-machine",
+      "name": "Breville Barista Express Espresso Machine",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "seen_dates": [
+        "2026-11-02"
+      ]
+    },
+    {
+      "key": "carhartt-rain-defender-jacket",
+      "name": "Carhartt Rain Defender Relaxed Fit Jacket",
+      "category": "Apparel",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "seen_dates": [
+        "2026-11-02"
+      ]
+    },
+    {
+      "key": "la-roche-posay-toleriane-moisturizer",
+      "name": "La Roche-Posay Toleriane Double Repair Face Moisturizer",
+      "category": "Beauty & Personal Care",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "seen_dates": [
+        "2026-11-02"
+      ]
+    },
+    {
+      "key": "stanley-quencher-h2-0-tumbler",
+      "name": "Stanley Quencher H2.0 FlowState Tumbler 30oz",
+      "category": "Sports & Outdoors",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "seen_dates": [
+        "2026-11-02"
+      ]
+    },
+    {
+      "key": "mattel-kpop-demon-hunters-rumi",
+      "name": "Mattel K-pop Demon Hunters Rumi Doll",
+      "category": "Toys & Games",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "seen_dates": [
+        "2026-11-02"
+      ]
+    },
+    {
+      "key": "anker-powercore-10k",
+      "name": "Anker PowerCore 10K Portable Charger",
+      "category": "Electronics",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "seen_dates": [
+        "2026-11-02"
+      ]
+    },
+    {
+      "key": "amazon-smart-plug-mini",
+      "name": "Amazon Smart Plug Mini",
+      "category": "Electronics",
+      "first_seen": "2026-11-02",
+      "last_seen": "2026-11-02",
+      "seen_dates": [
+        "2026-11-02"
       ]
     }
   ]
