@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-02",
+  "last_updated": "2026-11-05",
   "window_days": 14,
   "products": [
     {
@@ -7,7 +7,7 @@
       "name": "INABA Churu Lickable Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-05",
       "seen_dates": [
         "2026-07-09",
         "2026-07-13",
@@ -36,7 +36,8 @@
         "2026-10-22",
         "2026-10-26",
         "2026-10-29",
-        "2026-11-02"
+        "2026-11-02",
+        "2026-11-05"
       ]
     },
     {
@@ -72,7 +73,7 @@
       "name": "Hanes EcoSmart Fleece Hoodie",
       "category": "Apparel",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-05",
       "seen_dates": [
         "2026-08-10",
         "2026-08-20",
@@ -92,7 +93,8 @@
         "2026-10-22",
         "2026-10-26",
         "2026-10-29",
-        "2026-11-02"
+        "2026-11-02",
+        "2026-11-05"
       ]
     },
     {
@@ -127,7 +129,7 @@
       "name": "Nature's Way Sambucus Elderberry Gummies",
       "category": "Health & Household",
       "first_seen": "2026-09-07",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-05",
       "seen_dates": [
         "2026-09-07",
         "2026-09-10",
@@ -143,7 +145,8 @@
         "2026-10-19",
         "2026-10-22",
         "2026-10-29",
-        "2026-11-02"
+        "2026-11-02",
+        "2026-11-05"
       ]
     },
     {
@@ -151,7 +154,7 @@
       "name": "Premier Protein 30g High Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-05",
       "seen_dates": [
         "2026-09-21",
         "2026-09-24",
@@ -165,7 +168,8 @@
         "2026-10-22",
         "2026-10-26",
         "2026-10-29",
-        "2026-11-02"
+        "2026-11-02",
+        "2026-11-05"
       ]
     },
     {
@@ -189,7 +193,7 @@
       "name": "Apple AirPods Pro 3",
       "category": "Electronics",
       "first_seen": "2026-10-01",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-11-05",
       "seen_dates": [
         "2026-10-01",
         "2026-10-08",
@@ -197,7 +201,8 @@
         "2026-10-15",
         "2026-10-19",
         "2026-10-22",
-        "2026-10-26"
+        "2026-10-26",
+        "2026-11-05"
       ]
     },
     {
@@ -223,7 +228,7 @@
       "name": "NatureWise Vitamin D3 5000IU Mini Softgels",
       "category": "Health & Household",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-05",
       "seen_dates": [
         "2026-10-05",
         "2026-10-12",
@@ -232,7 +237,8 @@
         "2026-10-22",
         "2026-10-26",
         "2026-10-29",
-        "2026-11-02"
+        "2026-11-02",
+        "2026-11-05"
       ]
     },
     {
@@ -250,33 +256,19 @@
       ]
     },
     {
-      "key": "inflatable-trex-halloween-costume",
-      "name": "Inflatable T-Rex Halloween Costume",
-      "category": "Apparel",
-      "first_seen": "2026-10-12",
-      "last_seen": "2026-10-29",
-      "seen_dates": [
-        "2026-10-12",
-        "2026-10-15",
-        "2026-10-19",
-        "2026-10-22",
-        "2026-10-26",
-        "2026-10-29"
-      ]
-    },
-    {
       "key": "mighty-patch-original-pimple-patches",
       "name": "Mighty Patch Original Pimple Patches (Hero Cosmetics, 36-ct)",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-10-15",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-05",
       "seen_dates": [
         "2026-10-15",
         "2026-10-19",
         "2026-10-22",
         "2026-10-26",
         "2026-10-29",
-        "2026-11-02"
+        "2026-11-02",
+        "2026-11-05"
       ]
     },
     {
@@ -318,16 +310,6 @@
       ]
     },
     {
-      "key": "laneige-lip-sleeping-mask",
-      "name": "LANEIGE Lip Sleeping Mask",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-10-19",
-      "last_seen": "2026-10-19",
-      "seen_dates": [
-        "2026-10-19"
-      ]
-    },
-    {
       "key": "dawn-platinum-powerwash-dish-spray",
       "name": "Dawn Platinum Powerwash Dish Spray Bundle",
       "category": "Home & Kitchen",
@@ -350,33 +332,14 @@
       ]
     },
     {
-      "key": "blue-buffalo-life-protection-dry-dog-food",
-      "name": "Blue Buffalo Life Protection Dry Dog Food",
-      "category": "Pet Supplies",
-      "first_seen": "2026-10-19",
-      "last_seen": "2026-10-19",
-      "seen_dates": [
-        "2026-10-19"
-      ]
-    },
-    {
-      "key": "ocato-halloween-spider-web-decoration",
-      "name": "Ocato 200-Inch Halloween Spider Web Decoration",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-10-19",
-      "last_seen": "2026-10-19",
-      "seen_dates": [
-        "2026-10-19"
-      ]
-    },
-    {
       "key": "bedsure-gentlesoft-electric-heated-blanket",
       "name": "Bedsure GentleSoft Electric Heated Blanket",
       "category": "Home & Kitchen",
       "first_seen": "2026-10-22",
-      "last_seen": "2026-10-22",
+      "last_seen": "2026-11-05",
       "seen_dates": [
-        "2026-10-22"
+        "2026-10-22",
+        "2026-11-05"
       ]
     },
     {
@@ -414,9 +377,10 @@
       "name": "Pokémon TCG: 30th Celebration Elite Trainer Box",
       "category": "Toys & Games",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-11-05",
       "seen_dates": [
-        "2026-10-26"
+        "2026-10-26",
+        "2026-11-05"
       ]
     },
     {
@@ -424,9 +388,10 @@
       "name": "Ninja CREAMi Ice Cream Maker (NC299AMZ)",
       "category": "Home & Kitchen",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-10-26",
+      "last_seen": "2026-11-05",
       "seen_dates": [
-        "2026-10-26"
+        "2026-10-26",
+        "2026-11-05"
       ]
     },
     {
@@ -444,10 +409,11 @@
       "name": "CeraVe Moisturizing Cream 19oz",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-05",
       "seen_dates": [
         "2026-10-26",
-        "2026-11-02"
+        "2026-11-02",
+        "2026-11-05"
       ]
     },
     {
@@ -511,23 +477,14 @@
       ]
     },
     {
-      "key": "kids-marvel-halloween-costume",
-      "name": "Kids' Marvel Halloween Costumes",
-      "category": "Apparel",
-      "first_seen": "2026-10-29",
-      "last_seen": "2026-10-29",
-      "seen_dates": [
-        "2026-10-29"
-      ]
-    },
-    {
       "key": "clean-skin-club-clean-towels-xl",
       "name": "Clean Skin Club Clean Towels XL",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-10-29",
-      "last_seen": "2026-10-29",
+      "last_seen": "2026-11-05",
       "seen_dates": [
-        "2026-10-29"
+        "2026-10-29",
+        "2026-11-05"
       ]
     },
     {
@@ -544,16 +501,6 @@
       "key": "amazon-kindle-scribe-color",
       "name": "Amazon Kindle Scribe Color",
       "category": "Electronics",
-      "first_seen": "2026-10-29",
-      "last_seen": "2026-10-29",
-      "seen_dates": [
-        "2026-10-29"
-      ]
-    },
-    {
-      "key": "sour-patch-kids-halloween-variety",
-      "name": "Sour Patch Kids Halloween Variety Pack",
-      "category": "Grocery",
       "first_seen": "2026-10-29",
       "last_seen": "2026-10-29",
       "seen_dates": [
@@ -635,9 +582,10 @@
       "name": "Mattel K-pop Demon Hunters Rumi Doll",
       "category": "Toys & Games",
       "first_seen": "2026-11-02",
-      "last_seen": "2026-11-02",
+      "last_seen": "2026-11-05",
       "seen_dates": [
-        "2026-11-02"
+        "2026-11-02",
+        "2026-11-05"
       ]
     },
     {
@@ -658,6 +606,56 @@
       "last_seen": "2026-11-02",
       "seen_dates": [
         "2026-11-02"
+      ]
+    },
+    {
+      "key": "amazon-fire-tv-stick-4k-plus",
+      "name": "Amazon Fire TV Stick 4K Plus",
+      "category": "Electronics",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05",
+      "seen_dates": [
+        "2026-11-05"
+      ]
+    },
+    {
+      "key": "ring-battery-doorbell-2k",
+      "name": "Ring Battery Doorbell 2K",
+      "category": "Electronics",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05",
+      "seen_dates": [
+        "2026-11-05"
+      ]
+    },
+    {
+      "key": "bose-quietcomfort-ultra-headphones",
+      "name": "Bose QuietComfort Ultra Headphones 2nd Gen",
+      "category": "Electronics",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05",
+      "seen_dates": [
+        "2026-11-05"
+      ]
+    },
+    {
+      "key": "dyson-hot-cool-hp1",
+      "name": "Dyson Purifier Hot+Cool HP1",
+      "category": "Home & Kitchen",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05",
+      "seen_dates": [
+        "2026-11-05"
+      ]
+    },
+    {
+      "key": "crunklabs-crunchinator",
+      "name": "CrunchLabs Crunchinator by Mark Rober",
+      "category": "Toys & Games",
+      "first_seen": "2026-11-05",
+      "last_seen": "2026-11-05",
+      "seen_dates": [
+        "2026-11-05"
       ]
     }
   ]
