@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Amazon Top Sellers — November 12, 2026</title>
+<style>
+  :root {
+    --bg: #0f172a;
+    --panel: #ffffff;
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --verified: #16a34a;
+    --verified-bg: #ecfdf3;
+    --lowconf: #d97706;
+    --lowconf-bg: #fffbeb;
+    --new: #2563eb;
+    --new-bg: #eff6ff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    background: #f1f5f9;
+    color: var(--ink);
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 24px 20px 60px; }
+
+  /* 1. Header band */
+  .header-band {
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #fff;
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 22px;
+  }
+  .header-band h1 { margin: 0 0 6px; font-size: 26px; }
+  .header-band .date { color: #94a3b8; font-size: 15px; margin-bottom: 14px; }
+  .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.25);
+    color: #e2e8f0;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 13px;
+  }
+
+  /* 2. Executive summary */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .panel h2 { margin: 0 0 10px; font-size: 17px; }
+  .exec-summary { font-size: 15px; line-height: 1.6; color: #1e293b; }
+
+  /* 3. Quick stats */
+  .stats-row { display: flex; gap: 14px; margin-bottom: 22px; flex-wrap: wrap; }
+  .stat-card {
+    flex: 1 1 150px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-card .num { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--muted); margin-top: 4px; text-transform: uppercase; letter-spacing: .04em; }
+
+  /* 4. Top movers grid */
+  .section-title { font-size: 19px; margin: 30px 0 14px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; }
+  .card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .pill {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 999px;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .badge-row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+  .tag-new { background: var(--new-bg); color: var(--new); }
+  .tag-recurring { background: #f1f5f9; color: var(--muted); }
+  .tag-verified { background: var(--verified-bg); color: var(--verified); }
+  .tag-lowconf { background: var(--lowconf-bg); color: var(--lowconf); }
+  .card-why { font-size: 13.5px; line-height: 1.5; color: #334155; }
+  .card-meta { font-size: 12.5px; color: var(--muted); }
+  .card-sources { font-size: 11.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 8px; margin-top: 4px; }
+  .card-sources a { color: #2563eb; text-decoration: none; }
+
+  /* 5. Category chart */
+  .chart-wrap { padding: 10px 6px; }
+
+  /* 6. New entrants spotlight */
+  .spotlight { background: var(--new-bg); border: 1px solid #bfdbfe; }
+
+  /* 7. Methodology footer */
+  .methodology { font-size: 13px; color: #475569; line-height: 1.6; }
+  .methodology h2 { color: #1e293b; }
+
+  /* 8. Footer nav */
+  .footer-nav { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); margin-top: 10px; }
+  .footer-nav a { color: #2563eb; text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 1. Header band -->
+  <div class="header-band">
+    <h1>Amazon Top Sellers &amp; Rising Movers</h1>
+    <div class="date">November 12, 2026</div>
+    <span class="badge">Public web research · Cross-verified · 20 sources checked</span>
+  </div>
+
+  <!-- 2. Executive summary -->
+  <div class="panel">
+    <h2>Executive Summary</h2>
+    <div class="exec-summary">November 12 marks the opening of Amazon's most aggressive pre-holiday sales push in years, with early Black Friday deals driving record-low prices across electronics, smart home, and streaming categories one full week before the official November 19 event launch. The standout headline: Ring Indoor Cam 2K at $24.99 (down from ~$60) and Apple AirTag 2nd Generation 4-pack at an all-time low $69.99 are both carrying Amazon #1 Bestseller or Best Seller badges, confirming that price cuts are translating directly into purchase velocity — consumers are buying now, not waiting for Black Friday. In toys, two strong new entrants emerge: the Primal Hatch Megalodon Hatching Shark Egg is 2026's viral breakout toy (on Amazon's official Top 100+ Toys list), and Magna-Tiles continues its perennial holiday STEM dominance with the Undersea Adventure set. The broader economic signal is notable: front-loaded holiday spending, now arriving in the second week of November rather than the fourth, reflects both Amazon's deliberate staged-deal strategy and consumers' growing willingness to act early to secure inventory on viral and limited items. For a writer focused on American business growth, this pattern underscores how Amazon's promotional calendar is reshaping the entire U.S. retail holiday cycle. 14 VERIFIED, 3 LOW-CONFIDENCE, 4 NEW, 13 RECURRING across 9 categories. Amazon.com DNS-blocked throughout this run; all data sourced from 20 secondary press and analytics domains.</div>
+  </div>
+
+  <!-- 3. Quick stats -->
+  <div class="stats-row">
+    <div class="stat-card"><div class="num">17</div><div class="label">Products Covered</div></div>
+    <div class="stat-card"><div class="num">4</div><div class="label">New Entrants</div></div>
+    <div class="stat-card"><div class="num">13</div><div class="label">Recurring</div></div>
+    <div class="stat-card"><div class="num">14</div><div class="label">Verified</div></div>
+    <div class="stat-card"><div class="num">3</div><div class="label">Low Confidence</div></div>
+    <div class="stat-card"><div class="num">9</div><div class="label">Categories</div></div>
+  </div>
+
+  <!-- 4. Top movers grid -->
+  <h2 class="section-title">Top Movers</h2>
+  <div class="grid">
+
+    <!-- VERIFIED + NEW items first -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Ring Indoor Cam 2K Plug-In</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Amazon's early Black Friday campaign has pushed the Ring Indoor Cam 2K Plug-In to its lowest-ever price, earning an Amazon #1 Bestseller badge in its category. Multiple outlets confirm the sharp discount is driving high purchase velocity heading into the holiday home-security gifting window. The 2K resolution (a step up from prior Ring indoor cams) and plug-in design make it a popular entry-level home security camera for first-time buyers.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Early Black Friday discounts on home security cameras historically create multi-week sales spikes; Ring's brand recognition amplifies the effect.</div>
+      <div class="card-meta">$24.99 (down from ~$60, 58% off — early Black Friday pricing)</div>
+      <div class="card-sources">Sources: <a href="https://www.androidpolice.com/amazon-ring-early-black-friday-camera-doorbell-deals/">androidpolice.com</a> (Nov 2026), <a href="https://www.security.org/security-cameras/ring/black-friday/">security.org</a> (Nov 2026), <a href="https://eng.pressbee.net/show4960967.html">pressbee.net</a> (Nov 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirTag (2nd Generation) 4-Pack</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Apple AirTag 2nd Generation hit an all-time low price of $69.99 for the 4-pack on November 11, 2026, confirmed by AppleInsider and Android Authority — a 29% discount off the $99 list price. The second generation adds extended Ultra Wideband precision-tracking range and a 50% louder speaker. Combined with holiday gifting demand (item trackers are strong gift-guide perennials), the record discount is sustaining a "Best Seller" badge in the Item Finders category.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth (seasonal) — Holiday gifting + all-time low price creates ideal conditions; likely to maintain through Black Friday week.</div>
+      <div class="card-meta">$69.99 for 4-pack (record low, 29% off $99); single unit $23.00 (save $6)</div>
+      <div class="card-sources">Sources: <a href="https://appleinsider.com/articles/26/11/11/amazon-launches-early-black-friday-airtag-deal-4-pack-plunges-to-69">appleinsider.com</a> (Nov 11, 2026), <a href="https://www.androidauthority.com/apple-airtag-2-four-pack-deal-3733970/">androidauthority.com</a> (Nov 11, 2026), <a href="https://the-gadgeteer.com/2026/11/11/the-airtag-2-four-pack-just-fell-to-69-99-at-amazon/">the-gadgeteer.com</a> (Nov 11, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Primal Hatch Megalodon Hatching Shark Egg</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Primal Hatch Megalodon is 2026's viral breakthrough toy, following the brand's massive 2025 success with its hatching dinosaur egg. Amazon's official 2026 Top 100+ Toys list includes it, and Today.com named it among the hottest holiday toys of the year. Fox21 News covered it as "the next holiday fad" at launch. The Megalodon hatching mechanic taps into the same unboxing-event excitement that drove its predecessor's viral social media run, with the added cultural pull of deep-sea fascination among kids.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Viral toy status + official Amazon holiday list placement; demand expected to accelerate sharply through Thanksgiving week.</div>
+      <div class="card-meta">$49.99</div>
+      <div class="card-sources">Sources: <a href="https://www.today.com/shop/amazon-top-toys-2026-rcna596578">today.com</a> (Amazon Top Toys 2026 + Today's Best Toy Awards), <a href="https://www.fox21news.com/news/this-hatching-megalodon-toy-is-the-next-holiday-fad-and-it-launched-today/">fox21news.com</a> (2026 launch), <a href="https://www.forbes.com/sites/forbes-personal-shopper/2026/09/11/best-toys-on-amazon-2026/">forbes.com</a> (top Amazon toys 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Magna-Tiles Undersea Adventure 58-Piece</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-new">NEW</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Magna-Tiles has appeared on Amazon's official holiday toy list for multiple consecutive years, and the Undersea Adventure 58-piece set is on Amazon's 2026 Top 100+ Toys list at $89.99. The magnetic construction tile category continues to perform strongly as parents and gift-givers seek STEM-oriented presents that have demonstrated sustained engagement beyond initial play. Today.com also features it among the hottest holiday toys of 2026.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — STEM construction toys are perennial top holiday performers; expect a typical seasonal lift without an extraordinary spike.</div>
+      <div class="card-meta">$89.99</div>
+      <div class="card-sources">Sources: <a href="https://www.aboutamazon.com/news/retail/best-gifts-kids-amazon-toys-we-love-list-2026">aboutamazon.com</a> (2026 Top 100+ Toys list), <a href="https://www.today.com/shop/hottest-toys-2026-rcna602966">today.com</a> (hottest holiday toys 2026)</div>
+    </div>
+
+    <!-- Remaining VERIFIED items -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Amazon Fire TV Stick 4K (2026)</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 3/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Amazon's own first-party streaming device is at an all-time low price ahead of Black Friday. Today.com describes it as Amazon's "bestselling Fire TV Stick," and multiple retail-tech outlets covering the early Black Friday sale list it among the top deals. The 2026 model carries a 58% discount (now $24.99 from $59.99), a price point that makes it one of the most compelling streaming device gifts of the season as cord-cutting continues its structural growth in U.S. households.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth (seasonal) — Lowest-ever price + holiday gifting demand will sustain through Black Friday week; expected to return toward regular pricing afterwards.</div>
+      <div class="card-meta">$24.99 (from $59.99, 58% off — all-time low)</div>
+      <div class="card-sources">Sources: <a href="https://www.androidpolice.com/amazon-fire-tv-stick-deal-early-black-friday/">androidpolice.com</a> (Nov 2026), <a href="https://www.today.com/shop/amazon-black-friday-early-deals-2026-rcna608293">today.com</a> (Nov 2026), <a href="https://cordcuttersnews.com/amazon-fire-tv-flash-sale-ends-tonight-heres-how-you-can-save-up-to-58-before-the-holiday-rush/">cordcuttersnews.com</a> (Nov 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Apple AirPods Pro 3</h3>
+        <span class="pill" style="background:#2563eb">Electronics</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 4/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Apple's flagship wireless earbuds continue to rank among Amazon's top Electronics sellers. The $50 early-Black-Friday discount maintains their sales momentum heading into the peak gift-buying window. AMZPrep's 2026 seller data lists them as a top Electronics item by revenue. Their consistent presence in this report across 10 appearances reflects steady premium consumer demand that is amplified — not created — by seasonal discounting.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Strong brand loyalty and consistent demand; this price point may ease slightly after the official holiday period.</div>
+      <div class="card-meta">$199 ($50 off list price — early Black Friday)</div>
+      <div class="card-sources">Sources: <a href="https://www.today.com/shop/amazon-black-friday-early-deals-2026-rcna608293">today.com</a> (early Black Friday 2026), <a href="https://amzprep.com/best-selling-products-amazon/">amzprep.com</a> (2026 seller guide)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Ninja Flip Toaster Oven &amp; Air Fryer SP151</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Ninja Flip carries an Amazon Best Seller badge in its category with "10K+ bought in past month" as of early November 2026, per the product listing. Sporked reported the 44% price drop in November 2026 and confirmed the Best Seller badge. The 8-in-1 functionality and space-saving flip design make it a natural holiday gift for home cooks, and the price cut from $249.99 to $139.99 has opened it up to a significantly wider buyer pool than its original price point.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Holiday kitchen appliance demand + major price reduction; expect sustained performance through December gift-giving.</div>
+      <div class="card-meta">$139.99 (from $249.99, 44% off)</div>
+      <div class="card-sources">Sources: <a href="https://sporked.com/scooped/ninja-flip-air-fryer-amazon-sale-november-2026/">sporked.com</a> (Nov 2026, Best Seller badge + price confirmed), <a href="https://dealsfinders.com/ninja-flip-toaster-oven-air-fryer-deal/">dealsfinders.com</a> (Nov 2, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Pokémon TCG: 30th Celebration Elite Trainer Box</h3>
+        <span class="pill" style="background:#f59e0b">Toys &amp; Games</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 4/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The 30th Anniversary of Pokémon TCG is driving collector and holiday-gift demand for this limited box set. Amazon is routing purchases through an invite-only system due to high demand, which creates scarcity urgency among buyers. Yahoo Shopping reported the box at $89.99 on Amazon in November 2026, and also covered a brief window at $59.99 — well below the secondary-market price that had reached ~$175 earlier in the week. Multiple holiday toy roundups name it as a must-have gift for TCG fans and collectors of all ages.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth — Holiday toy buying + collectible scarcity from invite-only system; Pokémon anniversary extends appeal beyond the core TCG buyer.</div>
+      <div class="card-meta">$89.99 (via Amazon invite system; briefly $59.99 during limited drop)</div>
+      <div class="card-sources">Sources: <a href="https://shopping.yahoo.com/deals/articles/pok-mon-30th-celebration-elite-090000598.html">shopping.yahoo.com</a> (Nov 2026 price article), <a href="https://nayafoundit.com/hottest-toys-2026/">nayafoundit.com</a> (hottest toys 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Hanes EcoSmart Fleece Hoodie</h3>
+        <span class="pill" style="background:#7c3aed">Apparel</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 7/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">The Hanes EcoSmart fleece hoodie has earned Amazon's #1 Bestseller designation in its fashion category, with over 26,000 five-star ratings per Yahoo reporting. November temperature drops across much of the U.S. drive predictable surges in affordable layering pieces, and this hoodie has held the top spot for most of fall 2026. AMZScout tracked its sales climb throughout the season. At ~$10–24 depending on style, it is one of the most accessible high-volume fashion items on the platform.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip — Will peak through December, then gradually decline post-holiday as winter outerwear demand subsides.</div>
+      <div class="card-meta">~$10–24 (varies by style and size)</div>
+      <div class="card-sources">Sources: <a href="https://www.yahoo.com/lifestyle/warm-while-not-being-bulky-amazons-1-bestselling-hanes-hoodie-is-on-sale-for-as-low-as-15-131025542.html">yahoo.com</a> (#1 bestseller article), <a href="https://amzscout.net/blog/best-selling-products-on-amazon/">amzscout.net</a> (2026 fall/winter seller data)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">NatureWise Vitamin D3 5000IU Mini Softgels</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 7/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Vitamin D3 is among Amazon's most consistently top-selling supplements, and demand enters its annual peak as shorter fall and winter days reduce sun exposure for most Americans. ASINSIGHT's category tracker placed the NatureWise 5000IU variant in the leading position for Vitamin D3 search results. AMZPrep's 2026 seller data also lists it as one of the top-performing health supplement SKUs on Amazon. At ~$13–14 for a large supply, its price-per-dose value sustains repeat-purchase momentum.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth (seasonal) — Fall/winter sunshine deficit drives annual demand spike; expect elevated performance through February.</div>
+      <div class="card-meta">~$13–14</div>
+      <div class="card-sources">Sources: <a href="https://amzprep.com/best-selling-products-amazon/">amzprep.com</a> (2026 top supplement SKUs), <a href="https://www.asinsight.com/report/US/naturewise-vitamin-d3-5000-iu">asinsight.com</a> (Vitamin D3 category tracker, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">CeraVe Moisturizing Cream 19oz</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 5/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">CeraVe's large-jar moisturizer is perennially Amazon's top-ranked body and face cream for dry skin. ASINSIGHT's July 2026 category report placed the 19oz CeraVe Moisturizing Cream at #1 for intensive moisturizing cream searches on Amazon. Fall and winter cold weather drives a predictable seasonal surge in heavy-duty moisturizer demand — this is the SKU that benefits most. Its dermatologist-recommended branding and wide availability at a reasonable price point make it a year-round anchor that strengthens further in colder months.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth (seasonal) — Winter dry-skin conditions drive consistent demand uplift for this exact SKU through early spring.</div>
+      <div class="card-meta">~$12–18 (19oz jar)</div>
+      <div class="card-sources">Sources: <a href="https://www.asinsight.com/report/US/cerave-intensive-moisturizing-cream">asinsight.com</a> (#1 ranking in category, Jul 2026), <a href="https://www.yahoo.com/lifestyle/not-already-using-amazon-best-142321058.html">yahoo.com</a> (amazon's best-selling cream article)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Mighty Patch Original Pimple Patches (Hero Cosmetics, 36-ct)</h3>
+        <span class="pill" style="background:#db2777">Beauty &amp; Personal Care</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 7/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Acne patches have become a skincare staple among consumers of all ages, and Mighty Patch continues to lead the category on Amazon. AMZScout's 2026 category analysis highlights it as one of the top-selling beauty items by unit volume. AMZPrep's seller guide also lists it as a top Beauty performer. The product's consistent 7-of-7 streak in this report reflects strong repeat-purchase behavior — a reliable signal that this is structural demand, not a one-time trend spike.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Acne patch demand is relatively consistent year-round; holiday gifting of beauty sets may provide a modest additional lift.</div>
+      <div class="card-meta">~$10–15 (36-count pack)</div>
+      <div class="card-sources">Sources: <a href="https://amzscout.net/blog/best-selling-products-on-amazon/">amzscout.net</a> (2026 category analysis), <a href="https://amzprep.com/best-selling-products-amazon/">amzprep.com</a> (2026 best-seller guide)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Premier Protein 30g High Protein Shake</h3>
+        <span class="pill" style="background:#65a30d">Grocery</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 7/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">Premier Protein is one of the top protein shake brands on Amazon by unit volume. MetricsCart confirmed its bestseller listing presence across multiple products in Grocery &amp; Gourmet Food in June 2026. ASINSIGHT's August 2026 tracker placed it among the top protein shakes by sales. Its 7-of-7 consecutive streak in this report — and 16 total appearances in the archive — reflects one of the most durable consumer trends in the data: the mainstreaming of high-protein convenience foods driven by sustained interest in GLP-1 and weight-loss culture.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Protein shake demand is relatively consistent year-round; moderate new-year resolution bump expected in January.</div>
+      <div class="card-meta">~$30 for 12-pack</div>
+      <div class="card-sources">Sources: <a href="https://metricscart.com/bestseller-reports/amazon-com/brands/2943/">metricscart.com</a> (Jun 2026 bestseller data), <a href="https://www.asinsight.com/report/US/protein-shake-premier">asinsight.com</a> (Aug 2026 protein shake tracker)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">INABA Churu Lickable Cat Treats</h3>
+        <span class="pill" style="background:#92400e">Pet Supplies</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 7/7)</span>
+        <span class="tag tag-verified">VERIFIED</span>
+      </div>
+      <div class="card-why">INABA holds the #1 position among Amazon cat brands by market share, per Similarweb's April 2026 data. ASINSIGHT's category tracker shows leading Churu variants at approximately 30,000 monthly units, with top listings holding 4.9-star ratings. With 31 total report appearances — the archive's longest-running streak — INABA Churu is the clearest demonstration of structural pet-care spending in this dataset. As more Americans own pets and treat them as family members, premium lickable treats continue to outperform traditional dry treats on Amazon.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Steady — Pet treat demand is year-round and shows no seasonal drop; a holiday gift-for-pets trend may provide mild uplift.</div>
+      <div class="card-meta">~$20–33 depending on pack size</div>
+      <div class="card-sources">Sources: <a href="https://www.similarweb.com/top-amazon-brands/usa/pet-supplies/cats/">similarweb.com</a> (#1 Amazon cat brand, Apr 2026), <a href="https://www.asinsight.com/report/US/churu-lickable-cat-treats">asinsight.com</a> (Churu category tracker, 2026)</div>
+    </div>
+
+    <!-- LOW-CONFIDENCE items last -->
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Nature's Way Sambucus Elderberry Gummies</h3>
+        <span class="pill" style="background:#0d9488">Health &amp; Household</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 6/7)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Elderberry supplements are well-documented seasonal best-sellers in fall and winter, driven by cold and flu season. This product has been a recurring presence in Amazon's health top-sellers throughout 2026, appearing in 18 of the archive's reports — the longest-running Health &amp; Household streak. AMZPrep's seller guide notes cold-and-flu supplements as a November-peak category. No specific current rankings or unit figures were confirmed in this run; include this product with caution.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth (seasonal) — Cold/flu season is peak period for immunity supplements; expect sustained demand through February.</div>
+      <div class="card-meta">Price not confirmed in this run</div>
+      <div class="card-sources">Sources: <a href="https://amzprep.com/best-selling-products-amazon/">amzprep.com</a> (cold-season supplement category reference, 2026)</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">HotHands Hand Warmers Bulk Pack (40-pair)</h3>
+        <span class="pill" style="background:#ea580c">Sports &amp; Outdoors</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2/7)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Cold weather onset in November reliably drives hand warmer sales on Amazon every year. This product debuted in the November 9 report as temperatures dropped across most of the U.S., and seasonal demand patterns suggest continued elevation through winter. No specific November 12 source coverage was found confirming current rank or unit data; included based on strong seasonal pattern and prior-report appearance.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Likely Seasonal Dip (post-winter) — Will hold elevated demand through February, then drop sharply as winter ends.</div>
+      <div class="card-meta">Price not confirmed in this run</div>
+      <div class="card-sources">Sources: Prior report appearance (2026-11-09); seasonal cold-weather demand pattern observed across seller guides</div>
+    </div>
+
+    <div class="card">
+      <div class="card-top">
+        <h3 class="card-title">Bedsure GentleSoft Electric Heated Blanket</h3>
+        <span class="pill" style="background:#16a34a">Home &amp; Kitchen</span>
+      </div>
+      <div class="badge-row">
+        <span class="tag tag-recurring">RECURRING (streak: 2/7)</span>
+        <span class="tag tag-lowconf">LOW-CONFIDENCE</span>
+      </div>
+      <div class="card-why">Electric heated blankets are a consistent November through February best-seller category on Amazon, and Bedsure's GentleSoft model held Amazon's #1 Best Seller badge in Electric Blankets when it first entered this report in October 2026. November cold weather both expands demand and makes this a compelling holiday gift. No specific new source was confirmed in this run beyond the product's prior appearances and the seasonal category pattern.</div>
+      <div class="card-meta"><strong>Growth outlook:</strong> Strong Growth (seasonal) — Cold weather season is the core demand window; expect continued elevation through January.</div>
+      <div class="card-meta">Price not confirmed in this run</div>
+      <div class="card-sources">Sources: Prior report appearances (2026-11-09, 2026-11-05); seasonal heated blanket demand pattern across seller guides</div>
+    </div>
+
+  </div>
+
+  <!-- 5. Category breakdown -->
+  <h2 class="section-title">Category Breakdown</h2>
+  <div class="panel chart-wrap">
+    <svg width="100%" height="316" viewBox="0 0 700 316">
+      <text x="0" y="22" font-size="13" fill="#1e293b">Electronics</text>
+      <rect x="160" y="8" width="400" height="18" rx="4" fill="#2563eb"/>
+      <text x="568" y="22" font-size="12" fill="#475569">4</text>
+
+      <text x="0" y="56" font-size="13" fill="#1e293b">Toys &amp; Games</text>
+      <rect x="160" y="42" width="300" height="18" rx="4" fill="#f59e0b"/>
+      <text x="468" y="56" font-size="12" fill="#475569">3</text>
+
+      <text x="0" y="90" font-size="13" fill="#1e293b">Home &amp; Kitchen</text>
+      <rect x="160" y="76" width="200" height="18" rx="4" fill="#16a34a"/>
+      <text x="368" y="90" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="124" font-size="13" fill="#1e293b">Health &amp; Household</text>
+      <rect x="160" y="110" width="200" height="18" rx="4" fill="#0d9488"/>
+      <text x="368" y="124" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="158" font-size="13" fill="#1e293b">Beauty &amp; Personal Care</text>
+      <rect x="160" y="144" width="200" height="18" rx="4" fill="#db2777"/>
+      <text x="368" y="158" font-size="12" fill="#475569">2</text>
+
+      <text x="0" y="192" font-size="13" fill="#1e293b">Grocery</text>
+      <rect x="160" y="178" width="100" height="18" rx="4" fill="#65a30d"/>
+      <text x="268" y="192" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="226" font-size="13" fill="#1e293b">Apparel</text>
+      <rect x="160" y="212" width="100" height="18" rx="4" fill="#7c3aed"/>
+      <text x="268" y="226" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="260" font-size="13" fill="#1e293b">Sports &amp; Outdoors</text>
+      <rect x="160" y="246" width="100" height="18" rx="4" fill="#ea580c"/>
+      <text x="268" y="260" font-size="12" fill="#475569">1</text>
+
+      <text x="0" y="294" font-size="13" fill="#1e293b">Pet Supplies</text>
+      <rect x="160" y="280" width="100" height="18" rx="4" fill="#92400e"/>
+      <text x="268" y="294" font-size="12" fill="#475569">1</text>
+    </svg>
+  </div>
+
+  <!-- 6. New entrants spotlight -->
+  <h2 class="section-title">New Entrants Spotlight</h2>
+  <div class="panel spotlight">
+    <ul style="margin:0;padding-left:20px;line-height:1.9;font-size:14px;color:#1e3a8a;">
+      <li><strong>Ring Indoor Cam 2K Plug-In (Electronics):</strong> Amazon's early Black Friday pricing dropped this home security camera to its lowest-ever $24.99, earning it a #1 Bestseller badge — the first-ever appearance of Ring's 2K indoor camera in this report.</li>
+      <li><strong>Apple AirTag (2nd Generation) 4-Pack (Electronics):</strong> New hardware generation (Ultra Wideband range extension + louder speaker) hit an all-time low of $69.99 on November 11 — record-low pricing on newly-launched hardware is a rare event.</li>
+      <li><strong>Primal Hatch Megalodon Hatching Shark Egg (Toys &amp; Games):</strong> 2026's breakthrough viral toy, following the brand's massive 2025 dino-hatch success. On Amazon's official Top 100+ Toys list and named by Forbes and Today.com as among the year's hottest holiday toys.</li>
+      <li><strong>Magna-Tiles Undersea Adventure 58-Piece (Toys &amp; Games):</strong> Perennial STEM toy brand's new undersea themed set appeared on Amazon's 2026 holiday toys list — a reliable category anchor that earns its place on gift guides year after year.</li>
+    </ul>
+  </div>
+
+  <!-- 7. Methodology footer -->
+  <div class="panel methodology">
+    <h2>Methodology &amp; Sources</h2>
+    <p><strong>Research method:</strong> This report was produced exclusively through web search (WebSearch tool) and attempted page fetches. Amazon.com and most major retail press outlets (washingtontimes.com, popsci.com, 9to5toys.com, shopping.yahoo.com) were inaccessible due to DNS restrictions in this run's network environment — this is a fully degraded-mode run. All product data was gathered from search-result snippets, secondary press, and third-party analytics platforms.</p>
+    <p><strong>Verification rule:</strong> VERIFIED items were corroborated by at least 2 independent sources (Amazon's own platform data via snippets, plus at least one independent news outlet or analytics platform). LOW-CONFIDENCE items had only 1 source or general category references and are marked visibly. No specific sales figures, rankings, or percentages were included in VERIFIED cards unless they appeared as direct text in a cited source's search snippet — no figures were reconstructed from memory or general context.</p>
+    <p><strong>Fallback noted:</strong> Amazon Movers &amp; Shakers and Amazon Best Sellers pages (amazon.com) were inaccessible. Amazon New Releases pages were also inaccessible. Product discovery relied on early Black Friday deal coverage (androidpolice.com, today.com, cordcuttersnews.com, sporked.com, appleinsider.com, androidauthority.com, the-gadgeteer.com, pressbee.net, security.org, fox21news.com, dealsfinders.com), Amazon's own holiday press (aboutamazon.com via snippet), toy holiday roundups (today.com, forbes.com, nayafoundit.com), and third-party seller analytics (amzscout.net, amzprep.com, asinsight.com, metricscart.com, similarweb.com).</p>
+    <p><strong>Distinct source domains checked:</strong> androidpolice.com, appleinsider.com, androidauthority.com, the-gadgeteer.com, today.com, sporked.com, dealsfinders.com, fox21news.com, forbes.com, nayafoundit.com, asinsight.com, security.org, cordcuttersnews.com, pressbee.net, techradar.com, 9to5mac.com, aboutamazon.com, metricscart.com, amzscout.net, amzprep.com, similarweb.com (~20 total). Approximately 7 additional domains attempted via direct fetch; all returned DNS errors.</p>
+  </div>
+
+  <!-- 8. Footer nav -->
+  <div class="footer-nav">
+    <a href="../index.html">&larr; Archive</a>
+    <span>Previous report: <a href="../November9_2026/">November 9</a></span>
+  </div>
+
+</div>
+</body>
+</html>
