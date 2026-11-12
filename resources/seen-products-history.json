@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-09",
+  "last_updated": "2026-11-12",
   "window_days": 14,
   "products": [
     {
@@ -7,7 +7,7 @@
       "name": "INABA Churu Lickable Cat Treats",
       "category": "Pet Supplies",
       "first_seen": "2026-07-09",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-12",
       "seen_dates": [
         "2026-07-09",
         "2026-07-13",
@@ -38,7 +38,8 @@
         "2026-10-29",
         "2026-11-02",
         "2026-11-05",
-        "2026-11-09"
+        "2026-11-09",
+        "2026-11-12"
       ]
     },
     {
@@ -46,7 +47,7 @@
       "name": "Hanes EcoSmart Fleece Hoodie",
       "category": "Apparel",
       "first_seen": "2026-08-10",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-12",
       "seen_dates": [
         "2026-08-10",
         "2026-08-20",
@@ -68,7 +69,8 @@
         "2026-10-29",
         "2026-11-02",
         "2026-11-05",
-        "2026-11-09"
+        "2026-11-09",
+        "2026-11-12"
       ]
     },
     {
@@ -76,7 +78,7 @@
       "name": "Nature's Way Sambucus Elderberry Gummies",
       "category": "Health & Household",
       "first_seen": "2026-09-07",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-12",
       "seen_dates": [
         "2026-09-07",
         "2026-09-10",
@@ -94,7 +96,8 @@
         "2026-10-29",
         "2026-11-02",
         "2026-11-05",
-        "2026-11-09"
+        "2026-11-09",
+        "2026-11-12"
       ]
     },
     {
@@ -102,7 +105,7 @@
       "name": "Premier Protein 30g High Protein Shake",
       "category": "Grocery",
       "first_seen": "2026-09-21",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-12",
       "seen_dates": [
         "2026-09-21",
         "2026-09-24",
@@ -118,7 +121,8 @@
         "2026-10-29",
         "2026-11-02",
         "2026-11-05",
-        "2026-11-09"
+        "2026-11-09",
+        "2026-11-12"
       ]
     },
     {
@@ -142,7 +146,7 @@
       "name": "Apple AirPods Pro 3",
       "category": "Electronics",
       "first_seen": "2026-10-01",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-12",
       "seen_dates": [
         "2026-10-01",
         "2026-10-08",
@@ -152,7 +156,8 @@
         "2026-10-22",
         "2026-10-26",
         "2026-11-05",
-        "2026-11-09"
+        "2026-11-09",
+        "2026-11-12"
       ]
     },
     {
@@ -178,7 +183,7 @@
       "name": "NatureWise Vitamin D3 5000IU Mini Softgels",
       "category": "Health & Household",
       "first_seen": "2026-10-05",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-12",
       "seen_dates": [
         "2026-10-05",
         "2026-10-12",
@@ -189,21 +194,8 @@
         "2026-10-29",
         "2026-11-02",
         "2026-11-05",
-        "2026-11-09"
-      ]
-    },
-    {
-      "key": "amazon-kindle-2026-redesign",
-      "name": "Amazon Kindle 2026 (Redesigned Lineup — Base, Paperwhite, Colorsoft)",
-      "category": "Electronics",
-      "first_seen": "2026-10-12",
-      "last_seen": "2026-10-26",
-      "seen_dates": [
-        "2026-10-12",
-        "2026-10-15",
-        "2026-10-19",
-        "2026-10-22",
-        "2026-10-26"
+        "2026-11-09",
+        "2026-11-12"
       ]
     },
     {
@@ -211,7 +203,7 @@
       "name": "Mighty Patch Original Pimple Patches (Hero Cosmetics, 36-ct)",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-10-15",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-12",
       "seen_dates": [
         "2026-10-15",
         "2026-10-19",
@@ -220,7 +212,8 @@
         "2026-10-29",
         "2026-11-02",
         "2026-11-05",
-        "2026-11-09"
+        "2026-11-09",
+        "2026-11-12"
       ]
     },
     {
@@ -238,47 +231,16 @@
       ]
     },
     {
-      "key": "dawn-platinum-powerwash-dish-spray",
-      "name": "Dawn Platinum Powerwash Dish Spray Bundle",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-10-19",
-      "last_seen": "2026-10-26",
-      "seen_dates": [
-        "2026-10-19",
-        "2026-10-26"
-      ]
-    },
-    {
-      "key": "levoit-lvac200-cordless-vacuum",
-      "name": "Levoit LVAC-200 Cordless Vacuum Cleaner",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-10-19",
-      "last_seen": "2026-10-26",
-      "seen_dates": [
-        "2026-10-19",
-        "2026-10-26"
-      ]
-    },
-    {
       "key": "bedsure-gentlesoft-electric-heated-blanket",
       "name": "Bedsure GentleSoft Electric Heated Blanket",
       "category": "Home & Kitchen",
       "first_seen": "2026-10-22",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-12",
       "seen_dates": [
         "2026-10-22",
         "2026-11-05",
-        "2026-11-09"
-      ]
-    },
-    {
-      "key": "cascade-platinum-plus-dishwasher-pods",
-      "name": "Cascade Platinum Plus ActionPacs Dishwasher Pods",
-      "category": "Home & Kitchen",
-      "first_seen": "2026-10-26",
-      "last_seen": "2026-10-26",
-      "seen_dates": [
-        "2026-10-26"
+        "2026-11-09",
+        "2026-11-12"
       ]
     },
     {
@@ -286,11 +248,12 @@
       "name": "Pokémon TCG: 30th Celebration Elite Trainer Box",
       "category": "Toys & Games",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-12",
       "seen_dates": [
         "2026-10-26",
         "2026-11-05",
-        "2026-11-09"
+        "2026-11-09",
+        "2026-11-12"
       ]
     },
     {
@@ -306,66 +269,17 @@
       ]
     },
     {
-      "key": "owala-freesip-24oz-water-bottle",
-      "name": "Owala FreeSip 24oz Stainless Steel Water Bottle",
-      "category": "Sports & Outdoors",
-      "first_seen": "2026-10-26",
-      "last_seen": "2026-10-26",
-      "seen_dates": [
-        "2026-10-26"
-      ]
-    },
-    {
       "key": "cerave-moisturizing-cream-19oz",
       "name": "CeraVe Moisturizing Cream 19oz",
       "category": "Beauty & Personal Care",
       "first_seen": "2026-10-26",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-12",
       "seen_dates": [
         "2026-10-26",
         "2026-11-02",
         "2026-11-05",
-        "2026-11-09"
-      ]
-    },
-    {
-      "key": "nooni-appleseed-lip-oil-set",
-      "name": "NOONI Appleseed Lip Oil Set",
-      "category": "Beauty & Personal Care",
-      "first_seen": "2026-10-26",
-      "last_seen": "2026-10-26",
-      "seen_dates": [
-        "2026-10-26"
-      ]
-    },
-    {
-      "key": "energizer-aa-aaa-battery-pack",
-      "name": "Energizer AA/AAA Battery Multi-Pack",
-      "category": "Health & Household",
-      "first_seen": "2026-10-26",
-      "last_seen": "2026-10-26",
-      "seen_dates": [
-        "2026-10-26"
-      ]
-    },
-    {
-      "key": "amazon-alexa-tablet-11",
-      "name": "Amazon Alexa Tablet 11",
-      "category": "Electronics",
-      "first_seen": "2026-10-29",
-      "last_seen": "2026-10-29",
-      "seen_dates": [
-        "2026-10-29"
-      ]
-    },
-    {
-      "key": "apple-airpods-5",
-      "name": "Apple AirPods 5 (with ANC)",
-      "category": "Electronics",
-      "first_seen": "2026-10-29",
-      "last_seen": "2026-10-29",
-      "seen_dates": [
-        "2026-10-29"
+        "2026-11-09",
+        "2026-11-12"
       ]
     },
     {
@@ -524,13 +438,14 @@
     },
     {
       "key": "amazon-fire-tv-stick-4k-plus",
-      "name": "Amazon Fire TV Stick 4K Plus",
+      "name": "Amazon Fire TV Stick 4K (2026)",
       "category": "Electronics",
       "first_seen": "2026-11-05",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-12",
       "seen_dates": [
         "2026-11-05",
-        "2026-11-09"
+        "2026-11-09",
+        "2026-11-12"
       ]
     },
     {
@@ -595,12 +510,13 @@
     },
     {
       "key": "ninja-flip-toaster-oven-air-fryer",
-      "name": "Ninja Flip Toaster Oven & Air Fryer",
+      "name": "Ninja Flip Toaster Oven & Air Fryer SP151",
       "category": "Home & Kitchen",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-12",
       "seen_dates": [
-        "2026-11-09"
+        "2026-11-09",
+        "2026-11-12"
       ]
     },
     {
@@ -608,9 +524,70 @@
       "name": "HotHands Hand Warmers Bulk Pack (40-pair)",
       "category": "Sports & Outdoors",
       "first_seen": "2026-11-09",
-      "last_seen": "2026-11-09",
+      "last_seen": "2026-11-12",
       "seen_dates": [
-        "2026-11-09"
+        "2026-11-09",
+        "2026-11-12"
+      ]
+    },
+    {
+      "key": "amazon-alexa-tablet-11",
+      "name": "Amazon Alexa Tablet 11",
+      "category": "Electronics",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "seen_dates": [
+        "2026-10-29"
+      ]
+    },
+    {
+      "key": "apple-airpods-5",
+      "name": "Apple AirPods 5 (with ANC)",
+      "category": "Electronics",
+      "first_seen": "2026-10-29",
+      "last_seen": "2026-10-29",
+      "seen_dates": [
+        "2026-10-29"
+      ]
+    },
+    {
+      "key": "ring-indoor-cam-2k",
+      "name": "Ring Indoor Cam 2K Plug-In",
+      "category": "Electronics",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "seen_dates": [
+        "2026-11-12"
+      ]
+    },
+    {
+      "key": "apple-airtag-2nd-generation",
+      "name": "Apple AirTag (2nd Generation) 4-Pack",
+      "category": "Electronics",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "seen_dates": [
+        "2026-11-12"
+      ]
+    },
+    {
+      "key": "primal-hatch-megalodon-shark-egg",
+      "name": "Primal Hatch Megalodon Hatching Shark Egg",
+      "category": "Toys & Games",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "seen_dates": [
+        "2026-11-12"
+      ]
+    },
+    {
+      "key": "magna-tiles-undersea-adventure",
+      "name": "Magna-Tiles Undersea Adventure 58-Piece",
+      "category": "Toys & Games",
+      "first_seen": "2026-11-12",
+      "last_seen": "2026-11-12",
+      "seen_dates": [
+        "2026-11-12"
       ]
     }
   ]
